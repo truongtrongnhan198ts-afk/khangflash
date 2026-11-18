@@ -1,0 +1,6 @@
+'use strict';
+window.KPDFLessons={html(card,{open=true}={}){
+ const sources={'pdf-3':{prefix:'phrasal',title:'Phrasal Verbs REFINED V3',file:'IELTS_Phrasal_Verbs_REFINED_V3.pdf',pages:10},'pdf-15':{prefix:'to-verb',title:'to + V-ing vs to + V',file:'IELTS_to-V-ing_vs_to-V_Redesigned.pdf',pages:21}};
+ const variants=(card?.variants||[]).filter(v=>sources[v.source]&&Number.isInteger(v.page)&&v.page>0&&v.page<=sources[v.source].pages);
+ const seen=new Set();return variants.map(v=>{const s=sources[v.source],key=v.source+':'+v.page;if(seen.has(key))return '';seen.add(key);const pages=s.prefix==='to-verb'&&v.page!==1?[1,v.page]:[v.page];return `<details class="pdf-original-lesson" ${open?'open':''}><summary>${s.title} · Bài học nguyên bản · trang ${v.page}</summary><p>Giải thích, sắc thái, ví dụ, ghi chú và thiết kế nguyên bản trong tài liệu của bạn. Trang có thể chứa các mục liền kề.</p>${pages.map(p=>`<a href="materials/${s.file}#page=${p}" target="_blank" rel="noopener" aria-label="Mở tài liệu gốc trang ${p}"><img src="materials/lesson-pages/${s.prefix}-${String(p).padStart(2,'0')}.webp" alt="${s.title}, trang ${p}: bài học nguyên bản" loading="lazy" width="1600" style="display:block;width:100%;height:auto;background:white;margin:12px 0"></a>`).join('')}</details>`;}).join('');
+}};

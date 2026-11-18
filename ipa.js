@@ -1,0 +1,11 @@
+'use strict';
+window.KIPA=(()=>{
+ const entries=new Map(),words=new Map();
+ const key=(term,accent)=>accent+'|'+term;
+ function peek(term,accent){return entries.get(key(term,accent));}
+ async function word(value){if(words.has(value))return words.get(value);const pending=(async()=>{const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);try{const r=await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(value),{signal:controller.signal});if(!r.ok)return null;const data=await r.json();return Array.isArray(data)?data:null;}catch{return null;}finally{clearTimeout(timer);}})();words.set(value,pending);const result=await pending;if(!result)words.delete(value);return result;}
+ function pronunciation(data,accent){if(!data)return null;const phonetics=data.flatMap(x=>Array.isArray(x.phonetics)?x.phonetics:[]).filter(x=>typeof x.text==='string'&&x.text.trim());const region=accent==='en-US'?'us':'uk';const selected=phonetics.find(x=>new RegExp('(?:[-_/])'+region+'(?:[-_.])','i').test(x.audio||''));const text=selected?.text||phonetics[0]?.text||data.find(x=>typeof x.phonetic==='string')?.phonetic;return text||null;}
+ async function load(term,accent='en-GB'){const id=key(term,accent);if(entries.has(id))return entries.get(id);const tokens=term.toLowerCase().match(/[a-z]+(?:['’-][a-z]+)*/g)||[];if(!tokens.length||tokens.length>16){const result={text:'Nội dung dài: chọn một từ/cụm ngắn để tra IPA.',state:'missing'};entries.set(id,result);return result;}entries.set(id,{text:'Đang tra phiên âm…',state:'loading'});const unique=[...new Set(tokens)];const results=new Map();for(let i=0;i<unique.length;i+=4){await Promise.all(unique.slice(i,i+4).map(async t=>results.set(t,pronunciation(await word(t),accent))));}const found=tokens.filter(t=>results.get(t));const missing=[...new Set(tokens.filter(t=>!results.get(t)))];const text=found.length?'IPA từng từ:\n'+tokens.map(t=>t+' '+(results.get(t)||'— chưa có IPA')).join(' · '):'Chưa tra được IPA. Kiểm tra kết nối hoặc thử lại.';const result={text,state:found.length?'ready':'missing',missing};entries.set(id,result);return result;}
+ function retry(term,accent){entries.delete(key(term,accent));return load(term,accent);}
+ return{peek,load,retry};
+})();
