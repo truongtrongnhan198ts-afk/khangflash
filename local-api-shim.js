@@ -241,7 +241,8 @@
     return jsonRes({ ok: true, guest: false, entries: st.entries });
   }
 
-  function handleLearningPlan(method, body) {
+  let defaultPlanCache = null;
+  async function handleLearningPlan(method, body) {
     const st = readJson(K.plan, { ok: true, guest: false, plan: null });
     if (method === 'POST' && body && typeof body === 'object') {
       st.ok = true;
@@ -249,6 +250,18 @@
       if ('plan' in body) st.plan = body.plan;
       writeJson(K.plan, st);
       return jsonRes(st);
+    }
+    if (!st.plan) {
+      try {
+        if (!defaultPlanCache) {
+          const r = await origFetch('/default-learning-plan.json', { cache: 'default' });
+          if (r.ok) defaultPlanCache = await r.json();
+        }
+        if (defaultPlanCache && defaultPlanCache.plan) {
+          st.plan = defaultPlanCache.plan;
+          writeJson(K.plan, st);
+        }
+      } catch {}
     }
     return jsonRes({ ok: true, guest: false, plan: st.plan || null });
   }

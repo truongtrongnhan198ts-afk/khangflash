@@ -61,6 +61,11 @@ const links=[['dashboard','dashboard.html','Tổng quan','Tổng quan'],['librar
  const side=document.getElementById('sidebar'),toggle=document.getElementById('sidebar-toggle');
  const setExpanded=value=>{side.classList.toggle('expanded',value);toggle.setAttribute('aria-expanded',String(value));toggle.setAttribute('aria-label',value?'Thu gọn menu học tập':'Mở menu học tập');if(!value){++wordVersion;wordBox.hidden=true;wordInput.setAttribute('aria-expanded','false');}};
  toggle.onclick=()=>setExpanded(!side.classList.contains('expanded'));
+ if(window.matchMedia&&window.matchMedia('(hover: hover) and (min-width: 601px)').matches){
+  let hoverTimer=0;
+  side.addEventListener('mouseenter',()=>{clearTimeout(hoverTimer);setExpanded(true);});
+  side.addEventListener('mouseleave',()=>{clearTimeout(hoverTimer);hoverTimer=setTimeout(()=>{if(document.activeElement!==wordInput&&wordBox.hidden)setExpanded(false);},140);});
+ }
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&side.classList.contains('expanded')){setExpanded(false);toggle.focus();}});
  document.addEventListener('click',event=>{if(side.classList.contains('expanded')&&!side.contains(event.target)&&!event.target.closest('.side-word-results'))setExpanded(false);});
 
