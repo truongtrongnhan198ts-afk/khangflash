@@ -271,13 +271,13 @@
 
   /* KF_VNEXPRESS_300_SYNC_HOOK: zero-race loader for /data.json and /example-explanations/* across all pages & games */
   function ensureVnExpress300() {
-    if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') {
+    if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.19-v300-band9-r2') {
       return Promise.resolve(window.KFVnExpressPhrases300);
     }
     if (!window.__KF_VNEXPRESS_READY__) {
       window.__KF_VNEXPRESS_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-300.js', { cache: 'force-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-300.js?v=20261119-r2', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {

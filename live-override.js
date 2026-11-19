@@ -103,7 +103,7 @@
     if (window.KFVnExpressPhrases300) return;
     if (window.__KF_VNEXPRESS_READY__) { await window.__KF_VNEXPRESS_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-300.js', { cache: 'force-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-300.js?v=20261119-r2', { cache: 'no-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-300.js')();
