@@ -1,0 +1,206 @@
+{
+  "id": "c14-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Giraldo chia kiến thành bốn nhóm tuổi cụ thể để so sánh. Đề hỏi số age groups, không hỏi số ngày tuổi của một nhóm; điền 4 hoặc four theo định dạng cho phép.",
+      "evidence": "four age ranges: 20 to 22 days, 45 to 47 days, 95 to 97 days and",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Một hành vi được quan sát là kiến chăm sóc, mang và cho kiến non ăn. Looked after khớp took care of; đối tượng là young, không phải nhà nghiên cứu.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Kiến được thử khả năng đi theo dấu mùi để tìm thức ăn. Scent trail dẫn tới food; đừng nhầm dấu mùi là thứ chúng cần xác định trong ô trống.",
+      "evidence": "trail to food. She tested how ants responded to light and also measured how active they",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Một phần thí nghiệm kiểm tra kiến phản ứng với ánh sáng như thế nào. Responded to light diễn đạt lại phân tích effect; tác nhân cần điền là light.",
+      "evidence": "responded to light and also measured how active they were by counting how often ants in",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Kiến già tấn công con mồi mạnh mẽ không kém kiến trẻ. Sau attack cần trạng từ chỉ cách hành động, nên aggressively; không dùng tính từ aggressive.",
+      "evidence": "aggressively as the young ones did, flaring their mandibles or pulling at the fly’s legs.",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Tế bào sắp chết không khác biệt đáng kể theo tuổi hay vị trí trong não. Đề đã cho age, nên yếu tố còn lại trong phép so sánh là location.",
+      "evidence": "location of the dying cells, showing that age didn’t seem to affect specific brain functions. Ants",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Synaptic complexes được giải thích là vùng nơi các tế bào thần kinh gặp nhau. Come together khớp meet; cần neurons, không phải neutrons vốn chỉ hạt trong nguyên tử.",
+      "evidence": "neurons come together. Again, the answer was no. What was more, the old ants didn’t experience",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Serotonin và dopamine được gọi là hai hóa chất não thường suy giảm khi già đi. Đề hỏi loại chung của hai chất, vì vậy chemicals, không điền riêng một tên.",
+      "evidence": "brain chemicals whose decline often coincides with aging. In humans, for example, a decrease in serotonin",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bài còn nêu chuột chũi trụi lông giữ khả năng tốt khi lớn tuổi. Có ví dụ khác nên kiến không phải loài duy nhất đã biết; nhận định only là FALSE.",
+      "evidence": "Naked mole rats can live for almost 30 years and stay fit for nearly their entire",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Các nghiên cứu trước chỉ ước lượng tuổi, còn Giraldo theo dõi từ lúc kiến trưởng thành nên biết tuổi chính xác. Sự đối lập xác nhận đây là lần đầu dùng dữ liệu tuổi chính xác: TRUE.",
+      "evidence": "exact ages. Then she put them through a range of tests.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Giraldo dự đoán kiến già làm kém, nhưng kết quả chúng vẫn thực hiện tốt các nhiệm vụ. Kết quả trái dự đoán, nên FALSE, không phải TRUE vì có nhắc đến dự đoán.",
+      "evidence": "perform poorly in all these tasks. But the elderly insects were all good caretakers and trail-followers—the",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Bài nói nghiên cứu ong phát hiện một số thay đổi theo tuổi nhưng không so sánh phương pháp đo với nghiên cứu kiến. Không suy từ kết quả khác sang phương pháp khác: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Kiến ngoài tự nhiên dễ chết vì bệnh, kẻ săn mồi và môi trường khắc nghiệt hơn phòng thí nghiệm. Điều này hỗ trợ kiến nuôi phòng thí nghiệm thường sống lâu hơn: TRUE.",
+      "evidence": "comforts of the lab. ‘The lucky ants that do live into old age may suffer a",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn B mô tả nhiều loài biến mất đột ngột, nhanh và ngoài dự kiến. Câu hỏi hỏi tốc độ tuyệt chủng, nên tìm những từ sudden và unexpected; chọn B.",
+      "evidence": "sudden, dramatic and unexpected, or were simply discovered very late in the day. A species protected",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "15": {
+      "reason": "Đoạn E nói nghiên cứu tại sở thú có ít rủi ro và ít biến số hơn ngoài tự nhiên. Đó là lý do nghiên cứu trong điều kiện nuôi nhốt thuận lợi hơn; chọn E.",
+      "evidence": "fewer variables means real changes can be effected on wild populations. Finding out about, for example,",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "16": {
+      "reason": "Đoạn C nêu hai cách tìm hiểu không cần tới sở thú: phim tài liệu truyền hình và mẫu vật lịch sử tự nhiên. Cần đủ hai cách, không chỉ một hoạt động giáo dục; chọn C.",
+      "evidence": "television documentaries are becoming ever more detailed and impressive, and many natural history specimens are on",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "17": {
+      "reason": "Đoạn A liệt kê chế độ ăn, môi trường an toàn và giảm bệnh, ký sinh trùng hoặc chấn thương. Các điều kiện này giải thích sức khỏe tốt hơn ở sở thú; chọn A.",
+      "evidence": "parasites or injuries. The average captive animal will have a greater life expectancy compared with its",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "18": {
+      "reason": "Đoạn A nói động vật nuôi nhốt trung bình sống lâu hơn đồng loại ngoài tự nhiên. Đây là so sánh trực tiếp về tuổi thọ, đúng với đề nên TRUE.",
+      "evidence": "average captive animal will have a greater life expectancy compared with its wild counterpart, and will",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "19": {
+      "reason": "Đoạn B nói một số loài chỉ còn tồn tại trong điều kiện nuôi nhốt, nhiều con sống ở sở thú. Only exist in captivity xác nhận chúng không còn ngoài tự nhiên: TRUE.",
+      "evidence": "only exist in captivity, with many of these living in zoos. Still more only exist in",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "20": {
+      "reason": "Bài công nhận phim tài liệu ngày càng chi tiết và hấp dẫn, nhưng không nêu thay đổi số khách sở thú do điều đó. Thiếu quan hệ nguyên nhân–kết quả nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Tác giả nói sở thú trước đây còn thiếu sót trong truyền thông và tiếp cận công chúng. Used to be lacking phủ định việc luôn làm xuất sắc, nên FALSE.",
+      "evidence": "used to be lacking, but they are now increasingly sophisticated in their communication and outreach work.",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Ít rủi ro và ít biến số giúp nhà nghiên cứu kiểm soát nghiên cứu, nhưng chưa xác định động vật ít căng thẳng hơn. Hai tiêu chí khác nhau; không suy diễn nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "B đúng vì có nhân viên tới nước ngoài để tham gia các nhóm làm việc tại sở thú. Đề hỏi điều được nói về nhân viên, không phải lợi ích chung hay hoạt động truyền hình.",
+      "evidence": "animal keepers abroad to contribute their knowledge and skills to those working in zoos and reserves,",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "D đúng vì một số nhân viên đào tạo người tham gia công tác bảo tồn. Việc hướng dẫn người làm bảo tồn không đồng nghĩa mọi người đều chuyên nuôi loài nguy cấp.",
+      "evidence": "educate conservation workers in other countries",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "B đúng vì sở thú có vai trò giúp công chúng hiểu các vấn đề môi trường. Bài không nêu giúp trẻ hết sợ thú hay tạo nhiều việc làm là lập luận chính.",
+      "evidence": "more environmentally conscious.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "E đúng vì sở thú có thể nuôi các loài rồi tái thả vào tự nhiên. Phương án nói tạo doanh thu cho bảo tồn không được nêu như lý do tương đương.",
+      "evidence": "reintroduced from zoos, or have wild populations that have been boosted by captive bred animals. Without",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Rochman rà soát nhiều nghiên cứu trước đó đã cảnh báo rác biển. Sự tồn tại các nghiên cứu ấy phủ định nhóm bà là những người đầu tiên, nên FALSE.",
+      "evidence": "Plenty of studies have sounded alarm bells about the state of marine debris; in a recent",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Có ví dụ chim biển ăn nhựa, nhưng không có bảng xếp hạng chúng chịu nguy cơ lớn nhất so với mọi loài khác. Từ most thêm một so sánh chưa được cung cấp: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Rochman nói những nguy cơ suy đoán ấy chưa được kiểm chứng; thông tin vẫn ít. Đề nâng dự đoán thành đã chứng minh quần thể sắp tuyệt chủng, nên FALSE.",
+      "evidence": "nobody had yet tested those perceived threats,’ Rochman says. ‘There wasn’t a lot of information.’",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Nhóm xem mỗi bài nghiên cứu đã xét nguy cơ gì và thực sự tìm thấy điều gì. Phạm vi bao gồm các dạng nguy cơ do rác biển, khớp đề nên TRUE.",
+      "evidence": "what threats scientists had studied – 366 perceived threats in all – and what they’d actually",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "83% trường hợp xác nhận được nguy cơ; các vấn đề phương pháp nằm ở phần còn lại. Vì thế không thể nói đa số nghiên cứu thiết kế kém; chữ most khiến đề FALSE.",
+      "evidence": "83 percent of cases, the perceived dangers of ocean trash were proven true. In the remaining",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Nghiên cứu trai kỳ vọng phát hiện tác hại nhưng không thấy tác động dự kiến dù nhựa đi vào máu. Đề hỏi kỳ vọng nghiên cứu, không phải kết quả cuối; vì vậy TRUE.",
+      "evidence": "effect it was looking for, an investigation of mussels ingesting microscopic plastic bits. The plastic moved",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Bài nói trai ăn nhựa, không nói chúng chủ động thích nhựa hơn thức ăn tự nhiên. Ăn phải thứ gì không chứng minh lựa chọn ưu tiên; đáp án NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Phần lớn nguy hại ghi nhận gắn với mảnh rác lớn làm động vật mắc kẹt hoặc bị thương khi nuốt. Large pieces diễn đạt lại large bits; cần large.",
+      "evidence": "large pieces of debris – animals getting entangled in trash, for example, or eating it and",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Bài nhận xét ít nghiên cứu về vi nhựa, gồm sợi từ quần áo tổng hợp và mỹ phẩm. Đề hỏi tên nhóm vật chất chung, không phải riêng fibers; điền microplastic.",
+      "evidence": "microplastic’, or pieces smaller than five millimeters. These may be ingredients used in cosmetics and toiletries,",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Nhiều nghiên cứu xét một cá thể, mô hay tế bào thay vì cả quần thể. Whole populations tương ứng entire populations; không nhầm cấp cá thể với cấp quần thể.",
+      "evidence": "whole populations. And in the lab, scientists often use higher concentrations of plastic than what’s really",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Trong phòng thí nghiệm, người ta thường dùng nồng độ nhựa cao hơn ngoài biển. Higher concentrations cung cấp danh từ concentrations; đây là hạn chế khi suy rộng kết quả.",
+      "evidence": "higher concentrations of plastic than what’s really in the ocean. None of that tells us how",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Chưa đủ thông tin việc một loài chết sẽ ảnh hưởng tới những loài săn chúng ra sao. That animal’s predators tương ứng động vật chịu ảnh hưởng gián tiếp; điền predators.",
+      "evidence": "predators, or the rest of the ecosystem.",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Tác động môi trường của thảm họa thường chỉ rõ sau khi xảy ra, như tràn dầu. Đề hỏi loại sự kiện tương lai, nên disasters, không điền riêng oil.",
+      "evidence": "disasters such as a tanker accidentally spilling its whole cargo of oil and polluting huge areas",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Toàn bài đánh giá mức đáng tin của bằng chứng về nguy cơ rác biển. A bao quát trọng tâm ấy; các ý truy trách nhiệm, cách xử lý mới hoặc hành động toàn cầu không đại diện toàn bài.",
+      "evidence": "perceived risks are real.",
+      "location": "Passage 3"
+    }
+  }
+}

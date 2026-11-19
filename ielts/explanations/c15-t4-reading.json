@@ -1,0 +1,206 @@
+{
+  "id": "c15-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Rễ huarango kéo rất sâu để lấy nguồn nước dưới mặt đất. Access/reach chỉ khả năng tiếp cận; thứ cây hút lên là water, không phải độ dài của rễ.",
+      "evidence": "water is located tens of metres below the surface. This is why the huarango tree is",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Quả huarango là phần thiết yếu trong chế độ ăn của cư dân xưa. Key tương ứng crucial, local people tương ứng local inhabitants; danh từ cần điền là diet.",
+      "evidence": "diet and, because it could reach deep water sources, it allowed local people to withstand years",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Nguồn thức ăn này giúp người dân chịu được những năm hạn khi cây trồng khác thất bại. Withstand tương ứng survive và years tương ứng periods; điền drought.",
+      "evidence": "drought when their other crops failed. But over the centuries huarango trees were gradually replaced with",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Khi cây bị chặt, không còn rễ giữ đất và đất bị xói mòn. Vì vậy có cây giúp ngăn erosion; không nhầm điều cây phòng tránh với thứ cây tạo ra.",
+      "evidence": "erosion, as there is nothing to keep the soil in place. So when the huarangos go,",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Thiếu huarango, đất chuyển thành sa mạc; bảo vệ cây giúp ngăn quá trình ấy. Turn into tương ứng become; sau a cần danh từ số ít desert.",
+      "evidence": "when the huarangos go, the land turns into a desert.",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Cành cây được đốt thành than để nấu nướng và sưởi. Charcoal là hình thức nhiên liệu; bộ phận cung cấp là branches, không phải thân dùng xây nhà.",
+      "evidence": "branches were used for charcoal for cooking and heating, and its trunk was used to build",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Lá và vỏ cây được dùng làm thuốc thảo dược. Đề hỏi bộ phận dùng chữa bệnh, nên leaves and bark; cần đủ cả hai thành phần, không chỉ một.",
+      "evidence": "leaves and bark were used for herbal remedies, while its branches were used for charcoal for",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Thân cây dùng dựng nhà, tương ứng mục đích construction. Chỗ trống hỏi bộ phận cây nên trunk; cành và lá có công dụng khác trong cùng câu.",
+      "evidence": "trunk was used to build houses. But now it is disappearing rapidly. The majority of the",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bài nêu các công dụng truyền thống nhưng không nói chính các gia đình địa phương đã kể chúng cho Whaley. Thiếu nguồn người cung cấp thông tin, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Trang trại của Benevides còn quá nhỏ để bảo đảm cuộc sống và ông mong tương lai tốt hơn. Điều đó trái với đang kiếm lợi nhuận tốt từ cây, nên FALSE.",
+      "evidence": "farm is relatively small and doesn’t yet provide him with enough to live on, but he",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Whaley thuyết phục nông dân cho trồng các hành lang rừng trên đất họ để nối sinh cảnh. Việc cần họ đồng ý xác nhận phải có hợp tác để bảo vệ động vật: TRUE.",
+      "evidence": "he’s persuading farmers to let him plant forest corridors on their land.",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Whaley nói không cần diện tích khổng lồ như rừng mưa; sự sống ở đây vốn nằm trong hành lang và mảng nhỏ. Đề cho rằng phải mở rộng rất lớn, nên FALSE.",
+      "evidence": "rainforest that needs to have this huge expanse. Life has always been confined to corridors and",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài bày tỏ hy vọng mô hình hữu ích cho nơi như châu Phi, không nêu Whaley có kế hoạch trực tiếp tới đó lập dự án. Hy vọng ứng dụng không phải kế hoạch cá nhân: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "La Gomera được mô tả là đảo núi lửa nhiều núi, nhưng không so với tất cả đảo Canary. Tính từ mountainous không chứng minh dạng cao nhất most mountainous, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Người dùng Silbo có thể chuyển bất kỳ câu tiếng Tây Ban Nha nào thành tiếng huýt sáo. Vì vậy nó không chỉ thích hợp thông điệp ngắn, đơn giản; từ only khiến nhận định FALSE.",
+      "evidence": "any Spanish sentence could be whistled.’ Silbo has proved particularly useful when fires have occurred on",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Nghiên cứu não cho thấy người biết Silbo xử lý khác người không biết huýt sáo ngôn ngữ này. Đối lập với however xác nhận produced different results, nên TRUE.",
+      "evidence": "non-whistlers, however, activation was observed in all areas of the brain.",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Cư dân bản địa đã biết ngôn ngữ huýt sáo khi người Tây Ban Nha chinh phục đảo thế kỷ XV. Nó có trước cuộc chinh phục, nên nói người Tây Ban Nha mang tới là FALSE.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Bài ước tính tới 70 ngôn ngữ huýt sáo nhưng chỉ khoảng 12 được nghiên cứu khoa học. Chưa có dữ liệu chính xác cho tất cả; nhận định all là FALSE.",
+      "evidence": "70 whistled languages still in use, though only 12 have been described and studied scientifically. This",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Silbo được dạy ở mọi trường tiểu học trên đảo từ năm 1999. Trường tiểu học đại diện cho trẻ em trong câu hỏi; vì vậy hiện trẻ học Silbo là TRUE.",
+      "evidence": "elementary schools. In addition, locals are seeking assistance from the United Nations Educational, Scientific and Cultural",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Tiếng huýt sáo mã hóa từng từ Tây Ban Nha thành âm cao và thấp. Câu hỏi hỏi đơn vị ngôn ngữ được biểu đạt, nên words, không phải người nói hoặc loại thông điệp.",
+      "evidence": "words recoded into whistles which have high- and low-frequency tones. A whistler – or silbador –",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Người phát âm đặt ngón tay vào miệng để điều chỉnh cao độ. Sau sở hữu cách cần bộ phận cơ thể finger; bàn tay khum lại có chức năng khác ở ô tiếp.",
+      "evidence": "finger in his or her mouth to increase the whistle’s pitch, while the other hand can",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Bàn tay khum được dùng chỉnh hướng truyền tiếng huýt sáo. Adjust tương ứng change; chỗ trống cần direction, không phải pitch đã được kiểm soát bằng ngón tay.",
+      "evidence": "direction of the sound. ‘There is much more ambiguity in the whistled signal than in the",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Trong đời sống hằng ngày, người chăn cừu dùng Silbo truyền mệnh lệnh ngắn. Short tương ứng brief; danh từ cần điền commands, không chỉ gọi chung messages.",
+      "evidence": "commands, but any Spanish sentence could be whistled.’ Silbo has proved particularly useful when fires have",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Silbo truyền nhanh thông tin thiết yếu như báo cháy. Đề hỏi ví dụ tình huống cần thông báo; lấy fires, không lấy từ communication chỉ hoạt động truyền tin.",
+      "evidence": "fires have occurred on the island and rapid communication across large areas has been vital.",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Công nghệ liên lạc hiện đại phổ biến làm nhu cầu dùng Silbo giảm, đe dọa sự tồn tại của nó. Sau new cần danh từ technology, không phải tên ngôn ngữ mới.",
+      "evidence": "technology now widely available, researchers say whistled languages like Silbo are threatened with extinction. With dwindling",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Nhà chức trách muốn nhận giải thưởng UNESCO để hỗ trợ bảo tồn. Hope to receive khớp try to get; đề một từ nên award, không chép tên cơ quan.",
+      "evidence": "award from the organisation to declare (Silbo Gomero) as something that should be preserved for humanity,’",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu mô tả doanh nghiệp có thể gây hại để kiếm tiền khi luật và áp lực xã hội cho phép. Ý thiếu ý thức công bằng tương ứng morality trong danh sách; chọn D.",
+      "evidence": "sense of justice. Depending on the circumstances, a business may maximize the amount of money it",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Chính quyền quản lý không hiệu quả tạo điều kiện cho tác hại môi trường. Regulation tương ứng control trong danh sách; chọn E, không phải trực tiếp lợi nhuận doanh nghiệp.",
+      "evidence": "regulation is effective, and when the public is environmentally aware, environmentally clean big businesses may out-compete",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Khi công chúng không quan tâm, doanh nghiệp ít bị buộc thay đổi cách làm. Lack of public involvement diễn đạt lại sự thiếu tham gia, quan tâm; chọn F.",
+      "evidence": "public is environmentally aware, environmentally clean big businesses may out-compete dirty ones, but the reverse is",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Ví dụ nghề cá không được quản lý hoặc áp hạn ngạch minh họa khai thác cá quá mức. Đó là overfishing, chọn H; không nhầm với tác hại chặt cây ở vế sau.",
+      "evidence": "fishery without quotas, and for international logging companies with short-term leases on tropical rainforest land in",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Ví dụ công ty khai thác gỗ thuê đất rừng nhiệt đới cho thấy cây có thể bị phá hủy vì mục tiêu ngắn hạn. Sau destruction of cần trees, tương ứng B.",
+      "evidence": "tropical rainforest land in places with corrupt officials and unsophisticated landowners. When government regulation is effective,",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Đoạn ba nhấn mạnh công chúng có sức ngăn tác hại bằng thay đổi yêu cầu và hành vi. C là ý chính; việc chỉ trách doanh nghiệp mà bỏ qua trách nhiệm xã hội là điều tác giả đang phản bác.",
+      "evidence": "In the long run, it is the public",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Đoạn bốn liệt kê kiện chính quyền, thể hiện quan điểm và gây sức ép để thay đổi chính sách. D khái quát các cách công chúng tác động cả doanh nghiệp lẫn chính phủ.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Trong ví dụ BSE, một chuỗi thức ăn nhanh buộc nhà cung cấp thịt tuân thủ quy định mà trước đó họ không làm. Chọn B; không phải chính chuỗi ấy bị ngừng cung cấp thịt.",
+      "evidence": "the meat industry complied within weeks.",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Tác giả nói công chúng phải chấp nhận giá cao hơn để trả chi phí thực hành môi trường tốt. Điều đó đúng với sẵn sàng tài trợ các biện pháp, nên YES.",
+      "evidence": "higher prices for products to cover the added costs, if any, of sound environmental practices. My",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bài bàn nguyên tắc đạo đức nói chung nhưng không so sánh sự khác nhau giữa các doanh nghiệp. Không suy ra contrast chỉ vì có nhiều công ty trong bài: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Tác giả không đặt trọng tâm ở phân loại ai tốt–xấu hay đáng trách, mà ở thay đổi kỳ vọng và thực thi quy tắc. Vì vậy đề nhấn mạnh vạch ranh chấp nhận–không chấp nhận không phản ánh kết luận: NO.",
+      "evidence": "moralistic one about who is right or wrong, admirable or selfish, a good guy or a",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Đoạn cuối nói hành vi doanh nghiệp trước đây đã thay đổi khi công chúng đòi hỏi cách làm khác. Đây là ví dụ ảnh hưởng thành công trong quá khứ, nên YES.",
+      "evidence": "In the past, businesses have changed when the public came to expect and require different behavior,",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Tác giả nêu công chúng có thể gây thay đổi nhưng không dự báo chắc doanh nghiệp tương lai sẽ quan tâm môi trường hơn. Khả năng tác động không đồng nghĩa kết quả đã bảo đảm: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Toàn bài cân nhắc trách nhiệm thiệt hại môi trường giữa doanh nghiệp, chính quyền và công chúng. D đặt đúng câu hỏi có nên chỉ đổ lỗi doanh nghiệp; những phương án chỉ nêu tác hại hoặc lợi nhuận quá hẹp.",
+      "evidence": "ultimate responsibility of the public",
+      "location": "Passage 3"
+    }
+  }
+}

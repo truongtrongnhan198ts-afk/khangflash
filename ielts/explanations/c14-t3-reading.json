@@ -1,0 +1,206 @@
+{
+  "id": "c14-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn B giải thích quan niệm ngầm về trí thông minh ảnh hưởng cách đánh giá và đối xử với người khác. Ví dụ cha mẹ và người phỏng vấn cụ thể hóa ảnh hưởng này, nên chọn B.",
+      "evidence": "implicit theories of intelligence drive the way in which people perceive and evaluate their own intelligence",
+      "location": "Passage 1 · Đoạn B"
+    },
+    "2": {
+      "reason": "Đoạn A mở bằng nghịch lý ai cũng biết trí thông minh là gì nhưng không ai biết chắc bản chất. Đây là thiếu rõ ràng trong định nghĩa, nên A.",
+      "evidence": "no one knows for certain what it actually is. This chapter addresses how people conceptualize intelligence,",
+      "location": "Passage 1 · Đoạn A"
+    },
+    "3": {
+      "reason": "Đoạn D xét trường hợp lý thuyết ngầm và lý thuyết công khai không tương ứng. Việc phải sửa hoặc bổ sung lý thuyết cho thấy chúng có thể rất khác nhau; chọn D.",
+      "evidence": "little correspondence between the extant implicit and explicit theories, the implicit theories may be wrong. But",
+      "location": "Passage 1 · Đoạn D"
+    },
+    "4": {
+      "reason": "Đoạn B nói quan niệm của cha mẹ ảnh hưởng lúc họ sửa ngôn ngữ trẻ, không nói trẻ phát triển ngôn ngữ chậm khiến họ thất vọng. Thiếu phản ứng cảm xúc cụ thể nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Đoạn B"
+    },
+    "5": {
+      "reason": "Đoạn E cho biết kỳ vọng về năng lực trẻ thay đổi theo văn hóa và trải nghiệm giáo dục. Điều này phủ định universal, nên NO, không phải NOT GIVEN.",
+      "evidence": "culture. For example, expectations for children who participate in Western-style schooling are almost certain to be",
+      "location": "Passage 1 · Đoạn E"
+    },
+    "6": {
+      "reason": "Đoạn cuối nói học giả có thể bỏ lỡ ý của nhau khi bàn dữ liệu và lý thuyết nếu chưa làm rõ quan niệm nền tảng. Điều đó khớp chưa hiểu nhau đầy đủ, nên YES.",
+      "evidence": "miss the point of what others are saying when discussing their explicit theories and their data.",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Quan điểm Jeffersonian nhấn mạnh mọi người cần cơ hội ngang nhau. Equal opportunities tương ứng same possibilities open to everyone; chọn B, không đồng nghĩa phần thưởng bằng nhau.",
+      "evidence": "equal opportunities, but they do not necessarily avail themselves equally of these opportunities and are not",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Quan điểm Jacksonian không muốn thể chế ưu ái nhóm này hơn nhóm khác. Đây là phản đối đối xử ưu tiên; chọn C, không phải quan điểm đặt người ưu tú lên lãnh đạo.",
+      "evidence": "favoring one group over another.",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Jeffersonian cho rằng người ta được tưởng thưởng theo thành tựu thực tế, không phải nhận bằng nhau. What they accomplish khớp what they actually achieve; chọn B.",
+      "evidence": "rewarded for what they accomplish, if given equal opportunity. Low achievers are not rewarded to the",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Hamiltonian tin con người sinh ra đã có mức trí tuệ khác nhau. Born with different levels khớp sự khác biệt bắt đầu từ lúc sinh; chọn A.",
+      "evidence": "born with different levels of intelligence and that those who are less intelligent need the good",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Hamiltonian cho rằng người thông minh vượt trội nên dẫn dắt người kém hơn. Ví dụ quan chức và triết gia cầm quyền khớp vị trí quyền lực; chọn A.",
+      "evidence": "philosopher-kings. Herrnstein and Murray (1994) seem to have shared this belief when they wrote about the",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Jacksonian coi mọi người bình đẳng cả về năng lực, không chỉ địa vị con người. Vì vậy phát biểu ai cũng có thể phát triển năng lực giống nhau thuộc C.",
+      "evidence": "competencies – that one person would serve as well as another in government or on a",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Hamiltonian cho rằng người trí tuệ thấp không tự lo được và có thể tạo hỗn loạn nếu bị bỏ mặc. Chaos khớp uncontrolled lives, nên A.",
+      "evidence": "chaos.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C nói kết quả không đồng đều của nghiên cứu trong phòng thí nghiệm khiến người ta quay lại sản phẩm tự nhiên. Once again khớp renewed interest; chọn C.",
+      "evidence": "once again on natural products. With the ability to mine genomes for useful compounds, it is",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "15": {
+      "reason": "Đoạn H nêu công nghệ cắt đoạn gen và đưa vào dòng tế bào để tạo nhiều hợp chất hơn. Đây là tiến bộ giúp vượt khó khăn nghiên cứu côn trùng; chọn H.",
+      "evidence": "cell lines that allow larger quantities to be produced. And although the road from isolating and",
+      "location": "Passage 2 · Đoạn H"
+    },
+    "16": {
+      "reason": "Đoạn A đưa ví dụ khỉ dùng chất từ tự nhiên để trị hoặc phòng bệnh. Câu hỏi hỏi hành vi dùng dược chất ở động vật, không phải người nghiên cứu chúng; chọn A.",
+      "evidence": "capuchin monkeys who rub themselves with toxin-oozing millipedes to deter mosquitoes, or the chimpanzees who use",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "17": {
+      "reason": "Đoạn F lần lượt giải thích khó khăn: quá nhiều loài, kích thước nhỏ và khó thu đủ nguyên liệu. Các lý do được tổ chức rõ theo firstly/secondly/thirdly, nên F.",
+      "evidence": "insufficient material to work with.",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "18": {
+      "reason": "Đoạn I liên hệ tiềm năng tìm thuốc với động lực bảo tồn côn trùng và sinh cảnh. Lợi ích cho wildlife là tăng lý do bảo vệ chúng khỏi tuyệt chủng; chọn I.",
+      "evidence": "conservation. I sincerely believe that all species, however small and seemingly insignificant, have a right to",
+      "location": "Passage 2 · Đoạn I"
+    },
+    "19": {
+      "reason": "Đoạn B giải thích việc rời nguồn tự nhiên vì khó tìm, xác định rồi sản xuất hợp chất với lượng lớn. Đây là nguyên nhân từng thất sủng, không phải nguyên nhân quay lại; chọn B.",
+      "evidence": "",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "20": {
+      "reason": "Đoạn E nêu alloferon được dùng chống virus và khối u tại Hàn Quốc, Nga. Chi tiết đang sử dụng phân biệt thuốc có thật với tiềm năng nghiên cứu; chọn E.",
+      "evidence": "alloferon, an antimicrobial compound produced by blow fly larvae, is used as an antiviral and antitumor",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "21": {
+      "reason": "B đúng vì côn trùng tạo ra các hợp chất mạnh để khống chế con mồi hoặc chống vi sinh vật. Chính chức năng hóa học này khiến chúng hấp dẫn với nghiên cứu dược, không chỉ số lượng lớn.",
+      "evidence": "powerful poison for subduing prey and keeping it fresh for future consumption. There are even more",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "C đúng vì có thể khai thác đoạn mã gen côn trùng rồi tạo hợp chất qua tế bào. Khả năng sản xuất nhiều hơn làm hướng nghiên cứu hữu ích; bài không chọn vì các loài giống nhau.",
+      "evidence": "DNAthat carry the codes for the interesting compounds and insert them into cell lines that allow",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Nhóm ở Aberystwyth dùng kiến thức sinh thái để chọn loài nghiên cứu. Expertise được diễn đạt bằng knowledge; lĩnh vực cần điền là ecology.",
+      "evidence": "ecology as a guide to target our efforts. The creatures that particularly interest us are the",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Độc chất vừa làm tê liệt vừa giữ con mồi tươi để dùng sau. Preserve tương ứng keeping it fresh; thứ được bảo quản là prey, không phải bản thân độc chất.",
+      "evidence": "keeping it fresh for future consumption. There are even more insects that are masters of exploiting",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Nhiều côn trùng sống ở sinh cảnh bẩn như phân hoặc xác chết nên phải chống vi khuẩn, nấm. Đề hỏi nơi sinh sống sau in, nên habitats.",
+      "evidence": "habitats, such as faeces and carcasses, where they are regularly challenged by thousands of micro¬organisms. These",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Các chất kháng vi sinh vật có thể dùng hoặc gợi ý tạo kháng sinh mới. Drugs là khái niệm rộng, còn ví dụ cụ thể cần điền là antibiotics.",
+      "evidence": "new antibiotics.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Miller và Almon liệt kê chơi thể chất, xây dựng, ngôn ngữ và biểu tượng. Việc tách các dạng đó khớp separate categories, nên chọn B.",
+      "evidence": "various types of play such as physical, construction, language, or symbolic play (Miller & Almon 2009),",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Hirsch-Pasek và cộng sự cho rằng vai trò người lớn đổi theo mục tiêu giáo dục và mức phát triển của trẻ. Intended goals khớp educational goals; chọn G.",
+      "evidence": "educational goals and the child’s developmental level (Hirsch-Pasek et al. 2009).",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Joan Goodman cho rằng hình thức lai giữa công việc và chơi tạo bối cảnh học tối ưu. Hybrid forms khớp combining, optimal khớp best; chọn F, không phải một nghiên cứu chỉ phân loại hoạt động.",
+      "evidence": "hybrid forms of work and play are not a detriment to learning; rather, they can provide",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Pellegrini coi tính chú trọng quá trình và thiếu mục đích chức năng là đặc biệt quan trọng. Đây là đặt một số đặc trưng cao hơn phần còn lại, nên E.",
+      "evidence": "process orientation and a lack of obvious functional purpose may be the most important aspects of play",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Rubin và cộng sự mô tả một thang liên tục từ ít tới nhiều tính chơi. Continuum tương ứng scale; câu hỏi hỏi mức độ, không phải danh sách loại chơi, nên C.",
+      "evidence": "more or less playful using the following set of behavioral and dispositional criteria (e.g. Rubin et",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Ngay mở bài, trẻ vẫn chơi dù không có đồ chơi thật hoặc cha mẹ không khuyến khích. Như vậy đồ chơi không phải điều kiện bắt buộc; nhận định cần đồ chơi là NO.",
+      "evidence": "no real toys, or when parents do not actively encourage the behavior. In the eyes of",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Tác giả gọi sự đối lập chơi–học là false dichotomy. Điều này xác nhận xem chúng như hai loại hoạt động tách biệt là sai, nên YES.",
+      "evidence": "false dichotomy between play and learning.",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Bài nêu lợi ích học tập và phát triển từ chơi, nhưng không khẳng định cải thiện năng khiếu nghệ thuật. Không dùng lợi ích chung để suy ra lợi ích cụ thể này: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Tác giả nói giới nghiên cứu vẫn chưa đạt đồng thuận hoàn toàn về định nghĩa chơi. Điều đó trái với đã thống nhất một định nghĩa, nên NO.",
+      "evidence": "Full consensus on a formal definition of play continues to elude the researchers and theorists who",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bài phân biệt chơi được thúc đẩy từ bên trong với công việc thường hướng mục tiêu bên ngoài. Vì vậy khác biệt về tính mục tiêu trong câu hỏi được hỗ trợ: YES.",
+      "evidence": "goal oriented). Researcher Joan Goodman (1994) suggested that hybrid forms of work and play are not",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Trong hình thức hướng dẫn trực tiếp, người lớn cùng chơi, đặt câu hỏi và khuyến khích trẻ khám phá sâu hơn. Sau by cần dạng -ing; “encouraging further exploration” cung cấp encouraging, không phải vật liệu ở hình thức cơ bản.",
+      "evidence": "encouraging further exploration or new facets to the child’s activity. Although playful learning can be somewhat",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Dù người lớn có cấu trúc hoạt động, chơi vẫn phải bắt nguồn từ mong muốn của trẻ. “Stem from the child’s own desire” khớp dựa trên mong muốn; điền desire.",
+      "evidence": "own desire.",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Chơi tự do do động lực bên trong đem lại quyền tự chủ thực sự cho trẻ. True được diễn đạt lại thành real; danh từ cần điền là autonomy.",
+      "evidence": "true autonomy, while guided play is an avenue through which parents and educators can provide more",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Chơi có hướng dẫn giúp cha mẹ và giáo viên cung cấp trải nghiệm học có mục tiêu rõ hơn. More targeted tương ứng nhắm vào particular goals; điền targeted.",
+      "evidence": "targeted learning experiences. In either case, play should be actively engaged, it should be predominantly child-directed,",
+      "location": "Passage 3"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "id": "c17-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Một cậu chăn dê ném đá vào cửa hang và nghe tiếng đồ gốm vỡ. “Threw” tương ứng với hành động tung vật vào trong; thứ được ném là rock, không phải chiếc bình phát ra tiếng.",
+      "evidence": "tossed a rock into an opening",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Những người chăn dê bước vào hang rồi phát hiện các bình chứa cuộn văn bản. “Went into” tương ứng entered; nơi họ đi vào là cave, không phải thị trấn Qumran ở gần đó.",
+      "evidence": "entered the cave and stumbled across",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Các vật chứa là bình làm từ đất sét. Đề dùng containers khái quát cho jars và hỏi vật liệu sau “made of”, nên clay; không điền tên đồ vật chứa bên trong.",
+      "evidence": "a collection of large clay jars",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Các cuộn sách được cho là do cộng đồng Essenes viết hoặc cất giữ trong giai đoạn được nêu. Đề hỏi tên nhóm người, nên Essenes; không nhầm với ngôn ngữ họ sử dụng.",
+      "evidence": "a group called the Essenes",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Phần lớn văn bản trên các cuộn được viết bằng tiếng Hebrew, dù còn có các ngôn ngữ khác. Từ “mainly” yêu cầu ngôn ngữ chủ yếu, nên Hebrew, không chọn một ngôn ngữ chỉ xuất hiện ít hơn.",
+      "evidence": "The majority of the texts on the Dead Sea Scrolls are in Hebrew",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Bài cho biết các thiếu niên bán cuộn sách lấy một khoản tiền nhỏ nhưng không nói họ thất vọng về khoản tiền ấy. Số tiền ít không chứng minh cảm xúc của người bán; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Nguồn gốc các cuộn sách vẫn là đề tài tranh luận giữa các học giả. “Debate” trái với việc đã đồng thuận mà đề khẳng định, nên FALSE.",
+      "evidence": "is still the subject of scholarly debate",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ngoài một số ngoại lệ, những sách Kinh Thánh trên cuộn chỉ còn dạng mảnh rời. “Fragments” xác nhận sự không đầy đủ của phần lớn văn bản, nên TRUE; không có nghĩa toàn bộ đều còn nguyên.",
+      "evidence": "include fragments from every book",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Cuộn đồng ghi thông tin theo lối khác thường, dùng kiểu diễn đạt và cách viết không thông thường. Vì nhận định chỉ hỏi cách ghi chép đặc biệt, bài cung cấp đủ xác nhận: TRUE.",
+      "evidence": "Using an unconventional vocabulary and odd spelling",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Mar Samuel trả tiền mua các cuộn, dù giá không cao. Câu hỏi nói ông được tặng làm quà, tức không mua, đã thay đổi cách sở hữu; chọn FALSE.",
+      "evidence": "paying less than $100 for them",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Mar Samuel từng tìm cách bán cuộn sách cho các trường đại học Mỹ nhưng không thành công. Điều đó trái ý nhiều cơ sở giáo dục rất muốn mua, nên FALSE.",
+      "evidence": "unsuccessfully offered them to a number of universities",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Cuộn được ghép năm 2017 chứa lịch 364 ngày và các ngày lễ, sự kiện tôn giáo hằng năm. Đó là thông tin về các dịp thường niên tại Qumran, nên TRUE.",
+      "evidence": "details two yearly religious events",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài kết thúc bằng việc còn một cuộn chưa được giải mã nhưng không xác nhận học giả Haifa đang nghiên cứu cuộn cuối đó. “Chưa giải mã” không đồng nghĩa “đang được nghiên cứu”; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C nêu một dòng cà chua chống được bệnh đốm vi khuẩn có thể gây thiệt hại lớn cho năng suất. Cụ thể hóa tên bệnh giúp nhận ra “dangerous infection”; chọn C.",
+      "evidence": "a strain resistant to a common disease",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "15": {
+      "reason": "Đoạn B nói chỉ chọn một đột biến có thể làm mất đa dạng di truyền và kéo theo tính trạng không mong muốn, như nhạt vị. Đây là vấn đề do tập trung vào một dòng cà chua, nên B.",
+      "evidence": "the desirable mutations come with less desirable traits",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "16": {
+      "reason": "Đoạn E liệt kê những cây chưa được canh tác phổ biến nhưng có tiềm năng làm lương thực. Câu hỏi cần cả ví dụ thực vật và khả năng làm thức ăn, nên E.",
+      "evidence": "thousands of wild plants into useful and appealing foods",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "17": {
+      "reason": "Đoạn A so sánh hàng nghìn năm thuần hóa cà chua trước kia với chưa đầy ba năm nghiên cứu hiện đại. Sự đối chiếu tốc độ giữa hai giai đoạn xác định đáp án A.",
+      "evidence": "in less than three years",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "18": {
+      "reason": "Ở đoạn C, Kudla trực tiếp nhận xét hương vị của cà chua đã chỉnh sửa gene. Đây là phản ứng cảm nhận của một cá nhân, không phải chỉ số dinh dưỡng của nhóm nghiên cứu; chọn C.",
+      "evidence": "aromatic",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Caixia Gao nói có thể phát triển cây chịu được hạn và nóng trong tương lai. Hai điều kiện cụ thể này diễn đạt các thách thức môi trường mà đề nêu; người phát biểu tương ứng B.",
+      "evidence": "wild plants that are drought or heat tolerant",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Jonathan Jones nghi ngờ những cây ít quen thuộc có được trồng và ăn rộng rãi hay không. Trọng tâm là sự chấp nhận của người dùng đối với thức ăn mới, nên D.",
+      "evidence": "it will be hard for new foods to grow so popular",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Kudla không muốn tiết lộ đầy đủ hướng nghiên cứu tiếp theo của nhóm. Điều đó tương ứng chưa nên công khai định hướng tương lai; chọn A, không phải một ý kiến phản đối nghiên cứu nói chung.",
+      "evidence": "Kudla didn’t want to reveal which species",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Van Eck nhắc việc đưa quả groundcherry ra sản xuất có thể tốn kém. Rào cản chi phí của một loại quả hoang được quy cho Joyce Van Eck, chọn C.",
+      "evidence": "would be expensive",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Kudla đối chiếu rất nhiều loài thực vật ăn được với số ít cây thực tế cung cấp phần lớn thức ăn cho người. Đó là ý ta mới dùng một tỷ lệ nhỏ nguồn thức ăn thực vật; chọn A.",
+      "evidence": "There are 50,000 edible plants in the world",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Chọn một đột biến có lợi vẫn có thể kéo theo mất hương vị, như cà chua siêu thị. Ô trống hỏi thứ bị mất, nên flavour hoặc flavor; không phải mutation vốn là nguyên nhân.",
+      "evidence": "lost much of their flavour",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Nhóm nghiên cứu chỉnh sửa một gene để làm quả cà chua lớn gấp ba. Thuộc tính thay đổi là size; “three times” tương ứng triple, không phải số quả tăng lên.",
+      "evidence": "they tripled the size of fruit",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Dòng cà chua do nhóm Trung Quốc tạo ra giàu vitamin C và chịu mặn tốt hơn. Ô trống hỏi yếu tố cây ít bị ảnh hưởng, nên salt; không nhầm đặc tính chịu mặn với hàm lượng vitamin.",
+      "evidence": "more salt tolerant",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu phác họa quan niệm quen thuộc rằng khám phá do khoảnh khắc lóe sáng của thiên tài đơn lẻ. Mục đích là trình bày giả định phổ biến, chọn D; nhận xét hạn chế chưa phải chứng minh bác bỏ hoàn chỉnh.",
+      "evidence": "Scientific discovery is popularly believed",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn hai gọi cách giải thích dựa vào tài năng thiên bẩm là hạn chế và thiếu khoa học. Tác giả đang phê bình một quan điểm, chọn A, không phải đưa dữ kiện để bảo vệ nó.",
+      "evidence": "largely misrepresents the real nature of scientific discovery",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Darwin và Einstein được thừa nhận là các trường hợp xuất chúng hiếm hoi, khác với phần lớn đổi mới tích lũy. Họ là ngoại lệ của quy luật chung, nên A; bài không nói thành tựu của họ chưa được ca ngợi xứng đáng.",
+      "evidence": "Setting aside such greats as Darwin and Einstein",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Lý thuyết của Nicholson có phần sai nhưng vẫn giúp đặt nền cho bước đột phá tiếp theo của người khác. Chọn C. Một kết quả không hoàn toàn đúng vẫn có thể đóng vai trò trong tiến trình khám phá.",
+      "evidence": "foundation",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Điều thú vị về kiểu bố trí bàn đạp acey-deucy là nó khởi đầu vì một nguyên nhân rất giản dị, không phải dự án nghiên cứu có chủ đích. Vì thế chọn A, không suy rằng người khởi xướng đặc biệt thông minh.",
+      "evidence": "a leg injury",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Gọi Plato hay da Vinci là thiên tài chỉ đặt tên cho năng lực, chưa giải thích quá trình ý tưởng nảy sinh. Tác giả phủ nhận việc thừa nhận họ là thiên tài tự nó giúp hiểu cơ chế sáng tạo; NO.",
+      "evidence": "merely label rather than explain",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Bài trình bày định luật hiệu quả nhưng không kể nó được phát hiện đúng lúc các nhà tâm lý đang tìm nguyên nhân sáng tạo. Thiếu thông tin về hoàn cảnh lịch sử phát hiện, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Theo định luật hiệu quả, hành vi tạo kết quả có lợi được giữ lại mà không cần sinh vật lập kế hoạch trước. Vì vậy ý không có yếu tố hoạch định trong cơ chế được nêu là YES.",
+      "evidence": "organisms tend to repeat successful behaviors",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Bài nói nguồn gốc nguyên liệu hành vi cho định luật hiệu quả còn chưa rõ bằng nguồn biến dị di truyền. Do đó không thể nói định luật giải thích rõ nguồn ý tưởng và hành vi mới; chọn NO.",
+      "evidence": "not as clearly known",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Tác giả kêu gọi từ bỏ ý niệm thiết kế thông minh và thiên tài nhưng không cho số liệu hay nhận xét rằng nhiều nhà khoa học đã thực sự từ bỏ. Lời khuyên không phải mô tả xu hướng đã xảy ra; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Quan niệm truyền thống coi đột phá là kết quả một thiên tài có cảm hứng đột ngột. Trong danh sách, inspiration diễn đạt sự lóe sáng ấy, nên F; đây là điều tác giả đang đem ra xem xét, không phải kết luận cuối.",
+      "evidence": "insight in promoting breakthrough scientific achievements",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Lý thuyết của Nicholson về proto-elements được bài đánh giá có sai sót nhưng vẫn đóng góp vào khám phá sau. Nhân tố minh họa ở ô này là mistakes, chọn D; không cần mọi bước đều đúng để có tiến bộ.",
+      "evidence": "Nicholson was wrong about the presence of proto-elements",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Sự ra đời giấy nhớ Post-it minh họa một sự tình cờ có ích: hai ý tưởng gặp nhau không theo kế hoạch ban đầu. “Happy accident” tương ứng luck trong danh sách, nên E.",
+      "evidence": "happy accident",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Tác giả đối chiếu chọn lọc tự nhiên và định luật hiệu quả: biến đổi rồi tuyển chọn không cần mục tiêu được định sẵn. “Objective” tương ứng goals trong danh sách; chọn B, không nhầm với việc kết quả sau cùng có ích.",
+      "evidence": "without any end objective in sight",
+      "location": "Passage 3"
+    }
+  }
+}

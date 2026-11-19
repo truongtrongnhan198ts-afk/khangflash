@@ -1,0 +1,206 @@
+{
+  "id": "c15-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Lá cây được mô tả có dạng bầu dục. Câu hỏi hỏi hình dạng sau in shape nên chọn oval; màu và độ bóng cũng xuất hiện nhưng không trả lời đúng đặc điểm cần điền.",
+      "evidence": "oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits. The fruit is",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Quả được bọc bởi lớp vỏ, lớp này nứt ra khi quả chín. Surrounded by tương ứng encased in; vật bao quanh quả là husk, không phải phần hạt bên trong.",
+      "evidence": "husk. When the fruit is ripe, this husk splits into two halves along a ridge running",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Hạt khô là nguồn tạo ra gia vị nutmeg. Đề chỉ cho một từ nên điền seed, không thêm dried dù tính từ ấy có trong bài.",
+      "evidence": "seed, 2-3 cm long by about 2cm across, surrounded by a lacy red or crimson covering",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Phần aril tạo gia vị mace, còn hạt tạo nutmeg. Cần giữ đúng cặp bộ phận–sản phẩm trong câu song song; đáp án mace, không lấy lại nutmeg.",
+      "evidence": "mace, the former being produced from the dried seed and the latter from the aril.",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Người Ả Rập không tiết lộ chính xác nơi lấy gia vị. Điều này trái với nhận định đa số người châu Âu thời Trung cổ biết nơi trồng, nên FALSE.",
+      "evidence": "never revealed the exact location of the source of this extremely valuable commodity. The Arab-Venetian dominance",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Bài mô tả quy mô và sự thành lập VOC nhưng không khẳng định đây là công ty thương mại lớn đầu tiên trên thế giới. Từ first thêm thứ hạng lịch sử chưa có: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Sau hiệp ước Breda, Hà Lan kiểm soát các đảo sản xuất và có thế độc quyền nutmeg. Chi tiết monopoly hỗ trợ nắm toàn bộ nguồn đảo được nói tới, nên TRUE.",
+      "evidence": "monopoly over the nutmeg trade which would last for another century.",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ở thời Trung cổ, người Ả Rập đưa nutmeg sang châu Âu. Sau by cần nhóm người thực hiện, nên Arabs; không điền tên vùng trồng gia vị.",
+      "evidence": "Arabs were the exclusive importers of the spice to Europe. They sold nutmeg for high prices",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bác sĩ thế kỷ XVII cho rằng nutmeg có thể chống căn bệnh giết nhiều người châu Âu. Tên bệnh là plague; đây không phải một công dụng đã được khoa học hiện đại xác nhận.",
+      "evidence": "plague, a highly contagious and deadly disease. Doctors were desperate for a way to stop the",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Người Hà Lan phủ hạt bằng vôi để ngăn hạt nảy mầm ở nơi khác. “Covered with lime” trả lời vật được bôi lên hạt: lime, không phải đất hay phân bón.",
+      "evidence": "lime to make sure there was no chance a fertile seed which could be grown elsewhere",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Hà Lan nhận đảo Run từ Anh trong thỏa thuận đổi lãnh thổ. Đề hỏi tên đảo được lấy, nên Run; tránh nhầm với vùng được nhượng cho Anh.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Năm 1770, cây giống được lén chuyển tới Mauritius. Smuggled diễn đạt lại secretly taken; đề hỏi điểm đến, không phải người chuyển cây hay đảo xuất phát.",
+      "evidence": "Mauritius, an island off the coast of Africa. Some of these were later exported to the",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Một trận sóng thần phá hủy nhiều đồn điền tại Banda năm 1778. Tsunami đáp ứng giới hạn một từ; không chép volcanic eruption thành hai từ dù cũng thuộc sự kiện được kể.",
+      "evidence": "tsunami that wiped out half the nutmeg groves. Finally, in 1809, the British returned to Indonesia",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C nêu ô tô trung bình dành khoảng 90% vòng đời ở trạng thái đỗ. Đây là thời gian không sử dụng, khớp câu hỏi; chọn C chứ không tìm thời lượng một chuyến đi.",
+      "evidence": "the average car spends more than 90 percent of its life parked.",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "15": {
+      "reason": "Đoạn B đưa nhiều lợi ích cho người sử dụng: giảm lỗi người lái, giải phóng thời gian và tăng tự do đi lại. Vì câu hỏi hỏi several advantages cho cá nhân, chọn B.",
+      "evidence": "human error as a contributory factor, and it is the primary cause in the vast majority.",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "16": {
+      "reason": "Đoạn E cho biết người dùng có thể chọn xe phù hợp nhất từng chuyến. Best suits tương ứng most appropriate, particular journey tương ứng each trip; chọn E.",
+      "evidence": "best suits their needs for a particular journey, rather than making a compromise across all their",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "17": {
+      "reason": "Đoạn G ước lượng cần khoảng mười năm để vượt các trở ngại. Câu hỏi hỏi khoảng thời gian khắc phục vấn đề, không phải ngày ra mắt một mẫu xe; chọn G.",
+      "evidence": "10 years. Mobility will change in such potentially significant ways and in association with so many",
+      "location": "Passage 2 · Đoạn G"
+    },
+    "18": {
+      "reason": "Đoạn D giải thích ít xe được sở hữu hơn nhưng mỗi chiếc chạy nhiều, hao mòn và thay nhanh hơn. Vì vậy sản lượng xe có thể không giảm; chọn D.",
+      "evidence": "replacing sooner. This faster rate of turnover may mean that vehicle production will not necessarily decrease.",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "19": {
+      "reason": "Phòng thí nghiệm giao thông chỉ ra lỗi con người liên quan đa số tai nạn. Đề hỏi nguyên nhân sau due to, nên human error; không nhầm với chính công nghệ được kỳ vọng giảm lỗi.",
+      "evidence": "human error as a contributory factor, and it is the primary cause in the vast majority.",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Tự động hóa có thể khiến các sáng kiến dùng chung xe khả thi hơn ở đô thị. Viable tương ứng workable, initiatives tương ứng schemes; đáp án là car sharing.",
+      "evidence": "car-sharing become much more viable, particularly in urban areas with significant travel demand. If a significant",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Mô hình của Đại học Michigan dự báo mức sở hữu xe giảm 43%. Chỉ số giảm là ownership; không phải mức sử dụng, vì mức sử dụng mỗi xe lại tăng.",
+      "evidence": "ownership by 43 percent, but that vehicles’ average annual mileage would double as a result. As",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Khi ít xe phục vụ nhiều người, số dặm mỗi xe chạy hằng năm có thể gấp đôi. Annual khớp yearly và double khớp twice; cần mileage.",
+      "evidence": "mileage would double as a result. As a consequence, each vehicle would be used more intensively,",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Trong cặp C và D, C đúng vì hành khách có thể làm việc sáng tạo, giao tiếp hoặc thư giãn thay vì lái xe. Đây là lợi ích thời gian trực tiếp, không phải tìm chỗ đỗ dễ hơn.",
+      "evidence": "productive, to socialise or simply to relax while automation systems have responsibility for safe control of",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Trong cặp C và D, D đúng vì người già hoặc người khuyết tật có thêm khả năng đi lại độc lập. Tác giả không đưa giảm ô nhiễm hay tiết kiệm chi phí cá nhân làm hai lợi ích ở đây.",
+      "evidence": "disabled travellers – may be able to enjoy significantly greater travel autonomy.",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Trong cặp A và E, A đúng vì phải tạo lòng tin của công chúng đối với xe tự động. Confidence tương ứng trust; câu hỏi yêu cầu thách thức được nêu, không phải điều hợp lý tự suy.",
+      "evidence": "trust and accept automated vehicles as being a valuable part of the mobility landscape.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Trong cặp A và E, E đúng vì xe phải ứng phó được nhiều điều kiện đường sá khó. Đừng đảo chiều thành sửa toàn bộ đường để hợp với xe: bài nói thích nghi phương tiện.",
+      "evidence": "the vehicle works reliably in the infinite range of traffic, weather and road situations it might encounter",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Ví dụ người tới New York minh họa khuynh hướng khám phá là phần căn bản của con người. A khái quát đúng; đoạn không nói đa số sợ khám phá hay chỉ thích kết quả bất ngờ.",
+      "evidence": "New York.",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn hai cho rằng thôi thúc người thám hiểm cũng tồn tại ở mọi người, dù nghề nghiệp khác nhau. Chọn C; nhắc nghề nghiệp không có nghĩa người khám phá ưu tiên một số nghề nhất định.",
+      "evidence": "professions – whether artist, marine biologist or astronomer – borders of the unknown are being tested",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Tác giả dùng miêu tả Egdon Heath của Hardy để nói khám phá cũng đi vào nội tâm nhân vật. Chọn C, không phải Hardy kể chính chuyến phiêu lưu thật của mình.",
+      "evidence": "Egdon Heath, a fictional area of uncultivated land, and used the landscape to suggest the desires",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Tác giả nhắc golden age rồi phản bác quan niệm khám phá đã hết cần thiết. Chọn D; đừng lấy quan điểm được dựng lên để bác bỏ làm chính lập trường của tác giả.",
+      "evidence": "golden age, as if exploration peaked somehow in the 19th century – as if the process",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Đoạn sáu cho thấy người ta định nghĩa khám phá qua mối quan tâm nghề nghiệp của bản thân. Chọn A; không có so sánh rằng định nghĩa của khoa học gia hợp lý hơn người khác.",
+      "evidence": "definition is slightly different – and tends to reflect the field of endeavour of each pioneer.",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Cuối bài, tác giả quan tâm khả năng khám phá ý tưởng và đem góc nhìn mới cho nơi đã quen thuộc. B khớp; các lựa chọn về cải tiến thể loại sách hay tính cách người đi không được bàn.",
+      "evidence": "exploration of ideas. I’ve done a great many expeditions and each one was unique. I’ve lived",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Wilfred Thesiger đối lập đi bằng lạc đà với đi ô tô để nhấn mạnh cách di chuyển có ý nghĩa. Đây là relevance of transport, nên chọn E; không cần từ transport xuất hiện nguyên văn.",
+      "evidence": "camel when I could have gone by car, it would have been a stunt.’ To him,",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Peter Fleming mô tả cảm xúc trở về nhà sau hành trình dài, nhìn lại thế giới và con người quen thuộc. Chọn A; trọng tâm là cảm nhận khi trở về, không phải kỹ thuật du hành.",
+      "evidence": "Fleming talks of the moment when the explorer returns to the existence he has left behind",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Robin Hanbury-Tenison được giới thiệu là người vận động cho cộng đồng bộ lạc xa xôi. “On behalf of” thể hiện làm vì lợi ích nhóm người cụ thể; chọn D.",
+      "evidence": "on behalf of remote so-called ‘tribal’ peoples, said, ‘A traveller simply records information about some far-off",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Thesiger xem việc khám phá có ý nghĩa dù không tạo ra phát hiện lớn về bản thân. “Regardless of self-discovery” phủ định việc tự hiểu mình là điều kiện thiết yếu; chọn E.",
+      "evidence": "self-discovery.",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Ran Fiennes đòi hành trình vừa chưa ai từng thực hiện vừa hữu ích khoa học. Hai tiêu chí khớp unique và of value to others; chọn B, không chỉ chọn vì khác lạ.",
+      "evidence": "scientifically useful.’ Chris Bonington, a leading mountaineer, felt exploration was to be found in the act",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Tác giả nói đã thực hiện rất nhiều chuyến thám hiểm đặc biệt. A great many khớp a large number of; chỗ trống cần danh từ số nhiều expeditions.",
+      "evidence": "expeditions and each one was unique. I’ve lived for months alone with isolated groups of people",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Ông từng tới những cộng đồng chưa tiếp xúc với người ngoài. Uncontacted mô tả people/tribes; không suy thành họ thiếu văn hóa hoặc sống lạc hậu.",
+      "evidence": "uncontacted tribes’. But none of these things is of the slightest interest to anyone unless, through",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Tác giả cho rằng bề mặt đất liền đã được biết khá rõ, trừ các câu hỏi cụ thể như tập tính trâu. Cần surface hoặc land surface, không phải toàn bộ mọi lĩnh vực khám phá.",
+      "evidence": "land surface of our planet lies; exploration of it is now down to the details –",
+      "location": "Passage 3"
+    }
+  }
+}

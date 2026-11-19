@@ -1,0 +1,206 @@
+{
+  "id": "c19-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Động cơ Watt–Boulton dùng chuyển động tới lui của piston để dẫn động cơ cấu bánh răng tạo quay. Ô cần bộ phận chuyển động được nối với bánh răng, nên piston, không phải tên toàn bộ động cơ.",
+      "evidence": "backward strokes of the piston, while the gear mechanism it was connected to produced rotary motion. It",
+      "location": "Phần động cơ hơi nước"
+    },
+    "2": {
+      "reason": "Nhu cầu than tăng vì than vận hành cả nhà máy lẫn phương tiện hơi nước. Ô hỏi nguồn năng lượng phải cung cấp nhiều hơn, nên coal; bài không nói nguồn này được thay hoàn toàn bằng điện.",
+      "evidence": "industries. The demand for coal, which was a relatively cheap energy source, grew rapidly during the Industrial",
+      "location": "Phần nhiên liệu"
+    },
+    "3": {
+      "reason": "Trước công nghiệp hóa, người kéo sợi và dệt làm riêng tại nhà hoặc xưởng nhỏ. Homes đã có trong đề, nên nơi còn lại là workshops; factories thuộc thời cơ giới hóa sau đó.",
+      "evidence": "work performed in small workshops or even homes by individual spinners, weavers and dyers. Starting in the",
+      "location": "Phần dệt trước công nghiệp hóa"
+    },
+    "4": {
+      "reason": "Máy Jenny và máy dệt cơ giới giúp sản xuất vải cần ít nhân công hơn. Relatively little labour tương ứng lượng cần giảm, nên labour hoặc labor; không nhầm với sản lượng vải được tăng lên.",
+      "evidence": "these machines, relatively little labour was required to produce cloth, and the new, mechanised textile factories that",
+      "location": "Phần máy dệt"
+    },
+    "5": {
+      "reason": "Dùng coke thay than củi vừa rẻ hơn vừa tạo kim loại chất lượng cao hơn. Ô cần thuộc tính được cải thiện nên quality; câu không nói kim loại trở nên nặng hoặc nhiều loại hơn.",
+      "evidence": "were of a higher quality, enabling Britain’s iron and steel production to expand in response to demand",
+      "location": "Phần luyện kim"
+    },
+    "6": {
+      "reason": "Nhu cầu sắt thép tăng do chiến tranh và mở rộng đường sắt từ thập niên 1830. Đề hỏi yếu tố phát triển, nên railway hoặc railways; không điền vật liệu sắt đã được cho.",
+      "evidence": "the expansion of the railways from the 1830s. The latter part of the Industrial Revolution also saw",
+      "location": "Phần luyện kim và giao thông"
+    },
+    "7": {
+      "reason": "Thành phố đông đúc chịu ô nhiễm và thiếu hệ thống vệ sinh. Inadequate tương ứng lacking sufficient, nên sanitation; ô hỏi điều thiếu chứ không hỏi hậu quả ô nhiễm vốn đã có.",
+      "evidence": "from pollution and inadequate sanitation. Although industrialisation increased the country’s economic output overall and improved the standard",
+      "location": "Phần đô thị hóa"
+    },
+    "8": {
+      "reason": "NOT GIVEN: tàu hơi nước dùng rộng trên kênh đào và Đại Tây Dương. Bài không nói mạng kênh mở rộng nhanh tới mức nào, nên không thể xác nhận quan hệ phát triển mạng lưới và chở thêm hàng.",
+      "evidence": "",
+      "location": "Phần giao thông"
+    },
+    "9": {
+      "reason": "FALSE: kỹ thuật dùng coke được mô tả là rẻ hơn. Nhận định chi phí ngành sắt tăng khi áp dụng kỹ thuật này đảo ngược cheaper; đừng suy từ sản lượng tăng rằng giá thành cũng tăng.",
+      "evidence": "charcoal. This method was cheaper and produced metals that were of a higher quality, enabling Britain’s iron",
+      "location": "Phần luyện kim"
+    },
+    "10": {
+      "reason": "NOT GIVEN: bài nêu thời điểm phát minh và việc hệ thống Cooke–Wheatstone được dùng cho đường sắt. Không có so sánh độ tin cậy với Morse; hai nơi phát triển riêng không chứng minh bên nào tốt hơn.",
+      "evidence": "",
+      "location": "Phần điện báo"
+    },
+    "11": {
+      "reason": "TRUE: mức sống trung lưu và thượng lưu cải thiện trong khi nhiều người nghèo vẫn chật vật. Tương phản này cho thấy lợi ích kinh tế không được chia đều cho mọi tầng lớp, phù hợp nhận định.",
+      "evidence": "of living for the middle and upper classes, many poor people continued to struggle. Factory workers had",
+      "location": "Phần xã hội công nghiệp"
+    },
+    "12": {
+      "reason": "TRUE: thợ dệt có tay nghề sợ người vận hành máy ít kỹ năng lấy mất sinh kế. Feared và robbing them of their livelihood xác nhận nỗi lo thất nghiệp, không chỉ thái độ ghét công nghệ nói chung.",
+      "evidence": "robbing them of their livelihood, A few desperate weavers began breaking into factories and smashing textile machines",
+      "location": "Phần Luddite"
+    },
+    "13": {
+      "reason": "NOT GIVEN: bài kể người Luddite bị bắn, bắt, treo cổ hoặc lưu đày sau vụ gần Huddersfield. Không có thái độ cảm thông của cư dân địa phương; đừng suy phản ứng công chúng từ mức trừng phạt nặng.",
+      "evidence": "",
+      "location": "Phần Luddite"
+    },
+    "14": {
+      "reason": "Đoạn D nêu adrenaline và cortisol, hai hormone chịu tác động của trạng thái thách thức hoặc đe dọa. Đó là hai hợp chất ảnh hưởng biểu hiện cơ thể và thành tích, nên chọn D.",
+      "evidence": "affect the production of adrenaline and cortisol – also known as ‘stress hormones’. During a challenge state",
+      "location": "Đoạn D"
+    },
+    "15": {
+      "reason": "Đoạn F đưa nhiều cách đáp ứng tích cực khi bị áp lực, gồm thay cách nghĩ, kỹ năng tâm lý và tập trong điều kiện giống thi đấu. Đề cần ví dụ chiến lược giảm tác hại stress, nên F.",
+      "evidence": "psychological skills, such as visualisation, can also help decrease physiological responses to threat. Visualisation may involve the",
+      "location": "Đoạn F"
+    },
+    "16": {
+      "reason": "Raducanu tự giải thích khó thở và nhịp tim bằng sự tích tụ hưng phấn, ồn ào. Đây là cách một vận động viên diễn giải trải nghiệm stress của chính mình, nên chọn A.",
+      "evidence": "later attributed to ‘the accumulation of the excitement and the buzz’. B For athletes, some level of",
+      "location": "Đoạn A"
+    },
+    "17": {
+      "reason": "Đoạn C dẫn nghiên cứu: trạng thái thách thức gắn với thành tích tốt, trạng thái đe dọa gắn với thành tích kém. Cần kết quả nghiên cứu liên kết phản ứng và biểu hiện, nên C.",
+      "evidence": "as a threat state. Research shows that the challenge states lead to good performance, while threat states",
+      "location": "Đoạn C"
+    },
+    "18": {
+      "reason": "Nhà tâm lý có thể giúp vận động viên nhìn nhịp tim nhanh như hưng phấn thay vì lo âu. Đây là người thay đổi cách diễn giải phản ứng stress, nên F, không phải đoạn chỉ mô tả hormone.",
+      "evidence": "or parents – use. Psychologists can also help athletes change how they see their physiological responses",
+      "location": "Đoạn F"
+    },
+    "19": {
+      "reason": "Các yêu cầu thi đấu gồm lo nguy cơ chấn thương, ngoài nỗ lực và độ khó giải. Such as injury cho ví dụ cụ thể nguy hiểm cần đối phó, nên ô là injury.",
+      "evidence": "potential dangers such as injury. Resources, on the other hand, are a person’s ability to cope with",
+      "location": "Đoạn B"
+    },
+    "20": {
+      "reason": "Cortisol gắn với nhiều lần phát bóng thất bại hơn ở tay vợt. Vì đề diễn đạt số lần thành công giảm, danh từ vẫn là serves; phải nhận ra unsuccessful tăng tương ứng successful giảm.",
+      "evidence": "associated with more unsuccessful serves and greater anxiety. E That said, anxiety is also a common experience",
+      "location": "Đoạn D"
+    },
+    "21": {
+      "reason": "Nhà tâm lý giúp nhìn nhịp tim nhanh như hưng phấn, không phải căng thẳng. Ô hỏi cảm xúc tích cực làm cách giải thích mới, nên excitement; không điền chính heart rate là phản ứng cơ thể.",
+      "evidence": "the accumulation of the excitement and the buzz’. B For athletes, some level of performance stress is",
+      "location": "Đoạn F"
+    },
+    "22": {
+      "reason": "Visualisation được nêu là kỹ năng tâm lý giúp giảm phản ứng sinh lý trước đe dọa. Ô cần một ví dụ kỹ thuật, nên visualization hoặc visualisation; không phải tên hormone hoặc triệu chứng.",
+      "evidence": "psychological skills, such as visualisation, can also help decrease physiological responses to threat. Visualisation may involve the",
+      "location": "Đoạn F"
+    },
+    "23": {
+      "reason": "B và D là cặp đúng: bài mô tả khó điều hòa hơi thở, tim của Raducanu và các áp lực tăng ở Wimbledon. Riêng B ứng với triệu chứng; bài không cho biết cô đã áp dụng biện pháp kiểm soát nào.",
+      "evidence": "having difficulty regulating her breathing and heart rate during a match, which she later attributed to ‘the",
+      "location": "Đoạn A và C"
+    },
+    "24": {
+      "reason": "D đúng vì đông khán giả hơn, kỳ vọng cao và đối thủ giỏi làm yêu cầu vượt nguồn lực cô cảm nhận; B là ý đúng còn lại. Đừng thêm phản ứng mạng xã hội hoặc giai đoạn cô rút lui khi bài không nêu.",
+      "evidence": "",
+      "location": "Đoạn A và C"
+    },
+    "25": {
+      "reason": "A và E là cặp đúng. A được xác nhận vì mức lo âu phụ thuộc yêu cầu và nguồn lực của cá nhân; các yếu tố quyết định mức nặng khác với việc liệt kê triệu chứng phổ biến nhất.",
+      "evidence": "and cause overthinking. The intensity with which a person experiences anxiety depends on the demands and resources",
+      "location": "Đoạn E"
+    },
+    "26": {
+      "reason": "E đúng: lo âu lặp lại cùng phản ứng tiêu cực có thể tăng nguy cơ bệnh tim và trầm cảm; A là ý đúng còn lại. Bài không nêu thời gian triệu chứng bắt đầu xuất hiện hoặc nhóm vận động viên dễ mắc nhất.",
+      "evidence": "can increase risk of heart disease and depression. F But there are many ways athletes can ensure",
+      "location": "Đoạn E"
+    },
+    "27": {
+      "reason": "Chọn H, unique: Mirzakhani là người phụ nữ duy nhất từng nhận Fields Medal tính tới khi bà mất. Sự độc nhất thuộc thành tựu giải thưởng, không có nghĩa bà đã biểu hiện tài năng vượt trội từ nhỏ.",
+      "evidence": "40. She was the only woman to win the Fields Medal – the mathematical equivalent of a",
+      "location": "Đoạn 1"
+    },
+    "28": {
+      "reason": "Hồi nhỏ toán không hấp dẫn Mirzakhani; bà thích đọc hơn. Maths wasn't her interest tương ứng held little appeal, nên chọn A; câu nói về hứng thú chứ không phải không có năng lực học toán.",
+      "evidence": "but maths wasn’t her interest – reading was. She loved novels and would read anything she could lay her",
+      "location": "Đoạn 1"
+    },
+    "29": {
+      "reason": "Bài toán anh trai chia sẻ khiến bà say mê rồi gắn bó toán học. Fascinated và hooked diễn đạt intrigued ở C; không nhầm trạng thái bị thu hút với việc bị ép buộc luyện tập.",
+      "evidence": "from a magazine that fascinated her – and she was hooked. In adult life it is clear that she",
+      "location": "Đoạn 1"
+    },
+    "30": {
+      "reason": "Khi gặp trở ngại bà vẫn kiên định. Resolute in the face of setbacks tương ứng determined ở B; đây là thái độ với khó khăn, không phải thành tích luôn thuận lợi.",
+      "evidence": "she did and also resolute in the face of setbacks. One of her comments sums it up.",
+      "location": "Đoạn 2"
+    },
+    "31": {
+      "reason": "Khoảnh khắc khám phá điều mới đem lại phần thưởng tinh thần lớn nhất cho bà. Rewarding và enjoyment tương ứng satisfaction ở J; achievement chỉ thành tựu, không diễn tả cảm giác hài lòng ô đang hỏi.",
+      "evidence": "Of course, the most rewarding part is the “Aha” moment, the excitement of discovery and enjoyment of",
+      "location": "Đoạn 2"
+    },
+    "32": {
+      "reason": "Bà đạt tầm nghiên cứu toán học nguyên gốc. Original research diễn đạt innovative ở I; ô mô tả tính mới của nghiên cứu chứ không phải mức dễ hiểu hoặc số công trình.",
+      "evidence": "to the heights of original research into mathematics. Is her background unusual? Apparently not. Most Nobel prize",
+      "location": "Đoạn 2"
+    },
+    "33": {
+      "reason": "YES: tác giả nói phần lớn người nhận Nobel không nổi bật thời thơ ấu. Unexceptional tương ứng ở mức bình thường; không được dùng danh tiếng lúc trưởng thành để tự suy họ đều thần đồng từ nhỏ.",
+      "evidence": "Nobel prize winners were unexceptional in childhood. Einstein was slow to talk as a baby. He failed",
+      "location": "Phần về Nobel"
+    },
+    "34": {
+      "reason": "NOT GIVEN: bài kể Einstein nói muộn và trượt phần chung kỳ thi, nhưng không quy nguyên nhân cho thiếu tự tin. Kết quả kém ở một việc không chứng minh trạng thái tâm lý gây ra nó.",
+      "evidence": "",
+      "location": "Phần về Einstein"
+    },
+    "35": {
+      "reason": "YES: the jury is out cho thấy chưa có kết luận thống nhất về thiên bẩm và các yếu tố khác. Điều này khớp khó đạt đồng thuận; những hành vi hiệu suất cao có thể dạy không giải quyết hết tranh luận bẩm sinh.",
+      "evidence": "your teens. While the jury is out on giftedness being innate and other factors potentially making the",
+      "location": "Phần về bẩm sinh"
+    },
+    "36": {
+      "reason": "NOT GIVEN: bài nêu suy nghĩ của Einstein về phẩm chất nhà khoa học, không nói ông chán nản vì cách công chúng nhìn công trình đời mình. Không được chuyển một quan điểm chung thành cảm xúc cá nhân.",
+      "evidence": "",
+      "location": "Phần về Einstein"
+    },
+    "37": {
+      "reason": "NO: Einstein nói ông ở lại với vấn đề lâu hơn, nhấn mạnh kiên trì chứ không phải xử lý nhanh. Câu hỏi quy thành công cho tốc độ giải quyết vấn đề đã đảo ngược điểm ông tự giải thích về cách làm việc.",
+      "evidence": "stay with problems longer. Most people say",
+      "location": "Phần về Einstein"
+    },
+    "38": {
+      "reason": "Chọn C: Eyre nhấn mạnh thái độ đúng, tò mò, kiên trì và chăm chỉ. Tinh thần tìm hiểu đối với học tập phù hợp curiosity; không có yêu cầu kỷ luật hà khắc hay phải hơn hết mọi bạn.",
+      "evidence": "develop the attributes of high performers — curiosity, persistence and hard work,",
+      "location": "Phần về Eyre"
+    },
+    "39": {
+      "reason": "Chọn B: nghiên cứu không coi năng khiếu bẩm sinh đặc biệt là trung tâm thành tích chuyên gia. Con số luyện tập không phải bảo đảm ai đủ 10.000 giờ cũng thành thiên tài; lựa chọn đó tuyệt đối hóa kết luận.",
+      "evidence": "doesn’t think unique and innate talents are at the heart of performance. Deliberate practice, that stretches you",
+      "location": "Phần về Ericsson"
+    },
+    "40": {
+      "reason": "Chọn D: trẻ khó khăn thành công thường có một hoặc nhiều người lớn coi trọng và hỗ trợ giáo dục trong gia đình hoặc cộng đồng. Không nhất thiết cả cha mẹ, cơ sở giàu có hay chế độ ăn tốt đều phải hiện diện.",
+      "evidence": "the child’s life who valued and supported education, either in the immediate or extended family or in",
+      "location": "Đoạn áp chót"
+    }
+  }
+}

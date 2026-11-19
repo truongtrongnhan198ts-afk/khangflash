@@ -1,0 +1,206 @@
+{
+  "id": "c14-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Henderson thời nhỏ thường ở Press Castle và khám phá vùng quanh đó. Often và thời gian dài trái với rarely visited, nên FALSE; đừng chỉ thấy tên địa điểm rồi chọn TRUE.",
+      "evidence": "often stayed at Press Castle, the large mansion on the northern edge of the property, and",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Ông không thích nghề kinh doanh nhưng vẫn theo nghề để làm hài lòng gia đình. Nguyên nhân trong đề trùng với please his family, nên TRUE.",
+      "evidence": "please his family. In October 1855, however, he emigrated to Canada with his wife Agnes Elder",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Bài kể thí nghiệm năm 1865 của Henderson và Notman, nhưng không mô tả họ ngạc nhiên hay không. Có sự kiện không đồng nghĩa có thông tin về cảm xúc: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Bài đối lập phong cách hiện thực mạnh của Notman với cách tiếp cận lãng mạn của Henderson. Nhấn mạnh khác biệt trái với nhận định có nhiều nét tương đồng, nên FALSE.",
+      "evidence": "bold realism, Henderson for the first 20 years of his career produced romantic images, showing the",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Có thông tin mở studio năm 1866, nhưng không có khoảng cách từ studio tới nhà Henderson. Không suy đoán gần nhà chỉ vì cùng thành phố: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Từ khoảng năm 1870, ông bỏ chụp chân dung để chuyên chụp phong cảnh. Landscape tương ứng scenery; cả thay đổi và mục đích đều khớp, nên TRUE.",
+      "evidence": "dropped portraiture to specialize in landscape photography and other views. His numerous photographs of city life",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Khi ông nhận nhiệm vụ chụp tuyến Montreal–Halifax, đường sắt mới gần hoàn thành. Almost-completed không phải đã hoàn thành; đề đổi mốc tiến độ nên FALSE.",
+      "evidence": "almost-completed line connecting Montreal to Halifax. Commissions from other railways followed. In 1876 he photographed bridges",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ông giữ vị trí ở Canadian Pacific Railway tới khi nghỉ hẳn nghề nhiếp ảnh năm 1897. Mốc nghỉ hưu xác nhận đây là công việc nhiếp ảnh cuối cùng: TRUE.",
+      "evidence": "1897, when he retired completely from photography.",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Câu mở đầu xác định cha Henderson là thương nhân thành đạt. Đề hỏi nghề người cha sau a; cần danh từ số ít merchant, không phải nghề của Henderson.",
+      "evidence": "successful merchant. His grandfather, also called Alexander, had founded the family business, and later became the",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Nhiếp ảnh nghiệp dư chưa phổ biến vì quy trình tốn thời gian và thiết bị nặng. Vật được tính trọng lượng là equipment; đây là danh từ không đếm được đi với was.",
+      "evidence": "equipment. People wanted to buy photographs as souvenirs of a trip or as gifts, and catering",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Khách mua ảnh làm quà tặng hoặc vật kỷ niệm chuyến đi. Đề đã cho souvenirs nên chỗ còn lại trong cặp song song là gifts.",
+      "evidence": "as gifts, and catering to this market, Henderson had stock photographs on display at his studio",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Henderson thường đi xuồng trên các sông miền đông để tới vùng hoang dã. Chỗ trống hỏi phương tiện sau in a, vì vậy điền canoe.",
+      "evidence": "canoe on the Blanche, du Lievre, and other noted eastern rivers. He went on several occasions",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Năm 1885 ở Rogers Pass, ông chụp núi và tiến độ xây tuyến đường sắt. Đề đã nêu đường sắt, nên đối tượng còn thiếu là mountains.",
+      "evidence": "mountains and the progress of construction.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Section F giải thích người giàu tránh bệnh viện vì nguy cơ bệnh tật trong bối cảnh thế kỷ XIX. Steered clear khớp avoided; cần lý do tránh bệnh viện chứ không chỉ mốc thời gian.",
+      "evidence": "steered clear of hospitals. While miasma theory has been long since disproved, Short has for the",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "15": {
+      "reason": "Section C nói nhà chọc trời bằng kính và thép được coi là biểu tượng địa vị. Symbols of status khớp prestige, khác với hiệu quả đáp ứng nhu cầu thực tế.",
+      "evidence": "symbols of status, rather than practical ways of meeting our requirements.",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "16": {
+      "reason": "Section E so sánh số lần thay không khí của bệnh phòng thế kỷ XIX với phòng mổ hiện đại. Đây là phép so sánh thông gió giữa hai thời kỳ.",
+      "evidence": "24 air changes an hour – that’s similar to the performance of a modern-day, computer-controlled operating",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "17": {
+      "reason": "Section D mô tả đưa tác nhân gây bệnh vào luồng khí mô phỏng rồi đánh giá an toàn. Đoạn này nói phương pháp kiểm tra, khác E trình bày kết quả đo.",
+      "evidence": "pathogens in the airstreams, modelled for someone with tuberculosis (TB) coughing in the wards and we",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "18": {
+      "reason": "Section B liên hệ sự phổ biến của điều hòa với hoạt động quảng bá rộng rãi. Marketed diễn đạt lại advertising; câu hỏi hỏi nguyên nhân tăng sử dụng, không chỉ mức tiêu thụ điện.",
+      "evidence": "marketed’ by their inventors.",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "19": {
+      "reason": "Các bệnh viện Short nghiên cứu được xây theo bản thiết kế của John Shaw Billings. “Built to the designs of” cung cấp danh từ designs sau architectural.",
+      "evidence": "designs of John Shaw Billings, including the first Johns Hopkins Hospital in the US city of",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Short mô phỏng tác nhân gây bệnh thải vào không khí từ bệnh nhân. Chỗ trống hỏi thứ trong luồng khí, nên pathogens, không phải tên căn bệnh.",
+      "evidence": "pathogens in the airstreams, modelled for someone with tuberculosis (TB) coughing in the wards and we",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Bệnh được dùng trong mô phỏng là lao: tuberculosis. Suffering from yêu cầu tên bệnh; đừng điền pathogens vì đó là tác nhân gây bệnh ở chỗ trước.",
+      "evidence": "tuberculosis (TB) coughing in the wards and we found the ventilation systems in the room would",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Nghiên cứu đo việc thay không khí trong bệnh phòng bệnh viện. Wards chỉ các phòng bệnh; modern operating theatre là đối tượng so sánh, không phải đáp án.",
+      "evidence": "19th-century hospital wards could generate up to 24 air changes an hour",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Short đề xuất khu chung phù hợp cho nhiều bệnh nhân với chi phí năng lượng thấp hơn phòng riêng. Vì areas đã có sẵn, cần tính từ communal.",
+      "evidence": "Communal wards appropriate for certain patients – older people with dementia, for example – would work",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Thiết kế thông gió thế kỷ XIX chịu sức ép từ nhu cầu công chúng muốn được bảo vệ khỏi khí độc. Nhóm đưa ra yêu cầu là public, không phải nhà thiết kế.",
+      "evidence": "a panicked public clamouring for buildings that could protect",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Loại khí bị cho là truyền bệnh được gọi là miasmas. Đề hỏi tên bad air; không thay bằng tên căn bệnh ở câu tiếp theo.",
+      "evidence": "miasmas – toxic air that spread disease. Miasmas were feared as the principal agents of disease",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Các đợt dịch tại London và Paris được nhắc tới là dịch tả. Cholera outbreaks gồm tên bệnh và sự bùng phát; chỉ cần tên bệnh cholera.",
+      "evidence": "cholera outbreaks in London and Paris during the 1850s. Foul air, rather than germs, was believed",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Section A mô tả áp lực ngày càng lớn phải sắp xếp công việc và đời sống có trật tự. Những lời khuyên ought to cho thấy điều xã hội mong đợi người ta làm; chọn vi.",
+      "evidence": "We are told that we ought to organise our company, our home life, our week, our",
+      "location": "Passage 3 · Đoạn A"
+    },
+    "28": {
+      "reason": "Section B nêu nghịch lý càng theo đuổi tổ chức hiệu quả, nhiều người vẫn căng thẳng và không hài lòng. Trọng tâm là phàn nàn về kết quả cách làm đó; chọn i.",
+      "evidence": "dissatisfied with the way their work is structured and the way they are managed. This begs",
+      "location": "Passage 3 · Đoạn B"
+    },
+    "29": {
+      "reason": "Section C trình bày nguồn gốc lịch sử các lời khuyên tổ chức lao động trong kinh doanh. Đây là khuyến nghị thời kỳ đầu, không phải ví dụ công ty hiện tại; chọn iii.",
+      "evidence": "Taylor was one of the forefathers of scientific management. Writing in the first half of the",
+      "location": "Passage 3 · Đoạn C"
+    },
+    "30": {
+      "reason": "Section D chất vấn niềm tin mặc định rằng càng có trật tự càng tốt. Xem tổ chức là mục tiêu tự thân là giả định sai nền tảng; chọn ii.",
+      "evidence": "misguided. The problem is not necessarily the management theories or strategies we use to organise our",
+      "location": "Passage 3 · Đoạn D"
+    },
+    "31": {
+      "reason": "Section E chỉ ra lợi ích tổ chức giảm dần, có lúc tốn hơn giá trị tạo ra. Đó là bằng chứng chi phí có thể vượt lợi ích, tương ứng ix.",
+      "evidence": "diminishing returns. Order does increase productivity to a certain extent, but eventually the usefulness of the",
+      "location": "Passage 3 · Đoạn E"
+    },
+    "32": {
+      "reason": "Section F đề xuất bỏ cấu trúc và cấp bậc để tạo ý tưởng không thể có trong môi trường cứng nhắc. Tiêu đề nhấn mạnh đạt điều trước đây bất khả thi; chọn vii.",
+      "evidence": "would never be reached.",
+      "location": "Passage 3 · Đoạn F"
+    },
+    "33": {
+      "reason": "Section G đưa ví dụ Oticon, GE và Google áp dụng quản lý linh hoạt. Đây là doanh nghiệp thực hành cách tiếp cận mới, nên iv, không phải phần lịch sử lý thuyết.",
+      "evidence": "Oticon, a large Danish manufacturer of hearing aids, used what it called a ‘spaghetti’ structure in",
+      "location": "Passage 3 · Đoạn G"
+    },
+    "34": {
+      "reason": "Section H cảnh báo cả trật tự lẫn hỗn loạn đều không bảo đảm tiến bộ mãi mãi. Cần mức phù hợp thay vì tuyệt đối hóa một phương pháp; chọn viii.",
+      "evidence": "disorder, much like order, also seems to have diminishing utility",
+      "location": "Passage 3 · Đoạn H"
+    },
+    "35": {
+      "reason": "Các khóa hướng dẫn nhắm tới người thấy mình chưa làm việc đủ hiệu quả. More productive được diễn đạt thành not productive enough; chỗ trống cần tính từ productive.",
+      "evidence": "more productive. Every week, countless seminars and workshops take place around the world to tell a",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Thông điệp sắp xếp mọi thứ hấp dẫn người tự nhận là cầu toàn. Sau regard themselves as cần danh từ chỉ người, nên perfectionists.",
+      "evidence": "perfectionists with the need to get everything right. The number of business schools and graduates has",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Section B nói nhiều người lao động không hài lòng với các mặt trong công việc. Sau feel cần tính từ cảm xúc dissatisfied, không phải danh từ dissatisfaction.",
+      "evidence": "dissatisfied with the way their work is structured and the way they are managed. This begs",
+      "location": "Passage 3 · Đoạn B"
+    },
+    "38": {
+      "reason": "Section D nói cá nhân và doanh nghiệp dành nguồn lực sắp xếp mà không xét lợi ích thật. Đây đúng là theo đuổi trật tự mà chưa cân nhắc giá trị, nên TRUE.",
+      "evidence": "businesses and people spend time and money organising themselves for the sake of organising, rather than",
+      "location": "Passage 3 · Đoạn D"
+    },
+    "39": {
+      "reason": "Nghiên cứu khuyến khích môi trường không có cấu trúc và cấp bậc cứng nhắc khi đổi mới. Điều này trái với yêu cầu mọi người có vai trò tách bạch, nên FALSE.",
+      "evidence": "devoid of structure and hierarchy and enable everyone involved to engage as one organic group. These",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Bài nêu GE và Google đều quản lý linh hoạt, nhưng không nói Google học theo hay được GE truyền cảm hứng. Hai ví dụ cùng xuất hiện không chứng minh quan hệ nguyên nhân: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    }
+  }
+}

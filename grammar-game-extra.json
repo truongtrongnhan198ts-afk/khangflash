@@ -1,0 +1,296 @@
+{
+  "2806ce463fa390": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Not only”, giữ nguyên nghĩa:\nPublic libraries provide internet access and also offer a safe place to study.",
+      "answer": "Not only do public libraries provide internet access, but they also offer a safe place to study.",
+      "accepted": [
+        "Not only do public libraries provide internet access, but they also offer a safe place to study.",
+        "Not only do public libraries provide internet access, but they offer a safe place to study as well."
+      ],
+      "sentence": "Not only do public libraries provide internet access, but they also offer a safe place to study.",
+      "translation": "Thư viện công cộng không chỉ cung cấp truy cập internet mà còn là nơi an toàn để học.",
+      "explanation": "Not only đứng đầu mệnh đề yêu cầu đảo trợ động từ lên trước chủ ngữ; động từ chính theo sau do/does/did dùng dạng nguyên mẫu. Vế thứ hai dùng but ... also để bổ sung ý."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn cần nhấn mạnh hai lợi ích đều đúng của thư viện.",
+      "answer": "Not only do public libraries provide internet access, but they also offer a safe place to study.",
+      "options": [
+        "Not only do public libraries provide internet access, but they also offer a safe place to study.",
+        "Public libraries provide internet access but never offer a safe place to study.",
+        "Public libraries offer a safe place to study only if internet access is unavailable.",
+        "Although libraries provide internet access, they cannot offer a safe place to study."
+      ],
+      "sentence": "Not only do public libraries provide internet access, but they also offer a safe place to study.",
+      "translation": "Thư viện công cộng không chỉ cung cấp truy cập internet mà còn là nơi an toàn để học.",
+      "explanation": "Not only đứng đầu mệnh đề yêu cầu đảo trợ động từ lên trước chủ ngữ; động từ chính theo sau do/does/did dùng dạng nguyên mẫu. Vế thứ hai dùng but ... also để bổ sung ý. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "e829ce914d2472": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “It was”, giữ nguyên nghĩa:\nTransparent recruitment restored trust, rather than higher salaries.",
+      "answer": "It was transparent recruitment that restored trust.",
+      "accepted": [
+        "It was transparent recruitment that restored trust.",
+        "It was transparent recruitment which restored trust."
+      ],
+      "sentence": "It was transparent recruitment that restored trust.",
+      "translation": "Chính việc tuyển dụng minh bạch đã khôi phục niềm tin.",
+      "explanation": "Câu chẻ dùng It is/was + thành phần được nhấn mạnh + that/who + mệnh đề còn lại. Không thêm một chủ ngữ thừa vào mệnh đề sau that/who."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn muốn nhấn mạnh tuyển dụng minh bạch là yếu tố khôi phục niềm tin, chứ không phải lương cao.",
+      "answer": "It was transparent recruitment that restored trust.",
+      "options": [
+        "It was transparent recruitment that restored trust.",
+        "It was higher salaries that restored trust.",
+        "Transparent recruitment failed to restore trust.",
+        "Trust was restored despite a lack of transparent recruitment."
+      ],
+      "sentence": "It was transparent recruitment that restored trust.",
+      "translation": "Chính việc tuyển dụng minh bạch đã khôi phục niềm tin.",
+      "explanation": "Câu chẻ dùng It is/was + thành phần được nhấn mạnh + that/who + mệnh đề còn lại. Không thêm một chủ ngữ thừa vào mệnh đề sau that/who. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "506fcd159a5a43": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Far from”, giữ nguyên nghĩa:\nFlexible hours do not reduce productivity; they improve it.",
+      "answer": "Far from reducing productivity, flexible hours improve it.",
+      "accepted": [
+        "Far from reducing productivity, flexible hours improve it.",
+        "Far from reducing productivity, flexible hours actually improve it."
+      ],
+      "sentence": "Far from reducing productivity, flexible hours improve it.",
+      "translation": "Giờ làm linh hoạt không hề giảm năng suất mà nâng cao năng suất.",
+      "explanation": "Far from + V-ing / being + tính từ diễn tả “hoàn toàn không…; trái lại…”. From là giới từ nên động từ theo sau phải ở dạng V-ing; với tính từ, dùng being + tính từ."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn muốn bác bỏ nhận định rằng giờ làm linh hoạt làm giảm năng suất.",
+      "answer": "Far from reducing productivity, flexible hours improve it.",
+      "options": [
+        "Far from reducing productivity, flexible hours improve it.",
+        "Flexible hours reduce productivity even though employees prefer them.",
+        "Flexible hours improve productivity only by reducing output.",
+        "Flexible hours have no effect on productivity."
+      ],
+      "sentence": "Far from reducing productivity, flexible hours improve it.",
+      "translation": "Giờ làm linh hoạt không hề giảm năng suất mà nâng cao năng suất.",
+      "explanation": "Far from + V-ing / being + tính từ diễn tả “hoàn toàn không…; trái lại…”. From là giới từ nên động từ theo sau phải ở dạng V-ing; với tính từ, dùng being + tính từ. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "e8b31024653a55": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Only by”, giữ nguyên nghĩa:\nWe can reduce waste only if we repair products instead of replacing them.",
+      "answer": "Only by repairing products instead of replacing them can we reduce waste.",
+      "accepted": [
+        "Only by repairing products instead of replacing them can we reduce waste.",
+        "Only by repairing products rather than replacing them can we reduce waste."
+      ],
+      "sentence": "Only by repairing products instead of replacing them can we reduce waste.",
+      "translation": "Chỉ bằng cách sửa sản phẩm thay vì thay mới, chúng ta mới giảm được rác thải.",
+      "explanation": "Only by + V-ing nêu cách duy nhất để đạt kết quả. Khi đứng đầu câu, cấu trúc này yêu cầu đảo trợ động từ hoặc động từ khuyết thiếu lên trước chủ ngữ ở mệnh đề chính."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn cần nhấn mạnh sửa sản phẩm là cách duy nhất được nêu để giảm rác thải.",
+      "answer": "Only by repairing products instead of replacing them can we reduce waste.",
+      "options": [
+        "Only by repairing products instead of replacing them can we reduce waste.",
+        "We can reduce waste without repairing or reusing products.",
+        "Replacing products is the only way to reduce waste.",
+        "Repairing products inevitably increases waste."
+      ],
+      "sentence": "Only by repairing products instead of replacing them can we reduce waste.",
+      "translation": "Chỉ bằng cách sửa sản phẩm thay vì thay mới, chúng ta mới giảm được rác thải.",
+      "explanation": "Only by + V-ing nêu cách duy nhất để đạt kết quả. Khi đứng đầu câu, cấu trúc này yêu cầu đảo trợ động từ hoặc động từ khuyết thiếu lên trước chủ ngữ ở mệnh đề chính. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "13da61a80577bf": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Hardly”, giữ nguyên nghĩa:\nThe hearing began, and almost immediately a witness challenged the evidence.",
+      "answer": "Hardly had the hearing begun when a witness challenged the evidence.",
+      "accepted": [
+        "Hardly had the hearing begun when a witness challenged the evidence."
+      ],
+      "sentence": "Hardly had the hearing begun when a witness challenged the evidence.",
+      "translation": "Phiên điều trần vừa bắt đầu thì một nhân chứng đã chất vấn bằng chứng.",
+      "explanation": "Hardly/Scarcely had + chủ ngữ + quá khứ phân từ đi với when + mệnh đề quá khứ đơn. Phân biệt No sooner ... than; không dùng than với hardly/scarcely trong mẫu đang học."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn muốn diễn tả hai sự kiện xảy ra gần như liên tiếp: bắt đầu điều trần, rồi chất vấn.",
+      "answer": "Hardly had the hearing begun when a witness challenged the evidence.",
+      "options": [
+        "Hardly had the hearing begun when a witness challenged the evidence.",
+        "A witness challenged the evidence long before the hearing began.",
+        "The hearing ended before any witness challenged the evidence.",
+        "The evidence was never challenged during the hearing."
+      ],
+      "sentence": "Hardly had the hearing begun when a witness challenged the evidence.",
+      "translation": "Phiên điều trần vừa bắt đầu thì một nhân chứng đã chất vấn bằng chứng.",
+      "explanation": "Hardly/Scarcely had + chủ ngữ + quá khứ phân từ đi với when + mệnh đề quá khứ đơn. Phân biệt No sooner ... than; không dùng than với hardly/scarcely trong mẫu đang học. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    },
+    "tense": {
+      "type": "write",
+      "question": "Yesterday, the hearing began and a witness immediately objected. Complete the past-perfect inversion: Hardly had the hearing _____ when a witness objected. (begin)",
+      "answer": "begun",
+      "sentence": "Hardly had the hearing begun when a witness objected.",
+      "translation": "Hôm qua, phiên điều trần vừa bắt đầu thì một nhân chứng phản đối.",
+      "explanation": "Sau had trong quá khứ hoàn thành dùng quá khứ phân từ. Begin có ba dạng begin–began–begun, nên ở đây dùng begun. Hardly had + chủ ngữ + V3 đi với when + quá khứ đơn."
+    }
+  },
+  "a8184e071fd46f": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Notwithstanding”, giữ nguyên nghĩa:\nDespite its high cost, the project delivered lasting benefits.",
+      "answer": "Notwithstanding its high cost, the project delivered lasting benefits.",
+      "accepted": [
+        "Notwithstanding its high cost, the project delivered lasting benefits.",
+        "Notwithstanding its high cost, the project still delivered lasting benefits."
+      ],
+      "sentence": "Notwithstanding its high cost, the project delivered lasting benefits.",
+      "translation": "Mặc dù chi phí cao, dự án đem lại lợi ích lâu dài.",
+      "explanation": "Notwithstanding có thể là giới từ mang nghĩa mặc dù, theo sau trực tiếp bằng một cụm danh từ. Không thêm of hoặc to vào khung notwithstanding + cụm danh từ."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn muốn thừa nhận chi phí cao nhưng khẳng định dự án vẫn có lợi ích lâu dài.",
+      "answer": "Notwithstanding its high cost, the project delivered lasting benefits.",
+      "options": [
+        "Notwithstanding its high cost, the project delivered lasting benefits.",
+        "The project delivered lasting benefits because its cost was negligible.",
+        "The project failed to deliver lasting benefits because it was expensive.",
+        "The project delivered benefits only after all costs disappeared."
+      ],
+      "sentence": "Notwithstanding its high cost, the project delivered lasting benefits.",
+      "translation": "Mặc dù chi phí cao, dự án đem lại lợi ích lâu dài.",
+      "explanation": "Notwithstanding có thể là giới từ mang nghĩa mặc dù, theo sau trực tiếp bằng một cụm danh từ. Không thêm of hoặc to vào khung notwithstanding + cụm danh từ. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "d7898f60e6f023": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “The council”, giữ nguyên nghĩa:\nThe council simplified the application process, and this reduced delays.",
+      "answer": "The council simplified the application process, thereby reducing delays.",
+      "accepted": [
+        "The council simplified the application process, thereby reducing delays.",
+        "The council simplified the application process, thereby reducing the delays."
+      ],
+      "sentence": "The council simplified the application process, thereby reducing delays.",
+      "translation": "Hội đồng đơn giản hóa quy trình nộp hồ sơ, qua đó giảm sự chậm trễ.",
+      "explanation": "Thereby + V-ing nêu hệ quả hoặc phương thức của hành động ở mệnh đề trước, mang nghĩa qua đó hoặc nhờ vậy. Không dùng động từ chia thì hay to-infinitive ngay sau thereby trong khung này."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn cần nối hành động đơn giản hóa quy trình với hệ quả giảm chậm trễ.",
+      "answer": "The council simplified the application process, thereby reducing delays.",
+      "options": [
+        "The council simplified the application process, thereby reducing delays.",
+        "The council simplified the application process despite increasing delays.",
+        "The council reduced delays before making any change to the process.",
+        "The council complicated the application process, thereby increasing delays."
+      ],
+      "sentence": "The council simplified the application process, thereby reducing delays.",
+      "translation": "Hội đồng đơn giản hóa quy trình nộp hồ sơ, qua đó giảm sự chậm trễ.",
+      "explanation": "Thereby + V-ing nêu hệ quả hoặc phương thức của hành động ở mệnh đề trước, mang nghĩa qua đó hoặc nhờ vậy. Không dùng động từ chia thì hay to-infinitive ngay sau thereby trong khung này. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "c79961fef54852": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “All things considered”, giữ nguyên nghĩa:\nAfter considering every factor, we can see that the proposal is feasible.",
+      "answer": "All things considered, it is evident that the proposal is feasible.",
+      "accepted": [
+        "All things considered, it is evident that the proposal is feasible."
+      ],
+      "sentence": "All things considered, it is evident that the proposal is feasible.",
+      "translation": "Sau khi cân nhắc mọi yếu tố, rõ ràng đề xuất là khả thi.",
+      "explanation": "All things considered là cụm phân từ cố định, nghĩa là sau khi cân nhắc mọi yếu tố. Dùng considered vì các yếu tố được cân nhắc, không dùng considering."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn muốn đưa ra kết luận khả thi sau khi đã cân nhắc toàn bộ yếu tố.",
+      "answer": "All things considered, it is evident that the proposal is feasible.",
+      "options": [
+        "All things considered, it is evident that the proposal is feasible.",
+        "Without considering any factor, we know that the proposal is feasible.",
+        "All things considered, it is evident that the proposal is impossible.",
+        "The proposal is feasible only if its main drawbacks are ignored."
+      ],
+      "sentence": "All things considered, it is evident that the proposal is feasible.",
+      "translation": "Sau khi cân nhắc mọi yếu tố, rõ ràng đề xuất là khả thi.",
+      "explanation": "All things considered là cụm phân từ cố định, nghĩa là sau khi cân nhắc mọi yếu tố. Dùng considered vì các yếu tố được cân nhắc, không dùng considering. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "3f1ec93e030dea": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Under no circumstances”, giữ nguyên nghĩa:\nPersonal data should never be shared without consent.",
+      "answer": "Under no circumstances should personal data be shared without consent.",
+      "accepted": [
+        "Under no circumstances should personal data be shared without consent."
+      ],
+      "sentence": "Under no circumstances should personal data be shared without consent.",
+      "translation": "Không được chia sẻ dữ liệu cá nhân khi chưa có sự đồng ý trong bất kỳ hoàn cảnh nào.",
+      "explanation": "Under no circumstances đặt đầu câu yêu cầu đảo trợ động từ hoặc động từ khuyết thiếu lên trước chủ ngữ. Sau should dùng động từ nguyên mẫu không to."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn cần diễn đạt lệnh cấm tuyệt đối chia sẻ dữ liệu cá nhân khi chưa được đồng ý.",
+      "answer": "Under no circumstances should personal data be shared without consent.",
+      "options": [
+        "Under no circumstances should personal data be shared without consent.",
+        "Personal data may be shared without consent whenever it is convenient.",
+        "Personal data should always be shared before consent is obtained.",
+        "Only in emergencies must personal data be shared without consent."
+      ],
+      "sentence": "Under no circumstances should personal data be shared without consent.",
+      "translation": "Không được chia sẻ dữ liệu cá nhân khi chưa có sự đồng ý trong bất kỳ hoàn cảnh nào.",
+      "explanation": "Under no circumstances đặt đầu câu yêu cầu đảo trợ động từ hoặc động từ khuyết thiếu lên trước chủ ngữ. Sau should dùng động từ nguyên mẫu không to. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "edeedd011b11b6": {
+    "transform": {
+      "type": "write",
+      "question": "Viết lại câu, bắt đầu bằng “Much as”, giữ nguyên nghĩa:\nI value the proposal, but I cannot support its funding model.",
+      "answer": "Much as I value the proposal, I cannot support its funding model.",
+      "accepted": [
+        "Much as I value the proposal, I cannot support its funding model."
+      ],
+      "sentence": "Much as I value the proposal, I cannot support its funding model.",
+      "translation": "Dù rất coi trọng đề xuất, tôi không thể ủng hộ mô hình tài trợ của nó.",
+      "explanation": "Much as + chủ ngữ + động từ hữu hạn diễn tả nhượng bộ: dù rất thừa nhận hoặc coi trọng điều đó, người nói vẫn nêu ý trái chiều. Sau chủ ngữ dùng động từ chia phù hợp, không tự đổi thành V-ing."
+    },
+    "context": {
+      "type": "choice",
+      "question": "Bạn muốn thể hiện sự trân trọng đề xuất nhưng vẫn không đồng tình với cách tài trợ.",
+      "answer": "Much as I value the proposal, I cannot support its funding model.",
+      "options": [
+        "Much as I value the proposal, I cannot support its funding model.",
+        "Because I value the proposal, I fully support its funding model.",
+        "I cannot support the funding model because I see no value in the proposal.",
+        "I support the funding model even though I reject the proposal entirely."
+      ],
+      "sentence": "Much as I value the proposal, I cannot support its funding model.",
+      "translation": "Dù rất coi trọng đề xuất, tôi không thể ủng hộ mô hình tài trợ của nó.",
+      "explanation": "Much as + chủ ngữ + động từ hữu hạn diễn tả nhượng bộ: dù rất thừa nhận hoặc coi trọng điều đó, người nói vẫn nêu ý trái chiều. Sau chủ ngữ dùng động từ chia phù hợp, không tự đổi thành V-ing. Đáp án giữ đúng quan hệ ý nghĩa được yêu cầu trong tình huống; các lựa chọn còn lại thay đổi hoặc phủ định thông tin đó."
+    }
+  },
+  "c66ec5ef96a79a": {
+    "tense": {
+      "type": "write",
+      "question": "The auditors completed their review before they published the findings. Complete the opening to show this earlier completed action: _____ the evidence, the auditors published their findings. (review)",
+      "answer": "Having reviewed",
+      "sentence": "Having reviewed the evidence, the auditors published their findings.",
+      "translation": "Sau khi đã xem xét bằng chứng, các kiểm toán viên công bố kết quả.",
+      "explanation": "Having + quá khứ phân từ nhấn mạnh hành động hoàn tất trước hành động chính. Review chuyển thành reviewed sau having; chủ thể của cả hai hành động là the auditors."
+    }
+  }
+}

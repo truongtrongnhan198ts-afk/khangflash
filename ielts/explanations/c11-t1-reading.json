@@ -1,0 +1,206 @@
+{
+  "id": "c11-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Sinh đôi cùng trứng có mã gene gần như giống nhau; bài quy khác biệt da trẻ hơn cho môi trường, chẳng hạn ít phơi nắng. Gán khác biệt ấy cho gene trái ý đoạn đầu: FALSE.",
+      "evidence": "must be due to environmental factors",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "2": {
+      "reason": "Bài so sánh mức giống nhau về bệnh giữa sinh đôi cùng trứng và khác trứng, không so với người không sinh đôi. Nhận định nhóm sinh đôi có nguy cơ cao hơn là NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "3": {
+      "reason": "Đoạn Minnesota nói các cặp sinh đôi đến phòng thí nghiệm và trả lời nhiều câu hỏi. Không nêu Bouchard đăng báo tuyển họ, nên NOT GIVEN, không suy phương pháp tuyển mẫu.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "4": {
+      "reason": "Biểu sinh được gọi là thành phần thứ ba, phản ứng hóa học không thuộc riêng di truyền hay nuôi dưỡng. Nhận định khác cả hai quá trình phù hợp, nên TRUE.",
+      "evidence": "a 'third component'",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "5": {
+      "reason": "Galton đặt cụm nature and nurture để phân biệt di truyền và môi trường. A đúng vì câu hỏi hỏi người tạo thuật ngữ, không phải người nghiên cứu sinh đôi gần đây.",
+      "evidence": "coined the phrase",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "6": {
+      "reason": "Reed nói công trình biểu sinh mới sẽ đưa hiểu biết đi xa hơn và mở một thế giới mới. C khớp niềm tin vào kiến thức bổ sung, không chỉ kết quả nghiên cứu cũ.",
+      "evidence": "take our understanding even further",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "7": {
+      "reason": "Bouchard và đồng nghiệp dùng khái niệm thống kê heritability để lượng hóa ảnh hưởng gene. B phù hợp phương pháp đo lường; Galton đưa ra ý tưởng nghiên cứu sớm hơn.",
+      "evidence": "a statistical concept called heritability",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "8": {
+      "reason": "Galton là người đầu tiên đề xuất dùng sinh đôi để đo ảnh hưởng di truyền vào năm 1875. A đúng với khởi xướng phương pháp, không nhầm Bouchard mở rộng nghiên cứu sau này.",
+      "evidence": "first suggested the approach",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "9": {
+      "reason": "Phòng thí nghiệm Bouchard nghiên cứu 137 cặp sinh đôi lớn lên xa nhau. B khớp lived apart; Galton đề xuất tiếp cận chung chứ không được gán bộ mẫu này.",
+      "evidence": "Minnesota Study of -‘Twins Reared Apart",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "10": {
+      "reason": "Các phản ứng hóa học ảnh hưởng cách gene bật, tắt hoặc mạnh, yếu. D là chemicals; code là thứ được điều chỉnh biểu hiện, không phải tác nhân hóa học.",
+      "evidence": "These reactions influence how our genetic code is expressed",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "11": {
+      "reason": "Hoạt động gene góp phần tạo xương, não và các bộ phận khác trong cơ thể. B là organs, tên nhóm cơ quan trong tóm tắt; không phải mã gene.",
+      "evidence": "all the other parts of our bodies",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "12": {
+      "reason": "Nghiên cứu biểu sinh cho thấy môi trường trực tiếp tác động gene. E là environment; ví dụ chuột mẹ căng thẳng minh họa yếu tố này chứ không thay bằng nuôi dưỡng đơn thuần.",
+      "evidence": "the environment directly impacts on genes",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "13": {
+      "reason": "Chuột mẹ căng thẳng khi mang thai có thể khiến con gặp vấn đề hành vi khi lớn. F là behaviour; đề hỏi biểu hiện ở chuột con, không phải tâm trạng của mẹ.",
+      "evidence": "behavioral problems as the rodent grows up",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn mở đầu nhấn mạnh âm thanh quan trọng ngang hình ảnh và phải được cân bằng cẩn thận. B khớp không được bỏ qua đóng góp nghệ thuật, không bàn thời điểm lên kế hoạch.",
+      "evidence": "underestimate the importance of film sound",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "15": {
+      "reason": "Ví dụ Bogart cho thấy cá tính diễn viên và nhân vật dường như hòa làm một nhờ giọng nói. A đúng về sự tương đồng, không phải diễn viên đã trải nghiệm cùng cảm xúc.",
+      "evidence": "film personality and life personality seem to merge",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "16": {
+      "reason": "Thoại tầm thường trong 2001 có mục đích làm nổi bật phản ứng con người nhỏ bé trước công nghệ và vũ trụ. B đúng: thoại có vẻ nhạt vẫn phục vụ ý đồ nghệ thuật.",
+      "evidence": "most of it was banal",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "17": {
+      "reason": "Thoại nhanh, dồn dập trong Bringing Up Baby nhấn mạnh tính chóng mặt của nhân vật và sự phi lý hài hước. D khớp vai trò nhấn đặc điểm phim, không đánh giá hay nhất mọi thời.",
+      "evidence": "the absurdity of the film itself",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "18": {
+      "reason": "Tiếng cửa bật bình thường tạo hiện thực, nhưng tăng âm lượng trong cảnh trộm sẽ gây hồi hộp. C đúng về điều chỉnh âm thanh để định hướng phản ứng khán giả.",
+      "evidence": "an increase in volume",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "19": {
+      "reason": "Bài nói nhạc nền phổ biến đến mức sự vắng mặt dễ được chú ý. Không khẳng định khán giả sẽ ngạc nhiên; noticeable không tự đồng nghĩa surprised, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "20": {
+      "reason": "Nhạc nền có thể báo trước thay đổi tâm trạng, như âm nghịch báo nguy hiểm chưa thấy trên hình. Nhận định dự báo diễn biến phù hợp nên TRUE.",
+      "evidence": "background music often foreshadows a change in mood",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "21": {
+      "reason": "Bài giải thích tác dụng của nhạc nền nhưng không so sánh độ ảnh hưởng giữa các khán giả. Không có căn cứ cho người này chịu tác động nhiều hơn người khác: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "22": {
+      "reason": "Một chủ đề nhạc lặp lại gắn với nhân vật hoặc tình huống giúp nối các cảnh và gợi ý chính. Nhận định khán giả tạo liên hệ nhờ nhạc phù hợp: TRUE.",
+      "evidence": "linking scenes",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "23": {
+      "reason": "Âm thanh thường tinh tế và chỉ được ghi nhận trong tiềm thức. Nhận định khán giả có ý thức nhận ra tác động ấy trái điều này, nên FALSE.",
+      "evidence": "noted by only our subconscious minds",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "24": {
+      "reason": "Đoạn đầu nói giọng người, hiệu ứng âm thanh và nhạc phải phối trộn, cân bằng để tạo nhấn và tác động mong muốn. Vì vậy C là điều kiện kiểm soát phản ứng, không phải D chỉ nói ý thức đạo diễn.",
+      "evidence": "These three tracks must be mixed and balanced",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "25": {
+      "reason": "Thoại kể chuyện và bộc lộ tình cảm, động cơ nhân vật. A nối đúng với việc người xem nghe đối thoại, không cần suy từ bối cảnh giống trải nghiệm bản thân.",
+      "evidence": "dialogue serves to tell the story and expresses feelings and motivations",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "26": {
+      "reason": "Khi chất giọng khớp diện mạo và cử chỉ, người xem thấy một con người thật thay vì diễn viên diễn xuất. E gom đúng ba yếu tố nhất quán ấy.",
+      "evidence": "voice textures fit the performer's physiognomy and gestures",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn A lập luận mọi thành tựu con người đều dựa vào ngôn ngữ, nhờ đó vượt các loài khác. Tiêu đề vi đúng về phát minh quan trọng nhất, không chỉ lịch sử phát minh.",
+      "evidence": "everything we have ever achieved depends on language",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn B nêu ngôn ngữ vừa tinh vi vừa đơn giản, vừa là phát minh lớn nhất vừa chưa từng được ai phát minh. Tiêu đề iv bao quát những đặc tính tưởng không tương thích.",
+      "evidence": "it was never invented",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn C giải thích vài chục âm vô nghĩa được sắp xếp thành vô số thông điệp. Tiêu đề ii đúng về cách tổ chức âm tạo nghĩa, không so sánh âm giữa các ngôn ngữ.",
+      "evidence": "arrange them in some very special orders",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn D nhấn mạnh gần như ai cũng dùng ngôn ngữ dễ dàng, dù có cấu tạo tinh vi. Tiêu đề vii về năng lực phổ quát phù hợp hơn chi tiết các nhóm xã hội.",
+      "evidence": "just about everybody",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "31": {
+      "reason": "Đoạn E dùng từ dài tiếng Thổ Nhĩ Kỳ để cho thấy nét lạ của ngôn ngữ khác giúp ta nhận ra thiết kế kỳ diệu. Tiêu đề i khớp vai trò khác biệt giữa ngôn ngữ.",
+      "evidence": "the wonder of languages design",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "32": {
+      "reason": "Đoạn F cho thấy trong tiếng Sumer, ngay một vị trí không có âm cũng biểu đạt ý nghĩa cụ thể. Tiêu đề v đúng về sự im lặng có nghĩa, không chỉ chiều dài từ.",
+      "evidence": "even the absence of a sound",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "33": {
+      "reason": "Bánh xe, nông nghiệp và các phát minh khác biến đổi đời sống vật chất. E là material; không nhầm với tác động nền tảng hơn của ngôn ngữ ở ô sau.",
+      "evidence": "our material existence",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "34": {
+      "reason": "Tác giả nói mọi thành tựu đều phụ thuộc ngôn ngữ, nên ảnh hưởng của nó mang tính nền tảng nhất. G là fundamental, không chỉ admired hay original.",
+      "evidence": "all other inventions pale in significance",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "35": {
+      "reason": "Ngôn ngữ được mô tả cực kỳ tinh vi dù dựa trên ít âm. B là complex, đối lập sự đơn giản của vật liệu đầu vào chứ không nói khó dùng.",
+      "evidence": "a tool of extraordinary sophistication",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "36": {
+      "reason": "Dù tinh vi, ngôn ngữ có vẻ được dùng không chút gắng sức. F là easy; chính sự dễ dàng làm người ta thường coi nhẹ kỹ thuật phức tạp bên dưới.",
+      "evidence": "without the slightest exertion",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "37": {
+      "reason": "Tác giả khẳng định không có ngôn ngữ, con người không thể vươn đến vị thế hiện nay. Nhận định vẫn có thể đạt vị thế ấy ngược lập luận, nên NO.",
+      "evidence": "Without language, we could never have embarked",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "38": {
+      "reason": "Tác giả đánh giá các nhà ngữ pháp Port-Royal đã nắm tinh túy và chưa ai ca ngợi thành tựu ấy hùng hồn hơn. Nhận định họ mô tả xứng tầm phù hợp: YES.",
+      "evidence": "distilled the essence of language",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "39": {
+      "reason": "Ví dụ tiếng Thổ Nhĩ Kỳ cho thấy một từ có thể mang nghĩa của cả câu tiếng Anh, nhưng không so độ rõ ràng. Nhận định câu giải thích ý phức tạp rõ hơn là NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "40": {
+      "reason": "Đoạn F nói người Sumer phát minh chữ viết, nhờ đó ghi chép lịch sử. Nhận định họ khởi đầu ghi lại sự kiện phù hợp nên YES, không chỉ nói họ dùng ngôn ngữ nói.",
+      "evidence": "invented writing and thus enabled the documentation of history",
+      "location": "Passage 3 · Reading Passage 3"
+    }
+  }
+}

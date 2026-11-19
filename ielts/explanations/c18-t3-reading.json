@@ -1,0 +1,206 @@
+{
+  "id": "c18-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn G giải thích các quy trình công nghiệp sinh phụ phẩm có thể thay xi măng trong bê tông. Cần nối vai trò phụ phẩm với nguyên liệu bê tông, không chỉ tìm đúng cụm raw materials; đáp án G.",
+      "evidence": "Fly ash, a byproduct of coal-burning power plants,",
+      "location": "Đoạn G"
+    },
+    "2": {
+      "reason": "Đoạn D liệt kê nơi có nhà gỗ cao tầng như Vancouver và Vienna. Các tên thành phố là ví dụ cụ thể của various locations, nên chọn D thay vì đoạn chỉ nói kỹ thuật xây nhà gỗ.",
+      "evidence": "almost entirely from timber. Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden",
+      "location": "Đoạn D"
+    },
+    "3": {
+      "reason": "Nguyên liệu làm bê tông được mô tả là có nhiều ở phần lớn nơi trên thế giới. Found in abundance diễn đạt widely available; đây là tính phổ biến nguồn cung, không phải sản lượng toàn cầu.",
+      "evidence": "cheap and found in abundance in most places around the globe, the stuff itself has marvellous properties:",
+      "location": "Đoạn C"
+    },
+    "4": {
+      "reason": "Đoạn F yêu cầu thêm dự án nhà gỗ cao tầng chứng minh tính khả thi trước khi người ta coi gỗ là lựa chọn thay bê tông. Trọng tâm là cần thêm bằng chứng từ công trình, nên F.",
+      "evidence": "only when a wider range of construction projects has been proven in practice",
+      "location": "Đoạn F"
+    },
+    "5": {
+      "reason": "Lo ngại biến đổi khí hậu thúc đẩy kiến trúc sư dùng lại gỗ cho công trình hiện đại. Driving tương ứng encouraging; ô hỏi nhóm người được thúc đẩy nên architects, không phải chính vật liệu.",
+      "evidence": "climate change is driving architects to turn to treated timber as a possible resource. Recent years have",
+      "location": "Đoạn D"
+    },
+    "6": {
+      "reason": "Gỗ hút độ ẩm trong không khí rồi nở ra. Air tương ứng atmosphere, expand diễn đạt tăng kích thước; thứ đi vào gỗ là moisture, không phải không khí nói chung.",
+      "evidence": "expands as it absorbs moisture from the air and is susceptible to pests, not to mention fire.",
+      "location": "Đoạn E"
+    },
+    "7": {
+      "reason": "Khối vật liệu được tạo bằng cách dán các lớp gỗ đặc lại với nhau. Stick diễn đạt glue, nên layers là những phần được ghép, không phải tên cả khối thành phẩm.",
+      "evidence": "is used to stick layers of solid-sawn timber together, crosswise, to form building blocks. This material is",
+      "location": "Đoạn E"
+    },
+    "8": {
+      "reason": "Công trình gỗ được nhận xét là thi công nhanh hơn và ít ồn hơn. Đề đã nêu tiếng ồn, nên lợi thế còn thiếu là speed; không chọn một đặc tính khác không nằm trong lời chuyên gia.",
+      "evidence": "constructed at a greater speed than ones of concrete and steel and the process, it seems, is",
+      "location": "Đoạn E"
+    },
+    "9": {
+      "reason": "Surgenor lưu ý giảm carbon nhờ chất thay xi măng phải xét cùng tác hại vận chuyển từ xa. Vì thế lợi ích thực có thể nhỏ hơn tưởng tượng; chọn người C, không hiểu là mọi thay thế đều vô ích.",
+      "evidence": "gas emissions. But Anna Surgenor, of the UK’s Green Building Council, notes that although these waste products",
+      "location": "Đoạn G"
+    },
+    "10": {
+      "reason": "Cheeseman nhấn mạnh bê tông kết hợp quá nhiều ưu điểm nên khó có vật liệu thay thế sánh được. Hard to beat diễn đạt khó tạo phương án tương đương, nên chọn người ở A.",
+      "evidence": "factors together make concrete hard to beat. ‘Concrete is amazing stuff. Making anything with similar properties is",
+      "location": "Đoạn C"
+    },
+    "11": {
+      "reason": "Người ở lựa chọn B gắn nhu cầu vật liệu gỗ tăng với lo ngại biến đổi khí hậu. Câu hỏi nói động lực làm người ta quan tâm hơn, không phải khẳng định gỗ đã thay hoàn toàn bê tông.",
+      "evidence": "rather medieval idea, but climate change is driving architects to turn to treated timber as a possible",
+      "location": "Đoạn D"
+    },
+    "12": {
+      "reason": "Người ở đáp án D nêu sự phản đối xi măng mới và vấn đề hiệu quả chi phí. Expense tương ứng cost-effective; giá thành là một yếu tố cản trở chấp nhận, không chỉ tính năng kỹ thuật.",
+      "evidence": "alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers.’",
+      "location": "Đoạn cuối"
+    },
+    "13": {
+      "reason": "Cheeseman giải thích tác hại môi trường của bê tông gắn với quy mô sử dụng khổng lồ. Sheer scale tương ứng large quantities, nên chọn người A; bài không quy toàn bộ vấn đề cho độc tính riêng của vật liệu.",
+      "evidence": "But it is the scale on which it is used that makes it high carbon. The sheer",
+      "location": "Đoạn B"
+    },
+    "14": {
+      "reason": "Chọn iii: đoạn công nhận thành công công nghệ hơi nước nhưng cũng liệt kê các nhược điểm của xe dùng nó. Tiêu đề cần bao quát cả ưu lẫn khuyết, không chỉ ca ngợi hay chỉ mô tả thất bại.",
+      "evidence": "these early cars inherited steam’s weaknesses along with its strengths.",
+      "location": "Đoạn A"
+    },
+    "15": {
+      "reason": "Chọn viii: xe xăng ban đầu bất tiện nhưng dần cải tiến và thay xe hơi nước. Đó là một lựa chọn tốt hơn xuất hiện; đoạn không nói xe hơi nước chưa bao giờ thành công.",
+      "evidence": "over the following few years steam power was gradually phased out.",
+      "location": "Đoạn B"
+    },
+    "16": {
+      "reason": "Chọn vi: mẫu Doble được cải tiến nhiều và thu hút tạp chí ô tô đánh giá tích cực. Các bước chế tạo là bối cảnh; phần nổi bật liên quan sự chú ý và quảng bá dành cho xe.",
+      "evidence": "attention of automobile trade magazines due to its numerous improvements over previous steam cars. . The Model B",
+      "location": "Đoạn C"
+    },
+    "17": {
+      "reason": "Chọn v: cải tiến tiếp giúp Model C hấp dẫn, đến mức khách đặt cọc chờ giao. Deposits và delivery thể hiện đơn hàng thương mại, không phải chỉ đánh giá một bản thiết kế chưa có người mua.",
+      "evidence": "Company had received 5,390 deposits for Doble Detroits, which were scheduled for delivery in early 1918. E",
+      "location": "Đoạn D"
+    },
+    "18": {
+      "reason": "Chọn vii: nhiều khách chưa nhận được xe, còn số ít nhận rồi gặp trục trặc. Cả hai đều thất vọng, nên tiêu đề về khách hàng phàn nàn bao quát đúng nội dung đoạn ngắn này.",
+      "evidence": "complained that the vehicles were sluggish and erratic",
+      "location": "Đoạn E"
+    },
+    "19": {
+      "reason": "Chọn i: xe được để qua đêm trong giá lạnh rồi thử khởi động và chạy. Freezing temperatures cùng overnight xác định thử nghiệm sau một thời gian chịu lạnh; không phải thử trong điều kiện thông thường.",
+      "evidence": "After sitting overnight in freezing temperatures, the car was pushed out into the road and left to",
+      "location": "Đoạn F"
+    },
+    "20": {
+      "reason": "Chọn iv: đoạn nhìn lại xe hơi nước suy tàn nhưng gợi khả năng quay lại nhờ lợi ích môi trường. Tiêu đề phải bao quát viễn cảnh hồi sinh, không chỉ ghi nhận thất bại kinh doanh trước đây.",
+      "evidence": "it is not unthinkable that the steam car may rise again.",
+      "location": "Đoạn G"
+    },
+    "21": {
+      "reason": "Chọn A: giai đoạn thành công của xe hơi nước ngắn trước khi xe xăng tiến bộ. Đoạn không nói thiếu sản lượng; đặc điểm khó vận hành lúc đầu thuộc xe xăng, không phải xe hơi nước.",
+      "evidence": "needing replenishment. Despite such shortcomings, these newly designed self-propelled carriages offered quick transportation, and by the early",
+      "location": "Đoạn B"
+    },
+    "22": {
+      "reason": "Chọn C: anh em Doble phải thử và cải tiến nhiều lần mới đạt mẫu cạnh tranh. Họ dùng cả linh kiện xe cũ nên không tự làm mọi bộ phận; cũng không có bằng chứng ghi chép từng bước hay xin chuyên gia tư vấn.",
+      "evidence": "brothers made one final attempt to produce a viable steam automobile. In early 1924, the Doble brothers",
+      "location": "Đoạn C"
+    },
+    "23": {
+      "reason": "Chọn B: họ tìm vốn đầu tư để lập công ty sản xuất Model C. Việc tới thành phố khác nhằm huy động vốn, không phải chuyển nhà máy; mẫu mới còn phát triển từ thiết kế cũ chứ không bỏ hết.",
+      "evidence": "to seek investment in his automobile design",
+      "location": "Đoạn D"
+    },
+    "24": {
+      "reason": "Phiên bản Doble sau cải tiến vừa tăng tốc độ vừa giữ khí thải thấp. Đề đã cho emissions nên lợi thế được nâng lên còn thiếu là speed, không phải tên mẫu xe hoặc công ty.",
+      "evidence": "but with much greater speed, much simpler driving controls, and a virtually silent powerplant. By the following",
+      "location": "Đoạn F"
+    },
+    "25": {
+      "reason": "Chưa tới năm mươi xe được sản xuất trước khi công ty đóng cửa, do giá đắt và thiết kế liên tục thay đổi. Under cần một mốc số lượng nên fifty đúng, không phải giá bán.",
+      "evidence": "in 1931, fewer than fifty of the amazing Model E steam cars had been produced. For his",
+      "location": "Đoạn G"
+    },
+    "26": {
+      "reason": "Xe còn tồn tại vẫn đáp ứng luật khí thải California vốn rất nghiêm. Pretty strict mô tả emissions laws; ô cần strict, không phải tính từ đánh giá hiệu suất hoặc giá thành của xe.",
+      "evidence": "and they are pretty strict. It is true that the technology poses some difficult problems, but you",
+      "location": "Đoạn G"
+    },
+    "27": {
+      "reason": "Chọn B: lớp Romeo and Juliet có học sinh đọc bản đơn giản, nhóm khó theo và nhóm đã phân tích ý sâu. Ví dụ cho thấy giáo viên xử lý nhiều nhu cầu, không chứng minh học sinh yếu phá rối hay đa số ghét văn học.",
+      "evidence": "from Shakespeare’s Romeo and Juliet with a class of 15-year-olds. He’s given some of the students copies",
+      "location": "Đoạn 1"
+    },
+    "28": {
+      "reason": "Chọn A: tác giả mô tả sức hấp dẫn rộng rãi của chia lớp theo năng lực. Appealing tương ứng broad appeal; việc có điều kiện triển khai không chứng minh hệ thống đơn giản hoặc chỉ hiệu quả ở vài loại trường.",
+      "evidence": "The practice is intuitively appealing to almost every stakeholder. I have heard the mixed-ability model attacked by",
+      "location": "Đoạn 3"
+    },
+    "29": {
+      "reason": "Chọn C: không lên được đỉnh Everest là hình ảnh học sinh chưa phát huy hết tiềm năng. Cần hiểu ẩn dụ về thành tựu, không suy thành lựa chọn sai đường hay không biết giới hạn của bản thân.",
+      "evidence": "The brightest ones will never summit Mount Qomolangma",
+      "location": "Đoạn 5"
+    },
+    "30": {
+      "reason": "Chọn C: scaffolding là hỗ trợ lúc đầu để người học vượt mức hiện tại và dần tự làm được. Nó không chỉ môi trường học hoặc vật cản; yếu tố cốt lõi là trợ giúp tạm thời trong học tập.",
+      "evidence": "then gradually remove this ‘scaffolding’ until they are autonomous. If we accept this model, it follows that",
+      "location": "Đoạn 6"
+    },
+    "31": {
+      "reason": "Hattie thấy rất ít bằng chứng phân lớp tạo thành tích cao hơn. Vì vậy chọn H, higher achievements; câu hỏi yêu cầu kết quả thiếu bằng chứng, không phải khẳng định chia lớp chắc chắn nâng điểm.",
+      "evidence": "for students. Professor John Hattie, director of the Melbourne Education Research Institute, notes that ‘tracking has minimal",
+      "location": "Đoạn 7"
+    },
+    "32": {
+      "reason": "Tác động rõ nhất thuộc nhóm học sinh xếp cuối. Lowest sets diễn đạt bottom sets nên D đúng; đây là nhóm chịu ảnh hưởng chứ không phải tên một kỹ thuật giảng dạy.",
+      "evidence": "enthusiasm wanes. Meanwhile, the slowest ones are not only embarrassed but physically struggling to keep up. What’s",
+      "location": "Đoạn 7"
+    },
+    "33": {
+      "reason": "Nhóm cuối có tỷ lệ cao học sinh đến từ hoàn cảnh kinh tế xã hội khó khăn. Disadvantaged backgrounds ở F tóm đúng thông tin; bài không đồng nhất mọi học sinh năng lực thấp với một nguồn gốc duy nhất.",
+      "evidence": "higher representation of low socioeconomic class. Less significant is the small benefit for those lucky clever students",
+      "location": "Đoạn 7"
+    },
+    "34": {
+      "reason": "Ngay cả nhóm học sinh thông minh cũng chỉ hưởng lợi rất ít từ chia lớp. Minimal advantage ứng với brightest pupils ở E; đừng chọn nhóm cuối vốn đang được bàn dưới góc ảnh hưởng bất lợi.",
+      "evidence": "benefit for those lucky clever students in the higher sets. The overall result is that the smart",
+      "location": "Đoạn 7"
+    },
+    "35": {
+      "reason": "Phân nhóm sẵn có thể hạn chế cái nhìn của giáo viên và làm họ kỳ vọng thấp hơn ở học sinh. Lower expectations ở B nêu đúng xu hướng này, không phải chứng minh năng lực từng em bất biến.",
+      "evidence": "automatically limits what the teacher feels the student is capable of.",
+      "location": "Phần bàn về giáo viên"
+    },
+    "36": {
+      "reason": "NO: theo cách bài trình bày mô hình Vygotsky, học sinh cùng vùng năng lực được xem là thuận lợi để dạy cùng nhau. Nhận định mô hình ủng hộ lớp trộn nhiều năng lực trái với lập luận của đoạn.",
+      "evidence": "work of psychologist Lev Vygotsky. In the 1930s, Vygotsky emphasised the importance of targeting a student’s specific",
+      "location": "Đoạn 6"
+    },
+    "37": {
+      "reason": "NOT GIVEN: bài cho phép học sinh đóng vai người hiểu biết hơn để hỗ trợ bạn. Không có thông tin giáo viên còn do dự hay không chắc về việc trao vai trò MKO cho học sinh.",
+      "evidence": "",
+      "location": "Đoạn 9"
+    },
+    "38": {
+      "reason": "YES: tác giả nêu lợi ích khi học sinh dạy lại điều vừa hiểu cho bạn, giúp củng cố tri thức và trải nghiệm thành công. Vì thế việc giảng kiến thức mới học được xem là có giá trị.",
+      "evidence": "independently. The purpose of teaching is to provide and then gradually remove this ‘scaffolding’ until they are",
+      "location": "Đoạn 10"
+    },
+    "39": {
+      "reason": "NO: tác giả muốn số đông cùng phát triển thay vì chỉ nhóm tinh hoa chạm đỉnh. Ưu tiên riêng học sinh thành tích cao vì vậy trái quan điểm bài; ví dụ về học sinh giỏi không phải mục tiêu cuối cùng.",
+      "evidence": "we need the many to flourish",
+      "location": "Đoạn gần cuối"
+    },
+    "40": {
+      "reason": "NOT GIVEN: hoạt động đi bộ ngoài trời cho thấy học sinh khác năng lực vẫn hợp tác và cùng hoàn thành. Bài không báo cáo kết quả học trên lớp sau đó, nên không thể kết luận điểm số đã tăng.",
+      "evidence": "",
+      "location": "Đoạn cuối"
+    }
+  }
+}

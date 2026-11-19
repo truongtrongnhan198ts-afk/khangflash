@@ -1,0 +1,206 @@
+{
+  "id": "c20-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Lợn biển có đuôi tròn, rộng, còn dugong có đuôi chẻ giống cá voi. Câu hỏi cần bộ phận có hình dạng khác nhau giữa hai loài, nên tail, không phải toàn thân.",
+      "evidence": "the manatee has a broad, rounded tail",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Muốn nhìn sang bên, lợn biển phải xoay cả người và điều hướng bằng chân chèo. Steering with xác định bộ phận hỗ trợ chuyển động, nên flippers số nhiều, không phải mắt hay đuôi.",
+      "evidence": "steering with its flippers",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Các sợi lông trên cơ thể giúp nhận rung động trong nước xung quanh. Chỗ trống cần bộ phận cảm giác này, nên hairs; không nhầm với bộ phận điều hướng là flippers ở câu trước.",
+      "evidence": "some hairs covering their bodies",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Cỏ biển và thực vật biển khác tạo phần lớn khẩu phần lợn biển. Đề cần một nhóm cây thủy sinh cụ thể nên seagrasses, không điền từ chung plants khi thông tin đã nói aquatic vegetation.",
+      "evidence": "Seagrasses and other marine plants make up most of a manatee’s diet",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Lợn biển dùng môi như đôi tay để tách thức ăn khỏi đáy biển, thay vì răng cửa. Pull up diễn đạt tear away, nên lips; không suy theo cách ăn của động vật khác.",
+      "evidence": "manatees have lips which function like a pair of hands",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Cơ hoành khỏe và hoạt động thở giúp điều chỉnh độ nổi. Regulate diễn đạt adjust, nên đối tượng được điều chỉnh là buoyancy, không phải tên cơ hoặc lượng thức ăn.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Lợn biển Tây Ấn di chuyển giữa nước ngọt và nước mặn, xuất hiện trong nhiều loại thủy vực. Điều này đúng với variety of aquatic habitats, nên TRUE, không phải chỉ sống ở biển.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Bài mô tả vùng nước của lợn biển Florida nhưng không đối chiếu nhiệt độ với loài Antillean. Thích nước ấm không chứng minh ấm hơn loài kia, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Ngoài bờ biển từ Mauritania tới Angola, lợn biển châu Phi còn có ở những nước nội địa như Mali và Niger. Limited to coastal waters bị các ví dụ trong đất liền bác bỏ, nên FALSE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Bài nêu số lượng lợn biển Amazon bị mất nhưng không cho biết thông tin ấy chỉ được phát hiện nhiều năm sau hay không. Thiếu thời điểm công bố, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Quần thể Tây Ấn được dự báo giảm khoảng 20% trong bốn mươi năm tiếp theo. Con số cụ thể xác nhận xu hướng giảm trong các thập niên tới, nên TRUE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Giai đoạn 2009–2020 có nhiều vụ mắc lưới và nuốt nhựa, nhưng bài không so tỷ lệ rủi ro với trước đó. Nhiều sự cố không tự chứng minh tăng đáng kể, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Một số nơi ở Florida giới hạn tốc độ thuyền mùa đông để lợn biển kịp phản ứng. Đây là quy định pháp luật nhằm giảm nguy cơ va chạm, nên TRUE; không cần mọi khu vực đều có luật.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn B mở bằng trái với quan niệm phổ biến, rồi bác ý trì hoãn đơn thuần do lười hoặc quản lý thời gian. Đây là giả định sai về nguyên nhân trì hoãn mà câu hỏi cần, nên B.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn F khuyên nhớ rằng ta không phải người đầu tiên hay cuối cùng trì hoãn. Ý ấy giúp nhận ra nhiều người khác cũng gặp vấn đề, nên F, không phải riêng bản thân thiếu năng lực.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn B nêu nghiên cứu hình ảnh não về vùng nhận biết đe dọa và điều tiết cảm xúc khác nhau ở người trì hoãn. Đây là bằng chứng thần kinh về mối liên hệ cảm xúc, nên B.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Quan niệm đầu được nêu là lười biếng; quản lý thời gian kém đã được diễn đạt riêng trong câu kế tiếp. Vì vậy chỗ trống còn lại là laziness, không điền lại poor time management.",
+      "evidence": "laziness or poor time management",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Ta dễ tránh nhiệm vụ gây lo âu hoặc đe dọa giá trị bản thân. Makes us anxious tương ứng cause us to feel trong đề, nên cần tính từ anxious; không điền danh từ anxiety.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Vùng não liên quan tới phát hiện mối đe dọa và điều tiết cảm xúc được đưa ra làm bằng chứng. Identifying diễn đạt detection of, nên threats số nhiều, không phải emotions đã có ở vế kia.",
+      "evidence": "detection of threats and emotion regulation",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Chuẩn bị thi là ví dụ nhiệm vụ khó, mang gánh nặng cảm xúc nên dễ bị trì hoãn. Getting ready to take diễn đạt preparing for, nên exams; đừng mất dấu such tasks chỉ loại nhiệm vụ vừa nêu.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Ngoài người tự đánh giá thấp bản thân, người cầu toàn cũng dễ trì hoãn. Nhóm được liệt kê song song còn thiếu là perfectionists; không phải mọi người đặt mục tiêu cao đều được kết luận như vậy.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Trì hoãn chỉ giúp điều tiết cảm xúc tạm thời, sau đó cảm giác tội lỗi làm tâm trạng xấu và củng cố trì hoãn. Hậu quả còn thiếu là guilt, không phải relief thuộc lợi ích ngắn hạn.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Đối với người đi làm, bài nêu thu nhập năm thấp hơn và việc làm thiếu ổn định hơn. Hai so sánh đúng là A và C; kết quả kém của sinh viên không được tự áp thành chất lượng việc của nhân viên.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Less annual income tương ứng lương thấp hơn, less employment stability tương ứng giữ việc không lâu: A và C. Không có so sánh quan hệ đồng nghiệp hoặc mức yêu thích công việc, dù chúng nghe có vẻ hợp lý.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Đoạn F khuyên tự thông cảm thay vì chỉ trích khắt khe và chống yếu tố gây xao nhãng. Vì vậy nhóm chọn A và E; các lời khuyên đặt mục tiêu hay tự thưởng không được nêu ở đây.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Self-forgiveness hỗ trợ A, còn tránh distractions khi cần tập trung hỗ trợ E. Cần chọn đúng điều bài thực sự khuyên, không lấy kiến thức đời thường về ưu tiên công việc thay cho bằng chứng.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "DeJesus không cùng ABS quyết định mà nghe chỉ dẫn qua tai nghe rồi thông báo. Shared decision-making gán cho ông vai trò hệ thống đã đảm nhiệm, nên NO.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Sau mùa đầu dùng máy, cầu thủ phàn nàn và MLB đáp lại bằng điều chỉnh kích thước vùng strike. Điều này xác nhận thay đổi cần thiết để phản hồi vấn đề được nêu, nên YES.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Bài không nói MLB muốn biện minh khoản tiền đã chi để tăng độ chính xác tính toán của ABS. Việc bàn khả năng máy và sửa vùng strike không tự chứng minh động cơ giải trình chi phí, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Người trẻ thích trận nhiều hành động, còn các cú ném cực nhanh làm kiểu trận đó biến mất. Vì vậy nhận định fastball khiến trận hấp dẫn hơn trái với lập luận bài, nên NO.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Việc nhắc gậy bóng chày không kèm thông tin các đề xuất thay đổi gậy gây tranh luận gay gắt trong nhóm Sword. Không thể suy có tranh luận từ việc đang cân nhắc đổi luật, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Bài nêu khả năng chỉnh vùng strike và đưa ra các hình dạng khác nhau. Nhận định công nghệ cho phép thay đổi hình dạng vùng này đúng với ví dụ, nên YES.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "MLB vẫn muốn trọng tài người hô quyết định để giữ cảm giác như trước đây. Chỗ trống cần vai trò cũ, former roles ở F; không có nghĩa trọng tài tiếp tục tự quyết strike.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Trước ABS, trọng tài dùng quyền phán đoán cá nhân khi xác định strike. Đề diễn đạt lại thành subjective assessment, lựa chọn D, đối lập cách đo tự động chứ không phải sự cố kỹ thuật.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Strike zone là vùng tưởng tượng từ đầu gối tới giữa ngực người đánh, có chiều rộng quy định. Trong danh sách, perceived area ở H chỉ khu vực đó; không phải bộ phận thật của sân.",
+      "evidence": "an imaginary zone about seventeen inches wide",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Trước kia có vô số tranh cãi giữa quản lý đội và trọng tài về strike. Numerous disputes ở B khớp nội dung ấy; phần cấm động chạm trọng tài là quy tắc khác, không phải đáp án cho chỗ trống.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Ở trận đầu DeJesus dùng ABS, không ai lên tiếng phản đối quyết định. Nobody said a word tương ứng total silence, lựa chọn G; đừng suy khán giả hoàn toàn không có bất kỳ âm thanh nào.",
+      "evidence": "Nobody said a word",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Độ chính xác nghiêm ngặt khiến ABS thiếu sự linh hoạt của trọng tài người trong ghi nhận kỹ năng. Tác giả gợi ý một phần sức hấp dẫn trận đấu bị giảm, nên B, không phủ nhận máy đo chính xác hơn.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Sword nhắc nỗi lo mất khán giả trẻ như đua ngựa và quyền Anh. Đưa ABS vào là nỗ lực giữ nhóm khán giả này cho bóng chày, nên D; không chỉ nhằm bỏ mọi trọng tài người.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Noë và Russo phản đối sự chính xác làm mất cảm giác chân thực, thú vị của trò chơi. Hai ý kiến cho thấy accuracy không đồng nghĩa enjoyment, nên C, không đơn thuần chỉ ra lỗi kỹ thuật của ABS.",
+      "evidence": "",
+      "location": "Passage 3"
+    }
+  }
+}

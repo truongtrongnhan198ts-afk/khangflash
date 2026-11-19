@@ -1,0 +1,206 @@
+{
+  "id": "c12-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Vật liệu thủy tinh tự nhiên được con người thời đầu sử dụng là obsidian, hình thành do sức nóng núi lửa làm tan cát. Điền tên vật liệu, không phải nguồn nhiệt hay nơi nó hình thành.",
+      "evidence": "type of natural glass – obsidian – formed in places such as the mouth of a volcano as",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Obsidian được dùng làm đầu nhọn của giáo. “Sharp points” tương ứng với tips; chỗ trống hỏi công cụ mang đầu nhọn, nên spears, không lặp lại tên vật liệu.",
+      "evidence": "used as tips for spears.",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Bằng chứng khoảng năm 4000 TCN là lớp men thủy tinh nhân tạo phủ lên hạt chuỗi bằng đá. Beads là vật được phủ; stone đã mô tả chất liệu của vật ấy.",
+      "evidence": "used for coating stone beads.",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Thủy tinh giai đoạn này có màu đậm do tạp chất trong nguyên liệu. “Because of” diễn đạt lại due to; impurities là nguyên nhân tạo màu, không phải kỹ thuật thổi thủy tinh.",
+      "evidence": "to the impurities of the raw material.",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Người La Mã giữ kín kỹ năng và công nghệ làm thủy tinh; kiến thức chỉ lan rộng khi đế chế sụp đổ năm 476. Câu hỏi hỏi nhóm người giữ bí quyết, nên Romans.",
+      "evidence": "century. However, they guarded the skills and technology required to make glass very closely, and it was not",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Ravenscroft thêm chì vào nguyên liệu để khắc phục vấn đề thủy tinh bị đục. Chỗ trống hỏi chất được sử dụng, nên lead; clouding là hiện tượng ông muốn hạn chế.",
+      "evidence": "glass by introducing lead to the raw materials used in the process.",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Mục đích thêm chì là chống hiện tượng vẩn đục đôi khi xảy ra trong thủy tinh thổi. Counter tương ứng với avoid; điền clouding, không nhầm với nguyên liệu lead ở câu trước.",
+      "evidence": "counter the effect of clouding that sometimes occurred in blown glass by introducing lead to the raw materials",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ngành thủy tinh Anh phát triển sau khi đạo luật thuế bị bãi bỏ năm 1845. Câu hỏi hỏi lĩnh vực luật được thay đổi, nên taxes; không cần chép tên đạo luật khó nhận biết.",
+      "evidence": "that time, heavy taxes had been placed on the amount of glass melted in a glasshouse, and were",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Máy Ashley đưa vào năm 1887 làm 200 chai mỗi giờ, nhanh hơn hơn ba lần mọi phương pháp trước đó. Đây là căn cứ cho nhận định nhanh nhất vào thời điểm ấy, nên TRUE.",
+      "evidence": "England – more than three times quicker than any previous production method.",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Owens là người sáng lập công ty chế tạo máy chai và phát triển máy tự động, không phải nhân viên được một tập đoàn lớn tuyển để thiết kế. Nhận định đổi vai trò của ông nên FALSE.",
+      "evidence": "Owens – founder of the Owens Bottle Machine Company (later the major manufacturers Owens- Illinois) – and installed",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Bài nói ngành thủy tinh hiện đại có quy mô lớn và cạnh tranh toàn cầu. Nó không cho biết đa số sản phẩm do các hãng quốc tế lớn làm ra; thiếu tỷ trọng sản xuất nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Người tiêu dùng quan tâm môi trường hơn khiến chai và lọ thủy tinh ngày càng phổ biến. “Green issues” là vấn đề môi trường; sự tăng ưa chuộng xác nhận nhu cầu tăng nên TRUE.",
+      "evidence": "and with growing consumer concern for green issues, glass bottles and jars are becoming ever more popular.",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Nấu chảy thủy tinh tái chế cần ít năng lượng hơn nguyên liệu mới, nhờ đó tiết kiệm nhiên liệu và chi phí. Nhận định tái chế đắt hơn đảo ngược quan hệ chi phí, nên FALSE.",
+      "evidence": "this also saves fuel and production costs.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Mảnh xương phát hiện năm 2006 cho thấy linh miêu tồn tại ở Anh muộn hơn người ta từng nghĩ. D phù hợp ý nghĩa mới của phát hiện; đặc điểm ngoại hình được nhắc gần đó không phải kết luận từ mảnh xương.",
+      "evidence": "– was presumed to have died out in Britain at least 6,000 years ago, before the inhabitants of",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Tác giả nói loài săn mồi lớn tạo các quá trình lan khắp chuỗi thức ăn, mở chỗ sống cho nhiều loài khác. A phản ánh lợi ích sinh thái rộng ấy, không chỉ việc chúng tiêu diệt con mồi.",
+      "evidence": "through the whole food chain, creating niches for hundreds of species that might otherwise struggle to survive.",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn bốn phê phán bảo tồn Anh vì cố giữ những tập hợp loài được chọn ngẫu nhiên thay vì phục hồi quá trình tự nhiên. C nêu đúng phương pháp dựa trên định hướng sai, không phải khẳng định ngành đã đổi hướng.",
+      "evidence": "selected arbitrary assemblages of plants and animals and sought, at great effort and expense, to prevent them from",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Bảo vệ vùng biển khỏi khai thác thương mại có thể phục hồi hệ sinh thái và có lợi thực tế cho chính ngành đánh cá. A đúng; không suy đoán tổn thất ngắn hạn hay sự phản đối nếu bài không nêu.",
+      "evidence": "seas; the fishing industry’s insistence on scouring every inch of seabed, leaving no breeding reserves, could not be",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Rewilding khác ở thông điệp tích cực, hấp dẫn: hình dung thế giới tự nhiên phong phú hơn thay vì chỉ ngăn mất mát. C phù hợp; bài không nói mục tiêu dễ thực hiện hơn hoặc khoa học chắc chắn hơn.",
+      "evidence": "C. its positive message is more appealing D.",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Bài nói không có trường hợp linh miêu được biết là săn người. Đối tượng chưa có bằng chứng bị đe dọa là humans, tương ứng E; không nhầm với những loài động vật nó thực sự săn.",
+      "evidence": "there is no known instance of one preying on people.",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Linh miêu chuyên săn hoẵng, loài đã tăng mạnh ở Anh trong vài thập kỷ gần đây. Trong danh sách cho sẵn, đó thuộc wild animals nên D, không phải gia súc nuôi của nông dân.",
+      "evidence": "is a specialist predator of roe deer, a species that has exploded in Britain in recent decades, holding",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Linh miêu cần nơi rậm rạp và ít đe dọa cừu, gia súc nếu chúng được giữ ngoài rừng. F chỉ farm animals; điều kiện “provided” giới hạn kết luận, không nói hoàn toàn không có rủi ro.",
+      "evidence": "such presents little risk to sheep and other livestock, which are supposed, as a condition of farm subsidies,",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Tái thả linh miêu phù hợp với mục tiêu đưa rừng trở lại các vùng đồi trọc. “Marries well with” diễn đạt sự kết hợp hiệu quả; A chỉ trees, không phải sự trở lại của ngành nông nghiệp.",
+      "evidence": "aim of bringing forests back to parts of our bare and barren uplands.",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Các nước châu Âu khác đã tái thả linh miêu ở nhiều vùng núi. Vì vậy Anh không thể là quốc gia châu Âu đầu tiên thực hiện; chọn NO, không dựa vào mức mới mẻ của đề xuất trong nước Anh.",
+      "evidence": "The lynx has now been reintroduced to the Jura Mountains, the Alps, the Vosges in eastern France and",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Bài nói quần thể châu Âu tăng gấp ba từ năm 1970 lên khoảng 10.000. Không có dự đoán ban đầu của các nhà bảo tồn để so sánh; “vượt kỳ vọng” vì thế là NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Khi hoạt động canh tác rời khỏi các vùng đồi, linh miêu có thêm không gian để lan rộng. Đây là thay đổi nông nghiệp mở rộng nơi sống của loài, xác nhận nhận định nên YES.",
+      "evidence": "spread as farming has, left the hills and people discover that it is more lucrative to protect charismatic",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Người dân thấy bảo vệ động vật hấp dẫn sinh lợi hơn săn chúng vì du khách trả tiền để được quan sát. Quan hệ thu nhập du lịch này chứng minh lợi ích thương mại của tái hoang dã, nên YES.",
+      "evidence": "it, as tourists will pay for the chance to see it.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn A liệt kê chính phủ, cơ quan quản lý, ngân hàng trung ương và kiểm toán trong những bên bị quy trách nhiệm sau khủng hoảng. Tiêu đề iv bao quát việc nhiều tổ chức bên ngoài bị chất vấn.",
+      "evidence": "and wide. Governments, regulators, central banks and auditors have all been in the frame.",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn B mô tả hậu quả của việc giám sát chặt: thay đổi kỳ vọng với giám đốc, tăng thời gian họp và việc chuẩn bị. Tiêu đề ii nêu tác động của sự xem xét kỹ, không chỉ một biểu hiện riêng.",
+      "evidence": "make the governance of companies in general an issue of intense public debate and has significantly increased the",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn C cảnh báo việc chuyển nhiệm vụ sang các ủy ban có thể khiến toàn bộ hội đồng không trực tiếp giải quyết vấn đề lớn. Tiêu đề vi bao quát nguy cơ thiếu sự tham gia của mọi giám đốc.",
+      "evidence": "so that boxes are ticked rather than issues tackled. D A radical solution, which may work for some very",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn D đưa ra giải pháp thay đổi cách vận hành hội đồng, với thành viên chuyên nghiệp và được cung cấp thông tin tốt hơn. Tiêu đề viii phù hợp đề xuất cải tổ; các hạn chế được nêu là phần đánh giá giải pháp.",
+      "evidence": "tackled. D A radical solution, which may work for some very large companies whose businesses are extensive and complex",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Đoạn E phê phán hội đồng quá chú trọng chỉ số tài chính ngắn hạn thay vì chiến lược và tính bền vững. Tiêu đề vii nói đúng sự thiếu tầm nhìn dài hạn, không phải thiếu dữ liệu kế toán.",
+      "evidence": "much on short-term financial metrics.",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Đoạn F tập trung tranh luận về thù lao lãnh đạo, tiền thưởng và sức ép từ cổ đông. Tiêu đề i về bất đồng trong bố trí thu nhập cấp cao bao quát toàn đoạn.",
+      "evidence": "financial goals. F Compensation for chief executives has become a combat zone where pitched battles between investors, management and",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Đoạn G kết lại bằng yêu cầu xem xét những thay đổi căn bản trong hoạt động doanh nghiệp. Tiêu đề iii bao quát nhu cầu cải tổ rộng, không giới hạn vào lương giám đốc hay số giờ họp.",
+      "evidence": "need to fundamental change in every area of business iv Many external bodies being held responsible for problems",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Sau khủng hoảng tài chính 2008, vai trò giám đốc và hoạt động hội đồng bị xem xét, chất vấn kỹ hơn. “Financial meltdown” tương ứng suy thoái kinh tế; quan hệ thời gian và mức giám sát phù hợp nên YES.",
+      "evidence": "easy one. Following the 2008 financial meltdown, which resulted in a deeper and more prolonged period of economic",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Bài đưa ngân hàng vào nhóm tổ chức bị xem xét sau khủng hoảng. Nó không so sánh mức quản lý yếu kém của ngân hàng với các doanh nghiệp khác; thiếu so sánh nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bài phê phán quá trình thủ tục thay thế thảo luận thực chất: đánh dấu đủ ô hơn là xử lý vấn đề. Điều đó không phù hợp nhận định hội đồng luôn dành đủ thời gian bàn kỹ mọi việc, nên NO.",
+      "evidence": "so that boxes are ticked rather than issues tackled. D A radical solution, which may work for some very",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Cơ cấu ủy ban có thể tách thành viên hội đồng khỏi công việc quan trọng và khiến họ không nắm đầy đủ vấn đề. Khẳng định cơ cấu này bảo đảm mọi người đủ thông tin nói ngược hạn chế được nêu, nên NO.",
+      "evidence": "at the expense of real collaboration, so that boxes are ticked rather than issues tackled. D A radical solution",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Trước khủng hoảng, giám đốc điều hành có thông tin mà giám đốc không điều hành bán thời gian không có. Thứ thiếu gây bất lợi là information, không chỉ số giờ làm hay một chức danh.",
+      "evidence": "executives had access to information that part-time non-executive directors lacked, leaving the latter unable to comprehend or anticipate",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Hội đồng bị chỉ trích tập trung quá mức vào các thước đo tài chính ngắn hạn. Chỗ trống đứng trước danh từ trong câu tóm tắt cần financial; long-term strategy là phần bị bỏ qua, không phải phần được ưu tiên.",
+      "evidence": "much on short-term financial metrics.",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Cổ đông dùng quyền lực về lương thưởng để gây sức ép thay lãnh đạo kém hiệu quả. Vì vậy hội đồng phải cân nhắc quan điểm shareholders hoặc investors, không phải chính những giám đốc nhận thù lao.",
+      "evidence": "governance as shareholders use their muscle in the area of pay to pressure boards to remove underperforming chief",
+      "location": "Passage 3"
+    }
+  }
+}

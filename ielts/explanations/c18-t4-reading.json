@@ -1,0 +1,206 @@
+{
+  "id": "c18-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn D liệt kê trở ngại triển khai mái xanh: cần ủng hộ chính thức, kỹ năng xây dựng và xem xét thêm nhiều điều kiện. Câu hỏi cần nhóm thách thức trước lắp đặt, không chỉ một tác dụng riêng của mái.",
+      "evidence": "have to acquire new skills, such as landscaping, and in some cases, volunteers may be needed to",
+      "location": "Đoạn D"
+    },
+    "2": {
+      "reason": "Toronto khuyến khích mái xanh từ thập niên 1990, còn San Francisco chỉ gần đây mới làm. Many years ứng với Toronto, nên chọn C; chỉ thấy tên một thành phố chưa đủ đáp ứng mốc thời gian.",
+      "evidence": "to have green roofs. Toronto, Canada, has policies dating from the 1990s, encouraging the development of urban",
+      "location": "Đoạn C"
+    },
+    "3": {
+      "reason": "Tác giả đề nghị nghiên cứu các mô hình thành công rồi áp dụng ở nơi khác. Đó chính là dùng mái xanh hiện có làm mẫu cho mái mới, nên E; không phải phát minh lại toàn bộ kỹ thuật.",
+      "evidence": "crucial to ensuring their success – as is research investigating different options to suit the variety of",
+      "location": "Đoạn E"
+    },
+    "4": {
+      "reason": "Mái xanh được kết hợp với tường cây và hệ thống thoát nước trong B. Integrate diễn đạt work in combination, nên đoạn đáp ứng yêu cầu ví dụ phối hợp các sáng kiến xanh.",
+      "evidence": "green roofs can be integrated with drainage systems on the ground, such as street trees, so that",
+      "location": "Đoạn B"
+    },
+    "5": {
+      "reason": "Đoạn D yêu cầu thuyết phục người quyết định bằng lợi ích kinh tế của mái xanh. Convince tương ứng persuasive, economic tương ứng financial; các lợi ích môi trường chung không phải trọng tâm câu hỏi.",
+      "evidence": "green roofs is worthwhile, economic arguments are still the most important. The term ‘natural capital’ has been",
+      "location": "Đoạn D"
+    },
+    "6": {
+      "reason": "Mái xanh tiết kiệm chi phí năng lượng, bên cạnh giảm ngập và hỗ trợ động vật hoang dã. Saving on energy costs diễn đạt giảm tiền chi cho thứ gì, nên ô cần energy.",
+      "evidence": "benefits are saving on energy costs, mitigating the risk of floods, making habitats for urban wildlife, tackling",
+      "location": "Đoạn A"
+    },
+    "7": {
+      "reason": "Mái xanh còn dùng trồng thực phẩm. Growing tương ứng producing trong đề; ô hỏi sản phẩm được tạo nên food đúng, không phải lợi ích tài chính hay đối tượng động vật hoang dã.",
+      "evidence": "pollution and even growing food. These increasingly radical urban designs can help cities adapt to the monumental",
+      "location": "Đoạn A"
+    },
+    "8": {
+      "reason": "Bác sĩ kê hoạt động làm vườn để hỗ trợ lo âu và trầm cảm. Prescribing diễn đạt recommends; ô cần hoạt động nên gardening, không phải tên bệnh hoặc nghề của người khuyên.",
+      "evidence": "increasingly prescribing time spent gardening outdoors for patients dealing with anxiety and depression. And research has found",
+      "location": "Đoạn B"
+    },
+    "9": {
+      "reason": "Không gian xanh có thể giúp tránh béo phì. Physical problems yêu cầu vấn đề thể chất này, nên obesity đúng; anxiety và depression thuộc phần sức khỏe tinh thần được nói trước đó.",
+      "evidence": "and help people avoid obesity. C In North America, green roofs have become mainstream, with a wide",
+      "location": "Đoạn B"
+    },
+    "10": {
+      "reason": "C và D là cặp ưu điểm công trình mới. Riêng C nói khả năng trữ và phân phối đủ nước ở mái; đây là sức chứa nước lớn hơn, không phải dùng nước tiết kiệm hơn.",
+      "evidence": "such as soil or water. Research also indicates that green roofs can be integrated with drainage systems",
+      "location": "Đoạn C"
+    },
+    "11": {
+      "reason": "D là ưu điểm trồng được nhiều loại cây hơn, đi cùng C về khả năng trữ nước. Greater variety tương ứng more plant types; bài không nói diện tích mái hoặc mùa trồng thực phẩm dài hơn.",
+      "evidence": "options to suit the variety of rooftop spaces found in cities. The UK is relatively new to",
+      "location": "Đoạn C"
+    },
+    "12": {
+      "reason": "A và D là hai mục tiêu biến thể mái xanh mới. A ứng với tối đa đa dạng sinh học, tức tạo chỗ sống cho nhiều loài; không phải chỉ giúp cây sống ở khí hậu ướt.",
+      "evidence": "in nature and maximise biodiversity. If the trend continues, it could create new jobs and a more",
+      "location": "Đoạn E"
+    },
+    "13": {
+      "reason": "D ứng với dùng pin mặt trời phát điện từ nguồn bền vững, đi cùng A về sinh thái. Giữ nước mưa không chứng minh mục tiêu cấp nước cho tòa nhà khác, nên không chọn phương án đó.",
+      "evidence": "of green roofs with solar panels, and ‘brown roofs’ which are wilder in nature and maximise biodiversity.",
+      "location": "Đoạn E"
+    },
+    "14": {
+      "reason": "Chọn B: tác giả mô tả khi quan niệm trí thông minh chuyển từ bất biến sang có thể phát triển, với mốc đầu thế kỷ 20. Đoạn không giải thích nơi quan niệm ban đầu ra đời hoặc nguyên nhân thay đổi.",
+      "evidence": "in the early 20th century, progressive thinkers revolted against the notion",
+      "location": "Đoạn 1"
+    },
+    "15": {
+      "reason": "Chọn C: áp phích và diễn thuyết tại trường khuyến khích học sinh tin có khả năng tiến bộ. Đoạn không tập trung tìm tham vọng cá nhân, giúp bạn đạt mục tiêu hay chỉ phát huy sở trường sẵn có.",
+      "evidence": "seeing it as a chance to improve that ability.",
+      "location": "Đoạn 2"
+    },
+    "16": {
+      "reason": "Chọn D: người có fixed mindset coi năng lực là trần bẩm sinh nên tránh rủi ro và sợ thất bại. Đó là ngại vượt giới hạn tự nhận, không nhất thiết là tự trọng thấp hay kém cạnh tranh.",
+      "evidence": "students away from seeing failure as an indication of their ability, and towards seeing it as a",
+      "location": "Đoạn 3"
+    },
+    "17": {
+      "reason": "Người ở C cho rằng thiết kế quá linh hoạt khiến dữ liệu dễ được dùng ủng hộ gần như mọi lý thuyết. Đây là phê bình độ nghiêm ngặt phương pháp, không chỉ bất đồng với kết luận.",
+      "evidence": "right environment. ‘Growth mindset theory’ is a relatively new – and extremely popular – version of this",
+      "location": "Phần phê bình phương pháp"
+    },
+    "18": {
+      "reason": "Dweck nói ý tưởng đã bị hiểu sai và vận dụng sai. Misunderstood tương ứng incorrectly interpreted, nên người phù hợp là B; cần phân biệt lời tự đính chính với phát biểu của người phê bình.",
+      "evidence": "her work has been misunderstood and misapplied in a range of ways. She has also expressed concerns",
+      "location": "Đoạn 6"
+    },
+    "19": {
+      "reason": "Người ở A thuộc nhóm xem trí thông minh bẩm sinh và không đổi. Cần đọc earlier view chỉ về quan niệm trước đó; riêng việc ông thiết kế bài IQ không đủ nêu đúng quan điểm.",
+      "evidence": "of intelligence as something innate has been supplanted by the idea that intelligence is not fixed, and",
+      "location": "Đoạn 1"
+    },
+    "20": {
+      "reason": "Hai nhà nghiên cứu ở E khuyên tác động tinh tế để học sinh không nhận ra thầy cô đang cố cải thiện năng lực của mình. Nhận ra ý đồ rồi hiểu sai có thể làm mất tác dụng mong muốn.",
+      "evidence": "be delivered in a subtle way to maximise their effectiveness. They say that if adolescents perceive a",
+      "location": "Phần về cách can thiệp"
+    },
+    "21": {
+      "reason": "Dweck nhấn mạnh growth mindset không chỉ làm học sinh cảm thấy tốt hơn. Boosting morale là cách hiểu quá hẹp ấy, nên chọn B; đừng đồng nhất toàn bộ phương pháp với khen ngợi hoặc động viên suông.",
+      "evidence": "vehicle for making children feel good.’ But there is another factor at work here. The failure to",
+      "location": "Đoạn 6"
+    },
+    "22": {
+      "reason": "Người ở D tái lập nghiên cứu nhưng không thấy thành tích tốt hơn trước và sau can thiệp. Null results tương ứng không có tác động; đây là kết quả thử nghiệm, không phải nhận xét riêng về thiết kế.",
+      "evidence": "the results are repeatedly null. He notes that: ‘People with a growth mindset don’t cope any better",
+      "location": "Phần kiểm nghiệm lại"
+    },
+    "23": {
+      "reason": "YES: tác giả đánh giá tích cực cách Dweck lắng nghe và đáp lại phê bình. Việc vẫn nêu hạn chế nghiên cứu không phủ nhận lời khen cụ thể dành cho thái độ xử lý phản biện.",
+      "evidence": "she deserves great credit for responding to it and adapting her work accordingly.",
+      "location": "Đoạn 6"
+    },
+    "24": {
+      "reason": "NO: theo tác giả, thành tích thực tác động mạnh hơn đến tự tin so với chỉ thay đổi tự nhận thức. Đề đặt self-perception cao hơn achievement nên đã đảo chiều so sánh, không phải thiếu thông tin.",
+      "evidence": "actual effect of achievement on self-perception is stronger than the other way round.",
+      "location": "Đoạn 8"
+    },
+    "25": {
+      "reason": "NOT GIVEN: bài bàn về bằng chứng và giới hạn của can thiệp nhưng không đánh giá truyền thông đưa tin bất công hay không. Một kết quả gây tranh cãi không tự chứng minh cách đưa tin thiên lệch.",
+      "evidence": "",
+      "location": "Phần cuối"
+    },
+    "26": {
+      "reason": "YES: khẩu hiệu thúc đẩy thành công có thể khiến học sinh hiểu không thực tế về thành công. Đây là tác động tiêu cực có thể có của khích lệ chủ đích, dù mục tiêu ban đầu tích cực.",
+      "evidence": "might well give students a deluded notion of what success actually means.",
+      "location": "Đoạn cuối"
+    },
+    "27": {
+      "reason": "YES: lục địa trôi gây tranh cãi quốc tế ngay trong đời Wegener. International controversy tương ứng widely disputed, in his lifetime khớp while he was alive; cả nội dung lẫn thời gian đều được xác nhận.",
+      "evidence": "international controversy in his lifetime and for some years after his death. Wegener’s basic idea was that",
+      "location": "Đoạn 1"
+    },
+    "28": {
+      "reason": "NOT GIVEN: bài nhắc quan niệm lục địa cố định nhưng không chỉ ra những ấn phẩm khoa học uy tín đã bảo vệ nó. Một quan niệm phổ biến chưa chứng minh được bên xuất bản nào bênh vực.",
+      "evidence": "",
+      "location": "Đoạn 1–2"
+    },
+    "29": {
+      "reason": "NO: Wegener viện dẫn nhiều ngành khoa học để hỗ trợ lý thuyết. A large number of sciences đối lập limited range; dù không biết hết tên ngành, chiều so sánh vẫn rõ.",
+      "evidence": "a large number of sciences including geology, geophysics, paleontology, and climatology. Wegener’s idea – that the continents",
+      "location": "Đoạn 2"
+    },
+    "30": {
+      "reason": "NO: thuyết lục địa trôi của Wegener được nói là khác đáng kể với kiến tạo mảng hiện đại. Có quan hệ phát triển lịch sử không đồng nghĩa hai lý thuyết có mức giống nhau rất lớn.",
+      "evidence": "Earth sciences today: namely plate tectonics. Plate tectonics is in many respects quite different from Wegener’s proposal,",
+      "location": "Đoạn 2"
+    },
+    "31": {
+      "reason": "Chọn I, biographer’s perspective: tác giả thấy đáng chú ý khi một người không học địa chất lại đề xuất lý thuyết địa chất quan trọng. For me chỉ người viết tiểu sử, không phải tự đánh giá của Wegener.",
+      "evidence": "intriguing things about him for me was that, although he came up with a theory on continental",
+      "location": "Đoạn 3"
+    },
+    "32": {
+      "reason": "Wegener học thiên văn nhưng theo đuổi vật lý khí quyển về nghề nghiệp. Ô cần professional interests ở F; đề phân biệt nền tảng học với hướng nghiên cứu về sau, không phải hai văn bằng giống nhau.",
+      "evidence": "pursued a career in atmospheric physics. When he proposed the theory of continental displacements in 1912, he",
+      "location": "Đoạn 3"
+    },
+    "33": {
+      "reason": "Đến năm 1912 Wegener không hoàn toàn vô danh. Ý đã có chút danh tiếng ứng modest fame ở A; bài không nói ông nổi tiếng rộng rãi hoặc đứng đầu giới khoa học lúc công bố lý thuyết.",
+      "evidence": "he was not an ‘unknown’. In 1906 he had set a world record (with his brother Kurt)",
+      "location": "Đoạn 3"
+    },
+    "34": {
+      "reason": "Chuyến bay khí cầu 52 giờ sáu năm trước đó lập kỷ lục thế giới. Vì thế chọn C, record-breaking achievement; con số không chỉ minh họa một sở thích hoặc chuyến công tác thông thường.",
+      "evidence": "in a hot-air balloon: 52 hours. Between 1906 and 1908 he had taken part in a highly",
+      "location": "Đoạn 3"
+    },
+    "35": {
+      "reason": "Chuyến thám hiểm bờ biển Greenland nguy hiểm và được công chúng biết nhiều. Dangerous expedition tương ứng hazardous exploration ở H; không nhầm với thành tích bay khí cầu trong ô liền trước.",
+      "evidence": "the coast of northeast Greenland. He had also made a name for himself amongst a small circle",
+      "location": "Đoạn 3"
+    },
+    "36": {
+      "reason": "Sách nhiệt động lực học đem lại sự ghi nhận trong một nhóm nhỏ nhà khoa học Đức. A small circle tương ứng select group ở E, khác với tiếng tăm rộng khắp trong công chúng.",
+      "evidence": "for himself amongst a small circle of meteorologists and atmospheric physicists in Germany as the author of",
+      "location": "Đoạn 3"
+    },
+    "37": {
+      "reason": "Chọn B: dù chương sách chia theo lĩnh vực, tác giả khuyên đọc cả sách để hiểu đời Wegener liền mạch. Chỉ xem vài phần có thể bỏ mất quan hệ giữa các giai đoạn nghiên cứu bị ngắt rồi tiếp tục.",
+      "evidence": "the parts do not make as much sense on their own",
+      "location": "Đoạn 5"
+    },
+    "38": {
+      "reason": "Chọn A: ông ít tham gia hội nhóm, không cố tạo ảnh hưởng với giới quyền lực, chủ yếu đọc viết và thực địa. Các chi tiết thể hiện ít tham vọng danh vị, không phải thiếu đam mê nghiên cứu.",
+      "evidence": "not seek to find influence or advance his ideas through professional contacts and politics, spending most of",
+      "location": "Đoạn 6"
+    },
+    "39": {
+      "reason": "Chọn D: các nhà khoa học khác để lại nhiều ghi chép cá nhân và học thuật, giúp viết tiểu sử dễ hơn. Đối lập với tư liệu ít của Wegener là độ dễ tái dựng cuộc đời, không phải mức ảnh hưởng lý thuyết.",
+      "evidence": "The more such material a scientist leaves behind, the better chance",
+      "location": "Đoạn 7"
+    },
+    "40": {
+      "reason": "Chọn C: cuộc đời chịu nhiều sự tình cờ ngoài tầm kiểm soát dù ta tưởng đang tự chọn đường đi. Đoạn không bảo đảm kế hoạch kỹ hoặc ý định tốt sẽ mang lại thành công như mong muốn.",
+      "evidence": "leaves behind, the better chance a biographer has of forming an accurate picture of how a scientist’s",
+      "location": "Đoạn cuối"
+    }
+  }
+}

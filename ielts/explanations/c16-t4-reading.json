@@ -1,0 +1,206 @@
+{
+  "id": "c16-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Trong phương pháp qanat, người ta đặt các cọc thẳng hàng trên đồi để giữ hướng đào hầm. “Direct the tunnelling” diễn đạt lại mục đích giữ đúng tuyến; vật cần điền là posts, không phải bản thân đường hầm.",
+      "evidence": "placing posts over a hill in a straight line",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Khi hầm hoàn tất, nước chảy xuống một con kênh để cung cấp cho con người. “Runs into” tương ứng với dòng chảy hướng về đó; ô trống hỏi nơi nhận nước, nên canal.",
+      "evidence": "down towards a canal",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Các giếng đứng vừa giúp đưa đất đào lên vừa cung cấp thông gió. Đề đã nêu công dụng chuyển đất ra ngoài, nên công dụng còn thiếu là ventilation; không điền lại earth.",
+      "evidence": "which also provided ventilation during the work",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Mũi tên chỉ nắp che trên giếng; bài nói các giếng được đậy bằng nắp gỗ hoặc đá. Vật được mô tả chất liệu ấy là lid, không phải cả shaft.",
+      "evidence": "covered with a wooden or stone lid",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Dây dọi có một vật nặng gắn ở đầu, giúp kiểm tra phương thẳng đứng. Ô trống chỉ phần ở cuối dây, nên weight; plumb line là tên toàn bộ dụng cụ đã được ghi trên hình.",
+      "evidence": "the weight at the end of it",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Các điểm bám tay và đặt chân giúp công nhân leo ra vào giếng. Sau “used for” cần tên hoạt động; theo giới hạn một từ, điền climbing, không chép cả cụm ra vào.",
+      "evidence": "to help those climbing in and out of them",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Đối đào được giới thiệu như một phương pháp khác xuất hiện bên cạnh qanat, không phải phương pháp đã thay thế hoàn toàn qanat. Từ “completely” làm nhận định tuyệt đối và sai, nên FALSE.",
+      "evidence": "The qanat construction method was usually faster than the counter-excavation method",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Bài không nói chỉ những người có kinh nghiệm mới được thuê làm hầm bằng đối đào. Mô tả sự khó khăn của kỹ thuật không đủ để suy ra tiêu chuẩn tuyển người; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Vấn đề trong hệ thống dẫn nước Saldae được biết qua một dòng khắc trên vách hầm. Đề đổi nguồn tư liệu thành một cuốn sách cổ, trái thông tin bài; FALSE.",
+      "evidence": "An inscription written on the side",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Dòng khắc kể hai đội đào từ hai đầu đã đi chệch, không gặp được nhau, rồi phải sửa lỗi. “Missed each other” tương ứng với “failed to meet”; câu hỏi đúng, nên TRUE.",
+      "evidence": "missed each other",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Các hầm Dolaucothi ở Wales được đào để khai thác vàng. Ô trống hỏi khoáng sản chứ không hỏi phương pháp khai thác, nên gold; địa danh chỉ giúp xác định chỗ đọc.",
+      "evidence": "tunnels used to mine gold",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Dòng khắc có thể ghi tên người bảo trợ cùng tên kiến trúc sư. Người còn lại ngoài patron là architect; câu trả lời cần chỉ người thiết kế, không phải công nhân đào hầm.",
+      "evidence": "sometimes the name of the architect",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Hầm Cevlik được xây để chuyển hướng nước lũ vốn đe dọa cảng của Seleuceia Pieria. Đề hỏi phần của thành phố được bảo vệ, nên harbour hoặc harbor, không phải floodwater là mối đe dọa.",
+      "evidence": "floodwater threatening the harbor",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn đầu dùng cảnh mọi lứa tuổi nhìn vào thiết bị để dẫn tới thay đổi âm thầm trong mạch đọc của não. Ý chính là công nghệ ảnh hưởng tới ta theo cách khó nhận thấy: A, không chỉ chứng minh thiết bị giúp trẻ đọc.",
+      "evidence": "an invisible, game-changing transformation",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Turkle cảnh báo khi đổi mới ta có thể bỏ qua những năng lực bị phá vỡ hoặc suy giảm. Vì vậy cần chú ý cái có thể mất đi: B; không phải khuyến nghị ngừng đổi mới hoàn toàn.",
+      "evidence": "what we disrupt or diminish",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Mạch não phụ trách đọc thích nghi với đòi hỏi của môi trường và phương tiện chủ đạo. Đó là ý một số mạch não điều chỉnh theo nhiệm vụ được yêu cầu, chọn D; đọc không phải khả năng hoàn chỉnh có sẵn từ khi sinh ra.",
+      "evidence": "adapt to that environment’s requirements",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Edmundson nhận thấy sinh viên tránh văn học kinh điển khó và chọn nội dung dễ hơn. Thái độ ngại khó ảnh hưởng trực tiếp đến thứ họ chọn đọc, nên B; bài không nói ông đã đổi cách dạy.",
+      "evidence": "actively avoid the classic literature",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Nhiều nghiên cứu ghi nhận hậu quả đáng lo của việc dùng màn hình. Từ trong bài mang nghĩa gây bận tâm tương ứng worrying trong danh sách, nên D; không chọn một tính từ tích cực về công nghệ.",
+      "evidence": "a variety of troubling downstream effects",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Nhóm nghiên cứu dùng câu hỏi để đánh giá mức độ hiểu chi tiết và tái dựng diễn biến truyện theo thời gian. Họ đang xem sự hiểu thấu đáo đến đâu; thorough tương ứng H.",
+      "evidence": "reconstruct the plot in chronological order",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Nhóm đọc trên giấy hiểu trình tự tình tiết tốt hơn nhóm đọc màn hình. Vì thế nhóm màn hình thấy khó nhớ lại thứ tự thông tin; hard phù hợp cả nghĩa lẫn cấu trúc trước động từ recall, chọn F.",
+      "evidence": "students who read on print were superior",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Nghiên cứu của Liu mô tả đọc lướt, bắt gặp từng từ và duyệt nhanh văn bản thay cho đọc sâu. Ô trống mô tả các từ và cụm rời rạc được chú ý, nên isolated, chọn B.",
+      "evidence": "word-spotting and browsing through the text",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Đọc lướt khiến không đủ thời gian hiểu cảm xúc người khác hoặc cảm nhận chiều sâu văn bản. Trong danh sách, emotional diễn đạt nội dung về cảm xúc mà người đọc chỉ hiểu hời hợt; chọn C.",
+      "evidence": "to understand another’s feelings",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Tác giả nói các phương tiện khác nhau làm thay đổi cả nội dung ta đọc và mục đích đọc. Vì vậy phương tiện ảnh hưởng lựa chọn nội dung là nhận định phù hợp, chọn YES.",
+      "evidence": "changes not only what we read",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Tác giả nhấn mạnh sự suy giảm phân tích và đồng cảm ảnh hưởng mọi người như nhau, không chỉ người trẻ. Đề nói một số nhóm tuổi dễ bị hơn nhóm khác đã trái ý này, nên NO.",
+      "evidence": "affects us all equally",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Bài cảnh báo ít phân tích thông tin khiến ta dễ tin thông tin sai, nhưng không so sánh mức độ phổ biến của thông tin sai hiện nay với trước đây. Thiếu so sánh thời gian, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Ta có khoa học và công nghệ để nhận diện, khắc phục thay đổi cách đọc trước khi chúng ăn sâu. Điều đó xác nhận vẫn còn cơ hội sửa vấn đề công nghệ gây ra, nên YES.",
+      "evidence": "identify and redress the changes",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Phần A nêu nhiều lĩnh vực AI dự báo tốt hơn con người. Tiêu đề iii bao quát ưu thế dự đoán ấy; các ví dụ cụ thể chỉ minh họa, không phải chủ đề riêng của đoạn.",
+      "evidence": "AI is almost always better at forecasting",
+      "location": "Passage 3 · Đoạn A"
+    },
+    "28": {
+      "reason": "Phần B dùng Watson for Oncology cho thấy bác sĩ xem nhẹ gợi ý trùng ý họ và bỏ qua gợi ý khác ý, dẫn tới nghi ngờ AI. Trọng tâm là sự thiếu tin tưởng một đổi mới, chọn vi.",
+      "evidence": "even more suspicion and disbelief",
+      "location": "Passage 3 · Đoạn B"
+    },
+    "29": {
+      "reason": "Phần C giải thích ta hiểu cách người khác nghĩ hơn là hiểu AI; sự mới lạ và phức tạp gây lo âu, mất kiểm soát. Đó là các lý do tin phán đoán người hơn máy, nên ii.",
+      "evidence": "Trust in other people is often based",
+      "location": "Passage 3 · Đoạn C"
+    },
+    "30": {
+      "reason": "Phần D cho thấy người lạc quan càng hào hứng, người hoài nghi càng dè chừng sau khi xem nội dung về AI. Khoảng cách thái độ ngày càng lớn là ý bao quát, chọn i.",
+      "evidence": "Optimists became more extreme in their enthusiasm",
+      "location": "Passage 3 · Đoạn D"
+    },
+    "31": {
+      "reason": "Phần E đề xuất công khai thêm thuật toán và mục đích sử dụng, giúp người dùng hiểu công nghệ. Tiêu đề vii nói về sự cởi mở trong cách AI vận hành, không phải chỉ nâng hiệu suất máy.",
+      "evidence": "reveal more about the algorithms",
+      "location": "Passage 3 · Đoạn E"
+    },
+    "32": {
+      "reason": "Phần F cho thấy trao cho người dùng một phần quyền điều chỉnh quyết định AI có thể tăng lòng tin. Trọng tâm là lợi ích của sự tham gia của người dùng, chọn v.",
+      "evidence": "allowing people some control over AI decision-making",
+      "location": "Passage 3 · Đoạn F"
+    },
+    "33": {
+      "reason": "Phần A nêu nghịch lý: AI dự báo tốt nhưng con người vẫn không muốn dựa vào nó. Tác giả đang chỉ ra một vấn đề cần giải quyết, chọn C; chưa cung cấp lời giải cụ thể ngay tại đây.",
+      "evidence": "people are so reluctant to trust AI",
+      "location": "Passage 3 · Đoạn A"
+    },
+    "34": {
+      "reason": "Sự phức tạp khiến AI khó hiểu, tạo lo âu và cảm giác mất kiểm soát. Điều này tương ứng người dùng thấy mình ở thế bất lợi, nên B; không phải họ chỉ muốn chờ thêm thời gian thử nghiệm.",
+      "evidence": "usually too difficult for most people to comprehend",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Truyền thông tập trung các thất bại AI, làm người xem tin rằng không thể dựa vào công nghệ. Do đó nó thúc đẩy sự thiếu tin tưởng, chọn A; bài không kết luận mọi bản tin đều thiếu chính xác.",
+      "evidence": "Embarrassing AI failures receive a disproportionate amount of media attention",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Thí nghiệm cho thấy phim củng cố niềm tin sẵn có: người lạc quan càng lạc quan, người hoài nghi càng hoài nghi. Nó không khiến họ chuyển hẳn sang quan điểm đối lập như đề hàm ý; chọn NO.",
+      "evidence": "Optimists became more extreme in their enthusiasm",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Bài dự báo AI xuất hiện nhiều hơn trên truyền thông và giải trí, không dự báo các hình ảnh ấy sẽ tích cực hơn. Tần suất xuất hiện và sắc thái miêu tả là hai vấn đề khác nhau; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Tác giả cảnh báo từ chối các lợi ích AI có thể đặt nhiều người vào thế bất lợi nghiêm trọng. Điều ấy tương ứng tác động tiêu cực lên cuộc sống, nên YES; đề không khẳng định mọi ứng dụng AI đều tốt.",
+      "evidence": "at a serious disadvantage",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Bài nói kinh nghiệm sử dụng AI trước đó có thể cải thiện đáng kể quan điểm về công nghệ. Đề nói ảnh hưởng rất ít đã trái với mức độ “đáng kể”, nên NO.",
+      "evidence": "previous experience with AI can significantly improve",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Khi người dùng có một phần quyền quyết định cách AI được triển khai, họ sẵn lòng chấp nhận AI hơn. Đó là lợi thế của ứng dụng có thể điều chỉnh, nên YES; không đòi hỏi họ hiểu mọi hoạt động bên trong.",
+      "evidence": "more willing to accept AI into their lives",
+      "location": "Passage 3"
+    }
+  }
+}

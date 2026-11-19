@@ -1,0 +1,206 @@
+{
+  "id": "c20-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Người Nam Mỹ dùng cách đông rồi sấy để bảo quản khoai tây mà vẫn giữ giá trị dinh dưỡng. Đại từ their chỉ potatoes đã nêu trước đó; chỗ trống hỏi thực phẩm được bảo quản, không phải phương pháp.",
+      "evidence": "a unique means of conserving potatoes",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Năm 1851, các khối băng trong toa tàu cách nhiệt giúp vận chuyển bơ từ New York tới Boston. Câu hỏi cần mặt hàng được giữ lạnh và gửi đi, nên butter, không phải ice là chất làm lạnh.",
+      "evidence": "to send butter from Ogdensburg, New York, to Boston",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Năm 1880, thịt bò và cừu đông lạnh được gửi từ Australia tới Anh. Đề gộp hai loại ấy thành two kinds of meat, nên từ cần điền là meat, không chỉ một loại riêng.",
+      "evidence": "a shipment of Australian beef and mutton",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Đông lạnh chậm tạo tinh thể phá tế bào, ảnh hưởng hương vị và kết cấu. Các cải tiến về sau giảm tác hại đó, nên crystals; cần nối giải pháp với vấn đề đã được giải thích trước đó.",
+      "evidence": "reduced the damage that crystals caused",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Cellophane là vật liệu đóng gói thực phẩm trong suốt đầu tiên, cho phép nhìn thấy sản phẩm. With trong đề tương ứng the use of trong bài, nên cellophane, không phải một loại thực phẩm bên trong.",
+      "evidence": "the use of cellophane",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Thiếc được dành cho đạn dược trong chiến tranh nên nguồn dùng đóng hộp bị thiếu. Đề hỏi vật liệu khan hiếm thúc đẩy thực phẩm đông lạnh, nên tin; đừng nhầm với vật liệu bao bì cellophane ở giai đoạn trước.",
+      "evidence": "tin was being used for munitions",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Đến thập niên 1950, công nghệ tủ lạnh phát triển và hàng chục triệu gia đình Mỹ đã có tủ lạnh. Chỗ trống sau một thiết bị trong nhà cần refrigerator số ít, không phải tên ngành công nghiệp.",
+      "evidence": "33 million US families owned a refrigerator",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Bài kể vận chuyển băng qua Đại Tây Dương đầu thế kỷ XIX nhưng không nói chủ tàu trở nên rất giàu nhờ đó. Có kinh doanh không chứng minh mức tài sản, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Kỹ thuật đông lạnh của Australia tạo tinh thể nở làm vỡ tế bào, hỏng vị và kết cấu thực phẩm. Nhận định nhược điểm ảnh hưởng mùi vị đúng với spoilt the flavour, nên TRUE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Birdseye tới Labrador để săn bắt và buôn lông vì thiếu tiền. Học cách người Inuit đông cá là điều ông quan sát ở đó, không phải mục đích chuyến đi được nêu; nhận định sai nên FALSE.",
+      "evidence": "trap and trade furs",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Công ty tung TV Dinner với ngân sách quảng cáo khổng lồ. Huge advertising budget diễn đạt lại đầu tư nhiều tiền quảng bá, nên TRUE; không cần biết doanh số để xác nhận chi quảng cáo.",
+      "evidence": "a huge advertising budget",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "TV Dinner dùng cùng kiểu khay nhôm chia ngăn ngành hàng không đã dùng. Vì vậy không phải phát triển kiểu hộp mới riêng cho sản phẩm, nên FALSE, không phải NOT GIVEN vì loại khay đã được xác định.",
+      "evidence": "tray that was used by airlines",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài cho quy mô và doanh thu ngành đông lạnh Mỹ nhưng không xếp hạng với quốc gia khác. Lớn về giá trị không tự chứng minh lớn nhất thế giới hiện nay, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Phần A nêu hai mục tiêu: cho công chúng thấy vẻ đẹp san hô và giới thiệu nghiên cứu, bảo tồn để chống đe dọa nóng lên. Tiêu đề v bao quát hai mục tiêu giáo dục rõ ràng này.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Phần B giải thích san hô và tảo hỗ trợ nhau: tảo cung cấp màu và dinh dưỡng, san hô cho nơi bảo vệ. Chủ đề là hợp tác dưới biển, tiêu đề ii, không chỉ vẻ ngoài rực rỡ.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Phần C phản bác cách gọi rạn san hô là rừng mưa của biển và lý giải vì sao không chính xác. Do vậy tiêu đề iv về tranh luận tính đúng của một cụm từ phù hợp nhất.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Phần D cảnh báo stress nhiệt và các nguy cơ khác, dự báo khủng hoảng khí hậu phá sinh cảnh. Trọng tâm là rắc rối còn tiếp diễn phía trước, tiêu đề vii, không phải mô tả giải pháp.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Phần E giới thiệu nỗ lực tìm san hô chịu được biển ấm, axit và tăng tốc sinh sản. Đó là hành động giải quyết vấn đề ở phần trước, nên tiêu đề iii, không chỉ thống kê thiệt hại.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Phần F nói chia sẻ tiến bộ nghiên cứu để công chúng tin vẫn có thể cứu rạn san hô. Mục đích khơi hy vọng là ý bao quát, nên vi, không phải khẳng định mọi đe dọa đã được giải quyết.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Phần D nêu ô nhiễm do con người và thay đổi dòng hải lưu là tác nhân gây hại. Hai lựa chọn tương ứng C và E; các nguy cơ khác nghe hợp lý nhưng không nằm trong danh sách được bài nêu.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Waste contamination diễn đạt pollution by humans; thay đổi dòng chảy diễn đạt ocean current changes. Cần C và E khác nhau cho nhóm, không suy thêm đánh bắt quá mức hoặc dịch bệnh từ kiến thức bên ngoài.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Nghiên cứu London Zoo tìm loại san hô chịu nước ấm, axit và thử tăng tốc độ sinh sản. Hai mục tiêu khớp B và D; dựng rạn nhân tạo hoặc tìm vật liệu chắn nhiệt không được nêu là nhiệm vụ của nhóm.",
+      "evidence": "survive best in warm, acidic waters",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Survive best in warm, acidic waters hỗ trợ B, increase breeding rates hỗ trợ D. Cần chọn đúng hai mục tiêu nghiên cứu, không nhầm triển lãm rạn nhân tạo giới thiệu trước đó thành phương pháp nhóm đang thử.",
+      "evidence": "increase coral breeding rates",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "San hô dùng các xúc tu bắt sinh vật biển nhỏ làm thức ăn. Collect food diễn đạt capturing small marine creatures, nên tentacles số nhiều, cũng phù hợp a number of trước chỗ trống.",
+      "evidence": "tentacles for capturing small marine creatures",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Tảo sống bên trong san hô và được bảo vệ; đổi lại chúng cung cấp màu và dinh dưỡng. Chỗ trống hỏi lợi ích của tảo, nên protection; không đảo chiều hai bên của quan hệ cộng sinh.",
+      "evidence": "which in turn get protection",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Nước biển ấm lên lấy mất màu rạn san hô. Increases in warmth tương ứng rising temperatures và remove tương ứng strip, nên colour; không điền tảo khi đề hỏi đặc điểm bị mất.",
+      "evidence": "strip reefs of their colour",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Rees muốn robot không có năng lực đánh bại hoặc vượt trí con người, dù tính toán rất giỏi. Đây là hạn chế năng lực vì an toàn của con người, nên chuyên gia A.",
+      "evidence": "lacking the capacity to outwit us",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Richardson nói chưa robot nào nổi dậy thách thức ưu thế con người và cho rằng khả năng đó khó xảy ra. Quan điểm rủi ro bị phóng đại thuộc C; không nhầm với Rees đưa ra cảnh báo.",
+      "evidence": "none have in fact risen up and challenged human supremacy",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Wolpert nói kỳ vọng máy gần trí sáng tạo con người trong năm mươi năm tới là rất tham vọng. Điều này thể hiện còn cần nhiều thập niên, nên B; không có lời hứa đạt được trong một thời hạn chắc chắn.",
+      "evidence": "within the next 50 years would be highly ambitious",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Rees đặt câu hỏi có nên thấy có lỗi khi khai thác robot tinh vi hoặc để chúng chán nản, thất nghiệp. Đó là quan ngại đối xử công bằng với robot, nên A, không chỉ lo robot gây hại người.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Wolpert cho rằng dùng robot khai thác tài nguyên gần nhà hợp lý hơn đi thuộc địa hóa hành tinh khác. So sánh lợi ích trên Trái Đất với ngoài không gian này thuộc B.",
+      "evidence": "gather resources nearer to home",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Rees khuyên đọc khoa học viễn tưởng hạng nhất thay vì khoa học hạng hai vì kích thích suy nghĩ hơn và có thể không dễ sai hơn. Nhận định về độ chính xác tương đương đúng với ý ấy, nên A.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Richardson nói không phải ai cũng sợ robot và nhiều người đón nhận trí tuệ máy. Đây là bằng chứng có người mong chờ máy thông minh hơn, nên C; không phải kết luận tất cả công chúng đều hào hứng.",
+      "evidence": "many people welcome machine intelligence",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Rees muốn bảo vệ hành tinh như Nam Cực, Richardson phản đối áp đặt mô hình của ta lên nơi khác. Cả hai đặt câu hỏi đạo đức khi sửa hành tinh vì lợi ích con người, nên C.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Cả Rees và Wolpert đều thừa nhận máy vượt người ở vài việc nhưng còn hạn chế trong cảm nhận, nhận dạng linh hoạt. Họ nhất trí về mức tiến bộ AI hiện có, nên B, không khẳng định máy đã toàn diện như người.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Wolpert nêu virus máy tính là tác hại AI đã thấy; Richardson nhấn mạnh robot chưa thực sự đe dọa con người. Điểm bất đồng là tổn hại AI đã gây ra, lựa chọn D, không phải tương lai khoa học viễn tưởng.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Richardson cho rằng người ta gán tư duy và hành vi con người cho vật vô tri, rồi sợ nó thành đe dọa tự chủ. B diễn đạt đúng nguồn gốc nhân hóa ấy, không phải chỉ hiểu sai cơ chế máy móc.",
+      "evidence": "humans’ tendency to personify inanimate objects",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Rees không lo máy tính giỏi tính toán như công cụ mà lo mạng máy hành xử như một bộ não có ý riêng. Mối lo trọng tâm là independent thought, nên C, không đơn thuần số robot vượt số người.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Wolpert lưu ý gần như không có viễn tưởng nào hình dung tương lai thiếu robot. Ông nhấn mạnh vai trò không thể thiếu của robot trong thể loại này, nên B; không chỉ kể ảnh hưởng ngược tới người đọc.",
+      "evidence": "almost no science fiction envisages a future without robots",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Richardson bác sự chia đôi tuyệt đối thực tại và tưởng tượng, khuyên kết hợp các cách hiểu để có góc nhìn toàn diện. Bà đề nghị đổi cách tiếp cận, nên C, không chỉ cảnh báo đừng nhầm hai thế giới.",
+      "evidence": "",
+      "location": "Passage 3"
+    }
+  }
+}

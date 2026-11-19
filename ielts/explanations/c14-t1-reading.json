@@ -1,0 +1,206 @@
+{
+  "id": "c14-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Trò tưởng tượng xây vương quốc giúp trẻ bắt đầu phát triển năng lực sáng tạo. “Take her first steps towards” tương ứng develop; chỗ trống cần tên năng lực: creativity.",
+      "evidence": "capacity for creativity and so it will have important repercussions in her adult life.",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Board game dạy trẻ tuân thủ luật và chờ tới lượt. Hai việc nối bằng and, nên từ song song với turn-taking là rules, không phải tên trò chơi.",
+      "evidence": "follow rules and take turns with a partner.",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Hơn nửa dân số thế giới hiện sống ở thành phố. People được diễn đạt lại thành populations; nơi cần điền là cities.",
+      "evidence": "now live in cities. ‘The opportunities for free play, which I experienced almost every day of",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Một nguyên nhân hạn chế chơi ngoài trời là phụ huynh sợ rủi ro giao thông. Câu hỏi hỏi đối tượng gây lo ngại, vì thế điền traffic, không điền risk.",
+      "evidence": "traffic, as well as parents’ increased wish to protect their children from being the victims of",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Nguyên nhân còn lại là mong bảo vệ trẻ khỏi tội phạm. “Victims of crime” chỉ nạn nhân của tội phạm; thứ bị lo sợ là crime, không phải victims.",
+      "evidence": "victims of crime, and by the emphasis on ‘earlier is better’ which is leading to greater",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Việc học và trường lớp ngày càng cạnh tranh khiến cơ hội chơi giảm. Greater tương ứng increased; danh từ diễn tả điều tăng lên là competition.",
+      "evidence": "greater competition in academic learning and schools.",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Các tổ chức muốn bảo vệ quyền vui chơi nhưng thiếu bằng chứng làm nền tảng chính sách. Lack tương ứng khó tìm được; đáp án là evidence.",
+      "evidence": "evidence to base policies on.",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Nghiên cứu thiếu dữ liệu về ảnh hưởng của vui chơi tới cuộc sống sau này. Later life tương ứng phần đời còn lại; chỗ trống là life.",
+      "evidence": "later life.",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bài liên hệ khả năng tự điều chỉnh với thành công học tập về sau. Self-regulation diễn đạt lại self-control; cả đối tượng và kết quả đều khớp nên TRUE.",
+      "evidence": "self-regulate has been shown to be a key predictor of academic performance.",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Cách trẻ chơi có thể giúp nhận biết vấn đề phát triển hoặc sức khỏe. Diagnosis và disorder hỗ trợ ý cung cấp thông tin về vấn đề y khoa, vì thế TRUE.",
+      "evidence": "diagnosis of neurodevelopmental disorders like autism.’",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Bài nói chơi búp bê có lợi cho viết truyện, nhưng không so sánh mức lợi ích giữa bé gái và bé trai. Thiếu đúng phép so sánh more than, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Sau hoạt động Lego, trẻ không còn nói rằng chúng không biết viết gì. Điều này ngược nhận định chúng gặp khó khăn nghĩ ý tưởng sau khi chơi, nên FALSE.",
+      "evidence": "not a single child said this through the whole year of the project.",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Tác giả nhận xét tầm quan trọng của vui chơi đã bị xem nhẹ hoặc lãng quên. Ý đó xác nhận hiện nay người ta coi chơi ít quan trọng hơn trước: TRUE.",
+      "evidence": "the importance of play has been lost in recent decades.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn E kể việc xe bị phá hoại và trộm cắp. Đây là hành vi sử dụng sai mục đích chương trình, khớp misused, không phải lỗi kỹ thuật của hệ thống.",
+      "evidence": "vandalism and theft. ‘After every weekend there would always be a couple of bikes missing,’ Molenaar",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "15": {
+      "reason": "Đoạn C nêu hội đồng bác đề án vì họ tin ô tô mới là phương tiện tương lai. Cần đoạn giải thích việc từ chối đề xuất, không phải lần cảnh sát thu xe trước đó.",
+      "evidence": "rejected the plan. They said that the bicycle belongs to the past. They saw a glorious",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "16": {
+      "reason": "Đoạn F cho biết người thiết kế không có lợi ích tài chính vì không đăng ký bằng sáng chế. “Didn’t really benefit” khớp việc không kiếm lời từ công sức.",
+      "evidence": "never filed for a patent.’",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "17": {
+      "reason": "Đoạn C so sánh chi phí xe đạp với chi phí giao thông công cộng: chỉ bằng 10%. Đây là khoản tiết kiệm tiềm năng cho thành phố, không phải mức lợi nhuận.",
+      "evidence": "only 10% of what it contributed to public transport per person per kilometre.’ Nevertheless, the council",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "18": {
+      "reason": "Đoạn A trình bày mục tiêu ứng phó ô nhiễm không khí và chủ nghĩa tiêu dùng. Đó là vấn đề kế hoạch muốn giải quyết, không phải trục trặc phát sinh sau triển khai.",
+      "evidence": "air pollution and consumerism. In the centre of Amsterdam, they painted a small number of used",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "19": {
+      "reason": "B đúng vì hệ thống ngừng hoạt động khi ngân hàng rút hỗ trợ cho thẻ thanh toán. Đừng gán sự phản đối của cảnh sát đối với chương trình thập niên 1960 cho chương trình năm 1999.",
+      "evidence": "Postbank decided to abolish the chip card, because it wasn’t profitable.",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "D đúng vì người dân quan tâm môi trường hơn, tạo điều kiện tái triển khai năm 1999. Bài không nói mục tiêu vượt Copenhagen hay có nhiều nhà thiết kế tham gia.",
+      "evidence": "environmentally conscious, and the Danish experiment had proved that bike-sharing was a real possibility.’A new Witte",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "D đúng: xe đạp chia sẻ giúp người đi tàu điện hoàn thành chặng cuối tới nơi làm việc. Đó là lợi ích cụ thể cho người dùng giao thông công cộng.",
+      "evidence": "People who travel on the underground don’t carry their bikes around.",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "E đúng vì Amsterdam nổi tiếng là thành phố thân thiện với người đi xe đạp. Tỷ lệ 38% không tự chứng minh xe đạp đứng đầu mọi phương tiện.",
+      "evidence": "friendly capitals in the world – but the city never got another Witte Fietsenplan. Molenaar believes",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Provo được mô tả là tổ chức gồm các nhà hoạt động Hà Lan. Câu hỏi yêu cầu danh từ chỉ nhóm người, nên dùng activists thay vì tên tổ chức hoặc thành phố.",
+      "evidence": "activists who wanted to change society. They believed the scheme, which was known as the Witte",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Hai mối lo song song là ô nhiễm không khí và chủ nghĩa tiêu dùng. Đề đã diễn đạt phần môi trường, nên chỗ còn lại là consumerism.",
+      "evidence": "consumerism. In the centre of Amsterdam, they painted a small number of used bikes white. They",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Ngoài sơn xe màu trắng, nhóm còn phát tờ rơi cảnh báo nguy hại của ô tô. Distributed tương ứng handed out; vật được phát là leaflets.",
+      "evidence": "leaflets describing the dangers of cars and inviting people to use the white bikes. The bikes",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Cảnh sát phản đối và thu các xe vừa được để ngoài phố. Removed khớp took away; chỗ trống hỏi chủ thể hành động nên điền police.",
+      "evidence": "police were opposed to Provo’s initiatives and almost as soon as the white bikes were distributed",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Enz và Siguaw cho rằng quản lý phải hiểu động lực ở các giai đoạn nghề nghiệp để giữ nhân viên giỏi. “Retain competent employees” khớp good staff remain; chọn E.",
+      "evidence": "retain competent employees. This requires an understanding of what motivates employees at different levels of management",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Ng và Sorensen liên hệ hỗ trợ từ quản lý với cảm giác có trách nhiệm ở lại. “Feel obligated to stay” tương ứng không muốn chuyển chủ lao động; chọn D.",
+      "evidence": "obligated to stay with the company. This was succinctly summarized by Michel et al. (2013): ‘[Providing",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Lucas nhận xét cách quản lý nhân lực trong ngành ít hỗ trợ phát triển năng lực nhân viên. Little là gần như không làm, khớp thiếu hỗ trợ nâng kỹ năng; chọn B.",
+      "evidence": "enables developing and drawing out the full potential of people",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Ng và Sorensen nói môi trường khuyến khích làm việc cùng nhau làm tăng gắn bó. Work together chính là cooperation; phát biểu thuộc D, không phải nghiên cứu khác.",
+      "evidence": "work together, and remove obstacles preventing effective performance, employees feel more obligated to stay with the",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Maroudas liệt kê nhiều nguyên nhân nghỉ việc, gồm lương, đãi ngộ và tinh thần. Có nhiều nguyên nhân nghĩa là bất mãn về lương không phải lý do duy nhất; chọn C.",
+      "evidence": "Among the many cited reasons are low compensation, inadequate benefits, poor working conditions",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Phần bàn về nghỉ việc liệt kê tinh thần và thái độ nhân viên bị suy giảm trong số các nguyên nhân. Compromised morale khớp poor morale, nên YES.",
+      "evidence": "compromised employee morale and attitudes (Maroudas et al., 2008).",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Tác giả nêu ý tưởng nhân viên có phản ứng tiêu cực rồi nói chưa có bằng chứng ủng hộ. Đề khẳng định nghiên cứu đã chứng minh xu hướng đó; hai ý trái nhau nên NO.",
+      "evidence": "no evidence exists to support this hypothesis",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Điều kiện làm việc và an toàn nghề nghiệp kém gây bất mãn, nhưng đáp ứng chúng chỉ giảm bất mãn, không bảo đảm hài lòng. Đề đánh đồng hai trạng thái nên NO.",
+      "evidence": "just fulfilling these needs does not result in satisfaction",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Bài khuyên cho nhân viên đủ lần nghỉ, không nói họ phải tự chọn giờ nghỉ. Số lần nghỉ và quyền quyết định thời điểm là hai thông tin khác nhau: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Nghiên cứu Tews, Michel và Stafford khảo sát nhân viên trong chuỗi nhà hàng Mỹ. Đề chỉ cho một từ nên điền restaurants, không chép cả cụm mô tả loại nhà hàng.",
+      "evidence": "restaurants in the United States. It was found that fun activities had a favorable impact on",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Hoạt động tạo niềm vui có tác động thuận lợi tới kết quả làm việc. Favorable impact tương ứng improved; đối tượng được cải thiện là performance.",
+      "evidence": "fun activities had a favorable impact on performance",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Sự hỗ trợ của quản lý liên hệ với giảm tỷ lệ nhân viên rời đi. Reducing khớp lower; turnover ở đây là tỷ lệ nghỉ việc, không phải doanh thu.",
+      "evidence": "manager support for fun had a favorable impact in reducing turnover.",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Các hoạt động phải phù hợp mục tiêu tổ chức. “Aligned with organizational goals” tương ứng fit with company’s goals; cần danh từ goals.",
+      "evidence": "organizational goals and employee characteristics. ‘Managers must learn how to achieve the delicate balance of allowing",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Vế còn lại đòi hoạt động phù hợp đặc điểm nhân viên. Characteristics song song với goals; đừng lấy lại mục tiêu công ty cho chỗ trống về con người.",
+      "evidence": "aligned with both organizational goals and employee characteristics.",
+      "location": "Passage 3"
+    }
+  }
+}

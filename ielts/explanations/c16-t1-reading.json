@@ -1,0 +1,206 @@
+{
+  "id": "c16-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn A nói lượng mỡ như vậy sẽ khiến người dễ mắc bệnh nhưng gấu Bắc Cực không chịu hậu quả ấy. Nhận định gấu gặp vấn đề sức khỏe do mỡ dưới da nói ngược thông tin, nên FALSE.",
+      "evidence": "Yet the polar bear experiences no such consequences.",
+      "location": "Passage 1 · Đoạn A"
+    },
+    "2": {
+      "reason": "Liu so sánh gấu Bắc Cực với họ hàng gần của chúng là gấu nâu. Câu hỏi đổi thành các nhóm gấu Bắc Cực với nhau; đối tượng so sánh đã bị thay đổi, nên FALSE.",
+      "evidence": "their closest relatives from a warmer climate, the brown bears",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Bài giới thiệu nghiên cứu của Liu nhưng không xác nhận nhóm ông là những người đầu tiên so sánh hai loài. Thiếu thông tin về thứ tự lịch sử nghiên cứu, nên NOT GIVEN; không thể suy từ việc được nhắc tên thành “đầu tiên”.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Gene APoB giúp giảm LDL, một dạng cholesterol có hại. Đây chính là việc kiểm soát cholesterol bằng đặc điểm di truyền mà câu hỏi mô tả, nên TRUE.",
+      "evidence": "which reduces levels of low-density lipoproteins",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Gấu cái trải qua khoảng sáu tháng nhịn ăn nhưng vẫn nuôi sống mình và con nhờ nguồn dự trữ. “Fasting” tương ứng với không ăn; đối tượng và thời lượng khớp, nên TRUE.",
+      "evidence": "about six months of fasting",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Gấu mang thai tăng mật độ xương trước khi vào hang và mật độ ấy không giảm lúc ra ngoài. Vì vậy mô tả xương rất yếu khi ra khỏi hang trái kết quả nghiên cứu: FALSE.",
+      "evidence": "no evidence of significant loss of bone density",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Hiểu cơ chế tái tạo xương của gấu có thể giúp người nằm liệt giường và phi hành gia. Hai nhóm này minh họa khả năng ứng dụng cho người; câu hỏi giữ đúng mức độ “có thể”, nên TRUE.",
+      "evidence": "many bedridden humans, and even astronauts, could potentially benefit",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Định kiến về gấu ở đoạn E gồm ngu ngốc và hung bạo. “Unintelligent” đã diễn đạt lại “stupid”, nên ô trống cần đặc điểm còn lại: violent. Không điền lại đặc điểm đã có.",
+      "evidence": "perceived as stupid and in many cases violent",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "GoGo dùng cành cây lấy thức ăn ngoài tầm với. Đề hỏi vai trò của cành cây, không hỏi nó làm từ vật liệu gì; nó đóng vai trò công cụ, nên tool.",
+      "evidence": "making use of a tool to manipulate his environment",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Vật GoGo làm rơi bằng cành cây là miếng thịt treo ngoài tầm với. “Knock down” tương ứng với “dislodge”; điền meat, không phải branch vốn là dụng cụ.",
+      "evidence": "dislodge a piece of meat hung out of his reach",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Gấu nhảy lên thùng để tiếp cận người đứng trên bục cao bốn mét. Người ấy là nhiếp ảnh gia; ô trống hỏi ai ở trên bục, nên photographer.",
+      "evidence": "a photographer standing on a platform four metres high",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Ames thấy gấu xếp đồ vật thành đống rồi đánh đổ, trông như một trò chơi. Đề hỏi hoạt động này giống cái gì, nên game; objects chỉ là các vật được thao tác.",
+      "evidence": "in what appeared to be a game",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Gấu có thể đánh vào băng tuyết khi săn hụt, biểu hiện sự bực bội. Ô trống cần cảm xúc được hành động gợi ra: frustration; hunting chỉ là hoàn cảnh của cảm xúc.",
+      "evidence": "seemingly out of frustration",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A nêu nhiều tranh luận về nguồn gốc kim tự tháp rồi chỉ ra một điều chắc chắn liên quan Djoser. Tiêu đề iv bao quát sự chắc chắn giữa những điều chưa rõ, không chỉ một chi tiết lịch sử.",
+      "evidence": "there is no question that",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "15": {
+      "reason": "Đoạn B mô tả ý tưởng thay kiến trúc mộ truyền thống bằng công trình mới xây bằng đá. Trọng tâm là thay đổi thiết kế mai táng, nên vii; không chỉ là tiểu sử Djoser.",
+      "evidence": "the first to build in stone",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "16": {
+      "reason": "Đoạn C nhấn mạnh khối lượng khổng lồ gây thách thức cho người xây và cách bố trí đá để tránh sập. Tiêu đề ii nói về nhiệm vụ khó khăn của những người tham gia.",
+      "evidence": "a challenge for the builders",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "17": {
+      "reason": "Đoạn D liệt kê đền, sân, nhà tư tế, tường, cửa giả và hào bao quanh. Đây là tổng quan các công trình và khu vực bên ngoài kim tự tháp, nên v.",
+      "evidence": "included a temple, courtyards, shrines, and living quarters",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "18": {
+      "reason": "Đoạn E chuyển vào trong: phòng chôn cất, đường hầm và các bình đá. Tiêu đề i bao quát cả không gian lẫn hiện vật bên trong công trình, không phải khu vực ngoài tường.",
+      "evidence": "The burial chamber of the tomb",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "19": {
+      "reason": "Đoạn F nói mộ bị trộm nhưng những đồ quý còn lại vẫn khiến nhà khảo cổ kinh ngạc. Hai ý “còn rất ít” và “vẫn đáng kinh ngạc” kết hợp trong tiêu đề viii.",
+      "evidence": "to astonish and amaze the archaeologists who excavated it",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "20": {
+      "reason": "Đoạn G xem kim tự tháp bậc thang là hình mẫu mà các nhà xây dựng sau làm theo. Ý thiết kế được người khác sao chép là trọng tâm, khớp tiêu đề vi.",
+      "evidence": "became the archetype which all the other great pyramid builders of Egypt would follow",
+      "location": "Passage 2 · Đoạn G"
+    },
+    "21": {
+      "reason": "Quần thể kim tự tháp có quy mô bằng một thành phố thời Ai Cập cổ đại. “As big as” tương ứng với “the size of”; điền city, không phải một công trình nhỏ nằm trong quần thể.",
+      "evidence": "the size of a city in ancient Egypt",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Khu vực bên ngoài có nơi sinh hoạt dành cho các tư tế. “Accommodation” diễn đạt lại khu ở; câu hỏi hỏi người cư trú tại đó, nên priests ở số nhiều.",
+      "evidence": "living quarters for the priests",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Tường được bao quanh bởi hào dài 750 mét, rộng 40 mét. “Encircled” tương ứng với “ringed”; danh từ chỉ công trình bao quanh là trench, không phải wall đã có trong câu.",
+      "evidence": "ringed by a trench 750 meters long",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Muốn vào phải biết trước vị trí của lối mở thật. Đề đã cho “real entrance”, nên phần thiếu là thông tin về vị trí: location. Không điền lại tên lối vào.",
+      "evidence": "the location of the true opening in the wall",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Hai ý được bài xác nhận là thời gian trị vì của Djoser còn bất đồng và một số tài sản vẫn nằm trong mộ khi khai quật: B và D. Bài cho thấy nhà vua ghi nhận Imhotep, không phải phủ nhận đóng góp của ông.",
+      "evidence": "some historians and scholars attribute a much longer time",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Nhóm này cần hai lựa chọn khác nhau: B nói về thời gian trị vì chưa thống nhất; D nói đồ vật còn sót khi khai quật. Không lặp cùng một chữ ở cả hai ô hoặc suy thêm thái độ của Djoser với công trình khác.",
+      "evidence": "a small number of his valuables overlooked by the thieves",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu dự báo một số lao động phải đổi nghề và mọi người phải thích nghi khi công việc biến đổi cùng AI. Ý chính là mức độ thay đổi bản chất công việc: B; không phải so sánh AI hữu hình và vô hình.",
+      "evidence": "all workers will need to adapt",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Pachidi xem thuật toán hóa các công việc dựa vào dữ liệu là nguồn gốc của những thay đổi căn bản hiện nay. Kinh tế tri thức vì vậy thúc đẩy phát triển nơi làm việc: D; không phải nguyên nhân suy giảm sản xuất.",
+      "evidence": "some of the most fundamental changes",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Nhân viên đưa dữ liệu sai vào thuật toán để nó trả kết quả có lợi cho mục tiêu riêng. Đó là chủ động khiến AI tạo kết quả mong muốn, khớp C; khác với chỉ phản đối khuyến nghị của AI.",
+      "evidence": "workers feed the algorithm with false data to reach their targets",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "McGaughey thừa nhận thay đổi có thể gây mất việc nhưng chính sách đào tạo lại và bố trí người lao động sang việc khác có thể giải quyết. Nghiên cứu cho thấy cách ứng phó thành công với biến động thị trường lao động: D.",
+      "evidence": "social policies can tackle this through retraining and redeployment",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Công việc được nghiên cứu dựa vào dữ liệu chứ không phải sản xuất. “Data” tương ứng information trong danh sách, nên G. Đề yêu cầu chọn chữ ứng với từ, không chép từ ngoài danh sách.",
+      "evidence": "dependent on data rather than on production",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Nhân viên học theo góc nhìn thuật toán rồi phụ thuộc vào chỉ dẫn của nó. Danh từ diễn tả sự phụ thuộc tăng lên là reliance, ứng với E; không nhầm với lòng tin ở câu khác.",
+      "evidence": "become dependent on its instructions",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Thử nghiệm và bản năng con người vốn tạo tiến bộ lại bị cản trở. “Instinct” tương ứng intuition trong danh sách, nên C. Ô trống hỏi năng lực bị hạn chế, không hỏi kết quả đổi mới.",
+      "evidence": "experimentation and human instinct",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Nhà nghiên cứu muốn AI vừa minh bạch vừa đáng tin. Đề đã diễn đạt tính minh bạch bằng việc dễ hiểu; phần thiếu là lòng tin của người dùng, tức confidence, chọn F.",
+      "evidence": "more trustworthy and transparent",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Hamish Low bác giả định số việc làm cố định: tự động hóa một số việc không có nghĩa tổng cơ hội cho người giảm tương ứng. Quan điểm này thuộc Low, nên B.",
+      "evidence": "The number of jobs will increase",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Pachidi liệt kê động lực doanh nghiệp dùng AI: thông tin được xem là hoàn hảo, giảm chi phí và tăng năng suất. Danh sách này diễn đạt “nhiều lý do”; người phát biểu là Pachidi, chọn A.",
+      "evidence": "reduce costs and enhance productivity",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "McGaughey so sánh khả năng AI thay đổi lối sống với cách mạng công nghiệp và cách mạng doanh nghiệp. Sự đối chiếu những bước ngoặt lịch sử xác định người phát biểu là ông, chọn C.",
+      "evidence": "Just as the industrial revolution",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Pachidi cảnh báo cải thiện nhờ AI không phải không có hệ quả, rồi hỏi tương lai đào tạo chuyên gia thế nào. Đây là lời nhắc nhận diện các vấn đề AI gây ra, nên A.",
+      "evidence": "these enhancements are not without consequences",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Low cho rằng lộ trình học toàn thời gian, làm toàn thời gian rồi nghỉ hưu đã thuộc quá khứ. Điều đó tương ứng với đường nghề nghiệp ít truyền thống hơn, chọn B.",
+      "evidence": "The traditional trajectory",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "McGaughey kêu gọi chính phủ và lãnh đạo ban hành chính sách bảo đảm việc làm, thu nhập công bằng. Đề diễn đạt lại thành nhà chức trách phải bảo đảm công việc được trả công thỏa đáng; chọn C.",
+      "evidence": "full employment, fair incomes",
+      "location": "Passage 3"
+    }
+  }
+}

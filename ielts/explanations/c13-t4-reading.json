@@ -1,0 +1,206 @@
+{
+  "id": "c13-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Clipper được đóng chủ yếu để vận chuyển hàng hóa khắp thế giới, dù một số cũng chở khách. Nhận định ban đầu nhằm làm tàu khách đảo mục đích chính và công dụng phụ, nên FALSE.",
+      "evidence": "three-masted ships built to transport goods around the world, although some also took passengers.",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Tên Cutty Sark xuất phát từ cách gọi chiếc váy ngủ ngắn mà nhân vật trong thơ mặc. Nó không phải tên nhân vật; câu hỏi đánh đồng vật mặc với người mặc, nên FALSE.",
+      "evidence": "for a short nightdress.",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Willis bảo đảm hợp đồng với hãng đóng tàu Scott & Linton đặt mình ở vị thế rất có lợi. Điều này trực tiếp xác nhận hợp đồng có lợi cho ông, nên TRUE; không cần suy từ kết quả kinh doanh về sau.",
+      "evidence": "him in a very strong position.",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Công ty Willis buôn trà Trung Quốc–Anh và cần tốc độ, nên tàu được thiết kế đi nhanh hơn mọi tàu khác trên tuyến. Mong muốn trở thành tàu chở trà nhanh nhất phù hợp mục tiêu thiết kế, nên TRUE.",
+      "evidence": "the journey more quickly than any other ship.",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Dù đã khắc phục thiệt hại giữa hành trình, Cutty Sark tới London muộn hơn Thermopylae một tuần. Nhận định đến sớm hơn đảo quan hệ trước–sau được nêu rõ, nên FALSE.",
+      "evidence": "reached London a w eek after Thermopylae. Steam ships posed a growing threat to clippers, as their speed and",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Tàu hơi nước dùng được đường ngắn qua Suez, còn tàu buồm không tận dụng được. Hành trình Anh–Trung của tàu hơi nước giảm khoảng hai tháng, xác nhận tác dụng rút ngắn thời gian nên TRUE.",
+      "evidence": "China by approximately two months. By 1878, tea traders weren’t interested in Cutty Sark, and instead, she look on",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Bài giải thích ưu thế tuyến kênh đào đối với tàu hơi nước nhưng không nói chúng đôi khi vẫn đi đường biển dài giữa London và Trung Quốc. Thiếu thông tin về lựa chọn tuyến thay thế nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Woodget đưa tàu xuống phía nam xa hơn những thuyền trưởng trước, tới gần băng trôi một cách nguy hiểm. Chi tiết ấy xác nhận ông đặt tàu trước nguy cơ va băng, nên TRUE.",
+      "evidence": "bringing her dangerously close to icebergs off the southern tip of South America.",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Thời kỳ thành công nhất bắt đầu sau thay đổi thuyền trưởng vào đầu thập niên 1880, khi tàu chở len từ Úc về Anh. Điền wool, không phải tea thuộc giai đoạn công việc trước đó.",
+      "evidence": "working life, transporting wool from Australia to Britain.",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Woodget được gọi là một nhà hàng hải xuất sắc, khai thác tốt cả tàu lẫn thủy thủ đoàn. Chỗ trống hỏi năng lực hoặc vai trò được khen, nên navigator; captain đã được cung cấp.",
+      "evidence": "was an excellent navigator, who got the best out of both his ship and his crew.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Năm 1922, con tàu lúc mang tên Ferreira bị hư hại nặng trong một trận gió lớn rồi vào Falmouth sửa chữa. Điền gale, nguyên nhân hỏng tàu, không phải tên cảng nơi sửa.",
+      "evidence": "the world. Badly damaged in a gale in 1922, she was put into Falmouth harbour in southwest England, for",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Dowman dùng Cutty Sark làm tàu huấn luyện và vai trò ấy tiếp tục sau khi ông mất. Chỗ trống trước ship cần training; việc trưng bày tại Greenwich thuộc giai đoạn sau năm 1954.",
+      "evidence": "Cutty Sark as a training ship, and she continued in this role after his death.",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Trong thế kỷ XXI, tàu chịu hỏa hoạn năm 2007 và một lần nhẹ hơn năm 2014. Điền fire, nguyên nhân chung của hai lần hư hại, không phải gió bão năm 1922.",
+      "evidence": "suffered from fire in 2007, and again, less seriously, in 2014, but now Cutty Sark attracts a quarter",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đất khỏe có vi khuẩn, vi sinh vật khác, thực vật phân hủy và nhiều khoáng chất. Minerals là thành phần còn thiếu trong danh sách; không nhầm với bacteria đã có trong câu tóm tắt.",
+      "evidence": "plants and various minerals. That means soils do not just grow our food, but are the source of nearly",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đất giữ carbon từ thực vật, với lượng lớn hơn nhiều so với khí quyển. Khả năng lưu trữ carbon liên hệ tác động khí hậu; không điền food hay antibiotics là các lợi ích khác ở cùng đoạn.",
+      "evidence": "plants, they lock in their carbon content, holding three times the amount of carbon as does the entire",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đất giữ nước, giúp hạn chế thiệt hại lũ cho nhà cửa, đường và cầu. “Holds” tương ứng với store; điền water, không phải flood vì lũ là hậu quả được giảm bớt.",
+      "evidence": "entire atmosphere. Soils also store water, preventing flood damage: in the UK, damage to buildings, roads and bridges",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Bài gọi nông nghiệp là nguyên nhân lớn nhất gây vấn đề cho đất. Điền agriculture, hoạt động của con người; sự mất vi sinh vật là cơ chế khiến đất mất tính chất tốt, không phải tên hoạt động.",
+      "evidence": "years to recover. Agriculture is by far the biggest problem",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Con người thường không trả phần cây trồng không dùng về đất sau thu hoạch. C diễn đạt việc tàn dư không được đưa lại vào đất, làm gián đoạn vòng hoàn trả chất dinh dưỡng tự nhiên.",
+      "evidence": "Humans tend not to return unused parts of harvested crops directly to the soil to enrich it, meaning",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Phân bón tổng hợp có thể gây ô nhiễm sông và làm đất suy thoái dù được dùng để nuôi dưỡng đất. E bao quát tác hại lên nhiều mặt môi trường; không chỉ xem mục đích ban đầu là chứng cứ cho lợi ích.",
+      "evidence": "bright idea. Chemical fertilisers can release polluting nitrous oxide into the atmosphere and excess is often washed away",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Hỗn hợp của Floris giúp ô thử nghiệm khô cằn mọc cây khỏe và rễ đủ mạnh xuyên đất cứng. A phù hợp cải thiện lượng và chất cây trồng, không chỉ làm bề mặt đất trông tốt hơn.",
+      "evidence": "but had roots strong enough to pierce dirt as hard as rock.",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Mục tiêu “zero net land degradation” được đề xuất vì dễ hiểu, tương tự trung hòa carbon. D nêu ưu điểm truyền đạt mục tiêu rõ ràng, không phải cam kết mọi loại đất đều đã có phương pháp phục hồi.",
+      "evidence": "is an easily understood target that can help shape expectations and encourage action. For soils on the brink, that",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Đoạn E kể Floris làm dịch vụ chăm cây và nhận ra muốn cây khỏe phải chăm đất. Đây là động cơ dẫn tới phát triển hỗn hợp cải thiện đất, không chỉ mô tả kết quả thử nghiệm.",
+      "evidence": "way to ensure his trees flourished was to take care of the soil, and has developed a cocktail",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Đoạn C giải thích trong tự nhiên cây lấy chất dinh dưỡng rồi trả lại khi chết và phân hủy. Vòng tuần hoàn ấy cho thấy đất duy trì khỏe trước canh tác, khác với việc con người mang tàn dư thu hoạch đi.",
+      "evidence": "decay these nutrients are returned directly to the soil, Humans tend not to return unused parts of harvested",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Đoạn F liệt kê khảo sát thực địa, drone, ảnh vệ tinh và phân tích phòng thí nghiệm đưa vào cơ sở dữ liệu. Đây là những cách thu thông tin khác nhau về tình trạng đất, không phải các biện pháp bón đất.",
+      "evidence": "measurements from field surveys, drone surveys, satellite imagery, lab analyses and so on to provide real-time data on",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Đoạn G đề xuất lập ngay khu bảo vệ dành cho đất đang bị đe dọa. Cụm “immediate creation” phù hợp biện pháp bảo vệ trong tương lai gần, dù việc chọn loại đất cần bảo vệ vẫn khó.",
+      "evidence": "the immediate creation of protected zones for endangered soils.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Đoạn F nói chưa có hệ thống phân loại đất quốc tế được thống nhất. Điều này gây khó xây dựng cái nhìn tổng thể về suy thoái, là lý do cần dự án bản đồ đất toàn cầu.",
+      "evidence": "there is no agreed international system for classifying soil.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Người điểm sách phê phán một số người cổ vũ tâm lý học tích cực vì bỏ qua kho tư tưởng triết học lớn về hạnh phúc. D phù hợp việc không biết những quan điểm đáng lẽ cần xét, không phải họ bị ảnh hưởng quá nhiều bởi Bentham.",
+      "evidence": "way are oblivious to the vast philosophical literature in which the meaning and value of happiness have been",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Aristotle gắn hạnh phúc với tự hoàn thiện, cho thấy khái niệm rộng hơn khoái lạc và không đau đớn của Bentham. A đúng với mục đích đối chiếu, không phải phủ nhận mọi việc theo đuổi hạnh phúc.",
+      "evidence": "happiness with self-realisation in the 4th century BC, and thinkers throughout the ages may have struggled to reconcile",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Davies coi ý tưởng dùng tiền đo hạnh phúc là bước dẫn tới sự gắn kết nghiên cứu tâm lý với chủ nghĩa tư bản. B nêu đúng mối nối giữa công việc và tâm lý, không khẳng định đây là phép đo thành công đầu tiên.",
+      "evidence": "entangling of psychological research and capitalism that would shape the business practices of the 20th century. The Happiness Industry",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Bentham đề xuất nối các cơ quan chính phủ bằng ống trò chuyện. F chỉ communication, chức năng liên lạc giữa đơn vị, không phải đo mức hạnh phúc của nhân viên.",
+      "evidence": "set of ‘conversation tubes’, and to the Bank of England with a design for a printing device that",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Thiết bị in tiền ông đề xuất nhằm tạo tiền giấy không thể làm giả. B về security phù hợp tăng an toàn chống giả; không nhầm với kỹ thuật bảo quản thực phẩm ở kế hoạch tiếp theo.",
+      "evidence": "could produce unforgeable bank notes.",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Kế hoạch “frigidarium” nhằm giữ thịt, cá, rau quả tươi. G chỉ preservation, công dụng bảo quản; không phải thay đổi cách phân phối hoặc đo giá thực phẩm.",
+      "evidence": "‘frigidarium’ to keep provisions such as meat, fish, fruit and vegetables fresh.",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Thiết kế Panopticon giữ tù nhân riêng nhưng để lính canh có thể nhìn thấy họ mọi lúc. E chỉ observation; chi tiết quan sát liên tục là mục đích của bố trí, không đơn thuần khả năng giam nhiều người.",
+      "evidence": "while being visible at all times to the guards, was very nearly adopted.",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Muốn xem hạnh phúc là khoa học thì phải đo được, nên Bentham đề xuất hai cách đo. A là measurement, không phải implementation vì câu hỏi hỏi vấn đề phương pháp nghiên cứu.",
+      "evidence": "Bentham suggested two ways in which this might be done.",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Người điểm sách khen cách cuốn sách giải thích khoa học hạnh phúc trở thành bộ phận của chủ nghĩa tư bản và kinh tế bị xem thành vấn đề tâm lý. Quan hệ tâm lý–kinh tế đúng là điểm mạnh được nêu, nên YES.",
+      "evidence": "about how economic problems are being redefined and treated as psychological maladies.",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bài phê phán niềm tin cảm xúc nội tâm có thể được đo khách quan, nhưng không so sánh cảm xúc nào khó đo hơn cảm xúc nào. Thiếu quan hệ so sánh nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Năm 1915, Watson chưa từng nghiên cứu một người nào; nghiên cứu trước đó chỉ làm trên chuột trắng. Nhận định lý thuyết được hỗ trợ bằng nghiên cứu con người trước năm ấy trái dữ kiện, nên NO.",
+      "evidence": "he ’had never even studied a single human being’: his research had been confined to experiments on white",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Mô hình Watson được áp dụng rộng và tác giả lấy chính phủ Anh làm ví dụ. Không có so sánh mức ảnh hưởng ở Mỹ với ngoài Mỹ; một ví dụ nước ngoài không chứng minh mạnh nhất, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Tác giả nói xã hội công nghiệp hiện đại dường như cần khả năng hạnh phúc tăng mãi để thúc đẩy lao động. Đây là mối liên hệ giữa công nghiệp hóa và nhu cầu hạnh phúc, nên YES.",
+      "evidence": "socially desirable ways. Modern industrial societies appear to need the possibility of ever-increasing happiness to motivate them in their",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Tác giả cho rằng giao trách nhiệm thúc đẩy hạnh phúc cho chính phủ luôn đe dọa tự do con người. Vì vậy ông không ủng hộ coi tăng hạnh phúc là mục tiêu chính của nhà nước; chọn NO.",
+      "evidence": "happiness is always a threat to human freedom. Questions 27-29 Choose the correct letter, A",
+      "location": "Passage 3"
+    }
+  }
+}

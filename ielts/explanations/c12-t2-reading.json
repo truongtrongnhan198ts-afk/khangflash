@@ -1,0 +1,206 @@
+{
+  "id": "c12-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn A nêu hai đặc tính riêng của sản xuất lương thực: ai cũng cần ăn mỗi ngày và ngành này phụ thuộc rất mạnh vào tự nhiên. Hai điểm này phân biệt nó với những hoạt động sản xuất khác.",
+      "evidence": "developing countries A Two things distinguish food production from all other productive activities: first, every single person needs food",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Đoạn B chuyển từ rủi ro chung của nông dân sang các khó khăn bổ sung của nông hộ nhỏ ở nước đang phát triển. Chất lượng đất, mưa, hạ tầng, tài chính và công nghệ là những thách thức gắn với một số khu vực.",
+      "evidence": "markets. However, smallholder farmers in developing countries must in addition deal with adverse environments, both natural, in terms",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Đoạn H cảnh báo hợp tác tập thể không tự có miễn phí: cần thời gian, công sức, tiền và xây dựng lòng tin. Câu hỏi hỏi khó khăn của hợp tác, nên phải đọc phần hạn chế sau phần lợi ích.",
+      "evidence": "free good. It takes time, effort and money to organise, build trust and to experiment.",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Rokeya Kabir chỉ ra nhiều người nhận trợ cấp là chủ đất giàu hoặc thương lái, không phải người nghèo. Vì thế hỗ trợ nhà nước chưa chắc tới đúng nông dân cần nhất; chọn D theo người phát biểu.",
+      "evidence": "show that sixty percent of beneficiaries of subsidies are not poor, but rich landowners and non-farmer traders. F Nwanze",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Murphy cho rằng hành động tập thể tăng sức thương lượng kinh tế, chính trị và giảm rủi ro kinh doanh. Đó là lợi ích khi nông dân hợp thành nhóm; chọn B, không nhầm với người cảnh báo chi phí tổ chức.",
+      "evidence": "to Murphy, ‘collective action offers an important way for farmers to strengthen their political and economic bargaining power,",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Quan điểm C về mạng lưới an sinh và phúc lợi công cho rằng chúng giảm nghèo và tính dễ tổn thương của gia đình nông dân. Ý cải thiện mức sống tương ứng với nhận định này, khác với nhận xét trợ cấp bị phân phối sai.",
+      "evidence": "held up social safety nets and public welfare programmes in Ethiopia, Brazil and Mexico as valuable ways to",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Sonali Bisht đề xuất chính người tiêu dùng đầu tư vào nông dân địa phương. Bên mua chia sẻ chi phí và rủi ro sản xuất; vì vậy nguồn vốn đến từ người mua sản phẩm tương ứng với G.",
+      "evidence": "agriculture, where consumers invest in local farmers by subscription and guarantee producers a fair price, is a risk-sharing",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ý kiến B cho rằng nhà nước mua và dự trữ lương thực có thể làm dịu biến động giá mạnh. Giảm dao động giá không có nghĩa cố định giá hoặc chủ động làm giá tăng vào một mùa.",
+      "evidence": "can also help mitigate wild swings in food prices by alleviating uncertainties about market supply. E Shenggen Fan, Director",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Ý kiến A nhấn mạnh nhà nước cung cấp dịch vụ cơ bản như đường sá để giảm đáng kể rủi ro của nông dân. Cần đối chiếu tác dụng của hạ tầng, không chỉ tìm từ government.",
+      "evidence": "farmers by providing basic services like roads to get produce more efficiently to markets, or water and food",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Một vấn đề được nêu là thời tiết cực đoan và biến đổi khí hậu kéo dài. Vì vậy D về tác động của thay đổi kiểu thời tiết có căn cứ; không chọn thiếu nhu cầu thực phẩm địa phương vì bài không nêu vấn đề đó.",
+      "evidence": "risks; including extreme weather, long-term climate change, and price volatility in input and product markets.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Vấn đề còn lại là nông dân phải bán qua trung gian, khiến vị thế của họ yếu đi. E phù hợp; không tự thêm thiếu bảo hiểm hay thủy lợi khi chúng không phải hai vấn đề được nêu trong lựa chọn này.",
+      "evidence": "presence of intermediary purchasers who, taking advantage of farmers’ vulnerability, dictate prices.",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Đoạn H khuyến nghị hành động tập thể, hợp tác xã và các nhóm người sản xuất. C nêu đúng việc tổ chức các bên hợp tác, thay vì giảm dự trữ lương thực hoặc điều khiển giá tăng theo mùa.",
+      "evidence": "strategies through collective action groups, co-operatives or producers’ groups.",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Đoạn I đề xuất người tiêu dùng đầu tư, chia sẻ chi phí và rủi ro nông nghiệp. D đúng với đề xuất ấy; tăng hiểu biết về nguyên nhân thay đổi giá không phải biện pháp được khuyến nghị ở đây.",
+      "evidence": "agriculture, where consumers invest in local farmers by subscription and guarantee producers a fair price, is a risk-sharing",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A xác định mục đích ban đầu của Bingham là tìm tàn tích Vitcos, kinh đô cuối của nền văn minh Inca. Tiêu đề iv về mục tiêu chuyến đi phù hợp; Machu Picchu là phát hiện về sau.",
+      "evidence": "of Peru. His goal was to locate the remains of a city called Vitcos, the last capital of",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn B giải thích đoàn đi theo đường mới mở trong hẻm núi, khác lối vượt đèo cao của người đi trước. Tiêu đề vi nói về tuyến đường mới, không phải lựa chọn hành trình quen thuộc.",
+      "evidence": "preceded them: a track had recently been blasted down the valley canyon to enable rubber to be brought",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn C cho thấy Bingham ban đầu không hào hứng với việc leo đồi trong buổi sáng ẩm và u ám. Đây là trọng tâm của viii; đừng dùng sự nổi tiếng về sau để suy ra cảm xúc lúc đầu.",
+      "evidence": "have been less than keen on the prospect of climbing the hill.",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn D kể cách Bingham mô tả phát hiện rất sinh động, lần lượt hiện ra ruộng bậc thang và công trình đồ sộ. Tiêu đề v bao quát lối tường thuật giàu kịch tính, không phải bằng chứng niên đại thành phố.",
+      "evidence": "the approach in vivid style in his book.",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn E đối chiếu cuốn sách viết nhiều năm sau với nhật ký đương thời. Nhật ký cho thấy nhận thức về thành tựu tăng dần, nên i về những cách tường thuật khác nhau phù hợp.",
+      "evidence": "reveal a much more gradual appreciation of his achievement.",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Đoạn F nói Bingham công bố phát hiện và giả thuyết lớn trên National Geographic. Chọn vii về công bố lý thuyết; những nỗ lực chứng minh kéo dài sau đó vẫn xoay quanh giả thuyết ấy.",
+      "evidence": "write the National Geographic magazine article that broke the story to the world in April 1913, he knew",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Đoạn G nêu giải thích được chấp nhận rộng rãi: Machu Picchu là nơi nghỉ dưỡng của một vị vua Inca. Tiêu đề iii thể hiện quan điểm phổ biến này, không phải giả thuyết ban đầu của Bingham.",
+      "evidence": "which has gained wide acceptance over the past few years is that Machu Picchu was a moya, a",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Mục đích Bingham tới Nam Mỹ là tìm tàn tích Vitcos, một thành phố Inca. Điều đó xác nhận nhận định đi tìm thành phố Inca, dù phát hiện nổi tiếng của chuyến đi là Machu Picchu; TRUE.",
+      "evidence": "of Peru. His goal was to locate the remains of a city called Vitcos, the last capital of",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Bingham tận dụng đường mới mở, trong khi phần lớn khách trước rời sông để vượt đèo cao. Nhận định ông chọn tuyến được người trước dùng nhiều nhất đảo ngược sự khác biệt ấy, nên FALSE.",
+      "evidence": "the jungle. Almost all previous travellers had left the river at Ollantaytambo and taken a high pass across",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Nhật ký cho thấy ông nhận ra giá trị phát hiện dần dần, không tức thì. Nhận định hiểu tầm quan trọng ngay khi nhìn thấy tàn tích vì thế là FALSE; cuốn sách kể chuyện được viết rất lâu sau đó.",
+      "evidence": "reveal a much more gradual appreciation of his achievement.",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Bài nói ông tìm cách chứng minh giả thuyết gần bốn mươi năm, nhưng không xác nhận quay lại Machu Picchu để tìm chứng cứ. Thiếu chi tiết về chuyến trở lại nên NOT GIVEN, dù mục đích nghe hợp lý.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Con đường được mở để la có thể chở cao su từ rừng lên. Câu hỏi hỏi hàng hóa được vận chuyển, nên rubber; mules là phương tiện vận chuyển chứ không phải đáp án.",
+      "evidence": "canyon to enable rubber to be brought up by mules from the jungle.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Bingham biết tới tàn tích nhờ Melchor Arteaga, một nông dân địa phương đã kể chuyện tối hôm trước. Điền nghề nghiệp farmer, không phải tên riêng hoặc người bạn đồng hành không muốn leo đồi.",
+      "evidence": "ruins that a local farmer, Melchor Arteaga, had told them about the night before.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Nghiên cứu người song ngữ Nga–Anh theo dõi chuyển động mắt khi họ nhận diện vật được gọi tên. Eye movements là phương pháp quan sát; việc nhìn về con tem minh họa kết quả kích hoạt hai ngôn ngữ.",
+      "evidence": "comes from studying eye movements.",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Người song ngữ kích hoạt các từ liên quan trong cả hai ngôn ngữ khi nghe. Hiện tượng ấy là language co-activation; cần tên cơ chế, không nhầm với phương pháp nghiên cứu bằng chuyển động mắt.",
+      "evidence": "phenomenon, called ‘language co-activation’, comes from studying eye movements.",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Thí nghiệm yêu cầu gọi tên màu chữ, trong khi nghĩa của chữ có thể gây nhiễu, là Stroop Task. Câu hỏi hỏi tên bài kiểm tra, không phải năng lực rút ra từ kết quả.",
+      "evidence": "In the classic Stroop Task, people see a word and are asked to name the colour of the",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Người song ngữ làm tốt hơn ở nhiệm vụ cần xử lý thông tin xung đột. Stroop Task minh họa conflict management: bỏ qua nghĩa gây nhiễu để trả lời theo màu, không đơn giản là đọc từ nhanh hơn.",
+      "evidence": "tasks that require conflict management.",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Chuyển nhanh giữa những cách phân loại thể hiện khả năng kiểm soát nhận thức tốt hơn. Cụm cần điền là cognitive control, chỉ năng lực được phản ánh, không phải bản thân hoạt động đổi nhiệm vụ.",
+      "evidence": "monolingual people, reflecting better cognitive control when having to make rapid changes of strategy. D It also seems that",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Trước đây trẻ song ngữ bị xem là bất lợi; nghiên cứu gần đây lại xác định nhiều lợi ích rõ ràng. Sự đối lập quá khứ–hiện tại xác nhận thái độ đã thay đổi, nên YES.",
+      "evidence": "more languages. In the past, such children were considered to be at a disadvantage compared with their monolingual",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Bài nói não dự đoán từ trước khi nghe hết và người song ngữ kích hoạt cả hai ngôn ngữ. Nó không so sánh độ chính xác dự đoán của hai nhóm; vì thiếu so sánh ấy nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Dùng nhiều ngôn ngữ có thể làm việc gọi tên hình ảnh chậm hơn và tăng trạng thái nhớ mà chưa bật ra từ. Nhận định luôn gọi tên nhanh hơn nói điều ngược lại, nên NO.",
+      "evidence": "speakers to name pictures more slowly, and can increase ‘tip-of-the-tongue states’, when you can almost, but not quite,",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Không có tiếng ồn nền, hai nhóm có phản ứng thân não rất giống nhau. Ưu thế song ngữ xuất hiện khi có tiếng ồn; khẳng định hiệu quả hơn trong mọi hoàn cảnh mở rộng quá mức, nên NO.",
+      "evidence": "they show highly similar brain stem responses.",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bệnh nhân song ngữ xuất hiện triệu chứng Alzheimer muộn hơn trung bình năm năm. Bài không cho tỷ lệ người mắc bệnh; khởi phát muộn không đồng nghĩa ít người mắc, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Đoạn D mô tả cách hai nhóm phản ứng với âm thanh và nhiễu nền. Khi có nhiễu, phản ứng ở nhóm song ngữ lớn hơn; đây là đoạn so sánh xử lý thông tin thính giác.",
+      "evidence": "in the presence of background noise, however, the bilingual listeners’ neural response is considerably larger, reflecting better encoding",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Đoạn G nghiên cứu trẻ bảy tháng, trước khi biết nói. Chỉ nhóm lớn lên với hai ngôn ngữ học thành công quy tắc mới để nhận thưởng, cho thấy lợi ích xuất hiện rất sớm.",
+      "evidence": "they’d learned; only the bilingual babies were able to successfully learn the new rule.",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Đoạn B mô tả âm thanh tới lần lượt và não bắt đầu đoán từ trước khi từ kết thúc. Đây là quy trình nhận diện từ nghe được, không phải kết quả về chuyển đổi nhiệm vụ.",
+      "evidence": "once: the sounds arrive in sequential order.",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Đoạn C nêu khó khăn do hai ngôn ngữ cạnh tranh liên tục: gọi tên tranh chậm và khó bật ra từ. Dù toàn bài nói lợi ích, đoạn này trực tiếp đề cập mặt bất lợi nên C.",
+      "evidence": "linguistic competition can result in difficulties, however.",
+      "location": "Passage 3"
+    }
+  }
+}

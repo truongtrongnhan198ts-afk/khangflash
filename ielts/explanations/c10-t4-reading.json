@@ -1,0 +1,206 @@
+{
+  "id": "c10-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Cháy rừng hiện nay lan thất thường hơn. Unpredictably diễn đạt erratically, nên động từ cần điền là spread; hotter và faster mô tả những đặc điểm khác.",
+      "evidence": "spread more erratically",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "2": {
+      "reason": "Megafire có diện tích gấp mười lần mức cháy rừng trung bình hai mươi năm trước. Điền 10 times để hoàn thành so sánh; 500,000 acres là diện tích chứ không phải tỷ số.",
+      "evidence": "10 times the size",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "3": {
+      "reason": "Khu vực nhiều năm gần đây có lượng mưa thấp hơn bình thường. Before average cần below; không điền dry vốn mô tả mùa hè chứ không hoàn thành phép so sánh.",
+      "evidence": "below normal precipitation",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "4": {
+      "reason": "Dập lửa nhanh trong nhiều năm ngăn cây bụi tự cháy hết, khiến chúng thành nhiên liệu cho đại hỏa hoạn. Câu hỏi cần vai trò fuel, không phải tên underbrush đã được diễn đạt.",
+      "evidence": "the primary fuel for megafires",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "5": {
+      "reason": "Mùa cháy rừng trung bình dài hơn 78 ngày so với trước. Fire seasons là cụm trong bài; seasons phải ở số nhiều theo khóa, không nhầm với sự tăng nhiệt độ.",
+      "evidence": "fire seasons",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "6": {
+      "reason": "Nhiều nhà được xây ở vùng có cây và dễ cháy làm thiệt hại tăng. Điền homes; câu hỏi hỏi công trình mọc lên, không phải nơi chốn wooded areas.",
+      "evidence": "construction of homes",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "7": {
+      "reason": "Đất trống đã trở thành khu dân cư trong bối cảnh dân số tăng suốt hơn một thập niên. Diện tích không gian mở giảm là suy ra trực tiếp từ thay đổi ấy, nên TRUE.",
+      "evidence": "What once was open space is now residential homes",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "8": {
+      "reason": "Nhiều chuyên gia đánh giá cao tiến bộ chuẩn bị ứng phó của California. Nhận định tiến triển rất ít trái đánh giá đó, nên FALSE, dù cháy vẫn gây thiệt hại lớn.",
+      "evidence": "give California high marks",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "9": {
+      "reason": "Bài nói nhân sự từng bị phê bình vì xử lý vụng về khiến lửa lan khi có thể khống chế. Nhận định về chỉ trích trước đây phù hợp, nên TRUE.",
+      "evidence": "criticism of bungling",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "10": {
+      "reason": "California đã thực hiện lời hứa cung cấp xe chữa cháy, máy bay và trực thăng hiện đại hơn. Điều này xác nhận thay thế/nâng cấp một loạt thiết bị, nên TRUE.",
+      "evidence": "more up-to-date engines, planes, and helicopters",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "11": {
+      "reason": "Bài nói tăng tiền, nâng thiết bị và cải thiện chỉ huy, nhưng không nói thuê thêm bao nhiêu lính cứu hỏa. Không thể biến tăng ngân sách thành tăng nhân sự: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "12": {
+      "reason": "Cả quan chức và cư dân nhận thấy phối hợp liên bang, liên cơ quan tăng hiệu quả. Nhận định họ phản đối nỗ lực hợp tác đảo ngược đánh giá tích cực, nên FALSE.",
+      "evidence": "resulting in greater efficiency",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "13": {
+      "reason": "Jacobs cho rằng sẽ không còn chịu mức mất mạng như trước nhờ các biện pháp mới. Nhận định số người chết giữ nguyên trái dự đoán ấy, nên FALSE.",
+      "evidence": "we will no longer suffer the loss of life endured in the past",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "14": {
+      "reason": "Quan niệm truyền thống cho rằng tính cách không thể biến đổi đáng kể. Ô trống cần change, không phải trait vì câu đang nói sự thay đổi tính cách.",
+      "evidence": "cannot undergo a transformation",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "15": {
+      "reason": "Theo quan niệm cũ, nét tính cách chính được định hình khi còn rất trẻ. Cụm young age phù hợp sau by a; không dùng tuổi trưởng thành.",
+      "evidence": "at a very young age",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "16": {
+      "reason": "Lạc quan được nêu là một trong các phẩm chất ít khó phát triển hơn. Điền optimism; danh sách 24 phẩm chất không có nghĩa tất cả dễ học ngang nhau.",
+      "evidence": "optimism being one of them",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "17": {
+      "reason": "Phát triển phẩm chất mới đòi hỏi thành thạo nhiều kỹ năng đa dạng, đôi khi bất ngờ. Ô trống sau different cần skills, không chỉ thái độ suy nghĩ tích cực.",
+      "evidence": "mastering a range of skills",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "18": {
+      "reason": "Muốn tăng niềm vui, con người phải cởi mở cả với cảm xúc tiêu cực. Điền negative emotions; bẫy là chọn positive vì kết quả mong muốn là hạnh phúc.",
+      "evidence": "open to experiencing negative emotions",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "19": {
+      "reason": "Kashdan nói người mới bắt đầu phải chấp nhận và có thể tự cười về việc mình chưa biết. E khớp sự chấp nhận thiếu hiểu biết ban đầu, không phải buông việc học.",
+      "evidence": "tolerate and laugh at your own ignorance",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "20": {
+      "reason": "Segerstrom khuyên ghi ba điều tích cực mỗi ngày để chú ý vận may thực sự xảy ra. C đúng về chủ động nhận ra việc tốt, không chỉ tự nhủ hãy lạc quan.",
+      "evidence": "writing down three positive things",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "21": {
+      "reason": "Pury cho rằng can đảm xuất phát từ nghĩa vụ đạo đức và có thể học được bằng bình tĩnh, giảm nguy cơ. G đúng; can đảm không đồng nghĩa hoàn toàn không sợ.",
+      "evidence": "not motivated by fearlessness, but by moral obligation",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "22": {
+      "reason": "Peterson vốn hướng nội nhưng học cách cởi mở để dạy sinh viên hiệu quả, rồi hành vi ấy trở nên tự nhiên. A minh họa vượt nhút nhát khi phải nói trước công chúng.",
+      "evidence": "his reticence would prove disastrous in the lecture hall",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "23": {
+      "reason": "Đoạn E kể Streeter tách nỗi sợ khỏi đánh giá lý trí về khả năng cơ thể và tinh thần, nhờ đó vượt giới hạn tưởng tượng. Đó là lý trí giúp đạt mục tiêu thể chất.",
+      "evidence": "untangle her fears from her judgment",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "24": {
+      "reason": "Đoạn C kể Fajgenbaum bị chấm dứt sự nghiệp thể thao sau tai nạn nhưng lập nhóm hỗ trợ. Đây là cách vượt qua trải nghiệm buồn, không phải thay đổi công việc giảng dạy.",
+      "evidence": "He took action despite his own pain",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "25": {
+      "reason": "Đoạn G kể Zappaterra nhận nghiên cứu không hợp hứng thú chữa bệnh, tạm nghỉ rồi chuyển phòng thí nghiệm. Câu hỏi tìm việc suy xét lại hướng học thuật, không phải lập nhóm hỗ trợ.",
+      "evidence": "he switched labs",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "26": {
+      "reason": "Đoạn H kể Pedeleose tố cáo sếp bắt nạt dù biết có thể mất việc. Hành động vì điều đúng là ví dụ đặt sự nghiệp vào rủi ro do trách nhiệm đạo đức.",
+      "evidence": "his own job security would be threatened",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "27": {
+      "reason": "Dollo đề xuất tiến hóa không đảo ngược, rồi các nhà sinh học đầu thế kỷ XX chỉnh thành rất khó xảy ra. C đúng về sự sửa đổi sau đó; không phải tên định luật được dùng ngay.",
+      "evidence": "they qualified it in terms of probability",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "28": {
+      "reason": "Con cá voi có phần phụ giống chân được Andrews giải thích là trở lại đặc điểm tổ tiên trên cạn. D đúng về lời giải cho hình thể lạ; ví dụ không củng cố định luật không đảo ngược.",
+      "evidence": "a throwback to a land-living ancestor",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "29": {
+      "reason": "Gene im lặng có thể được bật trở lại khiến đặc điểm mất từ lâu xuất hiện. C đúng về khả năng này; bài không nói chúng tồn tại vô hạn.",
+      "evidence": "long-lost traits could reappear",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "30": {
+      "reason": "Phả hệ kỳ giông cho thấy khả năng biến thái được phục hồi trong khung mười triệu năm. B đúng vì ví dụ phù hợp dự đoán Raff, không đại diện mọi loài lưỡng cư.",
+      "evidence": "fits with Raff's 10-million-year time frame",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "31": {
+      "reason": "Wagner cho rằng các dòng Bachia mất rồi có lại ngón chân nhiều lần qua hàng chục triệu năm. A đúng; kết quả này thách thức giới hạn Raff chứ không chỉ xác nhận nó.",
+      "evidence": "digit loss and gain has occurred on more than one occasion",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "32": {
+      "reason": "Trong phần lớn một thế kỷ, nhiều nhà sinh học tránh chấp nhận tiến hóa đảo ngược vì nguyên lý bất khả nghịch. F hoàn thành đúng điều bị bác bỏ, không phải bản thân việc nghiên cứu gene.",
+      "evidence": "evolution cannot run backwards",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "33": {
+      "reason": "Lombroso xem một số đặc điểm tội phạm là trở về tổ tiên, còn Dollo kết luận không thể trở lại. G đặt đúng hai quan điểm đối lập, không phải hai nhà khoa học cùng báctái xuất hiện đặc điểm tổ tiên.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "34": {
+      "reason": "Các ví dụtái xuất hiện đặc điểm tổ tiên đặt ra câu hỏi đặc điểm mất hàng triệu năm có thể quay lại bằng cách nào. A là câu hỏi cơ chế; không phải kết luận mọi thay đổi đều đảo ngược.",
+      "evidence": "how can characteristics that disappeared millions of years ago suddenly reappear",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "35": {
+      "reason": "Vây lưng cá mập và cá voi sát thủ minh họa cấu trúc tương tự có thể phát sinh độc lập ở loài không liên quan. B nói cùng đặc điểm ở các loài, không chứng minh chúng là tổ tiên nhau.",
+      "evidence": "similar structures can independently arise in unrelated species",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "36": {
+      "reason": "Một khả năng là thông tin gene tạo ngón tồn tại rất lâu và được kích hoạt lại. D khớp sự tiếp tục tồn tại thông tin, khác giả thuyết cấu trúc tự tái phát sinh độc lập.",
+      "evidence": "the genetic information needed to make toes",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "37": {
+      "reason": "Bài nhắc công trình Wagner nhưng không so sánh ông với mọi người nghiên cứu thằn lằn Nam Mỹ trước đó. Chữ first thêm thứ tự tiên phong chưa có căn cứ: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "38": {
+      "reason": "Wagner kết luận các dòng có ngón phát triển lại ngón từ tổ tiên không ngón. Nhận định lặp đúng quan hệ tổ tiên–hậu duệ nên YES, không phải chỉ thừa hưởng ngón liên tục.",
+      "evidence": "re-evolved toes from toeless ancestors",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "39": {
+      "reason": "Bài nói phôi của nhiều loài phát triển tạm thời đặc điểm tổ tiên. Nhận định hiện tượng hiếm trái phạm vi many species nên NO; việc đặc điểm tồn tại tới trưởng thành là chuyện khác.",
+      "evidence": "Early embryos of many species develop ancestral features",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "40": {
+      "reason": "Chương trình phát triển bình thường xóa đặc điểm tổ tiên; nếu nó không diễn ra, đặc điểm có thể còn và tạotái xuất hiện đặc điểm tổ tiên. Nhận định lỗi phát triển trong tử cung có thể gây hiện tượng phù hợp: YES.",
+      "evidence": "the ancestral feature may not disappear",
+      "location": "Passage 3 · Reading Passage 3"
+    }
+  }
+}

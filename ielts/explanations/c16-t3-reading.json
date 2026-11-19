@@ -1,0 +1,206 @@
+{
+  "id": "c16-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Người La Mã học kỹ thuật đóng tàu từ người Hy Lạp và Ai Cập. Đề nói kỹ thuật truyền theo chiều ngược lại, từ La Mã sang hai dân tộc ấy, nên FALSE.",
+      "evidence": "learned to build ships from the people",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Bài nói mộng ghép thay thế cách khâu ván cũ nhưng không cho biết nó đòi hỏi thợ lành nghề hay không. Không được suy độ khó từ tên kỹ thuật; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Phương pháp về sau đóng khung trước rồi mới làm thân tàu. Câu hỏi đảo thứ tự thành thân trước, khung sau; hai quy trình mâu thuẫn trực tiếp, nên FALSE.",
+      "evidence": "building the frame first",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Hải quân La Mã trở nên mạnh nhất khu vực và kiểm soát Địa Trung Hải, từ đó gọi nơi này là “biển của chúng ta”. Mối liên hệ quyền kiểm soát và tên gọi đúng như đề, nên TRUE.",
+      "evidence": "the Romans had control over",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Bài đính chính rằng người chèo không chủ yếu là nô lệ mà là công dân La Mã đăng lính. Điều đó phù hợp với nguồn gốc quân đội được câu hỏi nhắc tới, nên TRUE.",
+      "evidence": "mostly Roman citizens enrolled in the military",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Tàu chiến được thiết kế nhẹ và nhanh để cơ động. Đề đã diễn đạt đặc tính tốc độ bằng “moved quickly”, nên phần thiếu là đặc tính trọng lượng: lightweight.",
+      "evidence": "lightweight and very speedy",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Mũi đâm dùng để phá phần gỗ và mái chèo của tàu đối phương làm bằng đồng thiếc. Sau “made of” cần vật liệu, nên bronze; không điền lại tên bộ phận battering ram.",
+      "evidence": "a bronze battering ram",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Trên chiến thuyền ba tầng chèo, người chèo được bố trí ở ba mức cao, giữa và thấp. Sau “three different” cần danh từ số nhiều, nên levels.",
+      "evidence": "in the top, middle and lower levels",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Thương thuyền có thân rộng hơn và chìm sâu trong nước để chở hàng. Đề hỏi bộ phận mang đặc tính rộng, nên hull; không nhầm với cánh buồm nằm phía trên.",
+      "evidence": "They had a wider hull",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Thương thuyền có cả buồm vuông lẫn buồm tam giác. Vì square đã có trong câu, ô còn lại cần tính từ chỉ hình dạng thứ hai: triangular.",
+      "evidence": "a small triangular sail",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Việc nhiều người chèo đồng bộ được hỗ trợ bằng âm nhạc. Ô trống hỏi phương tiện giữ nhịp, nên music; không phải số lượng hoặc vị trí của người chèo.",
+      "evidence": "music would be played on an instrument",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Tàu chở các sản phẩm nông nghiệp, trong đó ngũ cốc là ví dụ được nêu. Ô sau “such as” cần một loại hàng cụ thể, nên grain; đừng lấy agricultural là tính từ mô tả cả nhóm.",
+      "evidence": "grain from Egypt’s Nile valley",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Khi đến cảng, thương thuyền được tàu kéo đưa vào bờ. “Pulled” diễn đạt lại động tác kéo tàu; vật thực hiện việc ấy là towboats ở số nhiều.",
+      "evidence": "towboats that would drag them to the quay",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn D giải thích đầu mũi tên có thể bị thất lạc và cung hỏng có thể bị vứt lại. Những ví dụ này trả lời tại sao vũ khí nằm lại trên núi; chọn D.",
+      "evidence": "they often discarded broken bows",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "15": {
+      "reason": "Đoạn C mô tả đi bộ xa với trang bị nặng và cắm trại trên băng rất vất vả. Đó là khó khăn thể chất, thực địa của đoàn khảo cổ chứ không phải khó khăn giải mã niên đại; chọn C.",
+      "evidence": "hiking with all our equipment, often camping on permafrost",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "16": {
+      "reason": "Đoạn F giải thích khí hậu lạnh làm mùa màng thất bát, khiến săn bắn càng quan trọng để bổ sung thức ăn. Quan hệ thời tiết và thiếu lương thực xác định đáp án F.",
+      "evidence": "crop failures",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "17": {
+      "reason": "Đoạn H nói những đợt băng tan tiếp theo có thể làm lộ thêm hiện vật thuộc thời kỳ cổ hơn. Câu hỏi hỏi khả năng phát hiện trong tương lai, không phải các phát hiện đã có; chọn H.",
+      "evidence": "still frozen in the ice",
+      "location": "Passage 2 · Đoạn H"
+    },
+    "18": {
+      "reason": "Đoạn G đưa da thú và gạc hươu làm ví dụ hàng hóa được trao đổi. Đây là những mặt hàng cụ thể của thương mại thời trước, nên G.",
+      "evidence": "a booming demand for hides",
+      "location": "Passage 2 · Đoạn G"
+    },
+    "19": {
+      "reason": "Đoạn B nói các nhà khảo cổ phải chạy đua với thời gian vì vật hữu cơ nhanh chóng phân hủy sau khi băng tan. Áp lực làm việc nhanh là ý cần tìm; chọn B.",
+      "evidence": "need to race the clock",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "20": {
+      "reason": "Băng bảo vệ đồ da và vải khỏi các vi sinh vật gây phân hủy; khi lộ ra ngoài, sự bảo vệ mất đi. Ô trống hỏi tác nhân làm hỏng vật hữu cơ: microorganisms, cũng chấp nhận dạng có gạch nối.",
+      "evidence": "the microorganisms that cause decay",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Tuần lộc tập trung trên vùng núi vào mùa hè để tránh côn trùng. Ô thứ nhất hỏi loài vật di chuyển tới đó, nên reindeer; tuyến đường thương mại là thông tin khác trong đoạn.",
+      "evidence": "Reindeer once congregated on these icy patches",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Loài tuần lộc lên núi để thoát khỏi côn trùng tấn công vào mùa hè. “Escape” tương ứng tránh bị tấn công; ô trống thứ hai là insects, không phải tên động vật di cư.",
+      "evidence": "to escape biting insects",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Hai phát hiện đúng là con người vẫn lên núi săn trong giai đoạn cực lạnh và một số thời kỳ có tương đối ít hiện vật: B và C. Số hiện vật ít không đồng nghĩa phương pháp định tuổi carbon không đáng tin.",
+      "evidence": "hunters kept regularly venturing into the mountains even when the climate turned cold",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Nhóm này chọn B và C, mỗi chữ một lần: thợ săn vẫn hoạt động khi rất lạnh; lượng hiện vật thay đổi, có giai đoạn thấp. Bài không chứng minh Oppland nhiều hiện vật hơn mọi địa điểm núi khác.",
+      "evidence": "a gap with almost no artefacts",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Thời Viking, nhu cầu hàng hóa tăng có lợi cho thợ săn và hàng còn được vận chuyển qua đường bộ. Hai ý ấy khớp A và C; việc có giao thương Trung Đông không có nghĩa đây là đối tác chủ yếu.",
+      "evidence": "increased demand",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Chọn A và C: nhu cầu thị trường kích thích săn bắn, còn mạng lưới thương mại không chỉ dựa vào tàu. Cần đọc ý về tuyến đường bộ thay vì mặc định Viking chỉ dùng đường biển.",
+      "evidence": "goods travelled on overland routes",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Bài nói phát hiện phân tử cảm nhận nhiệt có thể giúp phát triển cây trồng bền bỉ hơn nhưng không nêu phản ứng ngạc nhiên của các nhà khoa học khác. Vì thiếu thông tin về phản ứng này, chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Mục tiêu phải tăng gấp đôi sản lượng vào năm 2050 bị biến đổi khí hậu đe dọa. Vì thế nhận định mục tiêu có thể không đạt được phù hợp với rủi ro được nêu; TRUE, không phải khẳng định chắc chắn thất bại.",
+      "evidence": "climate change is a major threat",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Lúa mì và lúa được nói là nhạy cảm với nhiệt độ cao; nhiệt gây giảm năng suất. Như vậy việc hai cây trồng này chịu ảnh hưởng bất lợi khi nóng lên được xác nhận, nên TRUE.",
+      "evidence": "wheat and rice are sensitive to high temperatures",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Bài thảo luận khả năng chịu nhiệt của cây, không kết luận có thể phát triển cây cần ít nước hơn. Khả năng chịu nóng và nhu cầu nước là hai đặc tính khác nhau; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Ánh sáng kích hoạt phytochrome bám vào DNA, từ đó hạn chế tăng trưởng; trong bóng râm cây phát triển nhanh hơn để tìm ánh sáng. Đề nói nhanh hơn dưới nắng đã đảo chiều so sánh, nên FALSE.",
+      "evidence": "sunlight activates the molecules, slowing down growth",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Thay đổi do ánh sáng xảy ra dưới một giây, còn ban đêm phytochrome chuyển trạng thái theo cách chậm hơn, phụ thuộc nhiệt. Vì tốc độ ngày và đêm không giống nhau, chọn FALSE.",
+      "evidence": "Light-driven changes to phytochrome activity occur very fast",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Đoạn H nhắc các cộng tác viên chuyên cây trồng có thể chuyển kiến thức mới từ phòng thí nghiệm ra đồng ruộng. Đó là nhóm chuyên gia ứng dụng kết quả nghiên cứu; chọn H.",
+      "evidence": "outstanding collaborators nearby",
+      "location": "Passage 3 · Đoạn H"
+    },
+    "34": {
+      "reason": "Đoạn D nêu lợi ích tiềm năng là rút ngắn quá trình phát triển cây chống chịu nhiệt và biến đổi khí hậu. Câu hỏi hỏi ích lợi tương lai của phát hiện, nên D.",
+      "evidence": "the breeding of crops resilient to thermal stress",
+      "location": "Passage 3 · Đoạn D"
+    },
+    "35": {
+      "reason": "Đoạn G liên hệ vai trò cảm nhận nhiệt của phytochrome với một câu vần dân gian về cây sồi và cây tần bì. Nghiên cứu cung cấp cơ sở khoa học cho kinh nghiệm truyền miệng, nên G.",
+      "evidence": "the science behind a well-known rhyme",
+      "location": "Passage 3 · Đoạn G"
+    },
+    "36": {
+      "reason": "Đoạn C nói nông dân và người làm vườn từ lâu dựa vào lúc cây đâm chồi để dự báo thời tiết, mùa thu hoạch. Đây là lập kế hoạch dựa trên hành vi thực vật theo truyền thống; chọn C.",
+      "evidence": "Farmers and gardeners have known for hundreds of years",
+      "location": "Passage 3 · Đoạn C"
+    },
+    "37": {
+      "reason": "Đoạn A nêu phát hiện được công bố trên tạp chí Science. “Reported” trong đề tương ứng “published”; câu hỏi hỏi nơi công bố nghiên cứu, nên A.",
+      "evidence": "published in the journal Science",
+      "location": "Passage 3 · Đoạn A"
+    },
+    "38": {
+      "reason": "Thủy tiên có thể nở sớm nhiều tháng trong những mùa đông ấm. Đề hỏi đặc tính thời tiết kích thích nở sớm, nên warm hoặc warm winter; không phải số tháng nở sớm.",
+      "evidence": "during a warm winter",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Khi tần bì ra lá trước sồi, điều đó gắn với mùa xuân lạnh và khả năng mùa hè mát, nhiều mưa. Ô trống hỏi mùa có thời tiết ẩm, nên summer; không nhầm với mùa cây đang ra lá.",
+      "evidence": "a colder summer is likely to be a rain-soaked one",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Thí nghiệm sử dụng một loài cây mù tạt làm hệ mô hình. Câu hỏi cần tên cây được nghiên cứu, nên mustard hoặc mustard plant; việc gene tương tự có ở cây trồng khác không đổi đối tượng thí nghiệm.",
+      "evidence": "using a mustard plant called Arabidopsis",
+      "location": "Passage 3"
+    }
+  }
+}

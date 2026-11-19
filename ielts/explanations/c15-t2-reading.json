@@ -1,0 +1,206 @@
+{
+  "id": "c15-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn B nói tác giả không đề xuất mọi người nhảy múa trên đường đi làm, dù ý tưởng hấp dẫn. Mục đích là học cách biên đạo thiết kế chuyển động; vì vậy chọn B.",
+      "evidence": "Dance might hold some of the answers. That is not to suggest everyone should dance their",
+      "location": "Passage 1 · Đoạn B"
+    },
+    "2": {
+      "reason": "Đoạn C đối chiếu người xây thời Trung cổ trực tiếp ứng biến với vật liệu và địa hình với thiết kế hiện đại qua công nghệ. Trọng tâm quá khứ–hiện tại khớp C.",
+      "evidence": "medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of",
+      "location": "Passage 1 · Đoạn C"
+    },
+    "3": {
+      "reason": "Đoạn F chỉ ra cả biên đạo và kỹ thuật đều thiết kế chuyển động trong không gian bị giới hạn. Câu hỏi hỏi mục tiêu chung, không phải hình thức biểu diễn; chọn F.",
+      "evidence": "limitations of space. It is an art form developed almost entirely by trying out ideas with",
+      "location": "Passage 1 · Đoạn F"
+    },
+    "4": {
+      "reason": "Đoạn D kể thiết kế tại Atlanta bỏ qua cái nóng nên quán cà phê đường phố không hoạt động như dự tính. Vấn đề phát sinh do không tính khí hậu, khớp D.",
+      "evidence": "sun without the protective awnings common in older buildings, and would need energy-consuming air conditioning instead,",
+      "location": "Passage 1 · Đoạn D"
+    },
+    "5": {
+      "reason": "Đoạn E giải thích rào chắn từng được kỳ vọng tăng an toàn nhưng gây cản trở, chia cắt và vượt đường nguy hiểm. Hậu quả trải nghiệm thực khiến các biện pháp bị tháo bỏ; chọn E.",
+      "evidence": "guard rails that will be familiar to anyone who has attempted to cross a British road,",
+      "location": "Passage 1 · Đoạn E"
+    },
+    "6": {
+      "reason": "Đoạn A nêu cách di chuyển tác động sức khỏe, đời sống xã hội, công việc và không khí. Đây là ảnh hưởng giao thông lên cuộc sống con người nói chung; chọn A.",
+      "evidence": "mental impact of mobility. But as more and more people move to cities, it is important",
+      "location": "Passage 1 · Đoạn A"
+    },
+    "7": {
+      "reason": "Rào chắn được đưa vào như giải pháp bảo vệ người đi bộ. Sau improve the cần danh từ chỉ điều được cải thiện: safety, không phải tốc độ đi bộ.",
+      "evidence": "pedestrian safety based on models that prioritise the smooth flow of traffic. On wide major roads,",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Mô hình rào chắn ưu tiên dòng xe lưu thông trơn tru. Smooth flow tương ứng movement is not disrupted; đối tượng cần điền là traffic, không phải pedestrians.",
+      "evidence": "flow of traffic. On wide major roads, they often guide pedestrians to specific crossing points and",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Người đi bộ bị hướng qua từng phần đường dành cho một chiều xe, thay vì cả con đường cùng lúc. Đề hỏi one…at a time nên carriageway.",
+      "evidence": "carriageway. In doing so they make crossings feel longer, introducing psychological barriers greatly impacting those that",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Rào chắn kéo dài quá trình qua đường và ảnh hưởng nặng tới người khó di chuyển. Least mobile tương ứng less mobile; cần tính từ mobile, không phải danh từ mobility.",
+      "evidence": "least mobile, and encouraging others to make dangerous crossings to get around the guard rails. These",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Một số người vì bị cản trở lại vượt đường theo cách nguy hiểm. Make dangerous crossings khớp cross in a dangerous way; chỗ trống là dangerous.",
+      "evidence": "dangerous crossings to get around the guard rails. These barriers don’t just make it harder to",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Rào chắn chia cắt các cộng đồng sống hai bên đường. Divide được diễn đạt bằng separate; thứ bị chia cắt là communities, không phải các làn xe.",
+      "evidence": "divide communities and decrease opportunities for healthy transport. As a result, many are now being removed,",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Tác giả nói rào chắn làm giảm cơ hội dùng phương thức di chuyển có lợi sức khỏe. Healthy transport tương ứng forms of transport that are healthy; cần healthy.",
+      "evidence": "healthy transport. As a result, many are now being removed, causing disruption, cost, and waste.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn F nêu dùng công nghệ để hiểu nguyên nhân tuyệt chủng rồi thay đổi gen nhằm tránh tuyệt chủng hàng loạt tương lai. Prevent khớp avoid, nên chọn F.",
+      "evidence": "mass extinctions in the future. ‘I would also say there’s an incredible moral hazard to not",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "15": {
+      "reason": "Đoạn A trình bày tạo phôi từ DNA loài đã tuyệt chủng rồi nhờ họ hàng còn sống mang thai. Đó là cách tái tạo dựa vào DNA loài gốc; chọn A.",
+      "evidence": "cloning technology to turn the DNA of extinct animals into a fertilised embryo, which is carried",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "16": {
+      "reason": "Đoạn D nói rừng miền đông Mỹ thiếu xáo trộn và tái sinh sau khi bồ câu viễn khách biến mất. Habitat bị tổn hại được diễn đạt bằng ecosystems suffered; chọn D.",
+      "evidence": "ecosystems in the eastern US have suffered, as the lack of disturbance caused by thousands of",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "17": {
+      "reason": "Đoạn A ghi ngày cá thể cuối cùng chết là 1/9/1914. Ngày cụ thể này trả lời exact point loài tuyệt chủng; chọn A, không nhầm với thời điểm bắt đầu suy giảm.",
+      "evidence": "1 September 1914, when the last living specimen died at Cincinnati Zoo. Geneticist Ben Novak is",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "18": {
+      "reason": "Church muốn xác định đặc điểm di truyền giúp voi ma mút sống ở vùng băng giá. Identify được diễn đạt bằng pinpointing; cụm cần điền đủ hai từ genetic traits.",
+      "evidence": "genetic traits made it possible for mammoths to survive the icy climate of the tundra, the",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Các thích nghi như tai nhỏ, lông dày và mỡ bổ sung cùng nhằm giảm thất thoát nhiệt. Minimise tương ứng reducing; cần heat loss, không phải nhiệt độ ngoài môi trường.",
+      "evidence": "heat loss in the tundra, and all traits found in the now extinct woolly mammoth.’ This",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Đặc điểm được thu nhỏ là tai, giúp giảm mất nhiệt. Smaller ears diễn đạt lại ears of a reduced size; lấy ears, không phải bộ phận có độ dày tăng.",
+      "evidence": "smaller ears, thicker hair, and extra insulating fat, all for the purpose of reducing heat loss",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Đặc điểm cần tăng thêm là lớp mỡ cách nhiệt. Extra tương ứng more; fat hoặc insulating fat khớp giới hạn tối đa hai từ, còn thicker hair đã được đề cung cấp.",
+      "evidence": "insulating fat, all for the purpose of reducing heat loss in the tundra, and all traits",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Voi tác động tuyết, cây và cỏ có thể giúp giảm phát thải carbon. Đề hỏi điều giảm cùng nhiệt độ, nên emissions hoặc carbon emissions, không phải mất nhiệt của cá thể.",
+      "evidence": "carbon emissions – elephants punch holes through snow and knock down trees, which encourages grass growth.",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Michael Archer cho rằng tái đưa sói túi về có thể hạn chế lan bệnh ung thư ở quỷ Tasmania nhờ quan hệ săn mồi. Lợi ích sức khỏe cho loài đang sống khớp B.",
+      "evidence": "facial tumour syndrome which threatens the existence of the Tasmanian devils, the island’s other notorious resident.",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Beth Shapiro muốn tập trung hiểu vì sao loài đã tuyệt chủng. Focus on why tương ứng concentrate on the causes; đây là quan điểm C, không phải mục tiêu phục hồi riêng một loài.",
+      "evidence": "why various species went extinct in the first place, and therefore how we could use it",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Ben Novak cho rằng bồ câu quay lại làm xáo trộn rừng, kích thích tái sinh và tạo sinh cảnh cho loài khác. Lợi ích đối với thực vật thuộc A, không phải quan điểm về bệnh ở Tasmania.",
+      "evidence": "regrowth. This has left forests stagnant and therefore unwelcoming to the plants and animals which evolved",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Beth Shapiro nói những gì đang làm hôm nay chưa đủ và cần chấp nhận rủi ro có tính toán. Not enough tương ứng insufficient; chọn C cho nỗ lực bảo tồn hiện tại.",
+      "evidence": "not enough, and we have to be willing to take some calculated and measured risks.’",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn mở nhấn mạnh tiếng cười cung cấp dữ liệu quý để nghiên cứu con người. C là giá trị khoa học; những từ về ngôn ngữ hay xã hội xuất hiện không biến chúng thành trọng tâm.",
+      "evidence": "researchers: a simple ‘haha’ communicates a remarkable amount of socially relevant information.",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Douglass thêm tiếng cười vì hiểu việc cùng chia sẻ hài hước trong nhóm có vai trò quan trọng. Chọn A; bài không nói ông chỉ thích chương trình có khán giả trực tiếp.",
+      "evidence": "Douglass hated dealing with the unpredictable laughter of live audiences, so started recording his own ‘laugh",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Nghiên cứu Santa Cruz đặc biệt ở kết quả tương tự giữa nhiều nền văn hóa. Chọn B; người từ nhiều nơi là người nghe và đánh giá, không phải nhiều nhóm cung cấp bản thu.",
+      "evidence": "the results were remarkably consistent: worldwide, people’s guesses were correct approximately 60% of the time.",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Trong nghiên cứu San Diego, người tham gia luân phiên trêu chọc và bị trêu. Việc đổi vai này khớp B; không có kết luận họ trở thành bạn hoặc không cười nổi.",
+      "evidence": "each student took a turn at being teased by the others",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Kết quả cho thấy người địa vị cao vẫn được nhận ra qua tiếng cười bất kể vai tình huống. Chọn D; người địa vị thấp có thể nghe như địa vị cao khi cười kiểu thống trị.",
+      "evidence": "high-status individuals were rated as high-status whether they produced their natural dominant laugh or tried to do a submissive one.",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Ba loại video được chọn để gợi các cảm xúc khác nhau: hài hước, dễ chịu và trung tính. Feelings tương ứng emotion trong danh sách; điền F, không phải loại nhiệm vụ sau đó.",
+      "evidence": "feelings. Some watched a clip of the BBC comedy Mr. Bean, others a relaxing scene with",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Nhóm xem Mr Bean kiên trì lâu hơn trước nhiệm vụ gây nản. Video này mang tính hài hước; danh sách dùng tính từ amusing, nên H, không phải nhóm xem cá heo dễ chịu.",
+      "evidence": "Mr. Bean, others a relaxing scene with dolphins swimming in the ocean, and others a factual",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Nghiên cứu thứ hai lặp lại kết quả với một nhiệm vụ tẻ nhạt. Tedious tương ứng boring trong danh sách; chọn C, không nhầm khó chịu với khó về trí tuệ.",
+      "evidence": "participants complete long multiplication questions by hand.",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Cheng và Wang nói hài hước không chỉ giảm căng thẳng mà còn có lợi xã hội. Relieve stress khớp reduce anxiety; từ cần chọn là D, không phải kích thích tinh thần ở ô sau.",
+      "evidence": "stress and facilitate social relationships, the traditional view of task performance implies that individuals should avoid",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Kết luận mô tả hài hước có tác dụng tiếp thêm năng lượng cho thân và tâm. Energising tương ứng stimulating trong danh sách; chọn E, không chỉ mang lại cảm giác dễ chịu.",
+      "evidence": "energising.’",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Nghiên cứu Santa Cruz báo tỷ lệ nhận diện chung và tính nhất quán giữa nền văn hóa, không so độ chính xác với bạn bè và người lạ. Thiếu phép so sánh cần thiết: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Hành vi tiếng cười của nhóm địa vị cao được giới thiệu là diễn ra như dự đoán. As expected xác nhận nhà nghiên cứu đoán đúng, nên YES, không phải suy đoán từ kết quả chung.",
+      "evidence": "as expected, high-status individuals produced more dominant laughs and fewer submissive laughs relative to the low-status",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Người tham gia có thể dừng nhiệm vụ khi họ muốn, không bị ấn định một quãng thời gian hoàn thành cố định. Đề thêm giới hạn thời gian trái với cách tiến hành, nên NO.",
+      "evidence": "Participants were allowed to quit the task at any point.",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Các tác giả nói kết quả thách thức quan niệm truyền thống về hiệu suất, thay vì phù hợp với nó. Traditional view chính là established notions; quan hệ bị đảo nên NO.",
+      "evidence": "traditional view of task performance implies that individuals should avoid things such as humour that may",
+      "location": "Passage 3"
+    }
+  }
+}

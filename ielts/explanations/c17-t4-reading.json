@@ -1,0 +1,206 @@
+{
+  "id": "c17-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Rừng bị phá trực tiếp do nông dân chặt cây mở thêm ruộng lúa; sâu hại lúa chỉ gián tiếp làm tăng nhu cầu mở ruộng. Đề nói côn trùng tấn công phá rừng đã nhầm nguyên nhân trực tiếp, nên FALSE.",
+      "evidence": "forests are being converted to agricultural land",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Dù nhiều loài mất môi trường sống, một số dơi ăn côn trùng lại phát triển tốt trong cảnh quan đã thay đổi. Bài dùng chúng làm ngoại lệ, nên không đúng rằng chúng chịu tác động xấu nghiêm trọng; FALSE.",
+      "evidence": "some of the island’s insectivorous bats currently thriving",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Bài giới thiệu Rocha và nghiên cứu tại Madagascar nhưng không nêu ông đã nghiên cứu dơi ở nhiều vùng khác trên thế giới. Thiếu thông tin về phạm vi sự nghiệp nghiên cứu, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Dơi bản địa tận dụng môi trường đã thay đổi để săn sâu hại cây trồng, nhờ đó giúp nông dân bảo vệ năng suất. Điều này phù hợp với việc biến đổi sinh cảnh khiến dơi hữu ích hơn cho nông nghiệp; TRUE.",
+      "evidence": "a vital pest control service",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Bài liệt kê dơi tai chuột Malagasy cùng các loài bản địa khác nhưng không so sánh mức độ phổ biến của chúng. Được nêu tên không chứng minh phổ biến hơn, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Các loài sâu hại lúa được nêu cụ thể nằm trong số con mồi của dơi. Vì câu hỏi chỉ nói dơi ăn những côn trùng ấy, thông tin phù hợp với kết quả nghiên cứu; TRUE.",
+      "evidence": "the paddy swarming caterpillar and grass webworm",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Nhóm nghiên cứu phân tích DNA trong phân dơi để xác định những gì chúng ăn. Đề hỏi mẫu được xét nghiệm, nên droppings; DNA là đối tượng phân tích trong mẫu chứ không phải tên mẫu.",
+      "evidence": "analyse droppings collected from bats",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ngoài sâu hại lúa, mía, hạt và trái cây, dơi còn ăn sâu hại cà phê. Ô trống cần loại cây còn thiếu trong chuỗi liệt kê, nên coffee; không chọn tên một loại côn trùng.",
+      "evidence": "which infests coffee plants",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Dơi ăn muỗi cùng ruồi đen, những côn trùng có liên quan đến truyền bệnh. Vì blackflies đã có trong đề, thành phần song song còn thiếu là mosquitoes.",
+      "evidence": "but also on mosquitoes",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Người dân săn dơi vì chúng cung cấp thức ăn giàu protein. Ô sau “rich in” cần chất dinh dưỡng, nên protein; không điền tên loài động vật đang bị săn.",
+      "evidence": "a crucial source of protein",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Khi dơi trú trong nhà, chúng có thể khiến công trình trở nên không sạch. “Roost” chỉ việc trú ngụ; tính từ mô tả vấn đề của tòa nhà là unclean.",
+      "evidence": "because they make them unclean",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Dơi giữ vai trò đáng kể trong văn hóa bản địa. “Important” tương ứng significant; phần sau local cần danh từ culture, không phải tên một bệnh hoặc cây trồng.",
+      "evidence": "cultural",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Nông dân có thể dựng nơi ở dành riêng cho dơi để hỗ trợ quần thể của chúng. Ô trống hỏi công trình cung cấp chỗ trú, nên houses; “special” mô tả mục đích dành cho dơi, không yêu cầu vật thể kỳ lạ.",
+      "evidence": "by installing bat houses",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn E giải thích cần giữ yếu tố giàu nghèo ổn định khi theo dõi các cá nhân để tách ảnh hưởng của giáo dục lên hoạt động kinh tế. Lý do kiểm soát điều kiện kinh tế xác định đáp án E.",
+      "evidence": "If wealth is constant",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "15": {
+      "reason": "Đoạn A liệt kê hồ sơ tòa án, sổ thuế, tài liệu giáo xứ, điều tra dân số và các sổ sách khác. Đây là các nguồn được dùng để lập cơ sở dữ liệu, nên A.",
+      "evidence": "court records, guild ledgers, parish registers",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "16": {
+      "reason": "Đoạn D kể Juliana tiếp tục nhận việc dù bị hành hội khiển trách rồi bị gọi ra tòa, phạt tiền. Câu chuyện thể hiện một cá nhân không tuân lệnh hạn chế hoạt động nghề nghiệp, nên D.",
+      "evidence": "Juliana continued taking jobs",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "17": {
+      "reason": "Đoạn F gọi Trung Âu nói tiếng Đức là nơi rất phù hợp thử nghiệm quan hệ giáo dục và tăng trưởng: dân trí cao nhưng kinh tế vẫn nghèo. Đặc điểm trái kỳ vọng khiến vùng này đáng nghiên cứu, chọn F.",
+      "evidence": "German-speaking central Europe is an excellent laboratory",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "18": {
+      "reason": "Đoạn C liệt kê vật sở hữu cá nhân như Kinh Thánh, máy khâu, quần áo và da thú. Câu hỏi cần ví dụ đồ trong các bản kiểm kê tài sản, nên C.",
+      "evidence": "From badger skins to Bibles, sewing machines to scarlet bodices",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "19": {
+      "reason": "Tái dựng nhân khẩu theo dõi cuộc đời các cá nhân cùng hậu duệ của họ qua khoảng 300 năm. Ô trống chỉ những người có quan hệ dòng dõi với cá nhân ban đầu, nên descendants.",
+      "evidence": "the same people – and their descendants",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Hai phụ nữ bị khiển trách vì đọc sách trong nhà thờ thay vì chú ý nghe bài giảng. Đề hỏi thứ lẽ ra họ cần nghe, nên sermon; không phải tên cuốn sách họ đang đọc.",
+      "evidence": "instead of listening to the sermon",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Juliana phải nộp một khoản phạt vì tiếp tục làm công việc trái quy định hành hội. “Punishment” được cụ thể hóa bằng hình phạt tài chính, nên fine, không phải mức lương người hầu dùng để so sánh.",
+      "evidence": "told to pay a fine",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Hành hội không chỉ cản người có tay nghề làm việc mà còn kìm hãm những đổi mới công nghiệp đơn giản. “Held back” tương ứng prevent; ô trống cần innovation, không phải education của toàn bài.",
+      "evidence": "held back even the simplest industrial innovation",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Đoạn B nêu tỷ lệ biết chữ ở Đức cao trong giai đoạn 1600–1900 và kinh tế tăng trưởng có thể giúp dân trí tăng. Hai ý ấy khớp B và E; bài không xác nhận biết chữ cao tự nó bảo đảm công nghiệp hóa.",
+      "evidence": "literacy rates and book ownership were high",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "24": {
+      "reason": "Chọn B và E: tỷ lệ biết chữ ở Đức tốt, và tăng trưởng có thể thúc đẩy biết chữ theo chiều ngược lại. Anh công nghiệp hóa với mức biết chữ không nổi trội, nên không dùng Anh để chứng minh D.",
+      "evidence": "there is plenty of evidence that growth increases education",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Hành hội cản người ngoài đến làm việc và phản đối hoạt động đe dọa quyền kiểm soát nghề. Hai mô tả ấy là B và D; bài không nói thành viên chủ yếu là thương nhân giàu.",
+      "evidence": "guilds blocked labour migration",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Nhóm này cần B và D, mỗi lựa chọn một lần: hạn chế người nhập cư lao động, bảo vệ độc quyền nghề nghiệp. “Trade” ở đây là nghề hoặc ngành, không chỉ thương mại quốc tế.",
+      "evidence": "resisted changes that might reduce their influence",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn D kể những trường hợp chơi cờ bịt mắt trong các thế kỷ trước cùng thành tích của người đi trước. Câu hỏi hỏi các ví dụ lịch sử, nên D, không phải thử nghiệm sắp diễn ra của Gareyev.",
+      "evidence": "displays of the feat go back centuries",
+      "location": "Passage 3 · Đoạn D"
+    },
+    "28": {
+      "reason": "Đoạn E lần lượt giải thích ghi nhớ vị trí, theo dõi nước đi và dựng lại bàn cờ khi không nhìn thấy. Toàn đoạn là phác họa hoạt động cờ bịt mắt đòi hỏi gì, nên E.",
+      "evidence": "positions of each piece on every board be memorised",
+      "location": "Passage 3 · Đoạn E"
+    },
+    "29": {
+      "reason": "Đoạn F nói Gareyev không vượt trội trong các bài kiểm tra trí nhớ chuẩn; tài năng nổi bật được thấy là chơi cờ. Đây là bằng chứng năng lực đặc biệt không lan sang mọi lĩnh vực, nên F.",
+      "evidence": "He was not exceptional on any of these standard tests",
+      "location": "Passage 3 · Đoạn F"
+    },
+    "30": {
+      "reason": "Đoạn B giải thích thành tích của Gareyev khiến khoa học quan tâm tới việc não có thể ghi nhớ và xử lý nhiều bàn cờ thế nào. Trọng tâm là lý do nghiên cứu năng lực ấy, chọn B.",
+      "evidence": "In the hope of understanding how he and others like him can perform such mental feats",
+      "location": "Passage 3 · Đoạn B"
+    },
+    "31": {
+      "reason": "Đoạn H cho biết Gareyev không quá lo tỷ lệ thắng; điều quan trọng là tìm được việc có thể toàn tâm theo đuổi. Đó là lời giải thích ưu tiên của ông, nên H.",
+      "evidence": "the one thing that I can fully dedicate myself to",
+      "location": "Passage 3 · Đoạn H"
+    },
+    "32": {
+      "reason": "Đoạn E nói cuối ván cũng khó vì mệt mỏi tích lũy sau nhiều giờ phải giữ các bàn cờ trong đầu. “Taxing” diễn đạt sự hao sức, còn “as exhaustion sets in” nêu nguyên nhân; chọn E.",
+      "evidence": "as exhaustion sets in",
+      "location": "Passage 3 · Đoạn E"
+    },
+    "33": {
+      "reason": "Chỉ Gareyev chơi bịt mắt, còn các đối thủ chơi theo cách thông thường. Đề nói mọi người tham gia đều bịt mắt đã mở rộng đối tượng sai, nên FALSE.",
+      "evidence": "While his challengers will play the games as normal",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Bài nói Gareyev thích môn nhảy BASE nhưng không nói ông thắng cuộc thi nào trong môn đó. “Get his kicks” là tìm niềm vui, không phải giành danh hiệu; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Bài giới thiệu nhóm nghiên cứu ở UCLA nhưng không xác nhận UCLA là đại học đầu tiên nghiên cứu người chơi cờ bịt mắt. Từ “first” cần bằng chứng về thứ tự lịch sử mà bài không có; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bài cho biết nhiều kỳ thủ giỏi có khả năng chơi bịt mắt. “Accomplished” diễn đạt năng lực giỏi tương ứng good trong đề; nhận định khả năng có thể làm được phù hợp, nên TRUE.",
+      "evidence": "a far reach for most accomplished players",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Các nhà khoa học bắt đầu bằng những bài kiểm tra trí nhớ tiêu chuẩn trước khi chụp não. Ô trống hỏi năng lực được đo ở giai đoạn đầu, nên memory; scans thuộc bước sau.",
+      "evidence": "standard memory tests",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Bài kiểm tra yêu cầu nhắc lại một chuỗi số cả xuôi lẫn ngược. “Forwards and backwards” tương ứng hai thứ tự đề nêu; nội dung chuỗi cần nhớ là numbers.",
+      "evidence": "how many numbers a person can repeat, both forwards and backwards",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Ảnh chụp cho thấy mức liên lạc giữa các vùng thuộc mạng kiểm soát chú ý cao hơn trung bình. Ô trống hỏi điều tăng bất thường, nên communication, không phải khả năng ghi nhớ chuẩn vốn không vượt trội.",
+      "evidence": "much greater than average communication",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Mạng xử lý hình ảnh của Gareyev cũng có liên kết mạnh hơn với các vùng não khác. Đề khái quát thành xử lý đầu vào thị giác, nên visual; bàn cờ là ví dụ của đầu vào ấy.",
+      "evidence": "areas of his brain that process visual images",
+      "location": "Passage 3"
+    }
+  }
+}

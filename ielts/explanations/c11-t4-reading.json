@@ -1,0 +1,206 @@
+{
+  "id": "c11-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Theo truyền thuyết, chiếc kén rơi vào trà nóng của Lei Tzu rồi bắt đầu nhả sợi. Điền tea; câu hỏi hỏi đồ uống tiếp nhận kén, không phải nơi bà đang ngồi.",
+      "evidence": "landed in the hot tea",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "2": {
+      "reason": "Lei Tzu nghĩ ra guồng đặc biệt kéo sợi từ kén thành một sợi dài đủ bền để dệt. Danh từ reel là dụng cụ được phát minh, khác thread là sản phẩm.",
+      "evidence": "a special reel",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "3": {
+      "reason": "Ban đầu việc nuôi tằm, thu hoạch và dệt chỉ dành cho phụ nữ. Điền women; royalty ở câu sau nói người được mặc lụa, không phải người sản xuất.",
+      "evidence": "solely restricted to women",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "4": {
+      "reason": "Lụa lúc đầu là dấu hiệu địa vị và chỉ hoàng gia được mặc. Điền royalty; việc nông dân được mặc xảy ra muộn hơn khi quy định nới lỏng.",
+      "evidence": "only royalty",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "5": {
+      "reason": "Thời Hán, lụa được dùng trả lương, nộp thuế và làm đơn vị tiền tệ. Currency hoàn thành chức năng của lụa, không phải tên vật phẩm cụ thể như grain.",
+      "evidence": "a unit of currency",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "6": {
+      "reason": "Bằng chứng sớm về giấy làm từ lụa được tìm trong mộ người mất khoảng năm 168. Điền paper; không nhầm bowstrings và fishing lines chỉ là các công dụng khác.",
+      "evidence": "silk paper",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "7": {
+      "reason": "Thương nhân chở lụa về phía tây và mang vàng, bạc, len về phía đông. Vì precious metals đã bao quát vàng bạc, ô còn lại cần wool.",
+      "evidence": "bringing gold, silver and wool to the East",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "8": {
+      "reason": "Năm 550, các tu sĩ giấu trứng tằm trong gậy tre rỗng và mang tới Constantinople. Điền monks là người thực hiện, không phải emperor là người họ phục vụ.",
+      "evidence": "monks working for the Byzantine emperor",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "9": {
+      "reason": "Thế kỷ XX, sợi nhân tạo như nylon thay lụa trong tất và dù, góp phần làm ngành suy giảm. Điền nylon; câu hỏi đã có other manmade fibres.",
+      "evidence": "new manmade fibres, such as nylon",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "10": {
+      "reason": "Lụa được xem đáng giá hơn vàng và là hàng quý nhất trên Con đường Tơ lụa. Nhận định vàng quý nhất trái phép so sánh trong bài nên FALSE.",
+      "evidence": "worth more than gold",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "11": {
+      "reason": "Rất ít thương nhân đi hết tuyến; hàng hóa chủ yếu qua nhiều người trung gian. Vì thế đa số chỉ đi từng đoạn, phù hợp nhận định nên TRUE.",
+      "evidence": "Few merchants travelled the entire route",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "12": {
+      "reason": "Người Byzantine giữ độc quyền rất nghiêm, còn sản xuất lan qua châu Phi và châu Âu theo các cuộc chinh phục Arab. Gán việc phổ biến ra phương Tây cho Byzantine là FALSE.",
+      "evidence": "a strict imperial monopoly",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "13": {
+      "reason": "Bài nói Trung Quốc xuất khẩu cả tơ thô và sợi tơ nhưng không cho tỷ trọng từng loại. Con số hai phần ba nói sản xuất thế giới ở Trung Quốc, không chứng minh sợi tơ chiếm đa số xuất khẩu: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · The Story of Silk"
+    },
+    "14": {
+      "reason": "Hải âu địa phương lao xuống thức ăn, trong khi nhạn biển Bắc Cực đang di cư bỏ qua. Hai hành vi đối lập khi được mời ăn, nên nhận định giống nhau là FALSE.",
+      "evidence": "the tern flies on",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "15": {
+      "reason": "Bài nói định nghĩa của các nhà sinh học khác nhau một phần theo loại động vật họ nghiên cứu. Nhận định phụ thuộc lĩnh vực chuyên môn phù hợp nên TRUE.",
+      "evidence": "depending in part on what sorts of animals they study",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "16": {
+      "reason": "Bài chấp nhận hành trình rệp là một dạng di cư, nhưng không đếm bao nhiêu chuyên gia đồng ý. Chữ very few thêm mức độ đồng thuận chưa nêu: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "17": {
+      "reason": "Rệp nhạy với ánh xanh khi đến lúc cất cánh và ánh vàng khi cần hạ xuống cây non. Thay đổi ánh sáng nhận được ảnh hưởng hành trình, nên TRUE.",
+      "evidence": "sensitive to blue light",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "18": {
+      "reason": "Dingle nhấn những điểm chung giữa di cư linh dương đầu bò và rệp để hiểu tiến hóa. Nhận định mục tiêu phân biệt hành vi giữa loài đảo trọng tâm, nên FALSE.",
+      "evidence": "what the phenomenon of wildebeest migration shares",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "19": {
+      "reason": "Một đặc điểm Dingle nêu là hành trình có xu hướng thẳng, không ngoằn ngoèo. G hoàn thành ý về tuyến đường; không phải lặp mỗi ngày là đặc điểm chung.",
+      "evidence": "linear, not zigzaggy",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "20": {
+      "reason": "Một số động vật ăn nhiều trước chuyến đi để dự trữ năng lượng. C diễn đạt ăn hơn nhu cầu tức thời, không phải nhất thiết ăn dọc đường.",
+      "evidence": "such as overfeeding",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "21": {
+      "reason": "Động vật di cư tập trung mục tiêu lớn nên không bị trở ngại làm nản lòng. A phù hợp với unlikely to; đừng bỏ chữ phủ định rồi chọn hành vi chúng thực hiện.",
+      "evidence": "undeterred by challenges",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "22": {
+      "reason": "Nhạn biển bỏ qua món cá hấp dẫn và tiếp tục tới nơi sinh sản. E minh họa khả năng bỏ qua xao nhãng, không phải không bao giờ cần ăn.",
+      "evidence": "resists distraction",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "23": {
+      "reason": "Pronghorn dựa vào tầm nhìn xa và tốc độ để tránh thú săn. Điền speed; địa hình thoáng giúp chúng nhìn và chạy, không thay thế năng lực được hỏi.",
+      "evidence": "distance vision and speed",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "24": {
+      "reason": "Quần thể này rời vùng núi tới đồng bằng tránh tháng giá lạnh và tìm cây bụi ít tuyết. Điền plains, không phải mountains là nơi ở mùa hè.",
+      "evidence": "down onto the plains",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "25": {
+      "reason": "Lộ trình không đổi có ba chỗ thắt cổ chai rất hẹp; không vượt qua được thì mất cơ hội sống theo mùa. Điền bottlenecks, không chỉ nói ba tuyến đường.",
+      "evidence": "three bottlenecks",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "26": {
+      "reason": "Ở một chỗ hẹp, nhà riêng lấp dần hành lang đất trống rộng khoảng 150m. Ô cần corridor; bottlenecks ở câu trước là tên chung của ba điểm tắc.",
+      "evidence": "a corridor of open ground",
+      "location": "Passage 2 · Great Migrations"
+    },
+    "27": {
+      "reason": "Đoạn D nói sách khoa học cho người không chuyên phải bỏ phần toán nền tảng, để độc giả chỉ làm người xem. Đây là ví dụ sách giả định người đọc thiếu kiến thức toán.",
+      "evidence": "books to explain their fields to non-scientists",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "28": {
+      "reason": "Đoạn B đối chiếu sách này chú trọng lập luận với sách thường kể cuộc đời, ứng dụng hoặc đòi kiến thức đại số. Câu hỏi tìm điểm khác loại sách toán điển hình nên B.",
+      "evidence": "this book differs from most books on mathematics",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "29": {
+      "reason": "Đoạn G trích bác sĩ và luật sư kể tư duy toán giúp học nghề. Đây là trải nghiệm cá nhân được toán hỗ trợ, không phải ví dụ nghề nghiệp chỉ có trong C.",
+      "evidence": "A physician wrote",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "30": {
+      "reason": "Đoạn C nêu kỹ sư đồng thời là nghệ sĩ, ca sĩ opera làm nghiên cứu toán, nhà toán viết truyện. Các ví dụ bác bỏ ngăn cách năng lực nghệ thuật và khoa học.",
+      "evidence": "a structural engineer who is an artist",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "31": {
+      "reason": "Đoạn B liệt kê sách kể đời nhà toán học, mô tả ứng dụng và trình bày thủ tục đại số. Câu hỏi hỏi những trọng tâm khác nhau của sách toán, không phải độc giả mục tiêu.",
+      "evidence": "Some present the lives",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "32": {
+      "reason": "Đoạn E nói phải lật trang chậm hơn tiểu thuyết hoặc báo, vì cần theo dõi phân tích và thử nghiệm. Đây là so sánh cách đọc được hỏi, không phải đánh giá sách kém thú vị.",
+      "evidence": "much more slowly than when reading a novel or a newspaper",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "33": {
+      "reason": "Đoạn A khẳng định ai cũng hiểu được từng bước và mỗi chương chỉ cần số học cơ bản, đôi khi còn không cần. Câu hỏi tìm tuyên bố toàn sách dễ tiếp cận nên A.",
+      "evidence": "Anyone can understand every step in the reasoning",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "34": {
+      "reason": "Đoạn F xác định người từng thích toán rồi nản, người mê toán và người muốn luyện phân tích. Đó là các nhóm độc giả dự kiến, không phải các trọng tâm sách khác ở B.",
+      "evidence": "two types of readers",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "35": {
+      "reason": "So sánh mở đầu nói ngay trong bản nhạc khó vẫn có phần đẹp, dễ đến mức người mới chơi được; toán cũng vậy. Beginner là người phù hợp với những phần ấy.",
+      "evidence": "a beginner could play them",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "36": {
+      "reason": "Một số khám phá toán cao cấp chỉ cần chút số học, không đòi đại số, hình học hay lượng giác. Điền arithmetic; common sense có trong bài nhưng không phải tên kiến thức toán cần điền.",
+      "evidence": "a little arithmetic",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "37": {
+      "reason": "Tác giả muốn cho thấy toán vừa phân tích vừa dựa trực giác. Điền intuitive để bổ nghĩa thinking; đây là tính bổ sung, không đối lập hoàn toàn với lý luận.",
+      "evidence": "intuition plays a significant role",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "38": {
+      "reason": "Một số nhà khoa học viết sách cho người ngoài ngành phải bỏ toán, dù đó là nền tảng lý thuyết. Điền scientists, không phải mathematicians vốn là người được kể trong loại sách khác.",
+      "evidence": "Other scientists have written books",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "39": {
+      "reason": "Tác giả khuyên chuẩn bị bút giấy để kiểm chứng và tự thực hiện thử nghiệm khi đọc. Điền experiments; không chỉ đọc nhanh hoặc ghi nhớ các kết luận.",
+      "evidence": "carry out experiments",
+      "location": "Passage 3 · How the Other Half Thinks"
+    },
+    "40": {
+      "reason": "Luật sư nói học toán, đặc biệt các định lý, giúp phân tích nguyên tắc phức tạp và học luật tốt. Điền theorems, không nhầm tên ngành law là nơi hưởng lợi.",
+      "evidence": "in particular, theorems",
+      "location": "Passage 3 · How the Other Half Thinks"
+    }
+  }
+}

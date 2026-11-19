@@ -1,0 +1,206 @@
+{
+  "id": "c21-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Thực dân Bỉ thích lá bóng và hoa tím đẹp nên mang bèo tây tới Rwanda. Đó chính là đưa cây vào vì giá trị trang trí, nên TRUE; công dụng nhiên liệu được phát triển về sau.",
+      "evidence": "In east Africa the plant arrived with Belgian colonists in Rwanda, who liked the look of its glossy leaves and",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Bèo tây thoát ra theo sông Kagera rồi trôi xuống hồ Victoria. Bài nêu đường lan truyền tự nhiên qua dòng nước, không phải ngư dân chủ động mang tới, nên FALSE.",
+      "evidence": "escaped’ out of the country via the Kagera river and made its way downstream to Lake Victoria",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Bài mô tả tàu cá từng hoạt động đông đúc nay phải chật vật đi qua khối cây dày. Struggle to navigate diễn đạt khó di chuyển, đúng với nhận định hiện tại nên TRUE.",
+      "evidence": "the boats that once brought the fish to shore by the hundreds struggle to navigate through the mass of plants",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Bài nói bèo chặn tuyến đánh bắt và tạo chỗ cho muỗi nhưng không nêu hóa chất của cây làm thay đổi số cá. Cản tàu không đồng nghĩa gây độc cho cá; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Củi và than đều được nhắc là nhiên liệu rắn gây ô nhiễm trong nhà. Không có so sánh than hại sức khỏe hơn củi hay nghiên cứu chứng minh điều đó, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Các đống bèo lớn do dân làng vớt khỏi hồ là cảnh thường gặp. Họ đã thực sự lấy được lượng lớn cây ra, trái với nhận định không thể làm vậy, nên FALSE; không đồng nghĩa đã xóa sạch bèo toàn hồ.",
+      "evidence": "huge piles of water hyacinth that villagers had taken out of the water in an attempt to clear it were",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Nghiên cứu khả năng làm nhiên liệu sinh học từ bèo bắt đầu từ thập niên 1980. Đây là thế kỷ XX, đúng với bắt đầu nghiên cứu từ thế kỷ trước, nên TRUE.",
+      "evidence": "It’s a magic combination that has captivated researchers’ imaginations since as early as the 1980s when, across the world",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Máy chuyển hỗn hợp bèo tây và phân bò thành khí sinh học. Chỗ trống hỏi thành phần trộn cùng bèo, nên cow dung, đủ hai từ; không điền sản phẩm biogas.",
+      "evidence": "machines that would transform a mix of water hyacinth and cow dung into biogas for cooking",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Hỗn hợp phân hủy qua quá trình lên men trong 20–30 ngày. Fermentation hoặc fermentation process gọi đúng quá trình đó; không nhầm thời gian diễn ra với tên bước sản xuất.",
+      "evidence": "over the next 20 to 30 days, it goes through a fermentation process and breaks down",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Khí sạch được dẫn tới nơi dùng qua đường ống. Passed through trong bài tương ứng transported through ở sơ đồ, nên pipes số nhiều, không phải máy tạo khí.",
+      "evidence": "the clean-burning gas is passed through pipes to the point of use",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Người phụ nữ không còn phải dành nhiều thời gian mỗi ngày nhặt củi. Đề hỏi nguồn lực được tiết kiệm trong hoạt động này, nên time; tiền kiếm thêm là tác dụng ở câu sau.",
+      "evidence": "they don’t have to devote a lot of time every day to gathering firewood",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Thời gian được giải phóng giúp họ kiếm thêm tiền cho gia đình từ công việc khác. Make more money được diễn đạt thành earn more, nên money; không phải nhiên liệu mà hệ thống sản xuất.",
+      "evidence": "they’re able to make more money for their families from other enterprises",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Nếu giá máy không giảm, phần lớn cộng đồng không thể mua được. Điều vượt khả năng chi trả là price của thiết bị, không phải lượng khí hay thời gian lên men.",
+      "evidence": "unless the price of the machines drops, it’s pretty clear that most communities will never be able to afford",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Delhi có hơn hai mươi triệu người sinh sống; ý chính là dân số đông, dày đặc. Trong danh sách, dense population ở I khớp nội dung này, không phải chỉ số lượng ngôn ngữ.",
+      "evidence": "more than 20 million people go about their daily lives",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Một nhóm ở Delhi cả đời, còn hàng triệu người mới chuyển tới gần đây. Đối lập lâu đời với mới đến giúp chọn new immigrants, lựa chọn J, không suy thành khách du lịch.",
+      "evidence": "many millions more have recently made India’s capital their home",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Bài nói người nhập cư có thể đến từ khu phố, thành phố và bang xung quanh hoặc từ đầu kia đất nước. Vế gần tương ứng nearby district ở H; không nhầm với khoảng cách xa ở vế sau.",
+      "evidence": "moved from surrounding neighbourhoods, cities and states",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Người dân chuyển đến với hy vọng việc tốt và đời sống tốt hơn. Better jobs tương ứng employment opportunities, lựa chọn B; chỗ trống cần mục tiêu tìm kiếm chứ không phải nơi xuất phát.",
+      "evidence": "often in the hope of gaining better jobs and a better life",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Nghiên cứu hỏi vì sao đa ngôn ngữ chưa đem lại cho học sinh Ấn Độ lợi ích đã thấy ở trường châu Âu. Similar advantages ở F khớp sự so sánh lợi ích, không phải khẳng định chúng đã giống nhau.",
+      "evidence": "the many benefits of speaking more than one language, observed in schools in Europe",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Mục tiêu quan trọng nhất của dự án là tìm nguyên nhân kết quả học thấp và vai trò ngôn ngữ giảng dạy. Overriding aim tương ứng primary objective, lựa chọn E; đây không phải kết quả đã kết luận.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Hơn 50% trẻ không đọc trôi chảy, trong khi tỷ lệ không làm được phép trừ thấp hơn 50%. Số liệu không cho thấy đọc tốt hơn tính; nhận định đảo chiều, nên NO.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Bài nói học yếu dẫn tới bỏ học, ảnh hưởng nhiều tới nữ sinh, nhưng không nói Tsimpli khó thuyết phục các em tham gia. Không được biến khó khăn học tập thành khó tuyển người nghiên cứu; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Nhóm đang xem xét việc tiếng ở trường khác tiếng ở nhà có gây kết quả học thấp không. Nhận định về tìm mối liên hệ giữ đúng mục tiêu điều tra, nên YES; chưa phải kết luận nhân quả đã xác nhận.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Nhóm dự định xem cả điểm kiểm tra lẫn cách dạy. Điều này đối lập quyết định không điều tra phương pháp giảng dạy, nên NO; cụm not only báo mở rộng phạm vi chứ không loại bỏ.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Dạy bằng tiếng Anh có thể không phải cách tốt nhất cho trẻ thuộc tầng lớp kinh tế thấp. C diễn đạt đúng nguy cơ trẻ nghèo chịu bất lợi thêm; không có kết luận tiếng Anh luôn gây hại mọi trẻ.",
+      "evidence": "English instruction for children from low socio-economic areas might not be the best way for them to learn",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "That ship has sailed nói việc loại bỏ hoàn toàn tiếng Anh đã không còn thực tế hoặc đã quá muộn. D giữ đúng hàm ý thành ngữ; câu không bàn một con tàu hay yêu cầu hủy tiếng Anh.",
+      "evidence": "We are not suggesting that English be withdrawn – that ship has sailed",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Nhóm bất ngờ vì trẻ sống trong khu ổ chuột không thua kém, đôi lúc còn hơn trẻ nghèo đô thị khác. D giữ đúng đối tượng so sánh; không suy thành hơn mọi trẻ có điều kiện kinh tế tốt.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Ý định đơn giản mua quà sinh nhật cho bố biến thành hành trình mười năm đầy trở ngại. Vì vậy đó là challenging task, lựa chọn G, không phải một giao dịch nhanh chóng.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Gần như mọi việc có thể trục trặc đều đã trục trặc trong quá trình làm quả địa cầu. Cụm numerous problems ở J tóm tắt đúng những khó khăn phải vượt qua, không chỉ một lỗi riêng lẻ.",
+      "evidence": "almost everything that could possibly go wrong did so",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Bellerby nhận ra không thể chỉ đặt hàng nhanh trên mạng để có quả địa cầu như ý. Quick online order tương ứng internet purchase, lựa chọn I; không phải ông không biết dùng internet.",
+      "evidence": "was not simply a matter of a quick online order",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Sản phẩm thương mại có sẵn bị mô tả kém chất lượng. Shoddy tương ứng inferior, nên inferior makes ở C; các quả cổ đắt tiền là nhóm khác, không phải đối tượng được gọi kém.",
+      "evidence": "shoddy commercial versions designed for school classrooms",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Những sản phẩm đó vốn được thiết kế cho lớp học. School classrooms tương ứng educational use, lựa chọn A; câu hỏi cần mục đích sử dụng, không hỏi chất lượng sản phẩm.",
+      "evidence": "designed for school classrooms",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Ông tới Morocco và Ấn Độ tìm tri thức của thợ chế bản đồ thủ công. Đó là kỹ năng cần để làm địa cầu, tương ứng necessary skills ở E, không chỉ tìm bản đồ để mua.",
+      "evidence": "the knowledge of artisan cartographers",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Tác giả bác quan niệm tổ tiên ít hiểu địa lý bằng việc con người biết Trái Đất hình cầu từ rất sớm. Vì vậy nhận định quan niệm phổ biến ấy đúng là NO, không phải lời tác giả đồng tình.",
+      "evidence": "contrary to stubbornly held popular views of our ancestors’ geographical ignorance, we have known that the world is spherical since",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Bài kể Plato ví Trái Đất như quả bóng da nhưng không nêu ai chỉ trích ông vì phép ví ấy. Không thể suy lời ví lạ dẫn tới bị phản đối; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Crates được ghi nhận làm quả địa cầu đầu tiên, nhưng độ chính xác biểu diễn thế giới không được đánh giá. Đầu tiên có ghi chép không đồng nghĩa chính xác hoặc sai, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bellerby ban đầu nghĩ một quả địa cầu chất lượng tốt hẳn không khó tìm. Câu hỏi nêu đúng kỳ vọng ban đầu ấy, nên YES; khó khăn ông gặp về sau không phủ định ông đã từng nghĩ vậy.",
+      "evidence": "Surely, Bellerby reasoned, a good-quality globe wouldn’t be difficult to find",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Cuối lúc dán các mảnh bản đồ, ông mới phát hiện giấy giãn làm mảnh cuối chồng lên mảnh đầu. Đây là vấn đề ngoài dự kiến, nên B, không phải ông cho rằng phải làm thật nhanh.",
+      "evidence": "Right at the end of the process, he learnt that the paper had stretched slightly and so the final one",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Tác giả liên hệ Bellerby với các thợ làm địa cầu trước đây qua kinh nghiệm hoặc sự tận tâm tương đồng. C bao quát mục đích so sánh; bài không nói mọi khó khăn của họ lẽ ra dễ tránh.",
+      "evidence": "clearly found a kindred spirit in Martin Behaim",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Đoạn bảy tiếc nuối các truyền thống nhiều thế kỷ đang phai tàn, cùng những thợ giúp ông đã nghỉ hoặc qua đời. Trọng tâm là nỗi buồn kỹ nghệ thất truyền, nên D, không chỉ quan hệ hợp tác lâu năm.",
+      "evidence": "a lament for the fading away of centuries-old traditions",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Nhận xét sách không phải blueprint for commercial success nghĩa là không hướng dẫn được con đường kinh doanh sinh lời. A diễn đạt đúng giới hạn này; đó không phải đánh giá chất lượng mọi quả địa cầu ông làm.",
+      "evidence": "is hardly a blueprint for commercial success",
+      "location": "Passage 3"
+    }
+  }
+}

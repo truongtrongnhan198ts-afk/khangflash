@@ -1,0 +1,206 @@
+{
+  "id": "c21-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Chuột có mẫu hoạt động não tương tự lúc chạy mê cung và lúc ngủ REM. Bảng hỏi loài có đặc điểm ấy, nên rats; không nhầm với chim bồ câu thuộc thí nghiệm tiếp theo.",
+      "evidence": "researchers compared the brain patterns of rats running through a maze when awake with their brain patterns during REM sleep",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Ở bồ câu đang ngủ, vùng xử lý thông tin thị giác hoạt động mạnh. Visual information được đổi thành visual input, nên cần tính từ visual, không phải hoạt động bay mà giấc mơ có thể tái hiện.",
+      "evidence": "REM sleep activity was high in brain regions involved in processing visual information",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Cá voi và cá heo chỉ cho nửa bộ não ngủ, giữ phần còn lại thức. Phần vẫn tỉnh cũng là half; đừng đọc thành toàn bộ não đều ngủ hoặc điền tên giai đoạn REM.",
+      "evidence": "whales and dolphins, which do not shut down their entire brain when they sleep, but only half of it, keeping",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Trong REM, động vật dễ chịu ảnh hưởng của nhiệt độ cực đoan. Câu hỏi cần yếu tố mà chúng nhạy cảm với, nên temperature; môi trường nước không phải từ được đề yêu cầu.",
+      "evidence": "during REM sleep animals are more vulnerable to extremes of temperature",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Giấc mơ không thuộc REM được mô tả là ít sống động hơn. Bảng đã có not very, nên điền vivid; thêm less sẽ lặp ý và không đáp ứng giới hạn một từ.",
+      "evidence": "may only experience non-REM dreams, which are less vivid",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Sự kiện tái hiện trong mơ giúp đưa ký ức vào lưu trữ dài hạn. Dreaming about past experiences và lasting memories diễn đạt lại hai ý đó, nên TRUE.",
+      "evidence": "It is believed that when events are replayed in dreams, this helps to integrate memories into longer-term storage",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Chó co giật chân hoặc sủa không cho biết chắc nội dung trải nghiệm bên trong. Bài nói ta không biết nó có mơ đuổi thỏ không; nhận định đã xác định được loại giấc mơ là FALSE.",
+      "evidence": "the truth is that we don’t know if there is an internal experience of chasing rabbits that comes along",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Bài kể việc Scheel quay phim và quan sát Heidi nhưng không nói bộ phim tác động tới nghiên cứu khác. Có nghiên cứu về sau không tự chứng minh quan hệ ảnh hưởng; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Costello phun mực như thể đang bị kẻ săn mồi tấn công, tức tự vệ. Nhận định nó đang săn mồi đảo ngược vai trò, nên FALSE; không nhầm với Heidi có biểu hiện đuổi cua.",
+      "evidence": "squirted ink as though he were being attacked by a predator",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Scheel lưu ý nghiên cứu chỉ dựa trên một cá thể và cần hình ảnh não ngoài hành vi. Ông cho rằng bằng chứng hiện tại chưa đủ, đúng với cần nghiên cứu thêm: TRUE.",
+      "evidence": "The nightmare study is intriguing, says Scheel, but is only based on one animal. He argues that as well as",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Bài nói không bao giờ trực tiếp trải nghiệm giấc mơ động vật khác, kể cả con người khác. Never đối lập với có thể sớm chia sẻ giấc mơ người khác, nên FALSE.",
+      "evidence": "we will never be able to experience any animal’s dreams. That goes for other humans’ dreams too",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Chó và nhện được nhắc theo khứu giác và rung động, không phải thính giác. Bài không xác nhận vai trò của nghe trong giấc mơ loài nào; không tự đồng nhất rung động với nghe, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Đoạn cuối nói nghiên cứu động vật có thể giúp hiểu giấc mơ người. Không có so sánh sự quan tâm hiện tại và trước đây, nên nhận định mức quan tâm tăng mạnh gần đây là NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn E nói tượng có thể dùng trong nghi lễ nhưng chức năng chính xác chưa rõ. Chưa rõ công dụng chính là sự không chắc chắn mà câu hỏi tìm kiếm, nên E.",
+      "evidence": "The figures may have been used in ceremonies as offerings to ancestors, but their precise function is not known",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn G nói dân số gây áp lực tài nguyên, rồi chuỗi hạn hán có thể đẩy tình hình thành khủng hoảng. Hạn hán là yếu tố khí hậu làm vấn đề nặng hơn, nên G.",
+      "evidence": "a situation that may have been brought to a crisis point by a series of droughts",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn C mô tả nhà lớn ở ngoại vi Babandyanalo có lẽ thuộc họ hàng nam của vua. Đây là nơi cư trú thân tộc hoàng gia; không nhầm với nhà vua sống trên đồi trong B.",
+      "evidence": "There were some grander residences dotted around the outskirts of Babandyanalo, and these probably belonged to male relatives of the",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn D nói các nước ven biển giao thương với thương nhân từ Ấn Độ tới bằng đường biển. Câu hỏi diễn đạt lại người chở hàng bằng tàu, nên D, không chỉ chọn đoạn có hàng hóa.",
+      "evidence": "other states on the coast who, in turn, traded with merchants travelling from India by sea",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn B ước tính dân số lúc cực thịnh khoảng 5.000 người. Around thể hiện ước lượng và population chỉ quy mô cộng đồng, đúng yêu cầu nên B.",
+      "evidence": "The total population of Mapungubwe at its peak in the mid-13th century was around 5,000 people",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Đoạn A nói chăn nuôi và trồng trọt tạo lương thực dư để đổi lấy hàng cần thiết. Đề diễn đạt lại nông sản dùng trong trao đổi, nên A; không nhầm với buôn vàng và ngà ở D.",
+      "evidence": "cattle herding and other types of farming brought plenty of food and a surplus that could be traded for needed",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Đoạn F xác nhận đồ vàng tại khu mộ hoàng gia và kỹ thuật trang trí cũng có ở Great Zimbabwe. Hai ý đúng là B và D; không có khẳng định quyền trượng là hiện vật giá trị nhất.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Đồ vàng ở mộ hoàng gia và kiểu trang trí chung với Great Zimbabwe là hai thông tin được nêu. Cần B và D khác nhau cho nhóm; giá trị của vàng không chứng minh mọi người dùng nó thanh toán.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Lượng gốm đủ lớn để có thợ chuyên nghiệp được xem là dấu hiệu xã hội thịnh vượng. Chỗ trống cần điều mà phát hiện ấy chứng minh, nên prosperity, không phải tên đồ vật hay nghề làm gốm.",
+      "evidence": "pottery was produced on a scale large enough to suggest the presence of professional potters, and is another indicator of",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Bài liệt kê đĩa gốm và còi trước các tượng động vật và người. Đề đã có round ceramic objects, nên mục còn thiếu là whistles; giữ số nhiều như danh sách gốc.",
+      "evidence": "There are also ceramic discs, and whistles",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Các tượng người có thân dài và tay chân ngắn. Stretched diễn đạt elongated, nên bodies; limbs sẽ sai vì chi được mô tả ngắn, không phải kéo dài.",
+      "evidence": "small figures of highly stylised humans with elongated bodies and short limbs",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Tượng có thể làm đồ dâng tổ tiên trong nghi lễ. Honour diễn đạt lại offerings to, nên đối tượng là ancestors; đây là giả thuyết công dụng chứ không phải điều đã chắc chắn.",
+      "evidence": "The figures may have been used in ceremonies as offerings to ancestors",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Các hiện vật khác gồm đồ trang sức nhỏ làm bằng đồng địa phương. Chỗ trống hỏi sản phẩm, không hỏi vật liệu, nên jewellery hoặc jewelry; copper chỉ là manh mối.",
+      "evidence": "Other discoveries include small jewellery items made from locally sourced copper",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu mô tả truyền thông cường điệu khiến công chúng tưởng AI đã thâm nhập mọi lĩnh vực. Tác giả đang mô tả nhận thức xã hội, nên B; không phải tự đưa ra dự báo ấy.",
+      "evidence": "many countries in the West, hysteria about the future of artificial intelligence (AI) is everywhere",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "AI solutionism bị phê phán vì xem nhẹ an toàn và tạo kỳ vọng phi thực tế, làm hại giá trị AI. Đây là rủi ro của niềm tin AI giải quyết mọi thứ, nên A.",
+      "evidence": "actually jeopardises the value of machine intelligence by disregarding important AI safety principles and setting unrealistic expectations",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Chính trị gia ca ngợi AI nhưng không hiểu độ phức tạp triển khai thực tế. C diễn đạt đúng thiếu nhận thức về thách thức thực hiện; bài không nói họ đánh giá thấp tiềm năng AI.",
+      "evidence": "they fail to realise the complexity around deploying advanced machine learning systems in the real world",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Nhiều người tưởng thêm mạng nơron vào chính phủ sẽ khiến nó công bằng hơn ngay lập tức. Fair tương ứng equality ở F; đây là kỳ vọng bị bác bỏ, không phải hiệu quả được tác giả xác nhận.",
+      "evidence": "adding a neural network to a system of government does not mean it will be instantaneously more inclusive or fair",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Khu vực công thiếu hạ tầng dữ liệu thích hợp hỗ trợ học máy. Framework ở G khái quát nền tảng hệ thống đó; computers chỉ thiết bị, quá hẹp so với vấn đề tổ chức dữ liệu.",
+      "evidence": "the public sector typically does not have the appropriate data infrastructure to support advanced machine learning",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Dữ liệu rải ở nhiều cơ quan, cần quyền đặc biệt mới truy cập. Special permissions tương ứng approval, lựa chọn I; confidentiality là bảo mật chứ không phải sự cho phép người truy cập cần có.",
+      "evidence": "data is spread across different government departments that each require special permissions to be accessed",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Vấn đề chủ yếu là thiếu nhân sự có năng lực kỹ thuật để khai thác AI. Technological capabilities tương ứng skills ở C, không phải tiền hay máy tính, vốn không diễn đạt năng lực con người.",
+      "evidence": "the public sector typically lacks the human talent with the right technological capabilities to fully reap the benefits of machine",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Chuyên gia y tế khó tin tưởng hệ thống Watson nên chương trình bị bỏ dùng. Đề tóm tắt sự thiếu tin cậy vào reliability, lựa chọn A; nguyên nhân không được nêu là thiếu tài trợ.",
+      "evidence": "human experts found it hard to trust the machine",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Thuật toán tòa án khuếch đại phân biệt chủng tộc mang tính cơ cấu. Đây là việc phản ánh và tăng thành kiến sẵn có, tương ứng prejudices ở D, không chỉ thiếu phê duyệt hay thiết bị.",
+      "evidence": "The system was found to amplify structural racial discrimination",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Tác giả gọi cách tiếp cận của Russell là hợp lý và thực tế. Nhận định đề xuất của ông thiếu thực tế trái trực tiếp với đánh giá ấy, nên NO chứ không phải NOT GIVEN.",
+      "evidence": "has long advocated a more sensible and realistic approach",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Bài trích Brooks về thời gian ứng dụng AI lâu hơn dự kiến nhưng không kể người ủng hộ AI phản ứng ra sao. Thiếu cả thông tin chỉ trích lẫn tính công bằng của nó, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "An ninh AI vẫn thường bị bỏ qua khi cài hệ thống. Often overlooked mâu thuẫn với always taken into account; chỉ cần có trường hợp bỏ qua là nhận định luôn luôn đã sai, nên NO.",
+      "evidence": "AI security remains an often overlooked topic when machine learning systems are installed",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Muốn hưởng lợi và giảm hại AI, bài yêu cầu bàn đạo đức và sự thiếu tin tưởng của công chúng. Nhận định cần khám phá lo ngại người dùng giữ đúng ý đó, nên YES.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Toàn bài bác niềm tin AI giải được mọi vấn đề, minh họa giới hạn trong chính phủ, y tế và pháp luật. B bao quát lập luận; C quá tuyệt đối vì tác giả không phản đối mọi đầu tư AI.",
+      "evidence": "",
+      "location": "Passage 3"
+    }
+  }
+}

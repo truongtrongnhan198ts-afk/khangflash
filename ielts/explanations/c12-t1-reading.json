@@ -1,0 +1,206 @@
+{
+  "id": "c12-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Bài chỉ nói vỏ sồi bần dày, không so sánh với mọi loài cây khác. “Dày nhất” bổ sung một mức so sánh chưa được xác nhận, nên NOT GIVEN; không được suy ra so sánh nhất từ một tính từ miêu tả.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Công nghệ chưa từng tái tạo thành công cấu trúc tế bào đặc biệt của lớp vỏ. Nhận định các nhà khoa học đã tạo được cấu trúc giống hệt nói điều ngược lại, nên FALSE.",
+      "evidence": "– that technology has never succeeded in replicating.",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "25 năm là thời gian từ khi trồng đến lần thu hoạch đầu tiên. Giữa các lần thu hoạch trên cùng cây chỉ cần khoảng một thập kỷ; câu hỏi gán nhầm mốc 25 năm, nên FALSE.",
+      "evidence": "years, and a gap of approximately a decade must separate harvests from an individual tree.",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Bóc vỏ khi không khí ẩm sẽ làm tổn thương cây. Vì vậy yêu cầu thu hoạch trong điều kiện không khí khô phù hợp với bài; chọn TRUE, không phải suy đoán từ mùa thu hoạch.",
+      "evidence": "or when the air is damp – the tree will be damaged. Cork harvesting is a very specialised",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Chưa có phương pháp cơ giới để bóc vỏ, nên việc này do thợ lành nghề thực hiện bằng tay. Đây là căn cứ chọn TRUE; từ “only” không tự động khiến một nhận định sai.",
+      "evidence": "specialised profession. No mechanical means of stripping cork bark has been invented, so the job is done by",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Hợp chất TCA trong nút bần có thể làm hỏng hương vị của chất lỏng trong chai. Chỗ trống hỏi thứ bị ảnh hưởng, nên taste; không điền tên hợp chất gây ra vấn đề.",
+      "evidence": "can spoil the taste of the product contained in the bottle. The result has been a gradual yet",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Các nắp thay thế có chi phí sản xuất thấp hơn. Manufacture được diễn đạt lại bằng produce; cần tính từ so sánh cheaper, không phải dạng nguyên cheap.",
+      "evidence": "substitutes are cheaper to manufacture and, in the case of screw caps, more convenient for the user. The classic",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Ưu điểm riêng của nắp vặn là tiện lợi hơn cho người sử dụng. “For the user” tương ứng với “to use”; điền convenient, không nhầm ưu điểm này với chi phí sản xuất thấp.",
+      "evidence": "screw caps, more convenient for the user. The classic cork stopper does have several advantages, however",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Hình ảnh truyền thống của nút bần phù hợp với hàng hóa chất lượng cao. Danh từ cần điền là image, chỉ hình ảnh sản phẩm gợi lên, không phải chất lượng của món hàng.",
+      "evidence": "Firstly, its traditional image is more in keeping with that of the type of high quality goods with",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Bần được mô tả là một sản phẩm bền vững. Sustainable nói tính chất của vật liệu làm nút chai; recycled ở mệnh đề sau nói khả năng xử lý sau sử dụng, thuộc chỗ trống khác.",
+      "evidence": "importantly – cork is a sustainable product that can be recycled without difficulty.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "“Không khó khăn” được diễn đạt lại thành “dễ dàng”. Cấu trúc bị động cần recycled, cho biết bần có thể được tái chế; không điền động từ nguyên thể recycle.",
+      "evidence": "can be recycled without difficulty.",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Rừng sồi bần hỗ trợ đa dạng sinh học địa phương. Aid tương ứng với support; danh từ được hỗ trợ là biodiversity, không phải forest vì rừng đã là chủ thể.",
+      "evidence": "resource which support local biodiversity, and prevent desertification in the regions where they are planted.",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Rừng sồi bần ngăn sa mạc hóa ở nơi trồng cây. “Stop something happening” tương ứng với prevent; điền desertification để gọi đúng hiện tượng được ngăn chặn.",
+      "evidence": "biodiversity, and prevent desertification in the regions where they are planted.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Ví dụ về sưu tầm để kiếm lời là mua đồ cổ giá thấp rồi bán lại có lãi. Từ cần điền là antiques; không suy rộng rằng mọi người sưu tầm đều kinh doanh loại đồ này.",
+      "evidence": "for, say, antiques that they can buy cheaply and expect to be able to sell at a profit.",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Mua rẻ bán đắt mang lại cảm giác chiến thắng về tâm lý. “A feeling of” tương ứng với “a sense of”; danh từ diễn đạt cảm giác ấy là triumph.",
+      "evidence": "the collector a sense of triumph.",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Những người sưu tầm gặp gỡ và trao đổi thông tin về món đồ. Share diễn đạt lại exchange; information là nội dung chia sẻ, không phải tên các vật được thu thập.",
+      "evidence": "collectors and exchanging information on items.",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Các cuộc gặp giúp người sưu tầm tiếp xúc với người cùng sở thích. “Like-minded people” tương ứng với những người có mối quan tâm tương tự; contact hoặc meetings phù hợp cấu trúc câu hỏi và các biến thể được chấp nhận.",
+      "evidence": "them into contact with like-minded people. Another motive for collecting is the desire to find something special, or a",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Một số người dành cả đời săn tìm một món đồ đặc biệt. “Their whole lives” được rút thành “life-long”; hunt hoặc desire diễn đạt động lực theo đuổi, không phải vật đã tìm thấy.",
+      "evidence": "spend their whole lives in a hunt for this.",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Việc tìm kiếm cho cuộc sống mục đích, tránh cảm giác vô định; đạt mục tiêu rồi lại có thể thấy trống rỗng. Aimless hoặc empty mô tả cảm giác cần tránh, không phải cảm giác chiến thắng lúc mua bán.",
+      "evidence": "that otherwise feels aimless.",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Sưu tầm tem mở ra kiến thức về quốc gia, động thực vật và nhân vật in trên tem. Vì vậy giá trị được nhấn mạnh là educational, không phải giá trị mua bán của bộ sưu tập.",
+      "evidence": "is its educational value.",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Hoạt động được nói là đặc biệt phổ biến ở nam giới là ghi nhận những đoàn tàu đã thấy: trainspotting. Cần điền tên hoạt động, không suy rộng đặc điểm người tham gia sang mọi hình thức sưu tầm.",
+      "evidence": "of collecting, particularly among boys and men, was trainspotting.",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Bài kể vật liệu làm búp bê thay đổi qua nhiều thế kỷ, không đưa số người mua hoặc xu hướng tăng giảm. Vì thiếu thông tin về số người mua nên NOT GIVEN, dù vật liệu đã thay đổi.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Ở châu Âu thế kỷ XVI, vật liệu thông dụng là gỗ. Sáp và sứ thuộc những thế kỷ sau; câu hỏi chuyển vật liệu sang sai giai đoạn nên FALSE.",
+      "evidence": "from the wood that was standard in 16th century Europe, through the wax and porcelain of later centuries,",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Bài nêu cách xếp tem theo quốc gia hoặc chủ đề hình ảnh, không so sánh mức phổ biến của cách xếp theo kích thước. Thiếu phép so sánh ấy nên NOT GIVEN; không được coi một cách không liệt kê là ít phổ biến hơn.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Sưu tầm vật lạ có thể nhằm thể hiện cá tính riêng. Mong người khác thấy mình khác biệt phù hợp với ý thể hiện chủ nghĩa cá nhân của người sưu tầm; chọn TRUE, dù động cơ có thể không hoàn toàn có ý thức.",
+      "evidence": "show the collector’s individualism.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Tác giả phân biệt niềm vui thông thường với đam mê và cảm giác thỏa mãn mạnh khi sưu tầm. Bài cho rằng sự cuốn hút ấy vượt nhiều sở thích khác, nên TRUE.",
+      "evidence": "but the common factor in collecting is usually passion: pleasure is putting it far too mildly.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn A liệt kê nhiều ngành rồi bất ngờ giới thiệu khóa “Arson for Profit”. Trọng tâm là tên khóa học gây ngạc nhiên, nên vi; danh sách ngành học chỉ dẫn tới sự bất ngờ này.",
+      "evidence": "course called Arson for Profit’?",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn B đối chiếu mục đích đào tạo điều tra viên với nguy cơ thu hút chính người muốn phóng hỏa. Tiêu đề viii nêu đúng khả năng thu hút sai đối tượng, không phải lời phản đối toàn bộ ngành khoa học cháy.",
+      "evidence": "course for prospective arsonists to sign up for?",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn C phân biệt hai nghĩa của principles: quy tắc có hệ thống và nguyên tắc đạo đức. Tiêu đề ii bao quát sự nhập nhằng trong tên khóa; chỉ trùng từ marketing chưa đủ xác định ý chính.",
+      "evidence": "being principled in the sense of being ethical.",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn D áp dụng lý thuyết Kant về mục đích và phương tiện vào marketing. Đây là một lý thuyết được đưa vào bối cảnh bất ngờ, phù hợp iv, không đơn thuần là giới thiệu nhà triết học.",
+      "evidence": "that perhaps marketing is by definition principled.",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Đoạn E cho rằng một lĩnh vực được xác định bởi cả phương tiện và mục đích, và cả hai đều cần xem xét. Tiêu đề iii phản ánh đúng vai trò ngang nhau ấy.",
+      "evidence": "the end;hence both deserve scrutiny.",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Đoạn F cho thấy cùng kiến thức nghề nghiệp nhưng đổi mục đích có thể thành hành vi khác. Tiêu đề vii phù hợp sự thay đổi tên gọi theo mục đích và kết quả; các nghề chỉ là ví dụ cho nguyên tắc chung.",
+      "evidence": "achieve their divergent ends.",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Sinh viên đáp ứng yêu cầu học thuật có thể đăng ký khóa trong chương trình fire science. Chỗ trống hỏi ngành học, không hỏi tên khóa “Arson for Profit”; giữ đủ hai từ fire science.",
+      "evidence": "in our program in ‘fire science’. B Naturally, the course is intended for prospective arson investigators, who can learn",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Khóa học vốn dành cho điều tra viên về các vụ phóng hỏa. “Intended for” tương ứng với đối tượng dự kiến; điền investigators, không nhầm với arsonists là đối tượng ngoài mong muốn có thể tận dụng kiến thức.",
+      "evidence": "intended for prospective arson investigators, who can learn all the tricks of the trade for detecting whether a",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Người học được dạy xác định người gây cháy và xây dựng chuỗi chứng cứ. Chỗ trống hỏi thứ chứng minh ý định phạm tội, nên evidence; không phải tên hành vi hoặc người điều tra.",
+      "evidence": "establishing a chain of evidence for effective prosecution in a court of law.",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Chuỗi chứng cứ phục vụ việc truy tố hiệu quả tại tòa. “Successful” diễn đạt lại effective; danh từ cần điền là prosecution, không phải investigation vì bước này đã chuyển sang xử lý pháp lý.",
+      "evidence": "evidence for effective prosecution in a court of law.",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Bài liệt kê các khóa chuẩn bị cho nghề nghiệp, không cho biết khóa không hướng nghiệp có khó thu hút sinh viên không. Thiếu đánh giá về sức hút của nhóm khóa ấy nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Tác giả đặt câu hỏi tu từ liệu khóa này cũng rất hữu ích cho người định đốt nhà. Nó xác nhận nguy cơ sử dụng kiến thức sai mục đích, nên YES; phân biệt người học dự kiến với người cũng có thể lợi dụng khóa.",
+      "evidence": "be the perfect course for prospective arsonists to sign up for?",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Tác giả không phê phán chương trình khoa học cháy và hoan nghênh vai trò của nó trong chuyên nghiệp hóa nghề nghiệp. Điều này trái với nhận định chương trình quá hàn lâm nên không giúp chuẩn bị nghề chữa cháy: NO.",
+      "evidence": "fire science: they are highly welcome as part of the increasing professionalization of this and many other occupations.",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Sinh viên cuối cùng nêu mục tiêu rất khái quát là an toàn và phúc lợi xã hội. Đó không phải định nghĩa chi tiết như nhận định; sự đối lập giữa khái quát và chi tiết dẫn tới NO.",
+      "evidence": "their field, they eventually generalize to something like, ‘The safety and welfare of society,’ which seems right.",
+      "location": "Passage 3"
+    }
+  }
+}

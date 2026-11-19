@@ -1,0 +1,206 @@
+{
+  "id": "c18-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Các ống thẳng đứng trồng dâu tây, rau diếp và rau thơm. Vì strawberries và herbs đã có trong đề, loại cây còn thiếu là lettuces; cà chua nằm trong khay ngang nên không phù hợp.",
+      "evidence": "row upon row of lettuces; near those are aromatic herbs, such as basil, sage and peppermint. Opposite,",
+      "location": "Đoạn 1"
+    },
+    "2": {
+      "reason": "Sản lượng dự kiến lên tới 1.000 kg rau quả mỗi ngày. Up to tương ứng as much as, every day tương ứng daily; đáp án phải có lượng và đơn vị, không nhầm với diện tích mái nhà.",
+      "evidence": "will harvest up to 1,000 kg of perhaps 35 different varieties of fruit and vegetables, every day.",
+      "location": "Đoạn 2"
+    },
+    "3": {
+      "reason": "Con số 5–10% chỉ phần tiêu thụ thực phẩm của thành phố có thể được đáp ứng. Vì vậy điền consumption; đây không phải tỷ lệ diện tích đất hay tuyên bố trang trại đủ nuôi cả Paris.",
+      "evidence": "5% and 10% of consumption.’ Perhaps most significantly, however, this is a real-life showcase for the work",
+      "location": "Đoạn 2"
+    },
+    "4": {
+      "reason": "Hardy phản đối việc nông sản thâm canh được xử lý bằng nhiều thuốc trừ sâu. Ô hỏi thứ dùng khi trồng nên pesticides phù hợp; khí thải do chở hàng là vấn đề riêng, không điền vào ô này.",
+      "evidence": "something like 17 different pesticides, or that the intensive farming techniques that produced them are such huge",
+      "location": "Đoạn 4"
+    },
+    "5": {
+      "reason": "Giống thông thường được chọn để chịu được các chuyến vận chuyển dài. Withstand diễn đạt survive, nên journeys hoàn thành đúng ý; đây là tiêu chí độ bền khi vận chuyển, không phải hương vị.",
+      "evidence": "to withstand such substantial journeys, or that 80% of the price I pay goes to wholesalers and",
+      "location": "Đoạn 4"
+    },
+    "6": {
+      "reason": "Khoảng 80% thu nhập vào túi nhà bán buôn và công ty vận tải thay vì người sản xuất. Vì câu hỏi hỏi nhóm nhận được rất ít, đáp án là producers; đừng đảo với nhóm hưởng phần lớn tiền.",
+      "evidence": "transport companies, not the producers.’ Produce grown using this soil-free method, on the other hand – which",
+      "location": "Đoạn 4"
+    },
+    "7": {
+      "reason": "Bán gần nơi trồng cho phép chọn giống theo vị ngon thay vì khả năng chịu vận chuyển và lưu kho. Ô hỏi tiêu chí lựa chọn nông sản, nên flavour đúng, không phải quãng đường phân phối.",
+      "evidence": "that are small, intensely flavoured and resplendently red sprout abundantly from large plastic tubes. Peer inside and",
+      "location": "Đoạn 4"
+    },
+    "8": {
+      "reason": "TRUE: mái nhà là ví dụ canh tác trên mặt đất, còn bãi đỗ xe ngầm trồng nấm chứng minh canh tác dưới mặt đất. Bài xác nhận đủ cả hai vị trí trong nhận định.",
+      "evidence": "shipping containers, mushrooms in underground carparks. Aeroponic farming, he says, is ‘virtuous’. The equipment weighs little, can",
+      "location": "Đoạn 5"
+    },
+    "9": {
+      "reason": "NOT GIVEN: thiết bị được mô tả là nhẹ, dễ lắp đặt và rẻ. Không có thông tin thiết bị có thể được làm thủ công hay không; dễ lắp không đồng nghĩa tự chế được.",
+      "evidence": "",
+      "location": "Đoạn 5"
+    },
+    "10": {
+      "reason": "FALSE: hệ thống chỉ tiêu thụ một phần rất nhỏ điện năng của một số kỹ thuật khác. Nhận định dùng điện nhiều hơn đã đảo chiều so sánh; bài có thông tin đối lập nên không chọn NOT GIVEN.",
+      "evidence": "tiny fraction of the electricity used by some techniques. Produce grown this way typically sells at prices",
+      "location": "Đoạn 5"
+    },
+    "11": {
+      "reason": "TRUE: giá khí canh cao hơn nông sản thâm canh thông thường nhưng thấp hơn nông sản hữu cơ trồng bằng đất. Đề so với nhóm hữu cơ, không phải nhóm thông thường; nhầm đối tượng sẽ dẫn đến đáp án sai.",
+      "evidence": "classic intensive agriculture, are lower than soil-based organic growers. There are limits to what farmers can grow",
+      "location": "Đoạn 6"
+    },
+    "12": {
+      "reason": "FALSE: phần lớn sản phẩm chỉ phù hợp những tháng mùa hè. Điều này trái với khẳng định có thể trồng vào bất cứ lúc nào trong năm; chú ý phạm vi của most và any time.",
+      "evidence": "is suited to the summer months. ‘Root vegetables we cannot do, at least not yet,’ he says.",
+      "location": "Đoạn 6"
+    },
+    "13": {
+      "reason": "NOT GIVEN: đậu bị nhận xét là chiếm nhiều chỗ và đem lại ít lợi ích. Bài không so sánh thời gian lớn của đậu với rau khác; chiếm diện tích không chứng minh sinh trưởng chậm.",
+      "evidence": "",
+      "location": "Đoạn 6"
+    },
+    "14": {
+      "reason": "Đoạn B nói chỉ khai thác cây có giá trị kinh tế cao đã để lại nhiều cây chất lượng thấp. Đó là hậu quả xấu của việc chỉ chú trọng lợi nhuận, nên chọn B.",
+      "evidence": "past, Pennsylvania landowners were solely interested in the value of their trees as high-quality timber. The norm",
+      "location": "Đoạn B"
+    },
+    "15": {
+      "reason": "Đầu A liệt kê các thuộc tính làm nên giá trị của một cây. Đây là các khía cạnh đánh giá giá trị được hỏi, không phải một phương pháp chặt hay quản lý rừng cụ thể.",
+      "evidence": "management A A tree’s ‘value’ depends on several factors including its species, size, form, condition, quality, function,",
+      "location": "Đoạn A"
+    },
+    "16": {
+      "reason": "Đoạn C nêu khả năng biến sinh khối gỗ thành nhiên liệu chạy xe tải và ô tô. Run vehicles chỉ vận hành phương tiện bằng nhiên liệu, không phải làm thân xe bằng gỗ, nên chọn C.",
+      "evidence": "gasoline for lorries and cars. All these products are made primarily from low-use wood. Several tree- and",
+      "location": "Đoạn C"
+    },
+    "17": {
+      "reason": "Đoạn E có các ví dụ sâu hại tấn công cây. Pest tương ứng insects, nên E đáp ứng cả hai ý côn trùng và tác hại; đoạn chỉ nói suy thoái rừng nói chung chưa đủ.",
+      "evidence": "Cut. With the many pests and pathogens visiting forests including hemlock wooly adelgid, Asian longhorned beetle, emerald",
+      "location": "Đoạn E"
+    },
+    "18": {
+      "reason": "Đoạn B gọi những cây cho gỗ ít giá trị sử dụng là junk trees. Câu hỏi cần đoạn chứa tên gọi thay thế này, nên chọn B; không điền trực tiếp tên cây vào phiếu.",
+      "evidence": "people even call these ‘junk trees’, and they are abundant in Pennsylvania. These trees have lower economic",
+      "location": "Đoạn B"
+    },
+    "19": {
+      "reason": "Cách quản lý ở E loại bớt cây bị bệnh để cải thiện sức khỏe rừng. Diseased tương ứng sick; đó là mục đích của phương pháp B, không phải chặt cây chỉ để tạo thu nhập.",
+      "evidence": "reduce the number of sick trees and seek to manage the future spread of a pest problem.",
+      "location": "Đoạn E"
+    },
+    "20": {
+      "reason": "Phương pháp trong F đem lại tiền từ các lần khai thác kéo dài một thập kỷ hoặc hơn. Money tương ứng income, over a decade diễn đạt nhiều năm; vì vậy chọn phương pháp C.",
+      "evidence": "spread out over a decade or more. G Thinnings and dense and dead wood removal for fire",
+      "location": "Đoạn F"
+    },
+    "21": {
+      "reason": "Phương pháp ở F tạo lâm phần mà các cây ở giai đoạn phát triển gần nhau. Ý này tương ứng trees are close in age, nên chọn C; không nhầm với duy trì nhiều nhóm tuổi khác nhau.",
+      "evidence": "trees are at a similar point in their growth. It can also be used to develop a",
+      "location": "Đoạn F"
+    },
+    "22": {
+      "reason": "Một phần gỗ chết cần được dọn nhằm phòng cháy. Prevention tương ứng avoid the possibility of, nên điền fire; bài không khuyên dọn hết gỗ chết vì chúng vẫn có ích sinh thái.",
+      "evidence": "dead wood removal for fire prevention also center on the production of low-use wood. However, it is",
+      "location": "Đoạn G"
+    },
+    "23": {
+      "reason": "Ngọn cây để lại sau khai thác trả chất dinh dưỡng về đất. Đây là cơ chế cải thiện chất lượng đất được hỏi, nên nutrients đúng; không điền phần thân cây được bán làm gỗ.",
+      "evidence": "site so that their nutrients cycle back into the soil. In addition, trees with many cavities are",
+      "location": "Đoạn G"
+    },
+    "24": {
+      "reason": "Những hốc trong cây hư hại làm nơi ở cho nhiều sinh vật. Ô hỏi phần của cây cung cấp môi trường sống, nên cavities đúng, không phải tên chung của động vật trú ở đó.",
+      "evidence": "addition, trees with many cavities are extremely important habitats for insect predators like woodpeckers, bats and small",
+      "location": "Đoạn G"
+    },
+    "25": {
+      "reason": "Hawthorn được đưa làm ví dụ cây nhỏ có thể nuôi động vật và côn trùng. Sau such as cần tên cụ thể ấy; chỉ ghi trees không đáp ứng yêu cầu ví dụ.",
+      "evidence": "example, many species like hawthorn provide food for wildlife. Finally, rare species of trees in a forest",
+      "location": "Đoạn G"
+    },
+    "26": {
+      "reason": "Các loài cây hiếm cần được giữ để bảo tồn sự đa dạng. Should also stay tương ứng should be left to grow, nên tính từ cần điền là rare, không phải tình trạng bị bệnh.",
+      "evidence": "food for wildlife. Finally, rare species of trees in a forest should also stay behind as they",
+      "location": "Đoạn G"
+    },
+    "27": {
+      "reason": "Đoạn C nói các cơ quan và quốc gia hợp tác để giảm rủi ro từ rác vũ trụ. Collaborate diễn đạt cooperation; cả hành động phối hợp lẫn mục tiêu giảm nguy cơ đều có ở C.",
+      "evidence": "players in space are collaborating in new ways to avoid a shared threat.",
+      "location": "Đoạn C"
+    },
+    "28": {
+      "reason": "Moriba Jah muốn gìn giữ không gian để mọi người và các thế hệ sau cùng sử dụng. Đây là mục tiêu cá nhân được hỏi, nên F phù hợp hơn các đoạn chỉ mô tả kỹ thuật theo dõi.",
+      "evidence": "an airport, says Moriba Jah, an astrodynamicist at the University of Texas at Austin: planes line up",
+      "location": "Đoạn F"
+    },
+    "29": {
+      "reason": "Đoạn A kể một vụ va chạm lớn đã xảy ra trên quỹ đạo và lượng mảnh vỡ nó tạo ra. Đề hỏi sự kiện thực tế, không phải cảnh báo khả năng va chạm trong tương lai.",
+      "evidence": "Satellites, rocket shards and collision debris are creating major traffic risks in orbit around the planet. Researchers",
+      "location": "Đoạn A"
+    },
+    "30": {
+      "reason": "Đoạn E so sánh quản lý vật thể trên quỹ đạo với hệ thống giao thông hiệu quả dưới mặt đất. Đề cần phép so sánh giữa hai hệ thống, nên chọn E, không chỉ nơi nhắc dữ liệu vệ tinh.",
+      "evidence": "debris are creating major traffic risks in orbit around the planet. Researchers are working to reduce these",
+      "location": "Đoạn E"
+    },
+    "31": {
+      "reason": "Đoạn B nhắc việc phát triển một taxonomy cho rác vũ trụ. Từ này chỉ hệ thống phân loại, tương ứng classify; phân loại khác với xác định vị trí từng vật thể.",
+      "evidence": "Others are developing taxonomies of space debris",
+      "location": "Đoạn B"
+    },
+    "32": {
+      "reason": "Ủy ban ban hành hướng dẫn nhằm đạt tính bền vững của hoạt động vũ trụ. Đề đã cho tổ chức và hành động tư vấn, nên danh từ mục tiêu còn thiếu là sustainability.",
+      "evidence": "developed guidelines on space sustainability. Those include inactivating satellites at the end of their useful life by",
+      "location": "Đoạn C"
+    },
+    "33": {
+      "reason": "Khi vệ tinh hết hoạt động, cần loại bỏ nhiên liệu dư cùng vật liệu chịu áp suất. Leftover diễn đạt unused; vì phần áp suất đã có trong đề, ô còn lại phải là fuel.",
+      "evidence": "move consumes time and fuel that could otherwise be used for the spacecraft’s main job. B Concern",
+      "location": "Đoạn C"
+    },
+    "34": {
+      "reason": "Nhiên liệu dư và vật liệu chịu áp suất có thể gây nổ vệ tinh. Ô hỏi hậu quả cần phòng ngừa nên điền explosions; collision chỉ một cơ chế nguy hiểm khác, không phải nội dung câu này.",
+      "evidence": "that might lead to explosions. The intergovernmental groups also advise lowering satellites deep enough into the atmosphere",
+      "location": "Đoạn C"
+    },
+    "35": {
+      "reason": "Krag lưu ý nhà vận hành phá sản khó ưu tiên dọn vệ tinh của mình. Ô cần tính từ xác định nhóm nhà vận hành ấy, nên bankrupt đúng; không phải tất cả các nhà vận hành đều được nhận xét như vậy.",
+      "evidence": "that fail or go bankrupt?’ he asks. They are probably not going to spend money to remove",
+      "location": "Đoạn C"
+    },
+    "36": {
+      "reason": "Marlon Sorge cho rằng biết chính xác vị trí vật thể sẽ giúp tránh nguy hiểm va chạm. Nội dung này thuộc người ở lựa chọn C; trọng tâm là độ chính xác vị trí, không đơn thuần đếm số mảnh rác.",
+      "evidence": "a problem,’ says Marlon Sorge, a space-debris specialist at the Aerospace Corporation in El Segundo, California. E",
+      "location": "Đoạn D"
+    },
+    "37": {
+      "reason": "Jah muốn không gian dành cho tất cả mọi người và được bảo tồn cho tương lai. Cả quyền tiếp cận lẫn trách nhiệm với thế hệ sau cùng có mặt, nên người phù hợp là D.",
+      "evidence": "free and useful for generations to come.’ Until that happens, he argues, the space community will continue",
+      "location": "Đoạn F"
+    },
+    "38": {
+      "reason": "Krag nói chỉ khoảng một nửa nhà vận hành làm theo mục tiêu dọn vệ tinh. Như vậy khuyến nghị bị nhiều bên bỏ qua, tương ứng widely ignored; chọn người ở đáp án B.",
+      "evidence": "so far, only about half of all missions have abided by this 25-year goal, says Holger Krag,",
+      "location": "Đoạn C"
+    },
+    "39": {
+      "reason": "Jah nêu hai cơ sở dữ liệu ghi hai quỹ đạo khác nhau cho cùng một vật thể. Đó là thông tin xung đột về vị trí vệ tinh, không chỉ thiếu thông tin; người tương ứng là D.",
+      "evidence": "smashed into an inactive Russian communications satellite called Cosmos-2251, creating thousands of new pieces of space shrapnel",
+      "location": "Đoạn F"
+    },
+    "40": {
+      "reason": "Carolin Frueh cảnh báo nếu tiếp tục như hiện tại, rác quỹ đạo có thể vượt ngưỡng không thể đảo ngược. Ý không thể khắc phục hậu quả ứng với nhận định trong câu hỏi, nên chọn người ở lựa chọn A.",
+      "evidence": "we will reach a point of no return",
+      "location": "Đoạn B"
+    }
+  }
+}

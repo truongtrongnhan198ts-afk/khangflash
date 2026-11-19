@@ -1,0 +1,206 @@
+{
+  "id": "c11-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn về canh tác trong nhà nói cà chua và các sản phẩm khác đã được trồng nhà kính từ lâu. Điền tomatoes; đây là ví dụ có sẵn, không phải dự án tương lai.",
+      "evidence": "hothouse production of tomatoes",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "2": {
+      "reason": "Nông trại thẳng đứng đặt ngay trung tâm đô thị để giảm quãng đường vận chuyển. Điền urban centres; không điền consumers vì đó là người nhận hàng, không phải địa điểm.",
+      "evidence": "in the heart of urban centres",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "3": {
+      "reason": "Khí methane từ phân hủy phần cây không ăn được giúp trả năng lượng vào lưới. Danh từ cần điền là energy, không phải methane vốn là nguồn dùng để tạo ra nó.",
+      "evidence": "return energy to the grid",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "4": {
+      "reason": "Không cần máy kéo, cày và vận chuyển sẽ giảm sử dụng nhiên liệu hóa thạch. Điền fossil fuel; energy rộng hơn và bài vẫn nói hệ thống tiêu thụ năng lượng.",
+      "evidence": "reduce fossil fuel use",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "5": {
+      "reason": "Điểm bất lợi là cây trong nhà nhiều tầng cần ánh sáng nhân tạo, có thể rất tốn kém. Ô trước light cần artificial, không phải natural vốn là nguồn bị thiếu.",
+      "evidence": "the plants would require artificial light",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "6": {
+      "reason": "Biến thể của hệ thống dùng các khay xếp chồng chạy trên đường ray để cây nhận đủ nắng. Điền trays hoặc stacked trays, không lấy rails là đường chạy.",
+      "evidence": "stacked trays that move on rails",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "7": {
+      "reason": "Đoạn cuối cho rằng dùng mái nhà đô thị có khả năng xảy ra cao hơn trồng toàn bộ thức ăn trong nhà chọc trời. Điền rooftops; skyscrapers chỉ là khả năng xa hơn.",
+      "evidence": "the space available on urban rooftops",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "8": {
+      "reason": "Bài dùng ước tính bảo thủ theo xu hướng dân số hiện tại, không so sánh cách dự báo gần đây với trước kia. Chưa có thông tin về thay đổi phương pháp nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "9": {
+      "reason": "Đoạn đầu nói quản lý kém làm đất bị tàn phá, sau đó mô tả con người biến vùng tự nhiên thành hoang mạc. Nhận định con người gây một phần phá hủy đất canh tác phù hợp: TRUE.",
+      "evidence": "poor management practices",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "10": {
+      "reason": "Điều kiện được kiểm soát cho phép sản xuất mọi cây trồng quanh năm. Nhận định phụ thuộc mùa đối lập với khả năng này, nên FALSE, không nhầm với canh tác ngoài trời.",
+      "evidence": "year-round production of all crops",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "11": {
+      "reason": "Bài liên hệ khí hậu biến đổi nhanh với lũ, hạn, bão phá hủy hàng triệu tấn cây trồng. Nhận định một phần thiệt hại do biến đổi khí hậu phù hợp nên TRUE.",
+      "evidence": "destroying millions of tons of valuable crops",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "12": {
+      "reason": "Hệ thống được kỳ vọng trồng hữu cơ, loại nhu cầu thuốc diệt cỏ, trừ sâu và phân bón. Nói một số cây vẫn cần phân bón trái khẳng định trong bài nên FALSE.",
+      "evidence": "eliminating the need for herbicides, pesticides and fertilisers",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "13": {
+      "reason": "Hệ thống được mô tả làm giảm đáng kể nhiều bệnh truyền nhiễm liên quan quá trình sản xuất nông nghiệp. Điều này hỗ trợ đáp án TRUE về giảm khả năng ảnh hưởng bệnh, không phải loại mọi bệnh hoàn toàn.",
+      "evidence": "greatly reduce the incidence of many infectious diseases",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "14": {
+      "reason": "Hai kênh từng được nối bằng 11 âu thuyền trước khi tháo năm 1933. Falkirk Wheel là khôi phục kết nối, không phải lần đầu trong lịch sử, nên FALSE.",
+      "evidence": "Historically, the two canals had been joined",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "15": {
+      "reason": "Bài kể nhiều thiết kế dự thi và chọn phương án thắng, nhưng không nói có ai phản đối thiết kế lúc đầu. Có nhiều lựa chọn không tự chứng minh sự phản đối: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "16": {
+      "reason": "Các bộ phận được chế tạo rồi lắp thử tại nhà máy Butterley ở Derbyshire trước khi tháo, chở đến Falkirk. Nhận định ban đầu lắp tại nơi chế tạo đúng: TRUE.",
+      "evidence": "constructed and assembled",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "17": {
+      "reason": "Bài nói từng bu-lông được siết bằng tay, nhưng không so với mọi hệ thống nâng thuyền khác. Tính duy nhất của bánh xe quay không chứng minh duy nhất về bu-lông: NOT GIVEN.",
+      "evidence": "each bolt was hand-tightened",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "18": {
+      "reason": "Thuyền vào sẽ đẩy ra lượng nước có trọng lượng bằng nó, nên gondola luôn nặng như nhau. Nói trọng lượng thay đổi theo kích cỡ thuyền đảo ngược nguyên lý, nên FALSE.",
+      "evidence": "These gondolas always weigh the same",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "19": {
+      "reason": "Bánh xe không nâng đủ 35m vì phải tính đến tường Antonine có giá trị lịch sử; thuyền đi đường hầm bên dưới. Nhận định công trình cân nhắc di tích gần đó đúng: TRUE.",
+      "evidence": "the historically important Antonine Wall",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "20": {
+      "reason": "Hai cửa thép thủy lực nâng lên để cách ly gondola với nước trong bến. Nhãn gates chỉ bộ phận đóng mở ấy, không phải âu thuyền ở đoạn nối kênh.",
+      "evidence": "Two hydraulic steel gates are raised",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "21": {
+      "reason": "Một kẹp thủy lực giữ tay bánh xe không chuyển động khi gondola cập bến, rồi được tháo để quay. Nhãn clamp chỉ bộ phận hãm, không phải động cơ.",
+      "evidence": "A hydraulic clamp",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "22": {
+      "reason": "Động cơ làm quay trục trung tâm, và trục nối với các tay ngoài bánh xe. Điền axle vào trục trên hình; cogs là các bánh răng giữ gondola cân bằng.",
+      "evidence": "rotate the central axle",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "23": {
+      "reason": "Hệ bánh răng quay theo hướng đối nhau để gondola luôn thẳng và ngang khi bánh xe xoay. Nhãn cogs gọi đúng bánh răng, không phải tay quay.",
+      "evidence": "a simple gearing system",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "24": {
+      "reason": "Khi lên đỉnh, thuyền đi thẳng vào cầu dẫn nước cao hơn bến 24m. Nhãn aqueduct chỉ đoạn dẫn nước này, không phải đường hầm đi dưới tường.",
+      "evidence": "the boat passes straight onto the aqueduct",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "25": {
+      "reason": "Thuyền phải đi dưới tường Antonine qua đường hầm. Nhãn wall chỉ di tích phía trên, không phải tên của đường hầm hoặc cầu dẫn nước.",
+      "evidence": "Boats travel under this wall via a tunnel",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "26": {
+      "reason": "Phần chênh cao 11m còn lại được khắc phục bằng cặp âu thuyền trước khi vào Union Canal. Nhãn locks là hai ngăn nâng nước đó, không phải hai cửa gondola.",
+      "evidence": "a pair of locks",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn D nói dự án aerosol mô phỏng núi lửa Pinatubo từng làm nhiệt độ toàn cầu giảm tạm thời. Câu hỏi tìm dự án dựa hiện tượng tự nhiên trước đó nên chọn D.",
+      "evidence": "modelled on historic volcanic explosions",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn B dẫn lễ duyệt binh Moscow có trời quang nhờ rải chất làm tan mây. Đây là ví dụ geo-engineering đã hoạt động ở quy mô địa phương, không chỉ kế hoạch.",
+      "evidence": "shown to work, at least on a small localised scale",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn A định nghĩa geo-engineering là chủ ý can thiệp môi trường ở quy mô lớn. Câu hỏi tìm định nghĩa thông dụng nên chọn A, không phải ví dụ thực hiện ở B.",
+      "evidence": "intentional large-scale manipulation of the environment",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "30": {
+      "reason": "Các tàu vũ trụ rất nhỏ hợp thành tấm che trong suốt khúc xạ ánh nắng. Sunshade là sản phẩm tạo ra, còn spacecraft là vật được đưa lên quỹ đạo.",
+      "evidence": "sunlight-refracting sunshade",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "31": {
+      "reason": "Một dự án thả sắt xuống biển để kích thích tảo phát triển. Ô chỉ vật được cho vào biển cần iron, không phải algae là sinh vật được kích thích.",
+      "evidence": "depositing iron in the ocean",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "32": {
+      "reason": "Mục đích thả sắt là kích thích tảo sinh sôi, nên điền algae. Phải phân biệt nguyên liệu iron ở câu trước với kết quả sinh học được hỏi ở đây.",
+      "evidence": "the growth of algae",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "33": {
+      "reason": "Aerosol chứa lưu huỳnh tạo mây làm giảm ánh sáng tới mặt đất. Ô mục tiêu cần clouds; sulphur là thành phần đầu vào chứ không phải lớp che tạo ra.",
+      "evidence": "sulphur dioxide would form clouds",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "34": {
+      "reason": "Dự án Greenland dùng cáp căng gia cường để giữ khối băng không trôi ra biển. Điền cables; icebergs là vật được ngăn chuyển động.",
+      "evidence": "reinforced high-tension cables",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "35": {
+      "reason": "Cây bạch dương rụng lá vào mùa đông để tuyết phản xạ bức xạ. Snow là bề mặt phản xạ, không phải chính lá cây hoặc lớp mây.",
+      "evidence": "radiation to be reflected by the snow",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "36": {
+      "reason": "Đổi hướng sông Nga sẽ đưa nước lạnh vào vùng hình thành băng. Ô cần rivers; nước là thứ được chuyển, không phải đối tượng có hướng dòng chảy bị đổi.",
+      "evidence": "Re-routing Russian rivers",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "37": {
+      "reason": "Rasch cảnh báo nếu dừng can thiệp thì hành tinh nhanh trở lại tình trạng trước đó, khoảng 10–20 năm. B khớp tác dụng có thể không lâu bền, không phải Lunt bàn quá mức.",
+      "evidence": "within ten to twenty years",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "38": {
+      "reason": "Sommerkorn nói tình thế do con người gây ra khiến không nên loại bỏ nghiên cứu kỹ chủ đề và khả năng này. D khớp đáng khảo sát, không có nghĩa ủng hộ triển khai mọi dự án.",
+      "evidence": "we shouldn't exclude thinking thoroughly about this topic",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "39": {
+      "reason": "Lunt lo nhiệt độ giảm quá đà và nói kế hoạch Angel phải vận hành nửa công suất. C đúng về giới hạn mức hiệu quả, không phải nghi ngờ tác dụng ngắn hạn của Rasch.",
+      "evidence": "operate at half strength",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "40": {
+      "reason": "Angel nhấn mạnh dự án không thay thế phát triển năng lượng tái tạo, giải pháp lâu dài duy nhất. A đúng về tiếp tục nghiên cứu nguồn ngoài nhiên liệu hóa thạch.",
+      "evidence": "no substitute for developing renewable energy",
+      "location": "Passage 3 · Reading Passage 3"
+    }
+  }
+}

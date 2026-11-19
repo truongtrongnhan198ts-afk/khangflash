@@ -1,0 +1,206 @@
+{
+  "id": "c16-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Bài nói có 56 hình vẽ rải rác ở Anh nhưng đại đa số nằm tại các hạt miền nam. Vì vậy nhận định phần lớn tập trung ở một khu vực nhất định là TRUE; đừng dừng ở riêng ý “rải rác”.",
+      "evidence": "with the vast majority on the chalk downlands",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Bài liệt kê ngựa, người khổng lồ, thập giá và huy hiệu nhưng không so sánh số hình ngựa với mọi sinh vật khác. Không đủ dữ liệu để xác nhận loại nào nhiều nhất, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Việc đo lại niên đại cho thấy ngựa trắng cổ hơn mốc thời gian từng được ấn định. Điều ấy xác nhận nhận thức trước đó về tuổi của hình vẽ có sai lệch, nên TRUE.",
+      "evidence": "even older than its previously assigned",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Một số sử gia tin hình người Wilmington có từ tiền sử, những người khác cho rằng một tu sĩ tạo ra nó thời trung đại. Hai quan điểm đối lập chứng tỏ chưa thống nhất, nên FALSE.",
+      "evidence": "While many historians are convinced",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Người ta bỏ lớp cỏ bên trên để lộ lớp đá phấn trắng sẵn có bên dưới. Câu hỏi nói đặt đá phấn lên sườn đồi đã đảo ngược phương pháp, nên FALSE.",
+      "evidence": "remove the overlying grass",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Đoạn về bảo dưỡng nói đại đa số hình trên đồi đã biến mất khi người dân ngừng dọn cỏ. “Disappeared” diễn đạt lại không còn nhìn thấy, nên TRUE.",
+      "evidence": "the vast majority of hill figures have disappeared",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Qua nhiều thế kỷ, người ta không phải lúc nào cũng cắt đúng vị trí cũ nên đường viền biến đổi. Hình dạng vì thế có thể khác nguyên gốc; nhận định thay đổi theo thời gian là TRUE.",
+      "evidence": "the outlines would sometimes change",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Tác giả gọi ngựa trắng nổi tiếng nhưng không giải thích rằng nó nổi tiếng vì kích thước. Việc biết kích thước và độ nổi tiếng không tự thiết lập quan hệ nguyên nhân, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Hình ngựa ở dưới một tuyến đường thời đồ đá mới mang tên Ridgeway. Ô trống sau “known as” hỏi tên con đường, không hỏi tên làng hay lâu đài gần đó; điền Ridgeway.",
+      "evidence": "below the Ridgeway, a long-distance",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Bằng chứng viết sớm nhất nằm trong các tài liệu của tu viện Abingdon, có nhắc White Horse Hill. Đề hỏi loại nguồn ghi chép, nên documents; không điền tên tu viện là nơi tạo ra tài liệu.",
+      "evidence": "mentioned in documents from the nearby Abbey of Abingdon",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Phương pháp phát quang kích thích quang học được áp dụng lên đất lấy từ các lớp dưới hình ngựa. Vật liệu được kiểm tra là soil; ngày tháng là kết quả đo chứ không phải mẫu thử.",
+      "evidence": "on soil from two of the lower layers",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Epona được thờ như vị bảo hộ loài ngựa và vì liên hệ với khả năng sinh sản. Ô trống hỏi lĩnh vực liên quan tới nữ thần, nên fertility; không chọn tên một nữ thần khác.",
+      "evidence": "her associations with fertility",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Rhiannon được nêu như một nữ thần trong thần thoại Wales, thường xuất hiện cưỡi ngựa trắng. Đề hỏi tên nữ thần Wales, nên Rhiannon; Epona thuộc giả thuyết Celtic được đề cập trước.",
+      "evidence": "such as Rhiannon, described in later Welsh mythology",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn mở đầu đặt vi sinh vật trong lịch sử rất dài và dự đoán chúng còn tồn tại sau con người. Vì vậy D nêu đúng ý về thời gian tồn tại tương lai; đoạn không so sánh số lượng ở động vật và thực vật.",
+      "evidence": "will outlive us",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Điều khiến tác giả ấn tượng là ở một người bình thường, tế bào vi sinh vật nhiều hơn tế bào người. Chọn C. Nêu các vùng cơ thể có cộng đồng khác nhau không có nghĩa một số vùng có rất ít vi sinh vật.",
+      "evidence": "the number of human cells in the average person",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn E lần lượt kể quá trình các nhà khoa học nhận ra vai trò vi sinh vật. Chức năng của đoạn là giải thích một phát hiện hình thành thế nào: A; không phải so sánh hai học thuyết hoặc trình bày chi tiết cơ chế gây bệnh.",
+      "evidence": "the research of French biologist Louis Pasteur",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "17": {
+      "reason": "Phần lớn vi sinh vật góp phần duy trì sức khỏe, chỉ một số rất nhỏ gây bệnh. “Disease” trong bài tương ứng illness trong danh sách, nên G; không đánh đồng mọi vi sinh vật với tác nhân gây hại.",
+      "evidence": "fewer than one hundred",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Mối quan hệ giữa người và vi sinh vật là cộng sinh, có tác động lẫn nhau thay vì đơn giản chia thành bạn và thù. Ý đó gần với partnership, chọn B.",
+      "evidence": "we have a symbiotic relationship",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Bài nêu chế độ ăn không lành mạnh là một trong các yếu tố làm mất cân bằng hệ vi khuẩn. “Unhealthy diets” tương ứng dinh dưỡng kém, nên nutrition, chọn H; không nhầm với vấn đề vệ sinh ở ô kế tiếp.",
+      "evidence": "our unhealthy, low-fibre diets",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Yếu tố còn lại là quá tập trung vào vệ sinh, bên cạnh lạm dụng kháng sinh và ăn uống không lành mạnh. “Hygiene” tương ứng cleanliness, chọn E; đây là vấn đề sạch sẽ, không phải dinh dưỡng.",
+      "evidence": "Our obsession with hygiene",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Tác giả lưu ý sản phẩm kháng khuẩn trong gia đình có thể không đem lại hiệu quả mong đợi. “Household” tương ứng “in the home”; câu hỏi giữ mức độ có thể không hiệu quả, nên YES.",
+      "evidence": "excessive use of household detergents and antibacterial products",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Tác giả cho rằng tiếp xúc sớm với nhiều loại vi sinh vật có thể có lợi cho trẻ. Điều này đi ngược chủ trương cho trẻ tiếp xúc với càng ít vi khuẩn càng tốt, nên NO.",
+      "evidence": "early exposure to a diverse range of bacteria",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Đoạn điểm sách có nêu các nghiên cứu trường hợp nhưng không đánh giá số lượng của chúng là thừa. Không thể biến việc có nhiều ví dụ thành lời chê “nhiều hơn cần thiết”; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Tác giả gọi một số ví dụ kém hấp dẫn hơn rồi đưa trường hợp vi khuẩn giúp mực tránh bị tấn công. Nhận định ví dụ ấy có sức hút hạn chế phù hợp với lời đánh giá chung, nên YES.",
+      "evidence": "Among the less appealing case studies",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Bài nhắc thử nghiệm kiểm soát sốt xuất huyết nhưng không nêu kết quả thành công đến đâu hoặc có vượt mong đợi không. Thiếu cả kết quả lẫn đánh giá mức độ bất ngờ, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Ý đưa vi sinh vật có lợi vào tường bệnh viện được trình bày như triển vọng tương lai. Câu hỏi chuyển thành việc đã được thực hiện; khác biệt thời điểm khiến nhận định sai, nên NO.",
+      "evidence": "In the future, our ability to manipulate microbes",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu đặt nghi vấn với cách hiểu trí khôn như phẩm chất riêng, ổn định của một số người. Vì một giả định nền tảng có thể sai, chọn B; đoạn không khẳng định đây là năng lực chỉ riêng loài người.",
+      "evidence": "most of us have the ability to make wise decisions",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Grossmann nhấn mạnh vai trò của các yếu tố hoàn cảnh mà trước đây nghiên cứu đã xem nhẹ. Chọn C về những ảnh hưởng bị đánh giá thấp; không suy thành toàn bộ dữ liệu cũ đều không đáng tin.",
+      "evidence": "experiential, situational, and cultural factors are even more powerful",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Một người có thể thể hiện mức độ khôn ngoan khác nhau trong những tình huống khác nhau. Vì vậy B đúng; tác giả không coi trí khôn chỉ là đặc điểm tính cách cố định hoặc luôn tăng theo tuổi.",
+      "evidence": "varies dramatically across experiential and situational contexts",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn E khuyến nghị lùi khỏi góc nhìn bản thân và xem tình huống như người ngoài cuộc. Đây là một chiến lược giúp suy xét khôn ngoan hơn, nên D; không phải ví dụ một kiểu người vốn thông thái.",
+      "evidence": "third-party perspective",
+      "location": "Passage 3 · Đoạn E"
+    },
+    "31": {
+      "reason": "Đặc điểm thứ nhất là biết khiêm tốn về giới hạn kiến thức của mình. “Humility” trong bài tương ứng modesty trong danh sách, chọn D; không có nghĩa thiếu kiến thức hoàn toàn.",
+      "evidence": "intellectual humility",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Người suy xét khôn ngoan nhận biết người khác có thái độ và niềm tin khác mình. Những khác biệt đó là quan điểm, tương ứng opinions, chọn A; không phải khác biệt về khả năng trí tuệ.",
+      "evidence": "different attitudes and beliefs",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Bài nói cần có góc nhìn rộng hơn; “Wider perspectives” tương ứng một broad view trong đề. Vì vậy chọn C. Vị trí thông tin có thể quay lại trước ý về quan điểm khác biệt, không nhất thiết theo thứ tự ô.",
+      "evidence": "perspectives wider than the issue at hand",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Grossmann đề xuất nhìn tình huống từ góc độ người thứ ba thay vì đặt bản thân ở trung tâm. Từ phù hợp trong danh sách là objectivity, tức sự khách quan, chọn F.",
+      "evidence": "third-party perspective",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Khi tránh góc nhìn ngôi thứ nhất, con người quan tâm hơn đến công lý và tính vô tư. Hai ý ấy tương ứng fairness, chọn G; đó là một chuẩn mực đạo đức, không phải bản thân năng lực tư duy.",
+      "evidence": "justice and impartiality",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Trong thí nghiệm về triển vọng việc làm, người tham gia được phân vào hai nhóm góc nhìn. “Assigned” có nghĩa được chỉ định, không phải tự chọn, nên nhận định họ được lựa chọn là FALSE.",
+      "evidence": "Participants in the group assigned to the ‘distant observer’ role",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Bài mô tả các cặp đôi tham gia nghiên cứu nhưng không nói họ biết mục đích nghiên cứu là suy xét khôn ngoan. Không nên suy từ việc đồng ý tham gia thành hiểu mục tiêu cụ thể; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Các đôi được nói là có quan hệ lâu dài, nhưng bài không kiểm tra hoặc kết luận thời gian quen nhau làm thay đổi kết quả. Có nhắc độ dài quan hệ không có nghĩa chứng minh ảnh hưởng của nó; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Cả thí nghiệm về nghề nghiệp lẫn quan hệ đôi lứa đều cho thấy góc nhìn tách khỏi bản thân giúp suy xét khôn ngoan hơn. “Detached viewpoint” chính là cách nhìn khách quan này; TRUE.",
+      "evidence": "were significantly more likely to rely on wise reasoning",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Đoạn kết cho rằng trí thông minh giải thích rất ít sự khác biệt về mức độ khôn ngoan. Vì vậy nhận định trí khôn chỉ phụ thuộc rất hạn chế vào trí thông minh là TRUE; hai khái niệm không đồng nhất.",
+      "evidence": "only a small positive relationship between wise thinking and crystallized intelligence",
+      "location": "Passage 3"
+    }
+  }
+}

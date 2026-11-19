@@ -1,0 +1,206 @@
+{
+  "id": "c13-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Thân dừa cung cấp gỗ làm nhà và thay gỗ cứng đang bị đe dọa trong ngành đồ nội thất. Chỗ trống hỏi công dụng thứ hai, nên furniture; construction là thành phần của cụm ngành, không phải vật cần sản xuất.",
+      "evidence": "in the furniture construction industry.",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Nhựa lấy từ cuống hoa có thể làm thức uống hoặc đun cô để sản xuất đường dùng nấu ăn. Điền sugar, sản phẩm của quá trình đun; không nhầm với sap là nguyên liệu ban đầu.",
+      "evidence": "produce a type of sugar used for cooking. Coconut palms produce as many as seventy fruits per year, weighing",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Lớp giữa nhiều xơ cho sợi dừa, đặc biệt quan trọng trong sản xuất dây thừng. Điền ropes, sản phẩm được làm từ sợi; không phải coir là tên của chính loại sợi ấy.",
+      "evidence": "important in manufacturing ropes.",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Lớp trong cùng là vỏ cứng, từ đó có thể tạo than dùng trong công nghiệp và nấu ăn. Charcoal là sản phẩm thu được; không phải shell vốn đã gọi lớp vỏ trong câu hỏi.",
+      "evidence": "An important product obtained from the shell is charcoal, which is widely used in various industries as well",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Khi bổ đôi, vỏ dừa được dùng làm bát tại nhiều nơi ở châu Á. “When halved” tương ứng với broken in half; bowls chỉ vật dụng tạo thành, không phải công đoạn chế biến.",
+      "evidence": "are also used as bowls in many parts of Asia. Inside the shell are the nutrients (endosperm) needed by",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Nước dừa chứa hormone khuyến khích cây khác phát triển nhanh và cho năng suất cao. Chỗ trống hỏi chất có ích cho cây, nên hormones; không điền tên đồ uống được người dùng.",
+      "evidence": "but also provides the hormones which encourage other plants to grow more rapidly and produce higher yields.",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Cùi dừa khô được chế thành dầu và sữa dừa, dùng nấu ăn và làm mỹ phẩm. Cosmetics là lĩnh vực sử dụng bổ sung sau “as well as”, không phải sản phẩm dầu đã được nêu trước đó.",
+      "evidence": "the world, as well as in cosmetics.",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Glycerine, một dẫn xuất của chất béo dừa, góp phần vào phát minh thuốc nổ dynamite. Điền dynamite, thứ chứa thành phần ấy; không phải glycerine đã làm từ khóa định vị trong câu hỏi.",
+      "evidence": "nitroglycerine-based invention: dynamite. Their biology would appear to make coconuts the great maritime voyagers and coastal colonizers of the",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Hạt dừa có thể nảy mầm và bén rễ ngay dưới nắng nhiệt đới gay gắt. Nhận định cần bóng râm nói ngược khả năng ấy, nên FALSE; chịu được nắng là căn cứ trực tiếp, không phải suy đoán về nơi sống.",
+      "evidence": "to the full glare of the tropical sun, coconut seeds are able to germinate and root.",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Bài mô tả dừa được đưa từ Nam và Đông Nam Á qua châu Phi tới bờ đông châu Mỹ. Nhận định chuyển từ châu Mỹ sang châu Á đảo hướng di chuyển, nên FALSE.",
+      "evidence": "moved coconuts from South and Southeast Asia to Africa and then across the Atlantic to the east coast",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Bài bàn giả thuyết nguồn gốc dừa ở bờ tây châu Mỹ nhưng không so sánh giống dừa bờ tây với bờ đông. Thiếu thông tin khác loại nên NOT GIVEN; khác địa điểm không tự chứng minh khác giống.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Ở châu Á có đa dạng dừa gắn với hàng nghìn năm sử dụng của con người và không có họ hàng mọc hoang. Điều này hỗ trợ nhận định những giống được nói tới là giống trồng, nên TRUE.",
+      "evidence": "there are no relatives growing in the wild.",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài so sánh giả thuyết xuất xứ châu Á và châu Mỹ, không mô tả khác biệt phương pháp trồng giữa châu Mỹ và Thái Bình Dương. Thiếu đối chiếu cách canh tác nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Nghiên cứu được nêu cùng ý cha mẹ nói kiểu trẻ em trong tương tác riêng từng bé rất quan trọng. B phù hợp: mức trò chuyện một-một tăng thì bập bẹ và số từ sau này cũng tăng.",
+      "evidence": "in a one-on-one context,’ she adds.",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Kuhl dùng hoạt động não để cho thấy nghe giọng trẻ em thúc đẩy não bé tập kỹ năng nói. C nối đúng đầu vào nghe được với việc bắt đầu luyện tạo lời, không chỉ sở thích đối với giọng người khác.",
+      "evidence": "brains to start practicing their language skills.",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "VanDam cho rằng cách nói khác nhau của cha và mẹ cho trẻ nhiều kiểu lời nói để tập. A là lợi ích từ sự khác biệt giữa hai người, không phải khuyến nghị cả cha lẫn mẹ nói giống hệt nhau.",
+      "evidence": "has a wider repertoire of kinds of speech to practice,’ says VanDam. D Scientists from the University of Washington",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Nghiên cứu của B cho thấy cha mẹ càng dùng nhiều giọng trẻ em, trẻ càng bập bẹ nhiều. Đây là quan hệ giữa lượng đầu vào và lượng phát âm, khác với nghiên cứu não khi nghe âm tiết.",
+      "evidence": "used, the more their youngsters began to babble.",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Nhóm Washington State trang bị thiết bị ghi âm và phần mềm nhận dạng lời nói cho cha mẹ. “Specialised computer programs” đã tương ứng phần mềm; chỗ trống còn lại là recording devices.",
+      "evidence": "parents with recording devices and speech-recognition software to study the way they interacted with their youngsters during a",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Các bà mẹ nâng giọng như dự kiến, nhưng các ông bố không thay đổi cao độ theo cách đó khi nói với con. Chỗ trống hỏi nhóm ít sửa kiểu nói thông thường, nên dads, không phải moms.",
+      "evidence": "same thing. Dads didn’t raise their pitch or fundamental frequency when they talked to kids.’ Their role may",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Bridge hypothesis cho rằng giọng của cha tạo cầu nối tới lời nói trẻ sẽ nghe ngoài xã hội. Câu hỏi hỏi tên giả thuyết, nên cần đủ hai từ bridge hypothesis thay vì chỉ chép nội dung giải thích.",
+      "evidence": "called the bridge hypothesis, which dates back to 1975.",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Trẻ tập một kiểu lời nói với mẹ và kiểu khác với cha, nhờ vậy có phạm vi kiểu nói rộng hơn. Wider tương ứng với expand; repertoire là danh từ chỉ vốn kiểu lời nói ấy.",
+      "evidence": "has a wider repertoire of kinds of speech to practice,’ says VanDam. D Scientists from the University of Washington",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Các trẻ trong nghiên cứu được mặc áo gắn máy ghi âm để thu các đoạn trò chuyện. Chỗ trống hỏi thứ trẻ được trang bị, nên vests; recording devices ở nghiên cứu cha mẹ trước là thiết bị khác trong câu tóm tắt.",
+      "evidence": "children with audio-recording vests that captured language and sound during a typical eight-hour day.",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Nói kiểu trẻ em thường xuyên làm tăng vốn từ, bất kể địa vị kinh tế xã hội. Chỗ trống hỏi năng lực ngôn ngữ được cải thiện, nên vocabulary; bập bẹ là bước trung gian được nói trong cùng nghiên cứu.",
+      "evidence": "talk had dramatically boosted vocabulary, regardless of socioeconomic status.",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Đoạn F so sánh hoạt động não của trẻ bảy tháng và mười một tháng rưỡi khi nghe âm thanh ngôn ngữ. Các tuổi đều trước tròn một năm, đúng vị trí nói sự thay đổi trong năm đầu.",
+      "evidence": "months and eleven and a half months – were played a number of syllables from both their native",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Đoạn A nói một số cha mẹ mở nhạc cổ điển cho thai nhi vì thính giác bắt đầu phát triển trong bụng mẹ. Đây là ví dụ hoạt động vì lợi ích của bé trước khi sinh, không phải trò chuyện sau sinh.",
+      "evidence": "parents to play classical music to their pregnant bellies.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Đoạn E nêu trẻ dường như thích nghe trẻ khác hơn người lớn. Đây là sự ưu tiên giọng cùng lứa; các mô tả giọng cha và mẹ ở đoạn C không trực tiếp trả lời yêu cầu ấy.",
+      "evidence": "seem to like listening to each other rather than to adults – which may be why baby talk",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn C liệt kê nhiều giả thuyết suy tàn: sông đổi dòng, dân số tăng vượt sức chịu và biến đổi khí hậu ảnh hưởng nguồn thức ăn, nước. Câu hỏi hỏi những cách giải thích được đề xuất, không phải kết luận một nguyên nhân duy nhất.",
+      "evidence": "South Asia. C Some have claimed that major glacier-fed rivers changed their course, dramatically affecting the water supply and",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn H nói nghiên cứu phản ứng xã hội xưa trước môi trường có thể giúp quản lý nước và chính sách hiện nay. Đây là ứng dụng thời nay của phát hiện khảo cổ, không chỉ mô tả việc nghiên cứu thêm di tích.",
+      "evidence": "as the management and administration of water supply, the balance of urban and rural development, and the importance",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn A đối chiếu việc người Harappa không để lại hình ảnh tự khắc họa với người Ai Cập cùng thời trang trí đền bằng hình của mình. A chứa sự khác biệt giữa hai nền văn hóa đương thời.",
+      "evidence": "when the Egyptians were carving and painting representations of themselves all over their temples – is only part",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn B mô tả bể tắm, xưởng, cung điện và nhà cửa chia ô, đường lớn cùng ngõ nhỏ. Những chi tiết quy hoạch đô thị này đúng yêu cầu tìm đặc điểm thiết kế thành phố Harappa.",
+      "evidence": "blocks, with wide main streets and narrow alleyways, and many had their own wells and drainage systems.",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Đoạn D nói vị trí công bố của nhiều khu định cư cổ sai từ vài trăm mét tới nhiều kilômét. Đó là phát hiện lỗi của khảo cổ trước, không phải do thành phố cổ tự di chuyển.",
+      "evidence": "they found inaccuracies in the published geographic locations of ancient settlements ranging from several hundred metres to many",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Dixit và Hodell thu vỏ loài ốc từ hồ rồi phân tích địa hóa để tìm dấu vết khí hậu. Điền shells, vật mẫu phân tích; snails đã xác định loài sinh vật cung cấp vật mẫu.",
+      "evidence": "The researchers gathered shells of Melanoides tuberculata snails from the sediments of an ancient lake and used geochemical",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Nghiên cứu dùng dấu vết để suy ra mức nước trong một hồ nhận nước chủ yếu từ gió mùa hè. Chỗ trống hỏi vùng chứa nước được đo, nên lake; monsoon là nguồn cung chứ không phải nơi có mực nước.",
+      "evidence": "today, the major source of water into the lake is likely to have been the summer monsoon,’ says",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Khi lượng nước bốc hơi vượt lượng mưa, hồ phản ánh giai đoạn hạn hán. Sau cấu trúc so sánh với evaporation cần rainfall, không đảo quan hệ thành mưa lớn hơn bốc hơi.",
+      "evidence": "amount of evaporation from the lake exceeded the rainfall – indicative of a drought.’ Hodell adds: ‘We estimate",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Nhóm Petrie và Singh phân tích các loại hạt được trồng khi ấy để hiểu đời sống và phản ứng với môi trường. Điền grains, đối tượng nghiên cứu; không chép archaeological records là nguồn dữ liệu tổng quát.",
+      "evidence": "They are analysing grains cultivated at the time, and trying to work out whether they were grown under",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Nhóm còn xem loại đồ gốm có đặc trưng địa phương hay giống nhau trên vùng rộng. Pottery là một nhóm hiện vật dùng đối chiếu quan hệ giữa vùng, không phải tên vật liệu xây dựng đô thị.",
+      "evidence": "whether the types of pottery used, and other aspects of their material culture, were distinctive to specific regions",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Singh nhấn mạnh cần thêm dữ liệu khí hậu gần các thành phố lớn và vùng Punjab. B phù hợp yêu cầu tìm hiểu thay đổi môi trường trong khu vực; khác với ước lượng thời gian hạn hán của Hodell.",
+      "evidence": "‘it is essential that we obtain more climate data from areas close to the two great cities at",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Petrie cho rằng hiểu cách xã hội trước phản ứng với sức ép môi trường có giá trị cho quản lý hiện nay và tương lai. A nói lợi ích dài hạn của nghiên cứu hành vi cũ, không chỉ xác định địa điểm di tích.",
+      "evidence": "we can learn from the past to engage with the public, and the relevant governmental and administrative bodies,",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Hodell ước lượng gió mùa hè suy yếu khoảng hai trăm năm rồi hồi phục. D tương ứng với phép ước tính độ dài giai đoạn thiếu nước; không phải khẳng định biết chính xác từng năm hạn hán.",
+      "evidence": "monsoon climate lasted about 200 years before recovering to the previous conditions, which we still see today.’ F It",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Petrie nói bằng chứng khảo cổ về sự nổi lên của nền văn minh khá nhiều, nhưng về suy tàn lại tương đối ít. A xác nhận thiếu thông tin về giai đoạn sụp đổ, không phải thiếu mọi bằng chứng về Harappa.",
+      "evidence": "Civilisation, but relatively little about its fall,’ explains archaeologist Dr Cameron Petrie of the University of Cambridge.",
+      "location": "Passage 3"
+    }
+  }
+}

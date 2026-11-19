@@ -1,0 +1,206 @@
+{
+  "id": "c21-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Ông nội làm giàu từ vận tải biển và khai khoáng. Đề đã đổi shipping thành transportation businesses, nên ngành còn thiếu là mining; không điền lại shipping vì sẽ lặp thông tin đã có.",
+      "evidence": "David Davies, a Welshman who amassed a fortune in the shipping and mining industries",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Việc học được định hướng vào hoạt động văn hóa như sưu tập nghệ thuật. Ý được thiết kế để tạo hứng thú diễn đạt lại nền giáo dục hướng tới những mục tiêu đó, nên điền education.",
+      "evidence": "the sisters’ education was rigorously geared toward such pursuits",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Khi thăm phòng tranh, hai chị em ghi chép nhiều về bộ sưu tập. Took lengthy notes tương ứng making extensive notes; phải giữ notes số nhiều, không điền tranh hay bộ sưu tập họ quan sát.",
+      "evidence": "visiting art galleries and making extensive notes on the collections there",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Nhật ký cho thấy họ thích tranh cổ điển nhưng ngần ngại giá mua. Câu hỏi cần thứ bộc lộ sở thích, không phải nguyên nhân giá cao: điền journals, số nhiều như từ trong bài.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Các tranh Ấn tượng họ mua đầu tiên năm 1912 vẽ cảnh Venice. Chỗ trống cần địa danh xuất hiện trong tranh, nên Venice; Paris là nơi họ từng xem tranh, không phải cảnh trong những bức mua đầu tiên.",
+      "evidence": "their first purchases of Impressionist art, made in October 1912, were scenes of Venice by the French artist Claude Monet",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Hai chị em tình nguyện ở một canteen phục vụ binh lính tại Troyes, Pháp. Câu hỏi cần loại cơ sở họ làm việc, không phải tên thành phố hay quân đội, nên điền canteen.",
+      "evidence": "both sisters decided to volunteer at a canteen for troops at Troyes, in northern France",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Bài nói họ không kết bạn với nghệ sĩ hoặc chủ phòng tranh. Đề đổi thành không có người bạn nào là nghệ sĩ, nên từ thiếu là friends; sống biệt lập không có nghĩa không đi thăm thành phố.",
+      "evidence": "Much is made of their isolation in rural Wales and the fact that they didn’t make friends with artists",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Sự giáo dục tôn giáo thời nhỏ tạo ý thức trách nhiệm xã hội, khiến họ dùng tài sản cho văn hóa và từ thiện. Quan hệ nguyên nhân ấy đúng với nhận định tuổi thơ ảnh hưởng cách dùng tiền: TRUE.",
+      "evidence": "Their religious upbringing in rural Wales gave them a deep sense of social responsibility and they chose to use their",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bài xác nhận họ mua tranh Corot nhưng không nêu nơi mua. Quốc tịch Pháp của họa sĩ không chứng minh giao dịch ở phòng tranh tại Pháp; thiếu địa điểm nên NOT GIVEN, không phải FALSE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Hugh Blaker ủng hộ nghệ thuật Pháp đương đại và góp phần vào quyết định sưu tập. Vì ông hỗ trợ chứ không phản đối mua tranh Ấn tượng, nhận định đảo ngược thông tin và phải chọn FALSE.",
+      "evidence": "We know that Hugh Blaker, as a champion of contemporary French art had a hand in the decision",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Bath được nhắc vì trưng bày những tranh Cézanne đầu tiên công khai ở Anh. Không có phản ứng của công chúng; đầu tiên không đồng nghĩa rất được yêu thích, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Sau chiến tranh, Gwendoline thấy bất an khi mua tranh giữa nghèo đói và xáo trộn, rồi chuyển trọng tâm sang hoạt động xã hội. Chiến tranh thực sự khiến bà xem lại thú sưu tập: TRUE.",
+      "evidence": "By the early 1920s, Gwendoline felt increasingly uncomfortable buying art works when faced with the poverty and social upheaval created",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Khi hai chị em mua tranh Ấn tượng, loại nghệ thuật này thường bị cả cá nhân lẫn tổ chức bỏ qua. Rất ít người sưu tập diễn đạt lại sự thờ ơ ấy, nên TRUE.",
+      "evidence": "The sisters collected French Impressionist paintings at a time when such art was routinely ignored by individuals and institutions alike",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C liệt kê xe buýt yên hơn, kiểm soát tiếng ồn giao thông và quy định với máy thổi lá. Đây là các biện pháp giảm ồn cụ thể mà câu hỏi cần, không phải tác hại tiếng ồn: C.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn B có ngưỡng tiếng ồn khuyến nghị và số liệu ít nhất một phần năm dân số chịu mức ồn có hại. Các dữ liệu định lượng cho thấy quy mô nghiêm trọng của vấn đề, nên B.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn A mô tả huyết áp tăng, cơ căng và hormone chuẩn bị chiến đấu hoặc bỏ chạy khi nghe âm thanh bất ngờ. Đó chính là thay đổi sinh lý cơ thể, nên A.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn G so sánh ngồi ngoài vườn với phòng hoàn toàn im lặng: người tham gia thư giãn hơn và ít chán hơn ngoài vườn. So sánh trực tiếp này chứng minh tương đối yên có thể tốt hơn tuyệt đối im lặng: G.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Feinstein nói tập trung vào hơi thở giúp người trong bể nổi thư giãn hoặc thiền định. Chỗ trống hỏi đối tượng được tập trung chú ý, nên breath; relaxation là kết quả, không phải đối tượng ấy.",
+      "evidence": "it is the ability to focus on the breath that helps people reach a relaxed or meditative state",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Năm mươi người tham gia trả lời bảng hỏi trước và sau buổi nổi. Complete a questionnaire diễn đạt lại answer a questionnaire, nên questionnaire; không điền tên bệnh hoặc kết quả khảo sát.",
+      "evidence": "had them answer a questionnaire prior to and following a flotation session",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Sau buổi nổi, mức thư giãn và sức khỏe tinh thần tổng thể đều tăng. Đề đã có relaxation, nên chỗ còn thiếu là wellbeing, không phải tên căn bệnh được cải thiện.",
+      "evidence": "alongside an increase in feelings of relaxation and overall wellbeing",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Buổi nổi làm giảm hoạt động trong mạng lưới mặc định của não, thường gắn với trầm cảm. Câu hỏi cần tình trạng liên quan tới các vùng não đó, nên depression, không phải tên mạng lưới.",
+      "evidence": "Float sessions uniquely decreased activity in the default mode network (DMN), a collection of brain regions commonly linked with depression",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Ben-Soussan cảnh báo im lặng có thể gây khổ sở khi người ta không muốn nó. Ý bị đặt vào môi trường yên tĩnh một cách miễn cưỡng đúng với lời bà, nên chọn C.",
+      "evidence": "When people do not want silence, it can be very distressing",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "António dự đoán tương lai sẽ có thêm nhiều sáng kiến làm thành phố yên hơn. Câu hỏi cần người đưa ra dự báo xu hướng tăng, nên A, không phải chuyên gia chỉ bàn tác dụng bể nổi.",
+      "evidence": "I expect we will see much more of this in the future",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Feinstein giải thích khi thiếu kích thích bên ngoài, não tự lấp khoảng trống bằng tiếng ù hoặc hiệu ứng thị giác. Đây chính là ý não bù đắp đầu vào giác quan bị thiếu; chọn B.",
+      "evidence": "When you don’t have external sensory stimuli coming in, the brain tries to fill the void to make sense",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Pfeifer cho rằng vài phút yên tĩnh lặp lại thường xuyên có thể tốt hơn một lần dài mỗi tuần. Điều này ủng hộ lợi ích của khoảng yên ngắn, nên D; không cần im lặng hàng giờ.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Ben-Soussan liên hệ sự yên tĩnh bên ngoài và nội tâm với nhận biết tình huống rõ hơn, từ đó phản ứng phù hợp. Câu hỏi nêu đúng chuỗi tác dụng này, nên C.",
+      "evidence": "When we find ways to be quiet, we are not only quiet in our environment, but quiet in our inner",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đường củ cải được trợ cấp rồi bán với giá hạ nhân tạo, đe dọa người làm đường mía. Điều đó cho thấy năng lực cạnh tranh được nâng đỡ, nên B; đoạn không so sánh chất lượng hai loại đường.",
+      "evidence": "has also been massively subsidised and sold at artificially low prices on world markets, threatening the livelihood of producers of",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn hai lần lượt kể nguồn đường Anh từ thuộc địa, sang Cuba và Brazil, rồi châu Âu và sản xuất trong nước. Trục chính là nguồn cung thay đổi theo thời gian, nên A, không phải nhu cầu tăng.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Cụm trái với quan niệm phổ biến báo hiệu sửa hiểu lầm. Ví dụ nông hộ nhỏ trồng xen mía với lúa chứng minh đường mía không chỉ được sản xuất ở đại đồn điền của người giàu: C.",
+      "evidence": "Contrary to popular belief, cane sugar production was never just restricted to large, dedicated plantations owned by rich men",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Thông điệp chung là con người có thể sống không cần đường, nay có nguồn tạo ngọt khác, trong khi đường gây nhiều tác hại. A bao quát tính có hại và không thiết yếu; phương án khác chỉ lấy một khía cạnh.",
+      "evidence": "He shows that we could always have done without sugar and that today we have many alternative sources of sweetness",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Ruộng củ cải Đức dùng lao động Ba Lan; ngành đường Mỹ cần người Mexico và các nhóm nước ngoài khác. Điểm chung là lao động nhập cư, tương ứng migrant workers ở lựa chọn H.",
+      "evidence": "German beet fields employed Polish workers; Mexicans and many others, including Sicilians, were vital to US sugar production",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Tại Nam Á và Mỹ Latinh, phương pháp truyền thống trên nông trại nhỏ vẫn giữ vai trò lớn. Đề cần đặc điểm quy mô, nên small-scale cultivation, lựa chọn E, không phải công nghệ mới.",
+      "evidence": "the book is about the continuity of the use of traditional methods on small farms. In the mid 20th-century",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Nhà tư bản, dòng họ đường và tập đoàn có ảnh hưởng lâu dài bảo vệ lợi ích của mình. Cụm bao quát các chủ thể ấy là powerful individuals and businesses, tương ứng I.",
+      "evidence": "This is also a history of capitalists and sugar dynasties, as well as corporations that in some cases have remained",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Bài nói doanh nghiệp và nhóm lợi ích lớn tác động sâu tới chính sách nhà nước, tiêu biểu ở Cuba. Đối tượng chịu ảnh hưởng là national governments, lựa chọn A; chú ý chiều tác động.",
+      "evidence": "Great firms and great interests have had profound influence on the policies of states",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Lợi ích ngành đường được bảo vệ bằng rào cản thương mại và trợ cấp. Hai cơ chế này được khái quát thành financial controls ở G; không phải một nhóm doanh nghiệp hay quốc gia.",
+      "evidence": "their interests were consequently protected by trade barriers and subsidies",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Trong cuộc tranh giành quyền kiểm soát ngành đường, các nước nghèo chịu thiệt hơn. Poor countries được diễn đạt lại thành less wealthy nations, lựa chọn C; đây là bên chịu hậu quả, không phải bên được bảo hộ.",
+      "evidence": "In the battle for control of the industry, it was inevitably the poor countries which came off worse",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Kỹ thuật, giống, phân bón và tưới tiêu mới khiến đường có mặt khắp nơi. Nhận định tiến bộ nông nghiệp làm nguồn cung dồi dào giữ đúng quan hệ nguyên nhân ấy, nên YES.",
+      "evidence": "new techniques, varieties, fertilisers, irrigation systems and much more have turned gleaming white sugar into a ubiquitous chemical",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Bài nói đường từng được coi là xa xỉ, sau đó được quảng bá là nguồn năng lượng. Không xác nhận người quảng cáo ban đầu đã quảng bá nó là xa xỉ; thiếu tác nhân và thời điểm, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Tác giả gọi siro ngô nhiều fructose là phát triển đáng lo và liên hệ với béo phì. Đánh giá tiêu cực đối lập với nhận định đây là tiến bộ tích cực, nên NO.",
+      "evidence": "the recent past has seen worrying new developments in mass sweetening",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Siro ngô nhiều fructose được dùng trong nước ngọt và rất nhiều thực phẩm chế biến. Nhận định nó là thành phần của nhiều đồ chế biến giữ đúng thông tin, nên YES, không cần suy rộng thành tất cả.",
+      "evidence": "is now widely consumed, having been adopted in the making of soft drinks and a large number of processed foods",
+      "location": "Passage 3"
+    }
+  }
+}

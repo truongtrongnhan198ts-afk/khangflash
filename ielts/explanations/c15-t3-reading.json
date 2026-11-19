@@ -1,0 +1,206 @@
+{
+  "id": "c15-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Moore muốn làm điêu khắc nhưng vẫn tuân theo mong muốn cha và đào tạo làm giáo viên. Complied with his father’s wish khớp làm điều cha muốn, nên TRUE.",
+      "evidence": "complied with his father’s wish that he train as a schoolteacher. He had to abandon his",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Năm đầu tại Leeds ông chủ yếu vẽ; tới năm thứ hai mới có giáo viên điêu khắc. Đề nói bắt đầu học điêu khắc ngay học kỳ đầu, trái mốc thời gian nên FALSE.",
+      "evidence": "second year. At the end of that year, he passed the sculpture examination and was awarded",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Bài kể việc Moore học tại Royal College of Art nhưng không đánh giá danh tiếng giảng dạy điêu khắc khi ông nhập học. Thiếu nội dung về excellent reputation nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Trong các lần thăm bảo tàng London, Moore nhận ra vẻ đẹp và sức mạnh của điêu khắc Ai Cập, châu Phi cổ. Discovered khớp became aware; nguyên nhân cũng đúng nên TRUE.",
+      "evidence": "During these visits, he discovered the power and beauty of ancient Egyptian and African sculpture. As",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Tác phẩm Maya tại Trocadero gây ấn tượng với Moore, nhưng không có phản ứng của đông đảo công chúng. Không mở rộng cảm nhận một người thành tất cả khán giả: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Moore cho rằng tượng Maya có sức mạnh và độc đáo mà những tượng đá khác không có. Nhấn mạnh khác biệt trái với giống các tác phẩm khác, nên FALSE.",
+      "evidence": "no other stone sculpture possessed. He himself started carving a variety of subjects in stone, including",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Unit One muốn thuyết phục công chúng Anh về giá trị của nghệ thuật và kiến trúc hiện đại. Mục tiêu ấy tương ứng làm chúng phổ biến hơn, nên TRUE.",
+      "evidence": "convince the English public of the merits of the emerging international movement in modem art and",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Sau phản ứng báo chí tiêu cực, có lời kêu gọi Moore từ chức khỏi Royal College. “Calls for his resignation” khớp urged to offer; cần resignation, không phải tên buổi triển lãm.",
+      "evidence": "resignation from the Royal College, and the following year, when his contract expired, he left to",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Thiếu vật liệu buộc Moore chuyển trọng tâm sang vẽ trong thời chiến. Shortage tương ứng not readily available; chỗ trống hỏi thứ dùng làm điêu khắc, nên materials.",
+      "evidence": "shortage of materials forced him to focus on drawing. He did numerous small sketches of Londoners,",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Moore trở lại Castleford năm 1942 để vẽ những người thợ mỏ ở đó. Sketches of the miners cung cấp đối tượng bức vẽ: miners, không phải toàn bộ cư dân quê nhà.",
+      "evidence": "miners who worked there.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Ông được Harlow đặt làm một tượng thể hiện gia đình. Commission khớp employed; chỗ trống hỏi chủ đề sau a nên danh từ số ít family.",
+      "evidence": "depicting a family. The resulting work signifies a dramatic change in Moore’s style, away from the",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Việc nhân bản tác phẩm bằng đồng giúp các nhà sưu tập khắp thế giới có thể mua. Đề hỏi người bắt đầu mua tác phẩm, nên collectors, không phải người thợ đúc.",
+      "evidence": "collectors all over the world. The boost to his income enabled him to take on ambitious",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Thu nhập tăng giúp Moore nhận dự án tham vọng và làm tác phẩm lớn hơn. Boost tương ứng increase; điều tạo điều kiện tài chính là income.",
+      "evidence": "boost to his income enabled him to take on ambitious projects and start working on the",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A nối ý tưởng Janssen có khi ở Đông Nam Á với thiết bị dùng năng lượng mặt trời hai thập kỷ sau. Đây là từ cảm hứng ban đầu tới sản phẩm mới; chọn iii.",
+      "evidence": "Two decades later Janssen developed that basic idea he saw in Southeast Asia into a portable",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "15": {
+      "reason": "Đoạn B liệt kê nước biển, sông, giếng khoan và mưa đều có thể được lọc. Trọng tâm là nhiều nguồn nước, không phải nhiều nhóm khách hàng; chọn vi.",
+      "evidence": "different places, such as the sea, rivers, boreholes and rain, and purify it for human consumption.",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "16": {
+      "reason": "Đoạn C nêu điểm khác biệt chính: không cần nguồn điện được tạo ra mà chỉ cần ánh nắng. So sánh với kỹ thuật khử mặn thông thường khớp v.",
+      "evidence": "unlike standard desalination techniques, it doesn’t require a generated power supply: just sunlight. It measures 120",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "17": {
+      "reason": "Đoạn D đưa tỷ lệ dân số chịu thiếu nước nghiêm trọng ít nhất một tháng mỗi năm. Tiêu đề x hỏi quy mô số người bị ảnh hưởng, không phải quy trình thiết bị.",
+      "evidence": "two-thirds of the world’s population lives with severe water scarcity for at least a month every",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "18": {
+      "reason": "Đoạn E trải rộng đối tượng từ nhà thiếu nước ở nước đang phát triển tới người sống ngoài lưới điện tại Mỹ. Đây là phạm vi khách hàng tiềm năng, nên iv.",
+      "evidence": "wide variety of users – from homeowners in the developing world who do not have a",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "19": {
+      "reason": "Đoạn F trình bày mức giá khác theo khu vực và hướng tiếp cận giúp nơi khó khăn có thiết bị. Vì không chỉ tối đa hóa tiền bán, tiêu đề viii về lợi nhuận không phải mục tiêu chính phù hợp.",
+      "evidence": "Prices will vary according to where it is bought. In the developing world, the price will",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "20": {
+      "reason": "Đoạn G nêu tiền đã huy động và kế hoạch bán thiết bị. Khoản funding là nguồn tài chính phục vụ phát triển, sản xuất; chọn i, không phải mô tả nguồn nước.",
+      "evidence": "funding so far. Within two years, he says, the company aims to be selling 1,000 units",
+      "location": "Passage 2 · Đoạn G"
+    },
+    "21": {
+      "reason": "Thiết bị dễ vận chuyển vì có hai bánh xe. “Thanks to its two wheels” trả lời nguyên nhân dùng tại nhiều nơi; đề một từ nên wheels, không chép cả two wheels.",
+      "evidence": "two wheels. Water enters through a pipe, and flows as a thin film between a sheet",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Nước chảy thành lớp mỏng giữa kính và tấm pin mặt trời. Film ở đây là lớp nước mỏng, không phải phim ảnh; vì đề một từ nên chỉ film.",
+      "evidence": "thin film between a sheet of double glazing and the surface of a solar panel, where",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Bộ lọc đơn giản giữ lại hạt tạp chất và có thể làm sạch bằng lắc. Trap tương ứng caught; vật giữ hạt là filter, không phải ống dẫn nước.",
+      "evidence": "filter to trap particles, and this can easily be shaken to remove them. There are two",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Hai ống thoát riêng đưa nước cất và chất thải ra ngoài. Salt, fluoride là ví dụ; đề hỏi nhóm chung nên waste, không lấy riêng một tạp chất.",
+      "evidence": "one for the waste – salt from seawater, fluoride, etc. – and another for the distilled",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Màn hình LCD hiển thị tình trạng hoạt động của thiết bị. “Performance…is shown” khớp screen displays; danh từ cần điền là performance.",
+      "evidence": "performance of the unit is shown on an LCD screen and transmitted to the company which",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Dữ liệu được gửi cho công ty để họ cung cấp bảo dưỡng khi cần. Đề hỏi thiết bị cần gì, nên servicing, không phải transmission hay tên màn hình.",
+      "evidence": "servicing when necessary.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Ví dụ các bản Cô bé quàng khăn đỏ cho thấy chi tiết cốt truyện thay đổi tùy nơi kể. C khớp biến đổi theo địa phương; không phải mọi phiên bản giữ nguyên diễn biến.",
+      "evidence": "Little Red Riding Hood that European children are familiar with, a young girl on the way",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Tehrani phản đối ý cho rằng truyện tồn tại chủ yếu vì những bài học hữu ích về sinh tồn. Phần but chuyển từ quan niệm phổ biến sang kết quả ngược lại; chọn A.",
+      "evidence": "survival-relevant information in it,’ says anthropologist Jamie Tehrani at Durham University in the UK. But his",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Các học giả vẫn đưa lý thuyết về ý nghĩa xã hội dù hiểu biết lịch sử kể chuyện còn khoảng trống lớn. Vì vậy các lý thuyết chưa dựa trên hiểu biết đầy đủ; chọn B.",
+      "evidence": "huge gap in our knowledge about the history and prehistory of storytelling, despite the fact that",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Tehrani mượn phương pháp của sinh học tiến hóa để phân tích sự phát triển truyện. Ý chính là kỹ thuật từ lĩnh vực khác đem lại hiểu biết mới, nên B, không phải truyện là sinh vật.",
+      "evidence": "evolutionary biologists. To work out the evolutionary history, development and relationships among groups of organisms, biologists",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Ông tập hợp 58 câu chuyện được ghi lại từ truyền thống truyền miệng. Chi tiết oral traditions xác nhận tất cả truyện trong bộ phân tích khởi nguồn được kể miệng; chọn D.",
+      "evidence": "oral traditions. Once his phylogenetic analysis had established that they were indeed related, he used the",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Trước khi xem biến đổi theo thời gian, phương pháp xác định những truyện này có quan hệ với nhau. Related khớp links trong danh sách; điền D.",
+      "evidence": "his phylogenetic analysis had established that they were indeed related",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Ông tìm phần thay đổi ít nhất vì cho rằng đó là phần quan trọng nhất. Alter least tương ứng fewest variations; đáp án F, không phải số lượng sự kiện trong một truyện.",
+      "evidence": "altered over time.",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Nghiên cứu xét các sự kiện hay chi tiết được giữ ổn định hoặc biến đổi theo thời gian. Incidents/episodes khớp events trong danh sách, nên B, không phải nhân vật hoặc bài học.",
+      "evidence": "incidents compared with that of characters. ‘Certain episodes are very stable because they are crucial to",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Điều gây ngạc nhiên là các yếu tố cảnh báo nguy hiểm không quyết định khả năng truyện tồn tại. Cautionary elements tương ứng warning; chọn C, không tự đồng nhất với phần đáng sợ.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Kết quả chỉ ra tính gây sợ là yếu tố đặc biệt bền vững trong truyền qua thế hệ. Fear tương ứng horror trong danh sách; chọn G, khác với lời khuyên an toàn ở ô trước.",
+      "evidence": "fear – blood-thirsty and gruesome aspects of the story, such as the eating of the grandmother",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Tehrani so sánh nhiều phiên bản có quan hệ của cùng nhóm truyện từ các vùng khác nhau. B mô tả đúng phép kiểm tra; không phải so truyện không liên quan hay đối chiếu trực tiếp với sinh vật.",
+      "evidence": "58 stories recorded from oral traditions. Once his phylogenetic analysis had established that they were indeed",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Jack Zipes cho rằng dù đáng sợ, truyện chỉ lưu lại khi có ý nghĩa sâu hơn với người kể. D khớp điều kiện tồn tại đó; ông không chỉ nói Tehrani dùng quá nhiều bạo lực.",
+      "evidence": "Zipes at the University of Minnesota, Minneapolis, is unconvinced by Tehrani’s views on fairy tales. ‘Even",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Ví dụ Trung Quốc và Nhật Bản được Tehrani dùng sau từ but để phản biện quan điểm của Zipes. Vì vậy A đúng; không phải đưa thêm bằng chứng ủng hộ chính điều đang phản bác.",
+      "evidence": "Chinese and Japanese versions, often known as The Tiger Grandmother, the villain is a woman, and",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Clasen xem truyện đáng sợ như cách luyện trải nghiệm sợ hãi mà không gặp nguy hiểm thật. Chọn A: học đối phó cảm xúc trong môi trường an toàn, không phải làm yếu khả năng ứng phó thực tế.",
+      "evidence": "negative emotions.",
+      "location": "Passage 3"
+    }
+  }
+}

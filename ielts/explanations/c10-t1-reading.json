@@ -1,0 +1,206 @@
+{
+  "id": "c10-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Giếng bậc thang được mô tả là đặc trưng riêng của vùng tây bắc Ấn Độ. Nhận định nói chúng có khắp thế giới mở rộng sai phạm vi, nên FALSE.",
+      "evidence": "Unique to this region",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "2": {
+      "reason": "Ngoài cung cấp nước, giếng còn là nơi tụ họp, thư giãn và thờ cúng. Những chức năng này xác nhận nhận định về nhiều công dụng khác, nên TRUE.",
+      "evidence": "places of gathering, of leisure and relaxation and of worship",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "3": {
+      "reason": "Bài nhắc các giếng còn lại ở Delhi nhưng không so sánh độ hấp dẫn với giếng nơi khác. Thiếu phép so sánh nên NOT GIVEN, không phải FALSE.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "4": {
+      "reason": "Đoạn mô tả các bậc đá không cho biết công nhân mất bao nhiêu năm xây dựng. Không thể suy từ độ đồ sộ ra thời gian thi công: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "5": {
+      "reason": "Mực nước cao thì chỉ xuống vài bậc, nước thấp phải xuống nhiều tầng. Vì thế số bậc trên mặt nước thay đổi theo lượng nước, nên TRUE.",
+      "evidence": "when it was low, several levels would have to be negotiated",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "6": {
+      "reason": "Câu hỏi tìm bộ phận che nắng. Các mái đình được mô tả là bảo vệ khách khỏi cái nóng, nên điền danh từ pavilions, không phải pillars là cột đỡ.",
+      "evidence": "pavilions that sheltered visitors from the relentless heat",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "7": {
+      "reason": "Hiện tượng khí hậu ở nam Rajasthan là hạn hán kéo dài tám năm. Cần tên hiện tượng drought, không phải số năm hoặc một cơn lũ.",
+      "evidence": "southern Rajasthan suffered an eight-year drought",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "8": {
+      "reason": "Đoạn cuối nói du khách đổ về tham quan các công trình. Câu hỏi hỏi người thường đến ngày nay nên điền tourists; các nữ hoàng là người xây giếng ngày trước.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "9": {
+      "reason": "Rani Ki Vav vẫn nguyên vẹn sau trận động đất năm 2001. Cần earthquake ở số ít vì bài nói một sự kiện, không dùng earthquakes.",
+      "evidence": "survived an earthquake",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "10": {
+      "reason": "Các bậc của Surya Kund nằm trên bốn mặt, tạo thành hình học. Điền four sides hoặc 4 sides; chỉ ghi sides sẽ thiếu số lượng.",
+      "evidence": "four sides of steps",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "11": {
+      "reason": "Surya Kund giống bể chứa hơn là giếng. Tank hoàn thành phép so sánh; temple là công trình bên cạnh, không phải hình dạng mà câu hỏi yêu cầu.",
+      "evidence": "resembles a tank",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "12": {
+      "reason": "Các hành lang ở mặt thứ tư của Chand Baori nhìn xuống các bậc. Bộ phận được hỏi là verandas; những cây cột chỉ đỡ chúng.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "13": {
+      "reason": "Neemrana có chín tầng và hai tầng cuối nằm dưới nước. Ô trống bổ nghĩa cho levels nên cần underwater, không cần chép lại con số.",
+      "evidence": "with the last two being underwater",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A trình bày nhu cầu vận tải vẫn tăng cùng kinh tế và số ô tô. Tiêu đề viii về nhu cầu vận tải bao quát đoạn, thay vì chỉ chọn chi tiết công nghệ.",
+      "evidence": "the requirement for transport continues to increase",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn B giải thích di dời sản xuất để giảm chi phí khiến hàng hóa đi xa hơn. Tiêu đề iii nói nguyên nhân tăng vận tải hàng, không phải đi lại hành khách.",
+      "evidence": "the relocation of some industries",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn C tập trung thương mại và xu hướng vận tải tại các nước chuẩn bị gia nhập EU. Tiêu đề xi khớp đối tượng này; các số liệu đường sắt chỉ hỗ trợ ý chính.",
+      "evidence": "candidates for entry to the EU",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn D đề cập mục tiêu bền vững và đưa môi trường vào chính sách vận tải. Tiêu đề i phù hợp; các mốc năm mô tả lộ trình thực hiện, không phải chủ đề riêng.",
+      "evidence": "integrating environmental considerations into Community policies",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn E tính lượng CO2 do giao thông và chỉ ra đường bộ là nguồn chính. Tiêu đề v về tác động môi trường bao quát cả số liệu lẫn yêu cầu đổi nhiên liệu.",
+      "evidence": "road transport is the main culprit",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "19": {
+      "reason": "Đoạn G nêu phương án chỉ tăng giá vận tải đường bộ, không hỗ trợ phương tiện khác. Tiêu đề x đúng với cách tiếp cận đơn lẻ này, khác phương án kết hợp ở H.",
+      "evidence": "focusing on road transport solely through pricing",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "20": {
+      "reason": "Đoạn H kết hợp định giá đường bộ với cải thiện phương tiện khác, nhưng không đầu tư hạ tầng. Tiêu đề ii đúng; phương án vẫn chưa đủ thay đổi cán cân.",
+      "evidence": "does not include investment in new infrastructure",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "21": {
+      "reason": "Đoạn I kết hợp định giá, phương tiện thay thế và đầu tư mạng lưới. Tiêu đề iv phù hợp với giải pháp tổng hợp, không chỉ điều chỉnh giá đường bộ.",
+      "evidence": "This integrated approach",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "22": {
+      "reason": "Dù công nghệ cho phép làm việc từ xa, nhu cầu vận tải vẫn tăng. Hai vế tương ứng trực tiếp với nhận định nên TRUE, không được bỏ qua quan hệ nhượng bộ.",
+      "evidence": "the requirement for transport continues to increase",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "23": {
+      "reason": "Nhà máy được chuyển đi dù cách khách hàng hoặc nơi lắp ráp hàng trăm, hàng nghìn kilômét. Nhận định chuyển gần khách hàng đảo chiều khoảng cách, nên FALSE.",
+      "evidence": "hundreds or even thousands of kilometres away",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "24": {
+      "reason": "Đoạn C nói vận tải đường bộ tăng ở các nước ứng viên nhưng không đánh giá ô tô đắt đến mức không mua nổi. Nhận định thêm thông tin giá cả: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "25": {
+      "reason": "Bài chỉ nêu Hội đồng Gothenburg thông qua mục tiêu, không nói năm thành lập. Khoảng 30 năm là thời hạn phát triển hệ thống bền vững, không phải tuổi hội đồng: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "26": {
+      "reason": "739 tỷ tấn là số liệu năm 1990; mức dự báo cho 2020 là 1.113 tỷ tấn. Gán số cũ cho thời điểm tương lai làm nhận định sai: FALSE.",
+      "evidence": "compared with the 739 billion tonnes recorded in 1990",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "27": {
+      "reason": "Ví dụ nhóm bốn nhạc sĩ cho thấy các tài năng hợp tác vì một mục tiêu chung tạo được đột phá. C nhấn mạnh shared objective, không đơn thuần nhận diện tài năng.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "28": {
+      "reason": "Watson cho rằng họ thắng vì biết mình không thông minh nhất và cần học hỏi. A diễn đạt nhận thức giới hạn bản thân, không phải tự tin vượt trội hơn đối thủ.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "29": {
+      "reason": "Cuộc thi trên hộp ngũ cốc khiến người tham gia tự viết lý do ủng hộ sản phẩm, từ đó cam kết với ý tưởng mạnh hơn. D đúng về củng cố niềm tin, không phải dạy viết ngắn.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn cuối nhấn mạnh nhân viên cần cảm thấy đóng góp của mình được tổ chức coi trọng. B đúng; câu hỏi hỏi nhu cầu của nhân viên chứ không hỏi đánh giá cấp trên.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "31": {
+      "reason": "Sự phù hợp giá trị cá nhân–công ty liên hệ với việc nhân viên còn làm ở đó hai năm sau. G là tiếp tục công việc; không suy ra lương hay thăng chức.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "32": {
+      "reason": "Khi có thay đổi, con người có xu hướng chọn cách an toàn. E diễn đạt tránh rủi ro, không phải luôn thử nghiệm những hành động mới táo bạo.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "33": {
+      "reason": "Khi thấy nguy cơ mất mát nếu bỏ lỡ cơ hội, người ta thường chấp nhận đánh cược hơn. A là take chances; cần phân biệt tình huống bị đe dọa mất với được hứa thưởng.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "34": {
+      "reason": "Lãnh đạo áp đặt khiến thành viên thụ động, bỏ trách nhiệm vốn thuộc về mình. F là bỏ bê nhiệm vụ; ví dụ phi công minh họa sự lệ thuộc cấp trên.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "35": {
+      "reason": "Nhóm Memphis gần như không có quy tắc nên các thành viên tự do trao đổi ý tưởng. B diễn đạt chia sẻ ý tưởng; ít quy tắc không đồng nghĩa thiếu mục tiêu.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "36": {
+      "reason": "Văn phòng đắt tiền, thiết kế tốt vẫn có thể thiếu sáng tạo. Ví dụ phản bác việc cơ sở vật chất đóng vai trò quyết định, nên NO; không phủ nhận mọi ảnh hưởng môi trường.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "37": {
+      "reason": "Tác giả cho rằng trong hoàn cảnh thích hợp gần như ai cũng có thể sáng tạo. Nhận định đa số người có tiềm năng phù hợp, nên YES, không phải mọi người sáng tạo ngang nhau.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "38": {
+      "reason": "Bài không so sánh nhóm đồng đều trí thông minh với nhóm chênh lệch để xác định nhóm tốt nhất. Điều kiện tối ưu này chưa được chứng minh, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "39": {
+      "reason": "Bài bàn văn hóa tổ chức nhưng không so sánh công ty nhỏ với công ty lớn về độ dễ đổi mới. Không được suy từ quy mô các ví dụ: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "40": {
+      "reason": "Đồng nghiệp ngang hàng thường thuyết phục hơn người có quyền lực. Nhận định đánh giá của quản lý mạnh hơn đảo ngược phép so sánh, nên NO, không phải thiếu thông tin.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    }
+  }
+}

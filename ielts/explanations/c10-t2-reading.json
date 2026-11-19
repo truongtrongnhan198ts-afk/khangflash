@@ -1,0 +1,206 @@
+{
+  "id": "c10-t2-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn A nêu câu hỏi vì sao Cách mạng công nghiệp xảy ra ở Anh vào thời điểm ấy. Tiêu đề iv phù hợp việc tìm lời giải cho một bí ẩn lịch sử.",
+      "evidence": "Why did this particular Big Bang",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "2": {
+      "reason": "Đoạn B ví các điều kiện công nghiệp hóa như tổ hợp khóa phải đủ mọi yếu tố. Tiêu đề viii nói những điều kiện cần; một yếu tố như than chưa đủ giải thích toàn bộ.",
+      "evidence": "All these factors must have been necessary but not sufficient",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "3": {
+      "reason": "Đoạn C đưa trà và bia thành hai yếu tố còn thiếu, cùng tác dụng chống bệnh. Tiêu đề vii bao quát hai đồ uống, thay vì chỉ nói một thành phần hóa học.",
+      "evidence": "Tea and beer",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "4": {
+      "reason": "Đoạn D xem xét rồi loại các cách giải thích tỷ lệ tử vong trẻ em giảm. Tiêu đề i phù hợp vì những lý do có vẻ hợp lý đều chưa giải được hiện tượng.",
+      "evidence": "Efforts to explain this sudden reduction in child deaths appeared to draw a blank",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "5": {
+      "reason": "Đoạn E nối thuế malt với thay đổi đồ uống và tỷ lệ tử vong. Tiêu đề vi nói thay đổi thói quen uống, không phải chỉ tăng trưởng dân số đã nhắc trước đó.",
+      "evidence": "The poor turned to water and gin",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "6": {
+      "reason": "Đoạn F đối chiếu Nhật với Anh và thời điểm trà trở nên phổ biến. Tiêu đề ix nói so sánh hai nước để làm sáng tỏ vai trò của trà.",
+      "evidence": "Water-borne diseases had a much looser grip on the Japanese population",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "7": {
+      "reason": "Đoạn G giải thích Nhật không công nghiệp hóa dù uống trà: họ từ bỏ thiết bị tiết kiệm lao động. Tiêu đề ii phù hợp sự công nghiệp hóa bị cản trở, không bác bỏ mọi vai trò của trà.",
+      "evidence": "giving up labour-saving devices",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "8": {
+      "reason": "Bài nói Trung Quốc có nhiều điều kiện công nghiệp hóa nhưng không đánh giá hệ thống vận tải của nước này có phù hợp hay không. Thiếu chi tiết riêng đó nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "9": {
+      "reason": "Tannin trong trà, hoa bia và việc đun nước giúp hạn chế bệnh lây qua nước như kiết lỵ. Nhận định cả hai đồ uống có tác dụng này phù hợp: TRUE.",
+      "evidence": "water-borne diseases such as dysentery",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "10": {
+      "reason": "Roy Porter được mô tả đã viết đánh giá tích cực về nghiên cứu Macfarlane. Nhận định ông không đồng ý là chiều ngược lại, nên FALSE, không phải NOT GIVEN.",
+      "evidence": "wrote a favourable appraisal of his research",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "11": {
+      "reason": "Dân số ổn định tới khoảng 1740 rồi tăng vọt. Nhận định sau 1740 dân số giảm trái với diễn biến này nên FALSE; cần phân biệt hai giai đoạn.",
+      "evidence": "But then there was a burst in population growth",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "12": {
+      "reason": "Bài nói người Anh uống bia và thay đổi đồ uống khi tăng thuế, nhưng không nói họ tự nấu bia tại nhà. Không được suy địa điểm sản xuất từ nơi uống: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "13": {
+      "reason": "Thuế malt làm người nghèo chuyển từ bia sang nước và gin, mất tác dụng bảo vệ nên tử vong tăng. Đây là ảnh hưởng gián tiếp đúng như nhận định: TRUE.",
+      "evidence": "The poor turned to water and gin",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A liên hệ IQ với chất lượng hỗ trợ học ở nhà, gồm trò chuyện với cha mẹ, sách và hoạt động. Đó là ảnh hưởng hoàn cảnh gia đình mà câu hỏi yêu cầu.",
+      "evidence": "home educational provision",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn D nói hướng dẫn quá mức khiến trẻ mất tính tự chủ và động lực khám phá. Câu hỏi hỏi điều có thể mất do quá nhiều chỉ dẫn, không phải ích lợi thi cử.",
+      "evidence": "loss of autonomy and motivation to discover",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn F giải thích cảm xúc tiêu cực, đặc biệt sợ hãi, kìm hãm tò mò và sáng tạo. Fear diễn đạt tác hại của anxiety; các đoạn khác không phân tích hệ quả này.",
+      "evidence": "Fear, for example, can limit the development of curiosity",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn D nêu học do trẻ khởi xướng và dạy kèm đồng đẳng, hữu ích với trẻ giỏi ở vùng thiếu thốn. Các phương pháp cụ thể khớp yêu cầu ví dụ kỹ thuật lớp học.",
+      "evidence": "particularly useful for bright children from deprived areas",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "18": {
+      "reason": "Shore và Kanevsky nói nếu trẻ ít mắc lỗi hơn thì có thể rút ngắn phần luyện tập. B khớp cả hai ý chính xác và giảm thời gian thực hành.",
+      "evidence": "we can shorten the practice",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "19": {
+      "reason": "Simonton kết luận ở mức cao, tính độc lập góp phần đạt chuyên môn xuất sắc hơn chỉ số trí tuệ. D tương ứng vai trò tự lực; không nhầm với nghiên cứu IQ của Freeman.",
+      "evidence": "characteristics such as independence",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "20": {
+      "reason": "Boekaerts thấy trẻ thành tích cao biết phối hợp cảm xúc và muốn kiểm soát môi trường học. E đúng về điều hướng cảm xúc hỗ trợ học, không chỉ sở hữu cảm xúc tích cực.",
+      "evidence": "emotional forces in harness",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "21": {
+      "reason": "Freeman liên hệ IQ cao với nền tảng giáo dục gia đình tốt hơn. A khớp hỗ trợ của người thân; câu này không hỏi các phương pháp của giáo viên.",
+      "evidence": "verbal interactions with parents",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "22": {
+      "reason": "Elshout cho rằng biết nhiều về một lĩnh vực giúp đạt thành tích cao hơn. C phù hợp lượng kiến thức môn học, khác Simonton nhấn mạnh sự độc lập.",
+      "evidence": "individuals who know a great deal about a specific domain",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "23": {
+      "reason": "Nghiên cứu gia đình đo số sách và các hoạt động ở nhà bên cạnh tương tác với cha mẹ. Cần books and activities, không phải chỉ IQ hay điểm kiểm tra.",
+      "evidence": "number of books and activities in their home",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "24": {
+      "reason": "Trẻ năng lực trung bình cần giáo viên điều chỉnh từ bên ngoài để bù khả năng tự điều chỉnh chưa đủ. Cụm internal regulation gọi đúng năng lực thiếu, không phải external regulation.",
+      "evidence": "lack of internal regulation",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "25": {
+      "reason": "Siêu nhận thức không chỉ là hiểu chiến lược học mà còn nhận biết cảm xúc của mình. Ô trống cần emotional awareness; tò mò và tự tin chỉ là các ví dụ.",
+      "evidence": "Emotional awareness is also part of metacognition",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "26": {
+      "reason": "Spoon-feeding có thể tạo điểm thi rất cao nhưng không chắc đem lại thành công sau này. Câu hỏi lấy tên cách dạy ấy, không phải kết luận nó là phương pháp tối ưu.",
+      "evidence": "spoon-feeding",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "27": {
+      "reason": "Tiểu thuyết phát triển cùng công nghệ in ra số lượng lớn, nên người đọc không cần bản thảo gốc. B là mass production, không đơn thuần máy móc nói chung.",
+      "evidence": "huge numbers of texts",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "28": {
+      "reason": "Với tiểu thuyết, người đọc chủ yếu chú ý ý nghĩa của từ hơn hình thức in. H là underlying ideas, đối lập với việc tranh đòi hỏi quan sát chất liệu và hình dạng.",
+      "evidence": "the meaning of words",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "29": {
+      "reason": "Các họa sĩ giao việc sao chép cho học việc trong xưởng. L là assistants; người chép không phải người đọc hoặc các tổ chức bảo tàng.",
+      "evidence": "workshop apprentices",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "30": {
+      "reason": "Kỹ thuật sao chép hiện nay tái tạo màu sắc, độ nổi bề mặt và đúng tỷ lệ kích thước. G là size, không phải khung tranh hay loại sơn.",
+      "evidence": "exactly to the original scale",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "31": {
+      "reason": "Tác giả cho rằng đề cao độc tôn bản gốc có thể hạn chế trải nghiệm khách xem. D là public; câu hỏi hỏi người chịu bất lợi, không phải chủ thể sở hữu tranh.",
+      "evidence": "limitations on the kind of experience offered to visitors",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "32": {
+      "reason": "Ví dụ National Gallery cho thấy giá trị khổng lồ của tranh khiến khách thấy bản thân kém giá trị. C nói tác động tiêu cực lên tự đánh giá, không bàn chi phí quốc gia.",
+      "evidence": "relative 'worthlessness'",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "33": {
+      "reason": "Khách nghĩ phản ứng của mình không làm thay đổi giá tiền do người quyền lực định ra nên ngại phê bình. D là cảm thấy ý kiến không có ý nghĩa, không phải thiếu kiến thức.",
+      "evidence": "nothing the viewer thinks about the work is going to alter that value",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "34": {
+      "reason": "Nhiều tác phẩm đa dạng bị đặt chung trong môi trường vốn không dành cho chúng, với số lượng quá lớn. A bao quát cách trưng bày và sự đa dạng gây cảm giác lệch bối cảnh.",
+      "evidence": "the sheer volume of exhibits",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "35": {
+      "reason": "Một bức tranh không quy định điểm bắt đầu, kết thúc hoặc thời gian xem như kịch, nhạc và chuỗi đọc văn. D đúng về thiếu trình tự thời gian xác định.",
+      "evidence": "no clear place at which to start viewing",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "36": {
+      "reason": "Bài mô tả sử học nghệ thuật tìm ý nghĩa trong bối cảnh thời đại, nhưng không khẳng định nên dùng nhiều phương tiện truyền thông. Mệnh đề bổ sung phương pháp chưa nêu: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "37": {
+      "reason": "Cách tiếp cận sử gia được nói là hoàn toàn phù hợp với chức năng bảo tàng. Nhận định hai bên xung đột ngược ý bài, nên NO, không phải chưa có so sánh.",
+      "evidence": "in perfect harmony with the museum",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "38": {
+      "reason": "Tác giả cho rằng công chúng thưởng thức tốt hơn khi tự tin bày tỏ quan điểm. Khuyến khích phản hồi cởi mở phù hợp quan điểm đó, nên YES.",
+      "evidence": "given the confidence to express their views",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "39": {
+      "reason": "Tác giả đề xuất làm bản sao chất lượng cao dễ tiếp cận, nhưng không đặt điều kiện chỉ được bán những bản ấy. Không được biến đề xuất tiếp cận thành quy định bán hàng: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "40": {
+      "reason": "Đoạn cuối cho rằng kỳ vọng người nắm quyền khuyến khích công chúng có thể là quá nhiều. Nhận định họ có khả năng làm vậy đảo ngược thái độ hoài nghi của tác giả: NO.",
+      "evidence": "too much to ask",
+      "location": "Passage 3 · Reading Passage 3"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "id": "c19-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "FALSE: khoảng hai phần ba loài bướm ở Anh đã giảm số lượng trong bốn mươi năm. Như vậy trước kia có nhiều hơn hiện nay, trái với fewer trong đề; đừng đảo chiều mốc thời gian.",
+      "evidence": "of butterfly species have declined in Britain over the past 40 years. If this trend continues, it",
+      "location": "Đoạn 1"
+    },
+    "2": {
+      "reason": "TRUE: sâu bướm là con mồi của chim, dơi và nhiều thú nhỏ khác. Các nhóm này chứng minh được nhiều loài săn mồi khác nhau ăn chúng, không chỉ một đối tượng chuyên biệt.",
+      "evidence": "in turn act as prey for birds as well as bats and other small mammals. Only by",
+      "location": "Đoạn 1"
+    },
+    "3": {
+      "reason": "FALSE: phenology liên quan thời điểm trong năm sinh vật hoạt động và sinh sản. Đề thay timing bằng location nên sai trọng tâm định nghĩa; thích ứng về thời gian không phải đổi địa điểm.",
+      "evidence": "is by changing the time of year at which they are active and reproduce. Scientists refer to",
+      "location": "Đoạn 2"
+    },
+    "4": {
+      "reason": "NOT GIVEN: mùa xuân đã ấm lên khoảng 0,5°C trong hai mươi năm, nhưng bài không nói điều đó rút ngắn tuổi thọ một số loài. Nở sớm hơn không đồng nghĩa sống ít ngày hơn.",
+      "evidence": "",
+      "location": "Đoạn 3"
+    },
+    "5": {
+      "reason": "FALSE: tác giả đặt câu hỏi về ý nghĩa thích ứng rồi nói câu trả lời vẫn chưa rõ. Nhận định đã có lý do rõ ràng trái với unknown; không thể coi một giả thuyết trong câu hỏi là kết luận.",
+      "evidence": "The answer is still unknown, but a new study is seeking to answer these questions. First, the",
+      "location": "Đoạn 3"
+    },
+    "6": {
+      "reason": "TRUE: dữ liệu do những người đam mê bướm dành thời gian rảnh quan sát gửi về. Mô tả này tương ứng amateur butterfly watchers, nên không cần họ là nhà khoa học chuyên nghiệp.",
+      "evidence": "been submitted by butterfly enthusiasts – people who spend their free time observing the activities of different",
+      "location": "Đoạn 4"
+    },
+    "7": {
+      "reason": "Small Blue sống theo quần thể có thể đến khoảng một trăm cá thể. Up to a hundred strong giải thích large, nên danh từ sau lives in là colonies; đừng ghi số lượng thay cho kiểu quần thể.",
+      "evidence": "dainty Small Blue, whose colonies are up to a hundred strong, some develop into butterflies early in",
+      "location": "Phần Small Blue"
+    },
+    "8": {
+      "reason": "Một số cá thể trưởng thành xuất hiện từ đầu mùa xuân. Early tương ứng the start of, nên spring hoàn thành thời điểm; không lấy mùa sinh sản tiếp theo hoặc tên loài làm đáp án.",
+      "evidence": "Britain, as the average spring temperature has increased by roughly 0.5 °C over the past 20 years,",
+      "location": "Phần Small Blue"
+    },
+    "9": {
+      "reason": "Loài này được gọi là loài bướm bị đe dọa nghiêm trọng nhất nước Anh. Ô cần trạng thái so với các loài khác, nên endangered; không phải nhận xét màu sắc hoặc số thế hệ.",
+      "evidence": "described as Britain’s most endangered butterfly, is in this group. It is found only in coppiced woodland",
+      "location": "Phần High Brown Fritillary"
+    },
+    "10": {
+      "reason": "Loài chỉ sống ở rừng khai thác chồi và địa hình đá vôi. Found only cho thấy phạm vi sinh cảnh giới hạn, nên habitat hoặc habitats; không điền tên một ví dụ riêng khi đề hỏi nhóm chung.",
+      "evidence": "woodland and limestone pavement habitats, it is also a single-generation butterfly that has advanced its phenology. This",
+      "location": "Phần High Brown Fritillary"
+    },
+    "11": {
+      "reason": "Ở những nơi đủ ấm thuộc lục địa châu Âu, loài có thể thêm thế hệ thứ hai. Warm ứng sufficiently warm, reproduce twice ứng second generation; địa điểm cần điền là Europe.",
+      "evidence": "show the capacity, in continental Europe, to add a second generation in years that are sufficiently warm.",
+      "location": "Phần Silver-studded Blue"
+    },
+    "12": {
+      "reason": "White Admiral được gắn với miền nam nước Anh. Ô đứng trước England cần từ chỉ vùng, nên southern; không nhầm đây là tên loài hoặc thời điểm tăng số lượng.",
+      "evidence": "The White Admiral of southern England, a much sought-after butterfly, experienced a significant increase in numbers from",
+      "location": "Phần White Admiral"
+    },
+    "13": {
+      "reason": "Số lượng giảm có thể do sâu chỉ ăn honeysuckle hoặc do biến đổi khí hậu. Đề đã cho climate change nên nguyên nhân còn lại là diet; bài đưa khả năng, không khẳng định duy nhất một nguyên nhân chắc chắn.",
+      "evidence": "to the caterpillar’s preferred diet, actually tended to be most at harm from advancing phenology. The beautiful",
+      "location": "Phần White Admiral"
+    },
+    "14": {
+      "reason": "Đoạn C liên hệ nhu cầu cobalt tăng với pin xe điện. Đây là nguyên liệu ngành giao thông đang cần nhiều hơn, nên C; không phải chỉ một nhận xét chung rằng biển chứa nhiều khoáng sản.",
+      "evidence": "sea contains more nickel, cobalt and rare earth metals than all land reserves combined, according to the",
+      "location": "Đoạn C"
+    },
+    "15": {
+      "reason": "Đoạn F cho ước tính đại dương chiếm khoảng 70% hành tinh. Câu hỏi yêu cầu tỷ lệ diện tích bề mặt, nên F; không nhầm với tỷ lệ khoáng sản đã khai thác hoặc độ sâu đáy biển.",
+      "evidence": "The oceans occupy around 70% of the planet and are relatively unexplored, says Mike Johnston, chief executive",
+      "location": "Đoạn F"
+    },
+    "16": {
+      "reason": "Đoạn E liệt kê giun ống, trai, sên, hải quỳ và cá quanh miệng phun thủy nhiệt. Đây là các sinh vật ở sinh cảnh cụ thể, nên E, không phải đoạn chỉ nói tài nguyên khoáng của biển.",
+      "evidence": "animals including crustaceans, tubeworms, clams, slugs, anemones and fish. ‘It is becoming increasingly clear that deep- sea mining",
+      "location": "Đoạn E"
+    },
+    "17": {
+      "reason": "Khung quản lý toàn cầu cho khai thác đáy biển còn chưa được soạn xong. Điều này cho thấy chưa thống nhất quy tắc giữa các nước, nên D; tiềm năng kinh tế không tự tạo thành thỏa thuận pháp lý.",
+      "evidence": "and that the global regulatory framework is not yet drafted. ‘Despite arising in the last half century",
+      "location": "Đoạn D"
+    },
+    "18": {
+      "reason": "Mike Johnston lập luận nên xem xét tiềm năng biển chưa khai thác thay vì tiếp tục bào mòn tài nguyên đất liền. Đây là lập trường người ở D; bài ghi quan điểm của ông, không xác nhận khai thác biển chắc chắn vô hại.",
+      "evidence": "It makes sense to explore this untapped potential in an environmentally sustainable way",
+      "location": "Đoạn F"
+    },
+    "19": {
+      "reason": "Nhóm tác giả ở B phê bình cuộc đua tài nguyên thường coi nhẹ hậu quả môi trường, xã hội và quyền người bản địa. Indigenous peoples tương ứng local inhabitants; không chỉ có tác hại vật lý dưới biển.",
+      "evidence": "and the marginalisation of indigenous peoples and their rights,’ a paper, written by Julie Hunter and Julian",
+      "location": "Đoạn D"
+    },
+    "20": {
+      "reason": "Mat Upton coi sinh vật đáy biển có tiềm năng tạo thuốc cứu người còn giá trị hơn chỉ lấy kim loại và khoáng sản. Đây là sự so sánh lợi ích y học với khai khoáng, nên người A.",
+      "evidence": "potential as a life-saving medicine. But Upton, and other scientists who view the deep ocean and its",
+      "location": "Đoạn A"
+    },
+    "21": {
+      "reason": "Verena Tunnicliffe cảnh báo khai khoáng có thể là sự tấn công lớn nhất con người từng gây cho hệ sinh thái biển sâu. Greatest assault diễn đạt destructive impact, nên người ở E.",
+      "evidence": "Mining will be the greatest assault on deep-sea ecosystems ever inflicted by humans,",
+      "location": "Đoạn F"
+    },
+    "22": {
+      "reason": "Nhóm ở B so việc đã khảo sát Mặt Trăng, Mars và Venus kỹ hơn với hiểu biết còn rất ít về biển sâu. Đó là so sánh kiến thức về không gian và đáy biển, không nói hai nơi đều không được nghiên cứu.",
+      "evidence": "Moon, Mars and even Venus have all been mapped and studied in much greater detail, leading marine",
+      "location": "Đoạn D"
+    },
+    "23": {
+      "reason": "Jon Copley nói giới khoa học rõ rằng không muốn khai mỏ tại các miệng phun biển sâu. Đề hỏi nơi có đồng thuận tránh khai thác, nên người C; không khái quát thành cấm mọi hoạt động ở toàn đại dương.",
+      "evidence": "clear,’ says Dr Jon Copley of the National Oceanography Centre, Southampton: ‘we don’t want mining on them",
+      "location": "Đoạn E"
+    },
+    "24": {
+      "reason": "Các công ty cho rằng khai thác biển tạo ít chất thải hơn. Little tương ứng without producing much, nên waste; cần phân biệt tuyên bố của doanh nghiệp với kết luận tác giả đã kiểm chứng lợi ích ấy.",
+      "evidence": "with little, if any, waste, Different methods of extraction exist, but most involve employing some form of",
+      "location": "Đoạn C"
+    },
+    "25": {
+      "reason": "Phương pháp có thể dùng máy móc cải biến từ khai mỏ trên đất liền. Converted tương ứng adapting, nên machinery là thứ được dùng lại; không phải bản thân khoáng sản hay một loại tàu.",
+      "evidence": "some form of converted machinery previously used in terrestrial mining to excavate materials from the sea floor,",
+      "location": "Đoạn C"
+    },
+    "26": {
+      "reason": "Nhóm môi trường và pháp lý kêu gọi thận trọng vì chưa biết hết hậu quả. Urged caution tương ứng điều cần thiết trước unknown ramifications, nên caution; không hiểu việc chưa rõ thành bằng chứng chắc chắn an toàn.",
+      "evidence": "legal groups have urged caution, arguing there are potentially massive and unknown ramifications for the environment and",
+      "location": "Đoạn D"
+    },
+    "27": {
+      "reason": "Chọn C: đoạn mở đầu nêu quan niệm phổ biến rằng con người ích kỷ và cạnh tranh. Câu hỏi hỏi tác giả đang làm gì, nên mô tả một niềm tin chung đúng hơn coi đó là kết luận nghiên cứu đã được chứng minh.",
+      "evidence": "has long been a general assumption that human beings are essentially selfish. We’re apparently ruthless, with strong",
+      "location": "Đoạn 1"
+    },
+    "28": {
+      "reason": "Chọn C: The Selfish Gene phổ biến vì phù hợp và giúp biện minh tinh thần cạnh tranh, cá nhân của thời đại. Lý do nằm ở bối cảnh thái độ xã hội, không chỉ chất lượng bằng chứng khoa học của cuốn sách.",
+      "evidence": "– the competitive and individualistic ethos that was so prevalent in late 20th-century societies. Like many others,",
+      "location": "Đoạn 2"
+    },
+    "29": {
+      "reason": "Chọn B: dân cư thưa khiến khó có nhu cầu cạnh tranh gay gắt về tài nguyên. Suy luận tác giả là nguồn lực có lẽ tương đối đủ so với dân số, không phải mọi nhóm tiền sử đều hoàn toàn tránh xung đột.",
+      "evidence": "15,000 years ago, the population of Europe was only 29,000, and the population of the whole world",
+      "location": "Phần tiền sử"
+    },
+    "30": {
+      "reason": "Chọn A: Knauft mô tả xã hội săn bắt hái lượm bình đẳng, ít tích trữ và hạn chế chênh địa vị. Bối cảnh ấy hỗ trợ luận điểm ích kỷ không phải đặc trưng bất biến mà phát triển tương đối gần đây.",
+      "evidence": "As the anthropologist Bruce Knauft has remarked, hunter-gatherers are characterised by ‘extreme political and sexual egalitarianism’. Knauft",
+      "location": "Phần nghiên cứu Knauft"
+    },
+    "31": {
+      "reason": "Knauft nói các nhóm đặc trưng bởi bình đẳng chính trị và giới rất cao. Ô sau high level cần danh từ nêu đặc điểm đó, nên egalitarianism; không phải một hình thức cai trị phân tầng.",
+      "evidence": "extreme political and sexual egalitarianism’. Knauft has observed that individuals in such groups don’t accumulate property or",
+      "location": "Phần xã hội săn bắt hái lượm"
+    },
+    "32": {
+      "reason": "Nhóm dùng cơ chế ngăn chênh lệch địa vị xuất hiện. Disparities of diễn đạt differences in, nên status; không chọn possession chỉ vì tài sản cũng được nhắc ở câu gần đó.",
+      "evidence": "ensuring that disparities of status don’t arise. The !Kung people of southern Africa, for example, swap arrows",
+      "location": "Phần giữ bình đẳng"
+    },
+    "33": {
+      "reason": "Ví dụ nói thành công săn bắt của một người không được dùng làm lý do tự nâng địa vị. Success at hỏi hoạt động cụ thể trong ví dụ, nên hunting, không phải lời tán thưởng dành cho họ.",
+      "evidence": "people who lived by hunting wild animals and collecting wild plants. With such small population densities, it",
+      "location": "Ví dụ về thợ săn"
+    },
+    "34": {
+      "reason": "Người tỏ ra quá chuyên quyền có thể bị tập thể bài xích và đuổi đi. Ô mô tả cách cư xử dẫn tới bị loại, nên domineering; exiling tương ứng excluded, không phải việc họ tự rời nhóm.",
+      "evidence": "a person becomes too domineering, the other members of the group ostracise them, exiling the offender from",
+      "location": "Ví dụ về hành vi áp đảo"
+    },
+    "35": {
+      "reason": "Phụ nữ có quyền tự quyết cao trong việc làm và hôn nhân. A high level of autonomy diễn đạt considerable amount trong đề, nên autonomy; không nhầm quyền lựa chọn với việc không ai có trách nhiệm.",
+      "evidence": "a high level of autonomy, being able to select their own marriage partners, decide what work they",
+      "location": "Phần phụ nữ"
+    },
+    "36": {
+      "reason": "NOT GIVEN: bài nhắc nhận định của nhà nhân học về số nhóm tương tự !Kung trước kia nhưng không nói họ sai về mốc bắt đầu suy giảm. Nêu một mốc lịch sử không đồng nghĩa tác giả bác bỏ mốc ấy.",
+      "evidence": "",
+      "location": "Phần !Kung"
+    },
+    "37": {
+      "reason": "NO: tác giả cho rằng người phát triển tính hiếu chiến có thể bị nhóm bài xích và ít cơ hội sống sót hơn. Điều này đối lập với nhận định những đặc điểm ấy đem lại lợi thế tiến hóa.",
+      "evidence": "they would have been ostracised from their groups. It makes more sense, then, to see traits such",
+      "location": "Phần đặc điểm hiếu chiến"
+    },
+    "38": {
+      "reason": "YES: hợp tác, bình đẳng, vị tha và hòa bình được tác giả xem là những ứng viên hợp lý hơn cho đặc tính bẩm sinh. Innate characteristics tương ứng natural way; nhận định khớp quan điểm, không phải thông tin còn bỏ ngỏ.",
+      "evidence": "see traits such as cooperation, egalitarianism, altruism and peacefulness as innate characteristics of human beings. These were",
+      "location": "Phần đặc trưng tự nhiên"
+    },
+    "39": {
+      "reason": "NOT GIVEN: bài gắn nét tiêu cực với điều kiện môi trường và tâm lý nhưng không so mức rõ rệt giữa các nền văn hóa hiện đại. Có nguyên nhân chung chưa cho biết văn hóa nào biểu hiện nhiều hơn.",
+      "evidence": "",
+      "location": "Phần cuối"
+    },
+    "40": {
+      "reason": "NO: nghiên cứu linh trưởng cho thấy phá hủy môi trường sống đi kèm tăng bạo lực và phân tầng. Đề nói nghiên cứu không tìm được liên hệ, nên mâu thuẫn trực tiếp với dẫn chứng tác giả nêu.",
+      "evidence": "are disrupted, they tend to become more violent and hierarchical.",
+      "location": "Đoạn cuối"
+    }
+  }
+}

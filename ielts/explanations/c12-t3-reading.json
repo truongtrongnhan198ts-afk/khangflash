@@ -1,0 +1,206 @@
+{
+  "id": "c12-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn A mô tả môi trường Galápagos rồi giải thích rùa tới sống, phát triển và phân hóa trên các đảo. Tiêu đề v bao quát việc quần đảo được rùa cư trú, không chỉ phần địa hình dẫn nhập.",
+      "evidence": "Flying tortoises A Forests of spiny cacti cover much of the uneven lava plains that separate the interior of",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Đoạn B liệt kê tác hại của con người: săn bắt, khai thác, phá nơi sống và đưa loài ngoại lai tới. Tiêu đề iii về những diễn biến bất lợi bao quát toàn đoạn hơn một nguyên nhân đơn lẻ.",
+      "evidence": "century onwards, pirates took a few on board for food, but the arrival of whaling ships in the",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Đoạn C chuyển từ tình trạng bị đe dọa sang khởi động chương trình bảo tồn và kết quả thành công. Vì thế viii về sự bắt đầu dự án bảo tồn là ý chính, không phải lịch sử săn bắt trước đó.",
+      "evidence": "on a tortoise-breeding centre just outside the town of Puerto Villamil on Isabela, dedicated to protecting the island’s",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Đoạn D nói rùa phải đủ tuổi mới được thả nhưng đợi quá lâu cũng không phù hợp. Điều cần cân đối là thời điểm thả, nên i; không chỉ việc nuôi rùa càng lâu càng tốt.",
+      "evidence": "until they’re at least five years old and weigh at least 4,5 kilograms, at which point their size",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Đoạn E nâng quy mô kế hoạch từ cách làm trước sang một hoạt động lớn hơn nhiều. Tiêu đề iv nêu đúng bước chuẩn bị ý tưởng tham vọng hơn, còn việc thực hiện chi tiết nằm ở đoạn tiếp theo.",
+      "evidence": "work out more ambitious reintroduction.",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Đoạn F tiếp nối kế hoạch bằng cách triển khai một chiến dịch đã chuẩn bị kỹ. Tiêu đề vi bao quát công tác tổ chức và vận chuyển cụ thể, khác với đoạn E chỉ giới thiệu ý tưởng.",
+      "evidence": "and a helicopter pilot gathered around a table in a small cafe in Puerto Ayora on the island",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Đoạn G đặt những con rùa non được thả cạnh rùa khổng lồ trưởng thành trong môi trường tổ tiên. Tiêu đề ii về thế hệ trẻ gặp thế hệ già phù hợp sự tương phản tuổi và kích thước ấy.",
+      "evidence": "release, the juvenile tortoises quickly spread out over their ancestral territory, investigating their new surroundings and feeding on",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Từ thế kỷ XVII, hải tặc lấy một số rùa lên tàu làm thức ăn. Câu hỏi hỏi nhóm người bắt rùa với số lượng nhỏ, nên pirates; tàu săn cá voi xuất hiện ở giai đoạn sau.",
+      "evidence": "century onwards, pirates took a few on board for food, but the arrival of whaling ships in the",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Những con rùa ít di chuyển và sống nhiều tháng không cần ăn uống, nên được đưa lên tàu làm nguồn thực phẩm. Điền food; mốc thập niên 1790 giúp định vị nhưng mục đích nằm ở câu kế tiếp.",
+      "evidence": "ships to act as food supplies during long ocean passages.",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Ngoài dùng làm thức ăn, cơ thể rùa đôi khi còn được chế biến thành dầu chất lượng cao. Từ cần điền là oil; phải đọc tiếp công dụng bổ sung sau phần nói về các chuyến biển dài.",
+      "evidence": "processed into high- grade oil.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Những người định cư săn rùa và phá nơi sống để làm nông. Đại từ “they” ở câu săn bắt quay lại settlers ở câu trước; vì vậy không gán hành động này cho hải tặc hoặc thủy thủ.",
+      "evidence": "then exacerbated when settlers came to the islands.",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Người định cư đưa các loài ngoại lai tới đảo, gây hại rùa và môi trường sống. Alien tương ứng với không bản địa; species là danh từ chung cần điền, không chọn riêng một loài trong danh sách ví dụ.",
+      "evidence": "They also introduced alien species – ranging from cattle, pigs, goats, rats and dogs to plants and ants",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Các loài ngoại lai ăn trứng và rùa non. Baby tortoises tương ứng với young tortoises; đối tượng còn lại trong cấu trúc song song là eggs, không phải môi trường sống bị phá hủy.",
+      "evidence": "that either prey on the eggs and young tortoises or damage or destroy their habitat. C Today, only 11",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn D thừa nhận con người sẽ luôn có nguy cơ mắc bệnh. Cách nói ấy tương đương việc không thể loại bỏ hoàn toàn mọi bệnh, nên D; đây là giới hạn được thừa nhận chứ không phủ nhận tiến bộ y học.",
+      "evidence": "people will always be prone to illness, the study of how geography affects our health could lead to",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn C nêu xe cộ, nhà máy dùng than, đô thị hóa và phá rừng. Các ví dụ cho thấy hành vi con người tạo nên điều kiện môi trường gây bệnh, đúng yêu cầu tìm tác động từ hoạt động con người.",
+      "evidence": "addition to factories that run on coal power.",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn F nói phân loại bệnh, dịch và các dạng ốm đau theo quy mô địa phương hoặc toàn cầu. Local và global là hai phạm vi địa lý tương ứng với yêu cầu phân loại theo mức lan rộng.",
+      "evidence": "epidemics into local and global scales.",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn G nêu chênh lệch lựa chọn chăm sóc sức khỏe giữa tầng lớp xã hội, mức thu nhập và giáo dục trong cùng quốc gia. Đây là lý do dịch vụ y tế sẵn có không đồng đều ngay bên trong một nước.",
+      "evidence": "people in different social classes, income brackets, and levels of education.",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn D định nghĩa địa lý sức khỏe bằng sự kết hợp kiến thức và phương pháp địa lý với nghiên cứu sức khỏe, bệnh tật, chăm sóc y tế. Combination tương ứng với mixture, nên chọn D.",
+      "evidence": "better cure. Health geography is the combination of, on the one hand, knowledge regarding geography and methods used",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Đoạn B lấy sốt rét làm ví dụ: bệnh ít gặp hơn nhiều ở sa mạc cao. Câu hỏi hỏi bệnh hiếm trong một loại khu vực, nên không nhầm với phần nói khí hậu nóng ẩm thuận lợi cho muỗi.",
+      "evidence": "problem in high-altitude deserts, for instance. C In some countries, geographical factors influence the health and well-being of the",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Nhiều bệnh bị xóa bỏ nhờ cải thiện tiêm chủng và khả năng tiếp cận chăm sóc y tế. “Better” diễn đạt lại improvements; danh từ đứng song song với healthcare cần điền là vaccinations.",
+      "evidence": "due to improvements in vaccinations and the availability of healthcare, there are still areas around the world where",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Sự tiếp xúc tăng khiến các nhiễm trùng kháng thuốc phổ biến hơn. Vì vi khuẩn hoặc tác nhân gây bệnh đề kháng, thứ mất dần hiệu quả là antibiotics, không phải những bệnh đang gia tăng.",
+      "evidence": "other infections resistant to antibiotics are becoming more and more common. B Geography can often play a very large",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Môi trường nóng ẩm ở vùng nhiệt đới thuận lợi cho muỗi truyền sốt rét. Chỗ trống hỏi sinh vật gây lây bệnh, nên mosquitoes; malaria là tên bệnh chứ không phải vật mang bệnh.",
+      "evidence": "which the mosquitos that can give people this disease can grew.",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Một nguồn gây ô nhiễm là nhà máy chạy bằng năng lượng than. Cụm burn fuel trong câu hỏi tương ứng với run on coal power; điền factories, không phải cars chỉ xuất hiện cạnh đó.",
+      "evidence": "addition to factories that run on coal power.",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Đô thị mở rộng dẫn tới chặt phá rừng, làm giảm nguồn không khí trong lành từ cây. Thứ xung quanh chịu ảnh hưởng là forests; cities đã là yếu tố gây thay đổi trong câu hỏi.",
+      "evidence": "to the cutting down of forests to allow for the expansion of big cities, which makes it even",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Bài lấy bại liệt làm ví dụ bệnh đang quay lại. Polio là tên cần điền; re-emerging tương ứng với xuất hiện trở lại sau khi tưởng đã được loại bỏ.",
+      "evidence": "world where diseases like polio are re-emerging, respiratory diseases continue to spread, and malaria-prone areas are still fighting",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Đoạn G minh họa trở ngại tiếp cận bệnh viện bằng ngọn núi nằm giữa làng và cơ sở y tế gần nhất. Điền mountain, chỉ rào cản địa hình chứ không phải một nhóm xã hội.",
+      "evidence": "there is a mountain between their village and the nearest hospital).",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Âm nhạc kích thích tế bào thần kinh sản xuất dopamine ở hai vùng não. Chỗ trống hỏi tên chất được giải phóng, nên dopamine; không phải tên vùng não caudate xuất hiện ở phần tiếp theo.",
+      "evidence": "triggers the production of dopamine – a chemical with a key role in setting people’s moods – by",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Hai vùng não ấy từ lâu được gắn với trải nghiệm khoái cảm. “Associated with” tương ứng với linked with; danh từ chỉ cảm giác cần điền là pleasure, không phải chất hóa học gây điều chỉnh tâm trạng.",
+      "evidence": "with the experience of pleasure, this finding isn’t particularly surprising. What is rather more significant is the finding that",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Các tế bào dopamine trong caudate hoạt động mạnh ngay trước đoạn nhạc yêu thích. Chỗ trống hỏi tên vùng não, nên caudate; “trước cao trào” là thời điểm hoạt động chứ không phải tên vùng.",
+      "evidence": "the dopamine neurons in the caudate – a region of the brain involved in learning stimulus-response associations, and",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Các nhà nghiên cứu gọi giai đoạn ngay trước đoạn nhạc mong đợi là anticipatory phase. Known as được diễn đạt bằng call; cần đủ hai từ để gọi tên giai đoạn, không chỉ tính từ anticipatory.",
+      "evidence": "this the ‘anticipatory phase’ and argue that the purpose of this activity is to help us predict the",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Vùng não này liên quan tới việc mong chờ thức ăn và những kích thích mang lại phần thưởng khác. Sau “such as” cần một ví dụ cụ thể, nên food, không phải khái niệm chung reward.",
+      "evidence": "and in anticipating food and other ‘reward’ stimuli – were at their most active around 15 seconds before",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Đoạn mở đầu liệt kê thay đổi ở đồng tử, mạch, huyết áp, da và lưu lượng máu khi nghe nhạc. Mục đích là nhấn mạnh phản ứng cơ thể mạnh mẽ: B, không phải mức khác biệt giữa từng người nghe.",
+      "evidence": "eyes dilate, our pulse and blood pressure rise, the electrical conductance of our skin is lowered, and the",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Tác giả đánh giá việc kết hợp PET và fMRI tạo bức tranh hoạt động não cực kỳ chính xác và chi tiết. C phù hợp nhận xét về dữ liệu; không phải chê công nghệ phức tạp hoặc phương pháp quá đơn giản.",
+      "evidence": "an impressively exact and detailed portrait of music in the brain.",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Điểm đáng chú ý là tế bào hoạt động mạnh khoảng mười lăm giây trước đoạn nhạc yêu thích. Đó là thời điểm phản ứng thần kinh, nên A; mối liên hệ giữa vùng não và khoái cảm đã được biết từ trước.",
+      "evidence": "active around 15 seconds before the participants’ favourite moments in the music.",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Meyer được giới thiệu để minh họa nguyên lý tâm lý vừa bàn: kỳ vọng bị trì hoãn tạo cảm xúc mạnh. Vì thế B là hỗ trợ cách giải thích kết quả Montreal, không phải trình bày quan điểm đối lập.",
+      "evidence": "safe and sound. To demonstrate this psychological principle, the musicologist Leonard Meyer, in his classic book Emotion and Meaning",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Meyer cho rằng cảm xúc bắt nguồn từ diễn biến và cấu trúc bên trong chính bản nhạc. D phù hợp; liên tưởng ký ức hay hình ảnh đời thực là hướng giải thích của các lý thuyết trước đó.",
+      "evidence": "from the unfolding events of the music itself.",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Nghiên cứu Montreal thấy tế bào ở caudate mạnh nhất trước phần nhạc người nghe thích, lúc phần thưởng chưa đến. F diễn đạt sự mong chờ, không phải chỉ phản ứng khi cao trào đã xảy ra.",
+      "evidence": "active around 15 seconds before the participants’ favourite moments in the music.",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Các nghiên cứu cho thấy tế bào dopamine nhanh chóng thích nghi với phần thưởng dự đoán được. Khi biết trước kết quả, mức hưng phấn giảm; chọn B, không nhầm với hiệu ứng tăng kích thích do bất ngờ.",
+      "evidence": "dopamine neurons quickly adapt to predictable rewards.",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Phân tích Beethoven cho thấy nhà soạn nhạc nêu mẫu giai điệu rồi trì hoãn việc lặp lại, giữ người nghe chờ đợi. E phù hợp vai trò của kỳ vọng chưa được thỏa mãn, không phải lặp liên tục phần quen thuộc.",
+      "evidence": "tonal dance, carefully holds off repeating it.",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Các lý thuyết trước Meyer cho rằng âm nhạc tạo cảm xúc bằng liên hệ với hình ảnh và trải nghiệm ngoài đời. C nói đúng nguồn liên tưởng bên ngoài; quan điểm về cấu trúc nội tại thuộc Meyer, không thuộc các lý thuyết trước.",
+      "evidence": "to the real world of images and experiences – its ‘connotative’ meaning – Meyer argued that the emotions",
+      "location": "Passage 3"
+    }
+  }
+}

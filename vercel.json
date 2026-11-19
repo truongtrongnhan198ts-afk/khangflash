@@ -1,14 +1,77 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/dashboard.html" },
-    { "source": "/dashboard", "destination": "/dashboard.html" },
-    { "source": "/flashcard", "destination": "/flashcard.html" },
-    { "source": "/due", "destination": "/due.html" },
-    { "source": "/grammar", "destination": "/grammar.html" },
-    { "source": "/library", "destination": "/library.html" },
-    { "source": "/games", "destination": "/games.html" },
-    { "source": "/schedule", "destination": "/schedule.html" },
-    { "source": "/grammar-games", "destination": "/grammar-games.html" }
+    {
+      "source": "/",
+      "destination": "/dashboard.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard.html"
+    },
+    {
+      "source": "/flashcard",
+      "destination": "/flashcard.html"
+    },
+    {
+      "source": "/flashcards",
+      "destination": "/flashcard.html"
+    },
+    {
+      "source": "/flashcards.html",
+      "destination": "/flashcard.html"
+    },
+    {
+      "source": "/due",
+      "destination": "/due.html"
+    },
+    {
+      "source": "/grammar",
+      "destination": "/grammar.html"
+    },
+    {
+      "source": "/library",
+      "destination": "/library.html"
+    },
+    {
+      "source": "/games",
+      "destination": "/games.html"
+    },
+    {
+      "source": "/schedule",
+      "destination": "/schedule.html"
+    },
+    {
+      "source": "/grammar-games",
+      "destination": "/grammar-games.html"
+    },
+    {
+      "source": "/writing",
+      "destination": "/writing.html"
+    },
+    {
+      "source": "/knowledge",
+      "destination": "/knowledge.html"
+    },
+    {
+      "source": "/ielts-readlis",
+      "destination": "/ielts-readlis.html"
+    },
+    {
+      "source": "/news",
+      "destination": "/news.html"
+    },
+    {
+      "source": "/podcasts",
+      "destination": "/podcasts.html"
+    },
+    {
+      "source": "/history",
+      "destination": "/history.html"
+    },
+    {
+      "source": "/logo.webp",
+      "destination": "/tid-assets/logo.webp"
+    }
   ]
 }

@@ -1,0 +1,206 @@
+{
+  "id": "c20-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Kakapo được gọi là loài vẹt duy nhất trên thế giới không biết bay. Only phủ nhận việc có những loài vẹt không bay khác, nên nhận định về other parrots là FALSE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Kakapo chỉ sinh sản vào các năm thức ăn dồi dào, không phải năm nào cũng có con. Điều kiện only in years mâu thuẫn với every year, nên FALSE dù mùa sinh sản được nêu rõ.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Con đực không tham gia ấp trứng hay nuôi con; con cái tự làm cả hai. Vì thế nhận định con đực trưởng thành mang thức ăn về cho con là FALSE, không phải thiếu thông tin.",
+      "evidence": "Males play no part in incubation or chick-rearing",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Cả người định cư Polynesia lẫn chuột đều săn kakapo, nhưng mức đe dọa của hai bên không được so sánh. Greater than thêm một quan hệ bài không cho, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Mèo hoang khiến quần thể ở Rakiura giảm nhanh, sau đó những con còn sống được chuyển tới đảo bảo tồn. Ghép hai thông tin liên tiếp cho thấy việc di chuyển nhằm tránh nguy cơ đó, nên TRUE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Kế hoạch phục hồi có biện pháp cứu và nuôi tay những chim non không phát triển tốt. Điều này đúng với hỗ trợ chim trẻ, nên TRUE; không chỉ chăm sóc chim trưởng thành.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Khẩu phần gồm các phần của cây, củ và lá dương xỉ. Đề đã gộp lá, rễ, vỏ thành parts of a tree, nên thứ còn lại song song với fern fronds là bulbs, không lặp leaves.",
+      "evidence": "bulbs, and fern fronds",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Trứng được đẻ trong đất, nơi con cái xới trước và trong lúc ấp. Câu hỏi cần vật liệu hoặc nơi đặt trứng, nên soil; không suy từ tập tính chim nói chung thành tổ trên cây.",
+      "evidence": "The 1-4 eggs are laid in soil",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Người Polynesia dùng lông kakapo làm áo choàng mềm. Câu hỏi cần bộ phận được dùng làm quần áo, nên feathers số nhiều; thịt được dùng cho mục đích khác.",
+      "evidence": "used its feathers to make soft cloaks",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Hươu do người châu Âu đưa tới ăn nguồn thức ăn của kakapo. Đề hỏi loài cạnh tranh thức ăn, nên deer; không nhầm với động vật trực tiếp săn chim hoặc ăn trứng.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Năm 1980 người ta xác nhận có con cái tại Rakiura. Definite sighting diễn đạt lại it was confirmed, nên 1980, không phải năm người ta mới phát hiện đàn chim nói chung.",
+      "evidence": "in 1980 it was confirmed females were also present",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Kế hoạch phục hồi được cấp lượng kinh phí cao hơn. Increase tương ứng a higher amount of, nên funding; câu hỏi cần nguồn lực được tăng chứ không phải kết quả tăng số chim.",
+      "evidence": "a higher amount of funding",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Mục tiêu là bảo đảm những bên liên quan tham gia đầy đủ vào quản lý. Involvement diễn đạt fully engaged, nên stakeholders số nhiều; không giới hạn thành chỉ các nhà nghiên cứu.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C nói khó nghiên cứu cây trưởng thành còn sống vì số cây ấy rất ít. Câu hỏi kết hợp khó khăn nghiên cứu với số mẫu hạn chế, nên C, không phải đoạn chỉ kể thiệt hại chung.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn G đặt ý kiến Russell ủng hộ tái trồng cạnh cảnh báo của Elliot về bệnh mới và ưu tiên phục hồi tự nhiên. Đây là các quan điểm khác nhau về giá trị tái đưa cây vào, nên G.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn B nói gỗ du nhập từ Canada dẫn tới đợt bùng phát bệnh lần hai. Đây là cách bệnh vào Anh, nên B; không nhầm phương tiện mang bệnh với cơ chế bọ truyền nấm giữa cây.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn E mô tả Brighton được gió biển mạnh bảo vệ vì cản bọ vỏ cây xâm nhập. Câu hỏi cần điều kiện khiến một nơi ít bị ảnh hưởng, nên E, không chỉ nơi có trồng du.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn C giải thích cây du nhỏ thành mục tiêu khi thân đạt đường kính khoảng 10–15 cm. Đây là giai đoạn cây dễ bị tấn công, nên C; không phải tuổi cây tính bằng năm.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Russell mô tả sau bốn đến sáu tuần, cây nhạy bệnh có thể rụng lá hoặc chết, trong khi cây kháng bệnh không có triệu chứng. Đây là bằng chứng tác hại hiện ra nhanh, nên người B.",
+      "evidence": "four to six weeks",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Elliot cho rằng đôi khi tốt nhất là cho thiên nhiên thời gian phục hồi. Ý chờ xem các cây trưởng thành còn sống có phát triển tiếp không phù hợp quan điểm ấy, nên A.",
+      "evidence": "give nature time to recover",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Russell đặt câu hỏi vì sao vài cây trưởng thành sống sót và không cho rằng chỉ là may mắn. Nhận định có nguyên nhân giúp cây sống chính là diễn đạt lại quan điểm này, nên B.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Bourne cảnh báo bọ mang bệnh có thể xâm nhập bất cứ lúc nào vì mối đe dọa ở ngay ngưỡng cửa. Đây là nhắc nguồn bệnh còn rất gần, nên C, không khẳng định Brighton an toàn vĩnh viễn.",
+      "evidence": "the threat is right on our doorstep",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Elliot nói cần nhìn ảnh cũ để hiểu cây du từng định hình cảnh quan thế nào, từ đó mới cảm nhận hết bệnh đã phá hủy gì. Câu hỏi diễn đạt đúng quan hệ ấy, nên A.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Cây du từng đứng sát sau sồi trong các loại gỗ cứng được ưa dùng tại Anh. Ran a close second to xác định loại đứng trên là oak; đừng điền chính elm đã có trong câu.",
+      "evidence": "elm ran a close second to oak",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Thế kỷ XVIII, gỗ du được làm thùng chứa và sàn. Đề đã đổi storage crates thành boxes, nên vật dụng còn thiếu là flooring; không lặp crates vào chỗ hỏi vật dụng thứ hai.",
+      "evidence": "storage crates and flooring",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Gỗ du chịu va đập tốt, được dùng làm sống đáy tàu Cutty Sark. The keel of the ship tương ứng the ship's keel, nên keel, không phải toàn thân hoặc cột buồm.",
+      "evidence": "the keel of the 19th-century sailing ship Cutty Sark",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu nêu các quyết định quan trọng về y tế, tiền bạc, nghề nghiệp thường phải làm dưới áp lực. Tác giả giới thiệu một thách thức mọi người đều gặp rồi đặt câu hỏi nghiên cứu, nên C.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Công việc lính cứu hỏa luân phiên giữa lúc bình thản và tình huống sinh tử. Sự thay đổi áp lực rõ rệt làm họ thành đối tượng nghiên cứu thích hợp, nên A; không phải nghề luôn căng thẳng như nhau.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn bốn kể việc yêu cầu dự đoán rủi ro, đưa tin tốt hoặc xấu rồi hỏi lại dự đoán. Đây là mô tả quy trình nghiên cứu, nên D, không phải trình bày kết luận hoặc phê bình phương pháp.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Khi căng thẳng, thay đổi thần kinh khiến ta chú ý hơn tới điều có thể sai và học từ tín hiệu nguy hiểm. C diễn đạt đúng độ nhạy tăng với đe dọa bên ngoài, không phải cơ chế loại bỏ mọi lo lắng.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Khi thư giãn, lính cứu hỏa thể hiện xu hướng lạc quan thường thấy: đón nhận tin tốt và bỏ qua tin xấu. Vì vậy họ tương đối ít chú ý thông tin tiêu cực, lựa chọn B.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Khi căng thẳng, họ cảnh giác với tin xấu và điều chỉnh dự đoán rủi ro theo hướng xấu hơn, kể cả việc không liên quan nghề nghiệp. Chọn G: nghĩ bản thân dễ gặp chuyện xấu hơn.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Áp lực không làm đổi phản ứng với tin tốt. Do vậy trong hoàn cảnh thư giãn lẫn căng thẳng họ phản ứng tương tự khi nghe tin tích cực, tương ứng F; đừng áp hiệu ứng tin xấu sang tin tốt.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Sinh viên được báo phải phát biểu bất ngờ, bị chuyên gia đánh giá và quay video đưa lên mạng. Tình huống gây căng thẳng này ảnh hưởng cortisol và nhịp tim, nên E, không phải chỉ do nhận thông tin tốt.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Cả thí nghiệm với lính cứu hỏa và sinh viên đều cho thấy xử lý tin xấu tốt hơn khi căng thẳng. Điều kiện chung là were feeling under stress, lựa chọn D, không phải chung nghề nghiệp hay độ tuổi.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Xem nội dung tích cực khiến người ta đăng thông điệp tích cực hơn; xem bài tiêu cực có hiệu ứng ngược lại. Nội dung tự đăng có xu hướng phản ánh nội dung đã xem, nên YES.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Bài liên hệ việc kiểm tra điện thoại liên tục với căng thẳng nhưng không so điện thoại với thiết bị điện tử khác. Thiếu căn cứ cho mức greater than, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Sau biến cố công cộng gây căng thẳng, người ta lại rất chú ý làn sóng tin báo động. Điều này trái với nhận định càng căng thẳng càng khó chú ý thông tin, nên NO.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Căng thẳng lan truyền làm ta đánh giá quá cao nguy hiểm và có thể hủy chuyến đi hoặc bán tháo cổ phiếu. Đây là ví dụ quyết định thiếu khôn ngoan do áp lực, nên YES.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Đoạn cuối nói cảm xúc tích cực cũng lan truyền; hiểu liên hệ cảm xúc và xử lý thông tin giúp truyền đạt, hành động hiệu quả hơn. Như vậy có thể dùng cảm xúc tích cực theo cách có lợi, nên YES.",
+      "evidence": "",
+      "location": "Passage 3"
+    }
+  }
+}

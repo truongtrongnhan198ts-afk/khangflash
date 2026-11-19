@@ -1,0 +1,206 @@
+{
+  "id": "c19-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "FALSE: Shipton và đồng nghiệp là các nhà khảo cổ đầu tiên khảo sát Obi năm 2019. First archaeologists trái với nhận định đã có nghiên cứu khảo cổ trước họ; có cư dân sống lâu đời không đồng nghĩa đã có khảo cổ.",
+      "evidence": "National University became the first archaeologists to explore Obi, one of many tropical islands in Indonesia’s Maluku",
+      "location": "Đoạn mở đầu"
+    },
+    "2": {
+      "reason": "FALSE: rìu vỏ sò cùng thời đã được tìm thấy ở nơi khác, gồm đảo Gebe gần đó. Previously found elsewhere bác bỏ ý những chiếc ở Kelo là phát hiện đầu tiên trong cả vùng.",
+      "evidence": "same time had also previously been found elsewhere in this region, including on the nearby island of",
+      "location": "Phần rìu vỏ sò"
+    },
+    "3": {
+      "reason": "TRUE: khi mực biển thấp hơn khoảng 120 mét, Obi lớn hơn và gồm cả những đảo nay tách riêng. Vì vậy diện tích Obi hiện nay nhỏ hơn lúc ấy; không đảo chiều so sánh thời gian.",
+      "evidence": "Sea levels were about 120 metres lower, meaning Obi was a much larger island, encompassing what is",
+      "location": "Phần 18.000 năm trước"
+    },
+    "4": {
+      "reason": "NOT GIVEN: khí hậu ấm và ẩm hơn làm rừng Obi dày lên, nhưng bài không so độ tác động với các đảo xung quanh. Có thay đổi mạnh tại Obi không chứng minh Obi bị ảnh hưởng nhiều hơn.",
+      "evidence": "",
+      "location": "Phần kết thúc băng hà"
+    },
+    "5": {
+      "reason": "TRUE: các nhà nghiên cứu liên hệ rừng dày do khí hậu ấm ẩm với việc chuyển từ rìu vỏ sò sang đá bền hơn. It is no coincidence xác nhận họ xem hai biến đổi có liên hệ, không chỉ tình cờ cùng thời.",
+      "evidence": "the researchers, it is no coincidence that around this time the first axes crafted from stone rather",
+      "location": "Phần rìu đá"
+    },
+    "6": {
+      "reason": "NOT GIVEN: xương động vật giúp suy ra cư dân săn cuscus, nhưng không có phản ứng ngạc nhiên của nhóm nghiên cứu. Phát hiện một bằng chứng không đồng nghĩa họ bất ngờ vì nó.",
+      "evidence": "",
+      "location": "Phần chứng cứ săn bắt"
+    },
+    "7": {
+      "reason": "FALSE: hai nơi trú bị bỏ khoảng 8.000 năm trước và chỉ được dùng lại khoảng 1.000 năm trước. Đó là khoảng trống dài, trái với nhận định có người ở liên tục tới thời điểm sau.",
+      "evidence": "years ago, both were abandoned. Did the residents leave Obi completely, or move elsewhere on the island?",
+      "location": "Phần bỏ nơi trú"
+    },
+    "8": {
+      "reason": "Hai hang gần làng Kelo có nơi trú đá tiền sử thích hợp khai quật. Ô hỏi không gian chứa nơi trú, nên caves; không nhầm village là địa điểm lân cận đã cho trong đề.",
+      "evidence": "and his colleagues found two caves containing prehistoric rock shelters that were suitable for excavation. With the",
+      "location": "Phần khai quật Kelo"
+    },
+    "9": {
+      "reason": "Rìu xuất hiện khi rừng dày lên được làm bằng đá thay vì vỏ sò. Ô hỏi vật liệu theo mốc 11.700 năm nên stone, không phải shells của giai đoạn sớm hơn.",
+      "evidence": "islands were crucial ‘stepping stones’ on humans’ island-hopping voyages through this region millennia ago. But to support",
+      "location": "Phần 11.700 năm trước"
+    },
+    "10": {
+      "reason": "Xương cuscus đào được là bằng chứng cư dân săn và ăn loài này. Ô hỏi di vật chứng minh khẩu phần, nên bones; không điền tên động vật vốn được mô tả trong đề.",
+      "evidence": "longer. Judging by the bones which the researchers unearthed in the Kelo caves, people living there mainly",
+      "location": "Phần thức ăn"
+    },
+    "11": {
+      "reason": "Những loại hạt trang sức tương tự di vật ở đảo khác chứng tỏ liên hệ giữa các đảo. Ô cần beads; obsidian cũng có nguồn ngoài Obi nhưng không phải đồ vật được diễn đạt tương tự nơi khác ở câu này.",
+      "evidence": "revealed particular types of beads, similar to those previously found on islands in southern Wallacea. These finds",
+      "location": "Phần giao lưu liên đảo"
+    },
+    "12": {
+      "reason": "Nhóm tái cư trú khoảng 1.000 năm trước sở hữu đồ gốm cùng đồ vàng bạc. Kim loại đã có trong đề, nên loại đồ vật còn lại là pottery; không lấy di vật săn bắt của giai đoạn cũ.",
+      "evidence": "by people who owned pottery as well as items made out of gold and silver. It seems",
+      "location": "Đoạn cuối"
+    },
+    "13": {
+      "reason": "Vị trí Obi gợi nơi trú từng phục vụ người tham gia trao đổi giữa Maluku và thế giới. Hàng hóa trong hoạt động lịch sử ấy là spices; các đồ kim loại chỉ là di vật tìm được, không phải tên mặt hàng được hỏi.",
+      "evidence": "the historic trade in spices between the Maluku islands and the rest of the world.",
+      "location": "Đoạn cuối"
+    },
+    "14": {
+      "reason": "Đoạn G nhấn mạnh phục hồi ướt phải đồng thời tạo thu nhập cho dân, vì họ chỉ bảo vệ nếu thấy giá trị và lợi ích. Đó là bảo đảm cư dân tiếp tục được hưởng lợi, nên G.",
+      "evidence": "acknowledges the importance of income generation. ‘It’s not that we just want to restore the biodiversity of",
+      "location": "Đoạn G"
+    },
+    "15": {
+      "reason": "Đoạn A đưa con số một nửa diện tích đất ngập nước thế giới đã biến mất. Đề hỏi tỷ lệ mất đi, nên A; không nhầm con số phát thải carbon ở phần nói riêng đất than bùn.",
+      "evidence": "Fund for Nature (WWFN), half of the world’s wetlands have disappeared since 1990 converted or destroyed",
+      "location": "Đoạn A"
+    },
+    "16": {
+      "reason": "Đoạn H có nhận xét nhận thức về tầm quan trọng đất ngập nước đang tăng. Awareness is growing tương ứng people are beginning to appreciate, nên H; đây là thay đổi nhận thức, không phải bảo đảm mọi nơi đã phục hồi.",
+      "evidence": "is cautiously optimistic, however. ‘Awareness of the importance of wetlands is growing,’ he says. ‘It’s true that",
+      "location": "Đoạn H"
+    },
+    "17": {
+      "reason": "Đất ngập nước được gắn với giá trị tôn giáo, lịch sử và khảo cổ của các cộng đồng. Ba khía cạnh ấy tạo nên ý nghĩa văn hóa được hỏi, nên chọn B thay vì đoạn chỉ bàn lợi ích sinh thái.",
+      "evidence": "they are of considerable religious, historical and archaeological value to many communities around the world. ‘Wetlands directly",
+      "location": "Đoạn B"
+    },
+    "18": {
+      "reason": "Khi bị tháo nước để trồng trọt, đất than bùn từ nơi giữ carbon trở thành nguồn phát thải. Ô cần chất trước được trữ nay thoát ra, nên carbon; không phải bản thân nước bị rút đi.",
+      "evidence": "cultivation, they become net carbon emitters instead of active carbon stores, and, according to Marcel Silvius, head",
+      "location": "Phần đất than bùn"
+    },
+    "19": {
+      "reason": "Dọn đất than bùn để canh tác làm tăng nguy cơ cháy rừng, vốn thải nhiều CO2. Chỗ trống hỏi sự kiện có khả năng xảy ra hơn, nên fires; không điền lượng khí phát thải là hậu quả.",
+      "evidence": "increases the risk of forest fires, which release huge amounts of CO2 ‘We’re seeing huge peatland forests",
+      "location": "Phần dọn đất"
+    },
+    "20": {
+      "reason": "Rừng than bùn có giá trị đa dạng sinh học cao bị mất để đổi lấy vài chục năm thu từ dầu cọ. Ô cần thuộc tính môi trường bị hủy nên biodiversity, không phải tên cây thương mại.",
+      "evidence": "forests with extremely high biodiversity value being lost for a few decades of oil palm revenues,’ says",
+      "location": "Phần đồn điền dầu cọ"
+    },
+    "21": {
+      "reason": "Công ty đào mương để chở gỗ rồi dùng chính mương ấy rút nước phục vụ trồng cây. Ô cần đường dẫn nước nên ditches; không nhầm mục đích vận chuyển ban đầu với vai trò thoát nước sau đó.",
+      "evidence": "the trees. They dig ditches to enter the peat swamps by boat and then float the logs",
+      "location": "Phần khai thác gỗ"
+    },
+    "22": {
+      "reason": "Sau rút nước, chất rắn trong than bùn lún xuống; quá trình này gọi là subsidence. Đó là cơ chế có thể dẫn tới mất đất và ngập ven biển, không chỉ hiện tượng nước chảy ra.",
+      "evidence": "a process known as subsidence**. Peat comprises 90 per cent water, so this is one of the",
+      "location": "Phần thoát nước"
+    },
+    "23": {
+      "reason": "McCartney yêu cầu dân địa phương tham gia quy hoạch, quyết định và có quyền sử dụng đất ngập nước rõ ràng. Đây là phát biểu về đưa cộng đồng vào bàn tương lai khu vực, nên người A.",
+      "evidence": "in wetland planning and decision making and have clear rights to use wetlands.’ H The fortunes of",
+      "location": "Đoạn G"
+    },
+    "24": {
+      "reason": "Silvius nói chính phủ có thái độ khác nhau: nơi ưu tiên khôi phục, nơi còn phủ nhận vấn đề. Vì vậy nhận định chính sách không giống nhau thuộc người C; không khái quát mọi nước cùng một cách xử lý.",
+      "evidence": "recognised their long-term value. ‘Different governments have different attitudes,’ he says, and goes on to explain that",
+      "location": "Phần chính sách các nước"
+    },
+    "25": {
+      "reason": "Tickner nói ông chưa gặp ai muốn cố tình hại đất ngập nước; nhiều tác động đến từ cố kiếm sống. Đây là tổn hại ngoài chủ ý, nên người D, không phải cáo buộc dân luôn phá hoại có kế hoạch.",
+      "evidence": "not blame anyone for deliberate damage, however. ‘I’ve worked on wetland issues for 20 years and have",
+      "location": "Phần nguyên nhân tổn hại"
+    },
+    "26": {
+      "reason": "Người ở B lấy ví dụ chỉ trồng vài cây mỗi hecta đã tạo bóng và thay đổi vi khí hậu. Điều này chứng minh biện pháp cải thiện không nhất thiết phức tạp hoặc tốn nhiều tiền.",
+      "evidence": "simple as planting a few trees per hectare to create shade and substantially change a microclimate,’ he",
+      "location": "Phần biện pháp đơn giản"
+    },
+    "27": {
+      "reason": "Chọn D: tiếng ồn ga Kyoto và đường truyền kém làm cuộc gọi khó theo dù hai người cùng nói tiếng Anh. Thử thách nằm ở điều kiện truyền đạt, không phải họ dùng ngôn ngữ khác hoặc không hiểu chủ đề.",
+      "evidence": "with the kind of background noise I can hear in my office surrounding Professor Waibel as he",
+      "location": "Đoạn 1"
+    },
+    "28": {
+      "reason": "Chọn A: giảng viên nói rõ, ít tiếng nền và lặp nội dung gần giống mỗi năm, giúp hệ thống dịch. Đề hỏi yếu tố hỗ trợ máy nên repeated content, không phải kỹ năng đọc của sinh viên.",
+      "evidence": "much the same thing each year. The idea of artificial speech translation has been around for a",
+      "location": "Phần bài giảng Karlsruhe"
+    },
+    "29": {
+      "reason": "Chọn C: truyện 1979 đã hình dung sinh vật cho phép hiểu mọi ngôn ngữ, cho thấy ý tưởng dịch giọng nói có từ lâu. Tác giả không dùng ví dụ để xếp hạng các hệ thống dịch hiện nay.",
+      "evidence": "been around for a long time. Douglas Adams’ science fiction novel, The Hitchhikers Guide to the Galaxy",
+      "location": "Phần Babel fish"
+    },
+    "30": {
+      "reason": "Chọn B: tác giả thấy việc ngại chia tai nghe với người lạ không có gì bất ngờ. That's understandable diễn đạt thái độ ấy; không có dự báo chắc mọi người rồi sẽ quen hoặc thiết bị sẽ biến mất.",
+      "evidence": "can’t have been totally unexpected. The problem would be solved if earpiece translators became sufficiently prevalent that",
+      "location": "Phần dùng chung tai nghe"
+    },
+    "31": {
+      "reason": "Phương pháp phát triển nhanh ở Nhật nhưng tác giả vẫn lưu ý còn nhiều việc phải làm. Chọn phần kết C nêu giới hạn còn tồn tại; tăng trưởng nhanh không đồng nghĩa công nghệ đã hoàn thiện.",
+      "evidence": "There is still a long way to go, though. A translation system needs to be simultaneous, like",
+      "location": "Phần Nhật Bản"
+    },
+    "32": {
+      "reason": "Lồng tiếng phỏng vấn thành công vì diễn ra đồng thời thay vì bắt người nói ngừng sau vài câu. Vì thế chọn E, phần kết về tính liên tục; không phải do nói chậm hoặc dùng từ đơn giản.",
+      "evidence": "system needs to be simultaneous, like the translator’s voice speaking over the foreign politician being interviewed on",
+      "location": "Phần phỏng vấn truyền hình"
+    },
+    "33": {
+      "reason": "Hệ thống tương lai cần xưng hô phù hợp, như tôn trọng học hàm ở văn hóa coi trọng điều đó. Vì vậy chọn F, phần kết về phép lịch sự; xử lý đúng âm thanh chưa đủ đáp ứng yêu cầu xã hội.",
+      "evidence": "demand solemn respect for academic status, for example, and it is only polite to respect this. Etiquette-sensitive",
+      "location": "Phần phép lịch sự"
+    },
+    "34": {
+      "reason": "Máy nhạy với lễ nghi có thể tự xử lý khác biệt chuẩn mực, nên người dùng ít phải học hoặc đổi theo tập quán bên kia. Đó là ý phần kết B về giữ phong tục của mình, không phải bỏ mọi phép lịch sự.",
+      "evidence": "to know these differing cultural norms. At the same time, they might help to preserve local customs,",
+      "location": "Phần chuẩn mực văn hóa"
+    },
+    "35": {
+      "reason": "NO: bài nói giáo sư và người chuyên môn sẽ không phó thác nhận thức ngôn ngữ cho phần mềm. Điều này trái với khẳng định hệ thống sẽ được đánh giá rất hữu dụng khắp các giới ấy.",
+      "evidence": "Professors and other professionals will not outsource language awareness to software, though. If the technology matures into",
+      "location": "Phần giới học thuật"
+    },
+    "36": {
+      "reason": "YES: tác giả nói liệu dịch tự động giúp đời sống gia đình và quan hệ hay không vẫn còn để ngỏ. Một ứng dụng có tiềm năng không đủ chứng minh giá trị tổng thể đã được xác lập.",
+      "evidence": "lives or relationships is open to question – though one noteworthy possibility is that it could overcome",
+      "location": "Phần gia đình"
+    },
+    "37": {
+      "reason": "NO: ứng dụng được gợi ra là vượt rào cản giữa trẻ và ông bà sau di cư, tức có thể giúp gắn kết. Nhận định làm đời sống gia đình nhập cư khó hơn đảo chiều lợi ích cụ thể ấy.",
+      "evidence": "it could overcome the language barriers that often arise between generations after migration, leaving children and their",
+      "location": "Phần gia đình nhập cư"
+    },
+    "38": {
+      "reason": "NOT GIVEN: bài bàn tiếng ồn, văn hóa và quan hệ nhưng không nói các nhà khoa học đang nghiên cứu khía cạnh thị giác của dịch. Không thể suy việc có giao tiếp là phải có nghiên cứu hình ảnh.",
+      "evidence": "",
+      "location": "Phần cuối"
+    },
+    "39": {
+      "reason": "NOT GIVEN: tiếng Anh hiện và Latin trước kia được nêu làm ngôn ngữ chung khoa học. Không có so sánh ngôn ngữ nào dễ dịch sang ngôn ngữ khác hơn; chức năng xã hội không chứng minh độ dễ kỹ thuật.",
+      "evidence": "",
+      "location": "Phần ngôn ngữ chung"
+    },
+    "40": {
+      "reason": "YES: nhu cầu thực dụng dùng một ngôn ngữ chung có thể giảm, nhưng giá trị xã hội của việc cùng nói nó vẫn còn. Tương phản ấy trực tiếp xác nhận khác biệt giữa nhu cầu thực tế và xã hội.",
+      "evidence": "language will diminish, the social value of sharing one will persist. And software will never be a",
+      "location": "Đoạn cuối"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "id": "c21-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Mũi saiga có lỗ mũi phồng giúp lọc bụi. Keep out trong đề diễn đạt lại filter out, nên điền dust; chức năng làm mát máu thuộc chỗ trống tiếp theo.",
+      "evidence": "The swollen nostrils of the nose serve several purposes: they filter out dust",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Vào mùa hè nóng và khô, lỗ mũi giúp làm mát máu. Lower the temperature diễn đạt cool, nên điền blood, không phải nhiệt độ môi trường hoặc không khí bên ngoài.",
+      "evidence": "they filter out dust and cool the blood during hot, dry summers",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Saiga có lớp lông mùa đông dày và rụng khi thời tiết ấm. Thick tương ứng heavy, loses tương ứng sheds, nên từ còn thiếu là coat; không phải phần da bị mất.",
+      "evidence": "Other seasonal adaptations include a heavy winter coat that the saiga sheds when the weather warms up",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Saiga đực bị săn trộm vì sừng được người hành nghề y học cổ truyền đánh giá cao. Câu hỏi cần bộ phận có giá trị, nên horns số nhiều; nguyên nhân không đơn thuần là thịt.",
+      "evidence": "Male saiga are a particular target, because their horns are highly prized by traditional medicine practitioners",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Nông nghiệp mở rộng và người dân định cư làm mất không gian sống của saiga. Reduction in size diễn đạt loss of habitat, nên điền habitat, không nhầm với tuyến di cư bị chặn ở câu sau.",
+      "evidence": "Another threat to the survival of the saiga is loss of habitat, as a result of agricultural expansion and human",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Đường sắt, đường ống và hàng rào chặn các tuyến di cư theo mùa. Chỗ trống cần thứ saiga không còn tiếp cận được, nên routes số nhiều, không phải chính các công trình gây cản trở.",
+      "evidence": "Physical barriers such as railways, pipelines and fences can block the seasonal migration routes of this transboundary species",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Nhiều dòng suối nhỏ mà saiga phụ thuộc đã khô và biến mất. Relied on tương ứng depended on, nên streams; bài không chỉ nói lượng mưa hay các hồ lớn.",
+      "evidence": "many of the smaller streams that the species normally depended on have dried up and vanished",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Kazakhstan có trên 90% saiga toàn cầu, ba quốc gia khác chỉ có phần còn lại. Phân bố ấy rất không đều, trái với evenly across four nations, nên FALSE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bài nói quần thể phục hồi đều trong phần lớn thế kỷ XX. Steadily recovered đối lập với falling trong nhận định, nên FALSE; đừng lấy đợt suy giảm ở thời kỳ khác áp cho cả thế kỷ.",
+      "evidence": "numbers steadily recovered throughout most of the 20th century",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Nỗ lực bảo vệ tê giác dẫn tới khuyến khích dùng sừng saiga thay thế, khiến saiga đực gần bị xóa sổ. Vì vậy hoạt động bảo tồn ở châu Phi có tác động đáng kể tới saiga: TRUE.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Bài nêu saiga khó chịu được cực đoan nhiệt độ và khí hậu thất thường nhưng không so với động vật ở vùng khác. Thiếu căn cứ cho mức độ nguy hiểm hơn phần còn lại thế giới, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Altyn Dala bảo vệ các hệ sinh thái thảo nguyên, bán hoang mạc và hoang mạc cùng nhiều loài sống trong đó. Mục tiêu không chỉ riêng saiga, nên nhận định nhiều động vật được hưởng lợi là TRUE.",
+      "evidence": "Its purpose is to protect and restore Kazakhstan’s steppe, semi-desert and desert ecosystems and the many species they",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài xác nhận Liên Hợp Quốc công nhận sáng kiến là World Restoration Flagship. Nhưng không nói việc đó mang lại thêm tài trợ quốc tế; danh hiệu không tự chứng minh tiền tài trợ, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Bài cho tốc độ tăng dân số thực tế và dự báo tương lai nhưng không đối chiếu với dự báo trước đây. Không thể suy từ tăng rất nhanh thành nhanh hơn dự đoán, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Bốn phần năm dân cư ở các khu định cư một tầng ven đô. Single-storey trái với high-rise blocks, nên FALSE dù chi tiết sống ở rìa thành phố là đúng.",
+      "evidence": "four out of five of its people live in single-storey informal settlements on the spreading edges of the city",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Có tuyến đường sắt ngoại ô phục vụ vài khu phía nam, nhưng bài không nói cư dân được hỏi ý kiến. Sự tồn tại của tuyến không cho biết quy trình tham vấn, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Gần như mọi mở rộng đô thị diễn ra tự phát, không có chiến lược được thống nhất. Điều này tương ứng phần lớn phát triển nhà ở chưa có quy hoạch, nên TRUE; không cần tuyệt đối mọi công trình.",
+      "evidence": "Nearly all the expansion is happening on the periphery, and nearly all takes place informally without any agreed strategy",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Khác nhiều thành phố châu Phi xây metro, Dar es Salaam chọn xe buýt. Unlike báo sự khác biệt, nên nhận định đi theo phương án của nhiều thành phố khác là FALSE.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Hệ thống BRT dùng làn xe buýt tách khỏi giao thông khác để giảm dừng chờ. Designated diễn đạt làn dành riêng, nên lanes; không điền chính phương tiện buses vào nơi hỏi hạ tầng.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Mua và kiểm soát vé được thực hiện ở trạm trước khi lên xe. Prior to tương ứng before, nên boarding; không nhầm với trả tiền khi đã ở trên xe.",
+      "evidence": "Ticket purchase and control takes place at stations prior to boarding",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Toàn tuyến tiếp cận được với người dùng xe lăn. Chỗ trống sau passengers in cần wheelchairs số nhiều; thông tin này nói khả năng tiếp cận, không khẳng định họ luôn có ghế trống.",
+      "evidence": "the entire route is accessible to people using wheelchairs",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Tài xế thường không bật điều hòa để tiết kiệm nhiên liệu. Temperature control diễn đạt air conditioning và reduce use diễn đạt save, nên điền fuel, không phải điện hay chi phí chung.",
+      "evidence": "drivers often refuse to turn on the air conditioning to save fuel",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Một trận lũ nghiêm trọng ở bến chính trong mùa mưa gây thiếu xe buýt. Câu hỏi cần sự kiện gây hậu quả, nên flood số ít, không phải rain chỉ thời tiết xảy ra trận lũ.",
+      "evidence": "A shortage of buses after a serious flood at the main depot during the rainy season",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Smartcards không dùng được vì máy đọc hỏng. Equipment out of action tương ứng mechanical readers aren't working, nên smartcards; không nhầm với vé giấy đang được kiểm tra bằng tay.",
+      "evidence": "Smartcards can’t be used as the mechanical readers aren’t working either",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Nhân viên đứng ở cổng soát vé và xé vé khi khách vào. Chỗ trống hỏi vị trí kiểm tra thủ công, nên gates số nhiều; không phải máy đọc thẻ đã ngừng hoạt động.",
+      "evidence": "Staff stand by the gates and tear tickets as people enter",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Việc kiểm vé thủ công làm hàng chờ dài vào giờ cao điểm. Build up diễn đạt queues are considerable, nên queues; đừng điền passengers vì đề cần hiện tượng ùn hàng chờ.",
+      "evidence": "As a result, queues are considerable at peak times",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn hai rút ra hai thay đổi nhận thức: hành vi tiên tiến xuất hiện sớm hơn và vai trò giới từng bị hiểu sai. A bao quát cả hai; các phương án khác không phản ánh chức năng tổng kết phát hiện này.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Điện thoại đầu tiên kém hiệu quả, giống các loài chim ban đầu chưa bay giỏi. Ví dụ minh họa công nghệ và tiến hóa phát triển từng bước, nên A; không nhấn vào nguồn gốc khác nhau của phát minh.",
+      "evidence": "Evolution usually works by incremental steps and so does technology. The first birds weren’t great at flying, and the",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "This stuff chỉ các quan niệm phụ quyền lỗi thời đã ngấm vào nghiên cứu khảo cổ đầu tiên. Unpick là xem xét, tháo gỡ ảnh hưởng ấy, nên D; không phải bác bỏ tính xác thực mọi bằng chứng cổ.",
+      "evidence": "Archaeology was invented by individuals with now unfashionably patriarchal views about gender, and those notions fed into their research. Today",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Tác giả kết luận bất bình đẳng, độc đoán và phụ quyền là lựa chọn chứ không tất yếu. Hiểu xã hội tiền sử cho thấy có thể chọn khác, từ đó xây xã hội công bằng hơn hiện nay: A.",
+      "evidence": "Inequality, authoritarianism and patriarchy aren’t inevitable. They’re choices, and prehistory shows us that we can choose differently",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Gỗ gia công khớp nhau ở Kalambo Falls có tuổi trước khi Homo sapiens xuất hiện. Vậy kỹ thuật tinh vi không chỉ có ở loài ta, đúng với E; không kết luận chính Homo sapiens làm ra chúng.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Denisovan đã sống ở độ cao lạnh giá từ rất lâu trước Homo sapiens tới. Bằng chứng cho thấy loài người khác cũng sống sót trong môi trường khắc nghiệt, tương ứng F.",
+      "evidence": "extinct hominins such as the Denisovans lived on the frozen heights of high-altitude regions 200",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Phân tích tổng hợp năm 2023 cho thấy phụ nữ săn bắn ở 80% các xã hội được khảo sát. Điều này thách thức hiểu biết cũ về ai kiếm thực phẩm trong cộng đồng đầu tiên, nên D.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Người lãnh đạo Iberia từng bị cho là đàn ông được xác định là phụ nữ. Phát hiện sửa giả định ai nắm quyền thời tiền sử, tương ứng B; không chỉ là thay đổi cách kiếm thức ăn.",
+      "evidence": "an Iberian leader from around 4000 years ago turned out to be female, not male as many had assumed",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Bài nêu các loài còn sớm hơn Neanderthal, như Homo erectus, cũng có thể tạo nghệ thuật. Vì vậy không thể coi tranh hang Neanderthal là những tác phẩm đầu tiên, nên NO.",
+      "evidence": "Even earlier species, such as Homo erectus, may also have made art",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Bài nhắc khắc hình trên vỏ sò như ví dụ nghệ thuật Homo erectus nhưng không đánh giá mức độ hiếm gặp. Một ví dụ được nêu không chứng minh việc phát hiện cực hiếm, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Tính phi truyền thống thuộc tạp chí và cách công bố kết quả, không thuộc phương pháp khảo sát hang. Bài không mô tả phương pháp nghiên cứu là lạ thường hay thông thường, nên NOT GIVEN, không phải NO.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Các vết khắc chưa được định tuổi chắc chắn. Yet to be firmly dated tương ứng chưa rõ chúng bao nhiêu tuổi, nên YES; việc có giả thuyết về niên đại không thay thế kết luận đáng tin.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Bài nói tranh luận tăng lên vì cách công bố kết quả. Heightened the dispute tương ứng added to the controversy, nên YES; câu hỏi không yêu cầu phán xét phát hiện thực sự đúng hay sai.",
+      "evidence": "The dispute has only been heightened by the way the results were released",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Tác giả xem kích thước não nhỏ của H. naledi là yếu tố làm lạc hướng. Điều đó trái với coi đây là yếu tố then chốt xác định năng lực nghệ thuật, nên NO.",
+      "evidence": "I think the species’ small brains are a distraction",
+      "location": "Passage 3"
+    }
+  }
+}

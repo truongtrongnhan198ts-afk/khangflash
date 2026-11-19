@@ -1,0 +1,206 @@
+{
+  "id": "c17-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Thylacine chỉ ăn động vật, được mô tả bằng chế độ ăn hoàn toàn ăn thịt. “Entirely” tương ứng exclusively; từ cần điền để mô tả chế độ ăn là carnivorous, không phải tên một con mồi.",
+      "evidence": "it was exclusively carnivorous",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Khi săn, thylacine chủ yếu dựa vào mùi để lần dấu con mồi. “Depended on” tương ứng relied on; ô trống hỏi phương tiện cảm nhận chủ yếu, nên scent.",
+      "evidence": "relied more on scent",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Con non sống những tháng đầu trong túi của mẹ. Bài còn nhắc bụng nhưng bụng chỉ là nơi túi nằm; bộ phận chứa con non là pouch, không phải belly.",
+      "evidence": "New-borns crawled into the pouch on the belly of their mother",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Bằng chứng muộn nhất về thylacine trên lục địa là một hóa thạch khoảng 3.100 năm tuổi. Con số mô tả tuổi của vật chứng, nên fossil, không phải tuổi một cá thể còn sống.",
+      "evidence": "a carbon-dated fossil from Murray Cave",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Suy giảm ở Tasmania gắn với việc mất nơi sống và giảm nguồn thức ăn, cùng các sức ép khác. Ô cần một nguồn lực bị thu hẹp song song với food, nên habitat.",
+      "evidence": "loss of habitat along with the disappearance of prey species",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Từ thập niên 1830, việc con người giết thylacine quy mô lớn được nêu rõ. Thời điểm, tác nhân và mức độ trong câu hỏi phù hợp với bài, nên TRUE.",
+      "evidence": "from the 1830s",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Bài chỉ ghi nhận một ca sinh sản thành công trong điều kiện nuôi nhốt vào năm 1899. Đề nói có một số ca sinh ở vườn thú cuối thế kỷ XIX, trái giới hạn “chỉ một”, nên FALSE.",
+      "evidence": "only one successful attempt to breed a thylacine in captivity",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Bài kể dự báo của John Gould nhưng không nêu phản ứng của các nhà sinh học khác. Biết nội dung dự báo không cho biết ai ngạc nhiên về nó; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Bài nói giới khoa học ít thể hiện lo ngại trước sự suy giảm thylacine. Nhận định nhiều nhà khoa học đã trở nên lo lắng vào đầu thế kỷ XX nói ngược thái độ được nêu, nên FALSE.",
+      "evidence": "nor was much concern expressed by scientists",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Flynn đề xuất chuyển các cá thể nuôi nhốt ra một hòn đảo để bảo tồn. Bài không cho biết kế hoạch được thử và chứng minh bất khả thi; ý kiến đề xuất và kết quả đánh giá là khác nhau, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Biện pháp bảo vệ mùa sinh sản chỉ được đưa ra khi loài đã bên bờ tuyệt chủng. Vì vậy không đúng là quần thể vẫn còn số lượng tương đối ổn vào lúc ấy; FALSE.",
+      "evidence": "with the species on the very edge of extinction",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Cá thể hoang dã cuối cùng được biết đã bị bắn năm 1930; những cá thể còn lại được biết tới sau đó sống trong nuôi nhốt. Nhận định về giai đoạn 1930–1936 phù hợp, nên TRUE.",
+      "evidence": "The last known wild thylacine",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài kể các cuộc tìm kiếm đã diễn ra rồi nêu việc chính thức tuyên bố tuyệt chủng. Nó không xác định hiện nay người ta còn tìm với tần suất nào; không được suy quá khứ thành tần suất hiện tại. Chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn F bàn các lợi ích môi trường tiềm năng của trồng cọ dầu, khác với lợi ích sinh kế ở E. Vì câu hỏi hỏi lợi thế đối với môi trường chứ không chỉ con người, chọn F.",
+      "evidence": "reduces the effect of climate change",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "15": {
+      "reason": "Đoạn G giới thiệu RSPO rồi nêu những yêu cầu tổ chức đặt ra cho sản xuất bền vững. Đây là mô tả một tổ chức kiểm soát tác động môi trường của ngành, nên G.",
+      "evidence": "The RSPO insists upon",
+      "location": "Passage 2 · Đoạn G"
+    },
+    "16": {
+      "reason": "Đoạn A liệt kê xà phòng, bánh sandwich và đồ ăn vặt để cho thấy dầu cọ hiện diện khắp đời sống. Các ví dụ cụ thể minh họa phạm vi sử dụng rộng toàn cầu, nên A.",
+      "evidence": "the soap we wash with",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "17": {
+      "reason": "Đoạn H nêu cây dương xỉ tổ chim có thể giúp hệ sinh thái trong đồn điền phục hồi. Câu hỏi hỏi loài đem lại lợi ích cho đồn điền, không phải loài bị đồn điền đe dọa; chọn H.",
+      "evidence": "bird’s nest fern",
+      "location": "Passage 2 · Đoạn H"
+    },
+    "18": {
+      "reason": "Đoạn B đưa số liệu sản lượng tăng mạnh để chứng minh sự mở rộng nhanh của ngành dầu cọ. “Figures” yêu cầu thông tin định lượng về tăng trưởng, không phải các tiêu chuẩn chứng nhận ở đoạn G; chọn B.",
+      "evidence": "grew from 6 to 17 million hectares",
+      "location": "Passage 2 · Đoạn B"
+    },
+    "19": {
+      "reason": "Đoạn E lập luận dầu cọ tạo nguồn thu và sinh kế cho người nghèo ở các nước đang phát triển. Đây là lý do kinh tế để không phản đối toàn bộ ngành, nên E.",
+      "evidence": "lifting many millions of people in the developing world out of poverty",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "20": {
+      "reason": "Đoạn C nêu đười ươi, tê giác, voi và hổ chịu tác động khi rừng biến thành đồn điền. Các loài cụ thể là ví dụ cho những sinh vật bị ảnh hưởng xấu; chọn C.",
+      "evidence": "rhinos, elephants, tigers",
+      "location": "Passage 2 · Đoạn C"
+    },
+    "21": {
+      "reason": "RSPO yêu cầu nhà sản xuất minh bạch về hoạt động và đã mất nhiều năm hình thành tiêu chí chứng nhận. Hai ý được xác nhận là B và C; bài không so mức nghiêm ngặt với ngành khác.",
+      "evidence": "transparency and regular assessment",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Nhóm này cần B và C: tính cởi mở của nhà sản xuất và quá trình xây dựng bộ tiêu chuẩn. Đừng suy rằng số thành viên tăng đều hoặc tổ chức ra đời theo yêu cầu một nhóm cụ thể nếu bài không nói.",
+      "evidence": "an agreement has gradually been reached",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Dầu cọ vẫn ở dạng rắn tại nhiệt độ phòng, một đặc tính hữu ích cho nhà sản xuất. “Not refrigerated” tương ứng điều kiện nhiệt độ phòng; trạng thái cần điền là solid.",
+      "evidence": "remaining solid at room temperature",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Loài bị mất môi trường sống nổi tiếng nhất được bài nhắc là đười ươi Sumatra. “Best known” tương ứng most famously; điền Sumatran orangutan hoặc orangutan, không chọn loài chỉ được liệt kê thêm.",
+      "evidence": "most famously the Sumatran orangutan",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Để đạt chứng nhận RSPO, nhà sản xuất phải đánh giá thường xuyên trữ lượng carbon. “Routine basis” tương ứng regular; nội dung kiểm tra là carbon stocks, không phải riêng lượng điện tiêu thụ.",
+      "evidence": "regular assessment of carbon stocks",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Ellwood nghiên cứu dùng dương xỉ tổ chim để khôi phục đa dạng sinh học trong vùng trồng cọ. “Restore” tương ứng recover; thứ cần phục hồi là biodiversity, không phải sản lượng dầu.",
+      "evidence": "recover their biodiversity",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu giới thiệu sách Barr qua nhiều yếu tố tự nhiên, lịch sử và kinh tế định hình New York. Chọn D về phạm vi nhân tố được bao quát; bài không so sánh cách tiếp cận với những sách khác.",
+      "evidence": "New York’s settlement and growth",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Người điểm sách hỏi vì sao chi phí dọn khu ổ chuột lại cản xây nhà cao tầng trong khi nền móng đắt hơn thì không. Đây là một chỗ có thể chưa nhất quán trong phân tích của Barr, nên B.",
+      "evidence": "it is not obvious why slum clearance",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Nhận xét về chương sáu là phần phân tích quá chuyên môn đối với đa số độc giả. Chọn C; đó là đánh giá độ khó tiếp cận, không phải nói dữ liệu lỗi thời hoặc mâu thuẫn.",
+      "evidence": "probably more technical than would be preferred by a general audience",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Các chương về bùng nổ xây dựng thập niên 1920 có lý thuyết kinh tế đô thị dài, hợp sinh viên chuyên ngành hơn người chỉ muốn đọc về New York. Vì sức hút khác nhau theo nhóm độc giả, chọn D.",
+      "evidence": "lengthy discussions of urban economic theory",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Điều người điểm sách đặc biệt khen ở chương giá đất là công việc dữ liệu để ước tính giá đất qua thời gian. Đáp án C nói đúng bản chất nghiên cứu, không phải những khuyến nghị tương lai nằm ở phần kết sách.",
+      "evidence": "The data work that went into these estimations is particularly impressive",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Phần dựng cảnh New York đầu thế kỷ XVII được người điểm sách gọi là thú vị. Điều ấy trái với nhận định mô tả thiếu hấp dẫn, nên NO; cần đọc lời đánh giá sau phần tóm tắt chương.",
+      "evidence": "various fun facts",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Chương hai và ba được khen cung cấp thông tin, nghiên cứu tốt và tạo nền cho phân tích kinh tế về sau. “Set the stage” tương ứng chuẩn bị cho nội dung tiếp theo, nên YES.",
+      "evidence": "set the stage for the economic analysis",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Bài phân tích vị trí và tiện ích các khu di dân nhưng không xác định thiếu tiện ích là vấn đề lớn nhất. Từ “biggest” cần một đánh giá xếp hạng mà bài không đưa ra; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Các khu di dân nằm giữa khu công nghiệp ven nước và khu giàu cạnh Central Park. Đề gom chúng quanh cảng đã thay đổi vị trí, nên NO.",
+      "evidence": "between the industries located on the waterfront and the wealthy neighborhoods",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Độ sâu đá nền không giải thích được việc không có nhà chọc trời ở dải giữa Downtown và Midtown. Ô trống khái quát các nơi cụ thể ấy; chọn specific areas, H.",
+      "evidence": "between Downtown and Midtown",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Đá nền sâu làm tăng chi phí móng nhưng mức tăng không đủ coi là quá đắt so với cả dự án. “Cannot be regarded as” cần excessive expense, chọn D; bài không phủ nhận chi phí móng tăng.",
+      "evidence": "neither prohibitively high",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Chi phí móng được đối chiếu với tổng chi phí xây dựng. “Overall cost” tương ứng total expenditure trong danh sách, nên I; không phải một hạng mục chi phí riêng khác.",
+      "evidence": "compared to the overall cost",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Caisson giúp công nhân đào xuống những độ sâu đáng kể. Công dụng phù hợp trong danh sách là deep excavations, chọn B; tên thiết bị đã có trong đề nên cần kết quả nó cho phép thực hiện.",
+      "evidence": "enable workers to dig down for considerable distances",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Ngoài công dụng đào sâu của caisson, Barr còn trình bày những nguy hiểm đi kèm việc sử dụng. “The dangers involved” tương ứng associated risks, nên F; không phải một hướng dẫn xây dựng mới.",
+      "evidence": "the dangers involved",
+      "location": "Passage 3"
+    }
+  }
+}

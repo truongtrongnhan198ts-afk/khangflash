@@ -1,0 +1,206 @@
+{
+  "id": "c20-t4-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "O’Keeffe giảng dạy ở trường tiểu học, trung học và đại học tại nhiều bang Mỹ. Worked as trong đề được diễn đạt thành became a teacher và các nơi bà taught, nên teacher, không phải loại trường.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Bà tạo các bố cục trừu tượng bằng than vẽ rồi những tác phẩm này được trưng bày ở New York. Câu hỏi cần chất liệu làm tranh vẽ, nên charcoal, không phải tên phong cách abstract.",
+      "evidence": "creating abstract compositions in charcoal",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Sau khi đến New York, bà nổi tiếng với tranh về các tòa nhà chọc trời cao vút của thành phố. Chỗ trống cần vật thể được vẽ, nên skyscrapers số nhiều, không phải toàn cảnh thành phố.",
+      "evidence": "the soaring skyscrapers of New York",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Bà phóng to chi tiết rất nhỏ của hoa để phủ kín tranh rộng một mét. Câu hỏi cần đối tượng tạo tiếng tăm sáng tạo ấy, nên flowers, không phải kích thước tranh hoặc kỹ thuật phóng đại.",
+      "evidence": "Enlarging the tiniest details to fill an entire metre-wide canvas",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Khi ở New Mexico, những bộ xương bị nắng tẩy trắng đầu tiên khơi gợi trí tưởng tượng của bà. Initially tương ứng at first, nên bones số nhiều; không lấy phong cảnh chung khi đề hỏi nguồn cảm hứng ban đầu.",
+      "evidence": "the numerous sun-bleached bones",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Bà khám phá cảnh quan New Mexico hơn bốn thập niên, từ địa chất, màu sắc tới ánh sáng, cây cỏ. Các đặc điểm được gộp thành landscape, nên điền danh từ bao quát ấy.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Những chuyến bay tạo cảm hứng cho cảnh sông nhìn từ trên cao và bầu trời trên mây. Đề đã có clouds, nên đối tượng song song còn thiếu là rivers, không phải phương tiện planes.",
+      "evidence": "aerial views of rivers",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Phong cách O’Keeffe độc lập với trào lưu nghệ thuật thay đổi và giữ trung thành với tầm nhìn riêng. Điều này trái với bị thời trang nghệ thuật chi phối mạnh, nên FALSE.",
+      "evidence": "remained independent from shifting art trends",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Khi tốt nghiệp trung học năm 1905, bà đã quyết tâm trở thành nghệ sĩ. Had already made her mind up diễn đạt determined to make her way, nên TRUE; không phải chỉ quyết định sau khi tới New York.",
+      "evidence": "determined to make her way as an artist",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Bà gửi tranh cho một người bạn ở New York, rồi người bạn cho Stieglitz xem. Nhận định bà gửi trực tiếp tới phòng tranh của ông bỏ qua và thay đổi tuyến gửi thực tế, nên FALSE.",
+      "evidence": "some of these drawings to a friend in New York",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Stieglitz chụp chân dung bà trong hai mươi năm, từ 1917 tới 1937. Khoảng dài này xác nhận bà là chủ thể nhiếp ảnh của ông nhiều năm, nên TRUE, không phải chỉ một buổi chụp.",
+      "evidence": "over the course of twenty years",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Sân nhà ở Abiquiú được mô tả giàu cảm hứng và được chuyển thành bố cục hình học. Nhưng bài không xếp các tranh đó vào số bà yêu thích nhất; có cảm hứng không chứng minh sở thích tương đối, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Bài kể các chuyến đi và nguồn cảm hứng giai đoạn 1950–1970 nhưng không so số tranh với thời kỳ khác. Không có dữ liệu cho mức greater than, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C giải thích rừng ngập mặn bảo vệ vùng duyên hải và mô tả cách hỗ trợ phục hồi chúng. Mangroves là loại cây cung cấp lá chắn tự nhiên mà câu hỏi cần, nên C.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn A dự báo dù dừng khí thải ngày mai, tác động tích lũy vẫn kéo dài và nóng lên còn tiếp diễn khoảng bốn mươi năm. Đây là dự đoán thời gian trước khi hết cảm nhận ảnh hưởng, nên A.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn D so cách làm nhà nổi với nâng nhà cố định hoặc thay móng, cho thấy chi phí thấp hơn nhiều. So sánh tiền bỏ ra là căn cứ giải pháp đặc biệt kinh tế, nên D.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn F dùng công cụ bản đồ dữ liệu GIS xác định đường phố ít tán cây ở các khu dân cư. Đây là công nghệ tìm nơi cần can thiệp, nên F, không chỉ mô tả biện pháp trồng cây.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Chương trình Miami Beach vừa sửa đường vừa lắp máy bơm có thể tháo lượng nước rất lớn mỗi phút. Đề đã nêu road adaptations nên thiết bị còn thiếu là pumps số nhiều.",
+      "evidence": "set up new pumps",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Wetlands International bắt đầu bằng xây đập bán thấm để hỗ trợ phục hồi duyên hải. Construction of diễn đạt building, nên dams; không điền mangroves vì cây là phần phục hồi tiếp theo.",
+      "evidence": "building semi-permeable dams",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Dự án ở Mekong Delta làm những ngôi nhà có thể nổi khi lũ. Cấu trúc houses that can cần động từ float; không phải danh từ foundation chỉ phần kỹ thuật bên dưới.",
+      "evidence": "had been built to float",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Ở đất nhiễm mặn Bangladesh, cộng đồng được giúp trồng các giống cây tự nhiên chịu muối. Câu hỏi cần nhóm được đưa vào canh tác, nên crops số nhiều, không phải salt là vấn đề đã có.",
+      "evidence": "naturally salt-tolerant crops",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Cool Streets LA tăng số cây trên đường phố để hạ nhiệt. Planting of trees xác nhận vật được bổ sung là trees; công cụ GIS chỉ giúp chọn vị trí, không phải thứ được trồng.",
+      "evidence": "the planting of trees",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Susanna Tol nói chiến lược cần thu hút và đem lợi ích cho cộng đồng cùng người quyết định địa phương. Involve and help residents diễn đạt engage and benefit communities, nên chuyên gia B.",
+      "evidence": "engage and benefit communities and local decision-makers",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Greg Spotts gọi làm mát đô thị là chuyện sống còn cho tương lai Los Angeles. Nhận định giảm nhiệt thiết yếu cho sự sống giữ đúng mức nhấn mạnh này, nên E.",
+      "evidence": "a matter of life and death",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Yanira Pineda nói hai mươi, ba mươi, bốn mươi năm nữa vẫn phải quay lại điều chỉnh theo môi trường đổi khác. Đây là nhu cầu thêm công việc trước nước dâng trong tương lai, nên A.",
+      "evidence": "",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Elizabeth English nói công nghệ thích ứng lũ nay cần ở những nơi trước kia chưa cần. Điều này xác nhận ngày càng nhiều nơi phải hành động đối phó ngập, nên C, không chỉ nơi dự án ban đầu triển khai.",
+      "evidence": "necessary in places that didn’t previously need it",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn D kể số báo săn bị giết ở Namibia giảm sau khi dùng chó bảo vệ gia súc. Đây là ví dụ bảo vệ một loài săn mồi nhờ giảm xung đột với nông dân, nên D.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Đoạn G gợi ý chó bảo vệ có tương lai sáng trong thúc đẩy con người và động vật hoang dã cùng tồn tại. Đó là dự báo lạc quan về lợi ích tiềm năng, nên G, không phải kết quả mọi nơi đã đạt.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Đoạn B mô tả chó đứng giữa đàn và nguy cơ, sủa to rồi đuổi thú săn mồi đi. Đây là phương pháp ngăn kẻ săn mồi mà câu hỏi cần, nên B, không phải tác động thống kê của chương trình.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Đoạn C dẫn nhiều nhà nghiên cứu, gồm Ribeiro và van Bommel, Johnson, về hiệu quả bảo vệ đàn. Câu hỏi yêu cầu tuyên bố thành công từ các học giả khác nhau, nên C.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Đoạn B giải thích chó được nuôi cùng vật cần bảo vệ từ nhỏ và huấn luyện để coi đàn là cuộc sống của mình. Đây là cách hình thành kỹ năng, nên B, không chỉ bản năng giống chó.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Julie Young tìm điểm chung giữa chăn nuôi và bảo tồn: không mất bò thì người nuôi không xin giết sói. Vì chó có thể cứu cả gia súc lẫn thú hoang, chọn người D.",
+      "evidence": "If ranchers don’t have a dead cow",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Bethany Smith cảnh báo các báo cáo tự khai rằng người nuôi ngừng giết thú săn mồi phải được nhìn thận trọng. Take with a pinch of salt diễn đạt có thể chưa hoàn toàn chính xác, nên E.",
+      "evidence": "taken with a pinch of salt",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Ribeiro nói nếu chỉ một số hộ dùng chó, áp lực từ sói có thể chuyển sang đàn nhà hàng xóm. Đây là hậu quả xấu khi sử dụng chưa rộng khắp, nên B, không có nghĩa chó hoàn toàn không hiệu quả.",
+      "evidence": "we are transferring the wolf pressure to the neighbour’s herd",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Van Bommel và Johnson nói khi quản lý, dùng đúng cách, chó là biện pháp kiểm soát hiệu quả nhất. Điều kiện handled appropriately và ý best way đều có căn cứ, nên người C.",
+      "evidence": "If they are managed and used properly",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Dan Macon nói quá thân thiết với người làm chó giữ hiên nhà tốt nhưng không tạo chó bảo vệ đàn tốt. Hai vai trò đòi trọng tâm huấn luyện khác nhau, đúng với nhận định nên A.",
+      "evidence": "a great dog for guarding the front porch",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Dù báo săn được bảo vệ hơn, số chó rừng bị chó và người giết lại tăng. Câu hỏi cần loài chịu tác động ngược ấy, nên jackals; không cho rằng mọi thú săn mồi đều hưởng lợi như nhau.",
+      "evidence": "the number of jackals killed by dogs and people actually increased",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Chó có thể truyền bệnh sang động vật hoang dã. Câu hỏi cần thứ lây lan gây hại, nên diseases số nhiều, không phải tên một bệnh cụ thể bài không cho.",
+      "evidence": "spread diseases to wild animals",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Chó cũng có thể tranh thức ăn với động vật ăn thịt khác. Compete for xác định tài nguyên bị tranh giành là food; không suy sang lãnh thổ nếu câu không nêu.",
+      "evidence": "compete with other carnivores for food",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Chó có thể bảo vệ chim làm tổ ở nơi cáo thường tấn công tổ. Đề cần loài đe dọa chim, nên foxes; không nhầm với jackals được nhắc trong ví dụ tiêu cực trước đó.",
+      "evidence": "where foxes would normally raid them",
+      "location": "Passage 3"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "id": "c13-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Các doanh nghiệp tham gia được sửa thông tin thường xuyên để dữ liệu luôn chính xác. Chỗ trống cần động từ update, tương ứng hành động cập nhật, không phải danh từ database đã nằm trong tiêu đề.",
+      "evidence": "businesses were able to update the details they gave on a regular basis, the information provided remained accurate.",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Chương trình đánh giá độc lập xem cả tác động của từng doanh nghiệp lên môi trường. Điền environment; chất lượng dịch vụ là tiêu chuẩn tổng quát, còn chỗ trống hỏi lĩnh vực tác động được xét thêm.",
+      "evidence": "this, the effect of each business on the environment was considered. To communicate the New Zealand experience, the site",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Mục nổi bật phỏng vấn Tana Umaga, cựu đội trưởng đội rugby All Blacks. Chỗ trống hỏi vai trò thể thao của người được phỏng vấn, nên captain; không điền tên riêng hoặc môn thể thao.",
+      "evidence": "All Blacks rugby captain Tana Umaga.",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Hành trình tương tác đưa khách qua những địa điểm dùng làm bối cảnh phim bom tấn. Điền films, chỉ loại tác phẩm sử dụng cảnh quan; không phải bản thân những địa điểm đã có trong câu.",
+      "evidence": "of the locations chosen for blockbuster films which had made use of New Zealand’s stunning scenery as a",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Danh mục tuyến đường lái xe gợi ý các hành trình khác nhau tùy mùa. “Depending on” tương ứng với according to; season là yếu tố làm tuyến đường thay đổi, không phải độ dài hay thời gian di chuyển.",
+      "evidence": "different routes according to the season and indicating distances and times. Later a Travel Planner feature was added, which",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Travel Planner có gợi ý giao thông và liên kết tới chỗ lưu trú tại khu vực. Điền accommodation; bản đồ và phương tiện công cộng đã được nêu trước chỗ trống.",
+      "evidence": "were also links to accommodation in the area.",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Mục “Your Words” cho phép du khách gửi bài blog kể chuyến đi để được cân nhắc đăng. Loại nội dung cần điền là blog, không phải bản kế hoạch chuyến đi được lưu bằng Travel Planner.",
+      "evidence": "anyone could submit a blog of their New Zealand travels for possible inclusion on the website. The Tourism New",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Website giúp người dùng tự thiết kế lịch trình theo nhu cầu và sở thích riêng. “Ready-made” nói lịch trình làm sẵn nên trái với chức năng tùy chỉnh này; chọn FALSE.",
+      "evidence": "devise their own customised itineraries.",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Người dùng có thể tìm theo vị trí địa lý hoặc bản chất hoạt động. Bài không cho biết đa số bắt đầu bằng cách nào; thiếu số liệu hoặc so sánh tần suất nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "26% là phần hài lòng do cả giao thông lẫn lưu trú cộng lại. Gán toàn bộ tỷ lệ đó chỉ cho lưu trú làm sai phạm vi thông tin, nên FALSE.",
+      "evidence": "satisfaction, while transport and accommodation account for the remaining 26%.",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Khách thích nhất các hoạt động văn hóa khi có thể tương tác, chẳng hạn tìm hiểu đời sống Maori tại marae. Đây là việc tham gia văn hóa địa phương, xác nhận nhận định nên TRUE.",
+      "evidence": "found that visitors enjoy cultural activities most when they are interactive, such as visiting a marae (meeting ground)",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Bài nói nền kinh tế du lịch có nhiều doanh nghiệp nhỏ, không so sánh sở thích khách đối với khách sạn nhỏ và lớn. Quy mô doanh nghiệp không phải bằng chứng về sở thích lưu trú; NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Do chuyến bay xa, nhiều khách xem đây là chuyến đi chỉ có một lần trong đời. Ý ấy tương ứng với khả năng không quay lại, nên TRUE; không nhầm với thời gian lưu trú dài của cùng nhóm khách.",
+      "evidence": "as a once-in-a-lifetime visit.",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A nói khó đưa ra định nghĩa nhàm chán đủ rõ để nghiên cứu trong phòng thí nghiệm. Tiêu đề iv bao quát trở ngại của cách tiếp cận khoa học, không chỉ lịch sử nghiên cứu cảm xúc này.",
+      "evidence": "better. But defining boredom so that it can be studied in the lab has proved difficult.",
+      "location": "Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn B giới thiệu hệ thống năm dạng nhàm chán và sự khác nhau của chúng. Tiêu đề vi về phân loại là ý chính; liên hệ với tính cách vẫn chỉ là kết luận chưa chắc chắn ở cuối đoạn.",
+      "evidence": "Of the five types, the most damaging is ‘reactant’ boredom with its explosive combination of high arousal and",
+      "location": "Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn C đề cập nghiên cứu cho thấy nhàm chán có thể kích thích sáng tạo. Tiêu đề i nói kết quả có ích, trái với việc chỉ coi cảm xúc ấy là thứ cần loại bỏ ngay.",
+      "evidence": "makes us more creative.",
+      "location": "Passage 2"
+    },
+    "17": {
+      "reason": "Đoạn D phản biện quan điểm quá tích cực và nêu tính nguy hại của nhàm chán cùng vòng luẩn quẩn xử lý nó. Tiêu đề v bao quát rủi ro, không phải khuyến nghị chủ động tìm cảm giác nhàm chán.",
+      "evidence": "still be toxic if allowed to fester.’ For Eastwood, the central feature of boredom is a failure to",
+      "location": "Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn E bàn các đặc điểm tính cách khiến một số người dễ bị nhàm chán hơn những người khác. Tiêu đề viii đúng trọng tâm xác định ai chịu ảnh hưởng nhiều nhất, không phải đề xuất một hệ phân loại mới.",
+      "evidence": "badly. Other personality traits, such as curiosity, are associated with a high boredom threshold.",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Đoạn F gợi ý lối sống kết nối liên tục là nguồn gây nhàm chán mới và đưa ra hướng khắc phục. Tiêu đề iii bao quát cả lời giải thích và cách chữa mới, không chỉ nói tác hại công nghệ.",
+      "evidence": "that our over-connected lifestyles might even be a new source of boredom.",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Quan điểm này so sánh nhàm chán với ghê sợ: nó có thể giúp tránh những tình huống xã hội không lành mạnh. E diễn đạt động lực tránh trải nghiệm khó chịu; cần đọc cả phép so sánh, không chỉ câu chứa tên người.",
+      "evidence": "them from “infectious” social situations,’ he suggests. B By asking people about their experiences of boredom, Thomas Goetz and",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Goetz xác định dạng “reactant” là tai hại nhất do kết hợp kích động cao với cảm xúc tiêu cực. B nêu đúng có một dạng tệ hơn các dạng khác; không được coi mọi kiểu nhàm chán đều giống nhau.",
+      "evidence": "types, the most damaging is ‘reactant’ boredom with its explosive combination of high arousal and negative emotion.",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Eastwood cảnh báo cố cải thiện tình huống có thể khiến bản thân thấy tệ hơn. D nói nỗ lực đối phó đôi khi làm tăng tác động tiêu cực, không phải mọi cách chống nhàm chán đều hữu hiệu.",
+      "evidence": "end up making you feel worse.",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Wemelsfelder cho rằng lối sống kết nối quá mức hiện nay có thể tạo nguồn nhàm chán mới. A nói đúng vai trò lối sống hiện đại, thay vì quy hoàn toàn cảm xúc này cho tính cách bẩm sinh.",
+      "evidence": "that our over-connected lifestyles might even be a new source of boredom.",
+      "location": "Passage 2"
+    },
+    "24": {
+      "reason": "Theo Eastwood, hệ thống chú ý không được kích hoạt khiến người ta không tập trung được vào điều gì. Điền động từ focus; nguyên nhân là trục trặc chú ý, không đơn giản vì không có hoạt động quanh mình.",
+      "evidence": "causes an inability to focus on anything, which makes time seem to go painfully slowly.",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Người đặt khoái cảm thành động lực chính dường như chịu nhàm chán đặc biệt nặng. Pleasure là mục tiêu được hỏi; không nhầm cảm giác muốn đạt tới với hậu quả khó chịu đang trải qua.",
+      "evidence": "who are motivated by pleasure seem to suffer particularly badly.",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Tính tò mò giúp người ta có nhiều khả năng đối phó với sự nhàm chán. Curiosity là đặc điểm tính cách đối lập với việc chỉ theo đuổi khoái cảm; chỗ trống hỏi phẩm chất, không hỏi hành động giải trí.",
+      "evidence": "such as curiosity, are associated with a high boredom threshold.",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Đoạn đầu liệt kê những thành tựu đáng kể của máy tính trong sáng tác âm nhạc và hội họa. B bao quát mức tiến bộ đã đạt, không so sánh loại hình nghệ thuật nào thành công hơn.",
+      "evidence": "number of computer programs which, so their makers claim, possess creative talents.",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Wiggins nói nghệ thuật máy tính khiến nhiều người thấy một điều đặc biệt của con người bị tước đi. C đúng vì nó thách thức thuộc tính cơ bản của nhân tính, không chỉ vì chất lượng thẩm mỹ kém.",
+      "evidence": "it is taking something special away from what it means to be human.’ To some extent, we are all",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Painting Fool cần ít chỉ dẫn và có thể tự tìm tài liệu trên mạng để hình thành ý tưởng. C nêu đúng mức tự chủ trong chọn đề tài so với Aaron, không khẳng định máy hoàn toàn không do con người lập trình.",
+      "evidence": "only needs minimal direction and can come up with its own concepts by going online for material.",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Colton phê phán tiêu chuẩn kép: ý tưởng mới ở trẻ được gọi là tưởng tượng nhưng ở máy lại bị xem nhẹ. D phù hợp việc nên đánh giá công bằng khả năng tưởng tượng, không tự loại tác phẩm vì nguồn tạo ra nó.",
+      "evidence": "from people’s double standards towards software-produced and human-produced art.",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Những bức vẽ ghế đen trắng do lỗi kỹ thuật vẫn tạo hiệu ứng gây ấn tượng mạnh. A đúng; lỗi tạo kết quả hữu hiệu không chứng minh máy cố ý bắt chước một họa sĩ nổi tiếng.",
+      "evidence": "to a technical glitch.",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Colton cho rằng không công bằng khi so trực tiếp máy với con người đã có hàng nghìn năm rèn kỹ năng. D nêu đúng lúc cần nhìn dài hạn: so sánh thành tựu nghệ thuật của hai bên.",
+      "evidence": "have had millennia to develop our skills’.",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "EMI tạo âm nhạc khiến khán giả xúc động và cả chuyên gia tưởng đang nghe Bach thật. A nói đúng tác phẩm gần như khó phân biệt với nghệ thuật con người, không chỉ việc phần mềm tạo ra nhiều bản nhạc.",
+      "evidence": "EMI even fooled classical music experts into thinking they were hearing genuine Bach.",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Wiggins chỉ trích Cope không công bố chi tiết cách chương trình hoạt động. E phù hợp yêu cầu minh bạch kỹ thuật; đây là phê phán phương pháp kiểm chứng, không phải cảm xúc của khán giả.",
+      "evidence": "work as pseudoscience, and condemned him for his deliberately vague explanation of how the software worked.",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Hofstadter coi EMI tạo bản sao, vẫn dựa vào trí tưởng tượng của người sáng tạo ban đầu. C diễn đạt sự phụ thuộc ấy, không phải bằng chứng phần mềm có cảm xúc hay mục tiêu sáng tác riêng.",
+      "evidence": "EMI created replicas which still rely completely on the original artist’s creative impulses, When audiences found out the",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Khán giả giận dữ khi biết tác phẩm làm họ xúc động được tạo bởi chương trình máy tính. G là điều được tiết lộ; chất lượng âm nhạc không thay đổi, chỉ nhận thức về nguồn gốc thay đổi.",
+      "evidence": "When audiences found out the truth they were often outraged with Cope, and one music lover even tried",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Người tham gia nghiên cứu Moffat đánh giá nhạc trước khi biết đó là sản phẩm của người hay máy. B chỉ thông tin bị giữ lại, không phải thiếu kiến thức âm nhạc ở toàn bộ người tham gia.",
+      "evidence": "and then rate how much they liked each one.",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Ngay sau câu hỏi vì sao người nghe quay lưng với EMI, tác giả nói nghiên cứu Moffat cho một gợi ý. Mạch lập luận này xác nhận nghiên cứu có thể giải thích phản ứng ấy, nên YES.",
+      "evidence": "Caledonian University provides a clue.",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Bài kể phản ứng của chuyên gia và người không chuyên, nhưng không xác nhận dự đoán trước về toàn bộ người không chuyên. Thiếu thông tin về kỳ vọng đó nên NOT GIVEN, dù phản ứng của hai nhóm có điểm giống.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Bloom cho rằng niềm vui nghệ thuật gắn với quá trình sáng tạo; Kruger cho thấy tin rằng tác phẩm tốn công hơn làm người xem thích hơn. Hai kết quả hỗ trợ nhau chứ không thách thức nhau, nên NO.",
+      "evidence": "they think more time and effort was needed to create it.",
+      "location": "Passage 3"
+    }
+  }
+}

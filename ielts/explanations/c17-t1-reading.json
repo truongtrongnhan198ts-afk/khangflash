@@ -1,0 +1,206 @@
+{
+  "id": "c17-t1-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn mở đầu nói dân số London tăng nhanh trong nửa đầu thế kỷ XIX. Khoảng 1800–1850 trong đề chính là nửa đầu thế kỷ ấy; thứ tăng là population, không phải số tuyến đường sắt.",
+      "evidence": "London’s population grew at an astonishing rate",
+      "location": "Passage 1"
+    },
+    "2": {
+      "reason": "Pearson đề xuất đường sắt giúp cư dân chuyển từ khu ổ chuột tới nhà mới ở ngoại ô. “Move” diễn đạt lại “relocate”; địa điểm cần điền là suburbs, không phải trung tâm đông đúc.",
+      "evidence": "newly constructed suburbs",
+      "location": "Passage 1"
+    },
+    "3": {
+      "reason": "Ý tưởng của Pearson nhận sự ủng hộ của một số doanh nhân. “Gained support” tương ứng với việc đồng tình trong đề; ô trống hỏi nhóm người, nên businessmen.",
+      "evidence": "gained support amongst some businessmen",
+      "location": "Passage 1"
+    },
+    "4": {
+      "reason": "Công ty gặp khó khăn trong việc huy động tiền thực hiện dự án. “Organisation” thay cho company trong bài; danh từ chỉ nguồn lực thiếu là funding, không phải một kỹ thuật xây dựng.",
+      "evidence": "difficulty in raising the funding",
+      "location": "Passage 1"
+    },
+    "5": {
+      "reason": "Những bài báo mang tính chỉ trích dự án xuất hiện trên báo chí. Ở đây “critical” có nghĩa phê phán, tương ứng negative; nơi đăng bài là press.",
+      "evidence": "critical articles printed by the press",
+      "location": "Passage 1"
+    },
+    "6": {
+      "reason": "Quy trình đào mở rồi lấp lại tạo vòm gạch cho hầm và phủ đất lên trên. Ô trống hỏi lớp vật liệu phủ bên trên hầm, nên soil; brick thuộc phần vòm đã có.",
+      "evidence": "soil was laid on top",
+      "location": "Passage 1"
+    },
+    "7": {
+      "reason": "Tuyến Metropolitan được gọi là đường sắt ngầm đầu tiên trên thế giới. Vì vậy không thể có nước khác đã xây đường sắt ngầm trước khi nó mở như đề nói; FALSE.",
+      "evidence": "the world’s first underground railway",
+      "location": "Passage 1"
+    },
+    "8": {
+      "reason": "Bài nêu lượng khách ngày đầu và tổng lượt vận hành nhưng không đưa dự báo để so sánh. Không đủ căn cứ kết luận khách đông hơn dự kiến, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "9": {
+      "reason": "Dù bổ sung giếng thông gió, khói và hơi vẫn là vấn đề trong đường hầm. Điều ấy xác nhận các giếng không ngăn được ô nhiễm, nên TRUE; có giải pháp không có nghĩa giải pháp thành công.",
+      "evidence": "smoke and fumes remained a problem",
+      "location": "Passage 1"
+    },
+    "10": {
+      "reason": "Ở trung tâm London, phương pháp đào mở rồi phủ không thể dùng được nên phải tìm cách đào sâu khác. Nhận định khu vực này cần một kỹ thuật khác phù hợp với bài: TRUE.",
+      "evidence": "The only alternative was to tunnel deep underground",
+      "location": "Passage 1"
+    },
+    "11": {
+      "reason": "Cửa sổ trên toa City & South London nằm sát phía dưới mái, không ở ngang mắt. Khác biệt về vị trí khiến nhận định trong đề sai trực tiếp, nên FALSE.",
+      "evidence": "windows just below the roof",
+      "location": "Passage 1"
+    },
+    "12": {
+      "reason": "Bài nói tuyến City & South London không tạo ra lợi nhuận. Đề gọi nó là thành công tài chính đã trái với thông tin ấy; FALSE, dù nó có thể có ý nghĩa kỹ thuật.",
+      "evidence": "it did not make a profit",
+      "location": "Passage 1"
+    },
+    "13": {
+      "reason": "Đoạn về Tuppenny Tube không đánh giá tàu có gần như luôn đúng giờ hay không. Đừng dùng sự thành công hoặc tiện lợi chung để suy ra độ đúng giờ; chọn NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn A nêu hoài nghi, chi phí tăng vọt và nguy cơ sân vận động bỏ hoang, xuống cấp. Những ý này là thái độ tiêu cực với dự án xây sân, nên A.",
+      "evidence": "stadiums finished for major events",
+      "location": "Passage 2 · Đoạn A"
+    },
+    "15": {
+      "reason": "Đoạn F cho các con số về điện mặt trời, giảm khí thải và điện cung cấp cho khu vực quanh sân Cao Hùng. Đó là dữ liệu minh họa lợi ích môi trường, nên F.",
+      "evidence": "reduces the annual output of carbon dioxide by 660 tons",
+      "location": "Passage 2 · Đoạn F"
+    },
+    "16": {
+      "reason": "Đoạn E liệt kê khách sạn, trung tâm hội nghị, nhà hàng, quán bar, khu vui chơi và không gian xanh. Sự đa dạng tiện ích tại sân hiện đại tương ứng câu hỏi, chọn E.",
+      "evidence": "hotels, retail outlets, conference centres",
+      "location": "Passage 2 · Đoạn E"
+    },
+    "17": {
+      "reason": "Đoạn D đánh giá những sân xây trong thế kỷ XX: kém linh hoạt và bị đặt xa đời sống đô thị. Đây là bất lợi gắn với một thời kỳ cụ thể, nên D.",
+      "evidence": "designed for sporting use only",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "18": {
+      "reason": "Đấu trường Arles từng biến thành pháo đài trước khi được dùng làm khu cư trú. Ô trống hỏi chức năng chuyển đổi đầu tiên trong chuỗi thời gian, nên fortress.",
+      "evidence": "became a fortress with four towers",
+      "location": "Passage 2"
+    },
+    "19": {
+      "reason": "Sau khi phục hồi vai trò đấu trường, Arles là nơi khán giả xem đấu bò. Đề hỏi hoạt động được theo dõi, nên bullfights; không nhầm với chức năng pháo đài của giai đoạn trước.",
+      "evidence": "the staging of bullfights",
+      "location": "Passage 2"
+    },
+    "20": {
+      "reason": "Đấu trường Verona hiện là địa điểm trình diễn opera. “Venue” tương ứng nơi tổ chức biểu diễn; loại hình nghệ thuật cần điền là opera, không phải tên thành phố.",
+      "evidence": "one of the world’s prime sites for opera",
+      "location": "Passage 2"
+    },
+    "21": {
+      "reason": "Ở Lucca, công trình từng làm kho muối bên cạnh các chức năng nhà ở và nhà tù. “Storage” tương ứng depot; ô trống hỏi thứ được lưu trữ, nên salt.",
+      "evidence": "a salt depot and a prison",
+      "location": "Passage 2"
+    },
+    "22": {
+      "reason": "Quảng trường chợ Lucca có các cửa hàng và nhà ở hình thành trên phần còn lại của đấu trường. “Residences” tương ứng homes đã có trong đề; thành phần còn lại là shops.",
+      "evidence": "shops and residences surrounding the public square",
+      "location": "Passage 2"
+    },
+    "23": {
+      "reason": "Đoạn D xác nhận sân thế kỷ XX nằm ở vị trí kém thuận tiện và ít đa năng hơn công trình cổ: C và D. Bài không kết luận vật liệu hiện đại kém bền hoặc thiết kế kém sáng tạo.",
+      "evidence": "situated in suburban areas",
+      "location": "Passage 2 · Đoạn D"
+    },
+    "24": {
+      "reason": "Nhóm này cần hai chữ khác nhau C và D: xa trung tâm khiến khó tiếp cận, còn tính linh hoạt sử dụng bị mất. Không dùng việc nhắc thép và bê tông để suy ra chúng kém bền.",
+      "evidence": "designed for sporting use only",
+      "location": "Passage 2"
+    },
+    "25": {
+      "reason": "Sân hiện đại có thể đưa đời sống cộng đồng trở lại đô thị và làm nơi lắp hệ phát điện tái tạo. Hai lợi ích ấy là B và E; cung cấp điện không đồng nghĩa cư dân giảm tiêu thụ điện.",
+      "evidence": "bringing community life back",
+      "location": "Passage 2"
+    },
+    "26": {
+      "reason": "Chọn B và E: tích hợp hoạt động cộng đồng cùng hạ tầng năng lượng tái tạo. Bài nói ứng dụng các thiết bị phát điện tại sân, không nói sân trở thành trung tâm nghiên cứu công nghệ năng lượng.",
+      "evidence": "stadiums as power plants",
+      "location": "Passage 2"
+    },
+    "27": {
+      "reason": "Charles thỏa thuận với người Scotland để nhận hỗ trợ. “Did a deal” được tóm tắt bằng strategic alliance trong danh sách; đây là liên minh chiến lược, nên H.",
+      "evidence": "did a deal with the Scots",
+      "location": "Passage 3"
+    },
+    "28": {
+      "reason": "Để được làm vua Scotland, Charles chấp nhận tôn giáo quốc gia theo yêu cầu, từ bỏ một nguyên tắc cha ông từng bảo vệ. Vì nguyên tắc ấy thuộc đức tin, chọn religious conviction, J.",
+      "evidence": "accepting Presbyterianism as the national religion",
+      "location": "Passage 3"
+    },
+    "29": {
+      "reason": "Charles bị quân Nghị viện đánh bại tại Worcester năm 1651. Khi câu đề lấy quân Nghị viện làm chủ thể, kết quả của họ là chiến thắng quyết định; chọn decisive victory, F.",
+      "evidence": "comprehensively defeated",
+      "location": "Passage 3"
+    },
+    "30": {
+      "reason": "Người ta treo một khoản tiền rất lớn để bắt Charles. “A huge sum” tương ứng large reward trong danh sách, nên B; không phải tiền ông trả để đổi lấy nơi ẩn náu.",
+      "evidence": "a huge sum offered for his capture",
+      "location": "Passage 3"
+    },
+    "31": {
+      "reason": "Sau sáu tuần trốn chạy, Charles tìm được nơi trú ở lục địa châu Âu. “Refuge” diễn đạt trạng thái an toàn tương đối, ứng với relative safety, D; không phải lập chính phủ mới.",
+      "evidence": "seeking refuge in France",
+      "location": "Passage 3"
+    },
+    "32": {
+      "reason": "Bài nói Charles nhờ Pepys ghi lại câu chuyện nhưng không giải thích ông được chọn vì đáng tin. Không thể suy động cơ lựa chọn chỉ từ nhiệm vụ được giao, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3"
+    },
+    "33": {
+      "reason": "Lời kể của Charles được mô tả rất chi tiết. Câu hỏi nói hồi ức thiếu chi tiết đầy đủ là ý đối lập trực tiếp, nên NO; không cần suy từ thời gian đã trôi qua.",
+      "evidence": "the king related to him in great detail",
+      "location": "Passage 3"
+    },
+    "34": {
+      "reason": "Charles kể rằng sau khi trận đánh đã thua hoàn toàn ông mới nghĩ cách tự cứu. Đề đẩy kế hoạch trốn chạy về trước trận đánh, làm sai trình tự, nên NO.",
+      "evidence": "I began to think of the best way of saving myself",
+      "location": "Passage 3"
+    },
+    "35": {
+      "reason": "Người điểm sách xem lời kể trực tiếp của Charles và người ủng hộ là nguồn tạo hứng thú khi đọc. Việc đưa lời Charles vào sách vì thế là một điểm tích cực, nên YES.",
+      "evidence": "Charles II’s own narrative",
+      "location": "Passage 3"
+    },
+    "36": {
+      "reason": "Đoạn đầu nối các biến cố chính trị và thất bại quân sự để dẫn tới cuộc trốn chạy. Mục đích là dựng hoàn cảnh khiến Charles phải bỏ trốn, chọn B, không phải phân tích chi tiết riêng trận Worcester.",
+      "evidence": "the young Charles II sacrificed",
+      "location": "Passage 3"
+    },
+    "37": {
+      "reason": "Các tình tiết về hành vi người chạy trốn minh họa cách lời kể nhân chứng khiến sáu tuần ấy sống động. Chọn C; mục đích không phải chỉ trích sự thiếu chuẩn bị của những người ủng hộ.",
+      "evidence": "just how close the reader gets to the action",
+      "location": "Passage 3"
+    },
+    "38": {
+      "reason": "Người điểm sách nhận xét Charles về sau ăn mừng, biến trải nghiệm thoát thân từ một thất bại thành câu chuyện đáng ca tụng. Đó là nghịch lý được A diễn đạt; không phải nhận định về động cơ muốn nổi tiếng.",
+      "evidence": "marking the lowest point in their life so enthusiastically",
+      "location": "Passage 3"
+    },
+    "39": {
+      "reason": "Người điểm sách khen Spencer giữ cách nhìn không thiên vị đối tượng lịch sử. B diễn đạt sự khách quan ấy; khen văn phong không tự động có nghĩa nó được chọn riêng cho độc giả thế kỷ XXI.",
+      "evidence": "even-handed sympathy for both the fugitive king and the fierce republican regime",
+      "location": "Passage 3"
+    },
+    "40": {
+      "reason": "Chỗ chưa đạt là sách không xem cuộc trốn chạy đã để lại ảnh hưởng lâu dài lên Charles ra sao. Chọn D. Bài có kể các thủ đoạn trốn tránh, nên không thể nói hoàn toàn bỏ chúng như C.",
+      "evidence": "Would Charles II have been a different king",
+      "location": "Passage 3"
+    }
+  }
+}

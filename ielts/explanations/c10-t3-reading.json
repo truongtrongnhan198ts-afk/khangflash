@@ -1,0 +1,206 @@
+{
+  "id": "c10-t3-reading",
+  "version": 1,
+  "questions": {
+    "1": {
+      "reason": "Đoạn B mô tả du lịch đại chúng hình thành cùng tầng lớp trung lưu, giao thông rẻ và hàng không. Tiêu đề ii bao quát sự phát triển ấy, không chỉ riêng một phương tiện.",
+      "evidence": "the advent of mass tourism",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "2": {
+      "reason": "Đoạn C tổng hợp quy mô kinh tế, việc làm và tác động giáo dục–xã hội của du lịch. Tiêu đề i phù hợp cả hai mặt; các con số chỉ làm bằng chứng.",
+      "evidence": "economic and social importance",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "3": {
+      "reason": "Đoạn D giải thích ngành đa dạng, phân mảnh và phục vụ cả cư dân nên khó tính đóng góp. Tiêu đề v đúng với khó khăn nhận diện ảnh hưởng kinh tế.",
+      "evidence": "the diversity and fragmentation of the industry itself",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "4": {
+      "reason": "Đoạn E liệt kê nhiều nước mà du lịch là nguồn thu hoặc ngành tạo việc làm hàng đầu. Tiêu đề vii về tác động trên thế giới phù hợp, không chỉ nói người giàu.",
+      "evidence": "tourism is the major source of income",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "5": {
+      "reason": "Du lịch được gọi là ngành sử dụng lao động lớn nhất thế giới, khoảng 130 triệu việc làm. Cách diễn đạt largest employment figures tương đương, nên TRUE.",
+      "evidence": "the world's largest employer",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "6": {
+      "reason": "Con số hơn 6% nói về tổng sản phẩm quốc dân toàn thế giới, không phải riêng Australia. Bài không cung cấp tỷ lệ Australia để xác nhận hoặc bác bỏ: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "7": {
+      "reason": "Bài nói du lịch có ảnh hưởng xã hội nhờ giáo dục và việc làm nhưng không nêu quan hệ nhân quả với quảng bá giải trí. Không được tự thêm nguyên nhân này: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "8": {
+      "reason": "Đoạn D chỉ ra hai trở ngại là tính đa dạng và phân mảnh khiến đóng góp kinh tế bị che khuất. Nhận định hai đặc điểm gây khó đo lường khớp, nên TRUE.",
+      "evidence": "the diversity and fragmentation",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "9": {
+      "reason": "Bài nói chi tiêu du khách có thể bị bỏ sót vì doanh nghiệp cũng phục vụ cư dân. Không so sánh ai luôn chi nhiều hơn, nên NOT GIVEN, không phải FALSE.",
+      "evidence": "",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "10": {
+      "reason": "Đoạn E nói không thể chắc chắn cung cấp số liệu chính xác, đáng tin về ảnh hưởng kinh tế. Nhận định dễ chứng minh bằng thống kê trái ý này, nên FALSE.",
+      "evidence": "it is not possible with any degree of certainty",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "11": {
+      "reason": "Hy Lạp nằm trong nhóm nước có du lịch là nguồn thu nhập chủ yếu. Ô trống cần source of income; đây là đóng góp thu nhập, không phải người sử dụng lao động.",
+      "evidence": "the major source of income",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "12": {
+      "reason": "Jamaica nằm trong danh sách nước du lịch là ngành tạo việc làm đứng đầu. Điền employer; không lấy source of income từ danh sách quốc gia trước đó.",
+      "evidence": "the number one ranked employer",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "13": {
+      "reason": "Đoạn cuối nói các khó khăn tương tự cũng gặp khi đo du lịch trong nước. Cụm domestic tourism đối chiếu với international tourism trong câu hỏi.",
+      "evidence": "measure domestic tourism",
+      "location": "Passage 1 · Reading Passage 1"
+    },
+    "14": {
+      "reason": "Đoạn C mô tả anthocyanins là sắc tố hòa tan trong nước tạo màu đỏ–tím. Câu hỏi tìm chất gây màu đỏ nên chọn C, không phải đoạn chỉ liệt kê cảnh lá đổi màu.",
+      "evidence": "water-soluble plant pigments",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "15": {
+      "reason": "Đoạn B giải thích cây bỏ lá để tiết kiệm nguồn lực khi ánh sáng giảm, thay vì giữ bộ lá kém hữu ích suốt mùa đông. Đó là lý do rụng lá được hỏi.",
+      "evidence": "the tree saves its precious resources and discards them",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "16": {
+      "reason": "Đoạn H đưa các dấu hiệu kiểm chứng giả thuyết chống ánh sáng: phía nhiều nắng, mặt trên, khí hậu khô và vĩ độ bắc đỏ hơn. Câu hỏi tìm bằng chứng chứ không chỉ giả thuyết.",
+      "evidence": "there are clues out there",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "17": {
+      "reason": "Ngay đầu B, chlorophyll được giải thích là phân tử thu ánh sáng và chuyển năng lượng thành vật liệu cho cây. Đây là mô tả chức năng, không phải thành phần tạo màu đỏ.",
+      "evidence": "captures sunlight and converts that energy into new building materials",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "18": {
+      "reason": "Đoạn E đề xuất màu đỏ báo cho côn trùng rằng cây khỏe, phòng vệ tốt, khiến chúng chọn cây khác. Đây là tín hiệu cảnh báo được hỏi, dù giả thuyết chưa được chứng minh.",
+      "evidence": "convince herbivorous insects that they are healthy and robust",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "19": {
+      "reason": "Đoạn H nói lá đỏ nhất ở phía cây nhận nhiều nắng nhất. Câu hỏi đã có facing nên điền sun; không cần lặp side of the tree.",
+      "evidence": "gets most sun",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "20": {
+      "reason": "Màu đỏ sáng hơn ở mặt trên của lá. Ô trống bổ nghĩa cho surfaces, nên điền upper, không điền brighter vốn mô tả độ sáng màu.",
+      "evidence": "the red is brighter on the upper side",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "21": {
+      "reason": "Điều kiện ban ngày thuận lợi cho màu đỏ mạnh là khô và nhiều nắng. Vì sunny đã có trong đề, chỉ điền dry; cool mô tả ban đêm.",
+      "evidence": "dry, sunny days and cool nights",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "22": {
+      "reason": "Cây phong thường đỏ hơn khi đi xa về phía bắc bán cầu bắc. Cần hướng north; không nhầm nguyên nhân lạnh hơn với từ cần điền.",
+      "evidence": "the more north you travel",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "23": {
+      "reason": "Chống đóng băng chỉ là một giả thuyết được nêu rồi cho biết còn vướng mắc. Bài không chấp nhận nó là lời giải có khả năng đúng như nhận định, nên FALSE.",
+      "evidence": "there are problems with each of these theories",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "24": {
+      "reason": "Giả thuyết che sáng nghe có vẻ nghịch lý vì chlorophyll vốn chuyên hấp thụ ánh sáng mà lại cần bảo vệ khỏi ánh sáng. Paradoxical tương ứng seems to contradict, nên TRUE.",
+      "evidence": "It sounds paradoxical",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "25": {
+      "reason": "Đoạn I hỏi liệu cây không đỏ có cơ chế khác chống quá nhiều ánh sáng hay không, chưa kết luận chúng dễ tổn thương hơn. Câu so sánh mức độ hại là NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "26": {
+      "reason": "B giải thích vàng và cam lộ ra khi chlorophyll giảm. Các lựa chọn còn lại chỉ được nhắc hoặc để ngỏ: tại sao lá kim xanh, côn trùng chọn cây và phân bố anthocyanins chưa được giải đáp.",
+      "evidence": "As chlorophyll is depleted",
+      "location": "Passage 2 · Reading Passage 2"
+    },
+    "27": {
+      "reason": "Nghĩa địa được công nhân tìm thấy khi đào đất trên một đồn điền bỏ hoang. B là plantation, không phải harbour dù Lapita là người đi biển.",
+      "evidence": "a derelict plantation",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "28": {
+      "reason": "Câu tóm tắt cần danh từ chỉ phát hiện quan trọng tình cờ lộ ra. F là archaeological discovery; cemetery là nơi phát hiện, không phải bằng chứng đã có từ trước.",
+      "evidence": "An important archaeological discovery",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "29": {
+      "reason": "Lapita mang theo gia súc, cây giống và công cụ để lập cuộc sống mới. I là animals, diễn đạt livestock; không nhầm với bản đồ hay dữ liệu của nhà khảo cổ.",
+      "evidence": "their livestock",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "30": {
+      "reason": "Spriggs nhấn mạnh chiếc bình mai táng nhận diện hài cốt là Lapita. G là burial urn; những chiếc pots khác cũng có ở di chỉ nhưng không phải vật được nhấn mạnh.",
+      "evidence": "a Lapita burial urn",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "31": {
+      "reason": "Các vật bên trong bình là hài cốt người được niêm kín. D là bones, không phải đất hay dụng cụ; hình chim được trang trí ở vành ngoài bình.",
+      "evidence": "human remains sealed inside",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "32": {
+      "reason": "Chưa tìm được thuyền hay dây buồm của Lapita, còn truyền khẩu đã hóa huyền thoại trước thời ấy. C đúng vì thiếu thông tin đáng tin; A sai vì giả định thuyền đã được tìm thấy.",
+      "evidence": "No-one has found one of their canoes",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "33": {
+      "reason": "Điểm khác tổ tiên là Lapita dám đi ra xa đến mức không thấy đất liền. A đúng; kỹ năng đóng và điều khiển thuyền vốn đã được truyền qua nhiều thế hệ.",
+      "evidence": "sailed out of sight of land",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "34": {
+      "reason": "This chỉ niềm tin họ có thể quay về theo gió mậu dịch nếu không tìm thấy gì. D đúng về khả năng trở về an toàn, không chỉ kỹ năng nhận dấu hiệu đất liền.",
+      "evidence": "catch a swift ride back on the trade winds",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "35": {
+      "reason": "Các đảo trải dài và nhìn thấy lẫn nhau tạo lưới an toàn giúp người trở về không bỏ lỡ quê nhà. C đúng về hỗ trợ định hướng, không nói địa lý làm bão ít đi.",
+      "evidence": "the geography of their own archipelagoes would have provided a safety net",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "36": {
+      "reason": "Anderson nói chưa có bằng chứng Lapita biết đi ngược gió. Nhận định hiện đã rõ họ làm được đối lập mức độ chắc chắn trong bài, nên NO.",
+      "evidence": "there's no proof they could do any such thing",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "37": {
+      "reason": "Anderson đề xuất El Niño có thể đã phân tán Lapita và gió đổi chiều đưa họ đi xa. Nhận định điều kiện khí hậu cực đoan có thể góp phần di cư phù hợp: YES.",
+      "evidence": "may have helped scatter the Lapita",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "38": {
+      "reason": "Bài liên hệ thời điểm El Niño với mở rộng của Lapita, nhưng không nói họ dự báo được sự kiện kéo dài bao lâu. Đừng biến giả thuyết khí hậu thành kỹ năng dự báo: NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "39": {
+      "reason": "Tác giả nói họ dừng lại vì những lý do chỉ chính họ biết. Điều này xác nhận hiện chưa rõ vì sao ngừng mở rộng, nên YES.",
+      "evidence": "for reasons known only to them",
+      "location": "Passage 3 · Reading Passage 3"
+    },
+    "40": {
+      "reason": "Fiji chỉ được nêu có hơn 300 đảo trong số hàng trăm đảo Lapita gặp. Không có tỷ lệ dân cư để nói đa số định cư tại đó, nên NOT GIVEN.",
+      "evidence": "",
+      "location": "Passage 3 · Reading Passage 3"
+    }
+  }
+}
