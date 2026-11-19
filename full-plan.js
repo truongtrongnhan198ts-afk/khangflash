@@ -34,7 +34,51 @@ window.FullPlan=(()=>{
   const seen=new Set(state.cards.map(x=>x.card_id)),canonical=id=>window.KStore?.canonical?.(id)||id,unique=new Set();const remaining=data.cards.filter(x=>!seen.has(canonical(x.id))&&!unique.has(canonical(x.id))&&unique.add(canonical(x.id)));
   const cardMap=new Map(data.cards.map(c=>[canonical(c.id),c])),initialReview=Math.max(35,Math.ceil(state.cards.filter(p=>p.due<=state.today).reduce((n,p)=>n+(cardMap.get(p.card_id)?.studyKind==='grammar'?4:.5),0)));
   const days=Array.from({length:duration},(_,i)=>({day:i+1,date:plus(state.today,i),week:Math.floor(i/7)+1,cards:[],references:[],topics:[],variants:0,reading:[],writing:[],reviewMinutes:i===0?initialReview:35,minutes:i===0?initialReview:35,listening:i<horizon?20:30,news:i<horizon&&i%7<3?10:0,reviewOnly:i>=horizon})),active=days.slice(0,horizon);
-  for(const kind of ['vocabulary','grammar'])distribute(remaining.filter(x=>(x.studyKind==='grammar'?'grammar':'vocabulary')===kind),active,()=>1,(d,x,m)=>{d.cards.push(canonical(x.id));d.variants+=x.variants.length;d.minutes+=cardCost(x);},0,active.length,false);
+  function interleaveVocab(items,numDays){
+  if(!items.length||numDays<1)return items;
+  const byType={idiom:[],colloc:[],core:[]};
+  for(const x of items){
+   const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();
+   if(lbl.includes('idiom'))byType.idiom.push(x);
+   else if(lbl.includes('collocation')||cat.includes('collocation'))byType.colloc.push(x);
+   else byType.core.push(x);
+  }
+  const spreadByTopic=arr=>{
+   const b=new Map();
+   for(const x of arr){const t=(x.topics&&x.topics[0])||'general';if(!b.has(t))b.set(t,[]);b.get(t).push(x);}
+   const qs=[...b.values()],out=[];let idx=0;
+   while(qs.some(q=>q.length)){const q=qs[idx%qs.length];if(q.length)out.push(q.shift());idx++;}
+   return out;
+  };
+  const idioms=spreadByTopic(byType.idiom),collocs=spreadByTopic(byType.colloc),cores=spreadByTopic(byType.core);
+  const buckets=Array.from({length:numDays},()=>[]);
+  const deal=(arr)=>{for(let i=0;i<arr.length;i++)buckets[Math.floor(i*numDays/arr.length)].push(arr[i]);};
+  deal(cores);deal(collocs);deal(idioms);
+  // Within each day, interleave core, colloc, and idiom smoothly so idioms never clump together
+  const ordered=[];
+  for(const dayArr of buckets){
+   const dIdiom=[],dCol=[],dCore=[];
+   for(const x of dayArr){
+    const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();
+    if(lbl.includes('idiom'))dIdiom.push(x);
+    else if(lbl.includes('collocation')||cat.includes('collocation'))dCol.push(x);
+    else dCore.push(x);
+   }
+   const total=dayArr.length,idStep=dIdiom.length?Math.max(1,Math.floor(total/dIdiom.length)):total+1;
+   let ci=0,ki=0,ii=0;
+   for(let s=0;s<total;s++){
+    if(ii<dIdiom.length&&(s%idStep===Math.floor(idStep/2)||(ci>=dCore.length&&ki>=dCol.length)))ordered.push(dIdiom[ii++]);
+    else if(s%2===0&&ci<dCore.length)ordered.push(dCore[ci++]);
+    else if(ki<dCol.length)ordered.push(dCol[ki++]);
+    else if(ci<dCore.length)ordered.push(dCore[ci++]);
+    else if(ii<dIdiom.length)ordered.push(dIdiom[ii++]);
+   }
+  }
+  return ordered;
+ }
+ const vocabOrdered=interleaveVocab(remaining.filter(x=>x.studyKind!=='grammar'),active.length);
+ const gramOrdered=remaining.filter(x=>x.studyKind==='grammar');
+ for(const list of [vocabOrdered,gramOrdered])distribute(list,active,()=>1,(d,x,m)=>{d.cards.push(canonical(x.id));d.variants+=x.variants.length;d.minutes+=cardCost(x);},0,active.length,false);
   const articles=c.reading.filter(a=>!read.get(a.id)?.read),buckets=new Map();for(const a of articles){if(!buckets.has(a.topic))buckets.set(a.topic,[]);buckets.get(a.topic).push(a);}const ordered=[];while([...buckets.values()].some(b=>b.length))for(const b of buckets.values())if(b.length)ordered.push(b.shift());
   const readingDay=new Map();distribute(ordered,active,a=>a.minutes,(d,a,m)=>{d.reading.push(a.id);d.minutes+=m;readingDay.set(a.id,d);});
   // Existing full completion is respected; a representative exercise never marks all Writing questions complete.
@@ -45,7 +89,7 @@ window.FullPlan=(()=>{
   distribute(orderedTask2,active,()=>1,(d,l)=>{d.writing.push(l.id);d.minutes+=l.modelMinutes+l.practiceMinutes;},0,active.length,false);
   for(const l of pending.filter(l=>l.kind!=='task2')){const matched=readingDay.get(l.articleId),start=l.step>=5?Math.min(21,horizon-1):l.step===4?Math.min(14,horizon-1):0;let d=matched;if(!d){const available=active.slice(start);d=available.reduce((best,x)=>x.minutes/((x.day%7===0)?.75:1)<best.minutes/((best.day%7===0)?.75:1)?x:best,available[0]);}d.writing.push(l.id);d.minutes+=l.modelMinutes+l.practiceMinutes;}
   for(const d of days){d.reviewOnly=!d.cards.length&&!d.reading.length&&!d.writing.length;d.minutes=Math.ceil(d.minutes+d.listening+d.news);}
-  return{custom:true,learningUpgrade:'20261013',band:old.band,duration,learningDays:horizon,reserve:duration-horizon,start:state.today,end:plus(old.exam,-1),exam:old.exam,total:remaining.length,variants:remaining.reduce((n,c)=>n+c.variants.length,0),days,curriculum:{version:VERSION,finish:plus(state.today,horizon-1),mode:'all-models-representative-writing',readingTotal:articles.length,writingTotal:pending.length,catalogReading:c.reading.length,catalogWriting:c.writing.length,...(c.task2Version?{task2Version:c.task2Version,task2Total:task2.length,catalogTask2:c.task2Count}:{}),catalogQuestions:c.writing.reduce((n,l)=>n+l.count,0),initialCards:remaining.length,created:state.today}};
+  return{custom:true,interleavedV2:true,learningUpgrade:'20261013',band:old.band,duration,learningDays:horizon,reserve:duration-horizon,start:state.today,end:plus(old.exam,-1),exam:old.exam,total:remaining.length,variants:remaining.reduce((n,c)=>n+c.variants.length,0),days,curriculum:{version:VERSION,finish:plus(state.today,horizon-1),mode:'all-models-representative-writing',readingTotal:articles.length,writingTotal:pending.length,catalogReading:c.reading.length,catalogWriting:c.writing.length,...(c.task2Version?{task2Version:c.task2Version,task2Total:task2.length,catalogTask2:c.task2Count}:{}),catalogQuestions:c.writing.reduce((n,l)=>n+l.count,0),initialCards:remaining.length,created:state.today}};
  }
  function resize(data,state,old,band,duration){if(!Number.isInteger(duration)||duration<1||duration>730)throw Error('Chọn từ 1 đến 730 ngày.');const exam=plus(state.today,duration),same=old?.curriculum&&old.exam===exam,defaultReserve=duration>=30?14:duration>=14?3:0,reserve=Math.min(duration-1,old?.curriculum&&Number.isInteger(old.reserve)?old.reserve:defaultReserve),contentDays=same?Math.max(1,Math.min(duration,distance(state.today,old.curriculum.finish)+1)):duration-reserve;return build(data,state,{...old,band,exam},catalog,knowledge,k=>KPractice.get(k),{contentDays});}
  const exerciseUrl=l=>l.kind==='task2'?'/writing?view=task2&task2='+encodeURIComponent(l.id):'/writing?'+new URLSearchParams({step:String(l.step),lesson:l.id,q:String(l.representative+1)}),modelsUrl=l=>l.kind==='task2'?exerciseUrl(l):'/writing?'+new URLSearchParams({step:String(l.step),lesson:l.id,view:'models'});
@@ -97,5 +141,63 @@ window.FullPlan=(()=>{
   finally{busy=false;syncBuildButtons();}
  }
  document.addEventListener('click',async event=>{if(event.target.closest('[data-today-retry]')){loading=null;refreshSurface();return;}const buildButton=event.target.closest('[data-full-plan-build]');if(buildButton){await apply(buildButton);return;}if(event.target.closest('[data-full-plan-retry]')){loading=null;refreshSurface();return;}const b=event.target.closest('[data-curriculum-check]');if(!b||b.disabled)return;b.disabled=true;try{const key='saved:curriculum-'+b.dataset.curriculumCheck+':'+b.dataset.date;await KPractice.value(key,{saved:!KPractice.get(key)?.saved});refreshSurface();}catch{b.textContent='Chưa lưu được · thử lại';}finally{b.disabled=false;}});
- return{load,build,resize,ensureTask2,render,mountToday,todayHtml,tasks,savedWordCounts,writingDone,coverageKey,exerciseUrl,modelsUrl,version:VERSION};
+ 
+ function rebalancePlan(plan,data){
+  if(!plan||!Array.isArray(plan.days)||!data?.cards?.length||plan.interleavedV2)return plan;
+  const canonical=id=>window.KStore?.canonical?.(id)||id;
+  const byId=new Map(data.cards.map(c=>[canonical(c.id),c]));
+  const activeDays=plan.days.filter(d=>!d.reviewOnly&&Array.isArray(d.cards)&&d.cards.length);
+  if(!activeDays.length)return plan;
+  const allVocab=[],allGram=[],daySizes=activeDays.map(d=>d.cards.length);
+  for(const d of activeDays){
+   for(const rawId of d.cards){
+    const id=canonical(rawId),c=byId.get(id);
+    if(c&&c.studyKind==='grammar')allGram.push(id);
+    else if(c)allVocab.push(c);
+   }
+  }
+  if(!allVocab.length)return plan;
+  const byType={idiom:[],colloc:[],core:[]};
+  for(const x of allVocab){
+   const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();
+   if(lbl.includes('idiom'))byType.idiom.push(x);
+   else if(lbl.includes('collocation')||cat.includes('collocation'))byType.colloc.push(x);
+   else byType.core.push(x);
+  }
+  const spread=arr=>{
+   const b=new Map();
+   for(const x of arr){const t=(x.topics&&x.topics[0])||'general';if(!b.has(t))b.set(t,[]);b.get(t).push(x);}
+   const qs=[...b.values()],out=[];let idx=0;
+   while(qs.some(q=>q.length)){const q=qs[idx%qs.length];if(q.length)out.push(q.shift());idx++;}
+   return out;
+  };
+  const numDays=activeDays.length,buckets=Array.from({length:numDays},()=>[]);
+  const deal=arr=>{for(let i=0;i<arr.length;i++)buckets[Math.floor(i*numDays/arr.length)].push(arr[i]);};
+  deal(spread(byType.core));deal(spread(byType.colloc));deal(spread(byType.idiom));
+  const gramBuckets=Array.from({length:numDays},()=>[]);
+  for(let i=0;i<allGram.length;i++)gramBuckets[Math.floor(i*numDays/allGram.length)].push(allGram[i]);
+  for(let di=0;di<numDays;di++){
+   const dayArr=buckets[di],dIdiom=[],dCol=[],dCore=[];
+   for(const x of dayArr){
+    const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();
+    if(lbl.includes('idiom'))dIdiom.push(x);
+    else if(lbl.includes('collocation')||cat.includes('collocation'))dCol.push(x);
+    else dCore.push(x);
+   }
+   const total=dayArr.length,idStep=dIdiom.length?Math.max(1,Math.floor(total/dIdiom.length)):total+1;
+   let ci=0,ki=0,ii=0;const out=[];
+   for(let s=0;s<total;s++){
+    if(ii<dIdiom.length&&(s%idStep===Math.floor(idStep/2)||(ci>=dCore.length&&ki>=dCol.length)))out.push(canonical(dIdiom[ii++].id));
+    else if(s%2===0&&ci<dCore.length)out.push(canonical(dCore[ci++].id));
+    else if(ki<dCol.length)out.push(canonical(dCol[ki++].id));
+    else if(ci<dCore.length)out.push(canonical(dCore[ci++].id));
+    else if(ii<dIdiom.length)out.push(canonical(dIdiom[ii++].id));
+   }
+   activeDays[di].cards=[...out,...gramBuckets[di]];
+  }
+  plan.interleavedV2=true;
+  return plan;
+ }
+
+ return{load,build,resize,rebalancePlan,ensureTask2,render,mountToday,todayHtml,tasks,savedWordCounts,writingDone,coverageKey,exerciseUrl,modelsUrl,version:VERSION};
 })();

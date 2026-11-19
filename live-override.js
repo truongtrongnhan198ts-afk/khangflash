@@ -96,6 +96,24 @@
     }
   }
 
+
+  /* KF_AUTO_REBALANCE_LOCAL_PLAN */
+  (function clearLegacyUnbalancedPlan() {
+    try {
+      const rawLs = localStorage.getItem('kf_vercel_plan_v1');
+      if (rawLs) {
+        const parsed = JSON.parse(rawLs);
+        if (parsed && parsed.plan && !parsed.plan.interleavedV2) {
+          localStorage.removeItem('kf_vercel_plan_v1');
+        }
+      }
+      if (typeof indexedDB !== 'undefined' && !localStorage.getItem('kf_idb_interleaved_v2_done')) {
+        indexedDB.deleteDatabase('kf-device-learning-plan-v1');
+        localStorage.setItem('kf_idb_interleaved_v2_done', '1');
+      }
+    } catch {}
+  })();
+
   let loaded = false;
   async function loadAll() {
     if (loaded) return;
