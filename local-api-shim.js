@@ -54,7 +54,7 @@
       accountKey: 'khangflash-local',
       today: t,
       cards: [],
-      settings: { band: 9, daily_goal: 20, exam_date: '' },
+      settings: { band: 9, daily_goal: 20, exam_date: '2027-01-27' },
       history: [],
       activity: [],
       learningActivity: []
@@ -64,7 +64,8 @@
     st.accountKey = st.accountKey || 'khangflash-local';
     st.today = t;
     if (!Array.isArray(st.cards)) st.cards = [];
-    if (!st.settings || typeof st.settings !== 'object') st.settings = { band: 9, daily_goal: 20, exam_date: '' };
+    if (!st.settings || typeof st.settings !== 'object') st.settings = { band: 9, daily_goal: 20, exam_date: '2027-01-27' };
+    if (!st.settings.exam_date) st.settings.exam_date = '2027-01-27';
     if (!Array.isArray(st.history)) st.history = [];
     if (!Array.isArray(st.activity)) st.activity = [];
     if (!Array.isArray(st.learningActivity)) st.learningActivity = [];
@@ -251,7 +252,7 @@
       writeJson(K.plan, st);
       return jsonRes(st);
     }
-    if (!st.plan) {
+    if (!st.plan || !st.plan.curriculum) {
       try {
         if (!defaultPlanCache) {
           const r = await origFetch('/default-learning-plan.json', { cache: 'default' });
