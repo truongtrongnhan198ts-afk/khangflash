@@ -5,6 +5,45 @@
   window.__KF_LOCAL_API_SHIM__ = true;
 
   const origFetch = window.fetch.bind(window);
+  // Pre-inject custom-theme.css & pre-fetch live-override-custom.js early so Flashcard/Library/Games never flashes 3,099 base cards before jumping to 13,064 cards
+  const isAdminLive = /^\/admin-live(?:\.html)?\/?$/.test(location.pathname) || new URLSearchParams(location.search).get('tidianLive') === 'off';
+  const needsVocabGate = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
+  if (!isAdminLive) {
+    if (!document.getElementById('kf-custom-theme-link')) {
+      const link = document.createElement('link');
+      link.id = 'kf-custom-theme-link';
+      link.rel = 'stylesheet';
+      link.href = '/custom-theme.css';
+      (document.head || document.documentElement).appendChild(link);
+    }
+    if (!document.getElementById('kf-dashboard-clean-style')) {
+      const st = document.createElement('style');
+      st.id = 'kf-dashboard-clean-style';
+      st.textContent = '#kf-today-sync-status{display:none!important;}';
+      (document.head || document.documentElement).appendChild(st);
+    }
+    window.__KF_LIVE_PREFETCH__ = origFetch('/live-override-custom.js', { cache: 'force-cache', credentials: 'same-origin' })
+      .then(r => (r.ok ? r.text() : ''))
+      .catch(() => '');
+    if (needsVocabGate) {
+      window.__KF_BASE_MERGE_DONE__ = false;
+      window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
+        const done = () => {
+          if (window.__KF_BASE_MERGE_DONE__) return;
+          window.__KF_BASE_MERGE_DONE__ = true;
+          resolve();
+        };
+        window.__KF_RESOLVE_BASE_MERGE__ = done;
+        setTimeout(done, 3000);
+      });
+    } else {
+      window.__KF_BASE_MERGE_DONE__ = true;
+      window.__KF_BASE_MERGE_READY__ = Promise.resolve();
+    }
+  } else {
+    window.__KF_BASE_MERGE_DONE__ = true;
+    window.__KF_BASE_MERGE_READY__ = Promise.resolve();
+  }
   const K = {
     study: 'kf_vercel_study_v1',
     practice: 'kf_vercel_practice_v1',
@@ -292,6 +331,7 @@
     }
     return window.__KF_VNEXPRESS_READY__;
   }
+  if (!isAdminLive && needsVocabGate) ensureVnExpress300();
 
   window.fetch = async function patchedFetch(input, init) {
     try {
@@ -299,6 +339,9 @@
       const u = new URL(urlStr, location.origin);
       if (u.origin === location.origin) {
         if (u.pathname === '/data.json') {
+          if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
+            await window.__KF_BASE_MERGE_READY__;
+          }
           const [res, vne] = await Promise.all([origFetch(input, init), ensureVnExpress300()]);
           if (res && res.ok && vne && typeof vne.apply === 'function') {
             const data = await res.json();
