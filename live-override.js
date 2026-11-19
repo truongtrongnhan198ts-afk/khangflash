@@ -63,7 +63,7 @@
           const prevJson = response.json.bind(response);
           Object.defineProperty(response, 'json', {
             configurable: true,
-            value: async () => applyAntonymsToData(await prevJson())
+            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); return d; }
           });
         }
       } catch {}
@@ -96,6 +96,21 @@
     }
   }
 
+
+
+  /* KF_LOAD_VNEXPRESS_300 */
+  async function loadVnExpressPhrases300() {
+    if (window.KFVnExpressPhrases300) return;
+    if (window.__KF_VNEXPRESS_READY__) { await window.__KF_VNEXPRESS_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-300.js', { cache: 'force-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-300.js')();
+    } catch (err) {
+      console.warn('[KhangFlash] Không nạp được vnexpress-phrases-300.js:', err);
+    }
+  }
 
   /* KF_AUTO_REBALANCE_LOCAL_PLAN */
   (function clearLegacyUnbalancedPlan() {
@@ -138,6 +153,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
+      await loadVnExpressPhrases300();
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
@@ -150,7 +166,7 @@
 
   if (/^\/writing\/?$/.test(location.pathname)) loadTask1Expansion200();
   window.TidianLiveOverrides = { refresh: loadAll };
-  const isVocabPage = /^\/(flashcard|flashcards|library)(?:\.html)?\/?$/.test(location.pathname);
+  const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
   if (isVocabPage) {
     loadAll();
   } else if (document.readyState === 'loading') {

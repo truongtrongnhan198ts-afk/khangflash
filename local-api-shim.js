@@ -5,46 +5,6 @@
   window.__KF_LOCAL_API_SHIM__ = true;
 
   const origFetch = window.fetch.bind(window);
-  // Pre-inject custom-theme.css & pre-fetch live-override-custom.js early so Flashcard/Library never flashes 3,099 base cards before jumping to 12,073 cards
-  const isAdminLive = /^\/admin-live(?:\.html)?\/?$/.test(location.pathname) || new URLSearchParams(location.search).get('tidianLive') === 'off';
-  const needsVocabGate = /^\/(flashcard|flashcards|library)(?:\.html)?\/?$/.test(location.pathname);
-  if (!isAdminLive) {
-    if (!document.getElementById('kf-custom-theme-link')) {
-      const link = document.createElement('link');
-      link.id = 'kf-custom-theme-link';
-      link.rel = 'stylesheet';
-      link.href = '/custom-theme.css';
-      (document.head || document.documentElement).appendChild(link);
-    }
-    if (!document.getElementById('kf-dashboard-clean-style')) {
-      const st = document.createElement('style');
-      st.id = 'kf-dashboard-clean-style';
-      st.textContent = '#kf-today-sync-status{display:none!important;}';
-      (document.head || document.documentElement).appendChild(st);
-    }
-    window.__KF_LIVE_PREFETCH__ = origFetch('/live-override-custom.js', { cache: 'force-cache', credentials: 'same-origin' })
-      .then(r => (r.ok ? r.text() : ''))
-      .catch(() => '');
-    if (needsVocabGate) {
-      window.__KF_BASE_MERGE_DONE__ = false;
-      window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
-        const done = () => {
-          if (window.__KF_BASE_MERGE_DONE__) return;
-          window.__KF_BASE_MERGE_DONE__ = true;
-          resolve();
-        };
-        window.__KF_RESOLVE_BASE_MERGE__ = done;
-        setTimeout(done, 3000);
-      });
-    } else {
-      window.__KF_BASE_MERGE_DONE__ = true;
-      window.__KF_BASE_MERGE_READY__ = Promise.resolve();
-    }
-  } else {
-    window.__KF_BASE_MERGE_DONE__ = true;
-    window.__KF_BASE_MERGE_READY__ = Promise.resolve();
-  }
-
   const K = {
     study: 'kf_vercel_study_v1',
     practice: 'kf_vercel_practice_v1',
@@ -94,7 +54,7 @@
       accountKey: 'khangflash-local',
       today: t,
       cards: [],
-      settings: { band: 9, daily_goal: 20, exam_date: '2027-01-27' },
+      settings: { band: 9, daily_goal: 20, exam_date: '' },
       history: [],
       activity: [],
       learningActivity: []
@@ -104,8 +64,7 @@
     st.accountKey = st.accountKey || 'khangflash-local';
     st.today = t;
     if (!Array.isArray(st.cards)) st.cards = [];
-    if (!st.settings || typeof st.settings !== 'object') st.settings = { band: 9, daily_goal: 20, exam_date: '2027-01-27' };
-    if (!st.settings.exam_date) st.settings.exam_date = '2027-01-27';
+    if (!st.settings || typeof st.settings !== 'object') st.settings = { band: 9, daily_goal: 20, exam_date: '' };
     if (!Array.isArray(st.history)) st.history = [];
     if (!Array.isArray(st.activity)) st.activity = [];
     if (!Array.isArray(st.learningActivity)) st.learningActivity = [];
@@ -282,8 +241,7 @@
     return jsonRes({ ok: true, guest: false, entries: st.entries });
   }
 
-  let defaultPlanCache = null;
-  async function handleLearningPlan(method, body) {
+  function handleLearningPlan(method, body) {
     const st = readJson(K.plan, { ok: true, guest: false, plan: null });
     if (method === 'POST' && body && typeof body === 'object') {
       st.ok = true;
@@ -291,18 +249,6 @@
       if ('plan' in body) st.plan = body.plan;
       writeJson(K.plan, st);
       return jsonRes(st);
-    }
-    if (!st.plan || !st.plan.curriculum) {
-      try {
-        if (!defaultPlanCache) {
-          const r = await origFetch('/default-learning-plan.json', { cache: 'default' });
-          if (r.ok) defaultPlanCache = await r.json();
-        }
-        if (defaultPlanCache && defaultPlanCache.plan) {
-          st.plan = defaultPlanCache.plan;
-          writeJson(K.plan, st);
-        }
-      } catch {}
     }
     return jsonRes({ ok: true, guest: false, plan: st.plan || null });
   }
@@ -322,15 +268,73 @@
     return jsonRes({ ok: true, guest: false, entries: st.entries });
   }
 
+
+  /* KF_VNEXPRESS_300_SYNC_HOOK: zero-race loader for /data.json and /example-explanations/* across all pages & games */
+  function ensureVnExpress300() {
+    if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') {
+      return Promise.resolve(window.KFVnExpressPhrases300);
+    }
+    if (!window.__KF_VNEXPRESS_READY__) {
+      window.__KF_VNEXPRESS_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-300.js', { cache: 'force-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) {
+              new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-300.js')();
+            }
+          }
+        } catch (err) {
+          console.warn('[KF Local Shim] VnExpress 300 load failed:', err);
+        }
+        return window.KFVnExpressPhrases300 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESS_READY__;
+  }
+
   window.fetch = async function patchedFetch(input, init) {
     try {
       const urlStr = typeof input === 'string' ? input : (input && input.url) || '';
       const u = new URL(urlStr, location.origin);
-      if (u.origin === location.origin && u.pathname === '/data.json' && !(init && init.__kfBypassGate) && !window.__KF_BASE_MERGE_DONE__) {
-        await window.__KF_BASE_MERGE_READY__;
-        if (window.fetch !== patchedFetch) {
-          const nextInit = init ? { ...init, __kfBypassGate: true } : { __kfBypassGate: true };
-          return window.fetch(input, nextInit);
+      if (u.origin === location.origin) {
+        if (u.pathname === '/data.json') {
+          const [res, vne] = await Promise.all([origFetch(input, init), ensureVnExpress300()]);
+          if (res && res.ok && vne && typeof vne.apply === 'function') {
+            const data = await res.json();
+            return jsonRes(vne.apply(data), res.status);
+          }
+          return res;
+        }
+        if (u.pathname === '/example-explanations/index.json') {
+          const [res, vne] = await Promise.all([origFetch(input, init), ensureVnExpress300()]);
+          const baseIds = res && res.ok ? await res.json() : [];
+          const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
+          if (vne && Array.isArray(vne.explanationIds)) {
+            const seen = new Set(merged);
+            for (const id of vne.explanationIds) {
+              if (!seen.has(id)) {
+                merged.push(id);
+                seen.add(id);
+              }
+            }
+          }
+          return jsonRes(merged, 200);
+        }
+        const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
+        if (shardMatch) {
+          const shard = shardMatch[1].toLowerCase();
+          const [res, vne] = await Promise.all([
+            origFetch(input, init).catch(() => null),
+            ensureVnExpress300()
+          ]);
+          const baseObj = res && res.ok ? await res.json() : {};
+          const extra = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
+          if (extra && typeof extra === 'object') {
+            return jsonRes(Object.assign({}, baseObj, extra), 200);
+          }
+          if (res) return jsonRes(baseObj, res.status);
+          return jsonRes({}, 200);
         }
       }
       if (u.origin === location.origin && u.pathname.startsWith('/api/')) {
