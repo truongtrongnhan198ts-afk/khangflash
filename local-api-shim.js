@@ -5,6 +5,34 @@
   window.__KF_LOCAL_API_SHIM__ = true;
 
   const origFetch = window.fetch.bind(window);
+  // Pre-inject custom-theme.css & pre-fetch live-override-custom.js early so Flashcard/Library never flashes 3,099 base cards before jumping to 12,073 cards
+  const isAdminLive = /^\/admin-live(?:\.html)?\/?$/.test(location.pathname) || new URLSearchParams(location.search).get('tidianLive') === 'off';
+  if (!isAdminLive) {
+    if (!document.getElementById('kf-custom-theme-link')) {
+      const link = document.createElement('link');
+      link.id = 'kf-custom-theme-link';
+      link.rel = 'stylesheet';
+      link.href = '/custom-theme.css';
+      (document.head || document.documentElement).appendChild(link);
+    }
+    window.__KF_LIVE_PREFETCH__ = origFetch('/live-override-custom.js', { cache: 'default', credentials: 'same-origin' })
+      .then(r => (r.ok ? r.text() : ''))
+      .catch(() => '');
+    window.__KF_BASE_MERGE_DONE__ = false;
+    window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
+      const done = () => {
+        if (window.__KF_BASE_MERGE_DONE__) return;
+        window.__KF_BASE_MERGE_DONE__ = true;
+        resolve();
+      };
+      window.__KF_RESOLVE_BASE_MERGE__ = done;
+      setTimeout(done, 6000);
+    });
+  } else {
+    window.__KF_BASE_MERGE_DONE__ = true;
+    window.__KF_BASE_MERGE_READY__ = Promise.resolve();
+  }
+
   const K = {
     study: 'kf_vercel_study_v1',
     practice: 'kf_vercel_practice_v1',
@@ -286,6 +314,13 @@
     try {
       const urlStr = typeof input === 'string' ? input : (input && input.url) || '';
       const u = new URL(urlStr, location.origin);
+      if (u.origin === location.origin && u.pathname === '/data.json' && !(init && init.__kfBypassGate) && !window.__KF_BASE_MERGE_DONE__) {
+        await window.__KF_BASE_MERGE_READY__;
+        if (window.fetch !== patchedFetch) {
+          const nextInit = init ? { ...init, __kfBypassGate: true } : { __kfBypassGate: true };
+          return window.fetch(input, nextInit);
+        }
+      }
       if (u.origin === location.origin && u.pathname.startsWith('/api/')) {
         const method = ((init && init.method) || (input && input.method) || 'GET').toUpperCase();
         let body = null;

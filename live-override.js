@@ -103,12 +103,18 @@
     hookRelationsShow();
     await loadTask1Expansion200();
     try {
-      const r = await fetch('/live-override-custom.js', { cache: 'default', credentials: 'same-origin' });
-      if (!r.ok) {
-        console.warn('[KhangFlash] Không tải được /live-override-custom.js (HTTP ' + r.status + ')');
-        return;
+      let code = '';
+      if (window.__KF_LIVE_PREFETCH__) {
+        code = await window.__KF_LIVE_PREFETCH__;
       }
-      const code = await r.text();
+      if (!code) {
+        const r = await fetch('/live-override-custom.js', { cache: 'default', credentials: 'same-origin' });
+        if (!r.ok) {
+          console.warn('[KhangFlash] Không tải được /live-override-custom.js (HTTP ' + r.status + ')');
+          return;
+        }
+        code = await r.text();
+      }
       if (!code.trim()) return;
       new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')();
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
@@ -119,11 +125,12 @@
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
     } catch (err) {
       console.warn('[KhangFlash] Lỗi khi chạy /live-override-custom.js:', err);
+    } finally {
+      if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__();
     }
   }
 
   if (/^\/writing\/?$/.test(location.pathname)) loadTask1Expansion200();
   window.TidianLiveOverrides = { refresh: loadAll };
-  if (document.readyState === 'complete') loadAll();
-  else window.addEventListener('load', loadAll, { once: true });
+  loadAll();
 })();
