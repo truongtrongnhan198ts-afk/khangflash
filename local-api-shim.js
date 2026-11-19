@@ -7,6 +7,7 @@
   const origFetch = window.fetch.bind(window);
   // Pre-inject custom-theme.css & pre-fetch live-override-custom.js early so Flashcard/Library never flashes 3,099 base cards before jumping to 12,073 cards
   const isAdminLive = /^\/admin-live(?:\.html)?\/?$/.test(location.pathname) || new URLSearchParams(location.search).get('tidianLive') === 'off';
+  const needsVocabGate = /^\/(flashcard|flashcards|library)(?:\.html)?\/?$/.test(location.pathname);
   if (!isAdminLive) {
     if (!document.getElementById('kf-custom-theme-link')) {
       const link = document.createElement('link');
@@ -15,19 +16,30 @@
       link.href = '/custom-theme.css';
       (document.head || document.documentElement).appendChild(link);
     }
-    window.__KF_LIVE_PREFETCH__ = origFetch('/live-override-custom.js', { cache: 'default', credentials: 'same-origin' })
+    if (!document.getElementById('kf-dashboard-clean-style')) {
+      const st = document.createElement('style');
+      st.id = 'kf-dashboard-clean-style';
+      st.textContent = '#kf-today-sync-status{display:none!important;}';
+      (document.head || document.documentElement).appendChild(st);
+    }
+    window.__KF_LIVE_PREFETCH__ = origFetch('/live-override-custom.js', { cache: 'force-cache', credentials: 'same-origin' })
       .then(r => (r.ok ? r.text() : ''))
       .catch(() => '');
-    window.__KF_BASE_MERGE_DONE__ = false;
-    window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
-      const done = () => {
-        if (window.__KF_BASE_MERGE_DONE__) return;
-        window.__KF_BASE_MERGE_DONE__ = true;
-        resolve();
-      };
-      window.__KF_RESOLVE_BASE_MERGE__ = done;
-      setTimeout(done, 6000);
-    });
+    if (needsVocabGate) {
+      window.__KF_BASE_MERGE_DONE__ = false;
+      window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
+        const done = () => {
+          if (window.__KF_BASE_MERGE_DONE__) return;
+          window.__KF_BASE_MERGE_DONE__ = true;
+          resolve();
+        };
+        window.__KF_RESOLVE_BASE_MERGE__ = done;
+        setTimeout(done, 3000);
+      });
+    } else {
+      window.__KF_BASE_MERGE_DONE__ = true;
+      window.__KF_BASE_MERGE_READY__ = Promise.resolve();
+    }
   } else {
     window.__KF_BASE_MERGE_DONE__ = true;
     window.__KF_BASE_MERGE_READY__ = Promise.resolve();

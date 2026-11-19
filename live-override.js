@@ -87,7 +87,7 @@
   async function loadTask1Expansion200() {
     if (window.KFTask1Expansion200) return;
     try {
-      const r = await fetch('/task1-expansion-200.js', { cache: 'default', credentials: 'same-origin' });
+      const r = await fetch('/task1-expansion-200.js', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=task1-expansion-200.js')();
@@ -108,7 +108,7 @@
         code = await window.__KF_LIVE_PREFETCH__;
       }
       if (!code) {
-        const r = await fetch('/live-override-custom.js', { cache: 'default', credentials: 'same-origin' });
+        const r = await fetch('/live-override-custom.js', { cache: 'force-cache', credentials: 'same-origin' });
         if (!r.ok) {
           console.warn('[KhangFlash] Không tải được /live-override-custom.js (HTTP ' + r.status + ')');
           return;
@@ -132,5 +132,12 @@
 
   if (/^\/writing\/?$/.test(location.pathname)) loadTask1Expansion200();
   window.TidianLiveOverrides = { refresh: loadAll };
-  loadAll();
+  const isVocabPage = /^\/(flashcard|flashcards|library)(?:\.html)?\/?$/.test(location.pathname);
+  if (isVocabPage) {
+    loadAll();
+  } else if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(loadAll), { once: true });
+  } else {
+    requestAnimationFrame(loadAll);
+  }
 })();
