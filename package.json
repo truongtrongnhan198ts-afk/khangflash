@@ -4,6 +4,6 @@
   "description": "KhangFlash IELTS Dictionary & Flashcard Study App",
   "private": true,
   "engines": {
-    "node": "18.x"
+    "node": "26.x"
   }
 }
