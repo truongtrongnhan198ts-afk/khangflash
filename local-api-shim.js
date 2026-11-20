@@ -60,6 +60,50 @@
     return `${y}-${m}-${day}`;
   }
 
+  function addDaysIso(iso, days) {
+    const parts = String(iso || todayIso()).split('-').map(Number);
+    const d = new Date(parts[0], (parts[1] || 1) - 1, (parts[2] || 1) + Number(days || 0));
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  }
+
+  function diffDaysIso(fromIso, toIso) {
+    const a = String(fromIso || todayIso()).split('-').map(Number);
+    const b = String(toIso || todayIso()).split('-').map(Number);
+    const t1 = Date.UTC(a[0], (a[1] || 1) - 1, a[2] || 1);
+    const t2 = Date.UTC(b[0], (b[1] || 1) - 1, b[2] || 1);
+    return Math.max(1, Math.round((t2 - t1) / 86400000));
+  }
+
+  function computeRatingPlans(prev, todayStr) {
+    const t = todayStr || todayIso();
+    const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0;
+    const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0;
+    const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5;
+    const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t);
+
+    const p1 = { days: 1, due: addDaysIso(t, 1), retained: false };
+    let d2, d3, d4;
+    if (!prev || reps <= 0) {
+      d2 = 2;
+      d3 = 3;
+      d4 = 7;
+    } else {
+      d2 = Math.max(1, Math.round(Math.max(1, interval || 1) * 1.2));
+      d3 = reps === 1 ? 3 : reps === 2 ? 7 : Math.max(3, Math.round((interval || 3) * ease));
+      d4 = reps === 1 ? 7 : reps === 2 ? 14 : Math.max(7, Math.round((interval || 3) * ease * 1.35));
+    }
+
+    return {
+      1: p1,
+      2: { days: d2, due: addDaysIso(t, d2), retained: false },
+      3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d3, due: addDaysIso(t, d3), retained: false },
+      4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d4, due: addDaysIso(t, d4), retained: false }
+    };
+  }
+
   function readJson(key, fallback) {
     try {
       const raw = localStorage.getItem(key);
@@ -107,6 +151,8 @@
     if (!Array.isArray(st.history)) st.history = [];
     if (!Array.isArray(st.activity)) st.activity = [];
     if (!Array.isArray(st.learningActivity)) st.learningActivity = [];
+    st.newCardPlans = computeRatingPlans(null, t);
+    st.cards = st.cards.map(c => (c && typeof c === 'object' ? { ...c, ratingPlans: computeRatingPlans(c, t) } : c));
     return st;
   }
 
@@ -132,35 +178,50 @@
           const cid = r.card_id || r.id;
           if (!cid) continue;
           const prev = byId.get(cid) || { card_id: cid, reps: 0, interval: 0, ease: 2.5, lapses: 0 };
-          const quality = typeof r.quality === 'number' ? r.quality : (r.ok === false || r.status === 'again' ? 1 : 4);
+          const rawRate = typeof r.rating === 'number'
+            ? r.rating
+            : (typeof r.quality === 'number'
+              ? (r.quality <= 1 ? 1 : r.quality === 2 ? 2 : r.quality >= 4 ? 4 : 3)
+              : (r.ok === false || r.status === 'review' || r.status === 'again' ? 1 : 3));
+          const rate = Math.max(1, Math.min(4, Math.round(rawRate)));
+          const plans = computeRatingPlans(prev, t);
+          const chosenPlan = plans[rate] || plans[3];
+
           let reps = prev.reps || 0;
-          let interval = prev.interval || 0;
+          let interval = chosenPlan.days;
           let ease = prev.ease || 2.5;
           let lapses = prev.lapses || 0;
-          if (quality < 3) {
+
+          if (rate === 1) {
             reps = 0;
             interval = 1;
             lapses += 1;
+            ease = Math.max(1.3, +(ease - 0.2).toFixed(2));
+          } else if (rate === 2) {
+            reps = Math.max(1, reps);
+            ease = Math.max(1.3, +(ease - 0.1).toFixed(2));
+          } else if (rate === 3) {
+            reps = chosenPlan.retained ? Math.max(1, reps) : reps + 1;
           } else {
-            reps += 1;
-            interval = reps === 1 ? 1 : reps === 2 ? 6 : Math.max(1, Math.round(interval * ease));
+            reps = chosenPlan.retained ? Math.max(1, reps) : (reps === 0 ? 2 : reps + 1);
+            ease = Math.min(3.0, +(ease + 0.15).toFixed(2));
           }
-          ease = Math.max(1.3, +(ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))).toFixed(2));
-          const dueDate = new Date();
-          dueDate.setDate(dueDate.getDate() + interval);
-          const dueIso = dueDate.toISOString().slice(0, 10);
+
+          const nextStatus = rate === 1 ? 'review' : (r.status || 'known');
           const nextCard = {
             ...prev,
             card_id: cid,
-            status: r.status || (quality < 3 ? 'again' : 'known'),
+            status: nextStatus,
+            rating: rate,
             reps,
             interval,
             ease,
             lapses,
-            due: r.due || dueIso,
+            due: r.due || chosenPlan.due,
             last_reviewed: t,
             updated_at: new Date().toISOString()
           };
+          nextCard.ratingPlans = computeRatingPlans(nextCard, t);
           byId.set(cid, nextCard);
           updatedCards.push(nextCard);
         }
