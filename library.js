@@ -6,6 +6,34 @@ const lookup=new URLSearchParams(location.search).get('lookup')==='1';
 let resultLimit=50;
 let learnedLimit=100;
 const normalizeSearch=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLowerCase().replace(/\s+/g,' ').trim();
+
+function ensureLearnedStyles(){
+  if(document.getElementById('kf-learned-card-styles'))return;
+  const st=document.createElement('style');
+  st.id='kf-learned-card-styles';
+  st.textContent=`
+.kf-learned-toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:0 0 18px;padding:12px 16px;border-radius:14px;border:1.5px solid rgba(148,163,184,.28);background:rgba(148,163,184,.06);}
+.kf-learned-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:14px;}
+.kf-learned-card{display:flex;flex-direction:column;gap:10px;padding:16px 18px;border-radius:14px;border:1.5px solid rgba(148,163,184,.34);background:rgba(255,255,255,.04);box-shadow:0 4px 14px rgba(0,0,0,.14);transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease;}
+body:not(.dark) .kf-learned-card{background:#ffffff;border-color:rgba(15,23,42,.16);box-shadow:0 4px 12px rgba(15,23,42,.06);}
+.kf-learned-card:hover{border-color:#60a5fa;transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.22);}
+.kf-learned-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.kf-learned-title-wrap{display:flex;align-items:flex-start;gap:10px;min-width:0;}
+.kf-learned-num{flex:0 0 auto;min-width:28px;height:26px;padding:0 8px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:rgba(96,165,250,.18);color:#93c5fd;border:1px solid rgba(96,165,250,.35);}
+body:not(.dark) .kf-learned-num{background:rgba(37,99,235,.1);color:#1d4ed8;border-color:rgba(37,99,235,.25);}
+.kf-learned-term-box{min-width:0;}
+.kf-learned-term{font-size:17px;font-weight:700;line-height:1.35;letter-spacing:-.01em;word-break:break-word;margin:0;}
+.kf-learned-pos{display:inline-block;margin-top:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid rgba(148,163,184,.35);opacity:.82;}
+.kf-learned-open{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:10px;font-size:12.5px;font-weight:600;text-decoration:none;border:1.5px solid rgba(96,165,250,.45);color:#93c5fd;background:rgba(96,165,250,.1);white-space:nowrap;transition:background .15s ease,border-color .15s ease;}
+body:not(.dark) .kf-learned-open{color:#1d4ed8;background:rgba(37,99,235,.08);border-color:rgba(37,99,235,.32);}
+.kf-learned-open:hover{background:rgba(96,165,250,.22);border-color:#60a5fa;}
+.kf-learned-meaning{padding:10px 12px;border-radius:10px;border:1px solid rgba(156,227,197,.28);background:rgba(156,227,197,.09);font-size:14.5px;font-weight:600;line-height:1.45;}
+body:not(.dark) .kf-learned-meaning{background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.25);color:#065f46;}
+.kf-learned-example{margin:0;padding:2px 0 2px 12px;border-left:2.5px solid rgba(148,163,184,.45);font-size:13px;line-height:1.55;opacity:.82;font-style:italic;}
+`;
+  (document.head||document.documentElement).appendChild(st);
+}
+
 function learnedEntries(){
   if(!bank||!state)return [];
   const cardById=new Map(bank.cards.map(c=>[c.id,c]));
@@ -19,11 +47,7 @@ function learnedEntries(){
   items.sort((a,b)=>String(b.progress.updated_at||b.progress.last_reviewed||'').localeCompare(String(a.progress.updated_at||a.progress.last_reviewed||'')));
   return items;
 }
-function formatDateVi(iso){
-  if(!iso||!/^\d{4}-\d{2}-\d{2}$/.test(String(iso)))return '—';
-  const parts=String(iso).split('-');
-  return parts[2]+'/'+parts[1]+'/'+parts[0];
-}
+
 function learnedDeckCardHtml(entries){
   const total=entries.length;
   const preview=entries.slice(0,4).map(x=>x.card.term);
@@ -32,7 +56,9 @@ function learnedDeckCardHtml(entries){
     : '<div class="word-tile"><i></i>Chưa có từ nào — bấm Nhớ khi học</div>';
   return `<a class="deck" href="${pickingFlashcards?'flashcards.html':'library.html'}?group=learned" data-open-learned="1" style="background:#9ce3c5;color:#12251d"><h2>Từ vựng đã học / đã nhớ</h2><p>Tự động lưu mọi từ bạn đã bấm Nhớ hoặc Nhớ rồi để xem lại và ôn bất cứ lúc nào.</p><div class="deck-meta">${total.toLocaleString('vi-VN')} THẺ ĐÃ NHỚ</div><div class="deck-art">${tiles}</div><span class="deck-link-label">Mở danh sách đã nhớ</span><div class="deck-grid-lines"></div></a>`;
 }
+
 function learnedSectionHtml(entries){
+  ensureLearnedStyles();
   const q=normalizeSearch(search);
   const filtered=q
     ? entries.filter(({card})=>normalizeSearch(card.term+' '+card.definition+' '+(card.variants||[]).map(v=>v.definition||'').join(' ')).includes(q))
@@ -40,16 +66,16 @@ function learnedSectionHtml(entries){
   if(!entries.length){
     return `<div class="empty-hub"><strong>Chưa có từ vựng nào trong mục Đã học / Đã nhớ.</strong><p style="margin-top:8px;opacity:.85">Mỗi khi bạn học Flashcard và bấm <b>Nhớ</b> hoặc <b>Nhớ rồi</b>, từ đó sẽ tự động được thêm vào đây.</p><p style="margin-top:14px"><a class="hub-button" href="${pickingFlashcards?'flashcards.html':'library.html'}?group=topics">Chọn bộ Flashcard để học</a></p></div>`;
   }
-  const rows=filtered.slice(0,learnedLimit).map(({card,progress},idx)=>{
+  const cardsHtml=filtered.slice(0,learnedLimit).map(({card},idx)=>{
     const v=(card.variants||[]).find(x=>x.source!=='forumflash')||(card.variants||[])[0]||{};
     const def=v.definition||card.definition||'';
     const ex=v.example||'';
-    const dueTxt=progress.due?formatDateVi(progress.due):'—';
-    const repsTxt=(progress.reps||1)+' lần';
-    return `<tr><td style="opacity:.7">${idx+1}</td><td><strong>${le(card.term)}</strong>${card.partOfSpeech?`<br><small style="opacity:.75">${le(card.partOfSpeech)}</small>`:''}</td><td>${le(def)}${ex?`<p style="margin:4px 0 0;font-size:12px;opacity:.75">${le(ex)}</p>`:''}</td><td style="white-space:nowrap">Ôn: <strong>${le(dueTxt)}</strong><br><small style="opacity:.75">Đã nhớ · ${le(repsTxt)}</small></td><td style="white-space:nowrap"><a href="flashcard.html?card=${encodeURIComponent(card.id)}&status=all#study">Mở thẻ</a></td></tr>`;
+    const pos=card.partOfSpeechLabel||card.partOfSpeech||'';
+    return `<article class="kf-learned-card"><div class="kf-learned-head"><div class="kf-learned-title-wrap"><span class="kf-learned-num">#${idx+1}</span><div class="kf-learned-term-box"><h3 class="kf-learned-term">${le(card.term)}</h3>${pos?`<span class="kf-learned-pos">${le(pos)}</span>`:''}</div></div><a class="kf-learned-open" href="flashcard.html?card=${encodeURIComponent(card.id)}&status=all#study">Mở thẻ →</a></div><div class="kf-learned-meaning">${le(def)}</div>${ex?`<p class="kf-learned-example">${le(ex)}</p>`:''}</article>`;
   }).join('');
-  return `<section aria-label="Từ vựng đã học và đã nhớ"><p style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 14px"><a class="hub-button" href="flashcard.html?topic=all&status=known&includeDone=1#study">Ôn tập ${entries.length.toLocaleString('vi-VN')} từ đã nhớ bằng Flashcard</a> <span class="collection-count" style="margin:0">Hiển thị ${Math.min(filtered.length,learnedLimit).toLocaleString('vi-VN')} / ${filtered.length.toLocaleString('vi-VN')} từ${q?' khớp tìm kiếm':''} · Mới nhớ nhất xếp trên cùng</span></p>${filtered.length?`<table class="source-table"><thead><tr><th>#</th><th>Từ / cụm từ</th><th>Nghĩa và ví dụ</th><th>Lịch ôn</th><th>Thẻ</th></tr></thead><tbody>${rows}</tbody></table>${filtered.length>learnedLimit?'<p style="margin-top:12px"><button class="hub-button" data-more-learned>Xem thêm 100 từ</button></p>':''}`:'<div class="empty-hub">Không có từ đã nhớ nào khớp từ khóa tìm kiếm.</div>'}</section>`;
+  return `<section aria-label="Từ vựng đã học và đã nhớ"><div class="kf-learned-toolbar"><a class="hub-button" href="flashcard.html?topic=all&status=known&includeDone=1#study">Ôn tập ${entries.length.toLocaleString('vi-VN')} từ đã nhớ bằng Flashcard</a><span class="collection-count" style="margin:0">Hiển thị ${Math.min(filtered.length,learnedLimit).toLocaleString('vi-VN')} / ${filtered.length.toLocaleString('vi-VN')} từ${q?' khớp tìm kiếm':''} · Mới nhớ nhất xếp trên cùng</span></div>${filtered.length?`<div class="kf-learned-grid">${cardsHtml}</div>${filtered.length>learnedLimit?'<p style="margin-top:16px"><button class="hub-button" data-more-learned>Xem thêm 100 từ</button></p>':''}`:'<div class="empty-hub">Không có từ đã nhớ nào khớp từ khóa tìm kiếm.</div>'}</section>`;
 }
+
 function wordResults(){const q=normalizeSearch(search);if(!q||group==='learned')return lookup?'<p class="collection-count">Nhập từ/cụm tiếng Anh hoặc nghĩa tiếng Việt để tra trong toàn bộ thư viện.</p>':'';const hits=bank.cards.filter(c=>c.studyKind!=='grammar'&&normalizeSearch(c.term+' '+c.definition+' '+c.variants.map(v=>v.definition||'').join(' ')).includes(q)).sort((a,b)=>(normalizeSearch(b.term)===q)-(normalizeSearch(a.term)===q));return `<section aria-label="Kết quả tra từ"><p class="collection-count">${hits.length} từ/cụm phù hợp trong toàn bộ thư viện</p>${hits.length?`<table class="source-table"><thead><tr><th>Từ / cụm từ</th><th>Nghĩa và ví dụ</th><th>Flashcard</th></tr></thead><tbody>${hits.slice(0,resultLimit).map(c=>{const v=c.variants.find(v=>v.source!=='forumflash')||c.variants[0]||{};return `<tr><td><strong>${le(c.term)}</strong></td><td>${le(v.definition||c.definition)}${v.example?`<p>${le(v.example)}</p>`:''}</td><td><a href="flashcard.html?card=${encodeURIComponent(c.id)}&status=all#study">Mở thẻ</a></td></tr>`;}).join('')}</tbody></table>${hits.length>resultLimit?'<button class="hub-button" data-more-words>Xem thêm 50 kết quả</button>':''}`:'<div class="empty-hub">Không tìm thấy trong thư viện hiện tại. Thử từ ngắn hơn hoặc nghĩa tiếng Việt.</div>'}</section>`;}
 const groups=[['topics','Chủ đề',null],['learned','Đã học / Đã nhớ',null],['academic','Academic','Academic vocabulary'],['topic','Topic Collocations','Topic collocations'],['prep','Giới từ','Giới từ'],['verb','Verb Collocations','Verb collocations'],['idioms','Idiom',null],['phrasal','Phrasal Verbs','Phrasal verbs'],['speaking','Speaking','Speaking vocabulary'],['writing','Writing Task 2','Writing Task 2'],['grammar','Ngữ pháp','Ngữ pháp'],['forumflash','ForumFlash',null]];
 const colors=['#bd95f3','#a1d4e9','#bde3bd','#ff823d','#ffc32f','#c0cce9','#efb6a3','#b4d0f8'];
