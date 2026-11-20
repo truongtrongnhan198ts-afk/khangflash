@@ -60,50 +60,6 @@
     return `${y}-${m}-${day}`;
   }
 
-  function addDaysIso(iso, days) {
-    const parts = String(iso || todayIso()).split('-').map(Number);
-    const d = new Date(parts[0], (parts[1] || 1) - 1, (parts[2] || 1) + Number(days || 0));
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    return `${y}-${m}-${day}`;
-  }
-
-  function diffDaysIso(fromIso, toIso) {
-    const a = String(fromIso || todayIso()).split('-').map(Number);
-    const b = String(toIso || todayIso()).split('-').map(Number);
-    const t1 = Date.UTC(a[0], (a[1] || 1) - 1, a[2] || 1);
-    const t2 = Date.UTC(b[0], (b[1] || 1) - 1, b[2] || 1);
-    return Math.max(1, Math.round((t2 - t1) / 86400000));
-  }
-
-  function computeRatingPlans(prev, todayStr) {
-    const t = todayStr || todayIso();
-    const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0;
-    const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0;
-    const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5;
-    const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t);
-
-    const p1 = { days: 1, due: addDaysIso(t, 1), retained: false };
-    let d2, d3, d4;
-    if (!prev || reps <= 0) {
-      d2 = 2;
-      d3 = 3;
-      d4 = 7;
-    } else {
-      d2 = Math.max(1, Math.round(Math.max(1, interval || 1) * 1.2));
-      d3 = reps === 1 ? 3 : reps === 2 ? 7 : Math.max(3, Math.round((interval || 3) * ease));
-      d4 = reps === 1 ? 7 : reps === 2 ? 14 : Math.max(7, Math.round((interval || 3) * ease * 1.35));
-    }
-
-    return {
-      1: p1,
-      2: { days: d2, due: addDaysIso(t, d2), retained: false },
-      3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d3, due: addDaysIso(t, d3), retained: false },
-      4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d4, due: addDaysIso(t, d4), retained: false }
-    };
-  }
-
   function readJson(key, fallback) {
     try {
       const raw = localStorage.getItem(key);
@@ -151,8 +107,6 @@
     if (!Array.isArray(st.history)) st.history = [];
     if (!Array.isArray(st.activity)) st.activity = [];
     if (!Array.isArray(st.learningActivity)) st.learningActivity = [];
-    st.newCardPlans = computeRatingPlans(null, t);
-    st.cards = st.cards.map(c => (c && typeof c === 'object' ? { ...c, ratingPlans: computeRatingPlans(c, t) } : c));
     return st;
   }
 
@@ -178,50 +132,35 @@
           const cid = r.card_id || r.id;
           if (!cid) continue;
           const prev = byId.get(cid) || { card_id: cid, reps: 0, interval: 0, ease: 2.5, lapses: 0 };
-          const rawRate = typeof r.rating === 'number'
-            ? r.rating
-            : (typeof r.quality === 'number'
-              ? (r.quality <= 1 ? 1 : r.quality === 2 ? 2 : r.quality >= 4 ? 4 : 3)
-              : (r.ok === false || r.status === 'review' || r.status === 'again' ? 1 : 3));
-          const rate = Math.max(1, Math.min(4, Math.round(rawRate)));
-          const plans = computeRatingPlans(prev, t);
-          const chosenPlan = plans[rate] || plans[3];
-
+          const quality = typeof r.quality === 'number' ? r.quality : (r.ok === false || r.status === 'again' ? 1 : 4);
           let reps = prev.reps || 0;
-          let interval = chosenPlan.days;
+          let interval = prev.interval || 0;
           let ease = prev.ease || 2.5;
           let lapses = prev.lapses || 0;
-
-          if (rate === 1) {
+          if (quality < 3) {
             reps = 0;
             interval = 1;
             lapses += 1;
-            ease = Math.max(1.3, +(ease - 0.2).toFixed(2));
-          } else if (rate === 2) {
-            reps = Math.max(1, reps);
-            ease = Math.max(1.3, +(ease - 0.1).toFixed(2));
-          } else if (rate === 3) {
-            reps = chosenPlan.retained ? Math.max(1, reps) : reps + 1;
           } else {
-            reps = chosenPlan.retained ? Math.max(1, reps) : (reps === 0 ? 2 : reps + 1);
-            ease = Math.min(3.0, +(ease + 0.15).toFixed(2));
+            reps += 1;
+            interval = reps === 1 ? 1 : reps === 2 ? 6 : Math.max(1, Math.round(interval * ease));
           }
-
-          const nextStatus = rate === 1 ? 'review' : (r.status || 'known');
+          ease = Math.max(1.3, +(ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))).toFixed(2));
+          const dueDate = new Date();
+          dueDate.setDate(dueDate.getDate() + interval);
+          const dueIso = dueDate.toISOString().slice(0, 10);
           const nextCard = {
             ...prev,
             card_id: cid,
-            status: nextStatus,
-            rating: rate,
+            status: r.status || (quality < 3 ? 'again' : 'known'),
             reps,
             interval,
             ease,
             lapses,
-            due: r.due || chosenPlan.due,
+            due: r.due || dueIso,
             last_reviewed: t,
             updated_at: new Date().toISOString()
           };
-          nextCard.ratingPlans = computeRatingPlans(nextCard, t);
           byId.set(cid, nextCard);
           updatedCards.push(nextCard);
         }
@@ -369,7 +308,7 @@
   }
 
 
-  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK + KF_VNEXPRESS_700_SYNC_HOOK + KF_VNEXPRESS_1000_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
+  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK + KF_VNEXPRESS_700_SYNC_HOOK + KF_VNEXPRESS_1000_SYNC_HOOK + KF_VNEXPRESS_W6_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
   function ensureVnExpress300() {
     if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.20-v300-band9-r3') {
       return Promise.resolve(window.KFVnExpressPhrases300);
@@ -463,13 +402,13 @@
   }
 
   function ensureVnExpress700() {
-    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r3') {
+    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r2') {
       return Promise.resolve(window.KFVnExpressPhrases700);
     }
     if (!window.__KF_VNEXPRESS700_READY__) {
       window.__KF_VNEXPRESS700_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-700.js?v=20261120-v700-r3', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-700.js?v=20261120-v700-r2', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -486,13 +425,13 @@
   }
 
   function ensureVnExpress1000() {
-    if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r2') {
+    if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r1') {
       return Promise.resolve(window.KFVnExpressPhrases1000);
     }
     if (!window.__KF_VNEXPRESS1000_READY__) {
       window.__KF_VNEXPRESS1000_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r2', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r1', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -508,6 +447,29 @@
     return window.__KF_VNEXPRESS1000_READY__;
   }
 
+  function ensureVnExpressW6() {
+    if (window.KFVnExpressPhrasesW6 && window.KFVnExpressPhrasesW6.version === '2026.11.20-w6-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW6);
+    }
+    if (!window.__KF_VNEXPRESSW6_READY__) {
+      window.__KF_VNEXPRESSW6_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w6.js?v=20261120-w6-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) {
+              new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w6.js')();
+            }
+          }
+        } catch (err) {
+          console.warn('[KF Local Shim] VnExpress W6 load failed:', err);
+        }
+        return window.KFVnExpressPhrasesW6 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW6_READY__;
+  }
+
   if (!isAdminLive && needsVocabGate) {
     ensureVnExpress300();
     ensureGuardian400();
@@ -515,6 +477,7 @@
     ensureVnExpress500();
     ensureVnExpress700();
     ensureVnExpress1000();
+    ensureVnExpressW6();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -526,16 +489,17 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
             ensureVnExpress400(),
             ensureVnExpress500(),
             ensureVnExpress700(),
-            ensureVnExpress1000()
+            ensureVnExpress1000(),
+            ensureVnExpressW6()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vneW6].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -544,19 +508,20 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
             ensureVnExpress400(),
             ensureVnExpress500(),
             ensureVnExpress700(),
-            ensureVnExpress1000()
+            ensureVnExpress1000(),
+            ensureVnExpressW6()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vneW6]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -571,14 +536,15 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
             ensureVnExpress400(),
             ensureVnExpress500(),
             ensureVnExpress700(),
-            ensureVnExpress1000()
+            ensureVnExpress1000(),
+            ensureVnExpressW6()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -587,8 +553,9 @@
           const extraVne500 = vne500 && typeof vne500.getShard === 'function' ? vne500.getShard(shard) : null;
           const extraVne700 = vne700 && typeof vne700.getShard === 'function' ? vne700.getShard(shard) : null;
           const extraVne1000 = vne1000 && typeof vne1000.getShard === 'function' ? vne1000.getShard(shard) : null;
-          if ((extraVne && typeof extraVne === 'object') || (extraGdn && typeof extraGdn === 'object') || (extraVne400 && typeof extraVne400 === 'object') || (extraVne500 && typeof extraVne500 === 'object') || (extraVne700 && typeof extraVne700 === 'object') || (extraVne1000 && typeof extraVne1000 === 'object')) {
-            return jsonRes(Object.assign({}, baseObj, extraVne || {}, extraGdn || {}, extraVne400 || {}, extraVne500 || {}, extraVne700 || {}, extraVne1000 || {}), 200);
+          const extraVneW6 = vneW6 && typeof vneW6.getShard === 'function' ? vneW6.getShard(shard) : null;
+          if ((extraVne && typeof extraVne === 'object') || (extraGdn && typeof extraGdn === 'object') || (extraVne400 && typeof extraVne400 === 'object') || (extraVne500 && typeof extraVne500 === 'object') || (extraVne700 && typeof extraVne700 === 'object') || (extraVne1000 && typeof extraVne1000 === 'object') || (extraVneW6 && typeof extraVneW6 === 'object')) {
+            return jsonRes(Object.assign({}, baseObj, extraVne || {}, extraGdn || {}, extraVne400 || {}, extraVne500 || {}, extraVne700 || {}, extraVne1000 || {}, extraVneW6 || {}), 200);
           }
           if (res) return jsonRes(baseObj, res.status);
           return jsonRes({}, 200);
