@@ -63,7 +63,7 @@
           const prevJson = response.json.bind(response);
           Object.defineProperty(response, 'json', {
             configurable: true,
-            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); if (window.KFGuardianPhrases400 && typeof window.KFGuardianPhrases400.apply === 'function') d = window.KFGuardianPhrases400.apply(d); if (window.KFVnExpressPhrases400 && typeof window.KFVnExpressPhrases400.apply === 'function') d = window.KFVnExpressPhrases400.apply(d); if (window.KFVnExpressPhrases500 && typeof window.KFVnExpressPhrases500.apply === 'function') d = window.KFVnExpressPhrases500.apply(d); return d; }
+            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); if (window.KFGuardianPhrases400 && typeof window.KFGuardianPhrases400.apply === 'function') d = window.KFGuardianPhrases400.apply(d); if (window.KFVnExpressPhrases400 && typeof window.KFVnExpressPhrases400.apply === 'function') d = window.KFVnExpressPhrases400.apply(d); if (window.KFVnExpressPhrases500 && typeof window.KFVnExpressPhrases500.apply === 'function') d = window.KFVnExpressPhrases500.apply(d); if (window.KFVnExpressPhrases700 && typeof window.KFVnExpressPhrases700.apply === 'function') d = window.KFVnExpressPhrases700.apply(d); return d; }
           });
         }
       } catch {}
@@ -157,6 +157,21 @@
     }
   }
 
+
+  /* KF_LOAD_VNEXPRESS_700 */
+  async function loadVnExpressPhrases700() {
+    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r2') return;
+    if (window.__KF_VNEXPRESS700_READY__) { await window.__KF_VNEXPRESS700_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-700.js?v=20261120-v700-r2', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-700.js')();
+    } catch (err) {
+      console.warn('[KhangFlash] Không nạp được vnexpress-phrases-700.js:', err);
+    }
+  }
+
   /* KF_AUTO_REBALANCE_LOCAL_PLAN */
   (function clearLegacyUnbalancedPlan() {
     try {
@@ -198,7 +213,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500()]);
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
