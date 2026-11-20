@@ -310,13 +310,13 @@
 
   /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
   function ensureVnExpress300() {
-    if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.19-v300-band9-r2') {
+    if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.20-v300-band9-r3') {
       return Promise.resolve(window.KFVnExpressPhrases300);
     }
     if (!window.__KF_VNEXPRESS_READY__) {
       window.__KF_VNEXPRESS_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-300.js?v=20261119-r2', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-300.js?v=20261120-v300-r3', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -333,13 +333,13 @@
   }
 
   function ensureGuardian400() {
-    if (window.KFGuardianPhrases400 && window.KFGuardianPhrases400.version === '2026.11.20-g400-band9-r1') {
+    if (window.KFGuardianPhrases400 && window.KFGuardianPhrases400.version === '2026.11.20-g400-band9-r2') {
       return Promise.resolve(window.KFGuardianPhrases400);
     }
     if (!window.__KF_GUARDIAN_READY__) {
       window.__KF_GUARDIAN_READY__ = (async () => {
         try {
-          const r = await origFetch('/guardian-phrases-400.js?v=20261120-g1', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/guardian-phrases-400.js?v=20261120-g2', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -356,13 +356,13 @@
   }
 
   function ensureVnExpress400() {
-    if (window.KFVnExpressPhrases400 && window.KFVnExpressPhrases400.version === '2026.11.20-v400-band9-r1') {
+    if (window.KFVnExpressPhrases400 && window.KFVnExpressPhrases400.version === '2026.11.20-v400-band9-r2') {
       return Promise.resolve(window.KFVnExpressPhrases400);
     }
     if (!window.__KF_VNEXPRESS400_READY__) {
       window.__KF_VNEXPRESS400_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-400.js?v=20261120-v400-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-400.js?v=20261120-v400-r2', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -379,13 +379,13 @@
   }
 
   function ensureVnExpress500() {
-    if (window.KFVnExpressPhrases500 && window.KFVnExpressPhrases500.version === '2026.11.20-v500-band9-r1') {
+    if (window.KFVnExpressPhrases500 && window.KFVnExpressPhrases500.version === '2026.11.20-v500-band9-r2') {
       return Promise.resolve(window.KFVnExpressPhrases500);
     }
     if (!window.__KF_VNEXPRESS500_READY__) {
       window.__KF_VNEXPRESS500_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-500.js?v=20261120-v500-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-500.js?v=20261120-v500-r2', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
