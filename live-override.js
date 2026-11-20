@@ -160,10 +160,10 @@
 
   /* KF_LOAD_VNEXPRESS_700 */
   async function loadVnExpressPhrases700() {
-    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r2') return;
+    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r3') return;
     if (window.__KF_VNEXPRESS700_READY__) { await window.__KF_VNEXPRESS700_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-700.js?v=20261120-v700-r2', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-700.js?v=20261120-v700-r3', { cache: 'no-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-700.js')();
@@ -175,10 +175,10 @@
 
   /* KF_LOAD_VNEXPRESS_1000 */
   async function loadVnExpressPhrases1000() {
-    if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r1') return;
+    if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r2') return;
     if (window.__KF_VNEXPRESS1000_READY__) { await window.__KF_VNEXPRESS1000_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r2', { cache: 'no-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-1000.js')();
