@@ -308,7 +308,7 @@
   }
 
 
-  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK + KF_VNEXPRESS_700_SYNC_HOOK + KF_VNEXPRESS_1000_SYNC_HOOK + KF_VNEXPRESS_W6_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
+  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK + KF_VNEXPRESS_700_SYNC_HOOK + KF_VNEXPRESS_1000_SYNC_HOOK + KF_VNEXPRESS_W6_SYNC_HOOK + KF_VNEXPRESS_W7_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
   function ensureVnExpress300() {
     if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.20-v300-band9-r3') {
       return Promise.resolve(window.KFVnExpressPhrases300);
@@ -470,6 +470,29 @@
     return window.__KF_VNEXPRESSW6_READY__;
   }
 
+  function ensureVnExpressW7() {
+    if (window.KFVnExpressPhrasesW7 && window.KFVnExpressPhrasesW7.version === '2026.11.20-w7-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW7);
+    }
+    if (!window.__KF_VNEXPRESSW7_READY__) {
+      window.__KF_VNEXPRESSW7_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w7.js?v=20261120-w7-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) {
+              new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w7.js')();
+            }
+          }
+        } catch (err) {
+          console.warn('[KF Local Shim] VnExpress W7 load failed:', err);
+        }
+        return window.KFVnExpressPhrasesW7 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW7_READY__;
+  }
+
   if (!isAdminLive && needsVocabGate) {
     ensureVnExpress300();
     ensureGuardian400();
@@ -478,6 +501,7 @@
     ensureVnExpress700();
     ensureVnExpress1000();
     ensureVnExpressW6();
+    ensureVnExpressW7();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -489,7 +513,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -497,9 +521,10 @@
             ensureVnExpress500(),
             ensureVnExpress700(),
             ensureVnExpress1000(),
-            ensureVnExpressW6()
+            ensureVnExpressW6(),
+            ensureVnExpressW7()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vneW6].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -508,7 +533,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -516,12 +541,13 @@
             ensureVnExpress500(),
             ensureVnExpress700(),
             ensureVnExpress1000(),
-            ensureVnExpressW6()
+            ensureVnExpressW6(),
+            ensureVnExpressW7()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vneW6]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -536,7 +562,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -544,7 +570,8 @@
             ensureVnExpress500(),
             ensureVnExpress700(),
             ensureVnExpress1000(),
-            ensureVnExpressW6()
+            ensureVnExpressW6(),
+            ensureVnExpressW7()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -554,8 +581,9 @@
           const extraVne700 = vne700 && typeof vne700.getShard === 'function' ? vne700.getShard(shard) : null;
           const extraVne1000 = vne1000 && typeof vne1000.getShard === 'function' ? vne1000.getShard(shard) : null;
           const extraVneW6 = vneW6 && typeof vneW6.getShard === 'function' ? vneW6.getShard(shard) : null;
-          if ((extraVne && typeof extraVne === 'object') || (extraGdn && typeof extraGdn === 'object') || (extraVne400 && typeof extraVne400 === 'object') || (extraVne500 && typeof extraVne500 === 'object') || (extraVne700 && typeof extraVne700 === 'object') || (extraVne1000 && typeof extraVne1000 === 'object') || (extraVneW6 && typeof extraVneW6 === 'object')) {
-            return jsonRes(Object.assign({}, baseObj, extraVne || {}, extraGdn || {}, extraVne400 || {}, extraVne500 || {}, extraVne700 || {}, extraVne1000 || {}, extraVneW6 || {}), 200);
+          const extraVneW7 = vneW7 && typeof vneW7.getShard === 'function' ? vneW7.getShard(shard) : null;
+          if ((extraVne && typeof extraVne === 'object') || (extraGdn && typeof extraGdn === 'object') || (extraVne400 && typeof extraVne400 === 'object') || (extraVne500 && typeof extraVne500 === 'object') || (extraVne700 && typeof extraVne700 === 'object') || (extraVne1000 && typeof extraVne1000 === 'object') || (extraVneW6 && typeof extraVneW6 === 'object') || (extraVneW7 && typeof extraVneW7 === 'object')) {
+            return jsonRes(Object.assign({}, baseObj, extraVne || {}, extraGdn || {}, extraVne400 || {}, extraVne500 || {}, extraVne700 || {}, extraVne1000 || {}, extraVneW6 || {}, extraVneW7 || {}), 200);
           }
           if (res) return jsonRes(baseObj, res.status);
           return jsonRes({}, 200);
