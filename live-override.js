@@ -63,7 +63,7 @@
           const prevJson = response.json.bind(response);
           Object.defineProperty(response, 'json', {
             configurable: true,
-            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); return d; }
+            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); if (window.KFGuardianPhrases400 && typeof window.KFGuardianPhrases400.apply === 'function') d = window.KFGuardianPhrases400.apply(d); return d; }
           });
         }
       } catch {}
@@ -112,6 +112,21 @@
     }
   }
 
+
+  /* KF_LOAD_GUARDIAN_400 */
+  async function loadGuardianPhrases400() {
+    if (window.KFGuardianPhrases400 && window.KFGuardianPhrases400.version === '2026.11.20-g400-band9-r1') return;
+    if (window.__KF_GUARDIAN_READY__) { await window.__KF_GUARDIAN_READY__; return; }
+    try {
+      const r = await fetch('/guardian-phrases-400.js?v=20261120-g1', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=guardian-phrases-400.js')();
+    } catch (err) {
+      console.warn('[KhangFlash] Không nạp được guardian-phrases-400.js:', err);
+    }
+  }
+
   /* KF_AUTO_REBALANCE_LOCAL_PLAN */
   (function clearLegacyUnbalancedPlan() {
     try {
@@ -153,7 +168,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await loadVnExpressPhrases300();
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };

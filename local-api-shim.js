@@ -308,7 +308,7 @@
   }
 
 
-  /* KF_VNEXPRESS_300_SYNC_HOOK: zero-race loader for /data.json and /example-explanations/* across all pages & games */
+  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK: zero-race loaders for /data.json and /example-explanations/* across all pages & games */
   function ensureVnExpress300() {
     if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.19-v300-band9-r2') {
       return Promise.resolve(window.KFVnExpressPhrases300);
@@ -331,7 +331,34 @@
     }
     return window.__KF_VNEXPRESS_READY__;
   }
-  if (!isAdminLive && needsVocabGate) ensureVnExpress300();
+
+  function ensureGuardian400() {
+    if (window.KFGuardianPhrases400 && window.KFGuardianPhrases400.version === '2026.11.20-g400-band9-r1') {
+      return Promise.resolve(window.KFGuardianPhrases400);
+    }
+    if (!window.__KF_GUARDIAN_READY__) {
+      window.__KF_GUARDIAN_READY__ = (async () => {
+        try {
+          const r = await origFetch('/guardian-phrases-400.js?v=20261120-g1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) {
+              new Function('"use strict";\n' + code + '\n//# sourceURL=guardian-phrases-400.js')();
+            }
+          }
+        } catch (err) {
+          console.warn('[KF Local Shim] Guardian 400 load failed:', err);
+        }
+        return window.KFGuardianPhrases400 || null;
+      })();
+    }
+    return window.__KF_GUARDIAN_READY__;
+  }
+
+  if (!isAdminLive && needsVocabGate) {
+    ensureVnExpress300();
+    ensureGuardian400();
+  }
 
   window.fetch = async function patchedFetch(input, init) {
     try {
@@ -342,23 +369,27 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne] = await Promise.all([origFetch(input, init), ensureVnExpress300()]);
-          if (res && res.ok && vne && typeof vne.apply === 'function') {
-            const data = await res.json();
-            return jsonRes(vne.apply(data), res.status);
+          const [res, vne, gdn] = await Promise.all([origFetch(input, init), ensureVnExpress300(), ensureGuardian400()]);
+          if (res && res.ok && ((vne && typeof vne.apply === 'function') || (gdn && typeof gdn.apply === 'function'))) {
+            let data = await res.json();
+            if (vne && typeof vne.apply === 'function') data = vne.apply(data);
+            if (gdn && typeof gdn.apply === 'function') data = gdn.apply(data);
+            return jsonRes(data, res.status);
           }
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne] = await Promise.all([origFetch(input, init), ensureVnExpress300()]);
+          const [res, vne, gdn] = await Promise.all([origFetch(input, init), ensureVnExpress300(), ensureGuardian400()]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
-          if (vne && Array.isArray(vne.explanationIds)) {
-            const seen = new Set(merged);
-            for (const id of vne.explanationIds) {
-              if (!seen.has(id)) {
-                merged.push(id);
-                seen.add(id);
+          const seen = new Set(merged);
+          for (const pack of [vne, gdn]) {
+            if (pack && Array.isArray(pack.explanationIds)) {
+              for (const id of pack.explanationIds) {
+                if (!seen.has(id)) {
+                  merged.push(id);
+                  seen.add(id);
+                }
               }
             }
           }
@@ -367,14 +398,16 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne] = await Promise.all([
+          const [res, vne, gdn] = await Promise.all([
             origFetch(input, init).catch(() => null),
-            ensureVnExpress300()
+            ensureVnExpress300(),
+            ensureGuardian400()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
-          const extra = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
-          if (extra && typeof extra === 'object') {
-            return jsonRes(Object.assign({}, baseObj, extra), 200);
+          const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
+          const extraGdn = gdn && typeof gdn.getShard === 'function' ? gdn.getShard(shard) : null;
+          if ((extraVne && typeof extraVne === 'object') || (extraGdn && typeof extraGdn === 'object')) {
+            return jsonRes(Object.assign({}, baseObj, extraVne || {}, extraGdn || {}), 200);
           }
           if (res) return jsonRes(baseObj, res.status);
           return jsonRes({}, 200);
