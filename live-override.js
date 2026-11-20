@@ -63,7 +63,7 @@
           const prevJson = response.json.bind(response);
           Object.defineProperty(response, 'json', {
             configurable: true,
-            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); if (window.KFGuardianPhrases400 && typeof window.KFGuardianPhrases400.apply === 'function') d = window.KFGuardianPhrases400.apply(d); if (window.KFVnExpressPhrases400 && typeof window.KFVnExpressPhrases400.apply === 'function') d = window.KFVnExpressPhrases400.apply(d); return d; }
+            value: async () => { let d = applyAntonymsToData(await prevJson()); if (window.KFVnExpressPhrases300 && typeof window.KFVnExpressPhrases300.apply === 'function') d = window.KFVnExpressPhrases300.apply(d); if (window.KFGuardianPhrases400 && typeof window.KFGuardianPhrases400.apply === 'function') d = window.KFGuardianPhrases400.apply(d); if (window.KFVnExpressPhrases400 && typeof window.KFVnExpressPhrases400.apply === 'function') d = window.KFVnExpressPhrases400.apply(d); if (window.KFVnExpressPhrases500 && typeof window.KFVnExpressPhrases500.apply === 'function') d = window.KFVnExpressPhrases500.apply(d); return d; }
           });
         }
       } catch {}
@@ -142,6 +142,21 @@
     }
   }
 
+
+  /* KF_LOAD_VNEXPRESS_500 */
+  async function loadVnExpressPhrases500() {
+    if (window.KFVnExpressPhrases500 && window.KFVnExpressPhrases500.version === '2026.11.20-v500-band9-r1') return;
+    if (window.__KF_VNEXPRESS500_READY__) { await window.__KF_VNEXPRESS500_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-500.js?v=20261120-v500-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-500.js')();
+    } catch (err) {
+      console.warn('[KhangFlash] Không nạp được vnexpress-phrases-500.js:', err);
+    }
+  }
+
   /* KF_AUTO_REBALANCE_LOCAL_PLAN */
   (function clearLegacyUnbalancedPlan() {
     try {
@@ -183,7 +198,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400()]);
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
