@@ -705,6 +705,91 @@
     return window.__KF_VNEXPRESSW15_READY__;
   }
 
+
+  function consolidateVnExpressWaves(data) {
+    if (!data || !Array.isArray(data.cards)) return data;
+    const isVneId = id => /^vnexpress-/i.test(String(id || '')) && String(id || '').toLowerCase() !== 'vnexpress-all';
+    const foundWaves = new Set();
+    if (Array.isArray(data.topics)) {
+      for (const t of data.topics) { if (t && isVneId(t.id)) foundWaves.add(t.id); }
+    }
+    if (Array.isArray(data.sources)) {
+      for (const s of data.sources) { if (s && isVneId(s.id)) foundWaves.add(s.id); }
+    }
+    let vneCardCount = 0;
+    for (const c of data.cards) {
+      if (!c) continue;
+      let isVneCard = false;
+      if (Array.isArray(c.topics)) {
+        const nextTopics = [];
+        const seenT = new Set();
+        for (const tid of c.topics) {
+          const mapped = isVneId(tid) ? 'vnexpress-all' : tid;
+          if (isVneId(tid) || mapped === 'vnexpress-all') isVneCard = true;
+          if (mapped && !seenT.has(mapped)) { seenT.add(mapped); nextTopics.push(mapped); }
+        }
+        c.topics = nextTopics;
+      }
+      if (c.sourceTopics && typeof c.sourceTopics === 'object') {
+        const mergedSt = new Set(Array.isArray(c.sourceTopics['vnexpress-all']) ? c.sourceTopics['vnexpress-all'] : []);
+        let touchedSt = false;
+        for (const k of Object.keys(c.sourceTopics)) {
+          if (isVneId(k)) {
+            foundWaves.add(k);
+            isVneCard = true;
+            touchedSt = true;
+            const arr = Array.isArray(c.sourceTopics[k]) ? c.sourceTopics[k] : [];
+            for (const tid of arr) mergedSt.add(isVneId(tid) ? 'vnexpress-all' : tid);
+            delete c.sourceTopics[k];
+          }
+        }
+        if (touchedSt) {
+          mergedSt.add('vnexpress-all');
+          c.sourceTopics['vnexpress-all'] = Array.from(mergedSt);
+        }
+      }
+      if (Array.isArray(c.variants)) {
+        for (const v of c.variants) {
+          if (v && isVneId(v.source)) {
+            foundWaves.add(v.source);
+            v.source = 'vnexpress-all';
+            isVneCard = true;
+          } else if (v && v.source === 'vnexpress-all') {
+            isVneCard = true;
+          }
+        }
+      }
+      if (isVneCard) vneCardCount++;
+    }
+    if (vneCardCount === 0) return data;
+    const waveCount = Math.max(foundWaves.size, Number(data.__kfVneWaveCount || 0));
+    if (waveCount > 0) data.__kfVneWaveCount = waveCount;
+    const waveLabel = waveCount > 0 ? `${waveCount} đợt báo chí` : 'nhiều đợt báo chí';
+    const unifiedTopic = {
+      id: 'vnexpress-all',
+      title: 'VnExpress International · Tổng hợp báo chí',
+      description: `${vneCardCount.toLocaleString('vi-VN')} cụm từ IELTS Band 8.5–9.0 cân bằng loại từ tổng hợp từ ${waveLabel} VnExpress International, kèm giải thích 4 phần.`,
+      accent: 'sky'
+    };
+    const unifiedSource = {
+      id: 'vnexpress-all',
+      title: `VnExpress International · Tổng hợp (${waveLabel})`,
+      category: 'Academic vocabulary',
+      originalCount: vneCardCount,
+      supplements: 0
+    };
+    if (Array.isArray(data.topics)) {
+      data.topics = data.topics.filter(t => t && !isVneId(t.id) && t.id !== 'vnexpress-all');
+      data.topics.unshift(unifiedTopic);
+    }
+    if (Array.isArray(data.sources)) {
+      data.sources = data.sources.filter(s => s && !isVneId(s.id) && s.id !== 'vnexpress-all');
+      data.sources.push(unifiedSource);
+    }
+    if (typeof data.cardCount === 'number') data.cardCount = data.cards.length;
+    return data;
+  }
+
   if (!isAdminLive && needsVocabGate) {
     ensureVnExpress300();
     ensureGuardian400();
@@ -756,6 +841,7 @@
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
+            data = consolidateVnExpressWaves(data);
             return jsonRes(data, res.status);
           }
           return res;
