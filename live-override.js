@@ -256,6 +256,86 @@
           }
         }
       }
+      // Rebalance oversized topics (>1050 cards) into under-1000 thematic topics with strict donor floor >=1050 (strictly idempotent)
+      if (Array.isArray(data.cards) && data.cards.length > 5000 && Array.isArray(data.topics)) {
+        const topicIdByAlias = new Map();
+        for (const t of data.topics) {
+          if (!t || !t.id) continue;
+          const id = String(t.id);
+          const tk = String(t.title || id).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
+          topicIdByAlias.set(id, id);
+          if (tk === 'oceans & water') topicIdByAlias.set('oceans', id);
+          if (tk === 'language & communication') topicIdByAlias.set('language', id);
+          if (tk === 'population & migration') topicIdByAlias.set('population', id);
+        }
+        const RULES = [
+          { alias: 'energy', rx: /\b(energy|solar|wind power|renewable|electricity|power grid|fossil fuel|coal|crude oil|natural gas|nuclear power|hydropower|power plant|battery|carbon emission|greenhouse gas|clean fuel|megawatt|kilowatt|decarboniz|geothermal|biofuel)\b/gi },
+          { alias: 'oceans', rx: /\b(ocean|marine|sea level|coral|reef|coastal|maritime|fishery|fisheries|seafood|tide|wave|offshore|island|beach|waterway|river|aquatic|flood|water supply|watershed|estuary|mangrove|shipping lane|seaport|plastic waste)\b/gi },
+          { alias: 'speaking-weather-seasons', rx: /\b(weather|season|monsoon|typhoon|storm|heatwave|drought|rainfall|temperature|forecast|humid|winter|summer|autumn|spring|cold snap|hot spell|cyclone|el nino|precipitation|extreme heat|landslide)\b/gi },
+          { alias: 'housing', rx: /\b(housing|apartment|rent|rental|tenant|landlord|mortgage|real estate|homeowner|condo|property market|living space|residential|affordable home|home price|housing crisis|homebuyer|eviction|suburban home)\b/gi },
+          { alias: 'cities', rx: /\b(city|cities|urban|metropolitan|municipal|downtown|suburb|skyline|urban infrastructure|sidewalk|public space|megacity|urbanization|district|street life|civic|smart city|zoning|commuter)\b/gi },
+          { alias: 'media', rx: /\b(media|advertising|advertisement|journalis|press|broadcast|social media|influencer|viral|headline|newsroom|propaganda|misinformation|disinformation|marketing campaign|brand awareness|publicity|tabloid|podcast|streaming platform)\b/gi },
+          { alias: 'science', rx: /\b(science|scientific|research|laboratory|experiment|scientist|breakthrough|discovery|hypothesis|quantum|genetic|biotech|space exploration|astronomy|physics|chemistry|clinical trial|peer-reviewed|researcher|genome)\b/gi },
+          { alias: 'family', rx: /\b(family|parent|parenting|childcare|sibling|elderly care|intergenerational|marriage|divorce|upbringing|kinship|relatives|motherhood|fatherhood|childhood|juvenile|family bond|nuclear family|extended family)\b/gi },
+          { alias: 'population', rx: /\b(population|demograph|aging|ageing|birth rate|fertility|migration|migrant|immigrant|emigrant|overpopulation|census|depopulation|elderly ratio|labor force|brain drain|refugee|resettlement)\b/gi },
+          { alias: 'language', rx: /\b(language|linguist|bilingual|multilingual|dialect|accent|vocabulary|fluency|translation|interpret|communication skill|slang|mother tongue|literacy|rhetoric|proficiency|native speaker|english|phonetic)\b/gi },
+          { alias: 'sport', rx: /\b(sport|exercise|workout|fitness|athlete|marathon|football|soccer|tennis|badminton|swim|gym|training|coach|tournament|championship|match|stadium|medal|olympic|athletic|endurance|league)\b/gi },
+          { alias: 'speaking-daily-routine-time-management', rx: /\b(daily|routine|morning|schedule|time management|deadline|habit|productivity|workday|punctual|procrastinat|work-life balance|sleep|burnout|overwork|shift work|daily commute|time-saving|multitask)\b/gi },
+          { alias: 'speaking-hobbies-free-time', rx: /\b(hobby|hobbies|leisure|free time|pastime|recreation|collect|gardening|craft|hiking|cycling|camping|weekend getaway|unwinding|outdoor activity|amateur|enthusiast|club|photography)\b/gi },
+          { alias: 'speaking-gifts-celebrations', rx: /\b(gift|present|souvenir|festival|holiday|celebrat|tet|lunar new year|ceremony|anniversary|feast|firework|festive|tradition|hospitality|banquet|ritual|commemorat)\b/gi },
+          { alias: 'wildlife', rx: /\b(wildlife|species|endangered|biodiversity|habitat|ecosystem|conservation|poaching|animal|fauna|flora|mammal|bird|reptile|sanctuary|national park|extinction|predator|forest)\b/gi },
+          { alias: 'arts', rx: /\b(art|artist|music|concert|museum|gallery|exhibition|painting|sculpture|theater|theatre|opera|symphony|literature|poetry|cinema|aesthetic|artistic|masterpiece|craftsmanship)\b/gi },
+          { alias: 'equality', rx: /\b(equality|inequality|gender|discrimination|diversity|inclusion|inclusive|minority|marginalized|equity|human rights|empowerment|glass ceiling|pay gap|social justice|accessibility|bias|stereotype)\b/gi }
+        ];
+        const resolvedRules = [];
+        const targetIds = new Set();
+        for (const r of RULES) {
+          const realId = topicIdByAlias.get(r.alias);
+          if (realId) { resolvedRules.push({ id: realId, rx: r.rx }); targetIds.add(realId); }
+        }
+        const DONOR_FLOOR = 1050;
+        const TARGET_CAP = 1060;
+        const counts = Object.create(null);
+        for (const c of data.cards) {
+          if (!c || !Array.isArray(c.topics)) continue;
+          const tid = c.topics.find(t => t && !String(t).startsWith('speaking-unit-'));
+          if (tid) counts[tid] = (counts[tid] || 0) + 1;
+        }
+        const candidates = [];
+        for (const c of data.cards) {
+          if (!c || !Array.isArray(c.topics)) continue;
+          const tid = c.topics.find(t => t && !String(t).startsWith('speaking-unit-'));
+          if (!tid || targetIds.has(tid) || (counts[tid] || 0) <= DONOR_FLOOR) continue;
+          if (/^(grammar|lexical-patterns|phrasal|speaking-cum-|speaking-tranh-)/.test(tid)) continue;
+          const v0 = (Array.isArray(c.variants) && c.variants[0]) || {};
+          const titleText = String(v0.sourceTitle || '');
+          const bodyText = String(c.term || '') + ' ' + String(v0.example || '');
+          let bestTarget = null, bestScore = 0;
+          for (const r of resolvedRules) {
+            const tm = titleText.match(r.rx);
+            const bm = bodyText.match(r.rx);
+            const score = (tm ? tm.length * 2 : 0) + (bm ? bm.length : 0);
+            if (score >= 2 && score > bestScore) { bestScore = score; bestTarget = r.id; }
+          }
+          if (bestTarget && (counts[bestTarget] || 0) < TARGET_CAP) {
+            candidates.push({ card: c, from: tid, to: bestTarget, score: bestScore });
+          }
+        }
+        candidates.sort((a, b) => (b.score - a.score) || String(a.card.id || '').localeCompare(String(b.card.id || '')));
+        for (const cand of candidates) {
+          if ((counts[cand.from] || 0) <= DONOR_FLOOR) continue;
+          if ((counts[cand.to] || 0) >= TARGET_CAP) continue;
+          const su = cand.card.topics.filter(t => String(t).startsWith('speaking-unit-'));
+          cand.card.topics = [cand.to, ...su];
+          if (cand.card.sourceTopics && typeof cand.card.sourceTopics === 'object') {
+            for (const k of Object.keys(cand.card.sourceTopics)) {
+              cand.card.sourceTopics[k] = [cand.to];
+            }
+          }
+          counts[cand.from]--;
+          counts[cand.to] = (counts[cand.to] || 0) + 1;
+        }
+      }
     }
 
     if (Array.isArray(data.sources) && vneCardCount > 0) {
