@@ -92,8 +92,22 @@
     const EXTRA_META = {
       society: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
       perspectives: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
+      language: { title: 'Language & Communication', description: 'Từ vựng bổ sung theo chủ đề Language & Communication.', accent: 'violet' },
+      oceans: { title: 'Oceans & Water', description: 'Từ vựng bổ sung theo chủ đề Oceans & Water.', accent: 'teal' },
+      population: { title: 'Population & Migration', description: 'Từ vựng bổ sung theo chủ đề Population & Migration.', accent: 'pink' },
       'general-academic': { title: 'Chủ đề học thuật khác', description: 'Các cụm từ IELTS Band 8.5–9.0 thuộc các lĩnh vực học thuật mở rộng khác.', accent: 'sky' },
     };
+    const TITLE_PREFIX_MAP = new Map();
+    if (Array.isArray(data.topics)) {
+      for (const t of data.topics) {
+        if (t && t.id && t.title && !t.id.startsWith('speaking-unit-') && !isNewsTopicId(t.id)) {
+          const tl = String(t.title).toLowerCase();
+          if (tl.includes('language')) TITLE_PREFIX_MAP.set('language', t.id);
+          if (tl.includes('ocean') || tl.includes('water')) TITLE_PREFIX_MAP.set('oceans', t.id);
+          if (tl.includes('population') || tl.includes('migration')) TITLE_PREFIX_MAP.set('population', t.id);
+        }
+      }
+    }
 
     const validTopicIds = new Set();
     if (Array.isArray(data.topics)) {
@@ -107,7 +121,8 @@
     const createdTopics = new Map();
     function ensureCustomTopic(rawId) {
       const cleanId = String(rawId || 'general-academic').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '') || 'general-academic';
-      const finalId = cleanId === 'perspectives' ? 'society' : cleanId;
+      const rawFinal = cleanId === 'perspectives' ? 'society' : cleanId;
+      const finalId = TITLE_PREFIX_MAP.get(rawFinal) || rawFinal;
       if (validTopicIds.has(finalId)) return finalId;
       if (!createdTopics.has(finalId)) {
         const preset = EXTRA_META[finalId];
@@ -132,6 +147,8 @@
         const s = String(tid || '').trim();
         if (!s || s.startsWith('speaking-unit-') || isNewsTopicId(s)) continue;
         if (validTopicIds.has(s)) return s;
+        const mappedTitleId = TITLE_PREFIX_MAP.get(s.toLowerCase());
+        if (mappedTitleId && validTopicIds.has(mappedTitleId)) return mappedTitleId;
         const aliased = ALIAS[s.toLowerCase()];
         if (aliased && validTopicIds.has(aliased)) return aliased;
         if (!unmappedTag) unmappedTag = s;
@@ -501,6 +518,17 @@
     } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w16.js:', err); }
   }
 
+  async function loadVnExpressPhrasesW17() {
+    if (window.KFVnExpressPhrasesW17 && window.KFVnExpressPhrasesW17.version === '2026.11.21-w17-band9-r1') return;
+    if (window.__KF_VNEXPRESSW17_READY__) { await window.__KF_VNEXPRESSW17_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-w17.js?v=20261121-w17-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w17.js')();
+    } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w17.js:', err); }
+  }
+
   async function loadAll() {
     if (loaded) return;
     loaded = true;
@@ -524,7 +552,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16()]);
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };

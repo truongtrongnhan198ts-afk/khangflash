@@ -726,6 +726,26 @@
     return window.__KF_VNEXPRESSW16_READY__;
   }
 
+
+  function ensureVnExpressW17() {
+    if (window.KFVnExpressPhrasesW17 && window.KFVnExpressPhrasesW17.version === '2026.11.21-w17-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW17);
+    }
+    if (!window.__KF_VNEXPRESSW17_READY__) {
+      window.__KF_VNEXPRESSW17_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w17.js?v=20261121-w17-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w17.js')();
+          }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W17 load failed:', err); }
+        return window.KFVnExpressPhrasesW17 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW17_READY__;
+  }
+
   function consolidateVnExpressWaves(data) {
     if (!data || !Array.isArray(data.cards)) return data;
     const isVneId = id => /^vnexpress-/i.test(String(id || '')) && String(id || '').toLowerCase() !== 'vnexpress-all';
@@ -766,8 +786,22 @@
     const EXTRA_META = {
       society: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
       perspectives: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
+      language: { title: 'Language & Communication', description: 'Từ vựng bổ sung theo chủ đề Language & Communication.', accent: 'violet' },
+      oceans: { title: 'Oceans & Water', description: 'Từ vựng bổ sung theo chủ đề Oceans & Water.', accent: 'teal' },
+      population: { title: 'Population & Migration', description: 'Từ vựng bổ sung theo chủ đề Population & Migration.', accent: 'pink' },
       'general-academic': { title: 'Chủ đề học thuật khác', description: 'Các cụm từ IELTS Band 8.5–9.0 thuộc các lĩnh vực học thuật mở rộng khác.', accent: 'sky' },
     };
+    const TITLE_PREFIX_MAP = new Map();
+    if (Array.isArray(data.topics)) {
+      for (const t of data.topics) {
+        if (t && t.id && t.title && !t.id.startsWith('speaking-unit-') && !isNewsTopicId(t.id)) {
+          const tl = String(t.title).toLowerCase();
+          if (tl.includes('language')) TITLE_PREFIX_MAP.set('language', t.id);
+          if (tl.includes('ocean') || tl.includes('water')) TITLE_PREFIX_MAP.set('oceans', t.id);
+          if (tl.includes('population') || tl.includes('migration')) TITLE_PREFIX_MAP.set('population', t.id);
+        }
+      }
+    }
 
     const validTopicIds = new Set();
     if (Array.isArray(data.topics)) {
@@ -781,7 +815,8 @@
     const createdTopics = new Map();
     function ensureCustomTopic(rawId) {
       const cleanId = String(rawId || 'general-academic').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '') || 'general-academic';
-      const finalId = cleanId === 'perspectives' ? 'society' : cleanId;
+      const rawFinal = cleanId === 'perspectives' ? 'society' : cleanId;
+      const finalId = TITLE_PREFIX_MAP.get(rawFinal) || rawFinal;
       if (validTopicIds.has(finalId)) return finalId;
       if (!createdTopics.has(finalId)) {
         const preset = EXTRA_META[finalId];
@@ -806,6 +841,8 @@
         const s = String(tid || '').trim();
         if (!s || s.startsWith('speaking-unit-') || isNewsTopicId(s)) continue;
         if (validTopicIds.has(s)) return s;
+        const mappedTitleId = TITLE_PREFIX_MAP.get(s.toLowerCase());
+        if (mappedTitleId && validTopicIds.has(mappedTitleId)) return mappedTitleId;
         const aliased = ALIAS[s.toLowerCase()];
         if (aliased && validTopicIds.has(aliased)) return aliased;
         if (!unmappedTag) unmappedTag = s;
@@ -919,6 +956,7 @@
     ensureVnExpressW14();
     ensureVnExpressW15();
     ensureVnExpressW16();
+    ensureVnExpressW17();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -930,7 +968,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -948,9 +986,10 @@
             ensureVnExpressW13(),
             ensureVnExpressW14(),
             ensureVnExpressW15(),
-            ensureVnExpressW16()
+            ensureVnExpressW16(),
+            ensureVnExpressW17()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -960,7 +999,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -978,12 +1017,13 @@
             ensureVnExpressW13(),
             ensureVnExpressW14(),
             ensureVnExpressW15(),
-            ensureVnExpressW16()
+            ensureVnExpressW16(),
+            ensureVnExpressW17()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -998,7 +1038,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -1016,7 +1056,8 @@
             ensureVnExpressW13(),
             ensureVnExpressW14(),
             ensureVnExpressW15(),
-            ensureVnExpressW16()
+            ensureVnExpressW16(),
+            ensureVnExpressW17()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -1036,7 +1077,8 @@
           const extraW14 = vnew14 && typeof vnew14.getShard === 'function' ? vnew14.getShard(shard) : null;
           const extraW15 = vnew15 && typeof vnew15.getShard === 'function' ? vnew15.getShard(shard) : null;
           const extraW16 = vnew16 && typeof vnew16.getShard === 'function' ? vnew16.getShard(shard) : null;
-          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15, extraW16].filter(x => x && typeof x === 'object');
+          const extraW17 = vnew17 && typeof vnew17.getShard === 'function' ? vnew17.getShard(shard) : null;
+          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15, extraW16, extraW17].filter(x => x && typeof x === 'object');
           if (extras.length) {
             return jsonRes(Object.assign({}, baseObj, ...extras), 200);
           }
