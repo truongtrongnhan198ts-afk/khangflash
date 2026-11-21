@@ -685,6 +685,26 @@
     return window.__KF_VNEXPRESSW14_READY__;
   }
 
+
+  function ensureVnExpressW15() {
+    if (window.KFVnExpressPhrasesW15 && window.KFVnExpressPhrasesW15.version === '2026.11.21-w15-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW15);
+    }
+    if (!window.__KF_VNEXPRESSW15_READY__) {
+      window.__KF_VNEXPRESSW15_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w15.js?v=20261121-w15-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w15.js')();
+          }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W15 load failed:', err); }
+        return window.KFVnExpressPhrasesW15 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW15_READY__;
+  }
+
   if (!isAdminLive && needsVocabGate) {
     ensureVnExpress300();
     ensureGuardian400();
@@ -701,6 +721,7 @@
     ensureVnExpressW12();
     ensureVnExpressW13();
     ensureVnExpressW14();
+    ensureVnExpressW15();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -712,7 +733,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -728,9 +749,10 @@
             ensureVnExpressW11(),
             ensureVnExpressW12(),
             ensureVnExpressW13(),
-            ensureVnExpressW14()
+            ensureVnExpressW14(),
+            ensureVnExpressW15()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -739,7 +761,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -755,12 +777,13 @@
             ensureVnExpressW11(),
             ensureVnExpressW12(),
             ensureVnExpressW13(),
-            ensureVnExpressW14()
+            ensureVnExpressW14(),
+            ensureVnExpressW15()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -775,7 +798,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -791,7 +814,8 @@
             ensureVnExpressW11(),
             ensureVnExpressW12(),
             ensureVnExpressW13(),
-            ensureVnExpressW14()
+            ensureVnExpressW14(),
+            ensureVnExpressW15()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -809,7 +833,8 @@
           const extraW12 = vnew12 && typeof vnew12.getShard === 'function' ? vnew12.getShard(shard) : null;
           const extraW13 = vnew13 && typeof vnew13.getShard === 'function' ? vnew13.getShard(shard) : null;
           const extraW14 = vnew14 && typeof vnew14.getShard === 'function' ? vnew14.getShard(shard) : null;
-          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14].filter(x => x && typeof x === 'object');
+          const extraW15 = vnew15 && typeof vnew15.getShard === 'function' ? vnew15.getShard(shard) : null;
+          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15].filter(x => x && typeof x === 'object');
           if (extras.length) {
             return jsonRes(Object.assign({}, baseObj, ...extras), 200);
           }
