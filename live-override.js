@@ -55,49 +55,124 @@
   function consolidateVnExpressWaves(data) {
     if (!data || !Array.isArray(data.cards)) return data;
     const isVneId = id => /^vnexpress-/i.test(String(id || '')) && String(id || '').toLowerCase() !== 'vnexpress-all';
-    const foundWaves = new Set();
+    const isNewsTopicId = id => /^(vnexpress|guardian)-/i.test(String(id || ''));
+    const ALIAS = {
+      business: 'economy',
+      markets: 'economy',
+      property: 'housing',
+      traffic: 'transport',
+      infrastructure: 'transport',
+      travel: 'tourism',
+      sports: 'sport',
+      world: 'globalisation',
+      globalization: 'globalisation',
+      urbanization: 'cities',
+      urbanisation: 'cities',
+      tech: 'technology',
+      wellness: 'health',
+      medicine: 'health',
+      law: 'crime',
+      policy: 'government',
+      politics: 'government',
+      climate: 'environment',
+      nature: 'environment',
+      animals: 'wildlife',
+      music: 'arts',
+      lifestyle: 'culture',
+      career: 'work',
+      employment: 'work',
+      jobs: 'work',
+      money: 'finance',
+      banking: 'finance',
+      parenting: 'family',
+      children: 'family',
+      agriculture: 'food',
+      cuisine: 'food',
+    };
+    const EXTRA_META = {
+      society: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
+      perspectives: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
+      'general-academic': { title: 'Chủ đề học thuật khác', description: 'Các cụm từ IELTS Band 8.5–9.0 thuộc các lĩnh vực học thuật mở rộng khác.', accent: 'sky' },
+    };
+
+    const validTopicIds = new Set();
     if (Array.isArray(data.topics)) {
-      for (const t of data.topics) { if (t && isVneId(t.id)) foundWaves.add(t.id); }
+      for (const t of data.topics) {
+        if (t && t.id && !t.id.startsWith('speaking-unit-') && !isNewsTopicId(t.id)) {
+          validTopicIds.add(t.id);
+        }
+      }
     }
-    if (Array.isArray(data.sources)) {
-      for (const s of data.sources) { if (s && isVneId(s.id)) foundWaves.add(s.id); }
+
+    const createdTopics = new Map();
+    function ensureCustomTopic(rawId) {
+      const cleanId = String(rawId || 'general-academic').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '') || 'general-academic';
+      const finalId = cleanId === 'perspectives' ? 'society' : cleanId;
+      if (validTopicIds.has(finalId)) return finalId;
+      if (!createdTopics.has(finalId)) {
+        const preset = EXTRA_META[finalId];
+        const title = preset ? preset.title : finalId.split('-').map(w => w ? w[0].toUpperCase() + w.slice(1) : '').join(' ');
+        const desc = preset ? preset.description : `Từ vựng IELTS Band 8.5–9.0 chuyên sâu về chủ đề ${title}.`;
+        createdTopics.set(finalId, { id: finalId, title, description: desc, accent: preset ? preset.accent : 'sky' });
+        validTopicIds.add(finalId);
+      }
+      return finalId;
     }
+
+    function pickPrimaryTopic(card) {
+      const rawList = [];
+      if (Array.isArray(card.topics)) rawList.push(...card.topics);
+      if (card.sourceTopics && typeof card.sourceTopics === 'object') {
+        for (const arr of Object.values(card.sourceTopics)) {
+          if (Array.isArray(arr)) rawList.push(...arr);
+        }
+      }
+      let unmappedTag = '';
+      for (const tid of rawList) {
+        const s = String(tid || '').trim();
+        if (!s || s.startsWith('speaking-unit-') || isNewsTopicId(s)) continue;
+        if (validTopicIds.has(s)) return s;
+        const aliased = ALIAS[s.toLowerCase()];
+        if (aliased && validTopicIds.has(aliased)) return aliased;
+        if (!unmappedTag) unmappedTag = s;
+      }
+      const ctx = String(card.variants && card.variants[0] && card.variants[0].context || '').toLowerCase();
+      for (const [k, v] of Object.entries(ALIAS)) {
+        if (ctx.includes(k) && validTopicIds.has(v)) return v;
+      }
+      const blob = (String(card.term || '') + ' ' + String(card.definition || '')).toLowerCase();
+      if (/school|student|universit|learn|teach|curriculum|exam|tuition/.test(blob) && validTopicIds.has('education')) return 'education';
+      if (/climate|carbon|emission|flood|typhoon|pollut|forest|waste|green|solar|wind/.test(blob) && validTopicIds.has('environment')) return 'environment';
+      if (/hospital|patient|disease|health|medical|mental|vaccine|cancer|diet|sleep/.test(blob) && validTopicIds.has('health')) return 'health';
+      if (/\bai\b|chip|semiconductor|cyber|digital|software|robot|data|startup|5g/.test(blob) && validTopicIds.has('technology')) return 'technology';
+      if (/metro|airport|traffic|highway|expressway|rail|port|flight|commut/.test(blob) && validTopicIds.has('transport')) return 'transport';
+      if (/crime|fraud|corrupt|police|court|prison|law|illegal|smuggl/.test(blob) && validTopicIds.has('crime')) return 'crime';
+      if (/policy|government|ministry|reform|tax|regulat|public|parliament/.test(blob) && validTopicIds.has('government')) return 'government';
+      if (/tourist|tourism|hotel|visa|heritage|island|destination|travel/.test(blob) && validTopicIds.has('tourism')) return 'tourism';
+      if (/house|housing|apartment|rent|real estate|urban|city|cities/.test(blob) && validTopicIds.has('housing')) return 'housing';
+      if (/worker|salary|job|employ|layoff|labor|labour|career|workplace/.test(blob) && validTopicIds.has('work')) return 'work';
+      if (/food|rice|coffee|farm|agricult|seafood|crop|nutrition/.test(blob) && validTopicIds.has('food')) return 'food';
+      if (/bank|inflation|interest rate|stock|bond|gold|mortgage|credit/.test(blob) && validTopicIds.has('finance')) return 'finance';
+      if (/trade|tariff|export|import|diplomat|global|asean|geopolit/.test(blob) && validTopicIds.has('globalisation')) return 'globalisation';
+      return ensureCustomTopic(unmappedTag || 'general-academic');
+    }
+
+    const foundVneWaves = new Set();
     let vneCardCount = 0;
+
     for (const c of data.cards) {
       if (!c) continue;
+      const speakingUnits = Array.isArray(c.topics)
+        ? c.topics.filter(t => String(t || '').startsWith('speaking-unit-'))
+        : [];
+      const primary = pickPrimaryTopic(c);
+      c.topics = speakingUnits.length ? [primary, ...speakingUnits] : [primary];
+
       let isVneCard = false;
-      if (Array.isArray(c.topics)) {
-        const nextTopics = [];
-        const seenT = new Set();
-        for (const tid of c.topics) {
-          const mapped = isVneId(tid) ? 'vnexpress-all' : tid;
-          if (isVneId(tid) || mapped === 'vnexpress-all') isVneCard = true;
-          if (mapped && !seenT.has(mapped)) { seenT.add(mapped); nextTopics.push(mapped); }
-        }
-        c.topics = nextTopics;
-      }
-      if (c.sourceTopics && typeof c.sourceTopics === 'object') {
-        const mergedSt = new Set(Array.isArray(c.sourceTopics['vnexpress-all']) ? c.sourceTopics['vnexpress-all'] : []);
-        let touchedSt = false;
-        for (const k of Object.keys(c.sourceTopics)) {
-          if (isVneId(k)) {
-            foundWaves.add(k);
-            isVneCard = true;
-            touchedSt = true;
-            const arr = Array.isArray(c.sourceTopics[k]) ? c.sourceTopics[k] : [];
-            for (const tid of arr) mergedSt.add(isVneId(tid) ? 'vnexpress-all' : tid);
-            delete c.sourceTopics[k];
-          }
-        }
-        if (touchedSt) {
-          mergedSt.add('vnexpress-all');
-          c.sourceTopics['vnexpress-all'] = Array.from(mergedSt);
-        }
-      }
       if (Array.isArray(c.variants)) {
         for (const v of c.variants) {
           if (v && isVneId(v.source)) {
-            foundWaves.add(v.source);
+            foundVneWaves.add(v.source);
             v.source = 'vnexpress-all';
             isVneCard = true;
           } else if (v && v.source === 'vnexpress-all') {
@@ -105,33 +180,49 @@
           }
         }
       }
+      if (c.sourceTopics && typeof c.sourceTopics === 'object') {
+        const nextSt = {};
+        for (const k of Object.keys(c.sourceTopics)) {
+          const mappedKey = isVneId(k) ? 'vnexpress-all' : k;
+          if (isVneId(k) || mappedKey === 'vnexpress-all') {
+            if (isVneId(k)) foundVneWaves.add(k);
+            isVneCard = true;
+          }
+          if (mappedKey === 'pdf-8' && speakingUnits.length) {
+            nextSt[mappedKey] = speakingUnits.slice();
+          } else {
+            nextSt[mappedKey] = [primary];
+          }
+        }
+        c.sourceTopics = nextSt;
+      }
       if (isVneCard) vneCardCount++;
     }
-    if (vneCardCount === 0) return data;
-    const waveCount = Math.max(foundWaves.size, Number(data.__kfVneWaveCount || 0));
-    if (waveCount > 0) data.__kfVneWaveCount = waveCount;
-    const waveLabel = waveCount > 0 ? `${waveCount} đợt báo chí` : 'nhiều đợt báo chí';
-    const unifiedTopic = {
-      id: 'vnexpress-all',
-      title: 'VnExpress International · Tổng hợp báo chí',
-      description: `${vneCardCount.toLocaleString('vi-VN')} cụm từ IELTS Band 8.5–9.0 cân bằng loại từ tổng hợp từ ${waveLabel} VnExpress International, kèm giải thích 4 phần.`,
-      accent: 'sky'
-    };
-    const unifiedSource = {
-      id: 'vnexpress-all',
-      title: `VnExpress International · Tổng hợp (${waveLabel})`,
-      category: 'Academic vocabulary',
-      originalCount: vneCardCount,
-      supplements: 0
-    };
+
     if (Array.isArray(data.topics)) {
-      data.topics = data.topics.filter(t => t && !isVneId(t.id) && t.id !== 'vnexpress-all');
-      data.topics.unshift(unifiedTopic);
+      data.topics = data.topics.filter(t => t && t.id && !isNewsTopicId(t.id));
+      for (const ct of createdTopics.values()) {
+        if (!data.topics.some(t => t && t.id === ct.id)) data.topics.push(ct);
+      }
     }
-    if (Array.isArray(data.sources)) {
+
+    if (Array.isArray(data.sources) && vneCardCount > 0) {
+      for (const s of data.sources) {
+        if (s && isVneId(s.id)) foundVneWaves.add(s.id);
+      }
+      const wc = Math.max(foundVneWaves.size, Number(data.__kfVneWaveCount || 0));
+      if (wc > 0) data.__kfVneWaveCount = wc;
+      const wl = wc > 0 ? `${wc} đợt báo chí` : 'nhiều đợt báo chí';
       data.sources = data.sources.filter(s => s && !isVneId(s.id) && s.id !== 'vnexpress-all');
-      data.sources.push(unifiedSource);
+      data.sources.push({
+        id: 'vnexpress-all',
+        title: `VnExpress International · Tổng hợp (${wl})`,
+        category: 'Academic vocabulary',
+        originalCount: vneCardCount,
+        supplements: 0
+      });
     }
+
     if (typeof data.cardCount === 'number') data.cardCount = data.cards.length;
     return data;
   }
