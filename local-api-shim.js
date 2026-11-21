@@ -786,6 +786,26 @@
     return window.__KF_VNEXPRESSW19_READY__;
   }
 
+
+  function ensureVnExpressW20() {
+    if (window.KFVnExpressPhrasesW20 && window.KFVnExpressPhrasesW20.version === '2026.11.21-w20-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW20);
+    }
+    if (!window.__KF_VNEXPRESSW20_READY__) {
+      window.__KF_VNEXPRESSW20_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w20.js?v=20261121-w20-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w20.js')();
+          }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W20 load failed:', err); }
+        return window.KFVnExpressPhrasesW20 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW20_READY__;
+  }
+
   function consolidateVnExpressWaves(data) {
     if (!data || !Array.isArray(data.cards)) return data;
     const isVneId = id => /^vnexpress-/i.test(String(id || '')) && String(id || '').toLowerCase() !== 'vnexpress-all';
@@ -1114,6 +1134,7 @@
     ensureVnExpressW17();
     ensureVnExpressW18();
     ensureVnExpressW19();
+    ensureVnExpressW20();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -1125,7 +1146,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19, vnew20] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -1146,9 +1167,10 @@
             ensureVnExpressW16(),
             ensureVnExpressW17(),
             ensureVnExpressW18(),
-            ensureVnExpressW19()
+            ensureVnExpressW19(),
+            ensureVnExpressW20()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19, vnew20].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -1158,7 +1180,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19, vnew20] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -1179,12 +1201,13 @@
             ensureVnExpressW16(),
             ensureVnExpressW17(),
             ensureVnExpressW18(),
-            ensureVnExpressW19()
+            ensureVnExpressW19(),
+            ensureVnExpressW20()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19, vnew20]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -1199,7 +1222,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18, vnew19, vnew20] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -1220,7 +1243,8 @@
             ensureVnExpressW16(),
             ensureVnExpressW17(),
             ensureVnExpressW18(),
-            ensureVnExpressW19()
+            ensureVnExpressW19(),
+            ensureVnExpressW20()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -1243,7 +1267,8 @@
           const extraW17 = vnew17 && typeof vnew17.getShard === 'function' ? vnew17.getShard(shard) : null;
           const extraW18 = vnew18 && typeof vnew18.getShard === 'function' ? vnew18.getShard(shard) : null;
           const extraW19 = vnew19 && typeof vnew19.getShard === 'function' ? vnew19.getShard(shard) : null;
-          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15, extraW16, extraW17, extraW18, extraW19].filter(x => x && typeof x === 'object');
+          const extraW20 = vnew20 && typeof vnew20.getShard === 'function' ? vnew20.getShard(shard) : null;
+          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15, extraW16, extraW17, extraW18, extraW19, extraW20].filter(x => x && typeof x === 'object');
           if (extras.length) {
             return jsonRes(Object.assign({}, baseObj, ...extras), 200);
           }

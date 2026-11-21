@@ -666,6 +666,17 @@
     } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w19.js:', err); }
   }
 
+  async function loadVnExpressPhrasesW20() {
+    if (window.KFVnExpressPhrasesW20 && window.KFVnExpressPhrasesW20.version === '2026.11.21-w20-band9-r1') return;
+    if (window.__KF_VNEXPRESSW20_READY__) { await window.__KF_VNEXPRESSW20_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-w20.js?v=20261121-w20-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w20.js')();
+    } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w20.js:', err); }
+  }
+
   async function loadAll() {
     if (loaded) return;
     loaded = true;
@@ -689,7 +700,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17(), loadVnExpressPhrasesW18(), loadVnExpressPhrasesW19()]);
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17(), loadVnExpressPhrasesW18(), loadVnExpressPhrasesW19(), loadVnExpressPhrasesW20()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
