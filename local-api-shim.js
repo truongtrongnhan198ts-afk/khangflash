@@ -746,6 +746,26 @@
     return window.__KF_VNEXPRESSW17_READY__;
   }
 
+
+  function ensureVnExpressW18() {
+    if (window.KFVnExpressPhrasesW18 && window.KFVnExpressPhrasesW18.version === '2026.11.21-w18-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW18);
+    }
+    if (!window.__KF_VNEXPRESSW18_READY__) {
+      window.__KF_VNEXPRESSW18_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w18.js?v=20261121-w18-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w18.js')();
+          }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W18 load failed:', err); }
+        return window.KFVnExpressPhrasesW18 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW18_READY__;
+  }
+
   function consolidateVnExpressWaves(data) {
     if (!data || !Array.isArray(data.cards)) return data;
     const isVneId = id => /^vnexpress-/i.test(String(id || '')) && String(id || '').toLowerCase() !== 'vnexpress-all';
@@ -915,6 +935,41 @@
       for (const ct of createdTopics.values()) {
         if (!data.topics.some(t => t && t.id === ct.id)) data.topics.push(ct);
       }
+      // Final title-dedup pass: merge any duplicate non-speaking-unit topic boxes sharing the exact same title
+      const canonByTitle = new Map();
+      const idRemap = new Map();
+      const dedupedTopics = [];
+      for (const t of data.topics) {
+        if (!t || !t.id) continue;
+        if (String(t.id).startsWith('speaking-unit-')) {
+          dedupedTopics.push(t);
+          continue;
+        }
+        const tk = String(t.title || t.id).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
+        if (canonByTitle.has(tk)) {
+          const keepId = canonByTitle.get(tk);
+          if (t.id !== keepId) idRemap.set(t.id, keepId);
+        } else {
+          canonByTitle.set(tk, t.id);
+          dedupedTopics.push(t);
+        }
+      }
+      if (idRemap.size > 0) {
+        data.topics = dedupedTopics;
+        for (const c of data.cards) {
+          if (!c) continue;
+          if (Array.isArray(c.topics)) {
+            c.topics = Array.from(new Set(c.topics.map(tid => idRemap.get(tid) || tid)));
+          }
+          if (c.sourceTopics && typeof c.sourceTopics === 'object') {
+            for (const k of Object.keys(c.sourceTopics)) {
+              if (Array.isArray(c.sourceTopics[k])) {
+                c.sourceTopics[k] = Array.from(new Set(c.sourceTopics[k].map(tid => idRemap.get(tid) || tid)));
+              }
+            }
+          }
+        }
+      }
     }
 
     if (Array.isArray(data.sources) && vneCardCount > 0) {
@@ -957,6 +1012,7 @@
     ensureVnExpressW15();
     ensureVnExpressW16();
     ensureVnExpressW17();
+    ensureVnExpressW18();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -968,7 +1024,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -987,9 +1043,10 @@
             ensureVnExpressW14(),
             ensureVnExpressW15(),
             ensureVnExpressW16(),
-            ensureVnExpressW17()
+            ensureVnExpressW17(),
+            ensureVnExpressW18()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -999,7 +1056,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -1018,12 +1075,13 @@
             ensureVnExpressW14(),
             ensureVnExpressW15(),
             ensureVnExpressW16(),
-            ensureVnExpressW17()
+            ensureVnExpressW17(),
+            ensureVnExpressW18()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -1038,7 +1096,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10, vnew11, vnew12, vnew13, vnew14, vnew15, vnew16, vnew17, vnew18] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -1057,7 +1115,8 @@
             ensureVnExpressW14(),
             ensureVnExpressW15(),
             ensureVnExpressW16(),
-            ensureVnExpressW17()
+            ensureVnExpressW17(),
+            ensureVnExpressW18()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -1078,7 +1137,8 @@
           const extraW15 = vnew15 && typeof vnew15.getShard === 'function' ? vnew15.getShard(shard) : null;
           const extraW16 = vnew16 && typeof vnew16.getShard === 'function' ? vnew16.getShard(shard) : null;
           const extraW17 = vnew17 && typeof vnew17.getShard === 'function' ? vnew17.getShard(shard) : null;
-          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15, extraW16, extraW17].filter(x => x && typeof x === 'object');
+          const extraW18 = vnew18 && typeof vnew18.getShard === 'function' ? vnew18.getShard(shard) : null;
+          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10, extraW11, extraW12, extraW13, extraW14, extraW15, extraW16, extraW17, extraW18].filter(x => x && typeof x === 'object');
           if (extras.length) {
             return jsonRes(Object.assign({}, baseObj, ...extras), 200);
           }

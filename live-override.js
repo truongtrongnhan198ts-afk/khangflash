@@ -221,6 +221,41 @@
       for (const ct of createdTopics.values()) {
         if (!data.topics.some(t => t && t.id === ct.id)) data.topics.push(ct);
       }
+      // Final title-dedup pass: merge any duplicate non-speaking-unit topic boxes sharing the exact same title
+      const canonByTitle = new Map();
+      const idRemap = new Map();
+      const dedupedTopics = [];
+      for (const t of data.topics) {
+        if (!t || !t.id) continue;
+        if (String(t.id).startsWith('speaking-unit-')) {
+          dedupedTopics.push(t);
+          continue;
+        }
+        const tk = String(t.title || t.id).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
+        if (canonByTitle.has(tk)) {
+          const keepId = canonByTitle.get(tk);
+          if (t.id !== keepId) idRemap.set(t.id, keepId);
+        } else {
+          canonByTitle.set(tk, t.id);
+          dedupedTopics.push(t);
+        }
+      }
+      if (idRemap.size > 0) {
+        data.topics = dedupedTopics;
+        for (const c of data.cards) {
+          if (!c) continue;
+          if (Array.isArray(c.topics)) {
+            c.topics = Array.from(new Set(c.topics.map(tid => idRemap.get(tid) || tid)));
+          }
+          if (c.sourceTopics && typeof c.sourceTopics === 'object') {
+            for (const k of Object.keys(c.sourceTopics)) {
+              if (Array.isArray(c.sourceTopics[k])) {
+                c.sourceTopics[k] = Array.from(new Set(c.sourceTopics[k].map(tid => idRemap.get(tid) || tid)));
+              }
+            }
+          }
+        }
+      }
     }
 
     if (Array.isArray(data.sources) && vneCardCount > 0) {
@@ -529,6 +564,17 @@
     } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w17.js:', err); }
   }
 
+  async function loadVnExpressPhrasesW18() {
+    if (window.KFVnExpressPhrasesW18 && window.KFVnExpressPhrasesW18.version === '2026.11.21-w18-band9-r1') return;
+    if (window.__KF_VNEXPRESSW18_READY__) { await window.__KF_VNEXPRESSW18_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-w18.js?v=20261121-w18-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w18.js')();
+    } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w18.js:', err); }
+  }
+
   async function loadAll() {
     if (loaded) return;
     loaded = true;
@@ -552,7 +598,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17()]);
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17(), loadVnExpressPhrasesW18()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
