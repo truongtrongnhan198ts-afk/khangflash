@@ -60,6 +60,50 @@
     return `${y}-${m}-${day}`;
   }
 
+  function addDaysIso(iso, days) {
+    const parts = String(iso || todayIso()).split('-').map(Number);
+    const d = new Date(parts[0], (parts[1] || 1) - 1, (parts[2] || 1) + Number(days || 0));
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  }
+
+  function diffDaysIso(fromIso, toIso) {
+    const a = String(fromIso || todayIso()).split('-').map(Number);
+    const b = String(toIso || todayIso()).split('-').map(Number);
+    const t1 = Date.UTC(a[0], (a[1] || 1) - 1, a[2] || 1);
+    const t2 = Date.UTC(b[0], (b[1] || 1) - 1, b[2] || 1);
+    return Math.max(1, Math.round((t2 - t1) / 86400000));
+  }
+
+  function computeRatingPlans(prev, todayStr) {
+    const t = todayStr || todayIso();
+    const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0;
+    const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0;
+    const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5;
+    const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t);
+
+    const p1 = { days: 1, due: addDaysIso(t, 1), retained: false };
+    let d2, d3, d4;
+    if (!prev || reps <= 0) {
+      d2 = 2;
+      d3 = 3;
+      d4 = 7;
+    } else {
+      d2 = Math.max(1, Math.round(Math.max(1, interval || 1) * 1.2));
+      d3 = reps === 1 ? 3 : reps === 2 ? 7 : Math.max(3, Math.round((interval || 3) * ease));
+      d4 = reps === 1 ? 7 : reps === 2 ? 14 : Math.max(7, Math.round((interval || 3) * ease * 1.35));
+    }
+
+    return {
+      1: p1,
+      2: { days: d2, due: addDaysIso(t, d2), retained: false },
+      3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d3, due: addDaysIso(t, d3), retained: false },
+      4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d4, due: addDaysIso(t, d4), retained: false }
+    };
+  }
+
   function readJson(key, fallback) {
     try {
       const raw = localStorage.getItem(key);
@@ -107,6 +151,8 @@
     if (!Array.isArray(st.history)) st.history = [];
     if (!Array.isArray(st.activity)) st.activity = [];
     if (!Array.isArray(st.learningActivity)) st.learningActivity = [];
+    st.newCardPlans = computeRatingPlans(null, t);
+    st.cards = st.cards.map(c => (c && typeof c === 'object' ? { ...c, ratingPlans: computeRatingPlans(c, t) } : c));
     return st;
   }
 
@@ -132,35 +178,50 @@
           const cid = r.card_id || r.id;
           if (!cid) continue;
           const prev = byId.get(cid) || { card_id: cid, reps: 0, interval: 0, ease: 2.5, lapses: 0 };
-          const quality = typeof r.quality === 'number' ? r.quality : (r.ok === false || r.status === 'again' ? 1 : 4);
+          const rawRate = typeof r.rating === 'number'
+            ? r.rating
+            : (typeof r.quality === 'number'
+              ? (r.quality <= 1 ? 1 : r.quality === 2 ? 2 : r.quality >= 4 ? 4 : 3)
+              : (r.ok === false || r.status === 'review' || r.status === 'again' ? 1 : 3));
+          const rate = Math.max(1, Math.min(4, Math.round(rawRate)));
+          const plans = computeRatingPlans(prev, t);
+          const chosenPlan = plans[rate] || plans[3];
+
           let reps = prev.reps || 0;
-          let interval = prev.interval || 0;
+          let interval = chosenPlan.days;
           let ease = prev.ease || 2.5;
           let lapses = prev.lapses || 0;
-          if (quality < 3) {
+
+          if (rate === 1) {
             reps = 0;
             interval = 1;
             lapses += 1;
+            ease = Math.max(1.3, +(ease - 0.2).toFixed(2));
+          } else if (rate === 2) {
+            reps = Math.max(1, reps);
+            ease = Math.max(1.3, +(ease - 0.1).toFixed(2));
+          } else if (rate === 3) {
+            reps = chosenPlan.retained ? Math.max(1, reps) : reps + 1;
           } else {
-            reps += 1;
-            interval = reps === 1 ? 1 : reps === 2 ? 6 : Math.max(1, Math.round(interval * ease));
+            reps = chosenPlan.retained ? Math.max(1, reps) : (reps === 0 ? 2 : reps + 1);
+            ease = Math.min(3.0, +(ease + 0.15).toFixed(2));
           }
-          ease = Math.max(1.3, +(ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))).toFixed(2));
-          const dueDate = new Date();
-          dueDate.setDate(dueDate.getDate() + interval);
-          const dueIso = dueDate.toISOString().slice(0, 10);
+
+          const nextStatus = rate === 1 ? 'review' : (r.status || 'known');
           const nextCard = {
             ...prev,
             card_id: cid,
-            status: r.status || (quality < 3 ? 'again' : 'known'),
+            status: nextStatus,
+            rating: rate,
             reps,
             interval,
             ease,
             lapses,
-            due: r.due || dueIso,
+            due: r.due || chosenPlan.due,
             last_reviewed: t,
             updated_at: new Date().toISOString()
           };
+          nextCard.ratingPlans = computeRatingPlans(nextCard, t);
           byId.set(cid, nextCard);
           updatedCards.push(nextCard);
         }
@@ -308,7 +369,7 @@
   }
 
 
-  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK + KF_VNEXPRESS_700_SYNC_HOOK + KF_VNEXPRESS_1000_SYNC_HOOK + KF_VNEXPRESS_W6_SYNC_HOOK + KF_VNEXPRESS_W7_SYNC_HOOK + KF_VNEXPRESS_W8_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
+  /* KF_VNEXPRESS_300_SYNC_HOOK + KF_GUARDIAN_400_SYNC_HOOK + KF_VNEXPRESS_400_SYNC_HOOK + KF_VNEXPRESS_500_SYNC_HOOK + KF_VNEXPRESS_700_SYNC_HOOK + KF_VNEXPRESS_1000_SYNC_HOOK: zero-race parallel loaders for /data.json and /example-explanations/* across all pages & games */
   function ensureVnExpress300() {
     if (window.KFVnExpressPhrases300 && window.KFVnExpressPhrases300.version === '2026.11.20-v300-band9-r3') {
       return Promise.resolve(window.KFVnExpressPhrases300);
@@ -402,13 +463,13 @@
   }
 
   function ensureVnExpress700() {
-    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r2') {
+    if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r3') {
       return Promise.resolve(window.KFVnExpressPhrases700);
     }
     if (!window.__KF_VNEXPRESS700_READY__) {
       window.__KF_VNEXPRESS700_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-700.js?v=20261120-v700-r2', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-700.js?v=20261120-v700-r3', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -425,13 +486,13 @@
   }
 
   function ensureVnExpress1000() {
-    if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r1') {
+    if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r2') {
       return Promise.resolve(window.KFVnExpressPhrases1000);
     }
     if (!window.__KF_VNEXPRESS1000_READY__) {
       window.__KF_VNEXPRESS1000_READY__ = (async () => {
         try {
-          const r = await origFetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          const r = await origFetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r2', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
             if (code && code.trim()) {
@@ -447,6 +508,7 @@
     return window.__KF_VNEXPRESS1000_READY__;
   }
 
+
   function ensureVnExpressW6() {
     if (window.KFVnExpressPhrasesW6 && window.KFVnExpressPhrasesW6.version === '2026.11.20-w6-band9-r1') {
       return Promise.resolve(window.KFVnExpressPhrasesW6);
@@ -457,13 +519,9 @@
           const r = await origFetch('/vnexpress-phrases-w6.js?v=20261120-w6-r1', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
-            if (code && code.trim()) {
-              new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w6.js')();
-            }
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w6.js')();
           }
-        } catch (err) {
-          console.warn('[KF Local Shim] VnExpress W6 load failed:', err);
-        }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W6 load failed:', err); }
         return window.KFVnExpressPhrasesW6 || null;
       })();
     }
@@ -480,13 +538,9 @@
           const r = await origFetch('/vnexpress-phrases-w7.js?v=20261120-w7-r1', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
-            if (code && code.trim()) {
-              new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w7.js')();
-            }
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w7.js')();
           }
-        } catch (err) {
-          console.warn('[KF Local Shim] VnExpress W7 load failed:', err);
-        }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W7 load failed:', err); }
         return window.KFVnExpressPhrasesW7 || null;
       })();
     }
@@ -503,17 +557,32 @@
           const r = await origFetch('/vnexpress-phrases-w8.js?v=20261120-w8-r1', { cache: 'no-cache', credentials: 'same-origin' });
           if (r && r.ok) {
             const code = await r.text();
-            if (code && code.trim()) {
-              new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w8.js')();
-            }
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w8.js')();
           }
-        } catch (err) {
-          console.warn('[KF Local Shim] VnExpress W8 load failed:', err);
-        }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W8 load failed:', err); }
         return window.KFVnExpressPhrasesW8 || null;
       })();
     }
     return window.__KF_VNEXPRESSW8_READY__;
+  }
+
+  function ensureVnExpressW9() {
+    if (window.KFVnExpressPhrasesW9 && window.KFVnExpressPhrasesW9.version === '2026.11.21-w9-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW9);
+    }
+    if (!window.__KF_VNEXPRESSW9_READY__) {
+      window.__KF_VNEXPRESSW9_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w9.js?v=20261121-w9-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w9.js')();
+          }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W9 load failed:', err); }
+        return window.KFVnExpressPhrasesW9 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW9_READY__;
   }
 
   if (!isAdminLive && needsVocabGate) {
@@ -526,6 +595,7 @@
     ensureVnExpressW6();
     ensureVnExpressW7();
     ensureVnExpressW8();
+    ensureVnExpressW9();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -537,7 +607,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7, vneW8] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -547,9 +617,10 @@
             ensureVnExpress1000(),
             ensureVnExpressW6(),
             ensureVnExpressW7(),
-            ensureVnExpressW8()
+            ensureVnExpressW8(),
+            ensureVnExpressW9()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7, vneW8].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -558,7 +629,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7, vneW8] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -568,12 +639,13 @@
             ensureVnExpress1000(),
             ensureVnExpressW6(),
             ensureVnExpressW7(),
-            ensureVnExpressW8()
+            ensureVnExpressW8(),
+            ensureVnExpressW9()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7, vneW8]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -588,7 +660,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vneW6, vneW7, vneW8] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -598,7 +670,8 @@
             ensureVnExpress1000(),
             ensureVnExpressW6(),
             ensureVnExpressW7(),
-            ensureVnExpressW8()
+            ensureVnExpressW8(),
+            ensureVnExpressW9()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -607,11 +680,13 @@
           const extraVne500 = vne500 && typeof vne500.getShard === 'function' ? vne500.getShard(shard) : null;
           const extraVne700 = vne700 && typeof vne700.getShard === 'function' ? vne700.getShard(shard) : null;
           const extraVne1000 = vne1000 && typeof vne1000.getShard === 'function' ? vne1000.getShard(shard) : null;
-          const extraVneW6 = vneW6 && typeof vneW6.getShard === 'function' ? vneW6.getShard(shard) : null;
-          const extraVneW7 = vneW7 && typeof vneW7.getShard === 'function' ? vneW7.getShard(shard) : null;
-          const extraVneW8 = vneW8 && typeof vneW8.getShard === 'function' ? vneW8.getShard(shard) : null;
-          if ((extraVne && typeof extraVne === 'object') || (extraGdn && typeof extraGdn === 'object') || (extraVne400 && typeof extraVne400 === 'object') || (extraVne500 && typeof extraVne500 === 'object') || (extraVne700 && typeof extraVne700 === 'object') || (extraVne1000 && typeof extraVne1000 === 'object') || (extraVneW6 && typeof extraVneW6 === 'object') || (extraVneW7 && typeof extraVneW7 === 'object') || (extraVneW8 && typeof extraVneW8 === 'object')) {
-            return jsonRes(Object.assign({}, baseObj, extraVne || {}, extraGdn || {}, extraVne400 || {}, extraVne500 || {}, extraVne700 || {}, extraVne1000 || {}, extraVneW6 || {}, extraVneW7 || {}, extraVneW8 || {}), 200);
+          const extraW6 = vnew6 && typeof vnew6.getShard === 'function' ? vnew6.getShard(shard) : null;
+          const extraW7 = vnew7 && typeof vnew7.getShard === 'function' ? vnew7.getShard(shard) : null;
+          const extraW8 = vnew8 && typeof vnew8.getShard === 'function' ? vnew8.getShard(shard) : null;
+          const extraW9 = vnew9 && typeof vnew9.getShard === 'function' ? vnew9.getShard(shard) : null;
+          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9].filter(x => x && typeof x === 'object');
+          if (extras.length) {
+            return jsonRes(Object.assign({}, baseObj, ...extras), 200);
           }
           if (res) return jsonRes(baseObj, res.status);
           return jsonRes({}, 200);
