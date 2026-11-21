@@ -842,13 +842,19 @@
       children: 'family',
       agriculture: 'food',
       cuisine: 'food',
+      language: 'language-communication',
+      oceans: 'oceans-water',
+      ocean: 'oceans-water',
+      water: 'oceans-water',
+      population: 'population-migration',
+      migration: 'population-migration',
     };
     const EXTRA_META = {
       society: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
       perspectives: { title: 'Society & Modern Life', description: 'Từ vựng về xu hướng xã hội, lối sống hiện đại và biến chuyển cộng đồng.', accent: 'violet' },
-      language: { title: 'Language & Communication', description: 'Từ vựng bổ sung theo chủ đề Language & Communication.', accent: 'violet' },
-      oceans: { title: 'Oceans & Water', description: 'Từ vựng bổ sung theo chủ đề Oceans & Water.', accent: 'teal' },
-      population: { title: 'Population & Migration', description: 'Từ vựng bổ sung theo chủ đề Population & Migration.', accent: 'pink' },
+      'language-communication': { title: 'Language & Communication', description: 'Từ vựng bổ sung theo chủ đề Language & Communication.', accent: 'mint' },
+      'oceans-water': { title: 'Oceans & Water', description: 'Từ vựng bổ sung theo chủ đề Oceans & Water.', accent: 'blue' },
+      'population-migration': { title: 'Population & Migration', description: 'Từ vựng bổ sung theo chủ đề Population & Migration.', accent: 'coral' },
       'general-academic': { title: 'Chủ đề học thuật khác', description: 'Các cụm từ IELTS Band 8.5–9.0 thuộc các lĩnh vực học thuật mở rộng khác.', accent: 'sky' },
     };
     const TITLE_PREFIX_MAP = new Map();
@@ -856,9 +862,9 @@
       for (const t of data.topics) {
         if (t && t.id && t.title && !t.id.startsWith('speaking-unit-') && !isNewsTopicId(t.id)) {
           const tl = String(t.title).toLowerCase();
-          if (tl.includes('language')) TITLE_PREFIX_MAP.set('language', t.id);
-          if (tl.includes('ocean') || tl.includes('water')) TITLE_PREFIX_MAP.set('oceans', t.id);
-          if (tl.includes('population') || tl.includes('migration')) TITLE_PREFIX_MAP.set('population', t.id);
+          if (tl.includes('language')) { TITLE_PREFIX_MAP.set('language', t.id); TITLE_PREFIX_MAP.set('language-communication', t.id); }
+          if (tl.includes('ocean') || tl.includes('water')) { TITLE_PREFIX_MAP.set('oceans', t.id); TITLE_PREFIX_MAP.set('oceans-water', t.id); }
+          if (tl.includes('population') || tl.includes('migration')) { TITLE_PREFIX_MAP.set('population', t.id); TITLE_PREFIX_MAP.set('population-migration', t.id); }
         }
       }
     }
@@ -875,7 +881,11 @@
     const createdTopics = new Map();
     function ensureCustomTopic(rawId) {
       const cleanId = String(rawId || 'general-academic').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '') || 'general-academic';
-      const rawFinal = cleanId === 'perspectives' ? 'society' : cleanId;
+      const rawFinal = cleanId === 'perspectives' ? 'society'
+        : cleanId === 'language' ? 'language-communication'
+        : (cleanId === 'oceans' || cleanId === 'ocean' || cleanId === 'water') ? 'oceans-water'
+        : (cleanId === 'population' || cleanId === 'migration') ? 'population-migration'
+        : cleanId;
       const finalId = TITLE_PREFIX_MAP.get(rawFinal) || rawFinal;
       if (validTopicIds.has(finalId)) return finalId;
       if (!createdTopics.has(finalId)) {
@@ -975,22 +985,48 @@
       for (const ct of createdTopics.values()) {
         if (!data.topics.some(t => t && t.id === ct.id)) data.topics.push(ct);
       }
-      // Final title-dedup pass: merge any duplicate non-speaking-unit topic boxes sharing the exact same title
+      // Final title-dedup pass: merge any duplicate non-speaking-unit topic boxes sharing the same title or canonical group
       const canonByTitle = new Map();
       const idRemap = new Map();
       const dedupedTopics = [];
+      const cardCountsByTopic = Object.create(null);
+      for (const c of data.cards) {
+        if (!c || !Array.isArray(c.topics)) continue;
+        for (const tid of c.topics) {
+          if (tid) cardCountsByTopic[tid] = (cardCountsByTopic[tid] || 0) + 1;
+        }
+      }
+      const normTopicKey = (t) => {
+        const raw = String(t.title || t.id).normalize('NFKC').toLowerCase().replace(/&amp;/g, '&').replace(/[\u00a0\s]+/g, ' ').trim();
+        if (raw === 'language & communication' || raw === 'language and communication' || raw === 'languages & communication') return 'language & communication';
+        if (raw === 'population & migration' || raw === 'population and migration') return 'population & migration';
+        if (raw === 'oceans & water' || raw === 'oceans and water' || raw === 'ocean & water' || raw === 'ocean and water') return 'oceans & water';
+        return raw;
+      };
+      // Sort so the box with MORE cards (or non-generic description) wins as canonical keepId
+      const groupedByKey = new Map();
       for (const t of data.topics) {
         if (!t || !t.id) continue;
-        if (String(t.id).startsWith('speaking-unit-')) {
-          dedupedTopics.push(t);
-          continue;
-        }
-        const tk = String(t.title || t.id).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
-        if (canonByTitle.has(tk)) {
-          const keepId = canonByTitle.get(tk);
-          if (t.id !== keepId) idRemap.set(t.id, keepId);
+        if (String(t.id).startsWith('speaking-unit-')) continue;
+        const tk = normTopicKey(t);
+        if (!groupedByKey.has(tk)) groupedByKey.set(tk, []);
+        groupedByKey.get(tk).push(t);
+      }
+      for (const [tk, list] of groupedByKey.entries()) {
+        if (list.length > 1) {
+          list.sort((a, b) => (cardCountsByTopic[b.id] || 0) - (cardCountsByTopic[a.id] || 0));
+          const keepId = list[0].id;
+          canonByTitle.set(tk, keepId);
+          for (let i = 1; i < list.length; i++) {
+            if (list[i].id !== keepId) idRemap.set(list[i].id, keepId);
+          }
         } else {
-          canonByTitle.set(tk, t.id);
+          canonByTitle.set(tk, list[0].id);
+        }
+      }
+      for (const t of data.topics) {
+        if (!t || !t.id) continue;
+        if (String(t.id).startsWith('speaking-unit-') || !idRemap.has(t.id)) {
           dedupedTopics.push(t);
         }
       }
@@ -1018,9 +1054,9 @@
           const id = String(t.id);
           const tk = String(t.title || id).normalize('NFKC').toLowerCase().replace(/\s+/g, ' ').trim();
           topicIdByAlias.set(id, id);
-          if (tk === 'oceans & water') topicIdByAlias.set('oceans', id);
-          if (tk === 'language & communication') topicIdByAlias.set('language', id);
-          if (tk === 'population & migration') topicIdByAlias.set('population', id);
+          if (tk === 'oceans & water' || tk === 'ocean & water') { topicIdByAlias.set('oceans', id); topicIdByAlias.set('oceans-water', id); }
+          if (tk === 'language & communication' || tk === 'languages & communication') { topicIdByAlias.set('language', id); topicIdByAlias.set('language-communication', id); }
+          if (tk === 'population & migration') { topicIdByAlias.set('population', id); topicIdByAlias.set('population-migration', id); }
         }
         const RULES = [
           { alias: 'energy', rx: /\b(energy|solar|wind power|renewable|electricity|power grid|fossil fuel|coal|crude oil|natural gas|nuclear power|hydropower|power plant|battery|carbon emission|greenhouse gas|clean fuel|megawatt|kilowatt|decarboniz|geothermal|biofuel)\b/gi },
