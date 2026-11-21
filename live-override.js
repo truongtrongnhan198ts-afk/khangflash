@@ -270,6 +270,17 @@
     } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w11.js:', err); }
   }
 
+  async function loadVnExpressPhrasesW12() {
+    if (window.KFVnExpressPhrasesW12 && window.KFVnExpressPhrasesW12.version === '2026.11.21-w12-band9-r1') return;
+    if (window.__KF_VNEXPRESSW12_READY__) { await window.__KF_VNEXPRESSW12_READY__; return; }
+    try {
+      const r = await fetch('/vnexpress-phrases-w12.js?v=20261121-w12-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      if (!r.ok) return;
+      const code = await r.text();
+      if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w12.js')();
+    } catch (err) { console.warn('[KhangFlash] Không nạp được vnexpress-phrases-w12.js:', err); }
+  }
+
   async function loadAll() {
     if (loaded) return;
     loaded = true;
@@ -293,7 +304,7 @@
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11()]);
+      await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12()]);
       hookFetchForAntonyms();
       hookRelationsShow();
       window.KFIdiomAntonyms = { pairs: IDIOM_ANTONYM_PAIRS, enrichCard: enrichCardAntonyms, apply: applyAntonymsToData };
