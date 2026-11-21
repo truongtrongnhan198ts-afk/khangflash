@@ -585,6 +585,26 @@
     return window.__KF_VNEXPRESSW9_READY__;
   }
 
+
+  function ensureVnExpressW10() {
+    if (window.KFVnExpressPhrasesW10 && window.KFVnExpressPhrasesW10.version === '2026.11.21-w10-band9-r1') {
+      return Promise.resolve(window.KFVnExpressPhrasesW10);
+    }
+    if (!window.__KF_VNEXPRESSW10_READY__) {
+      window.__KF_VNEXPRESSW10_READY__ = (async () => {
+        try {
+          const r = await origFetch('/vnexpress-phrases-w10.js?v=20261121-w10-r1', { cache: 'no-cache', credentials: 'same-origin' });
+          if (r && r.ok) {
+            const code = await r.text();
+            if (code && code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w10.js')();
+          }
+        } catch (err) { console.warn('[KF Local Shim] VnExpress W10 load failed:', err); }
+        return window.KFVnExpressPhrasesW10 || null;
+      })();
+    }
+    return window.__KF_VNEXPRESSW10_READY__;
+  }
+
   if (!isAdminLive && needsVocabGate) {
     ensureVnExpress300();
     ensureGuardian400();
@@ -596,6 +616,7 @@
     ensureVnExpressW7();
     ensureVnExpressW8();
     ensureVnExpressW9();
+    ensureVnExpressW10();
   }
 
   window.fetch = async function patchedFetch(input, init) {
@@ -607,7 +628,7 @@
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -618,9 +639,10 @@
             ensureVnExpressW6(),
             ensureVnExpressW7(),
             ensureVnExpressW8(),
-            ensureVnExpressW9()
+            ensureVnExpressW9(),
+            ensureVnExpressW10()
           ]);
-          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9].filter(p => p && typeof p.apply === 'function');
+          const packs = [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10].filter(p => p && typeof p.apply === 'function');
           if (res && res.ok && packs.length) {
             let data = await res.json();
             for (const pack of packs) data = pack.apply(data);
@@ -629,7 +651,7 @@
           return res;
         }
         if (u.pathname === '/example-explanations/index.json') {
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10] = await Promise.all([
             origFetch(input, init),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -640,12 +662,13 @@
             ensureVnExpressW6(),
             ensureVnExpressW7(),
             ensureVnExpressW8(),
-            ensureVnExpressW9()
+            ensureVnExpressW9(),
+            ensureVnExpressW10()
           ]);
           const baseIds = res && res.ok ? await res.json() : [];
           const merged = Array.isArray(baseIds) ? baseIds.slice() : [];
           const seen = new Set(merged);
-          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9]) {
+          for (const pack of [vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10]) {
             if (pack && Array.isArray(pack.explanationIds)) {
               for (const id of pack.explanationIds) {
                 if (!seen.has(id)) {
@@ -660,7 +683,7 @@
         const shardMatch = u.pathname.match(/^\/example-explanations\/([0-9a-f]{2})\.json$/i);
         if (shardMatch) {
           const shard = shardMatch[1].toLowerCase();
-          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9] = await Promise.all([
+          const [res, vne, gdn, vne400, vne500, vne700, vne1000, vnew6, vnew7, vnew8, vnew9, vnew10] = await Promise.all([
             origFetch(input, init).catch(() => null),
             ensureVnExpress300(),
             ensureGuardian400(),
@@ -671,7 +694,8 @@
             ensureVnExpressW6(),
             ensureVnExpressW7(),
             ensureVnExpressW8(),
-            ensureVnExpressW9()
+            ensureVnExpressW9(),
+            ensureVnExpressW10()
           ]);
           const baseObj = res && res.ok ? await res.json() : {};
           const extraVne = vne && typeof vne.getShard === 'function' ? vne.getShard(shard) : null;
@@ -684,7 +708,8 @@
           const extraW7 = vnew7 && typeof vnew7.getShard === 'function' ? vnew7.getShard(shard) : null;
           const extraW8 = vnew8 && typeof vnew8.getShard === 'function' ? vnew8.getShard(shard) : null;
           const extraW9 = vnew9 && typeof vnew9.getShard === 'function' ? vnew9.getShard(shard) : null;
-          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9].filter(x => x && typeof x === 'object');
+          const extraW10 = vnew10 && typeof vnew10.getShard === 'function' ? vnew10.getShard(shard) : null;
+          const extras = [extraVne, extraGdn, extraVne400, extraVne500, extraVne700, extraVne1000, extraW6, extraW7, extraW8, extraW9, extraW10].filter(x => x && typeof x === 'object');
           if (extras.length) {
             return jsonRes(Object.assign({}, baseObj, ...extras), 200);
           }
