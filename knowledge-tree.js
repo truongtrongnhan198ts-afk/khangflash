@@ -196,7 +196,7 @@
       frameReady = false;
       frame = document.createElement('iframe');
       frame.title = 'Cây kiến thức';
-      frame.src = '/knowledge-tree.html?v=20261122-v3';
+      frame.src = '/knowledge-tree.html?v=20261122-v4';
       dialog.replaceChildren(frame);
     }
   }
