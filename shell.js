@@ -1,7 +1,7 @@
 // Shared return-to-today controls, independent of each exercise renderer.
 (()=>{const script=document.createElement('script');script.src='/study-navigation.js?v=335';script.defer=true;document.head.appendChild(script);})();
 // Load optional live presentation settings independently of the study shell.
-(()=>{if(/^\/admin-live(?:\.html)?\/?$/.test(location.pathname))return;const script=document.createElement('script');script.src='/live-override.js?v=333-large-admin';script.async=true;document.head.appendChild(script);})();
+(()=>{if(/^\/admin-live(?:\.html)?\/?$/.test(location.pathname)||window.__KF_LIVE_OVERRIDE_BOOTED__||document.querySelector('script[src*="live-override.js"]'))return;const script=document.createElement('script');script.src='/live-override.js?v=333-large-admin';script.async=true;document.head.appendChild(script);})();
 'use strict';
 // Remove the retired floating reader, including copies inserted after page load.
 // Card pronunciation and its UK/US settings use different labels and stay intact.
