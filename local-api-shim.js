@@ -67,7 +67,7 @@
           resolve();
         };
         window.__KF_RESOLVE_BASE_MERGE__ = done;
-        setTimeout(done, 3000);
+        setTimeout(done, 12000);
       });
     } else {
       window.__KF_BASE_MERGE_DONE__ = true;
