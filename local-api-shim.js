@@ -2,7 +2,19 @@
 (() => {
   'use strict';
 
-  /* KF_COMPACT_DECK_GRID_V1 */
+  
+  /* KF_LOAD_KNOWLEDGE_TREE_V1 */
+  (function loadKnowledgeTreeModule() {
+    if (typeof window === 'undefined' || window.__KF_KT_LOADER__) return;
+    if (!/^\/(flashcards|flashcard|library)(?:\.html)?\/?$/i.test(location.pathname)) return;
+    window.__KF_KT_LOADER__ = true;
+    const s = document.createElement('script');
+    s.src = '/knowledge-tree.js?v=20261122-v1';
+    s.defer = true;
+    (document.head || document.documentElement).appendChild(s);
+  })();
+
+/* KF_COMPACT_DECK_GRID_V1 */
   (function injectCompactDeckGridStyle() {
     if (typeof document === 'undefined' || document.getElementById('kf-compact-deck-grid')) return;
     const css = [
