@@ -1,7 +1,7 @@
 /* KhangFlash Direct Loader + Reciprocal Idiom Antonyms (v3) */
 (() => {
   'use strict';
-
+  const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname); if (isVocabPage && typeof window.fetch === 'function' && !window.__KF_EARLY_FETCH_HOOKED__) { window.__KF_EARLY_FETCH_HOOKED__ = true; const earlyOrigFetch = window.fetch.bind(window); window.fetch = async function(input, init) { const urlStr = typeof input === 'string' ? input : (input && input.url) || ''; let u = null; try { u = new URL(urlStr, location.origin); } catch {} if (u && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return new Response(JSON.stringify(cached), { status: 200, headers: { 'Content-Type': 'application/json' } }); } } catch {} } return earlyOrigFetch(input, init); }; }
   
   /* KF_LOAD_KNOWLEDGE_TREE_V1 */
   (function loadKnowledgeTreeModule() {
@@ -515,19 +515,19 @@
     return consolidateVnExpressWaves(d);
   }
 
-  const IDB_NAME = 'kf_merged_data_cache_v1', IDB_STORE = 'kv', IDB_KEY = 'data_v20261122_5'; let _memMergedCache = null, _memMergedCachePromise = null; function openCacheDB() { return new Promise((resolve, reject) => { try { if (typeof indexedDB === 'undefined') return reject(new Error('No indexedDB')); const req = indexedDB.open(IDB_NAME, 1); req.onupgradeneeded = () => { try { const db = req.result; if (!db.objectStoreNames.contains(IDB_STORE)) db.createObjectStore(IDB_STORE); } catch {} }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error); } catch (e) { reject(e); } }); } async function readMergedCache() { if (_memMergedCache && Array.isArray(_memMergedCache.cards) && _memMergedCache.cards.length > 50000) return _memMergedCache; if (_memMergedCachePromise) return _memMergedCachePromise; _memMergedCachePromise = (async () => { try { const db = await openCacheDB(); const res = await new Promise((resolve) => { try { const req = db.transaction(IDB_STORE, 'readonly').objectStore(IDB_STORE).get(IDB_KEY); req.onsuccess = () => resolve(req.result || null); req.onerror = () => resolve(null); } catch { resolve(null); } }); if (res && Array.isArray(res.cards) && res.cards.length > 50000) _memMergedCache = res; return res; } catch { return null; } finally { _memMergedCachePromise = null; } })(); return _memMergedCachePromise; } async function writeMergedCache(data) { if (data && Array.isArray(data.cards) && data.cards.length > 50000) _memMergedCache = data; try { const db = await openCacheDB(); await new Promise((resolve) => { try { const req = db.transaction(IDB_STORE, 'readwrite').objectStore(IDB_STORE).put(data, IDB_KEY); req.onsuccess = () => resolve(true); req.onerror = () => resolve(false); } catch { resolve(false); } }); } catch {} } function hookFetchForAntonyms() {
+  const IDB_NAME = 'kf_merged_data_cache_v1', IDB_STORE = 'kv', IDB_KEY = 'data_v20261122_6'; let _memMergedCache = null, _memMergedCachePromise = null; function openCacheDB() { return new Promise((resolve, reject) => { try { if (typeof indexedDB === 'undefined') return reject(new Error('No indexedDB')); const req = indexedDB.open(IDB_NAME, 1); req.onupgradeneeded = () => { try { const db = req.result; if (!db.objectStoreNames.contains(IDB_STORE)) db.createObjectStore(IDB_STORE); } catch {} }; req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error); } catch (e) { reject(e); } }); } async function readMergedCache() { if (_memMergedCache && Array.isArray(_memMergedCache.cards) && _memMergedCache.cards.length >= 60005) return _memMergedCache; if (_memMergedCachePromise) return _memMergedCachePromise; _memMergedCachePromise = (async () => { try { const db = await openCacheDB(); const res = await new Promise((resolve) => { try { const req = db.transaction(IDB_STORE, 'readonly').objectStore(IDB_STORE).get(IDB_KEY); req.onsuccess = () => resolve(req.result || null); req.onerror = () => resolve(null); } catch { resolve(null); } }); if (res && Array.isArray(res.cards) && res.cards.length >= 60005) _memMergedCache = res; return res; } catch { return null; } finally { _memMergedCachePromise = null; } })(); return _memMergedCachePromise; } async function writeMergedCache(data) { if (data && Array.isArray(data.cards) && data.cards.length >= 60005) _memMergedCache = data; try { const db = await openCacheDB(); await new Promise((resolve) => { try { const req = db.transaction(IDB_STORE, 'readwrite').objectStore(IDB_STORE).put(data, IDB_KEY); req.onsuccess = () => resolve(true); req.onerror = () => resolve(false); } catch { resolve(false); } }); } catch {} } function hookFetchForAntonyms() {
     if (window.fetch && window.fetch.__kfFinalConsolidateV2) return;
     window.__KF_ANTONYM_FETCH_HOOKED__ = true;
     const prevFetch = window.fetch;
     const wrapped = async function (input, init) {
-      let u = null; try { u = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href); } catch {} if (u && u.origin === location.origin && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length > 50000) { window.__KF_BASE_MERGE_DONE__ = true; return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => cached, text: async () => JSON.stringify(cached), clone() { return this; } }; } } catch {} if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } } const response = await prevFetch.apply(this, arguments);
+      let u = null; try { u = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href); } catch {} if (u && u.origin === location.origin && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => cached, text: async () => JSON.stringify(cached), clone() { return this; } }; } } catch {} if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } } const response = await prevFetch.apply(this, arguments);
       try {
         const url = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href);
         if (url.origin === location.origin && url.pathname === '/data.json' && response.ok) {
           const prevJson = response.json.bind(response);
           Object.defineProperty(response, 'json', {
             configurable: true,
-            value: async () => { if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } const merged = applyAllExpansionPacks(applyAntonymsToData(await prevJson())); window.__KF_BASE_MERGE_DONE__ = true; try { if (merged && Array.isArray(merged.cards) && merged.cards.length > 50000) Promise.resolve(writeMergedCache(merged)).catch(() => {}); } catch {} return merged; }
+            value: async () => { if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } const merged = applyAllExpansionPacks(applyAntonymsToData(await prevJson())); window.__KF_BASE_MERGE_DONE__ = true; try { if (merged && Array.isArray(merged.cards) && merged.cards.length >= 60005) Promise.resolve(writeMergedCache(merged)).catch(() => {}); } catch {} return merged; }
           });
         }
       } catch {}
@@ -837,7 +837,7 @@
 
   async function loadAll() {
     if (loaded) return;
-    loaded = true;
+    loaded = true; if (isVocabPage) { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } catch {} }
     hookRelationsShow(); 
     loadTask1Expansion200();
     try {
@@ -874,7 +874,7 @@
 
   if (/^\/writing\/?$/.test(location.pathname)) loadTask1Expansion200();
   window.TidianLiveOverrides = { refresh: loadAll };
-  const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
+//   const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
   if (isVocabPage) {
     loadAll();
   } else if (document.readyState === 'loading') {
