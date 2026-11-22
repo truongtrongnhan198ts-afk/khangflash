@@ -40,7 +40,8 @@
   const origFetch = window.fetch.bind(window);
   // Pre-inject custom-theme.css & pre-fetch live-override-custom.js early so Flashcard/Library/Games never flashes 3,099 base cards before jumping to 13,064 cards
   const isAdminLive = /^\/admin-live(?:\.html)?\/?$/.test(location.pathname) || new URLSearchParams(location.search).get('tidianLive') === 'off';
-  const needsVocabGate = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
+  const kfSp = new URLSearchParams(location.search); const kfTopicParam = (kfSp.get('topic') || '').trim(); if (/^\/flashcard(?:\.html)?\/?$/i.test(location.pathname) && kfTopicParam && kfTopicParam.toLowerCase() !== 'all' && !kfSp.get('source') && !kfSp.get('category') && !kfSp.get('plan') && !kfSp.get('recommended') && !kfSp.get('day')) { window.__KF_STATIC_TOPIC_ID__ = kfTopicParam; }
+  const needsVocabGate = !window.__KF_STATIC_TOPIC_ID__ && /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
   if (!isAdminLive) {
     if (!document.getElementById('kf-custom-theme-link')) {
       const link = document.createElement('link');
@@ -1281,6 +1282,7 @@
       const u = new URL(urlStr, location.origin);
       if (u.origin === location.origin) {
         if (u.pathname === '/data.json') {
+          if (window.__KF_STATIC_TOPIC_ID__) { try { const staticRes = await origFetch('/static-data/topics/' + encodeURIComponent(window.__KF_STATIC_TOPIC_ID__) + '.json', { cache: 'force-cache', credentials: 'same-origin' }); if (staticRes && staticRes.ok) return staticRes; } catch (_) {} }
           if (window.__KF_BASE_MERGE_READY__ && !window.__KF_BASE_MERGE_DONE__) {
             await window.__KF_BASE_MERGE_READY__;
           }
