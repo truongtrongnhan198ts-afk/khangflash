@@ -1,0 +1,439 @@
+{
+  "generatedAt": "2026-11-22T20:48:43.853Z",
+  "totalCards": 60388,
+  "topicCount": 72,
+  "topics": [
+    {
+      "id": "education",
+      "name": "Education & Learning",
+      "count": 2030,
+      "file": "static-data/topics/education.json"
+    },
+    {
+      "id": "environment",
+      "name": "Environment & Climate",
+      "count": 2143,
+      "file": "static-data/topics/environment.json"
+    },
+    {
+      "id": "technology",
+      "name": "Technology & Digital Life",
+      "count": 2487,
+      "file": "static-data/topics/technology.json"
+    },
+    {
+      "id": "health",
+      "name": "Health & Well-being",
+      "count": 2491,
+      "file": "static-data/topics/health.json"
+    },
+    {
+      "id": "work",
+      "name": "Work & Employment",
+      "count": 1406,
+      "file": "static-data/topics/work.json"
+    },
+    {
+      "id": "economy",
+      "name": "Economy & Consumerism",
+      "count": 3368,
+      "file": "static-data/topics/economy.json"
+    },
+    {
+      "id": "cities",
+      "name": "Cities & Urban Life",
+      "count": 1586,
+      "file": "static-data/topics/cities.json"
+    },
+    {
+      "id": "transport",
+      "name": "Transport & Mobility",
+      "count": 1814,
+      "file": "static-data/topics/transport.json"
+    },
+    {
+      "id": "crime",
+      "name": "Crime & Justice",
+      "count": 1524,
+      "file": "static-data/topics/crime.json"
+    },
+    {
+      "id": "government",
+      "name": "Government & Policy",
+      "count": 2210,
+      "file": "static-data/topics/government.json"
+    },
+    {
+      "id": "media",
+      "name": "Media & Advertising",
+      "count": 1372,
+      "file": "static-data/topics/media.json"
+    },
+    {
+      "id": "culture",
+      "name": "Culture & Heritage",
+      "count": 1481,
+      "file": "static-data/topics/culture.json"
+    },
+    {
+      "id": "globalisation",
+      "name": "Globalisation & Trade",
+      "count": 1791,
+      "file": "static-data/topics/globalisation.json"
+    },
+    {
+      "id": "science",
+      "name": "Science & Research",
+      "count": 1500,
+      "file": "static-data/topics/science.json"
+    },
+    {
+      "id": "family",
+      "name": "Family & Children",
+      "count": 1500,
+      "file": "static-data/topics/family.json"
+    },
+    {
+      "id": "food",
+      "name": "Food & Agriculture",
+      "count": 1500,
+      "file": "static-data/topics/food.json"
+    },
+    {
+      "id": "tourism",
+      "name": "Tourism & Travel",
+      "count": 1500,
+      "file": "static-data/topics/tourism.json"
+    },
+    {
+      "id": "housing",
+      "name": "Housing & Communities",
+      "count": 1420,
+      "file": "static-data/topics/housing.json"
+    },
+    {
+      "id": "energy",
+      "name": "Energy & Resources",
+      "count": 1500,
+      "file": "static-data/topics/energy.json"
+    },
+    {
+      "id": "equality",
+      "name": "Equality & Social Change",
+      "count": 1319,
+      "file": "static-data/topics/equality.json"
+    },
+    {
+      "id": "finance",
+      "name": "Money & Personal Finance",
+      "count": 1623,
+      "file": "static-data/topics/finance.json"
+    },
+    {
+      "id": "arts",
+      "name": "Arts & Music",
+      "count": 1119,
+      "file": "static-data/topics/arts.json"
+    },
+    {
+      "id": "sport",
+      "name": "Sports & Leisure",
+      "count": 1478,
+      "file": "static-data/topics/sport.json"
+    },
+    {
+      "id": "grammar",
+      "name": "Ngữ pháp & to + V-ing / to + V",
+      "count": 126,
+      "file": "static-data/topics/grammar.json"
+    },
+    {
+      "id": "phrasal",
+      "name": "Phrasal Verbs",
+      "count": 1021,
+      "file": "static-data/topics/phrasal.json"
+    },
+    {
+      "id": "speaking-tranh-luan-hoc-thuat-logic-lien-ket-tu-duy-phan-bien",
+      "name": "Tranh Luận Học Thuật, Logic Liên Kết & Tư Duy Phản Biện",
+      "count": 1012,
+      "file": "static-data/topics/speaking-tranh-luan-hoc-thuat-logic-lien-ket-tu-duy-phan-bien.json"
+    },
+    {
+      "id": "speaking-cum-gioi-tu-co-dinh-dat-gia-by-under-beyond-at-on",
+      "name": "Cụm Giới Từ Cố Định Đắt Giá (By, Under, Beyond, At, On)",
+      "count": 1035,
+      "file": "static-data/topics/speaking-cum-gioi-tu-co-dinh-dat-gia-by-under-beyond-at-on.json"
+    },
+    {
+      "id": "speaking-friends-social-relationships",
+      "name": "Friends & Social Relationships",
+      "count": 1024,
+      "file": "static-data/topics/speaking-friends-social-relationships.json"
+    },
+    {
+      "id": "speaking-hobbies-free-time",
+      "name": "Hobbies & Free Time",
+      "count": 1060,
+      "file": "static-data/topics/speaking-hobbies-free-time.json"
+    },
+    {
+      "id": "speaking-books-reading",
+      "name": "Books & Reading",
+      "count": 1028,
+      "file": "static-data/topics/speaking-books-reading.json"
+    },
+    {
+      "id": "speaking-movies-television",
+      "name": "Movies & Television",
+      "count": 1028,
+      "file": "static-data/topics/speaking-movies-television.json"
+    },
+    {
+      "id": "speaking-clothes-fashion",
+      "name": "Clothes & Fashion",
+      "count": 1025,
+      "file": "static-data/topics/speaking-clothes-fashion.json"
+    },
+    {
+      "id": "speaking-weather-seasons",
+      "name": "Weather & Seasons",
+      "count": 1175,
+      "file": "static-data/topics/speaking-weather-seasons.json"
+    },
+    {
+      "id": "speaking-daily-routine-time-management",
+      "name": "Daily Routine & Time Management",
+      "count": 1060,
+      "file": "static-data/topics/speaking-daily-routine-time-management.json"
+    },
+    {
+      "id": "speaking-ambitions-future-plans",
+      "name": "Ambitions & Future Plans",
+      "count": 1029,
+      "file": "static-data/topics/speaking-ambitions-future-plans.json"
+    },
+    {
+      "id": "speaking-gifts-celebrations",
+      "name": "Gifts & Celebrations",
+      "count": 1060,
+      "file": "static-data/topics/speaking-gifts-celebrations.json"
+    },
+    {
+      "id": "wildlife",
+      "name": "Animals & Wildlife",
+      "count": 1431,
+      "file": "static-data/topics/wildlife.json"
+    },
+    {
+      "id": "speaking-tinh-nguyen-tu-thien-cong-dong",
+      "name": "Tình Nguyện, Từ Thiện & Cộng Đồng",
+      "count": 1024,
+      "file": "static-data/topics/speaking-tinh-nguyen-tu-thien-cong-dong.json"
+    },
+    {
+      "id": "lexical-patterns",
+      "name": "Collocations & cách kết hợp từ",
+      "count": 1027,
+      "file": "static-data/topics/lexical-patterns.json"
+    },
+    {
+      "id": "speaking-unit-01",
+      "name": "HOME & ACCOMMODATION",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-01.json"
+    },
+    {
+      "id": "speaking-unit-02",
+      "name": "HOMETOWN & NEIGHBORHOOD",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-02.json"
+    },
+    {
+      "id": "speaking-unit-03",
+      "name": "WORK & CAREER",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-03.json"
+    },
+    {
+      "id": "speaking-unit-04",
+      "name": "STUDY & EDUCATION",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-04.json"
+    },
+    {
+      "id": "speaking-unit-05",
+      "name": "FAMILY & PARENTING",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-05.json"
+    },
+    {
+      "id": "speaking-unit-06",
+      "name": "FRIENDS & SOCIAL RELATIONSHIPS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-06.json"
+    },
+    {
+      "id": "speaking-unit-07",
+      "name": "HOBBIES & FREE TIME",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-07.json"
+    },
+    {
+      "id": "speaking-unit-08",
+      "name": "SPORTS & FITNESS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-08.json"
+    },
+    {
+      "id": "speaking-unit-09",
+      "name": "FOOD & COOKING",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-09.json"
+    },
+    {
+      "id": "speaking-unit-10",
+      "name": "TRAVEL & HOLIDAYS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-10.json"
+    },
+    {
+      "id": "speaking-unit-11",
+      "name": "TRANSPORT & COMMUTING",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-11.json"
+    },
+    {
+      "id": "speaking-unit-12",
+      "name": "TECHNOLOGY & DEVICES",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-12.json"
+    },
+    {
+      "id": "speaking-unit-13",
+      "name": "SOCIAL MEDIA & INTERNET",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-13.json"
+    },
+    {
+      "id": "speaking-unit-14",
+      "name": "BOOKS & READING",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-14.json"
+    },
+    {
+      "id": "speaking-unit-15",
+      "name": "MUSIC",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-15.json"
+    },
+    {
+      "id": "speaking-unit-16",
+      "name": "MOVIES & TELEVISION",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-16.json"
+    },
+    {
+      "id": "speaking-unit-17",
+      "name": "ART & MUSEUMS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-17.json"
+    },
+    {
+      "id": "speaking-unit-18",
+      "name": "SHOPPING & CONSUMER HABITS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-18.json"
+    },
+    {
+      "id": "speaking-unit-19",
+      "name": "CLOTHES & FASHION",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-19.json"
+    },
+    {
+      "id": "speaking-unit-20",
+      "name": "WEATHER & SEASONS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-20.json"
+    },
+    {
+      "id": "speaking-unit-21",
+      "name": "NATURE & OUTDOOR ACTIVITIES",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-21.json"
+    },
+    {
+      "id": "speaking-unit-22",
+      "name": "DAILY ROUTINE & TIME MANAGEMENT",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-22.json"
+    },
+    {
+      "id": "speaking-unit-23",
+      "name": "FESTIVALS & TRADITIONS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-23.json"
+    },
+    {
+      "id": "speaking-unit-24",
+      "name": "CHILDHOOD & MEMORIES",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-24.json"
+    },
+    {
+      "id": "speaking-unit-25",
+      "name": "PHOTOGRAPHY & VISUAL MEDIA",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-25.json"
+    },
+    {
+      "id": "speaking-unit-26",
+      "name": "HEALTH & LIFESTYLE",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-26.json"
+    },
+    {
+      "id": "speaking-unit-27",
+      "name": "LANGUAGES & COMMUNICATION",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-27.json"
+    },
+    {
+      "id": "speaking-unit-28",
+      "name": "AMBITIONS & FUTURE PLANS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-28.json"
+    },
+    {
+      "id": "speaking-unit-29",
+      "name": "PUBLIC PLACES & CITY LIFE",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-29.json"
+    },
+    {
+      "id": "speaking-unit-30",
+      "name": "GIFTS & CELEBRATIONS",
+      "count": 15,
+      "file": "static-data/topics/speaking-unit-30.json"
+    },
+    {
+      "id": "oceans-water",
+      "name": "Oceans & Water",
+      "count": 1491,
+      "file": "static-data/topics/oceans-water.json"
+    },
+    {
+      "id": "language-communication",
+      "name": "Language & Communication",
+      "count": 1266,
+      "file": "static-data/topics/language-communication.json"
+    },
+    {
+      "id": "population-migration",
+      "name": "Population & Migration",
+      "count": 1304,
+      "file": "static-data/topics/population-migration.json"
+    }
+  ]
+}
