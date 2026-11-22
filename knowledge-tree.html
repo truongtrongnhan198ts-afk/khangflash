@@ -1,27 +1,778 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KhangFlash · Cây kiến thức</title>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>KhangFlash · Cây kiến thức</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
-*{box-sizing:border-box}body{margin:0;background:#f5f5f0;color:#263b34;font:14px 'Be Vietnam Pro',system-ui,sans-serif}button,input{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible{outline:3px solid #99b8a4;outline-offset:3px}button{border:0;background:none}header{height:78px;padding:0 30px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dfe3d9;background:#fafbf7}.brand{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:700}.logo{width:35px;height:38px;display:grid;place-items:center;background:#50694b;color:#fff;border-radius:12px 12px 18px 5px}nav{display:flex;gap:26px;color:#7b857d;font-size:12px}nav b{color:#314e40}.avatar{width:32px;height:32px;background:#e6e9db;border-radius:50%;display:grid;place-items:center;font-size:11px}.intro{padding:29px 32px 24px;display:flex;justify-content:space-between;align-items:center}.eyebrow{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#7b897e;font-weight:600}h1{font-size:28px;letter-spacing:-1.1px;font-weight:600;margin:8px 0}p{line-height:1.7}.intro p{margin:0;color:#7b857b;font-size:12px}.search{width:300px;display:flex;align-items:center;border:1px solid #d9dfd4;background:#fafbf7;border-radius:9px;padding:11px 13px;gap:8px}.search input{border:0;outline:0;background:transparent;width:100%;font-size:12px}.workspace{margin:0 24px 24px;border:1px solid #dce2d6;border-radius:13px;overflow:hidden;background:#fafbf7;display:grid;grid-template-columns:225px minmax(400px,1fr) 315px;min-height:650px;height:calc(100vh - 230px)}aside{padding:25px 17px;border-right:1px solid #e1e5da;overflow:auto}.deckTitle{font-size:14px;font-weight:600;line-height:1.7;margin:12px 0 7px}.subtle{font-size:11px;color:#8a9289}.branches{display:flex;flex-direction:column;gap:7px;margin-top:26px}.branch{display:flex;gap:10px;text-align:left;align-items:center;padding:12px 9px;border-radius:7px;font-size:11px;line-height:1.6}.branch.active{background:#e8eee2;color:#33513b}.branch:hover{background:#eff2e9}.dot{width:7px;height:7px;flex-shrink:0;border-radius:50%;background:var(--tone)}.num{margin-left:auto;font-size:10px;color:#8a9289}.asideFoot{margin-top:28px;padding-top:18px;border-top:1px solid #e1e5da;line-height:1.7;font-size:10px;color:#8a9289}.mapPanel{display:flex;flex-direction:column;min-width:0;overflow:hidden}.mapBar{height:58px;border-bottom:1px solid #e5e8df;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:11px;gap:12px}.crumb{color:#8a9289;white-space:nowrap}.crumb b{color:#455d48}.switch{display:flex;background:#eef1e8;border-radius:6px;padding:3px}.switch button{font-size:10px;padding:6px 9px;border-radius:4px}.switch .active{background:#fafbf7;box-shadow:0 1px 2px #263b3410}.canvas{position:relative;flex:1;min-height:480px;overflow:auto;background-color:#f7f8f2;background-image:radial-gradient(#d4dcca 0.7px,transparent .7px);background-size:20px 20px}.diagram{position:relative;width:650px;min-height:570px;margin:auto;height:570px}.lines{position:absolute;width:100%;height:100%;inset:0;pointer-events:none}.lines path{fill:none;stroke:#c5d0bd;stroke-width:1.3}.node{position:absolute;border:1px solid #d8dfd0;border-radius:9px;background:#fafbf7;padding:13px 15px;text-align:left;font-size:11px;line-height:1.65;transition:border-color .15s,background .15s;overflow-wrap:anywhere}.node:hover{border-color:#819675;background:#f0f4e9}.node.selected{border-color:#759269;background:#e8efdf}.root{left:25px;top:235px;width:158px;padding:20px 16px;background:#e4ebd9;border-color:#bdcbae}.root small{display:block;margin-top:8px;color:#718466;font-size:10px}.node small{display:block;color:#8a9280;font-size:9px;margin-top:6px}.hub{left:245px;width:168px;min-height:74px}.leaf{left:455px;width:170px;min-height:62px}.leaf::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:#95aa82;margin-right:7px}.mapFooter{display:flex;justify-content:space-between;align-items:center;padding:13px 19px;border-top:1px solid #e1e5da;font-size:10px;color:#87917e}.pager{display:flex;align-items:center;gap:10px}.pager button{padding:5px 8px;border:1px solid #dce2d5;border-radius:5px;background:#fafbf7}.pager button:disabled{opacity:.3;cursor:default}.details{border-left:1px solid #e1e5da;padding:25px 23px;overflow:auto;background:#fcfcf9}.detailTag{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#829173;margin-top:30px}.details h2{font-size:24px;line-height:1.45;letter-spacing:-.6px;font-weight:600;margin:11px 0}.meaning{font-size:12px;color:#7b8579;line-height:1.8}.rule{height:1px;background:#e1e5da;margin:26px 0}.example{font-size:13px;line-height:1.95;margin:13px 0 22px}.audio{display:flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid #d6dfce;border-radius:7px;font-size:11px;background:#f4f7ed}.note{font-size:10px;color:#98a08f;line-height:1.8;margin-top:25px}.bookmark{width:100%;padding:12px;background:#e9eedf;border:1px solid #d8e0cd;border-radius:7px;font-size:11px;margin-top:18px}.list{padding:20px;display:grid;gap:9px}.list button{text-align:left;border:1px solid #dfe5d7;padding:14px;background:#fafbf7;border-radius:7px;font-size:12px}.list small{display:block;color:#899381;margin-top:5px;font-size:11px}.empty{padding:35px;color:#7b8579}#audioStatus{display:block;margin-top:9px;font-size:10px;color:#7c8971}footer{padding:0 32px 18px;display:flex;justify-content:space-between;font-size:10px;color:#899180}.hint{font-size:9px;color:#909987}.statusMark{color:#5c7b46}button[hidden],[hidden]{display:none!important}@media(min-width:1550px){.workspace{grid-template-columns:250px 1fr 355px}.diagram{transform:scale(1.08);transform-origin:center center}}@media(max-width:1100px){.workspace{grid-template-columns:195px minmax(340px,1fr)}.details{grid-column:1/-1;border-left:0;border-top:1px solid #dce2d6}.workspace{height:auto}.mapPanel{height:630px}.diagram{margin:0}.intro{gap:20px}.search{width:250px}}@media(max-width:650px){nav{display:none}.intro{display:block;padding:22px}.search{margin-top:20px;width:100%}.workspace{margin:0 12px 20px;display:flex;flex-direction:column}.branches{flex-direction:row;overflow-x:auto;margin-top:15px}.branch{min-width:145px}.asideFoot{display:none}aside{border-right:0;padding:18px}.deckTitle{margin:4px 0}.mapPanel{height:650px;flex-shrink:0}.crumb{white-space:normal}.mapBar{padding:0 12px}footer{padding:0 20px 20px}.details h2{font-size:25px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-.example{font-size:12px;line-height:1.8;margin:12px 0 14px;padding:14px 15px;background:#f4f6ee;border-left:2px solid #a8b79a;border-radius:0;text-align:left;letter-spacing:0;word-spacing:0;overflow-wrap:break-word}.details .audio{padding:8px 11px;border-radius:5px}.details .rule{margin:22px 0}.details .bookmark{margin-top:15px}.details .note{margin-top:18px}
-</style></head><body><header><div class="brand"><span class="logo">K</span>KhangFlash</div><nav><b>Cây kiến thức</b></nav><button id="closeTree" aria-label="Đóng cây kiến thức" style="font-size:24px">×</button></header>
-<section class="intro"><div><div class="eyebrow">LEARN IN CONNECTIONS</div><h1>Mỗi từ, một nhánh hiểu biết.</h1><p>Khám phá từ vựng qua những kết nối trong cùng chủ đề.</p></div><label class="search"><span>⌕</span><input id="search" aria-label="Tìm từ hoặc nghĩa" placeholder="Tìm từ hoặc nghĩa tiếng Việt…"></label></section>
-<main class="workspace"><aside><div class="eyebrow">BỘ TỪ ĐANG KHÁM PHÁ</div><div class="deckTitle">Daily Routine &<br>Time Management</div><div class="subtle">1.060 từ & cụm từ · 8 nhánh</div><div class="branches" id="branches"></div><div class="asideFoot">Chọn một nhánh để khám phá.<br>Bấm vào từ để xem nghĩa và ví dụ.<br><br><span id="savedCount"></span></div></aside><section class="mapPanel"><div class="mapBar"><span class="crumb">Daily Routine <span style="margin:0 6px">/</span> <b id="branchLabel"></b></span><select id="groups" aria-label="Chọn nhóm từ" style="max-width:180px;border:1px solid #dce2d6;border-radius:5px;background:#fafbf7;padding:6px;font:inherit"></select><div class="switch"><button id="mapBtn" class="active">Sơ đồ</button><button id="listBtn">Danh sách</button></div></div><div class="canvas" id="canvas"></div><div class="mapFooter"><span id="mapInfo"></span><div class="pager"><button id="prev" aria-label="Trang trước">←</button><span id="pageLabel"></span><button id="next" aria-label="Trang sau">→</button></div></div></section><section class="details" aria-label="Chi tiết từ vựng"><div class="eyebrow">MỘT TỪ, TRONG NGỮ CẢNH</div><div id="detail"></div></section></main><footer><span>KhangFlash / Knowledge tree</span><span>Hiểu mối liên hệ. Nhớ lâu hơn.</span></footer>
-<script>let DATA={nodes:[],cards:[]};
-const $=id=>document.getElementById(id);$('closeTree').onclick=()=>parent.postMessage({type:'kf-tree-close'},location.origin);document.addEventListener('keydown',e=>{if(e.key==='Escape')$('closeTree').click()});const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let branches=[];const tones=['#93a983','#91b2b4','#c39e9a','#91af9f','#c3ab89','#c1b87a','#99acc2','#afa2be'];let branch=null,hub=null,selected=null,page=0,view='map',query='';let saved=new Set();try{saved=new Set(JSON.parse(localStorage.getItem('kf-tree-design-saved-v1')||'[]'))}catch{}
-function cardsIn(n){return n.ch.flatMap(id=>{const h=DATA.nodes[id];return [h,...h.ch.map(i=>DATA.nodes[i])]}).filter(n=>n.ci>=0)}
-function branchUI(){$('branches').innerHTML=branches.map((n,i)=>`<button class="branch ${n.id===branch.id?'active':''}" data-branch="${n.id}" aria-pressed="${n.id===branch.id}"><span class="dot" style="--tone:${tones[i]}"></span><span>${esc(n.l)}</span><span class="num">${cardsIn(n).length}</span></button>`).join('');$('branchLabel').textContent=branch.l;$('savedCount').textContent=saved.size+' từ đã đánh dấu trên thiết bị này';}
-function showDetail(n){if(!n||n.ci<0)return;selected=n;const c=DATA.cards[n.ci];$('detail').innerHTML=`<div class="detailTag">${esc(branches.find(b=>b.lm===n.lm)?.l||'Từ vựng')}</div><h2>${esc(c.t)}</h2><div class="meaning">${esc(c.d)}</div>${c.p||c.ipa?`<p class="subtle">${esc(c.p)} ${esc(c.ipa)}</p>`:''}<div class="rule"></div><div class="eyebrow">VÍ DỤ SỬ DỤNG</div><p class="example">${esc(c.e||'Thẻ này chưa có câu ví dụ.')}</p><button class="audio" id="listen">◖)) &nbsp; Nghe câu ví dụ</button><span id="audioStatus" role="status"></span><button class="bookmark" id="save">${saved.has(c.id)?'✓ Đã đánh dấu':'＋ Đánh dấu để xem lại'}</button><p class="note">Đánh dấu riêng trên thiết bị này.<br>Không thay đổi tiến độ hay lịch ôn của bạn.</p>`;$('listen').onclick=()=>{if(parent!==window){parent.postMessage({type:'kf-tree-speak',text:c.e||c.t},location.origin);$('audioStatus').textContent='Đã gửi yêu cầu đọc';return}if(!window.speechSynthesis){$('audioStatus').textContent='Trình duyệt chưa hỗ trợ giọng đọc.';return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(c.e||c.t);u.lang='en-GB';u.onstart=()=>$('audioStatus').textContent='Đang đọc…';u.onend=()=>$('audioStatus').textContent='Đã đọc xong';u.onerror=()=>$('audioStatus').textContent='Chưa phát được. Thử lại sau.';speechSynthesis.speak(u)};$('save').onclick=()=>{saved.has(c.id)?saved.delete(c.id):saved.add(c.id);try{localStorage.setItem('kf-tree-design-saved-v1',JSON.stringify([...saved]))}catch{}showDetail(n);branchUI()};}
-function choose(n){showDetail(n);document.querySelectorAll('[data-node]').forEach(b=>b.classList.toggle('selected',Number(b.dataset.node)===n.id))}
-function render(){branchUI();$('groups').innerHTML=branch.ch.map(id=>`<option value="${id}" ${hub?.id===id?'selected':''}>${esc(DATA.nodes[id].l)}</option>`).join('');$('groups').onchange=e=>{hub=DATA.nodes[+e.target.value];page=0;showDetail(hub);render()};$('mapBtn').classList.toggle('active',view==='map');$('listBtn').classList.toggle('active',view==='list');const normalize=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();if(query||view==='list'){let nodes=query?DATA.nodes.filter(n=>n.ci>=0):cardsIn(branch);const seen=new Set();nodes=nodes.filter(n=>{const c=DATA.cards[n.ci];if(seen.has(c.id))return false;seen.add(c.id);return !query||normalize(c.t+' '+c.d).includes(normalize(query))});const total=Math.max(1,Math.ceil(nodes.length/12));page=Math.min(page,total-1);$('canvas').innerHTML=`<div class="list">${nodes.slice(page*12,page*12+12).map(n=>{const c=DATA.cards[n.ci];return `<button data-node="${n.id}">${esc(c.t)}<small>${esc(c.d)}</small></button>`}).join('')||'<div class="empty">Không tìm thấy từ phù hợp.</div>'}</div>`;pager(total,nodes.length+' từ'+(query?' phù hợp':''));bind();return}
-const hubs=branch.ch.map(i=>DATA.nodes[i]);if(!hub||hub.p!==branch.id)hub=hubs[0];const leaves=hub.ch.map(i=>DATA.nodes[i]);const total=Math.max(1,Math.ceil(leaves.length/7));page=Math.min(page,total-1);const shown=leaves.slice(page*7,page*7+7);const hi=hubs.indexOf(hub);let visible=hubs.slice(Math.max(0,Math.min(hi-1,hubs.length-4)),Math.max(0,Math.min(hi-1,hubs.length-4))+4);const hp=visible.map((n,i)=>({n,y:70+i*125}));const target=hp.find(x=>x.n.id===hub.id);const lp=shown.map((n,i)=>({n,y:25+i*76}));let paths=hp.map(x=>`<path d="M183 280 C215 280 213 ${x.y+36} 245 ${x.y+36}"/>`).join('')+lp.map(x=>`<path d="M413 ${target.y+36} C440 ${target.y+36} 425 ${x.y+30} 455 ${x.y+30}"/>`).join('');$('canvas').innerHTML=`<div class="diagram"><svg class="lines" viewBox="0 0 650 570" preserveAspectRatio="none">${paths}</svg><div class="node root"><div class="eyebrow" style="font-size:8px">CHỦ ĐỀ</div><strong>${esc(branch.l)}</strong><small>${cardsIn(branch).length} từ liên kết</small></div>${hp.map(x=>`<button class="node hub ${x.n.id===hub.id?'selected':''}" style="top:${x.y}px" data-hub="${x.n.id}">${esc(x.n.l)}<small>${x.n.ch.length} từ liên quan</small></button>`).join('')}${lp.map(x=>`<button class="node leaf ${selected?.id===x.n.id?'selected':''}" style="top:${x.y}px" data-node="${x.n.id}">${esc(x.n.l)}</button>`).join('')}</div>`;pager(total,`${hi+1}/${hubs.length} nhóm · ${leaves.length} từ liên quan`);document.querySelectorAll('[data-hub]').forEach(b=>b.onclick=()=>{hub=DATA.nodes[+b.dataset.hub];page=0;showDetail(hub);render()});bind();}
-function pager(total,info){$('pageLabel').textContent=(page+1)+' / '+total;$('prev').disabled=page===0;$('next').disabled=page===total-1;$('mapInfo').textContent=info}
-function bind(){document.querySelectorAll('[data-node]').forEach(b=>b.onclick=()=>choose(DATA.nodes[+b.dataset.node]))}
-$('branches').onclick=e=>{const b=e.target.closest('[data-branch]');if(!b)return;branch=DATA.nodes[+b.dataset.branch];hub=null;page=0;query='';$('search').value='';hub=DATA.nodes[branch.ch[0]];showDetail(hub);render()};$('search').oninput=e=>{query=e.target.value.trim();page=0;render()};$('mapBtn').onclick=()=>{view='map';page=0;query='';$('search').value='';render()};$('listBtn').onclick=()=>{view='list';page=0;render()};$('prev').onclick=()=>{page--;render()};$('next').onclick=()=>{page++;render()};
-function openData(payload){
- DATA=payload.data;branches=DATA.nodes.filter(n=>n.k==='limb'&&n.ch.length);branch=branches[0];hub=DATA.nodes[branch.ch[0]];selected=null;page=0;query='';$('search').value='';
- document.querySelector('.deckTitle').textContent=payload.title;document.querySelector('aside>.subtle').textContent=DATA.cards.length.toLocaleString('vi-VN')+' từ & cụm từ · '+branches.length+' nhánh';
- document.querySelector('.crumb').firstChild.textContent='Bộ từ ';showDetail(hub);render();
-}
-window.addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==parent||e.data?.type!=='kf-tree-data')return;openData(e.data)});
-parent.postMessage({type:'kf-tree-ready'},location.origin);
-</script></body></html>
+  :root {
+    color-scheme: light only;
+    --bg: #F5F5F0;
+    --surface: #FAFBF7;
+    --ink: #263B34;
+    --muted: #5C6E66;
+    --border: #DCE2D6;
+    --sage: #E8EEDF;
+    --sage-border: #BAC8AE;
+    --line: #C7D1BE;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 14px/1.55 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    color-scheme: light only;
+    -webkit-font-smoothing: antialiased;
+  }
+  button, input, select { font: inherit; color: inherit; }
+  button { border: 0; background: none; cursor: pointer; }
+  button:focus-visible, input:focus-visible, select:focus-visible {
+    outline: 2px solid #7D9574;
+    outline-offset: 2px;
+  }
+
+  header {
+    height: 68px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .brand { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; color: var(--ink); }
+  .logo {
+    width: 34px; height: 36px; display: grid; place-items: center;
+    background: #4F684A; color: #FAFBF7; border-radius: 11px 11px 16px 5px;
+    font-weight: 700; font-size: 16px;
+  }
+  nav { display: flex; gap: 22px; color: var(--muted); font-size: 12.5px; }
+  nav b { color: var(--ink); font-weight: 600; }
+  #closeTree {
+    width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center;
+    font-size: 22px; line-height: 1; color: var(--ink); border: 1px solid transparent;
+  }
+  #closeTree:hover { background: var(--sage); border-color: var(--border); }
+
+  .intro {
+    padding: 22px 28px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  h1 { font-size: 25px; letter-spacing: -0.6px; font-weight: 700; margin: 5px 0 4px; color: var(--ink); }
+  .intro p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+
+  .search {
+    width: 310px; max-width: 100%;
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 9px;
+    padding: 9px 12px;
+  }
+  .search span { color: var(--muted); font-size: 14px; }
+  .search input { border: 0; outline: 0; background: transparent; width: 100%; font-size: 12.5px; color: var(--ink); }
+  .search input::placeholder { color: #7C8B83; }
+
+  .workspace {
+    margin: 0 24px 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+    display: grid;
+    grid-template-columns: 230px minmax(420px, 1fr) 330px;
+    height: calc(100vh - 208px);
+    min-height: 520px;
+  }
+
+  /* Left Sidebar: Branches */
+  aside {
+    padding: 20px 15px;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    background: var(--surface);
+  }
+  .deckTitle { font-size: 15px; font-weight: 700; line-height: 1.45; margin: 10px 0 4px; color: var(--ink); }
+  .subtle { font-size: 11.5px; color: var(--muted); margin: 0; }
+  .branches { display: flex; flex-direction: column; gap: 5px; margin-top: 20px; }
+  .branch {
+    display: flex; gap: 9px; text-align: left; align-items: center;
+    padding: 10px 10px; border-radius: 8px; font-size: 12px; line-height: 1.45;
+    color: var(--ink); border: 1px solid transparent;
+  }
+  .branch:hover { background: #F1F4EA; }
+  .branch.active { background: var(--sage); border-color: var(--sage-border); font-weight: 600; }
+  .dot { width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: var(--tone); }
+  .num { margin-left: auto; font-size: 11px; color: var(--muted); font-weight: 500; padding-left: 6px; }
+  .asideFoot {
+    margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--border);
+    line-height: 1.65; font-size: 11px; color: var(--muted);
+  }
+
+  /* Center: Map / List Panel */
+  .mapPanel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .mapBar {
+    min-height: 54px;
+    padding: 8px 18px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+  }
+  .crumb { color: var(--muted); }
+  .crumb b { color: var(--ink); font-weight: 600; }
+  .mapControls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  #groups {
+    max-width: 240px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 6px 8px;
+    font-size: 11.5px;
+  }
+  .switch { display: flex; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 2px; }
+  .switch button { font-size: 11px; padding: 5px 10px; border-radius: 5px; color: var(--muted); font-weight: 500; }
+  .switch .active { background: var(--surface); color: var(--ink); font-weight: 600; border: 1px solid var(--border); }
+
+  .canvas {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    background-color: var(--bg);
+    background-image: radial-gradient(#D5DDD0 0.75px, transparent 0.75px);
+    background-size: 20px 20px;
+  }
+  .diagram {
+    position: relative;
+    width: 628px;
+    min-height: 460px;
+    margin: 0 auto;
+  }
+  .lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .lines path { fill: none; stroke: var(--line); stroke-width: 1.35; }
+  .lines path.active-path { stroke: #8FA383; stroke-width: 1.7; }
+
+  .node {
+    position: absolute;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 11px 13px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  button.node:hover { border-color: var(--sage-border); background: #F1F4EA; }
+  .node.selected { border-color: #93A787; background: var(--sage); }
+  .root {
+    left: 14px;
+    width: 146px;
+    padding: 15px 14px;
+    background: var(--sage);
+    border-color: var(--sage-border);
+  }
+  .root strong { display: block; font-size: 13px; line-height: 1.45; margin-top: 4px; }
+  .root small { display: block; margin-top: 6px; color: var(--muted); font-size: 11px; }
+  .node small { display: block; color: var(--muted); font-size: 10.5px; margin-top: 4px; }
+  .hub { left: 198px; width: 176px; }
+  .leaf { left: 412px; width: 202px; display: flex; align-items: flex-start; gap: 7px; }
+  .leaf-dot {
+    width: 5px; height: 5px; border-radius: 50%; background: #8DA280;
+    flex-shrink: 0; margin-top: 7px;
+  }
+
+  .mapFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  /* List & Search view (zero pagination, content-visibility for smooth scroll) */
+  .list { padding: 16px 18px; display: grid; gap: 8px; }
+  .list button {
+    text-align: left;
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+    background: var(--surface);
+    color: var(--ink);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+    content-visibility: auto;
+    contain-intrinsic-size: 62px;
+  }
+  .list button:hover { background: #F1F4EA; border-color: var(--sage-border); }
+  .list button.selected { background: var(--sage); border-color: #93A787; }
+  .list small { display: block; color: var(--muted); margin-top: 4px; font-size: 12px; font-weight: 400; }
+  .empty { padding: 32px; color: var(--muted); font-size: 13px; }
+
+  /* Right Panel: Stable Details & Example */
+  .details {
+    border-left: 1px solid var(--border);
+    padding: 22px 22px;
+    overflow-y: auto;
+    background: var(--surface);
+  }
+  .detailTag { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-top: 18px; font-weight: 600; }
+  .details h2 { font-size: 22px; line-height: 1.38; letter-spacing: -0.4px; font-weight: 700; margin: 8px 0 8px; color: var(--ink); }
+  .meaning { font-size: 13.5px; color: #3D524A; line-height: 1.65; margin-bottom: 6px; }
+  .rule { height: 1px; background: var(--border); margin: 20px 0; }
+  .example {
+    font-size: 13px;
+    line-height: 1.72;
+    margin: 10px 0 12px;
+    padding: 13px 15px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--ink);
+    text-align: left;
+    letter-spacing: 0;
+    word-spacing: 0;
+    overflow-wrap: break-word;
+  }
+  .audio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .audio:hover { background: var(--sage); border-color: var(--sage-border); }
+  #audioStatus { display: block; margin-top: 7px; font-size: 11px; color: var(--muted); min-height: 16px; }
+  .bookmark {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--sage);
+    border: 1px solid var(--sage-border);
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 12px;
+  }
+  .bookmark:hover { background: #DFE8D4; }
+  .note { font-size: 11px; color: var(--muted); line-height: 1.65; margin-top: 16px; }
+
+  footer {
+    padding: 0 28px 14px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  [hidden] { display: none !important; }
+
+  @media (max-width: 1120px) {
+    .workspace { grid-template-columns: 200px minmax(360px, 1fr); height: auto; min-height: 0; }
+    .details { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--border); }
+    .mapPanel { height: 560px; }
+    .intro { gap: 16px; }
+    .search { width: 250px; }
+  }
+  @media (max-width: 680px) {
+    header { padding: 0 16px; height: 58px; }
+    nav { display: none; }
+    .intro { display: block; padding: 16px; }
+    .search { margin-top: 14px; width: 100%; }
+    .workspace { margin: 0 10px 16px; display: flex; flex-direction: column; }
+    aside { border-right: 0; border-bottom: 1px solid var(--border); padding: 14px; }
+    .branches { flex-direction: row; overflow-x: auto; margin-top: 12px; padding-bottom: 4px; }
+    .branch { min-width: 155px; flex-shrink: 0; }
+    .asideFoot { display: none; }
+    .mapPanel { height: 520px; flex-shrink: 0; }
+    .mapBar { padding: 8px 12px; }
+    footer { padding: 0 16px 16px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">K</span>KhangFlash</div>
+  <nav><b>Cây kiến thức</b></nav>
+  <button type="button" id="closeTree" aria-label="Đóng cây kiến thức">×</button>
+</header>
+
+<section class="intro">
+  <div>
+    <div class="eyebrow">LEARN IN CONNECTIONS</div>
+    <h1>Mỗi từ, một nhánh hiểu biết.</h1>
+    <p>Khám phá từ vựng qua những kết nối trong cùng chủ đề.</p>
+  </div>
+  <label class="search">
+    <span>⌕</span>
+    <input id="search" type="search" aria-label="Tìm từ hoặc nghĩa" placeholder="Tìm từ hoặc nghĩa tiếng Việt…">
+  </label>
+</section>
+
+<main class="workspace">
+  <aside>
+    <div class="eyebrow">BỘ TỪ ĐANG KHÁM PHÁ</div>
+    <div class="deckTitle" id="deckTitle">Đang tải bộ từ…</div>
+    <p class="subtle" id="deckStats"></p>
+    <div class="branches" id="branches"></div>
+    <div class="asideFoot">
+      Chọn một nhánh để khám phá.<br>
+      Bấm vào từ để xem nghĩa và ví dụ.<br><br>
+      <span id="savedCount"></span>
+    </div>
+  </aside>
+
+  <section class="mapPanel">
+    <div class="mapBar">
+      <span class="crumb"><span id="crumbDeck">Bộ từ</span> <span style="margin:0 6px">/</span> <b id="branchLabel"></b></span>
+      <div class="mapControls">
+        <select id="groups" aria-label="Chọn nhóm từ"></select>
+        <div class="switch">
+          <button type="button" id="mapBtn" class="active">Sơ đồ</button>
+          <button type="button" id="listBtn">Danh sách</button>
+        </div>
+      </div>
+    </div>
+    <div class="canvas" id="canvas"></div>
+    <div class="mapFooter">
+      <span id="mapInfo"></span>
+      <span id="scrollHint">Cuộn trong khung để xem toàn bộ từ</span>
+    </div>
+  </section>
+
+  <section class="details" aria-label="Chi tiết từ vựng">
+    <div class="eyebrow">MỘT TỪ, TRONG NGỮ CẢNH</div>
+    <div id="detail"></div>
+  </section>
+</main>
+
+<footer>
+  <span>KhangFlash / Knowledge tree</span>
+  <span>Hiểu mối liên hệ. Nhớ lâu hơn.</span>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const norm = s => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+  let DATA = { nodes: [], cards: [] };
+  let branches = [];
+  let branchCardCounts = new Map();
+  let allCardNodes = [];
+  let deckTitleText = 'Bộ từ';
+  const tones = ['#8FA680', '#8AA9AB', '#B8938F', '#8BA898', '#B8A07E', '#B3AA70', '#8DA0B5', '#A396B2'];
+
+  let branch = null, hub = null, selected = null, view = 'map', query = '';
+  let listRenderJob = 0;
+  let saved = new Set();
+  try { saved = new Set(JSON.parse(localStorage.getItem('kf-tree-design-saved-v1') || '[]')); } catch {}
+
+  $('closeTree').onclick = () => parent.postMessage({ type: 'kf-tree-close' }, location.origin);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') $('closeTree').click(); });
+
+  function getBranchNodes(b) {
+    const out = [];
+    const seen = new Set();
+    for (let i = 0; i < b.ch.length; i++) {
+      const h = DATA.nodes[b.ch[i]];
+      if (h && h.ci >= 0 && !seen.has(DATA.cards[h.ci].id)) {
+        seen.add(DATA.cards[h.ci].id);
+        out.push(h);
+      }
+      if (h && h.ch) {
+        for (let j = 0; j < h.ch.length; j++) {
+          const lf = DATA.nodes[h.ch[j]];
+          if (lf && lf.ci >= 0 && !seen.has(DATA.cards[lf.ci].id)) {
+            seen.add(DATA.cards[lf.ci].id);
+            out.push(lf);
+          }
+        }
+      }
+    }
+    return out;
+  }
+
+  function renderBranches() {
+    $('branches').innerHTML = branches.map((n, i) =>
+      `<button type="button" class="branch ${n.id === branch.id ? 'active' : ''}" data-branch="${n.id}" aria-pressed="${n.id === branch.id}"><span class="dot" style="--tone:${tones[i % tones.length]}"></span><span>${esc(n.l)}</span><span class="num">${branchCardCounts.get(n.id) || 0}</span></button>`
+    ).join('');
+    $('branchLabel').textContent = branch.l;
+    $('savedCount').textContent = saved.size + ' từ đã đánh dấu trên thiết bị này';
+  }
+
+  function showDetail(n) {
+    if (!n || n.ci < 0) return;
+    selected = n;
+    const c = DATA.cards[n.ci];
+    const bName = branches.find(b => b.lm === n.lm)?.l || 'Từ vựng';
+    $('detail').innerHTML = `
+      <div class="detailTag">${esc(bName)}</div>
+      <h2>${esc(c.t)}</h2>
+      <div class="meaning">${esc(c.d)}</div>
+      ${c.p || c.ipa ? `<p class="subtle">${esc(c.p)} ${esc(c.ipa)}</p>` : ''}
+      <div class="rule"></div>
+      <div class="eyebrow">VÍ DỤ SỬ DỤNG</div>
+      <p class="example">${esc(c.e || 'Thẻ này chưa có câu ví dụ.')}</p>
+      <button type="button" class="audio" id="listen">◖)) &nbsp; Nghe câu ví dụ</button>
+      <span id="audioStatus" role="status"></span>
+      <button type="button" class="bookmark" id="save">${saved.has(c.id) ? '✓ Đã đánh dấu' : '＋ Đánh dấu để xem lại'}</button>
+      <p class="note">Đánh dấu riêng trên thiết bị này.<br>Không thay đổi tiến độ hay lịch ôn của bạn.</p>
+    `;
+    $('listen').onclick = () => {
+      if (parent !== window) {
+        parent.postMessage({ type: 'kf-tree-speak', text: c.e || c.t }, location.origin);
+        $('audioStatus').textContent = 'Đang phát giọng đọc…';
+        return;
+      }
+      if (!window.speechSynthesis) {
+        $('audioStatus').textContent = 'Trình duyệt chưa hỗ trợ giọng đọc.';
+        return;
+      }
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(c.e || c.t);
+      u.lang = 'en-GB';
+      u.onstart = () => ($('audioStatus').textContent = 'Đang đọc…');
+      u.onend = () => ($('audioStatus').textContent = 'Đã đọc xong');
+      u.onerror = () => ($('audioStatus').textContent = 'Chưa phát được. Thử lại sau.');
+      speechSynthesis.speak(u);
+    };
+    $('save').onclick = () => {
+      if (saved.has(c.id)) saved.delete(c.id);
+      else saved.add(c.id);
+      try { localStorage.setItem('kf-tree-design-saved-v1', JSON.stringify([...saved])); } catch {}
+      showDetail(n);
+      $('savedCount').textContent = saved.size + ' từ đã đánh dấu trên thiết bị này';
+    };
+  }
+
+  function highlightSelectedNode(nid) {
+    const prev = $('canvas').querySelectorAll('.selected[data-node]');
+    for (let i = 0; i < prev.length; i++) prev[i].classList.remove('selected');
+    const next = $('canvas').querySelector(`[data-node="${nid}"]`);
+    if (next) next.classList.add('selected');
+  }
+
+  // Render full list / search results WITHOUT pagination, chunked cleanly via rAF so UI never freezes!
+  function renderFullList(nodes, labelText) {
+    const job = ++listRenderJob;
+    const canvas = $('canvas');
+    $('mapInfo').textContent = labelText;
+    $('scrollHint').textContent = nodes.length ? 'Hiển thị toàn bộ ' + nodes.length.toLocaleString('vi-VN') + ' từ' : '';
+    if (!nodes.length) {
+      canvas.innerHTML = '<div class="empty">Không tìm thấy từ phù hợp.</div>';
+      return;
+    }
+    const listEl = document.createElement('div');
+    listEl.className = 'list';
+    canvas.replaceChildren(listEl);
+
+    let idx = 0;
+    const CHUNK = 120;
+    function appendChunk() {
+      if (job !== listRenderJob) return;
+      const frag = document.createDocumentFragment();
+      const end = Math.min(nodes.length, idx + CHUNK);
+      for (; idx < end; idx++) {
+        const n = nodes[idx];
+        const c = DATA.cards[n.ci];
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.dataset.node = String(n.id);
+        if (selected && selected.id === n.id) btn.className = 'selected';
+        btn.append(document.createTextNode(c.t));
+        const sm = document.createElement('small');
+        sm.textContent = c.d;
+        btn.append(sm);
+        frag.append(btn);
+      }
+      listEl.append(frag);
+      if (idx < nodes.length) requestAnimationFrame(appendChunk);
+    }
+    appendChunk();
+  }
+
+  // Render full Diagram WITHOUT pagination: measures real rendered heights of EVERY hub & leaf,
+  // then computes non-overlapping Y coordinates and exact SVG Bezier curves!
+  function renderDiagram() {
+    listRenderJob++;
+    const hubs = branch.ch.map(i => DATA.nodes[i]);
+    if (!hub || hub.p !== branch.id) hub = hubs[0];
+    const leaves = hub ? hub.ch.map(i => DATA.nodes[i]) : [];
+    const hi = hubs.indexOf(hub);
+
+    const canvas = $('canvas');
+    const diagram = document.createElement('div');
+    diagram.className = 'diagram';
+
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('class', 'lines');
+    diagram.append(svg);
+
+    const rootEl = document.createElement('div');
+    rootEl.className = 'node root';
+    rootEl.innerHTML = `<div class="eyebrow" style="font-size:9px">CHỦ ĐỀ</div><strong>${esc(branch.l)}</strong><small>${branchCardCounts.get(branch.id) || 0} từ liên kết</small>`;
+    diagram.append(rootEl);
+
+    const hubEls = hubs.map(h => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'node hub' + (h.id === hub.id ? ' selected' : '');
+      btn.dataset.hub = String(h.id);
+      btn.innerHTML = `${esc(h.l)}<small>${h.ch.length} từ liên quan</small>`;
+      diagram.append(btn);
+      return { n: h, el: btn };
+    });
+
+    const leafEls = leaves.map(lf => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'node leaf' + (selected && selected.id === lf.id ? ' selected' : '');
+      btn.dataset.node = String(lf.id);
+      btn.innerHTML = `<span class="leaf-dot"></span><span>${esc(lf.l)}</span>`;
+      diagram.append(btn);
+      return { n: lf, el: btn };
+    });
+
+    canvas.replaceChildren(diagram);
+
+    // Pass 2: measure real DOM heights so ZERO nodes or SVG lines ever overlap text!
+    const PAD_TOP = 24;
+    const PAD_BOT = 28;
+    const HUB_GAP = 14;
+    const LEAF_GAP = 10;
+
+    let hubTotalH = 0;
+    const hubHeights = hubEls.map(x => {
+      const h = x.el.offsetHeight || 68;
+      hubTotalH += h;
+      return h;
+    });
+    if (hubHeights.length > 1) hubTotalH += (hubHeights.length - 1) * HUB_GAP;
+
+    let leafTotalH = 0;
+    const leafHeights = leafEls.map(x => {
+      const h = x.el.offsetHeight || 48;
+      leafTotalH += h;
+      return h;
+    });
+    if (leafHeights.length > 1) leafTotalH += (leafHeights.length - 1) * LEAF_GAP;
+
+    const rootH = rootEl.offsetHeight || 96;
+    const contentH = Math.max(hubTotalH, leafTotalH, rootH, 380);
+    const totalH = contentH + PAD_TOP + PAD_BOT;
+    diagram.style.height = totalH + 'px';
+
+    // Top-align columns when tall so Root, Hubs & top Leaves are immediately visible without empty space!
+    let hy = PAD_TOP + (hubTotalH < 420 && leafTotalH <= 480 ? Math.max(0, (contentH - hubTotalH) / 2) : 0);
+    const hubCenters = [];
+    let activeHubCenterY = PAD_TOP + 40;
+    for (let i = 0; i < hubEls.length; i++) {
+      hubEls[i].el.style.top = Math.round(hy) + 'px';
+      const cy = hy + hubHeights[i] / 2;
+      hubCenters.push({ id: hubEls[i].n.id, cy });
+      if (hubEls[i].n.id === hub.id) activeHubCenterY = cy;
+      hy += hubHeights[i] + HUB_GAP;
+    }
+
+    let ly = PAD_TOP + (leafTotalH < hubTotalH && hubTotalH <= 520 ? Math.max(0, (hubTotalH - leafTotalH) / 2) : 0);
+    const leafCenters = [];
+    for (let i = 0; i < leafEls.length; i++) {
+      leafEls[i].el.style.top = Math.round(ly) + 'px';
+      leafCenters.push(ly + leafHeights[i] / 2);
+      ly += leafHeights[i] + LEAF_GAP;
+    }
+
+    // Align root cleanly beside the visible top of the hub column
+    const rootTop = Math.round(PAD_TOP + Math.min(140, Math.max(0, (Math.min(hubTotalH, 420) - rootH) / 2)));
+    rootEl.style.top = rootTop + 'px';
+    const rootCy = rootTop + rootH / 2;
+
+    // Exact SVG Bezier paths connecting measured edges (root right = 160, hub left = 198, hub right = 374, leaf left = 412)
+    const W = 628;
+    svg.setAttribute('viewBox', `0 0 ${W} ${totalH}`);
+    let pathsHtml = '';
+    for (let i = 0; i < hubCenters.length; i++) {
+      const hc = hubCenters[i];
+      const cls = hc.id === hub.id ? ' class="active-path"' : '';
+      pathsHtml += `<path${cls} d="M160 ${rootCy.toFixed(1)} C180 ${rootCy.toFixed(1)} 178 ${hc.cy.toFixed(1)} 198 ${hc.cy.toFixed(1)}"/>`;
+    }
+    for (let i = 0; i < leafCenters.length; i++) {
+      const lcy = leafCenters[i];
+      pathsHtml += `<path class="active-path" d="M374 ${activeHubCenterY.toFixed(1)} C394 ${activeHubCenterY.toFixed(1)} 392 ${lcy.toFixed(1)} 412 ${lcy.toFixed(1)}"/>`;
+    }
+    svg.innerHTML = pathsHtml;
+
+    $('mapInfo').textContent = `Nhóm ${hi + 1}/${hubs.length} · ${leaves.length} từ liên quan (hiển thị đủ)`;
+    $('scrollHint').textContent = totalH > canvas.clientHeight ? 'Cuộn xuống trong khung để xem hết nhóm' : 'Đang hiển thị đầy đủ nhóm này';
+  }
+
+  function render() {
+    if (!branch) return;
+    renderBranches();
+    $('groups').innerHTML = branch.ch.map(id =>
+      `<option value="${id}" ${hub && hub.id === id ? 'selected' : ''}>${esc(DATA.nodes[id].l)}</option>`
+    ).join('');
+    $('mapBtn').classList.toggle('active', view === 'map' && !query);
+    $('listBtn').classList.toggle('active', view === 'list' || !!query);
+
+    if (query) {
+      const q = norm(query);
+      const matches = allCardNodes.filter(n => DATA.cards[n.ci]._norm.includes(q));
+      renderFullList(matches, matches.length.toLocaleString('vi-VN') + ' từ phù hợp');
+      return;
+    }
+    if (view === 'list') {
+      const nodes = getBranchNodes(branch);
+      renderFullList(nodes, nodes.length.toLocaleString('vi-VN') + ' từ trong nhánh ' + branch.l);
+      return;
+    }
+    renderDiagram();
+  }
+
+  // Delegated click handlers (zero per-button listener churn -> ultra-fast!)
+  $('canvas').addEventListener('click', e => {
+    const hubBtn = e.target.closest('[data-hub]');
+    if (hubBtn) {
+      hub = DATA.nodes[Number(hubBtn.dataset.hub)];
+      showDetail(hub);
+      render();
+      return;
+    }
+    const nodeBtn = e.target.closest('[data-node]');
+    if (nodeBtn) {
+      const n = DATA.nodes[Number(nodeBtn.dataset.node)];
+      showDetail(n);
+      highlightSelectedNode(n.id);
+    }
+  });
+
+  $('branches').addEventListener('click', e => {
+    const b = e.target.closest('[data-branch]');
+    if (!b) return;
+    branch = DATA.nodes[Number(b.dataset.branch)];
+    hub = DATA.nodes[branch.ch[0]];
+    query = '';
+    $('search').value = '';
+    $('canvas').scrollTop = 0;
+    showDetail(hub);
+    render();
+  });
+
+  $('groups').addEventListener('change', e => {
+    hub = DATA.nodes[Number(e.target.value)];
+    query = '';
+    $('search').value = '';
+    view = 'map';
+    $('canvas').scrollTop = 0;
+    showDetail(hub);
+    render();
+  });
+
+  let searchTimer = 0;
+  $('search').addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    const val = e.target.value.trim();
+    searchTimer = setTimeout(() => {
+      query = val;
+      $('canvas').scrollTop = 0;
+      render();
+    }, 130);
+  });
+
+  $('mapBtn').onclick = () => { view = 'map'; query = ''; $('search').value = ''; $('canvas').scrollTop = 0; render(); };
+  $('listBtn').onclick = () => { view = 'list'; $('canvas').scrollTop = 0; render(); };
+
+  function openData(payload) {
+    DATA = payload.data;
+    // Pre-normalize search text ONCE per card (eliminates lag while typing!)
+    for (let i = 0; i < DATA.cards.length; i++) {
+      const c = DATA.cards[i];
+      c._norm = norm(c.t + ' ' + c.d);
+    }
+    branches = DATA.nodes.filter(n => n.k === 'limb' && n.ch.length);
+    branchCardCounts = new Map();
+    for (let i = 0; i < branches.length; i++) {
+      branchCardCounts.set(branches[i].id, getBranchNodes(branches[i]).length);
+    }
+    const seen = new Set();
+    allCardNodes = [];
+    for (let i = 0; i < DATA.nodes.length; i++) {
+      const n = DATA.nodes[i];
+      if (n.ci >= 0 && !seen.has(DATA.cards[n.ci].id)) {
+        seen.add(DATA.cards[n.ci].id);
+        allCardNodes.push(n);
+      }
+    }
+
+    branch = branches[0] || null;
+    hub = branch ? DATA.nodes[branch.ch[0]] : null;
+    selected = null;
+    view = 'map';
+    query = '';
+    $('search').value = '';
+    deckTitleText = payload.title || 'Bộ từ';
+    $('deckTitle').textContent = deckTitleText;
+    $('crumbDeck').textContent = deckTitleText;
+    $('deckStats').textContent = DATA.cards.length.toLocaleString('vi-VN') + ' từ & cụm từ · ' + branches.length + ' nhánh';
+    if (hub) showDetail(hub);
+    render();
+  }
+
+  window.addEventListener('message', e => {
+    if (e.origin !== location.origin || e.source !== parent || e.data?.type !== 'kf-tree-data') return;
+    openData(e.data);
+  });
+
+  parent.postMessage({ type: 'kf-tree-ready' }, location.origin);
+})();
+</script>
+</body>
+</html>
