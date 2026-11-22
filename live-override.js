@@ -569,7 +569,7 @@
     if (window.KFVnExpressPhrases300) return;
     if (window.__KF_VNEXPRESS_READY__) { await window.__KF_VNEXPRESS_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-300.js?v=20261120-v300-r3', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-300.js?v=20261120-v300-r3', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-300.js')();
@@ -584,7 +584,7 @@
     if (window.KFGuardianPhrases400 && window.KFGuardianPhrases400.version === '2026.11.20-g400-band9-r2') return;
     if (window.__KF_GUARDIAN_READY__) { await window.__KF_GUARDIAN_READY__; return; }
     try {
-      const r = await fetch('/guardian-phrases-400.js?v=20261120-g2', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/guardian-phrases-400.js?v=20261120-g2', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=guardian-phrases-400.js')();
@@ -599,7 +599,7 @@
     if (window.KFVnExpressPhrases400 && window.KFVnExpressPhrases400.version === '2026.11.20-v400-band9-r2') return;
     if (window.__KF_VNEXPRESS400_READY__) { await window.__KF_VNEXPRESS400_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-400.js?v=20261120-v400-r2', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-400.js?v=20261120-v400-r2', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-400.js')();
@@ -614,7 +614,7 @@
     if (window.KFVnExpressPhrases500 && window.KFVnExpressPhrases500.version === '2026.11.20-v500-band9-r2') return;
     if (window.__KF_VNEXPRESS500_READY__) { await window.__KF_VNEXPRESS500_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-500.js?v=20261120-v500-r2', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-500.js?v=20261120-v500-r2', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-500.js')();
@@ -629,7 +629,7 @@
     if (window.KFVnExpressPhrases700 && window.KFVnExpressPhrases700.version === '2026.11.20-v700-band9-r3') return;
     if (window.__KF_VNEXPRESS700_READY__) { await window.__KF_VNEXPRESS700_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-700.js?v=20261120-v700-r3', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-700.js?v=20261120-v700-r3', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-700.js')();
@@ -644,7 +644,7 @@
     if (window.KFVnExpressPhrases1000 && window.KFVnExpressPhrases1000.version === '2026.11.20-v1000-band9-r2') return;
     if (window.__KF_VNEXPRESS1000_READY__) { await window.__KF_VNEXPRESS1000_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r2', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-1000.js?v=20261120-v1000-r2', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-1000.js')();
@@ -677,7 +677,7 @@
     if (window.KFVnExpressPhrasesW6 && window.KFVnExpressPhrasesW6.version === '2026.11.20-w6-band9-r1') return;
     if (window.__KF_VNEXPRESSW6_READY__) { await window.__KF_VNEXPRESSW6_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w6.js?v=20261120-w6-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w6.js?v=20261120-w6-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w6.js')();
@@ -687,7 +687,7 @@
     if (window.KFVnExpressPhrasesW7 && window.KFVnExpressPhrasesW7.version === '2026.11.20-w7-band9-r1') return;
     if (window.__KF_VNEXPRESSW7_READY__) { await window.__KF_VNEXPRESSW7_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w7.js?v=20261120-w7-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w7.js?v=20261120-w7-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w7.js')();
@@ -697,7 +697,7 @@
     if (window.KFVnExpressPhrasesW8 && window.KFVnExpressPhrasesW8.version === '2026.11.20-w8-band9-r1') return;
     if (window.__KF_VNEXPRESSW8_READY__) { await window.__KF_VNEXPRESSW8_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w8.js?v=20261120-w8-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w8.js?v=20261120-w8-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w8.js')();
@@ -707,7 +707,7 @@
     if (window.KFVnExpressPhrasesW9 && window.KFVnExpressPhrasesW9.version === '2026.11.21-w9-band9-r1') return;
     if (window.__KF_VNEXPRESSW9_READY__) { await window.__KF_VNEXPRESSW9_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w9.js?v=20261121-w9-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w9.js?v=20261121-w9-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w9.js')();
@@ -718,7 +718,7 @@
     if (window.KFVnExpressPhrasesW10 && window.KFVnExpressPhrasesW10.version === '2026.11.21-w10-band9-r1') return;
     if (window.__KF_VNEXPRESSW10_READY__) { await window.__KF_VNEXPRESSW10_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w10.js?v=20261121-w10-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w10.js?v=20261121-w10-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w10.js')();
@@ -729,7 +729,7 @@
     if (window.KFVnExpressPhrasesW11 && window.KFVnExpressPhrasesW11.version === '2026.11.21-w11-band9-r1') return;
     if (window.__KF_VNEXPRESSW11_READY__) { await window.__KF_VNEXPRESSW11_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w11.js?v=20261121-w11-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w11.js?v=20261121-w11-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w11.js')();
@@ -740,7 +740,7 @@
     if (window.KFVnExpressPhrasesW12 && window.KFVnExpressPhrasesW12.version === '2026.11.21-w12-band9-r1') return;
     if (window.__KF_VNEXPRESSW12_READY__) { await window.__KF_VNEXPRESSW12_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w12.js?v=20261121-w12-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w12.js?v=20261121-w12-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w12.js')();
@@ -751,7 +751,7 @@
     if (window.KFVnExpressPhrasesW13 && window.KFVnExpressPhrasesW13.version === '2026.11.21-w13-band9-r1') return;
     if (window.__KF_VNEXPRESSW13_READY__) { await window.__KF_VNEXPRESSW13_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w13.js?v=20261121-w13-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w13.js?v=20261121-w13-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w13.js')();
@@ -762,7 +762,7 @@
     if (window.KFVnExpressPhrasesW14 && window.KFVnExpressPhrasesW14.version === '2026.11.21-w14-band9-r1') return;
     if (window.__KF_VNEXPRESSW14_READY__) { await window.__KF_VNEXPRESSW14_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w14.js?v=20261121-w14-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w14.js?v=20261121-w14-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w14.js')();
@@ -773,7 +773,7 @@
     if (window.KFVnExpressPhrasesW15 && window.KFVnExpressPhrasesW15.version === '2026.11.21-w15-band9-r1') return;
     if (window.__KF_VNEXPRESSW15_READY__) { await window.__KF_VNEXPRESSW15_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w15.js?v=20261121-w15-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w15.js?v=20261121-w15-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w15.js')();
@@ -784,7 +784,7 @@
     if (window.KFVnExpressPhrasesW16 && window.KFVnExpressPhrasesW16.version === '2026.11.21-w16-band9-r1') return;
     if (window.__KF_VNEXPRESSW16_READY__) { await window.__KF_VNEXPRESSW16_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w16.js?v=20261121-w16-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w16.js?v=20261121-w16-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w16.js')();
@@ -795,7 +795,7 @@
     if (window.KFVnExpressPhrasesW17 && window.KFVnExpressPhrasesW17.version === '2026.11.21-w17-band9-r1') return;
     if (window.__KF_VNEXPRESSW17_READY__) { await window.__KF_VNEXPRESSW17_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w17.js?v=20261121-w17-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w17.js?v=20261121-w17-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w17.js')();
@@ -806,7 +806,7 @@
     if (window.KFVnExpressPhrasesW18 && window.KFVnExpressPhrasesW18.version === '2026.11.21-w18-band9-r1') return;
     if (window.__KF_VNEXPRESSW18_READY__) { await window.__KF_VNEXPRESSW18_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w18.js?v=20261121-w18-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w18.js?v=20261121-w18-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w18.js')();
@@ -817,7 +817,7 @@
     if (window.KFVnExpressPhrasesW19 && window.KFVnExpressPhrasesW19.version === '2026.11.21-w19-band9-r1') return;
     if (window.__KF_VNEXPRESSW19_READY__) { await window.__KF_VNEXPRESSW19_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w19.js?v=20261121-w19-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w19.js?v=20261121-w19-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w19.js')();
@@ -828,7 +828,7 @@
     if (window.KFVnExpressPhrasesW20 && window.KFVnExpressPhrasesW20.version === '2026.11.21-w20-band9-r1') return;
     if (window.__KF_VNEXPRESSW20_READY__) { await window.__KF_VNEXPRESSW20_READY__; return; }
     try {
-      const r = await fetch('/vnexpress-phrases-w20.js?v=20261121-w20-r1', { cache: 'no-cache', credentials: 'same-origin' });
+      const r = await fetch('/vnexpress-phrases-w20.js?v=20261121-w20-r1', { cache: 'force-cache', credentials: 'same-origin' });
       if (!r.ok) return;
       const code = await r.text();
       if (code.trim()) new Function('"use strict";\n' + code + '\n//# sourceURL=vnexpress-phrases-w20.js')();
@@ -839,7 +839,7 @@
     if (loaded) return;
     loaded = true;
     hookRelationsShow();
-    await loadTask1Expansion200();
+    loadTask1Expansion200();
     try {
       let code = '';
       if (window.__KF_LIVE_PREFETCH__) {
