@@ -136,7 +136,7 @@ window.FullPlan=(()=>{
   if(busy||!current)return;const {plan:previous,data}=current;busy=true;announce('Đang tải tiến độ mới nhất và phân bổ lại phần chưa hoàn thành…');
   try{await load(true);const state=await KStore.refresh();if(state.guest)throw Error('Đăng nhập để lưu lịch.');const plan=build(data,state,previous);
    const r=await fetch('/api/learning-plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({plan,expected_exam:previous.exam})}),out=await r.json();if(!r.ok)throw Error(out.error||'Chưa lưu được lịch.');
-   KPlan.accept(out.plan);window.studyPlan=out.plan;notice={text:allocationMessage(previous,out.plan),error:false};render(out.plan,data,state);document.getElementById('full-plan-feedback')?.scrollIntoView?.({block:'nearest'});
+   const finalPlan = (out && out.plan) ? out.plan : plan; try { if (typeof window.__KF_SAVE_LEARNING_PLAN__ === 'function') window.__KF_SAVE_LEARNING_PLAN__(finalPlan); } catch {} KPlan.accept(finalPlan);window.studyPlan=finalPlan;notice={text:allocationMessage(previous,finalPlan),error:false};render(finalPlan,data,state);document.getElementById('full-plan-feedback')?.scrollIntoView?.({block:'nearest'});
   }catch(err){announce('Chưa thay đổi lịch. '+err.message,true);document.getElementById('full-plan-feedback')?.scrollIntoView?.({block:'nearest'});}
   finally{busy=false;syncBuildButtons();}
  }
