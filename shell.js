@@ -1,5 +1,3 @@
-// Shared return-to-today controls, independent of each exercise renderer.
-(()=>{const script=document.createElement('script');script.src='/study-navigation.js?v=335';script.defer=true;document.head.appendChild(script);})();
 // Load optional live presentation settings independently of the study shell.
 (()=>{if(/^\/admin-live(?:\.html)?\/?$/.test(location.pathname)||window.__KF_LIVE_OVERRIDE_BOOTED__||document.querySelector('script[src*="live-override.js"]'))return;const script=document.createElement('script');script.src='/live-override.js?v=333-large-admin';script.async=true;document.head.appendChild(script);})();
 'use strict';
