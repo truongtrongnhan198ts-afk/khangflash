@@ -1,6 +1,27 @@
 /* KhangFlash Standalone Local API Shim (100% self-hosted on Vercel) */
 (() => {
   'use strict';
+
+  /* KF_COMPACT_DECK_GRID_V1 */
+  (function injectCompactDeckGridStyle() {
+    if (typeof document === 'undefined' || document.getElementById('kf-compact-deck-grid')) return;
+    const css = [
+      '.deck-grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))!important;gap:12px!important;}',
+      '@media(max-width:640px){.deck-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;}}',
+      '.deck-grid .deck{min-height:152px!important;border-radius:18px!important;padding:14px 14px 12px!important;justify-content:space-between!important;}',
+      '.deck-grid .deck h2{font-size:18px!important;line-height:1.22!important;margin:0 0 5px!important;}',
+      '.deck-grid .deck>p{font-size:12px!important;line-height:1.4!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important;}',
+      '.deck-grid .deck .deck-meta{font-size:11px!important;margin:8px 0 2px!important;letter-spacing:.02em!important;}',
+      '.deck-grid .deck .deck-art{display:none!important;}',
+      '.deck-grid .deck .deck-link-label{font-size:11px!important;margin-top:8px!important;}',
+      '.deck-grid .deck .deck-stat{font-size:28px!important;margin:6px 0 0!important;}',
+      '.deck-grid .deck .deck-grid-lines{height:40%!important;opacity:.65!important;}'
+    ].join('\n');
+    const st = document.createElement('style');
+    st.id = 'kf-compact-deck-grid';
+    st.textContent = css;
+    (document.head || document.documentElement).appendChild(st);
+  })();
   if (window.__KF_LOCAL_API_SHIM__) return;
   window.__KF_LOCAL_API_SHIM__ = true;
 
@@ -1146,6 +1167,77 @@
     }
 
     if (typeof data.cardCount === 'number') data.cardCount = data.cards.length;
+
+      // Pass 2: Strict term-only spillover from oversized topics (>1500 cards) into smaller thematic topics (cap 1500, donor floor 1450, strictly idempotent)
+      if (Array.isArray(data.cards) && data.cards.length > 5000 && Array.isArray(data.topics)) {
+        const SPILL_FLOOR = 1500;
+        const SPILL_CAP = 1500;
+        const SPILL_RULES = [
+          { target: 'finance', rx: /\b(bank|banking|mortgage|loan|credit|debt|savings|household budget|personal finance|interest rate|inflation|recession|pension|insurance|stock market|equity|bond|investor|investment|dividend|bankruptcy|taxpayer|cryptocurrency|fintech|remittance|microfinance|cashless|wallet|overdraft|borrowing|lending|interest-bearing)\b/i },
+          { target: 'globalisation', rx: /\b(export|import|tariff|trade war|free trade|supply chain|multinational|cross-border|foreign direct investment|fdi|geopolitic|bilateral|multilateral|customs|outsourcing|offshoring|global market|worldwide|international trade|protectionism|sanction|diplomatic|asean|wto|embargo)\b/i },
+          { target: 'work', rx: /\b(worker|employee|employer|workplace|layoff|redundancy|wage|salary|payroll|minimum wage|remote work|hybrid work|gig economy|freelance|unemployment|labor force|labour force|recruitment|hiring|promotion|burnout|overtime|trade union|strike|career|job market|apprenticeship|intern|reskilling|upskilling|workforce)\b/i },
+          { target: 'housing', rx: /\b(housing|real estate|property|apartment|condo|mortgage|rent|rental|tenant|landlord|homeowner|homebuyer|eviction|homeless|affordable home|residential|suburban|gentrification|slum|social housing)\b/i },
+          { target: 'tourism', rx: /\b(tourist|tourism|hospitality|hotel|resort|airline|aviation|visa|passport|sightseeing|ecotourism|backpacker|itinerary|traveler|traveller|cruise|destination|holidaymaker|souvenir|charter flight)\b/i },
+          { target: 'transport', rx: /\b(highway|expressway|metro|subway|railway|railroad|commuter|traffic|congestion|airport|seaport|shipping|logistics|freight|electric vehicle|ev charging|autonomous vehicle|public transit|bus rapid|toll|pedestrian|cycling lane|bike lane|ride-hailing|infrastructure)\b/i },
+          { target: 'cities', rx: /\b(urban|city|cities|metropolitan|municipal|downtown|skyline|megacity|urbanization|urbanisation|zoning|sidewalk|public space|civic|smart city|borough|district|sprawl|inner-city)\b/i },
+          { target: 'crime', rx: /\b(crime|criminal|fraud|scam|embezzlement|bribery|corruption|money laundering|cybercrime|phishing|ransomware|hacking|theft|robbery|smuggling|trafficking|prosecution|indictment|verdict|prison|detention|law enforcement|police|judiciary|courtroom|litigation|penalty|crackdown|illegal|illicit)\b/i },
+          { target: 'equality', rx: /\b(inequality|discrimination|gender gap|pay gap|minority|marginalized|marginalised|disadvantaged|social mobility|inclusivity|diversity|human rights|civil rights|poverty|low-income|welfare|social safety net|empowerment|vulnerable group|underrepresented|prejudice|bias|equity)\b/i },
+          { target: 'energy', rx: /\b(solar|wind power|renewable|hydropower|nuclear power|fossil fuel|coal|crude oil|natural gas|electricity|power grid|power plant|battery|megawatt|kilowatt|decarboniz|biofuel|geothermal|energy transition|net-zero|clean energy|green hydrogen|lng|petroleum)\b/i },
+          { target: 'oceans-water', rx: /\b(ocean|marine|sea level|coral|reef|coastal|maritime|fishery|fisheries|aquaculture|seafood|tide|offshore|waterway|river|estuary|mangrove|watershed|freshwater|desalination|salinity|seawater|aquifer|groundwater|shipping lane|seaport|oil spill|marine plastic)\b/i },
+          { target: 'wildlife', rx: /\b(wildlife|endangered|biodiversity|poaching|habitat|species|ecosystem|conservation|deforestation|reforestation|fauna|flora|predator|mammal|migratory|sanctuary|national park|extinction|animal welfare)\b/i },
+          { target: 'speaking-weather-seasons', rx: /\b(typhoon|hurricane|cyclone|monsoon|heatwave|drought|flooding|flash flood|storm|rainfall|precipitation|el nino|la nina|cold snap|blizzard|wildfire|landslide|extreme weather|temperature|seasonal|humidity|forecast)\b/i },
+          { target: 'food', rx: /\b(agriculture|agricultural|farming|farmer|crop|harvest|livestock|poultry|fertilizer|pesticide|organic food|food security|nutrition|malnutrition|obesity|diet|dietary|processed food|ultra-processed|restaurant|cuisine|beverage|dairy|grain|rice|coffee|agribusiness|famine)\b/i },
+          { target: 'science', rx: /\b(research|researcher|laboratory|experiment|clinical trial|genome|genetic|dna|biotech|quantum|physics|chemistry|astronomy|spacecraft|satellite|observatory|peer-reviewed|hypothesis|breakthrough|molecular|neuroscience|stem cell|microbiology|archaeolog)\b/i },
+          { target: 'media', rx: /\b(social media|journalism|journalist|newsroom|broadcast|advertising|advertisement|propaganda|misinformation|disinformation|fake news|algorithmic feed|influencer|content creator|podcast|streaming|tabloid|censorship|press freedom|publicity|viral|clickbait)\b/i },
+          { target: 'family', rx: /\b(family|parent|parenting|childcare|childhood|sibling|elderly care|nursing home|intergenerational|marriage|divorce|upbringing|maternity|paternity|juvenile|adolescent|teenager|household|caregiver|kinship)\b/i },
+          { target: 'population-migration', rx: /\b(demographic|aging population|ageing population|birth rate|fertility rate|life expectancy|migration|migrant|immigrant|emigrant|refugee|asylum|brain drain|depopulation|overpopulation|census|urban-rural migration|diaspora|resettlement)\b/i },
+          { target: 'sport', rx: /\b(athlete|athletic|championship|tournament|olympic|marathon|fitness|workout|exercise|sedentary|stadium|coach|referee|doping|sportsmanship|league|training regimen|physical activity|cardiovascular fitness)\b/i },
+          { target: 'arts', rx: /\b(museum|gallery|exhibition|sculpture|painting|architecture|concert|symphony|cinema|film|theater|theatre|literature|novel|poetry|aesthetic|artistic|craftsmanship|performing arts|orchestra)\b/i },
+          { target: 'culture', rx: /\b(heritage|tradition|traditional|custom|ritual|festival|folklore|cultural identity|indigenous|multicultural|subculture|etiquette|monument|historic site|unesco|ancestral|gastronomy)\b/i },
+          { target: 'language-communication', rx: /\b(language|linguistic|bilingual|multilingual|dialect|accent|translation|interpreter|literacy|rhetoric|persuasion|negotiation|public speaking|interpersonal|miscommunication|jargon|slang|mother tongue|vernacular|proficiency)\b/i }
+        ];
+        const validSet = new Set(data.topics.filter(t => t && t.id && !String(t.id).startsWith('speaking-unit-')).map(t => t.id));
+        const spCounts = Object.create(null);
+        const byPrimary = new Map();
+        for (const c of data.cards) {
+          if (!c || !Array.isArray(c.topics) || !c.topics.length) continue;
+          const prim = c.topics.find(tid => tid && !String(tid).startsWith('speaking-unit-'));
+          if (!prim) continue;
+          spCounts[prim] = (spCounts[prim] || 0) + 1;
+          if (!byPrimary.has(prim)) byPrimary.set(prim, []);
+          byPrimary.get(prim).push(c);
+        }
+        const oversized = [...byPrimary.keys()]
+          .filter(tid => (spCounts[tid] || 0) > SPILL_CAP)
+          .sort((a, b) => (spCounts[b] || 0) - (spCounts[a] || 0) || a.localeCompare(b));
+        for (const donorId of oversized) {
+          const pool = (byPrimary.get(donorId) || []).slice().sort((a, b) => String(a.id || '').localeCompare(String(b.id || '')));
+          for (const c of pool) {
+            if ((spCounts[donorId] || 0) <= SPILL_FLOOR) break;
+            const term = String(c.term || '');
+            if (!term) continue;
+            let dest = null;
+            for (const rule of SPILL_RULES) {
+              if (rule.target === donorId) continue;
+              if (!validSet.has(rule.target)) continue;
+              if ((spCounts[rule.target] || 0) >= SPILL_CAP) continue;
+              if (rule.rx.test(term)) { dest = rule.target; break; }
+            }
+            if (!dest) continue;
+            const speakingUnits = Array.isArray(c.topics) ? c.topics.filter(t => String(t || '').startsWith('speaking-unit-')) : [];
+            c.topics = speakingUnits.length ? [dest, ...speakingUnits] : [dest];
+            if (c.sourceTopics && typeof c.sourceTopics === 'object') {
+              for (const k of Object.keys(c.sourceTopics)) {
+                if (k === 'pdf-8' && speakingUnits.length) continue;
+                c.sourceTopics[k] = [dest];
+              }
+            }
+            spCounts[donorId]--;
+            spCounts[dest] = (spCounts[dest] || 0) + 1;
+          }
+        }
+      }
+
     return data;
   }
 
