@@ -151,7 +151,7 @@
     try {
       localStorage.setItem(key, JSON.stringify(value));
     } catch (e) {
-      console.warn('[KF Local Shim] storage write failed', key, e);
+      if (e && (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || e.code === 22 || e.code === 1014)) { try { for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k && (k.startsWith('kf_hub_snap_v1:') || k.startsWith('kf_kstore_fast_v1'))) localStorage.removeItem(k); } localStorage.setItem(key, JSON.stringify(value)); return; } catch (retryErr) { console.warn('[KF Local Shim] storage write retry failed', key, retryErr); return; } } console.warn('[KF Local Shim] storage write failed', key, e);
     }
   }
 
