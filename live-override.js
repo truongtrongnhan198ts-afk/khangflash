@@ -1,7 +1,8 @@
 /* KhangFlash Direct Loader + Reciprocal Idiom Antonyms (v3) */
 (() => {
   'use strict';
-  const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname); if (isVocabPage && typeof window.fetch === 'function' && !window.__KF_EARLY_FETCH_HOOKED__) { window.__KF_EARLY_FETCH_HOOKED__ = true; const earlyOrigFetch = window.fetch.bind(window); window.fetch = async function(input, init) { const urlStr = typeof input === 'string' ? input : (input && input.url) || ''; let u = null; try { u = new URL(urlStr, location.origin); } catch {} if (u && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return new Response(JSON.stringify(cached), { status: 200, headers: { 'Content-Type': 'application/json' } }); } } catch {} } return earlyOrigFetch(input, init); }; }
+  if (window.__KF_LIVE_OVERRIDE_BOOTED__) return; window.__KF_LIVE_OVERRIDE_BOOTED__ = true;
+  const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname); if (isVocabPage && typeof window.fetch === 'function' && !window.__KF_EARLY_FETCH_HOOKED__) { window.__KF_EARLY_FETCH_HOOKED__ = true; const earlyOrigFetch = window.fetch.bind(window); window.fetch = async function(input, init) { const urlStr = typeof input === 'string' ? input : (input && input.url) || ''; let u = null; try { u = new URL(urlStr, location.origin); } catch {} if (u && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => cached, text: async () => JSON.stringify(cached), clone() { return this; } }; } } catch {} } return earlyOrigFetch(input, init); }; }
   
   /* KF_LOAD_KNOWLEDGE_TREE_V1 */
   (function loadKnowledgeTreeModule() {
@@ -520,7 +521,7 @@
     window.__KF_ANTONYM_FETCH_HOOKED__ = true;
     const prevFetch = window.fetch;
     const wrapped = async function (input, init) {
-      let u = null; try { u = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href); } catch {} if (u && u.origin === location.origin && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => cached, text: async () => JSON.stringify(cached), clone() { return this; } }; } } catch {} if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } } const response = await prevFetch.apply(this, arguments);
+      let u = null; try { u = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href); } catch {} if (u && u.origin === location.origin && u.pathname === '/data.json') { try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => cached, text: async () => (cached), clone() { return this; } }; } } catch {} if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } } const response = await prevFetch.apply(this, arguments);
       try {
         const url = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href);
         if (url.origin === location.origin && url.pathname === '/data.json' && response.ok) {
@@ -878,9 +879,9 @@
   if (isVocabPage) {
     loadAll();
   } else if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(loadAll), { once: true });
+    document.addEventListener('DOMContentLoaded', () => (typeof requestIdleCallback === 'function' ? requestIdleCallback(() => loadAll(), { timeout: 1500 }) : setTimeout(loadAll, 500)), { once: true });
   } else {
-    requestAnimationFrame(loadAll);
+    (typeof requestIdleCallback === 'function' ? requestIdleCallback(() => loadAll(), { timeout: 1500 }) : setTimeout(loadAll, 500));
   }
 })();
 
