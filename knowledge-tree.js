@@ -1,4 +1,4 @@
-/* KhangFlash Knowledge Tree · 20261122-v3 · instant zero-lag, lockstep icon, fullscreen */
+/* KhangFlash Knowledge Tree · 20261122-v5 · instant zero-lag, lockstep icon, fullscreen */
 (() => {
   'use strict';
   if (window.KFKnowledgeTree) return;
@@ -40,6 +40,7 @@
       const c = allCards[i];
       if (!c || c.studyKind === 'grammar' || c.hidden || c.archived || c.mergedInto) continue;
       const topicSet = new Set();
+      if (typeof c.topic === 'string' && c.topic) topicSet.add(c.topic);
       if (Array.isArray(c.topics)) {
         for (let j = 0; j < c.topics.length; j++) if (c.topics[j]) topicSet.add(c.topics[j]);
       }
@@ -156,21 +157,32 @@
       if (!nodes[lid].ch.length) nodes[0].ch.pop();
     }
     if (groups) groups.forEach(g => limb(g.name, g.groups));
-    const buckets = new Map();
+    const BUCKET_ORDER = [
+      'Danh từ & cụm danh từ',
+      'Động từ & cụm động từ',
+      'Tính từ',
+      'Trạng từ',
+      'Collocation & Cụm từ',
+      'Cụm động từ (Phrasal)',
+      'Thành ngữ',
+      'Từ & cụm từ khác'
+    ];
+    const buckets = new Map(BUCKET_ORDER.map(k => [k, []]));
     cards.forEach((c, i) => {
       if (used.has(i)) return;
       const p = c.p.toLowerCase();
       const key = /idiom|thành ngữ/.test(p) ? 'Thành ngữ'
-        : /phrasal/.test(p) ? 'Cụm động từ'
-        : /verb|động từ/.test(p) ? 'Động từ & cụm động từ'
-        : /noun|danh từ/.test(p) ? 'Danh từ & cụm danh từ'
-        : /adjective|tính từ/.test(p) ? 'Tính từ'
-        : /adverb|trạng từ/.test(p) ? 'Trạng từ'
+        : /phrasal/.test(p) ? 'Cụm động từ (Phrasal)'
+        : /\bverb\b|\bv\.\b|động từ/.test(p) ? 'Động từ & cụm động từ'
+        : /\bnoun\b|\bn\.\b|danh từ/.test(p) ? 'Danh từ & cụm danh từ'
+        : /\badj(?:ective)?\b|\badj\.\b|tính từ/.test(p) ? 'Tính từ'
+        : /\badv(?:erb)?\b|\badv\.\b|trạng từ/.test(p) ? 'Trạng từ'
+        : /collocation|cụm từ|cụm cố định|phrase|expression|giới từ|preposition/.test(p) ? 'Collocation & Cụm từ'
         : 'Từ & cụm từ khác';
-      if (!buckets.has(key)) buckets.set(key, []);
       buckets.get(key).push(c.id);
     });
     for (const [name, ids] of buckets) {
+      if (!ids.length) continue;
       const sorted = ids.sort((a, b) => cards[byId.get(a)].t.localeCompare(cards[byId.get(b)].t));
       const chunks = [];
       for (let i = 0; i < sorted.length; i += 24) {
@@ -196,7 +208,7 @@
       frameReady = false;
       frame = document.createElement('iframe');
       frame.title = 'Cây kiến thức';
-      frame.src = '/knowledge-tree.html?v=20261122-v4';
+      frame.src = '/knowledge-tree.html?v=20261122-v5';
       dialog.replaceChildren(frame);
     }
   }
@@ -363,5 +375,5 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();
 
-  window.KFKnowledgeTree = { version: '20261122-v3', open, close };
+  window.KFKnowledgeTree = { version: '20261122-v5', open, close };
 })();

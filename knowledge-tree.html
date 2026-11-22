@@ -234,7 +234,24 @@
     background: #FAFBF7 !important;
   }
   .detailTag { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #5C6E66; margin-top: 14px; font-weight: 600; }
-  .details h2 { font-size: 21px; line-height: 1.36; letter-spacing: -0.4px; font-weight: 700; margin: 7px 0; color: #263B34; }
+  .termRow { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin: 7px 0; }
+  .details h2 { font-size: 21px; line-height: 1.36; letter-spacing: -0.4px; font-weight: 700; margin: 0; color: #263B34; flex: 1; min-width: 0; overflow-wrap: break-word; }
+  .termAudio {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    margin-top: 2px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #DCE2D6;
+    border-radius: 8px;
+    background: #F5F5F0 !important;
+    color: #263B34 !important;
+    cursor: pointer;
+    transition: background .14s ease, border-color .14s ease;
+  }
+  .termAudio:hover { background: #E8EEDF !important; border-color: #BAC8AE; }
+  .termAudio:active { transform: scale(0.96); }
   .meaning { font-size: 13.5px; color: #3D524A; line-height: 1.62; margin-bottom: 6px; }
   .rule { height: 1px; background: #DCE2D6; margin: 16px 0; }
   .example {
@@ -396,9 +413,13 @@
     selected = n;
     const c = DATA.cards[n.ci];
     const bName = branches.find(b => b.lm === n.lm)?.l || 'Từ vựng';
+    const speakerSvg = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>';
     $('detail').innerHTML = `
       <div class="detailTag">${esc(bName)}</div>
-      <h2>${esc(c.t)}</h2>
+      <div class="termRow">
+        <h2>${esc(c.t)}</h2>
+        <button type="button" class="termAudio" id="listenTerm" title="Phát âm từ này" aria-label="Phát âm từ ${esc(c.t)}">${speakerSvg}</button>
+      </div>
       <div class="meaning">${esc(c.d)}</div>
       ${c.p || c.ipa ? `<p class="subtle">${esc(c.p)} ${esc(c.ipa)}</p>` : ''}
       <div class="rule"></div>
@@ -409,21 +430,24 @@
       <button type="button" class="bookmark" id="save">${saved.has(c.id) ? '✓ Đã đánh dấu' : '＋ Đánh dấu để xem lại'}</button>
       <p class="note">Đánh dấu riêng trên thiết bị này.<br>Không thay đổi tiến độ hay lịch ôn của bạn.</p>
     `;
-    $('listen').onclick = () => {
+    function speakText(text, label) {
+      if (!text) return;
       if (parent !== window) {
-        parent.postMessage({ type: 'kf-tree-speak', text: c.e || c.t }, location.origin);
-        $('audioStatus').textContent = 'Đang phát giọng đọc…';
+        parent.postMessage({ type: 'kf-tree-speak', text }, location.origin);
+        $('audioStatus').textContent = label;
         return;
       }
       if (!window.speechSynthesis) { $('audioStatus').textContent = 'Trình duyệt chưa hỗ trợ giọng đọc.'; return; }
       speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(c.e || c.t);
+      const u = new SpeechSynthesisUtterance(text);
       u.lang = 'en-GB';
-      u.onstart = () => ($('audioStatus').textContent = 'Đang đọc…');
+      u.onstart = () => ($('audioStatus').textContent = label);
       u.onend = () => ($('audioStatus').textContent = 'Đã đọc xong');
       u.onerror = () => ($('audioStatus').textContent = 'Chưa phát được. Thử lại sau.');
       speechSynthesis.speak(u);
-    };
+    }
+    $('listenTerm').onclick = () => speakText(c.t, 'Đang phát âm từ…');
+    $('listen').onclick = () => speakText(c.e || c.t, 'Đang phát câu ví dụ…');
     $('save').onclick = () => {
       if (saved.has(c.id)) saved.delete(c.id);
       else saved.add(c.id);
@@ -466,9 +490,8 @@
 
   function fitZoom() {
     const cw = Math.max(320, $('canvas').clientWidth - 20);
-    const ch = Math.max(260, $('canvas').clientHeight - 20);
-    const fit = Math.min(1.0, cw / naturalW, ch / naturalH);
-    applyZoom(Math.max(0.55, fit));
+    const fitW = Math.min(1.0, cw / naturalW);
+    applyZoom(Math.max(0.65, fitW));
   }
 
   function highlightSelectedNode(nid) {
@@ -583,22 +606,16 @@
     const hubHeights = hubEls.map(x => { const h = x.el.offsetHeight || 58; hubTotalH += h; return h; });
     if (hubHeights.length > 1) hubTotalH += (hubHeights.length - 1) * HUB_GAP;
 
-    // Distribute leaves evenly across `leafCols` columns
+    // Measure leaf heights first so we can align leaves right beside the active hub
     const perCol = Math.ceil(leafEls.length / leafCols) || 1;
+    const leafHeights = leafEls.map(x => x.el.offsetHeight || 44);
     const colHeights = new Array(leafCols).fill(0);
-    const colStartY = new Array(leafCols).fill(PAD_TOP);
-    const leafCoords = [];
-
     for (let i = 0; i < leafEls.length; i++) {
       const col = Math.floor(i / perCol);
-      const h = leafEls[i].el.offsetHeight || 44;
-      const x = LEAF_START_X + col * (LEAF_W + LEAF_COL_GAP);
-      const y = colStartY[col];
-      leafEls[i].el.style.left = x + 'px';
-      leafEls[i].el.style.top = Math.round(y) + 'px';
-      leafCoords.push({ col, x, cy: y + h / 2 });
-      colStartY[col] += h + LEAF_GAP;
-      colHeights[col] = colStartY[col] - PAD_TOP - LEAF_GAP;
+      colHeights[col] += leafHeights[i] + LEAF_GAP;
+    }
+    for (let c = 0; c < leafCols; c++) {
+      if (colHeights[c] > 0) colHeights[c] -= LEAF_GAP;
     }
 
     const maxLeafH = Math.max(0, ...colHeights);
@@ -616,6 +633,22 @@
       hubCenters.push({ id: hubEls[i].n.id, cy });
       if (hubEls[i].n.id === hub.id) activeHubCenterY = cy;
       hy += hubHeights[i] + HUB_GAP;
+    }
+
+    // Center the leaf block near activeHubCenterY (clamped cleanly inside canvas height)
+    const maxLeafStart = Math.max(PAD_TOP, totalH - PAD_BOT - maxLeafH);
+    const leafBaseY = Math.round(Math.max(PAD_TOP, Math.min(maxLeafStart, activeHubCenterY - maxLeafH / 2)));
+    const colStartY = new Array(leafCols).fill(leafBaseY);
+    const leafCoords = [];
+    for (let i = 0; i < leafEls.length; i++) {
+      const col = Math.floor(i / perCol);
+      const h = leafHeights[i];
+      const x = LEAF_START_X + col * (LEAF_W + LEAF_COL_GAP);
+      const y = colStartY[col];
+      leafEls[i].el.style.left = x + 'px';
+      leafEls[i].el.style.top = Math.round(y) + 'px';
+      leafCoords.push({ col, x, cy: y + h / 2 });
+      colStartY[col] += h + LEAF_GAP;
     }
 
     const rootTop = Math.round(PAD_TOP + Math.min(120, Math.max(0, (Math.min(hubTotalH, 360) - rootH) / 2)));
@@ -642,8 +675,8 @@
     }
     svg.innerHTML = pathsHtml;
 
-    $('mapInfo').textContent = `Nhóm ${hi + 1}/${hubs.length} · ${leaves.length} từ (${leafCols} cột ngang)`;
-    $('scrollHint').textContent = 'Ctrl + cuộn chuột hoặc bấm − / + để thu phóng';
+    $('mapInfo').textContent = `Nhóm ${hi + 1}/${hubs.length} · ${leaves.length + (hub && hub.ci >= 0 ? 1 : 0)} từ (${leafCols} cột ngang)`;
+    
 
     if (autoFit) fitZoom();
     else applyZoom(zoom);
