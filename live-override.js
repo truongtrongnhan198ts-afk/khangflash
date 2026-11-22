@@ -527,7 +527,7 @@
           const prevJson = response.json.bind(response);
           Object.defineProperty(response, 'json', {
             configurable: true,
-            value: async () => applyAllExpansionPacks(applyAntonymsToData(await prevJson()))
+            value: async () => { if (window.__KF_BASE_MERGE_READY__ && typeof window.__KF_BASE_MERGE_READY__.then === 'function') { try { await window.__KF_BASE_MERGE_READY__; } catch {} } return applyAllExpansionPacks(applyAntonymsToData(await prevJson())); }
           });
         }
       } catch {}
@@ -873,7 +873,7 @@
   }
 
   if (/^\/writing\/?$/.test(location.pathname)) loadTask1Expansion200();
-  window.TidianLiveOverrides = { refresh: loadAll };
+  hookFetchForAntonyms(); window.TidianLiveOverrides = { refresh: loadAll };
   const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
   if (isVocabPage) {
     loadAll();
