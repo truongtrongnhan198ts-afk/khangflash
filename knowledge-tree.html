@@ -3,14 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light only">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <title>KhangFlash · Cây kiến thức</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: light only;
+    color-scheme: only light !important;
+    forced-color-adjust: none !important;
     --bg: #F5F5F0;
     --surface: #FAFBF7;
     --ink: #263B34;
@@ -20,338 +22,290 @@
     --sage-border: #BAC8AE;
     --line: #C7D1BE;
   }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; forced-color-adjust: none; }
   html, body {
     margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 14px/1.55 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
-    color-scheme: light only;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #F5F5F0 !important;
+    color: #263B34 !important;
+    font: 14px/1.5 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    color-scheme: only light !important;
     -webkit-font-smoothing: antialiased;
   }
-  button, input, select { font: inherit; color: inherit; }
+  body { display: flex; flex-direction: column; }
+  button, input, select { font: inherit; color: #263B34; }
   button { border: 0; background: none; cursor: pointer; }
   button:focus-visible, input:focus-visible, select:focus-visible {
     outline: 2px solid #7D9574;
     outline-offset: 2px;
   }
 
+  /* Compact Full-Screen Header (gives 90%+ height to the tree workspace!) */
   header {
-    height: 68px;
-    padding: 0 28px;
+    height: 54px;
+    flex-shrink: 0;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
+    gap: 14px;
+    border-bottom: 1px solid #DCE2D6;
+    background: #FAFBF7 !important;
   }
-  .brand { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; color: var(--ink); }
+  .brand { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: #263B34; white-space: nowrap; }
   .logo {
-    width: 34px; height: 36px; display: grid; place-items: center;
-    background: #4F684A; color: #FAFBF7; border-radius: 11px 11px 16px 5px;
-    font-weight: 700; font-size: 16px;
+    width: 30px; height: 32px; display: grid; place-items: center;
+    background: #4F684A; color: #FAFBF7; border-radius: 9px 9px 14px 4px;
+    font-weight: 700; font-size: 15px;
   }
-  nav { display: flex; gap: 22px; color: var(--muted); font-size: 12.5px; }
-  nav b { color: var(--ink); font-weight: 600; }
-  #closeTree {
-    width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center;
-    font-size: 22px; line-height: 1; color: var(--ink); border: 1px solid transparent;
-  }
-  #closeTree:hover { background: var(--sage); border-color: var(--border); }
-
-  .intro {
-    padding: 22px 28px 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-  }
-  .eyebrow {
-    font-size: 10px;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-weight: 600;
-  }
-  h1 { font-size: 25px; letter-spacing: -0.6px; font-weight: 700; margin: 5px 0 4px; color: var(--ink); }
-  .intro p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
-
+  .brand-sub { font-size: 12px; font-weight: 500; color: #5C6E66; border-left: 1px solid #DCE2D6; padding-left: 10px; }
+  .head-right { display: flex; align-items: center; gap: 10px; }
   .search {
-    width: 310px; max-width: 100%;
-    display: flex; align-items: center; gap: 8px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    border-radius: 9px;
-    padding: 9px 12px;
+    width: 270px; max-width: 42vw;
+    display: flex; align-items: center; gap: 7px;
+    border: 1px solid #DCE2D6;
+    background: #F5F5F0 !important;
+    border-radius: 8px;
+    padding: 6px 10px;
   }
-  .search span { color: var(--muted); font-size: 14px; }
-  .search input { border: 0; outline: 0; background: transparent; width: 100%; font-size: 12.5px; color: var(--ink); }
+  .search span { color: #5C6E66; font-size: 13px; }
+  .search input { border: 0; outline: 0; background: transparent; width: 100%; font-size: 12px; color: #263B34; }
   .search input::placeholder { color: #7C8B83; }
+  #closeTree {
+    width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center;
+    font-size: 22px; line-height: 1; color: #263B34; border: 1px solid #DCE2D6; background: #FAFBF7;
+  }
+  #closeTree:hover { background: #E8EEDF; }
 
+  /* Full-Bleed Workspace (fills 100% remaining screen!) */
   .workspace {
-    margin: 0 24px 18px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    background: var(--surface);
+    flex: 1;
+    min-height: 0;
     display: grid;
-    grid-template-columns: 230px minmax(420px, 1fr) 330px;
-    height: calc(100vh - 208px);
-    min-height: 520px;
+    grid-template-columns: 220px minmax(420px, 1fr) 320px;
+    background: #FAFBF7 !important;
   }
 
-  /* Left Sidebar: Branches */
   aside {
-    padding: 20px 15px;
-    border-right: 1px solid var(--border);
+    padding: 16px 13px;
+    border-right: 1px solid #DCE2D6;
     overflow-y: auto;
-    background: var(--surface);
+    background: #FAFBF7 !important;
   }
-  .deckTitle { font-size: 15px; font-weight: 700; line-height: 1.45; margin: 10px 0 4px; color: var(--ink); }
-  .subtle { font-size: 11.5px; color: var(--muted); margin: 0; }
-  .branches { display: flex; flex-direction: column; gap: 5px; margin-top: 20px; }
+  .eyebrow { font-size: 10px; letter-spacing: 1.3px; text-transform: uppercase; color: #5C6E66; font-weight: 600; }
+  .deckTitle { font-size: 14.5px; font-weight: 700; line-height: 1.4; margin: 7px 0 3px; color: #263B34; }
+  .subtle { font-size: 11px; color: #5C6E66; margin: 0; }
+  .branches { display: flex; flex-direction: column; gap: 4px; margin-top: 14px; }
   .branch {
-    display: flex; gap: 9px; text-align: left; align-items: center;
-    padding: 10px 10px; border-radius: 8px; font-size: 12px; line-height: 1.45;
-    color: var(--ink); border: 1px solid transparent;
+    display: flex; gap: 8px; text-align: left; align-items: center;
+    padding: 9px 9px; border-radius: 8px; font-size: 12px; line-height: 1.4;
+    color: #263B34; border: 1px solid transparent;
   }
   .branch:hover { background: #F1F4EA; }
-  .branch.active { background: var(--sage); border-color: var(--sage-border); font-weight: 600; }
+  .branch.active { background: #E8EEDF !important; border-color: #BAC8AE; font-weight: 600; }
   .dot { width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: var(--tone); }
-  .num { margin-left: auto; font-size: 11px; color: var(--muted); font-weight: 500; padding-left: 6px; }
+  .num { margin-left: auto; font-size: 11px; color: #5C6E66; padding-left: 6px; }
   .asideFoot {
-    margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--border);
-    line-height: 1.65; font-size: 11px; color: var(--muted);
+    margin-top: 18px; padding-top: 12px; border-top: 1px solid #DCE2D6;
+    line-height: 1.6; font-size: 11px; color: #5C6E66;
   }
 
-  /* Center: Map / List Panel */
+  /* Center Map Panel */
   .mapPanel {
     display: flex;
     flex-direction: column;
     min-width: 0;
     min-height: 0;
     overflow: hidden;
-    background: var(--bg);
+    background: #F5F5F0 !important;
   }
   .mapBar {
-    min-height: 54px;
-    padding: 8px 18px;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
+    min-height: 46px;
+    padding: 6px 14px;
+    border-bottom: 1px solid #DCE2D6;
+    background: #FAFBF7 !important;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    font-size: 12px;
-  }
-  .crumb { color: var(--muted); }
-  .crumb b { color: var(--ink); font-weight: 600; }
-  .mapControls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  #groups {
-    max-width: 240px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    background: var(--surface);
-    color: var(--ink);
-    padding: 6px 8px;
+    gap: 8px;
     font-size: 11.5px;
   }
-  .switch { display: flex; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 2px; }
-  .switch button { font-size: 11px; padding: 5px 10px; border-radius: 5px; color: var(--muted); font-weight: 500; }
-  .switch .active { background: var(--surface); color: var(--ink); font-weight: 600; border: 1px solid var(--border); }
+  .crumb { color: #5C6E66; }
+  .crumb b { color: #263B34; font-weight: 600; }
+  .mapControls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  #groups {
+    max-width: 215px;
+    border: 1px solid #DCE2D6;
+    border-radius: 7px;
+    background: #FAFBF7 !important;
+    color: #263B34;
+    padding: 5px 7px;
+    font-size: 11.5px;
+  }
+  .zoomBar {
+    display: inline-flex; align-items: center; gap: 2px;
+    border: 1px solid #DCE2D6; border-radius: 7px; background: #F5F5F0; padding: 2px;
+  }
+  .zoomBar button {
+    padding: 3px 8px; border-radius: 5px; font-size: 11.5px; font-weight: 600; color: #263B34;
+  }
+  .zoomBar button:hover { background: #E8EEDF; }
+  .zoomBar span { font-size: 11px; font-weight: 600; min-width: 38px; text-align: center; color: #263B34; }
+  .switch { display: flex; background: #F5F5F0; border: 1px solid #DCE2D6; border-radius: 7px; padding: 2px; }
+  .switch button { font-size: 11px; padding: 4px 9px; border-radius: 5px; color: #5C6E66; font-weight: 500; }
+  .switch .active { background: #FAFBF7 !important; color: #263B34; font-weight: 600; border: 1px solid #DCE2D6; }
 
   .canvas {
     position: relative;
     flex: 1;
     min-height: 0;
     overflow: auto;
-    background-color: var(--bg);
+    background-color: #F5F5F0 !important;
     background-image: radial-gradient(#D5DDD0 0.75px, transparent 0.75px);
     background-size: 20px 20px;
   }
-  .diagram {
-    position: relative;
-    width: 628px;
-    min-height: 460px;
-    margin: 0 auto;
-  }
-  .lines {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-  .lines path { fill: none; stroke: var(--line); stroke-width: 1.35; }
-  .lines path.active-path { stroke: #8FA383; stroke-width: 1.7; }
+  .zoom-stage { position: relative; margin: 0 auto; }
+  .diagram { position: relative; transform-origin: top left; }
+  .lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .lines path { fill: none; stroke: #C7D1BE; stroke-width: 1.3; }
+  .lines path.active-path { stroke: #8FA383; stroke-width: 1.65; }
 
   .node {
     position: absolute;
-    border: 1px solid var(--border);
+    border: 1px solid #DCE2D6;
     border-radius: 9px;
-    background: var(--surface);
-    color: var(--ink);
-    padding: 11px 13px;
+    background: #FAFBF7 !important;
+    color: #263B34 !important;
+    padding: 9px 12px;
     text-align: left;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.45;
     overflow-wrap: break-word;
     word-break: normal;
   }
-  button.node:hover { border-color: var(--sage-border); background: #F1F4EA; }
-  .node.selected { border-color: #93A787; background: var(--sage); }
+  button.node:hover { border-color: #BAC8AE; background: #F1F4EA !important; }
+  .node.selected { border-color: #93A787; background: #E8EEDF !important; }
   .root {
-    left: 14px;
-    width: 146px;
-    padding: 15px 14px;
-    background: var(--sage);
-    border-color: var(--sage-border);
+    left: 16px;
+    width: 150px;
+    padding: 13px 13px;
+    background: #E8EEDF !important;
+    border-color: #BAC8AE;
   }
-  .root strong { display: block; font-size: 13px; line-height: 1.45; margin-top: 4px; }
-  .root small { display: block; margin-top: 6px; color: var(--muted); font-size: 11px; }
-  .node small { display: block; color: var(--muted); font-size: 10.5px; margin-top: 4px; }
-  .hub { left: 198px; width: 176px; }
-  .leaf { left: 412px; width: 202px; display: flex; align-items: flex-start; gap: 7px; }
-  .leaf-dot {
-    width: 5px; height: 5px; border-radius: 50%; background: #8DA280;
-    flex-shrink: 0; margin-top: 7px;
-  }
+  .root strong { display: block; font-size: 13px; line-height: 1.4; margin-top: 3px; }
+  .root small { display: block; margin-top: 5px; color: #5C6E66; font-size: 11px; }
+  .node small { display: block; color: #5C6E66; font-size: 10.5px; margin-top: 3px; }
+  .hub { left: 202px; width: 184px; }
+  .leaf { width: 196px; display: flex; align-items: flex-start; gap: 7px; }
+  .leaf-dot { width: 5px; height: 5px; border-radius: 50%; background: #8DA280; flex-shrink: 0; margin-top: 7px; }
 
   .mapFooter {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 18px;
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-    font-size: 11.5px;
-    color: var(--muted);
+    padding: 8px 16px;
+    border-top: 1px solid #DCE2D6;
+    background: #FAFBF7 !important;
+    font-size: 11px;
+    color: #5C6E66;
   }
 
-  /* List & Search view (zero pagination, content-visibility for smooth scroll) */
-  .list { padding: 16px 18px; display: grid; gap: 8px; }
+  .list { padding: 14px 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
   .list button {
     text-align: left;
-    border: 1px solid var(--border);
-    padding: 12px 14px;
-    background: var(--surface);
-    color: var(--ink);
+    border: 1px solid #DCE2D6;
+    padding: 11px 13px;
+    background: #FAFBF7 !important;
+    color: #263B34 !important;
     border-radius: 8px;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 12.5px;
+    font-weight: 600;
     line-height: 1.45;
     content-visibility: auto;
     contain-intrinsic-size: 62px;
   }
-  .list button:hover { background: #F1F4EA; border-color: var(--sage-border); }
-  .list button.selected { background: var(--sage); border-color: #93A787; }
-  .list small { display: block; color: var(--muted); margin-top: 4px; font-size: 12px; font-weight: 400; }
-  .empty { padding: 32px; color: var(--muted); font-size: 13px; }
+  .list button:hover { background: #F1F4EA !important; border-color: #BAC8AE; }
+  .list button.selected { background: #E8EEDF !important; border-color: #93A787; }
+  .list small { display: block; color: #5C6E66; margin-top: 4px; font-size: 11.5px; font-weight: 400; }
+  .empty { padding: 28px; color: #5C6E66; font-size: 13px; }
 
-  /* Right Panel: Stable Details & Example */
+  /* Right Panel: Stable Details */
   .details {
-    border-left: 1px solid var(--border);
-    padding: 22px 22px;
+    border-left: 1px solid #DCE2D6;
+    padding: 18px 20px;
     overflow-y: auto;
-    background: var(--surface);
+    background: #FAFBF7 !important;
   }
-  .detailTag { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-top: 18px; font-weight: 600; }
-  .details h2 { font-size: 22px; line-height: 1.38; letter-spacing: -0.4px; font-weight: 700; margin: 8px 0 8px; color: var(--ink); }
-  .meaning { font-size: 13.5px; color: #3D524A; line-height: 1.65; margin-bottom: 6px; }
-  .rule { height: 1px; background: var(--border); margin: 20px 0; }
+  .detailTag { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #5C6E66; margin-top: 14px; font-weight: 600; }
+  .details h2 { font-size: 21px; line-height: 1.36; letter-spacing: -0.4px; font-weight: 700; margin: 7px 0; color: #263B34; }
+  .meaning { font-size: 13.5px; color: #3D524A; line-height: 1.62; margin-bottom: 6px; }
+  .rule { height: 1px; background: #DCE2D6; margin: 16px 0; }
   .example {
     font-size: 13px;
-    line-height: 1.72;
-    margin: 10px 0 12px;
+    line-height: 1.7;
+    margin: 9px 0 12px;
     padding: 13px 15px;
-    background: var(--bg);
-    border: 1px solid var(--border);
+    background: #F5F5F0 !important;
+    border: 1px solid #DCE2D6;
     border-radius: 8px;
-    color: var(--ink);
-    text-align: left;
+    color: #263B34 !important;
+    text-align: left !important;
     letter-spacing: 0;
     word-spacing: 0;
     overflow-wrap: break-word;
   }
   .audio {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 9px 13px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    font-size: 12px;
-    font-weight: 500;
-    background: var(--bg);
-    color: var(--ink);
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 13px; border: 1px solid #DCE2D6; border-radius: 7px;
+    font-size: 12px; font-weight: 500; background: #F5F5F0 !important; color: #263B34;
   }
-  .audio:hover { background: var(--sage); border-color: var(--sage-border); }
-  #audioStatus { display: block; margin-top: 7px; font-size: 11px; color: var(--muted); min-height: 16px; }
+  .audio:hover { background: #E8EEDF !important; border-color: #BAC8AE; }
+  #audioStatus { display: block; margin-top: 6px; font-size: 11px; color: #5C6E66; min-height: 15px; }
   .bookmark {
-    width: 100%;
-    padding: 11px 14px;
-    background: var(--sage);
-    border: 1px solid var(--sage-border);
-    border-radius: 8px;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--ink);
-    margin-top: 12px;
+    width: 100%; padding: 10px 14px;
+    background: #E8EEDF !important; border: 1px solid #BAC8AE; border-radius: 8px;
+    font-size: 12.5px; font-weight: 600; color: #263B34; margin-top: 10px;
   }
-  .bookmark:hover { background: #DFE8D4; }
-  .note { font-size: 11px; color: var(--muted); line-height: 1.65; margin-top: 16px; }
-
-  footer {
-    padding: 0 28px 14px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
-    color: var(--muted);
-  }
+  .bookmark:hover { background: #DFE8D4 !important; }
+  .note { font-size: 11px; color: #5C6E66; line-height: 1.6; margin-top: 14px; }
   [hidden] { display: none !important; }
 
   @media (max-width: 1120px) {
-    .workspace { grid-template-columns: 200px minmax(360px, 1fr); height: auto; min-height: 0; }
-    .details { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--border); }
-    .mapPanel { height: 560px; }
-    .intro { gap: 16px; }
-    .search { width: 250px; }
+    .workspace { grid-template-columns: 190px minmax(340px, 1fr); overflow-y: auto; }
+    .details { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #DCE2D6; }
+    .mapPanel { min-height: 480px; }
+    .brand-sub { display: none; }
   }
   @media (max-width: 680px) {
-    header { padding: 0 16px; height: 58px; }
-    nav { display: none; }
-    .intro { display: block; padding: 16px; }
-    .search { margin-top: 14px; width: 100%; }
-    .workspace { margin: 0 10px 16px; display: flex; flex-direction: column; }
-    aside { border-right: 0; border-bottom: 1px solid var(--border); padding: 14px; }
-    .branches { flex-direction: row; overflow-x: auto; margin-top: 12px; padding-bottom: 4px; }
-    .branch { min-width: 155px; flex-shrink: 0; }
+    header { padding: 0 12px; }
+    .search { width: 160px; }
+    .workspace { display: flex; flex-direction: column; overflow-y: auto; }
+    aside { border-right: 0; border-bottom: 1px solid #DCE2D6; padding: 12px; }
+    .branches { flex-direction: row; overflow-x: auto; margin-top: 10px; }
+    .branch { min-width: 145px; flex-shrink: 0; }
     .asideFoot { display: none; }
-    .mapPanel { height: 520px; flex-shrink: 0; }
-    .mapBar { padding: 8px 12px; }
-    footer { padding: 0 16px 16px; }
+    .mapPanel { min-height: 460px; flex-shrink: 0; }
   }
 </style>
 </head>
 <body>
 <header>
-  <div class="brand"><span class="logo">K</span>KhangFlash</div>
-  <nav><b>Cây kiến thức</b></nav>
-  <button type="button" id="closeTree" aria-label="Đóng cây kiến thức">×</button>
-</header>
-
-<section class="intro">
-  <div>
-    <div class="eyebrow">LEARN IN CONNECTIONS</div>
-    <h1>Mỗi từ, một nhánh hiểu biết.</h1>
-    <p>Khám phá từ vựng qua những kết nối trong cùng chủ đề.</p>
+  <div class="brand">
+    <span class="logo">K</span>
+    <span>KhangFlash</span>
+    <span class="brand-sub">Mỗi từ, một nhánh hiểu biết.</span>
   </div>
-  <label class="search">
-    <span>⌕</span>
-    <input id="search" type="search" aria-label="Tìm từ hoặc nghĩa" placeholder="Tìm từ hoặc nghĩa tiếng Việt…">
-  </label>
-</section>
+  <div class="head-right">
+    <label class="search">
+      <span>⌕</span>
+      <input id="search" type="search" aria-label="Tìm từ hoặc nghĩa" placeholder="Tìm từ hoặc nghĩa tiếng Việt…">
+    </label>
+    <button type="button" id="closeTree" aria-label="Đóng cây kiến thức">×</button>
+  </div>
+</header>
 
 <main class="workspace">
   <aside>
@@ -360,17 +314,22 @@
     <p class="subtle" id="deckStats"></p>
     <div class="branches" id="branches"></div>
     <div class="asideFoot">
-      Chọn một nhánh để khám phá.<br>
-      Bấm vào từ để xem nghĩa và ví dụ.<br><br>
+      Chọn nhánh · Bấm từ xem nghĩa.<br><br>
       <span id="savedCount"></span>
     </div>
   </aside>
 
   <section class="mapPanel">
     <div class="mapBar">
-      <span class="crumb"><span id="crumbDeck">Bộ từ</span> <span style="margin:0 6px">/</span> <b id="branchLabel"></b></span>
+      <span class="crumb"><span id="crumbDeck">Bộ từ</span> <span style="margin:0 5px">/</span> <b id="branchLabel"></b></span>
       <div class="mapControls">
         <select id="groups" aria-label="Chọn nhóm từ"></select>
+        <div class="zoomBar" aria-label="Thu phóng sơ đồ">
+          <button type="button" id="zoomOut" title="Thu nhỏ">−</button>
+          <span id="zoomVal">100%</span>
+          <button type="button" id="zoomIn" title="Phóng to">+</button>
+          <button type="button" id="zoomFit" title="Vừa khung">Vừa</button>
+        </div>
         <div class="switch">
           <button type="button" id="mapBtn" class="active">Sơ đồ</button>
           <button type="button" id="listBtn">Danh sách</button>
@@ -380,7 +339,7 @@
     <div class="canvas" id="canvas"></div>
     <div class="mapFooter">
       <span id="mapInfo"></span>
-      <span id="scrollHint">Cuộn trong khung để xem toàn bộ từ</span>
+      <span id="scrollHint">Ctrl + cuộn chuột để zoom · bung ngang nhiều cột</span>
     </div>
   </section>
 
@@ -389,11 +348,6 @@
     <div id="detail"></div>
   </section>
 </main>
-
-<footer>
-  <span>KhangFlash / Knowledge tree</span>
-  <span>Hiểu mối liên hệ. Nhớ lâu hơn.</span>
-</footer>
 
 <script>
 (() => {
@@ -410,6 +364,8 @@
   const tones = ['#8FA680', '#8AA9AB', '#B8938F', '#8BA898', '#B8A07E', '#B3AA70', '#8DA0B5', '#A396B2'];
 
   let branch = null, hub = null, selected = null, view = 'map', query = '';
+  let zoom = 1;
+  let naturalW = 860, naturalH = 500;
   let listRenderJob = 0;
   let saved = new Set();
   try { saved = new Set(JSON.parse(localStorage.getItem('kf-tree-design-saved-v1') || '[]')); } catch {}
@@ -471,10 +427,7 @@
         $('audioStatus').textContent = 'Đang phát giọng đọc…';
         return;
       }
-      if (!window.speechSynthesis) {
-        $('audioStatus').textContent = 'Trình duyệt chưa hỗ trợ giọng đọc.';
-        return;
-      }
+      if (!window.speechSynthesis) { $('audioStatus').textContent = 'Trình duyệt chưa hỗ trợ giọng đọc.'; return; }
       speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(c.e || c.t);
       u.lang = 'en-GB';
@@ -492,6 +445,25 @@
     };
   }
 
+  function applyZoom(nextZoom) {
+    zoom = Math.max(0.5, Math.min(1.65, Number(nextZoom.toFixed(2))));
+    $('zoomVal').textContent = Math.round(zoom * 100) + '%';
+    const stage = $('canvas').querySelector('.zoom-stage');
+    const diag = $('canvas').querySelector('.diagram');
+    if (stage && diag) {
+      diag.style.transform = `scale(${zoom})`;
+      stage.style.width = Math.round(naturalW * zoom) + 'px';
+      stage.style.height = Math.round(naturalH * zoom) + 'px';
+    }
+  }
+
+  function fitZoom() {
+    const cw = Math.max(320, $('canvas').clientWidth - 20);
+    const ch = Math.max(260, $('canvas').clientHeight - 20);
+    const fit = Math.min(1.0, cw / naturalW, ch / naturalH);
+    applyZoom(Math.max(0.55, fit));
+  }
+
   function highlightSelectedNode(nid) {
     const prev = $('canvas').querySelectorAll('.selected[data-node]');
     for (let i = 0; i < prev.length; i++) prev[i].classList.remove('selected');
@@ -499,12 +471,11 @@
     if (next) next.classList.add('selected');
   }
 
-  // Render full list / search results WITHOUT pagination, chunked cleanly via rAF so UI never freezes!
   function renderFullList(nodes, labelText) {
     const job = ++listRenderJob;
     const canvas = $('canvas');
     $('mapInfo').textContent = labelText;
-    $('scrollHint').textContent = nodes.length ? 'Hiển thị toàn bộ ' + nodes.length.toLocaleString('vi-VN') + ' từ' : '';
+    $('scrollHint').textContent = nodes.length ? 'Hiển thị toàn bộ ' + nodes.length.toLocaleString('vi-VN') + ' từ (lưới ngang)' : '';
     if (!nodes.length) {
       canvas.innerHTML = '<div class="empty">Không tìm thấy từ phù hợp.</div>';
       return;
@@ -538,18 +509,28 @@
     appendChunk();
   }
 
-  // Render full Diagram WITHOUT pagination: measures real rendered heights of EVERY hub & leaf,
-  // then computes non-overlapping Y coordinates and exact SVG Bezier curves!
-  function renderDiagram() {
+  // Horizontal Multi-Column Diagram: spreads leaves into 2-3 columns horizontally so it NEVER stretches vertically into a giant skinny tower!
+  function renderDiagram(autoFit) {
     listRenderJob++;
     const hubs = branch.ch.map(i => DATA.nodes[i]);
     if (!hub || hub.p !== branch.id) hub = hubs[0];
     const leaves = hub ? hub.ch.map(i => DATA.nodes[i]) : [];
     const hi = hubs.indexOf(hub);
 
+    // Choose 1, 2, or 3 horizontal leaf columns based on leaf count (keeps height compact!)
+    const leafCols = leaves.length > 16 ? 3 : (leaves.length > 7 ? 2 : 1);
+    const LEAF_W = 196;
+    const LEAF_COL_GAP = 16;
+    const LEAF_START_X = 422;
+    const diagW = LEAF_START_X + leafCols * LEAF_W + (leafCols - 1) * LEAF_COL_GAP + 20;
+
     const canvas = $('canvas');
+    const stage = document.createElement('div');
+    stage.className = 'zoom-stage';
     const diagram = document.createElement('div');
     diagram.className = 'diagram';
+    diagram.style.width = diagW + 'px';
+    stage.append(diagram);
 
     const svgNS = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(svgNS, 'svg');
@@ -581,39 +562,45 @@
       return { n: lf, el: btn };
     });
 
-    canvas.replaceChildren(diagram);
+    canvas.replaceChildren(stage);
 
-    // Pass 2: measure real DOM heights so ZERO nodes or SVG lines ever overlap text!
-    const PAD_TOP = 24;
-    const PAD_BOT = 28;
-    const HUB_GAP = 14;
+    // Pass 2: measure real DOM heights and arrange leaves horizontally across 1-3 columns!
+    const PAD_TOP = 20;
+    const PAD_BOT = 24;
+    const HUB_GAP = 10;
     const LEAF_GAP = 10;
 
     let hubTotalH = 0;
-    const hubHeights = hubEls.map(x => {
-      const h = x.el.offsetHeight || 68;
-      hubTotalH += h;
-      return h;
-    });
+    const hubHeights = hubEls.map(x => { const h = x.el.offsetHeight || 58; hubTotalH += h; return h; });
     if (hubHeights.length > 1) hubTotalH += (hubHeights.length - 1) * HUB_GAP;
 
-    let leafTotalH = 0;
-    const leafHeights = leafEls.map(x => {
-      const h = x.el.offsetHeight || 48;
-      leafTotalH += h;
-      return h;
-    });
-    if (leafHeights.length > 1) leafTotalH += (leafHeights.length - 1) * LEAF_GAP;
+    // Distribute leaves evenly across `leafCols` columns
+    const perCol = Math.ceil(leafEls.length / leafCols) || 1;
+    const colHeights = new Array(leafCols).fill(0);
+    const colStartY = new Array(leafCols).fill(PAD_TOP);
+    const leafCoords = [];
 
-    const rootH = rootEl.offsetHeight || 96;
-    const contentH = Math.max(hubTotalH, leafTotalH, rootH, 380);
-    const totalH = contentH + PAD_TOP + PAD_BOT;
-    diagram.style.height = totalH + 'px';
+    for (let i = 0; i < leafEls.length; i++) {
+      const col = Math.floor(i / perCol);
+      const h = leafEls[i].el.offsetHeight || 44;
+      const x = LEAF_START_X + col * (LEAF_W + LEAF_COL_GAP);
+      const y = colStartY[col];
+      leafEls[i].el.style.left = x + 'px';
+      leafEls[i].el.style.top = Math.round(y) + 'px';
+      leafCoords.push({ col, x, cy: y + h / 2 });
+      colStartY[col] += h + LEAF_GAP;
+      colHeights[col] = colStartY[col] - PAD_TOP - LEAF_GAP;
+    }
 
-    // Top-align columns when tall so Root, Hubs & top Leaves are immediately visible without empty space!
-    let hy = PAD_TOP + (hubTotalH < 420 && leafTotalH <= 480 ? Math.max(0, (contentH - hubTotalH) / 2) : 0);
+    const maxLeafH = Math.max(0, ...colHeights);
+    const rootH = rootEl.offsetHeight || 88;
+    const contentH = Math.max(hubTotalH, maxLeafH, rootH, 320);
+    const totalH = Math.round(contentH + PAD_TOP + PAD_BOT);
+
+    // Position hubs starting near top
+    let hy = PAD_TOP;
     const hubCenters = [];
-    let activeHubCenterY = PAD_TOP + 40;
+    let activeHubCenterY = PAD_TOP + 34;
     for (let i = 0; i < hubEls.length; i++) {
       hubEls[i].el.style.top = Math.round(hy) + 'px';
       const cy = hy + hubHeights[i] / 2;
@@ -622,39 +609,38 @@
       hy += hubHeights[i] + HUB_GAP;
     }
 
-    let ly = PAD_TOP + (leafTotalH < hubTotalH && hubTotalH <= 520 ? Math.max(0, (hubTotalH - leafTotalH) / 2) : 0);
-    const leafCenters = [];
-    for (let i = 0; i < leafEls.length; i++) {
-      leafEls[i].el.style.top = Math.round(ly) + 'px';
-      leafCenters.push(ly + leafHeights[i] / 2);
-      ly += leafHeights[i] + LEAF_GAP;
-    }
-
-    // Align root cleanly beside the visible top of the hub column
-    const rootTop = Math.round(PAD_TOP + Math.min(140, Math.max(0, (Math.min(hubTotalH, 420) - rootH) / 2)));
+    const rootTop = Math.round(PAD_TOP + Math.min(120, Math.max(0, (Math.min(hubTotalH, 360) - rootH) / 2)));
     rootEl.style.top = rootTop + 'px';
     const rootCy = rootTop + rootH / 2;
 
-    // Exact SVG Bezier paths connecting measured edges (root right = 160, hub left = 198, hub right = 374, leaf left = 412)
-    const W = 628;
-    svg.setAttribute('viewBox', `0 0 ${W} ${totalH}`);
+    naturalW = diagW;
+    naturalH = totalH;
+    diagram.style.height = totalH + 'px';
+    svg.setAttribute('viewBox', `0 0 ${diagW} ${totalH}`);
+
+    // Clean SVG Bezier paths: Root(166) -> Hubs(202), Active Hub(386) -> First Column Leaves(422) + subtle rail for col 2/3
     let pathsHtml = '';
     for (let i = 0; i < hubCenters.length; i++) {
       const hc = hubCenters[i];
       const cls = hc.id === hub.id ? ' class="active-path"' : '';
-      pathsHtml += `<path${cls} d="M160 ${rootCy.toFixed(1)} C180 ${rootCy.toFixed(1)} 178 ${hc.cy.toFixed(1)} 198 ${hc.cy.toFixed(1)}"/>`;
+      pathsHtml += `<path${cls} d="M166 ${rootCy.toFixed(1)} C185 ${rootCy.toFixed(1)} 183 ${hc.cy.toFixed(1)} 202 ${hc.cy.toFixed(1)}"/>`;
     }
-    for (let i = 0; i < leafCenters.length; i++) {
-      const lcy = leafCenters[i];
-      pathsHtml += `<path class="active-path" d="M374 ${activeHubCenterY.toFixed(1)} C394 ${activeHubCenterY.toFixed(1)} 392 ${lcy.toFixed(1)} 412 ${lcy.toFixed(1)}"/>`;
+    for (let i = 0; i < leafCoords.length; i++) {
+      const lc = leafCoords[i];
+      if (lc.col === 0) {
+        pathsHtml += `<path class="active-path" d="M386 ${activeHubCenterY.toFixed(1)} C405 ${activeHubCenterY.toFixed(1)} 403 ${lc.cy.toFixed(1)} ${lc.x} ${lc.cy.toFixed(1)}"/>`;
+      }
     }
     svg.innerHTML = pathsHtml;
 
-    $('mapInfo').textContent = `Nhóm ${hi + 1}/${hubs.length} · ${leaves.length} từ liên quan (hiển thị đủ)`;
-    $('scrollHint').textContent = totalH > canvas.clientHeight ? 'Cuộn xuống trong khung để xem hết nhóm' : 'Đang hiển thị đầy đủ nhóm này';
+    $('mapInfo').textContent = `Nhóm ${hi + 1}/${hubs.length} · ${leaves.length} từ (${leafCols} cột ngang)`;
+    $('scrollHint').textContent = 'Ctrl + cuộn chuột hoặc bấm − / + để thu phóng';
+
+    if (autoFit) fitZoom();
+    else applyZoom(zoom);
   }
 
-  function render() {
+  function render(autoFit = false) {
     if (!branch) return;
     renderBranches();
     $('groups').innerHTML = branch.ch.map(id =>
@@ -674,16 +660,15 @@
       renderFullList(nodes, nodes.length.toLocaleString('vi-VN') + ' từ trong nhánh ' + branch.l);
       return;
     }
-    renderDiagram();
+    renderDiagram(autoFit);
   }
 
-  // Delegated click handlers (zero per-button listener churn -> ultra-fast!)
   $('canvas').addEventListener('click', e => {
     const hubBtn = e.target.closest('[data-hub]');
     if (hubBtn) {
       hub = DATA.nodes[Number(hubBtn.dataset.hub)];
       showDetail(hub);
-      render();
+      render(false);
       return;
     }
     const nodeBtn = e.target.closest('[data-node]');
@@ -694,6 +679,17 @@
     }
   });
 
+  // Ctrl + Wheel smooth zoom inside diagram
+  $('canvas').addEventListener('wheel', e => {
+    if (!e.ctrlKey || view !== 'map' || query) return;
+    e.preventDefault();
+    applyZoom(zoom * (e.deltaY < 0 ? 1.12 : 1 / 1.12));
+  }, { passive: false });
+
+  $('zoomIn').onclick = () => applyZoom(zoom + 0.12);
+  $('zoomOut').onclick = () => applyZoom(zoom - 0.12);
+  $('zoomFit').onclick = () => fitZoom();
+
   $('branches').addEventListener('click', e => {
     const b = e.target.closest('[data-branch]');
     if (!b) return;
@@ -703,7 +699,7 @@
     $('search').value = '';
     $('canvas').scrollTop = 0;
     showDetail(hub);
-    render();
+    render(true);
   });
 
   $('groups').addEventListener('change', e => {
@@ -713,7 +709,7 @@
     view = 'map';
     $('canvas').scrollTop = 0;
     showDetail(hub);
-    render();
+    render(false);
   });
 
   let searchTimer = 0;
@@ -723,16 +719,15 @@
     searchTimer = setTimeout(() => {
       query = val;
       $('canvas').scrollTop = 0;
-      render();
+      render(false);
     }, 130);
   });
 
-  $('mapBtn').onclick = () => { view = 'map'; query = ''; $('search').value = ''; $('canvas').scrollTop = 0; render(); };
-  $('listBtn').onclick = () => { view = 'list'; $('canvas').scrollTop = 0; render(); };
+  $('mapBtn').onclick = () => { view = 'map'; query = ''; $('search').value = ''; $('canvas').scrollTop = 0; render(true); };
+  $('listBtn').onclick = () => { view = 'list'; $('canvas').scrollTop = 0; render(false); };
 
   function openData(payload) {
     DATA = payload.data;
-    // Pre-normalize search text ONCE per card (eliminates lag while typing!)
     for (let i = 0; i < DATA.cards.length; i++) {
       const c = DATA.cards[i];
       c._norm = norm(c.t + ' ' + c.d);
@@ -763,7 +758,7 @@
     $('crumbDeck').textContent = deckTitleText;
     $('deckStats').textContent = DATA.cards.length.toLocaleString('vi-VN') + ' từ & cụm từ · ' + branches.length + ' nhánh';
     if (hub) showDetail(hub);
-    render();
+    render(true);
   }
 
   window.addEventListener('message', e => {
