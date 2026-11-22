@@ -837,6 +837,7 @@
   }
 
   async function loadAll() {
+   if (window.__KF_STATIC_TOPIC_ID__) { loaded = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; }
     if (loaded) return;
     loaded = true; if (isVocabPage) { try { const topicId = getSingleTopicId(); if (topicId) { const tc = await readTopicCache(topicId); if (tc && Array.isArray(tc.cards)) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { if (topicId) Promise.resolve(writeTopicCache(topicId, buildTopicSlice(cached, topicId))).catch(() => {}); window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } catch {} }
     hookRelationsShow(); 
