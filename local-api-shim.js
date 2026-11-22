@@ -384,7 +384,7 @@
     }
     return jsonRes({ ok: true, guest: false, plan: st.plan || null });
   }
-
+window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('POST', { plan }); };
   function handleKnowledge(method, body) {
     const st = readJson(K.knowledge, { ok: true, guest: false, entries: [] });
     if (!Array.isArray(st.entries)) st.entries = [];
