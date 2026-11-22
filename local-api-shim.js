@@ -55,9 +55,7 @@
       st.textContent = '#kf-today-sync-status{display:none!important;}';
       (document.head || document.documentElement).appendChild(st);
     }
-    window.__KF_LIVE_PREFETCH__ = origFetch('/live-override-custom.js', { cache: 'force-cache', credentials: 'same-origin' })
-      .then(r => (r.ok ? r.text() : ''))
-      .catch(() => '');
+    window.__KF_LIVE_PREFETCH__ = Promise.resolve('');
     if (needsVocabGate) {
       window.__KF_BASE_MERGE_DONE__ = false;
       window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
