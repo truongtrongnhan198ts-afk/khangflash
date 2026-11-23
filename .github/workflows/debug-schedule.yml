@@ -24,9 +24,9 @@ jobs:
           npx playwright install chromium
           python3 -m http.server 4173 >/dev/null 2>&1 &
           SERVER_PID=$!
-          trap "kill $SERVER_PID 2>/dev/null || true" EXIT
+          trap "kill $SERVER_PID 2>/dev/null || true; rm -f ./_debug-schedule.mjs" EXIT
           sleep 1
-          cat << 'EOF' > /tmp/debug-schedule.mjs
+          cat << 'EOF' > ./_debug-schedule.mjs
           import { chromium } from 'playwright';
           const browser = await chromium.launch({ headless: true });
           const page = await browser.newPage();
@@ -64,4 +64,4 @@ jobs:
           }
           await browser.close();
           EOF
-          node /tmp/debug-schedule.mjs
+          node ./_debug-schedule.mjs
