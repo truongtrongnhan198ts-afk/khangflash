@@ -1,0 +1,50 @@
+/* KhangFlash Schedule · cream / sage · 20261123 */
+body[data-page="schedule"]{color-scheme:light!important;background:#f5f5f0!important;color:#263b34!important;--d-bg:#f5f5f0;--d-text:#263b34;--d-surface:#fafbf7;--d-border:#dce2d6}
+body[data-page="schedule"] .hub-main{background:#f5f5f0!important;min-height:100vh;padding:30px 34px 60px!important}
+body[data-page="schedule"] #hub-content{max-width:1190px!important;margin:0 auto!important;display:flex;flex-direction:column;gap:16px;color:#263b34!important;font-family:'Be Vietnam Pro','Plus Jakarta Sans',system-ui,sans-serif}
+body[data-page="schedule"] #hub-content *{box-sizing:border-box;text-shadow:none!important}
+body[data-page="schedule"] #hub-content :is(h1,h2,h3,h4,strong,summary){color:#263b34!important}
+body[data-page="schedule"] #hub-content :is(p,label,small){color:#667367!important}
+body[data-page="schedule"] .kf-sc-heading{order:-5;display:flex;align-items:center;justify-content:space-between;padding:6px 0 10px;gap:16px}
+body[data-page="schedule"] .kf-sc-heading small{font-size:10px;letter-spacing:1.6px}
+body[data-page="schedule"] .kf-sc-heading h1{font-size:29px!important;line-height:1.3!important;letter-spacing:-.9px;margin:7px 0!important;font-weight:650}
+body[data-page="schedule"] .kf-sc-heading p{font-size:12px;margin:0!important}
+body[data-page="schedule"] .kf-sc-date{font-size:12px;color:#687763;border:1px solid #dce2d6;padding:10px 15px;border-radius:8px;white-space:nowrap;background:#fafbf7}
+body[data-page="schedule"] .plan-overview{order:-4;display:grid!important;grid-template-columns:minmax(0,1fr) 310px!important;gap:18px!important;margin:0!important}
+body[data-page="schedule"] :is(.plan-focus,.plan-today){margin:0!important;border:1px solid #dce2d6!important;border-radius:12px!important;box-shadow:none!important;padding:24px!important;background:#fafbf7!important;color:#263b34!important}
+body[data-page="schedule"] .plan-today{order:-1;background:#eaf0e2!important;border-color:#d5dfcb!important}
+body[data-page="schedule"] :is(.plan-focus,.plan-today)>small{display:block!important;font-size:10px!important;letter-spacing:1.1px!important;font-weight:650!important;color:#5e7355!important}
+body[data-page="schedule"] .plan-focus h1{font-size:23px!important;line-height:1.5!important;font-weight:600!important;margin:12px 0!important;letter-spacing:-.5px!important}
+body[data-page="schedule"] .plan-today h2{font-size:26px!important;font-weight:650!important;line-height:1.5!important;letter-spacing:-.5px!important;margin:12px 0 8px!important}
+body[data-page="schedule"] .plan-today>p{font-size:12px!important;line-height:1.8!important;margin:5px 0 18px!important}
+body[data-page="schedule"] #hub-content :is(.hub-button,button:not(.kf-day-toggle)){font-family:inherit!important;font-size:12px!important;font-weight:600!important;min-height:36px;padding:9px 13px!important;border:1px solid #d4decd!important;border-radius:7px!important;background:#f8faf4!important;color:#38513a!important;box-shadow:none!important;line-height:1.5!important;text-decoration:none!important;cursor:pointer}
+body[data-page="schedule"] #hub-content .hub-button:hover{background:#e3ebd9!important;border-color:#a6b69a!important}
+body[data-page="schedule"] .plan-today>a{display:inline-flex!important;align-items:center;margin:4px 5px 6px 0!important}
+body[data-page="schedule"] #hub-content .plan-today a[href*="flashcard"]{background:#50694b!important;color:#fff!important;border-color:#50694b!important}
+body[data-page="schedule"] .kf-sc-help{margin-top:15px;font-size:11px;line-height:1.8;border-top:1px solid #d8e1cf;padding-top:12px}
+body[data-page="schedule"] .kf-sc-help>summary{font-size:11px!important;font-weight:500!important;cursor:pointer;color:#65765b!important}
+body[data-page="schedule"] .kf-sc-help p{font-size:11px!important;line-height:1.85!important;margin:10px 0!important}
+body[data-page="schedule"] #hub-content>.plan-week{background:#fafbf7!important;border:1px solid #dce2d6!important;border-radius:10px!important;padding:0!important;margin:0!important;box-shadow:none!important;color:#263b34!important;overflow:hidden}
+body[data-page="schedule"] #hub-content>details.plan-week>summary{padding:16px 20px!important;font-size:13px!important;font-weight:600!important;cursor:pointer;border-bottom:1px solid transparent;list-style-position:inside}
+body[data-page="schedule"] #hub-content>details.plan-week[open]>summary{border-bottom-color:#e2e7dc;background:#eef2e7!important}
+body[data-page="schedule"] #hub-content .plan-task.kf-day-row{background:transparent!important;border:0!important;border-bottom:1px solid #e6eade!important;border-radius:0!important;padding:12px 18px!important;margin:0!important;gap:8px!important;display:grid!important;grid-template-columns:minmax(250px,1fr) auto auto auto!important;align-items:center}
+body[data-page="schedule"] #hub-content .plan-task.kf-day-row:last-child{border-bottom:0!important}
+body[data-page="schedule"] #hub-content .kf-day-toggle{border:0!important;background:transparent!important;color:#263b34!important;text-align:left!important;padding:6px 0!important;display:grid!important;grid-template-columns:65px 90px minmax(0,1fr) 14px!important;gap:12px!important;align-items:center!important;font-size:12px!important;font-family:inherit!important;box-shadow:none!important}
+body[data-page="schedule"] .kf-day-day{font-size:12px!important;font-weight:650!important}body[data-page="schedule"] .kf-day-date{font-size:11px!important;color:#7a8574!important}
+body[data-page="schedule"] .kf-day-progress{font-size:10px!important;color:#7a8574!important;font-weight:400!important}
+body[data-page="schedule"] .kf-day-content{grid-column:1/-1!important;grid-row:2!important;border:0!important;background:#f1f4eb!important;padding:14px 17px!important;border-radius:7px!important;font-size:12px!important;line-height:1.85!important;color:#667367!important}
+body[data-page="schedule"] .kf-sc-weeks-title{font-size:14px!important;margin:13px 0 0!important;font-weight:650!important}
+body[data-page="schedule"] #adaptive-study{border-style:dashed!important}
+body[data-page="schedule"] #adaptive-study>p,body[data-page="schedule"] #adaptive-study>label{margin:14px 20px!important;font-size:12px!important;line-height:1.85!important}
+body[data-page="schedule"] #adaptive-study>button{margin-left:20px!important}
+body[data-page="schedule"] #adaptive-study input{border:1px solid #d2ddc8!important;border-radius:5px;background:#fff!important;color:#263b34!important;padding:5px!important;width:75px}
+body[data-page="schedule"] #kf-local-plan-controls{padding:14px 18px!important;flex-wrap:wrap;align-items:center;gap:8px 15px;background:#fafbf7!important;order:0}
+body[data-page="schedule"] #kf-local-plan-controls strong{font-size:12px!important}body[data-page="schedule"] #kf-local-plan-controls p{font-size:11px!important;margin:0!important}
+body[data-page="schedule"] #kf-today-sync-status{border:1px solid #e8d9bc!important;border-radius:8px!important;background:#faf4e8!important;padding:12px 16px!important;font-size:11px!important;align-items:center;gap:12px;order:-3}
+body[data-page="schedule"] #kf-today-sync-status p{color:#876b3f!important;margin:0!important}
+body[data-page="schedule"] #plan-day-save:empty{display:none}
+body[data-page="schedule"] #curriculum-today{background:#fafbf7!important;border:1px solid #dce2d6!important;border-radius:12px!important;box-shadow:none!important}
+body[data-page="schedule"] #curriculum-today :is(.fp-task,.fp-card){background:#fafbf7!important;color:#263b34!important;border:1px solid #dce2d6!important;border-radius:9px!important;box-shadow:none!important}
+@media(max-width:1000px){body[data-page="schedule"] .plan-overview{grid-template-columns:1fr 260px!important}body[data-page="schedule"] #hub-content .plan-task.kf-day-row{grid-template-columns:1fr auto auto!important}body[data-page="schedule"] .kf-day-toggle{grid-column:1/-1!important}body[data-page="schedule"] .kf-day-content{grid-row:auto!important}}
+@media(max-width:650px){body[data-page="schedule"] .hub-main{padding:18px 14px 40px!important}body[data-page="schedule"] .plan-overview{grid-template-columns:1fr!important}body[data-page="schedule"] .kf-sc-heading{align-items:flex-start}body[data-page="schedule"] .kf-sc-date{font-size:10px;padding:8px}body[data-page="schedule"] .plan-today h2{font-size:21px!important}body[data-page="schedule"] :is(.plan-focus,.plan-today){padding:18px!important}body[data-page="schedule"] .kf-day-toggle{grid-template-columns:55px 80px minmax(0,1fr) 12px!important;gap:7px!important}body[data-page="schedule"] .kf-day-progress{font-size:9px!important}}
+body[data-page="schedule"] .sidebar{background:#eeefe7!important;border-right:1px solid #dce2d6!important;color:#607057!important}body[data-page="schedule"] .sidebar a{color:#607057!important}body[data-page="schedule"] .sidebar a:hover,body[data-page="schedule"] .sidebar a.active{background:#dfe8d3!important;color:#3e5937!important}

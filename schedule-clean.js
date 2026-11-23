@@ -1,0 +1,12 @@
+/* Presentation only: no fetch, storage, progress or scheduling mutations. */
+(()=>{'use strict';if(document.body.dataset.page!=='schedule'||window.KFScheduleClean)return;window.KFScheduleClean={version:'20261123'};
+function help(parent,paragraphs,title){if(!paragraphs.length||parent.querySelector('.kf-sc-help'))return;const d=document.createElement('details');d.className='kf-sc-help';const s=document.createElement('summary');s.textContent=title;d.append(s);paragraphs.forEach(p=>d.append(p));parent.append(d)}
+function decorate(){const host=document.getElementById('hub-content');if(!host)return;
+if(!host.querySelector('.kf-sc-heading')&&host.querySelector('.plan-overview,#curriculum-today')){const h=document.createElement('header');h.className='kf-sc-heading';const x=document.createElement('div'),small=document.createElement('small'),title=document.createElement('h1'),sub=document.createElement('p'),date=document.createElement('span');small.textContent='KHANGFLASH / KẾ HOẠCH HỌC';title.textContent='Hôm nay, học từng bước.';sub.textContent='Lịch hôm nay và lộ trình đến ngày thi của bạn.';date.className='kf-sc-date';date.textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'numeric',month:'numeric',timeZone:'Asia/Bangkok'}).format(new Date());x.append(small,title,sub);h.append(x,date);host.prepend(h)}
+const focus=host.querySelector('.plan-focus');if(focus)help(focus,[...focus.querySelectorAll(':scope>p')],'Chi tiết kế hoạch');
+const today=host.querySelector('.plan-today');if(today){const ps=[...today.querySelectorAll(':scope>p')];if(ps.length>1)help(today,ps.slice(1),'Cách tính khối lượng học')}
+const week=[...host.querySelectorAll(':scope>details.plan-week')].find(d=>d.id!=='adaptive-study'&&d.querySelector('.plan-task'));if(week&&!host.querySelector('.kf-sc-weeks-title')){const h=document.createElement('h2');h.className='kf-sc-weeks-title';h.textContent='Lịch từng tuần';week.before(h)}
+host.querySelectorAll('.kf-day-row').forEach(row=>{const meta=row.querySelector('.kf-day-progress'),title=row.querySelector('.kf-day-content h3');if(meta&&title&&!meta.textContent.trim()){meta.textContent=title.textContent;meta.dataset.kfScMeta='1'}});
+}
+let pending=false;const run=()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;decorate()})};decorate();new MutationObserver(run).observe(document.getElementById('hub-content')||document.body,{childList:true,subtree:true});
+})();
