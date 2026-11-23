@@ -1,5 +1,5 @@
 'use strict';
-if(window.KVoiceUI?.version==='256'){window.KVoice=window.KVoiceUI.engine;}else window.KVoice=(()=>{
+window.KVoice=(()=>{
  const synth=window.speechSynthesis,escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let prefs={accent:'en-GB',rate:1,selected:{},tone:{},source:{},localVoice:{},adjustments:{}},generation=0,lastSpeech=null;
  try{const p=JSON.parse(localStorage.getItem('khang-voice')||'null');if(p){if(['en-GB','en-US'].includes(p.accent))prefs.accent=p.accent;if(Number.isFinite(p.rate)&&p.rate>=.75&&p.rate<=1.15)prefs.rate=p.rate;if(p.selected&&typeof p.selected==='object')prefs.selected=p.selected;if(p.tone&&typeof p.tone==='object')prefs.tone=p.tone;if(p.source&&typeof p.source==='object')prefs.source=p.source;if(p.localVoice&&typeof p.localVoice==='object')prefs.localVoice=p.localVoice;if(p.adjustments&&typeof p.adjustments==='object'&&!Array.isArray(p.adjustments))prefs.adjustments=p.adjustments;}}catch{}
