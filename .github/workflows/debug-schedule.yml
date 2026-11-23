@@ -1,0 +1,67 @@
+name: Debug Schedule
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Command 1 - grep error message
+        run: |
+          grep -rn "Tổng số thẻ trong lịch không khớp" . | head -c 4000 || true
+          echo ""
+          echo "--- CONTEXT ---"
+          grep -rn -o -E '.{0,300}Tổng số thẻ trong lịch không khớp.{0,300}' . || true
+      - name: Command 2 - node check and Playwright
+        run: |
+          node --check full-plan.js learning-plan.js plan.js dashboard.js schedule-clean.js schedule-compact.js || true
+          npm i --no-save playwright
+          npx playwright install chromium
+          python3 -m http.server 4173 >/dev/null 2>&1 &
+          SERVER_PID=$!
+          trap "kill $SERVER_PID 2>/dev/null || true" EXIT
+          sleep 1
+          cat << 'EOF' > /tmp/debug-schedule.mjs
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch({ headless: true });
+          const page = await browser.newPage();
+          page.on('console', msg => {
+            if (msg.type() === 'error') console.log('[console.error]', msg.text());
+          });
+          page.on('pageerror', err => {
+            console.log('[pageerror]', err.stack || err.message);
+          });
+          const targetUrl = 'http://' + 'localhost:4173/schedule.html';
+          await page.goto(targetUrl, { waitUntil: 'networkidle', timeout: 30000 }).catch(e => console.log('[goto-err]', e.message));
+          await page.waitForTimeout(1500);
+          console.log('--- CLICK [data-full-plan-build] ---');
+          const btn1 = page.locator('[data-full-plan-build]').first();
+          if (await btn1.count()) {
+            await btn1.click({ force: true, timeout: 5000 }).catch(e => console.log('[click1-err]', e.message));
+            await page.waitForTimeout(2000);
+          } else {
+            console.log('[warn] [data-full-plan-build] not found');
+          }
+          console.log('--- CLICK Đổi band & thời hạn -> Áp dụng lịch học ---');
+          const btn2 = page.getByText('Đổi band & thời hạn', { exact: false }).first();
+          if (await btn2.count()) {
+            await btn2.click({ force: true, timeout: 5000 }).catch(e => console.log('[click2-err]', e.message));
+            await page.waitForTimeout(1000);
+          } else {
+            console.log('[warn] Đổi band & thời hạn not found');
+          }
+          const btn3 = page.getByText('Áp dụng lịch học', { exact: false }).first();
+          if (await btn3.count()) {
+            await btn3.click({ force: true, timeout: 5000 }).catch(e => console.log('[click3-err]', e.message));
+            await page.waitForTimeout(2000);
+          } else {
+            console.log('[warn] Áp dụng lịch học not found');
+          }
+          await browser.close();
+          EOF
+          node /tmp/debug-schedule.mjs
