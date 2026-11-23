@@ -9,7 +9,7 @@ window.KVoice=(()=>{
  const localVoice=region=>localList(region).some(([id])=>id===prefs.localVoice[region])?prefs.localVoice[region]:region==='en-GB'?'bf_emma':'af_heart';
  let localEngine=null,localImport=null,localUrl=null,prepareTimer=null,preparedTexts=[],prepareEpoch=0;
  const localAccount=()=>window.KStore?.get()?.accountKey||'guest';
- async function getLocal(){localImport ||= import('/kokoro-local.js?v=247').catch(error=>{localImport=null;throw error;});return localEngine=await localImport;}
+ async function getLocal(){localImport ||= import('/kokoro-local.js?v=248').catch(error=>{localImport=null;throw error;});return localEngine=await localImport;}
  function prepare(texts,region=prefs.accent){
   preparedTexts=Array.isArray(texts)?texts:preparedTexts;clearTimeout(prepareTimer);const epoch=++prepareEpoch;
   if(source(region)==='microsoft'){
@@ -18,7 +18,7 @@ window.KVoice=(()=>{
    // Current word/example first; then the next card. The shared scheduler reserves capacity for explicit playback.
    prepareTimer=setTimeout(()=>{let cursor=0;const worker=async()=>{while(valid()&&cursor<items.length){const text=items[cursor++];try{await microsoftAudio(text,id,account,undefined,undefined,pitch,true,valid);}catch{}}};void Promise.allSettled([worker(),worker()]);},0);return;
   }
-  if(source(region)!=='kokoro')return;const voice=localVoice(region),account=localAccount(),items=[...preparedTexts];prepareTimer=setTimeout(async()=>{try{if(source(region)==='kokoro'&&localVoice(region)===voice)await (await getLocal()).prefetch(items,voice,account);}catch{}},150);
+  if(source(region)!=='kokoro')return;const voice=localVoice(region),account=localAccount(),items=[...preparedTexts];prepareTimer=setTimeout(async()=>{try{if(source(region)==='kokoro'&&localVoice(region)===voice)await (await getLocal()).prefetch(items,voice,account);}catch{}},40);
  }
  async function localSpeak(text,region,ticket){
   const started=Date.now();let playbackSource='generated';
@@ -206,7 +206,7 @@ window.KVoice=(()=>{
   }
   if(b.hasAttribute('data-voice-stop')){stop();const status=document.getElementById('voice-preview-status');if(status)status.textContent='Đã dừng nghe thử.';document.querySelectorAll('#voice-dialog [data-voice-sample],#voice-dialog [data-voice-preview]').forEach(x=>x.disabled=false);}
   if(b.hasAttribute('data-voice-close'))closeSettings();
- });
+ });setTimeout(()=>{if(source(prefs.accent)==='kokoro')getLocal().then(m=>m.warmup?.()).catch(()=>{});},300);
  synth?.addEventListener('voiceschanged',()=>{update();if(document.getElementById('voice-dialog')?.open)renderSettings();});window.addEventListener('pagehide',stop);
  return{speak,stop,pause,resume,accent,settings,update,list,choose,prepare};
 })();
