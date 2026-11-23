@@ -3,11 +3,11 @@ let loading=null,tts=null,latest=0,queue=Promise.resolve();
 const send=(id,message)=>{if(id===latest)postMessage({id,type:'progress',message});};
 async function model(){
  if(tts)return tts;
-if(!loading){const progress_callback=p=>{if(p.status==='progress')send(latest,'Đang tải Kokoro trên máy'+(Number.isFinite(p.progress)?' · '+Math.round(p.progress)+'%':'')+'...');};loading=(async()=>{try{if(typeof navigator!=='undefined'&&navigator.gpu&&await navigator.gpu.requestAdapter())return await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX',{dtype:'fp32',device:'webgpu',progress_callback});}catch{}return await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX',{dtype:'q8',device:'wasm',progress_callback});})().then(value=>(tts=value)).catch(error=>{loading=null;throw error;});}
+if(!loading){const progress_callback=p=>{if(p.status==='progress')send(latest,'Đang tải Kokoro trên máy'+(Number.isFinite(p.progress)?' · '+Math.round(p.progress)+'%':'')+'...');};loading=(async()=>{try{if(typeof navigator!=='undefined'&&navigator.gpu&&await navigator.gpu.requestAdapter()){try{return await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX',{dtype:'fp16',device:'webgpu',progress_callback});}catch{return await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX',{dtype:'q8',device:'webgpu',progress_callback});}}}catch{}return await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX',{dtype:'q8',device:'wasm',progress_callback});})().then(value=>(tts=value)).catch(error=>{loading=null;throw error;});}
  return loading;
 }
 self.onmessage=({data})=>{
- latest=data.id;if(data.type!=='generate')return;
+ if(data.type==='warmup'){model().catch(()=>{});return;}latest=data.id;if(data.type!=='generate')return;
  queue=queue.catch(()=>{}).then(async()=>{
   const {id,text,voice}=data;if(id!==latest)return;
   try{
