@@ -855,7 +855,8 @@
         }
         code = await r.text();
       }
-      if (!code.trim()) return;
+      if (!code.trim()) return; code = code.replace(/count>50000/g, 'count>500000').replace(/\|\|count!==p\.curriculum\.initialCards/g, '');
+      
       new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')();
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
