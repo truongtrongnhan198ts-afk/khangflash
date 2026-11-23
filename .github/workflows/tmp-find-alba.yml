@@ -1,0 +1,10 @@
+name: tmp-find-alba
+on: [push]
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find alba and lessac
+        run: |
+          grep -rn -i "alba\|lessac" . --exclude-dir=.git | python3 -c 'import sys,re; seen=set(); [print(f"{p[0]}:{p[1]}:{m.start()+1}: {p[2][max(0,m.start()-75):m.end()+75]}" if len(p)==3 and (m:=re.search(r"alba|lessac",p[2],re.I)) else line.strip()) for line in sys.stdin for p in [line.rstrip("\n").split(":",2)] if p[0] not in seen and not seen.add(p[0])]' || true
