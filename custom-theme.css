@@ -444,3 +444,9 @@ body.w-exercise .w-essay-hints>summary,body.w-exercise .w-essay-hint-tools{flex:
 body.w-exercise .w-essay-hint-scroll{flex:1 1 0;min-height:0;max-height:none!important;width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:auto}
 body.w-exercise .w-essay-hint-scroll .w-essay-paragraph,body.w-exercise .w-essay-hint-scroll .w-essay-paragraph p{width:auto!important;max-width:100%;min-width:0;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere}
 body.w-exercise .w-essay-hints:not([open]){height:auto!important;min-height:0!important;resize:none!important}
+/* KF_SMOOTH_HOVER_PERF_V1 */
+.deck-grid>.deck,.deck-grid>.tid-deck,.deck-grid>*,.kf-tree-wrap .deck,.kf-tree-wrap .tid-deck{contain:layout style paint}
+.deck,.tid-deck,.deck *,.tid-deck *,.deck-grid>*,.kf-tree-wrap .deck,.kf-tree-wrap .tid-deck,.flashcard,.flashcard-face{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.deck,.tid-deck,.deck-grid>*,.kf-tree-wrap .deck,.kf-tree-wrap .tid-deck,.td-overview-launch,.game-tile{transition:border-color 120ms ease,opacity 120ms ease,background-color 120ms ease!important}
+.deck:hover,.tid-deck:hover,.deck-grid>*:hover,.kf-tree-wrap .deck:hover,.kf-tree-wrap .tid-deck:hover,.td-overview-launch:hover,.game-tile:hover,.flashcard:not(.is-flipped):hover{transform:none!important}
+.deck:hover,.tid-deck:hover,.deck-grid>*:hover,.kf-tree-wrap .deck:hover,.kf-tree-wrap .tid-deck:hover{filter:brightness(1.03)}
