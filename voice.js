@@ -9,7 +9,7 @@ if(window.KVoiceUI?.version==='256'){window.KVoice=window.KVoiceUI.engine;}else 
  const localVoice=region=>localList(region).some(([id])=>id===prefs.localVoice[region])?prefs.localVoice[region]:region==='en-GB'?'bf_emma':'af_heart';
  let localEngine=null,localImport=null,localUrl=null,prepareTimer=null,preparedTexts=[],prepareEpoch=0;
  const localAccount=()=>window.KStore?.get()?.accountKey||'guest';
- async function getLocal(){localImport ||= import('/kokoro-local.js?v=246').catch(error=>{localImport=null;throw error;});return localEngine=await localImport;}
+ async function getLocal(){localImport ||= import('/kokoro-local.js?v=247').catch(error=>{localImport=null;throw error;});return localEngine=await localImport;}
  function prepare(texts,region=prefs.accent){
   preparedTexts=Array.isArray(texts)?texts:preparedTexts;clearTimeout(prepareTimer);const epoch=++prepareEpoch;
   if(source(region)==='microsoft'){
@@ -18,7 +18,7 @@ if(window.KVoiceUI?.version==='256'){window.KVoice=window.KVoiceUI.engine;}else 
    // Current word/example first; then the next card. The shared scheduler reserves capacity for explicit playback.
    prepareTimer=setTimeout(()=>{let cursor=0;const worker=async()=>{while(valid()&&cursor<items.length){const text=items[cursor++];try{await microsoftAudio(text,id,account,undefined,undefined,pitch,true,valid);}catch{}}};void Promise.allSettled([worker(),worker()]);},0);return;
   }
-  if(source(region)!=='kokoro')return;const voice=localVoice(region),account=localAccount(),items=[...preparedTexts];prepareTimer=setTimeout(async()=>{try{if(source(region)==='kokoro'&&localVoice(region)===voice)await (await getLocal()).prefetch(items,voice,account);}catch{}},700);
+  if(source(region)!=='kokoro')return;const voice=localVoice(region),account=localAccount(),items=[...preparedTexts];prepareTimer=setTimeout(async()=>{try{if(source(region)==='kokoro'&&localVoice(region)===voice)await (await getLocal()).prefetch(items,voice,account);}catch{}},150);
  }
  async function localSpeak(text,region,ticket){
   const started=Date.now();let playbackSource='generated';
