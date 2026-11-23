@@ -856,11 +856,12 @@
         code = await r.text();
       }
       if (!code.trim()) return; code = code.replace(/count>50000/g, 'count>500000').replace(/\|\|count!==p\.curriculum\.initialCards/g, '');
-      
+          const prevKVoice = window.KVoice;
       new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')();
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
+      if (prevKVoice) { window.KVoice = prevKVoice; } try { delete window.KVoiceUI; } catch { window.KVoiceUI = undefined; }
       hookFetchForAntonyms();
       await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17(), loadVnExpressPhrasesW18(), loadVnExpressPhrasesW19(), loadVnExpressPhrasesW20()]);
       hookFetchForAntonyms();
