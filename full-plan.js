@@ -150,7 +150,7 @@ window.FullPlan=(()=>{
    for(const rawId of d.cards){
     const id=canonical(rawId),c=byId.get(id);
     if(c&&c.studyKind==='grammar')allGram.push(id);
-    else if(c)allVocab.push(c);
+    else if(c)allVocab.push(c); else allGram.push(id);
    }
   }
   if(!allVocab.length)return plan;
@@ -192,7 +192,7 @@ window.FullPlan=(()=>{
    }
    activeDays[di].cards=[...out,...gramBuckets[di]];
   }
-  plan.interleavedV2=true;
+  plan.interleavedV2=true; plan.total=plan.days.reduce((n,d)=>n+(Array.isArray(d.cards)?d.cards.length:0),0);
   return plan;
  }
 
