@@ -857,7 +857,7 @@
       }
       if (!code.trim()) return; code = code.replace(/count>50000/g, 'count>500000').replace(/\|\|count!==p\.curriculum\.initialCards/g, '');
           const prevKVoice = window.KVoice;
-      new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')();
+      new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')(); if (prevKVoice) { window.KVoice = prevKVoice; } try { delete window.KVoiceUI; } catch { window.KVoiceUI = undefined; }
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
