@@ -856,13 +856,13 @@
         code = await r.text();
       }
       if (!code.trim()) return; code = code.replace(/count>50000/g, 'count>500000').replace(/\|\|count!==p\.curriculum\.initialCards/g, '');
-          const prevKVoice = window.KVoice;
-      new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')(); if (prevKVoice) { window.KVoice = prevKVoice; } try { delete window.KVoiceUI; } catch { window.KVoiceUI = undefined; }
+          const prevKVoice = window.KVoice, prevKVoiceUI = window.KVoiceUI;
+      new Function('"use strict";\n' + code + '\n//# sourceURL=live-override-custom.js')(); if (prevKVoice) window.KVoice = prevKVoice; if (prevKVoiceUI) window.KVoiceUI = prevKVoiceUI; { const d = document.getElementById('voice-dialog'); if (d && /Piper/i.test(d.textContent || '')) d.remove(); }
       if (window.KFExpandedBaseReady && typeof window.KFExpandedBaseReady.then === 'function') {
         await window.KFExpandedBaseReady;
       }
-      if (prevKVoice) { window.KVoice = prevKVoice; } try { delete window.KVoiceUI; } catch { window.KVoiceUI = undefined; }
-      hookFetchForAntonyms();
+      if (prevKVoice) window.KVoice = prevKVoice; if (prevKVoiceUI) window.KVoiceUI = prevKVoiceUI; { const d = document.getElementById('voice-dialog'); if (d && /Piper/i.test(d.textContent || '')) d.remove(); }
+      if (prevKVoice && typeof prevKVoice.settings === 'function' && !window.__KF_VOICE_CAPTURE__) { window.__KF_VOICE_CAPTURE__ = true; document.addEventListener('click', ev => { const btn = ev.target && ev.target.closest && ev.target.closest('#voice-settings-button,[data-td-action="voice"],[data-td-action="voice-settings"],[data-action="voice-settings"],[data-bb="voices"]'); if (!btn) return; ev.preventDefault(); ev.stopPropagation(); ev.stopImmediatePropagation(); window.KVoice = prevKVoice; if (prevKVoiceUI) window.KVoiceUI = prevKVoiceUI; const d = document.getElementById('voice-dialog'); if (d && /Piper/i.test(d.textContent || '')) d.remove(); prevKVoice.settings(); }, true); } hookFetchForAntonyms();
       await Promise.all([loadVnExpressPhrases300(), loadGuardianPhrases400(), loadVnExpressPhrases400(), loadVnExpressPhrases500(), loadVnExpressPhrases700(), loadVnExpressPhrases1000(), loadVnExpressPhrasesW6(), loadVnExpressPhrasesW7(), loadVnExpressPhrasesW8(), loadVnExpressPhrasesW9(), loadVnExpressPhrasesW10(), loadVnExpressPhrasesW11(), loadVnExpressPhrasesW12(), loadVnExpressPhrasesW13(), loadVnExpressPhrasesW14(), loadVnExpressPhrasesW15(), loadVnExpressPhrasesW16(), loadVnExpressPhrasesW17(), loadVnExpressPhrasesW18(), loadVnExpressPhrasesW19(), loadVnExpressPhrasesW20()]);
       hookFetchForAntonyms();
       setTimeout(hookFetchForAntonyms, 0);
