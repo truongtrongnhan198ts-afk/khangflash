@@ -195,6 +195,6 @@ window.FullPlan=(()=>{
   plan.interleavedV2=true; plan.total=plan.days.reduce((n,d)=>n+(Array.isArray(d.cards)?d.cards.length:0),0);
   return plan;
  }
-
+  window.__KF_RAW_RESIZE__ = resize;
  return{load,build,resize,rebalancePlan,ensureTask2,render,mountToday,todayHtml,tasks,savedWordCounts,writingDone,coverageKey,exerciseUrl,modelsUrl,version:VERSION};
 })();
