@@ -113,3 +113,37 @@ test('saved legacy day assignments survive reload and ensureGoal after three fla
  // Loader migrations may never erase the persisted plan while moving to a new layout.
  const loader=code('live-override.js');assert.doesNotMatch(loader,/localStorage\.removeItem\(['"]kf_vercel_plan_v1['"]\)/);assert.doesNotMatch(loader,/indexedDB\.deleteDatabase\(['"]kf-device-learning-plan-v1['"]\)/);
 });
+test('portable backup exports and restores all progress channels, plans and manual completion',async()=>{
+ const source=browser();await source.w.KStore.load();await source.w.KPractice.load();
+ await source.w.KStore.review([{id:'backup-word',rating:4}],'Flashcard',1,1,'backup-review');
+ await source.w.KPractice.value('checkpoint:writing:backup',{questions:[{draft:'A draft to preserve'}]});
+ await source.json('/api/knowledge',{id:'reading-backup',value:{read:true,note:'Saved note',words:[{word:'resilience'}]}});
+ await source.json('/api/news/notebook?url=https://example.com/backup',{url:'https://example.com/backup',notes:'Article notes',words:[{word:'evidence'}]});
+ const plan={custom:true,days:[{day:1,cards:['backup-word','next-word']}],exam:'2027-02-23'};
+ await source.json('/api/learning-plan',{plan});source.ls.setItem('kf_fp_manual_done_v1',JSON.stringify({'2026-11-25':{'0':1,'7':1}}));
+ const exported=await source.json('/api/backup'),backup=exported.data;assert.equal(exported.r.status,200);assert.equal(backup.format,'khangflash-progress');assert.ok(backup.exportedAt);assert.equal(backup.data.study.cards[0].card_id,'backup-word');
+ backup.data.devicePlan={schema:1,accountKey:'khangflash-local',plan};
+ const target=browser();await target.w.KStore.load();const before=target.ls.getItem('kf_vercel_study_v1');const preview=await target.json('/api/backup',{action:'preview',backup});assert.ok(preview.data.summary.reduce((n,r)=>n+r.missing,0)>0);assert.equal(target.ls.getItem('kf_vercel_study_v1'),before);assert.equal(target.ls.getItem('kf_vercel_practice_v1'),null);
+ const result=await target.json('/api/backup',{action:'merge',backup});assert.equal(result.r.status,200);assert.match(result.data.message,/Đã bổ sung/);
+ const reload=browser(target.ls,target.idb);await reload.w.KStore.load();await reload.w.KPractice.load();assert.equal(reload.w.KStore.get().cards[0].due,backup.data.study.cards[0].due);assert.equal(reload.w.KPractice.get('checkpoint:writing:backup').questions[0].draft,'A draft to preserve');assert.equal((await reload.json('/api/knowledge')).data.entries[0].value.note,'Saved note');assert.equal((await reload.json('/api/news/notebook?url=https://example.com/backup')).data.notes,'Article notes');assert.equal((await reload.json('/api/learning-plan')).data.plan.exam,plan.exam);assert.equal((await reload.json('/api/backup')).data.data.devicePlan.plan.exam,plan.exam);assert.equal(JSON.parse(target.ls.getItem('kf_fp_manual_done_v1'))['2026-11-25']['7'],1);
+ const again=await reload.json('/api/backup',{action:'merge',backup});assert.equal(again.data.summary.reduce((n,r)=>n+r.missing,0),0);
+});
+test('backup preview reports conflicts and merge preserves newer work and existing plans',async()=>{
+ const b=browser();await b.w.KStore.load();await b.w.KPractice.load();await b.w.KStore.review([{id:'keep',rating:3}]);await b.w.KPractice.value('draft',{text:'current draft'});await b.json('/api/learning-plan',{plan:{days:[{cards:['keep']}],exam:'2027-02-23'}});
+ const backup=(await b.json('/api/backup')).data,original=b.ls.getItem('kf_vercel_study_v1');backup.data.study.cards[0].due='2000-01-01';backup.data.practice.values[0].value.text='old draft';backup.data.plan.plan.exam='2000-01-01';
+ const preview=await b.json('/api/backup',{action:'preview',backup});assert.ok(preview.data.summary.reduce((n,r)=>n+r.conflicts,0)>=3);await b.json('/api/backup',{action:'merge',backup});assert.equal(b.ls.getItem('kf_vercel_study_v1'),original);assert.equal((await b.json('/api/practice')).data.values[0].value.text,'current draft');assert.equal((await b.json('/api/learning-plan')).data.plan.exam,'2027-02-23');
+});
+test('invalid, cross-account and quota-failed imports never report success or overwrite progress',async()=>{
+ const b=browser();await b.w.KStore.load();const backup=(await b.json('/api/backup')).data;
+ assert.equal((await b.json('/api/backup',{action:'merge',backup:{}})).r.status,400);backup.accountKey='other';assert.equal((await b.json('/api/backup',{action:'merge',backup})).r.status,409);backup.accountKey='khangflash-local';backup.data.study.cards=[{card_id:'new',due:'2027-01-01',status:'known'}];backup.data.plan={plan:{days:'broken'}};assert.equal((await b.json('/api/backup',{action:'merge',backup})).r.status,400);assert.equal((await b.json('/api/study')).data.cards.length,0);
+ delete backup.data.plan;b.ls.fail=true;assert.equal((await b.json('/api/backup',{action:'merge',backup})).r.status,503);b.ls.fail=false;assert.equal((await b.json('/api/study')).data.cards.length,0);
+ b.ls.setItem('kf_fp_manual_done_v1','{broken');assert.equal((await b.json('/api/backup')).r.status,503);assert.equal(b.ls.getItem('kf_fp_manual_done_v1'),'{broken');
+});
+test('knowledge saved words refresh on reopening notebook and keep review dates across reload',async()=>{
+ const network=async url=>new Response(/\.js(?:\?|$)/.test(String(url))?'':JSON.stringify({cards:[],sources:[]}));
+ const prepare=async b=>{b.w.KKnowledge={index:async()=>({articles:[{id:'article'}]}),get:async()=>({id:'article',title:'Reading test',words:[{term:'old saved phrase',meaning:'old meaning',example:'An old example.'},{term:'new saved phrase',meaning:'new meaning',example:'A new example.'}]})};const root=b.w.document.createElement('div');root.id='unified-notebook';b.w.document.body.append(root);b.run('unified-notebook.js');await b.w.KNotebook.mount();};
+ const b=browser(undefined,undefined,network);await b.json('/api/knowledge',{id:'article',value:{read:true,note:'Keep my note',words:[{id:0,stage:0,due:'2026-11-24'}]}});await prepare(b);assert.equal(b.w.KNotebook.items().length,1);
+ await b.json('/api/knowledge',{id:'article',revision:1,value:{read:true,note:'Keep my note',words:[{id:0,stage:0,due:'2026-11-24'},{id:1,stage:0,due:b.w.KStore.get().today}]}});await b.w.KNotebook.mount();assert.equal(b.w.KNotebook.items().length,2);
+ const item=b.w.KNotebook.items().find(x=>x.index===1),today=b.w.KPractice.getState().today;await b.w.KNotebook.rate(item,true);const due=new Date(Date.parse(today+'T00:00:00Z')+86400000).toISOString().slice(0,10);assert.equal(item.state.due,due);
+ const reload=browser(b.ls,b.idb,network);await prepare(reload);const restored=reload.w.KNotebook.items().find(x=>x.index===1);assert.equal(restored.state.due,due);assert.equal(restored.meaning,'new meaning');assert.equal(restored.example,'A new example.');assert.equal((await reload.json('/api/knowledge')).data.entries[0].value.note,'Keep my note');
+});
