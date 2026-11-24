@@ -109,32 +109,7 @@
     return Math.max(1, Math.round((t2 - t1) / 86400000));
   }
 
-  function computeRatingPlans(prev, todayStr) {
-    const t = todayStr || todayIso();
-    const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0;
-    const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0;
-    const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5;
-    const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t);
-
-    const p1 = { days: 1, due: addDaysIso(t, 1), retained: false };
-    let d2, d3, d4;
-    if (!prev || reps <= 0) {
-      d2 = 2;
-      d3 = 3;
-      d4 = 7;
-    } else {
-      d2 = Math.max(1, Math.round(Math.max(1, interval || 1) * 1.2));
-      d3 = reps === 1 ? 3 : reps === 2 ? 7 : Math.max(3, Math.round((interval || 3) * ease));
-      d4 = reps === 1 ? 7 : reps === 2 ? 14 : Math.max(7, Math.round((interval || 3) * ease * 1.35));
-    }
-
-    return {
-      1: p1,
-      2: { days: d2, due: addDaysIso(t, d2), retained: false },
-      3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d3, due: addDaysIso(t, d3), retained: false },
-      4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true } : { days: d4, due: addDaysIso(t, d4), retained: false }
-    };
-  }
+  function computeRatingPlans(prev, todayStr) { const t = todayStr || todayIso(); const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0; const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0; const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5; const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t); let d1 = 1, d2, d3, d4, D1, S1, D2, S2, D3, S3, D4, S4; if (!prev || reps <= 0) { d1 = 1; D1 = 7.2; S1 = 0.5; d2 = 2; D2 = 6.2; S2 = 1.8; d3 = 3; D3 = 5.0; S3 = 3.2; d4 = 8; D4 = 3.2; S4 = 8.0; } else { const S = (prev.fsrs_s > 0) ? prev.fsrs_s : Math.max(1, interval || 3); const D = (prev.fsrs_d >= 1 && prev.fsrs_d <= 10) ? prev.fsrs_d : Math.min(10, Math.max(1, 7.5 - (ease - 1.3) * 2)); const elapsed = Math.max(1, prev.last_reviewed ? diffDaysIso(prev.last_reviewed, t) : (interval || 1)); const R = Math.pow(1 + (19 / 81) * (elapsed / Math.max(0.5, S)), -0.5); D1 = Math.min(10, D + 1.15); S1 = Math.max(1, S * 0.32); d1 = 1; D2 = Math.min(10, D + 0.45); S2 = Math.max(1, S * Math.max(1.2, 1 + 0.35 * (11 - D2) * Math.pow(S, -0.2) * (Math.exp(0.15 * (1 - R)) - 1))); d2 = Math.min(365, Math.max(1, Math.round(S2))); D3 = Math.max(1, D - 0.12); S3 = Math.max(S * 1.45, S * (1 + Math.exp(1.15) * (11 - D3) * Math.pow(S, -0.2) * (Math.exp(0.15 * (1 - R)) - 1))); d3 = Math.min(365, Math.max(interval + 1, Math.round(S3))); D4 = Math.max(1, D - 0.65); S4 = S3 * 1.38; d4 = Math.min(365, Math.max(d3 + 2, Math.round(S4))); } const r2 = v => +v.toFixed(2); return { 1: { days: d1, due: addDaysIso(t, d1), retained: false, fsrs_d: r2(D1), fsrs_s: r2(S1) }, 2: { days: d2, due: addDaysIso(t, d2), retained: false, fsrs_d: r2(D2), fsrs_s: r2(S2) }, 3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true, fsrs_d: r2(D3), fsrs_s: r2(S3) } : { days: d3, due: addDaysIso(t, d3), retained: false, fsrs_d: r2(D3), fsrs_s: r2(S3) }, 4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true, fsrs_d: r2(D4), fsrs_s: r2(S4) } : { days: d4, due: addDaysIso(t, d4), retained: false, fsrs_d: r2(D4), fsrs_s: r2(S4) } }; } t, fsrs_d: chosenPlan.fsrs_d, fsrs_s: chosenPlan.fsrs_s,
 
   function readJson(key, fallback) {
     try {
@@ -250,7 +225,7 @@
             ease,
             lapses,
             due: r.due || chosenPlan.due,
-            last_reviewed: t,
+            last_reviewed: t, fsrs_d: chosenPlan.fsrs_d, fsrs_s: chosenPlan.fsrs_s,
             updated_at: new Date().toISOString()
           };
           nextCard.ratingPlans = computeRatingPlans(nextCard, t);
