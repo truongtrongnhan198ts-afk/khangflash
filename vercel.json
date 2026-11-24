@@ -2,6 +2,18 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/api/news/article",
+      "destination": "/api/media?kind=article"
+    },
+    {
+      "source": "/api/news",
+      "destination": "/api/media?kind=news"
+    },
+    {
+      "source": "/api/podcasts",
+      "destination": "/api/media?kind=podcasts"
+    },
+    {
       "source": "/",
       "destination": "/dashboard.html"
     },
