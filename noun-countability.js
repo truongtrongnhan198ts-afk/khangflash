@@ -278,7 +278,7 @@
       }
     }
 
-    var termAndPos = termLower + ' ' + posLower;
+    var termAndPos = termLower + ' ' + posLower.replace(/\(từ\s*\/\s*cụm từ\)/g, '');
     if (
       termAndPos.indexOf('/') !== -1 ||
       termAndPos.indexOf('?') !== -1 ||
