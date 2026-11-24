@@ -848,7 +848,7 @@
         code = await window.__KF_LIVE_PREFETCH__;
       }
       if (!code) {
-        const r = await fetch('/live-override-custom.js', { cache: 'force-cache', credentials: 'same-origin' });
+        const r = await fetch('/live-override-custom.js?v=20261124-progress1', { cache: 'force-cache', credentials: 'same-origin' });
         if (!r.ok) {
           console.warn('[KhangFlash] Không tải được /live-override-custom.js (HTTP ' + r.status + ')');
           return;
