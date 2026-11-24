@@ -34,48 +34,7 @@ window.FullPlan=(()=>{
   const seen=new Set(state.cards.map(x=>x.card_id)),canonical=id=>window.KStore?.canonical?.(id)||id,unique=new Set();const remaining=data.cards.filter(x=>!seen.has(canonical(x.id))&&!unique.has(canonical(x.id))&&unique.add(canonical(x.id)));
   const cardMap=new Map(data.cards.map(c=>[canonical(c.id),c])),initialReview=Math.max(35,Math.ceil(state.cards.filter(p=>p.due<=state.today).reduce((n,p)=>n+(cardMap.get(p.card_id)?.studyKind==='grammar'?4:.5),0)));
   const days=Array.from({length:duration},(_,i)=>({day:i+1,date:plus(state.today,i),week:Math.floor(i/7)+1,cards:[],references:[],topics:[],variants:0,reading:[],writing:[],reviewMinutes:i===0?initialReview:35,minutes:i===0?initialReview:35,listening:i<horizon?20:30,news:i<horizon&&i%7<3?10:0,reviewOnly:i>=horizon})),active=days.slice(0,horizon);
-  function interleaveVocab(items,numDays){
-  if(!items.length||numDays<1)return items;
-  const byType={idiom:[],colloc:[],core:[]};
-  for(const x of items){
-   const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();
-   if(lbl.includes('idiom'))byType.idiom.push(x);
-   else if(lbl.includes('collocation')||cat.includes('collocation'))byType.colloc.push(x);
-   else byType.core.push(x);
-  }
-  const spreadByTopic=arr=>{
-   const b=new Map();
-   for(const x of arr){const t=(x.topics&&x.topics[0])||'general';if(!b.has(t))b.set(t,[]);b.get(t).push(x);}
-   const qs=[...b.values()],out=[];let idx=0;
-   while(qs.some(q=>q.length)){const q=qs[idx%qs.length];if(q.length)out.push(q.shift());idx++;}
-   return out;
-  };
-  const idioms=spreadByTopic(byType.idiom),collocs=spreadByTopic(byType.colloc),cores=spreadByTopic(byType.core);
-  const buckets=Array.from({length:numDays},()=>[]);
-  const deal=(arr)=>{for(let i=0;i<arr.length;i++)buckets[Math.floor(i*numDays/arr.length)].push(arr[i]);};
-  deal(cores);deal(collocs);deal(idioms);
-  // Within each day, interleave core, colloc, and idiom smoothly so idioms never clump together
-  const ordered=[];
-  for(const dayArr of buckets){
-   const dIdiom=[],dCol=[],dCore=[];
-   for(const x of dayArr){
-    const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();
-    if(lbl.includes('idiom'))dIdiom.push(x);
-    else if(lbl.includes('collocation')||cat.includes('collocation'))dCol.push(x);
-    else dCore.push(x);
-   }
-   const total=dayArr.length,idStep=dIdiom.length?Math.max(1,Math.floor(total/dIdiom.length)):total+1;
-   let ci=0,ki=0,ii=0;
-   for(let s=0;s<total;s++){
-    if(ii<dIdiom.length&&(s%idStep===Math.floor(idStep/2)||(ci>=dCore.length&&ki>=dCol.length)))ordered.push(dIdiom[ii++]);
-    else if(s%2===0&&ci<dCore.length)ordered.push(dCore[ci++]);
-    else if(ki<dCol.length)ordered.push(dCol[ki++]);
-    else if(ci<dCore.length)ordered.push(dCore[ci++]);
-    else if(ii<dIdiom.length)ordered.push(dIdiom[ii++]);
-   }
-  }
-  return ordered;
- }
+  function interleaveVocab(items,numDays){if(!items.length||numDays<1)return items;const PRIORITY_TOPICS=['education','environment','technology','health','economy','government','work','media','society','crime','culture','transport','housing','family','science','globalization','food','business','tourism','energy','sports','art','history','law','politics'];const pIdx=new Map(PRIORITY_TOPICS.map((t,i)=>[t,i]));const t1=[],t2=[],t3=[];for(const x of items){const lbl=String(x.label||'').toLowerCase();if(lbl.includes('idiom')){t3.push(x);continue;}const topic=(x.topics&&x.topics[0])||'general';if(pIdx.has(topic))t1.push(x);else t2.push(x);}const build=(arr)=>{const byTopic=new Map();for(const x of arr){const topic=(x.topics&&x.topics[0])||'general';if(!byTopic.has(topic))byTopic.set(topic,{cores:[],collocs:[],idioms:[]});const g=byTopic.get(topic);const lbl=String(x.label||'').toLowerCase(),cat=String(x.learningCategory||'').toLowerCase();if(lbl.includes('idiom'))g.idioms.push(x);else if(lbl.includes('collocation')||cat.includes('collocation'))g.collocs.push(x);else g.cores.push(x);}const topics=[...byTopic.keys()].sort((a,b)=>(pIdx.has(a)?pIdx.get(a):Infinity)-(pIdx.has(b)?pIdx.get(b):Infinity));const out=[];for(const t of topics){const {cores,collocs,idioms}=byTopic.get(t);let ci=0,ki=0;while(ci<cores.length||ki<collocs.length){if(ci<cores.length)out.push(cores[ci++]);if(ci<cores.length)out.push(cores[ci++]);if(ki<collocs.length)out.push(collocs[ki++]);}for(const id of idioms)out.push(id);}return out;};return [...build(t1),...build(t2),...build(t3)];}
  const vocabOrdered=interleaveVocab(remaining.filter(x=>x.studyKind!=='grammar'),active.length);
  const gramOrdered=remaining.filter(x=>x.studyKind==='grammar');
  for(const list of [vocabOrdered,gramOrdered])distribute(list,active,()=>1,(d,x,m)=>{d.cards.push(canonical(x.id));d.variants+=x.variants.length;d.minutes+=cardCost(x);},0,active.length,false);
