@@ -211,4 +211,4 @@ window.KVoice=(()=>{
  return{speak,stop,pause,resume,accent,settings,update,list,choose,prepare};
 })();
 
-if(window.KVoiceUI?.version==='256')window.KVoiceUI.engine=window.KVoice;
+if(window.KVoiceUI?.version==='256')window.KVoiceUI.engine=window.KVoice;try{const __kv=window.KVoice,__kui=window.KVoiceUI;if(__kv){Object.defineProperty(window,'KVoice',{get:()=>__kv,set:()=>{},configurable:false});if(__kui)Object.defineProperty(window,'KVoiceUI',{get:()=>__kui,set:()=>{},configurable:false});window.addEventListener('click',ev=>{const b=ev.target&&ev.target.closest&&ev.target.closest('button,a,[role="button"]');if(!b||b.closest('#voice-dialog'))return;if(b.matches('#voice-settings-button,[data-td-action="voice"],[data-td-action="voice-settings"],[data-action="voice-settings"],[data-bb="voices"]')||((b.textContent||'').includes('Chọn giọng'))){ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();const old=document.getElementById('voice-dialog');if(old&&/Piper/i.test(old.textContent||''))old.remove();__kv.settings();}},true);}}catch{}
