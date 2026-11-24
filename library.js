@@ -81,7 +81,7 @@ const groups=[['topics','Chủ đề',null],['learned','Đã học / Đã nhớ'
 const colors=['#bd95f3','#a1d4e9','#bde3bd','#ff823d','#ffc32f','#c0cce9','#efb6a3','#b4d0f8'];
 function sources(){if(group==='topics'||group==='idioms'||group==='learned')return bank.sources;return group==='forumflash'?bank.sources.filter(s=>s.id==='forumflash'):bank.sources.filter(s=>s.category===groups.find(g=>g[0]===group)?.[2]||bank.cards.some(c=>c.learningCategory===groups.find(g=>g[0]===group)?.[2]&&c.variants.some(v=>v.source===s.id)));}
 function deckCards(tid,srcs){return bank.cards.filter(c=>c.studyKind!=='grammar'&&srcs.some(s=>c.sourceTopics[s.id]?.includes(tid))&&(!c.learningCategory||['topics','idioms','forumflash'].includes(group)||c.learningCategory===groups.find(g=>g[0]===group)?.[2])&&(group!=='idioms'||c.label==='Idiom · Speaking'));}
-function deckHtml(title,description,cards,index,url){if(window.TDUi)return TDUi.deck(title,description,cards,index,url,state);const learned=cards.filter(c=>state.cards.some(p=>p.card_id===c.id&&p.status==='known')).length;const rate=cards.length?Math.round(learned/cards.length*100):0;const words=cards.filter(c=>!['Điền giới từ','Đoạn mẫu'].includes(c.label)).slice(0,3);const art=index%3===1?`<div class="deck-art letters">${(words[0]?.term.split(' ')[0]||'IELTS').slice(0,8).toUpperCase().split('').map(c=>`<span class="letter-tile">${le(c)}</span>`).join('')}</div>`:index%3===2?`<div class="deck-stat">${rate}%<small>đã học ${learned} / ${cards.length} thẻ</small></div>`:`<div class="deck-art">${words.map(w=>`<div class="word-tile"><i></i>${le(w.term)}</div>`).join('')}</div>`;return `<a class="deck" href="${url}" style="background:${colors[index%colors.length]}"><h2>${le(title)}</h2><p>${le(description)}</p><div class="deck-meta">${cards.length.toLocaleString('vi-VN')} THẺ · ${rate}% ĐÃ HỌC</div>${art}<span class="deck-link-label">Mở bộ thẻ</span><div class="deck-grid-lines"></div></a>`;}
+function deckHtml(title,description,cards,index,url){if(window.TDUi)return TDUi.deck(title,description,cards,index,url,state);const learned=cards.filter(c=>state.cards.some(p=>p.card_id===c.id&&p.status==='known')).length;const rate=cards.length&&learned?Math.max(.1,Math.min(learned===cards.length?100:99.9,Math.round(learned/cards.length*1000)/10)):0;const words=cards.filter(c=>!['Điền giới từ','Đoạn mẫu'].includes(c.label)).slice(0,3);const art=index%3===1?`<div class="deck-art letters">${(words[0]?.term.split(' ')[0]||'IELTS').slice(0,8).toUpperCase().split('').map(c=>`<span class="letter-tile">${le(c)}</span>`).join('')}</div>`:index%3===2?`<div class="deck-stat">${rate}%<small>đã học ${learned} / ${cards.length} thẻ</small></div>`:`<div class="deck-art">${words.map(w=>`<div class="word-tile"><i></i>${le(w.term)}</div>`).join('')}</div>`;return `<a class="deck" href="${url}" style="background:${colors[index%colors.length]}"><h2>${le(title)}</h2><p>${le(description)}</p><div class="deck-meta">${cards.length.toLocaleString('vi-VN')} THẺ · ${rate}% ĐÃ HỌC · ${learned}/${cards.length} đã nhớ</div>${art}<span class="deck-link-label">Mở bộ thẻ</span><div class="deck-grid-lines"></div></a>`;}
 function render(){
   const srcs=sources();
   const learnedList=learnedEntries();
@@ -133,6 +133,11 @@ Promise.all([fetch('data.json').then(r=>r.json()),KStore.load(),window.TDUi?.rea
   if(window.KStore&&typeof KStore.onChange==='function'){
     KStore.onChange(nextState=>{state=nextState;if(bank)render();});
   }
+  // History/back restores and other tabs can leave this page's in-memory state stale.
+  let refreshing=false;
+  const refreshProgress=async()=>{if(refreshing||document.hidden)return;refreshing=true;try{await KStore.refresh();}catch{}finally{refreshing=false;}};
+  window.addEventListener('pageshow',ev=>{if(ev.persisted)refreshProgress();});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshProgress();});
   window.addEventListener('storage',ev=>{
     if(ev.key==='kf_vercel_study_v1'&&window.KStore&&typeof KStore.refresh==='function'){
       KStore.refresh().catch(()=>{});
