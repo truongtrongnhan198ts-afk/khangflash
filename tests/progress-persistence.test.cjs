@@ -102,3 +102,14 @@ test('warm vocabulary cache can resolve bootstrap even after the DONE flag was a
  const b=browser(undefined,undefined,undefined,'/due');b.w.__KF_BASE_MERGE_DONE__=true;b.w.__KF_RESOLVE_BASE_MERGE__();
  assert.equal(await Promise.race([b.w.__KF_BASE_MERGE_READY__.then(()=>true),new Promise(r=>setTimeout(()=>r(false),100))]),true);
 });
+test('saved legacy day assignments survive reload and ensureGoal after three flashcard ratings',async()=>{
+ const b=browser(undefined,undefined,undefined,'/schedule');await b.w.KStore.load();
+ const plan={custom:true,band:7,duration:1,start:'2026-11-24',exam:'2026-11-25',days:[{day:1,cards:['a','b','c','d']}],total:4};
+ await b.json('/api/learning-plan',{plan});
+ const data={cards:['a','b','c','d'].map(id=>({id,variants:[],topics:[]})),topics:[]};
+ b.run('learning-plan.js');await b.w.KPlan.ensureGoal(data,b.w.KStore.get());assert.equal(JSON.stringify(b.w.KPlan.get()),JSON.stringify(plan));
+ await b.w.KStore.review(['a','b','c'].map(id=>({id,rating:4})));const reload=browser(b.ls,b.idb);await reload.w.KStore.load();reload.run('learning-plan.js');await reload.w.KPlan.ensureGoal(data,reload.w.KStore.get());
+ const day=reload.w.KPlan.effective(plan).days[0],seen=new Set(reload.w.KStore.get().cards.map(c=>c.card_id));assert.equal(day.cards.length,4);assert.equal(day.cards.filter(id=>seen.has(id)).length,3);assert.equal(reload.w.KPlan.get().band,7);
+ // Loader migrations may never erase the persisted plan while moving to a new layout.
+ const loader=code('live-override.js');assert.doesNotMatch(loader,/localStorage\.removeItem\(['"]kf_vercel_plan_v1['"]\)/);assert.doesNotMatch(loader,/indexedDB\.deleteDatabase\(['"]kf-device-learning-plan-v1['"]\)/);
+});
