@@ -654,22 +654,11 @@
     }
   }
 
-  /* KF_AUTO_REBALANCE_LOCAL_PLAN */
-  (function clearLegacyUnbalancedPlan() {
-    try {
-      const rawLs = localStorage.getItem('kf_vercel_plan_v1');
-      if (rawLs) {
-        const parsed = JSON.parse(rawLs);
-        if (parsed && parsed.plan && !parsed.plan.interleavedV2) {
-          localStorage.removeItem('kf_vercel_plan_v1');
-        }
-      }
-      if (typeof indexedDB !== 'undefined' && !localStorage.getItem('kf_idb_interleaved_v2_done')) {
-        indexedDB.deleteDatabase('kf-device-learning-plan-v1');
-        localStorage.setItem('kf_idb_interleaved_v2_done', '1');
-      }
-    } catch {}
-  })();
+  /* Preserve saved day assignments. Rebalancing is an explicit user action.
+   * Deleting a plan without interleavedV2 here rebuilt it from only unseen cards
+   * on each navigation, removing completed cards from the day's denominator.
+   * Keep both localStorage and IndexedDB plans intact, including legacy plans.
+   */
 
   let loaded = false;
 
