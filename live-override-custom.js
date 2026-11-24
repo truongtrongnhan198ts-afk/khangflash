@@ -3231,6 +3231,7 @@ window.KNotebook=(()=>{
 
   // Hợp nhất dữ liệu từ localSrsBackup và đồng bộ alias <-> keepId vào state của KStore
   function hydrateStateProgress(st) {
+    if (window.__KF_DURABLE_PROGRESS__) return st;
     if (!st || typeof st !== "object") return st;
     syncMergeMapO1();
 
@@ -3415,6 +3416,7 @@ window.KNotebook=(()=>{
 
   // 3. Dọn sạch hàng đợi pending bị kẹt trong localStorage (tăng giới hạn lên 10MB)
   function cleanPendingQueuesInStorage() {
+    if (window.__KF_DURABLE_PROGRESS__) return 0;
     syncMergeMapO1();
     var fixedKeys = 0;
     try {
@@ -3620,7 +3622,7 @@ window.KNotebook=(()=>{
   }
 
   var rawFetch = window.fetch ? window.fetch.bind(window) : null;
-  if (rawFetch && !window.fetch.__kfSafeFetchV5) {
+  if (!window.__KF_DURABLE_PROGRESS__ && rawFetch && !window.fetch.__kfSafeFetchV5) {
     var safeFetch = async function (input, init) {
       var method = (init && init.method) || (input && input.method) || "GET";
       var upper = String(method).toUpperCase();
@@ -3760,7 +3762,7 @@ window.KNotebook=(()=>{
 })();
 /* KF_INVALID_REVIEW_HOTFIX_V6_1 */
 (()=>{
-if(window.__KF_FIX_V61__)return;window.__KF_FIX_V61__=1;
+if(window.__KF_DURABLE_PROGRESS__||window.__KF_FIX_V61__)return;window.__KF_FIX_V61__=1;
 const RX=/invalid\s*(card|review|payload|item|entry|id)/i;
 const QF=['pending','queue','outbox','unsynced','pendingReviews','syncQueue','retryQueue','reviews','events','pending_reviews'];
 function rescue(it){

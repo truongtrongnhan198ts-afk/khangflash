@@ -16,7 +16,7 @@ window.KStore=(()=>{
  function signInNotice(){banner('Chế độ khách · Chỉ xem nội dung; tiến độ cá nhân không được hiển thị. ',false);const a=document.createElement('a');a.textContent='Đăng nhập để lưu tiến độ';a.href='/signin-with-chatgpt?return_to='+encodeURIComponent(location.pathname+location.search+location.hash);a.target='_top';document.getElementById('save-banner').append(a);}
  function loadState(){return (ready||(ready=request().then(x=>{state=x;saveFastCache(state);if(state.guest)signInNotice();notify();return state;}).catch(e=>{ready=null;banner(e.message+' Tiến độ chưa được tải.',true);throw e;}))).then(()=>state);}
  function run(fn){queue=queue.catch(()=>{}).then(fn);return queue;}
- async function load(){const cached=readFastCache();if(cached){state=cached;notify();loadState().then(recover).catch(()=>{});return state;}await loadState();await recover();return state;}
+ async function load(){const cached=readFastCache();if(cached){state=cached;notify();}try{await loadState();await recover();return state;}catch(error){if(cached&&!cached.guest){banner('Chưa kết nối được bộ lưu. Đang giữ bản tiến độ trên thiết bị.',true);return state;}throw error;}}
  function recover(){if(recoveryTask)return recoveryTask;if(!window.KSyncOutbox||!state.accountKey||state.guest)return Promise.resolve();const scope=state.accountKey;recoveryTask=(async()=>{const rows=await KSyncOutbox.list(scope);unsynced=rows.length;for(const row of rows){if(state.accountKey!==scope||state.guest)break;const p=row.body;try{await review(p.reviews,p.game,p.score,p.total,p.event_id,p.occurred_at);}catch{break;}}})().finally(()=>{recoveryTask=null;});return recoveryTask;}
 
  function review(reviews,game='Flashcard',score=0,total=reviews.length,eventId,occurredAt){

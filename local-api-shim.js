@@ -36,6 +36,8 @@
   })();
   if (window.__KF_LOCAL_API_SHIM__) return;
   window.__KF_LOCAL_API_SHIM__ = true;
+  // Only this handler may acknowledge local progress; legacy repair hooks must not erase outboxes.
+  window.__KF_DURABLE_PROGRESS__ = true;
 
   const origFetch = window.fetch.bind(window);
   // Pre-inject custom-theme.css & pre-fetch live-override-custom.js early so Flashcard/Library/Games never flashes 3,099 base cards before jumping to 13,064 cards
@@ -61,7 +63,7 @@
       window.__KF_BASE_MERGE_DONE__ = false;
       window.__KF_BASE_MERGE_READY__ = new Promise(resolve => {
         const done = () => {
-          if (window.__KF_BASE_MERGE_DONE__) return;
+          // Cache hooks may set DONE before invoking this resolver. Promise.resolve is already idempotent.
           window.__KF_BASE_MERGE_DONE__ = true;
           resolve();
         };
@@ -84,8 +86,8 @@
     knowledge: 'kf_vercel_knowledge_v1'
   };
 
-  function todayIso() {
-    const d = new Date();
+  function todayIso(date) {
+    const d = date || new Date();
     const y = d.getFullYear();
     const m = String(d.getMonth() + 1).padStart(2, '0');
     const day = String(d.getDate()).padStart(2, '0');
@@ -109,7 +111,7 @@
     return Math.max(1, Math.round((t2 - t1) / 86400000));
   }
 
-  function computeRatingPlans(prev, todayStr) { const t = todayStr || todayIso(); const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0; const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0; const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5; const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t); let d1 = 1, d2, d3, d4, D1, S1, D2, S2, D3, S3, D4, S4; if (!prev || reps <= 0) { d1 = 1; D1 = 7.2; S1 = 0.5; d2 = 2; D2 = 6.2; S2 = 1.8; d3 = 3; D3 = 5.0; S3 = 3.2; d4 = 8; D4 = 3.2; S4 = 8.0; } else { const S = (prev.fsrs_s > 0) ? prev.fsrs_s : Math.max(1, interval || 3); const D = (prev.fsrs_d >= 1 && prev.fsrs_d <= 10) ? prev.fsrs_d : Math.min(10, Math.max(1, 7.5 - (ease - 1.3) * 2)); const elapsed = Math.max(1, prev.last_reviewed ? diffDaysIso(prev.last_reviewed, t) : (interval || 1)); const R = Math.pow(1 + (19 / 81) * (elapsed / Math.max(0.5, S)), -0.5); D1 = Math.min(10, D + 1.15); S1 = Math.max(1, S * 0.32); d1 = 1; D2 = Math.min(10, D + 0.45); S2 = Math.max(1, S * Math.max(1.2, 1 + 0.35 * (11 - D2) * Math.pow(S, -0.2) * (Math.exp(0.15 * (1 - R)) - 1))); d2 = Math.min(365, Math.max(1, Math.round(S2))); D3 = Math.max(1, D - 0.12); S3 = Math.max(S * 1.45, S * (1 + Math.exp(1.15) * (11 - D3) * Math.pow(S, -0.2) * (Math.exp(0.15 * (1 - R)) - 1))); d3 = Math.min(365, Math.max(interval + 1, Math.round(S3))); D4 = Math.max(1, D - 0.65); S4 = S3 * 1.38; d4 = Math.min(365, Math.max(d3 + 2, Math.round(S4))); } const r2 = v => +v.toFixed(2); return { 1: { days: d1, due: addDaysIso(t, d1), retained: false, fsrs_d: r2(D1), fsrs_s: r2(S1) }, 2: { days: d2, due: addDaysIso(t, d2), retained: false, fsrs_d: r2(D2), fsrs_s: r2(S2) }, 3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true, fsrs_d: r2(D3), fsrs_s: r2(S3) } : { days: d3, due: addDaysIso(t, d3), retained: false, fsrs_d: r2(D3), fsrs_s: r2(S3) }, 4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true, fsrs_d: r2(D4), fsrs_s: r2(S4) } : { days: d4, due: addDaysIso(t, d4), retained: false, fsrs_d: r2(D4), fsrs_s: r2(S4) } }; } t, fsrs_d: chosenPlan.fsrs_d, fsrs_s: chosenPlan.fsrs_s,
+  function computeRatingPlans(prev, todayStr) { const t = todayStr || todayIso(); const reps = prev && typeof prev.reps === 'number' ? prev.reps : 0; const interval = prev && typeof prev.interval === 'number' ? prev.interval : 0; const ease = prev && typeof prev.ease === 'number' ? prev.ease : 2.5; const isEarly = Boolean(prev && prev.status === 'known' && prev.due && prev.due > t); let d1 = 1, d2, d3, d4, D1, S1, D2, S2, D3, S3, D4, S4; if (!prev || reps <= 0) { d1 = 1; D1 = 7.2; S1 = 0.5; d2 = 2; D2 = 6.2; S2 = 1.8; d3 = 3; D3 = 5.0; S3 = 3.2; d4 = 8; D4 = 3.2; S4 = 8.0; } else { const S = (prev.fsrs_s > 0) ? prev.fsrs_s : Math.max(1, interval || 3); const D = (prev.fsrs_d >= 1 && prev.fsrs_d <= 10) ? prev.fsrs_d : Math.min(10, Math.max(1, 7.5 - (ease - 1.3) * 2)); const elapsed = Math.max(1, prev.last_reviewed ? diffDaysIso(prev.last_reviewed, t) : (interval || 1)); const R = Math.pow(1 + (19 / 81) * (elapsed / Math.max(0.5, S)), -0.5); D1 = Math.min(10, D + 1.15); S1 = Math.max(1, S * 0.32); d1 = 1; D2 = Math.min(10, D + 0.45); S2 = Math.max(1, S * Math.max(1.2, 1 + 0.35 * (11 - D2) * Math.pow(S, -0.2) * (Math.exp(0.15 * (1 - R)) - 1))); d2 = Math.min(365, Math.max(1, Math.round(S2))); D3 = Math.max(1, D - 0.12); S3 = Math.max(S * 1.45, S * (1 + Math.exp(1.15) * (11 - D3) * Math.pow(S, -0.2) * (Math.exp(0.15 * (1 - R)) - 1))); d3 = Math.min(365, Math.max(interval + 1, Math.round(S3))); D4 = Math.max(1, D - 0.65); S4 = S3 * 1.38; d4 = Math.min(365, Math.max(d3 + 2, Math.round(S4))); } const r2 = v => +v.toFixed(2); return { 1: { days: d1, due: addDaysIso(t, d1), retained: false, fsrs_d: r2(D1), fsrs_s: r2(S1) }, 2: { days: d2, due: addDaysIso(t, d2), retained: false, fsrs_d: r2(D2), fsrs_s: r2(S2) }, 3: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true, fsrs_d: r2(D3), fsrs_s: r2(S3) } : { days: d3, due: addDaysIso(t, d3), retained: false, fsrs_d: r2(D3), fsrs_s: r2(S3) }, 4: isEarly ? { days: diffDaysIso(t, prev.due), due: prev.due, retained: true, fsrs_d: r2(D4), fsrs_s: r2(S4) } : { days: d4, due: addDaysIso(t, d4), retained: false, fsrs_d: r2(D4), fsrs_s: r2(S4) } }; }
 
   function readJson(key, fallback) {
     try {
@@ -117,17 +119,64 @@
       if (!raw) return fallback;
       const parsed = JSON.parse(raw);
       return parsed && typeof parsed === 'object' ? parsed : fallback;
-    } catch {
+    } catch (error) {
+      if (Object.values(K).includes(key)) throw Error('Bản lưu không đọc được; giữ nguyên dữ liệu để phục hồi.');
       return fallback;
     }
   }
 
   function writeJson(key, value) {
-    try {
-      localStorage.setItem(key, JSON.stringify(value));
-    } catch (e) {
-      if (e && (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || e.code === 22 || e.code === 1014)) { try { for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k && (k.startsWith('kf_hub_snap_v1:') || k.startsWith('kf_kstore_fast_v1'))) localStorage.removeItem(k); } localStorage.setItem(key, JSON.stringify(value)); return; } catch (retryErr) { console.warn('[KF Local Shim] storage write retry failed', key, retryErr); return; } } console.warn('[KF Local Shim] storage write failed', key, e);
+    const json = JSON.stringify(value);
+    try { localStorage.setItem(key, json); }
+    catch (error) {
+      if (error && (error.name === 'QuotaExceededError' || error.name === 'NS_ERROR_DOM_QUOTA_REACHED' || error.code === 22 || error.code === 1014)) {
+        // These are disposable rendering caches, never progress or outbox records.
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+          const k = localStorage.key(i);
+          if (k && k.startsWith('kf_hub_snap_v1:')) localStorage.removeItem(k);
+        }
+        localStorage.setItem(key, json); // A failed retry must reject the save.
+        return;
+      }
+      throw error;
     }
+  }
+
+  function mergeRows(current, incoming, key) {
+    const rowKey = row => String(row[key] || row.id || (key === 'event_id' ? JSON.stringify(row) : ''));
+    const rows = new Map((current || []).filter(Boolean).map(row => [rowKey(row), row]));
+    for (const row of incoming || []) {
+      if (!row || !rowKey(row)) continue;
+      const id = rowKey(row), old = rows.get(id);
+      if (!old || String(row.updated_at || row.created_at || '') > String(old.updated_at || old.created_at || '')) {
+        rows.set(id, { ...old, ...row, ...(row[key] || row.id ? { [key]: row[key] || row.id } : {}) });
+      }
+    }
+    return [...rows.values()];
+  }
+
+  function migrateStudy(st) {
+    if (st.progressMigration === 1) return st;
+    // Do not delete or rewrite any recovery source. Merge once, before a fresh empty GET can replace it.
+    const cached = readJson('kf_kstore_fast_v1', null);
+    if (cached && !cached.guest && (!cached.accountKey || cached.accountKey === st.accountKey)) {
+      st.cards = mergeRows(st.cards, cached.cards, 'card_id');
+      st.history = mergeRows(st.history, cached.history, 'event_id');
+      st.activity = mergeRows(st.activity, cached.activity, 'date');
+      st.learningActivity = mergeRows(st.learningActivity, cached.learningActivity, 'date');
+      st.settings = { ...cached.settings, ...st.settings };
+    }
+    // Legacy backup rows are single-user local records. Existing authoritative card rows always win.
+    const backup = readJson('kf_local_srs_backup_v5', {});
+    const known = new Set(st.cards.map(c => String(c.card_id || c.id)));
+    for (const [id, value] of Object.entries(backup || {})) {
+      if (value && typeof value === 'object' && !known.has(id) && (value.status || value.due || value.last_reviewed || value.last_review)) {
+        st.cards.push({ ...value, card_id: id }); known.add(id);
+      }
+    }
+    st.progressMigration = 1;
+    writeJson(K.study, st);
+    return st;
   }
 
   function jsonRes(obj, status = 200) {
@@ -158,6 +207,7 @@
     if (!Array.isArray(st.history)) st.history = [];
     if (!Array.isArray(st.activity)) st.activity = [];
     if (!Array.isArray(st.learningActivity)) st.learningActivity = [];
+    migrateStudy(st);
     st.newCardPlans = computeRatingPlans(null, t);
     st.cards = st.cards.map(c => (c && typeof c === 'object' ? { ...c, ratingPlans: computeRatingPlans(c, t) } : c));
     return st;
@@ -165,8 +215,11 @@
 
   function handleStudy(method, body) {
     const st = getStudyState();
-    const t = todayIso();
+    const occurred = body?.occurred_at ? new Date(body.occurred_at) : null;
+    const t = occurred && Number.isFinite(occurred.getTime()) ? todayIso(occurred) : todayIso();
     if (method === 'POST' && body && typeof body === 'object') {
+      if (body.account_key && body.account_key !== st.accountKey) return jsonRes({ error: 'Tài khoản lưu tiến độ không khớp.' }, 409);
+      if (body.event_id && st.history.some(h => h.event_id === body.event_id)) return jsonRes({ ok: true, duplicate: true, cards: st.cards, activityDate: t });
       if (body.settings && typeof body.settings === 'object') {
         st.settings = { ...st.settings, ...body.settings };
       }
@@ -242,8 +295,12 @@
             return a;
           });
         }
+        let learning = st.learningActivity.find(a => a.date === t);
+        if (learning) learning.count = (learning.count || 0) + updatedCards.length;
+        else st.learningActivity.push({ date: t, count: updatedCards.length });
+        st.history.unshift({ event_id: body.event_id || crypto.randomUUID(), date: t, type: body.game || 'Flashcard', count: updatedCards.length, score: body.score || 0, total: body.total ?? updatedCards.length, occurred_at: body.occurred_at || new Date().toISOString(), created_at: new Date().toISOString() });
         writeJson(K.study, st);
-        return jsonRes({ ok: true, duplicate: false, ...st, updatedCards, activityDate: t });
+        return jsonRes({ ok: true, duplicate: false, ...st, cards: updatedCards, updatedCards, activityDate: t });
       }
       writeJson(K.study, st);
       return jsonRes({ ok: true, ...st });
@@ -283,9 +340,15 @@
     const st = getPracticeState();
     const now = new Date().toISOString();
     if (method === 'POST' && body && typeof body === 'object') {
+      if (body.account_key && body.account_key !== st.accountKey) return jsonRes({ error: 'Tài khoản lưu bài học không khớp.' }, 409);
       if (body.action === 'value' && body.key) {
         const idx = st.values.findIndex(v => v.key === body.key);
-        const rev = idx >= 0 ? (st.values[idx].revision || 0) + 1 : 1;
+        const currentRevision = idx >= 0 ? st.values[idx].revision || 0 : 0;
+        if (body.revision != null && body.revision !== currentRevision) {
+          if (idx >= 0 && JSON.stringify(st.values[idx].value) === JSON.stringify(body.value)) return jsonRes({ ok: true, revision: currentRevision, duplicate: true });
+          return jsonRes({ error: 'Bản lưu đã thay đổi. Đối chiếu trước khi ghi đè.', revision: currentRevision }, 409);
+        }
+        const rev = currentRevision + 1;
         const row = { key: body.key, value: body.value, revision: rev, updated_at: now };
         if (idx >= 0) st.values[idx] = row;
         else st.values.push(row);
@@ -294,6 +357,7 @@
       }
       if (body.action === 'attempt' && body.value && typeof body.value === 'object') {
         const val = { ...body.value, occurred_at: body.occurred_at || now };
+        if (val.id && st.attempts.some(a => a.id === val.id)) return jsonRes({ ok: true, duplicate: true, date: st.today });
         if (!st.attempts.some(a => a.id && a.id === val.id)) {
           st.attempts.push(val);
           if (st.attempts.length > 2000) st.attempts = st.attempts.slice(-2000);
@@ -305,6 +369,13 @@
           const nextQ = {
             ...prev,
             kind: val.kind || prev.kind,
+            card_id: val.cardId || prev.card_id || '',
+            context_id: val.contextId || prev.context_id || '',
+            seen: (prev.seen || prev.total || 0) + 1,
+            mistakes: (prev.mistakes || prev.lapses || 0) + (val.ok ? 0 : 1),
+            last_seen: val.occurred_at,
+            success_days: val.ok ? (prev.success_days || 0) + (prev.last_success_date !== st.today ? 1 : 0) : 0,
+            last_success_date: val.ok ? st.today : prev.last_success_date,
             category: val.category || prev.category || '',
             question: val.question || prev.question || '',
             answer: val.answer || prev.answer || '',
@@ -336,16 +407,39 @@
   function handleNotebook(method, body) {
     const st = readJson(K.notebook, { ok: true, guest: false, entries: [] });
     if (!Array.isArray(st.entries)) st.entries = [];
+    if (!Array.isArray(st.articles)) st.articles = st.entries.filter(x => x && x.url);
+    const accountKey = getStudyState().accountKey;
     if (method === 'POST' && body && typeof body === 'object') {
+      if (body.account_key && body.account_key !== accountKey) return jsonRes({ error: 'Tài khoản sổ từ không khớp.' }, 409);
       const id = body.id || body.word || crypto.randomUUID();
       const idx = st.entries.findIndex(e => e.id === id);
-      const entry = { ...body, id, updated_at: new Date().toISOString() };
+      const rev = idx >= 0 ? (st.entries[idx].revision || 0) + 1 : 1;
+      const entry = { ...body, id, revision: rev, updated_at: new Date().toISOString() };
       if (idx >= 0) st.entries[idx] = entry;
       else st.entries.push(entry);
       writeJson(K.notebook, st);
-      return jsonRes({ ok: true, guest: false, entry, entries: st.entries });
+      return jsonRes({ ok: true, guest: false, accountKey, revision: rev, entry, entries: st.entries });
     }
-    return jsonRes({ ok: true, guest: false, entries: st.entries });
+    return jsonRes({ ok: true, guest: false, accountKey: getStudyState().accountKey, entries: st.entries, articles: st.articles });
+  }
+
+  function handleNewsNotebook(method, body, url) {
+    const st = readJson(K.notebook, { entries: [], articles: [] });
+    if (!Array.isArray(st.articles)) st.articles = (st.entries || []).filter(x => x && x.url);
+    const accountKey = getStudyState().accountKey;
+    const articleUrl = body?.url || url;
+    if (!articleUrl || !/^https?:\/\//i.test(articleUrl)) return jsonRes({ error: 'Thiếu URL bài báo hợp lệ.' }, 400);
+    const index = st.articles.findIndex(x => x.url === articleUrl);
+    const previous = st.articles[index] || { url: articleUrl, notes: '', words: [], revision: 0 };
+    if (method === 'POST') {
+      if (body.account_key && body.account_key !== accountKey) return jsonRes({ error: 'Tài khoản ghi chú không khớp.' }, 409);
+      if (body.revision != null && body.revision !== previous.revision) return jsonRes({ error: 'Ghi chú đã thay đổi. Đối chiếu bản lưu trước.', revision: previous.revision }, 409);
+      const article = { ...previous, title: body.title || previous.title || '', notes: String(body.notes || ''), words: Array.isArray(body.words) ? body.words : previous.words, revision: previous.revision + 1, updated_at: new Date().toISOString() };
+      if (index < 0) st.articles.push(article); else st.articles[index] = article;
+      writeJson(K.notebook, st);
+      return jsonRes({ ...article, ok: true, guest: false, accountKey });
+    }
+    return jsonRes({ ...previous, ok: true, guest: false, accountKey });
   }
 
   function handleLearningPlan(method, body) {
@@ -363,16 +457,20 @@ window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('P
   function handleKnowledge(method, body) {
     const st = readJson(K.knowledge, { ok: true, guest: false, entries: [] });
     if (!Array.isArray(st.entries)) st.entries = [];
+    const accountKey = getStudyState().accountKey;
     if (method === 'POST' && body && typeof body === 'object' && body.id) {
+      if (body.account_key && body.account_key !== accountKey) return jsonRes({ error: 'Tài khoản bài đọc không khớp.' }, 409);
       const idx = st.entries.findIndex(e => e.id === body.id);
-      const rev = idx >= 0 ? (st.entries[idx].revision || 0) + 1 : 1;
+      const currentRevision = idx >= 0 ? st.entries[idx].revision || 0 : 0;
+      if (body.revision != null && body.revision !== currentRevision) return jsonRes({ error: 'Bài đọc đã thay đổi. Đối chiếu bản lưu trước.', revision: currentRevision }, 409);
+      const rev = currentRevision + 1;
       const entry = { id: body.id, revision: rev, value: body.value || {} };
       if (idx >= 0) st.entries[idx] = entry;
       else st.entries.push(entry);
       writeJson(K.knowledge, st);
-      return jsonRes({ ok: true, guest: false, entry, entries: st.entries });
+      return jsonRes({ ok: true, guest: false, accountKey, revision: rev, entry, entries: st.entries });
     }
-    return jsonRes({ ok: true, guest: false, entries: st.entries });
+    return jsonRes({ ok: true, guest: false, accountKey, entries: st.entries });
   }
 
 
@@ -1253,7 +1351,7 @@ window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('P
 
   window.fetch = async function patchedFetch(input, init) {
     try {
-      const urlStr = typeof input === 'string' ? input : (input && input.url) || '';
+      const urlStr = typeof input === 'string' || input instanceof URL ? String(input) : (input && input.url) || '';
       const u = new URL(urlStr, location.origin);
       if (u.origin === location.origin) {
         if (u.pathname === '/data.json') {
@@ -1394,8 +1492,10 @@ window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('P
       if (u.origin === location.origin && u.pathname.startsWith('/api/')) {
         const method = ((init && init.method) || (input && input.method) || 'GET').toUpperCase();
         let body = null;
-        if (init && init.body && typeof init.body === 'string') {
-          try { body = JSON.parse(init.body); } catch { body = null; }
+        if (init && typeof init.body === 'string') {
+          try { body = JSON.parse(init.body); } catch { return jsonRes({ error: 'Dữ liệu lưu không phải JSON hợp lệ.' }, 400); }
+        } else if (input instanceof Request && method !== 'GET' && method !== 'HEAD') {
+          try { body = await input.clone().json(); } catch { return jsonRes({ error: 'Dữ liệu lưu không phải JSON hợp lệ.' }, 400); }
         }
         if (u.pathname === '/api/session') {
           return jsonRes({
@@ -1405,16 +1505,22 @@ window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('P
             user: { name: 'Khang', id: 'owner' }
           });
         }
-        if (u.pathname === '/api/study') return handleStudy(method, body);
-        if (u.pathname === '/api/practice') return handlePractice(method, body);
-        if (u.pathname === '/api/practice/notebook') return handleNotebook(method, body);
-        if (u.pathname === '/api/learning-plan') return handleLearningPlan(method, body);
-        if (u.pathname === '/api/knowledge') return handleKnowledge(method, body);
+        const progressRoutes = { '/api/study': handleStudy, '/api/stats': handleStudy, '/api/practice': handlePractice, '/api/knowledge': handleKnowledge, '/api/learning-plan': handleLearningPlan, '/api/practice/notebook': handleNotebook, '/api/news/notebook': (m, b) => handleNewsNotebook(m, b, u.searchParams.get('url')) };
+        if (progressRoutes[u.pathname]) {
+          try {
+            if (!['GET', 'POST'].includes(method)) return jsonRes({ error: 'Phương thức không được hỗ trợ.' }, 405);
+            const run = () => progressRoutes[u.pathname](method, body);
+            return await (navigator.locks?.request ? navigator.locks.request('kf-progress-write-v1', run) : run());
+          } catch (error) {
+            // Never fall through to the non-persistent Vercel compatibility endpoints.
+            return jsonRes({ error: 'Chưa ghi được tiến độ trên thiết bị. Giữ bản tạm và thử lưu lại.', storageError: true }, 503);
+          }
+        }
         if (u.pathname === '/api/backup') {
           return jsonRes({ ok: true, guest: false, backups: [], study: getStudyState(), practice: getPracticeState() });
         }
         if (u.pathname === '/api/tidians/live-override') {
-          if (u.searchParams.get('asset')) return origFetch('/live-override-custom.js', { cache: 'default' });
+          if (u.searchParams.get('asset')) return origFetch('/live-override-custom.js?v=20261124-progress1', { cache: 'default' });
           return origFetch('/live-override-data.json', { cache: 'default' });
         }
         if (u.pathname === '/api/ielts/source') {
