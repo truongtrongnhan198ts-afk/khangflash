@@ -83,7 +83,8 @@
     practice: 'kf_vercel_practice_v1',
     notebook: 'kf_vercel_notebook_v1',
     plan: 'kf_vercel_plan_v1',
-    knowledge: 'kf_vercel_knowledge_v1'
+    knowledge: 'kf_vercel_knowledge_v1',
+    manualDone: 'kf_fp_manual_done_v1'
   };
 
   function todayIso(date) {
@@ -454,6 +455,95 @@
     return jsonRes({ ok: true, guest: false, plan: st.plan || null });
   }
 window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('POST', { plan }); };
+  // Portable backup of durable progress. Restores only missing rows, never older versions over current work.
+  function backupDevicePlan(accountKey, incoming) {
+    return new Promise((resolve, reject) => {
+      if (!window.indexedDB) return reject(Error('Bộ nhớ lịch không khả dụng.'));
+      const request = indexedDB.open('kf-device-learning-plan-v1', 1);
+      request.onupgradeneeded = () => { if (!request.result.objectStoreNames.contains('plans')) request.result.createObjectStore('plans'); };
+      request.onerror = () => reject(request.error);
+      request.onblocked = () => reject(Error('Bộ nhớ lịch đang bị khóa.'));
+      request.onsuccess = () => {
+        const db = request.result;
+        let result;
+        try {
+          const tx = db.transaction('plans', incoming === undefined ? 'readonly' : 'readwrite'), store = tx.objectStore('plans');
+          const get = store.get(accountKey);
+          get.onsuccess = () => { result = get.result || null; if (!result && incoming) { store.put(incoming, accountKey); result = incoming; } };
+          tx.oncomplete = () => { db.close(); resolve(result); };
+          tx.onerror = tx.onabort = () => { db.close(); reject(tx.error || Error('Chưa lưu được lịch.')); };
+        } catch (error) { db.close(); reject(error); }
+      };
+    });
+  }
+  async function handleBackup(method, body) {
+    const accountKey = getStudyState().accountKey;
+    const stores = {
+      study: { key: K.study, arrays: { cards: 'card_id', history: 'event_id', activity: 'date', learningActivity: 'date' }, objects: ['settings'] },
+      practice: { key: K.practice, arrays: { questions: 'qid', errors: 'qid', attempts: 'id', values: 'key', entries: 'id', articles: 'url' } },
+      knowledge: { key: K.knowledge, arrays: { entries: 'id' } },
+      notebook: { key: K.notebook, arrays: { entries: 'id', articles: 'url' } },
+      plan: { key: K.plan, objects: ['plan'] }
+    };
+    if (method === 'GET') {
+      const data = Object.fromEntries(Object.entries(stores).map(([name, spec]) => [name, readJson(spec.key, {})]));
+      data.manualDone = readJson('kf_fp_manual_done_v1', {});
+      data.devicePlan = await backupDevicePlan(accountKey);
+      return jsonRes({ ok: true, format: 'khangflash-progress', version: 1, accountKey, exportedAt: new Date().toISOString(), data });
+    }
+    const backup = body?.backup;
+    const object = value => value && typeof value === 'object' && !Array.isArray(value);
+    if (!['preview', 'merge'].includes(body?.action) || backup?.format !== 'khangflash-progress' || backup.version !== 1 || !object(backup.data)) return jsonRes({ error: 'Tệp sao lưu hoặc thao tác không hợp lệ.' }, 400);
+    if (backup.accountKey !== accountKey) return jsonRes({ error: 'Bản sao không thuộc tài khoản hiện tại.' }, 409);
+    if (JSON.stringify(backup).length > 25000000) return jsonRes({ error: 'Tệp vượt giới hạn 25 MB.' }, 413);
+    const summary = [], writes = [];
+    const safeKey = key => !['__proto__', 'prototype', 'constructor'].includes(key);
+    const comparable = value => JSON.stringify(value, (key, val) => ['ratingPlans', 'today', 'newCardPlans'].includes(key) ? undefined : val);
+    for (const [name, spec] of Object.entries(stores)) {
+      const input = backup.data[name]; if (input === undefined) continue;
+      if (!object(input) || input.accountKey && input.accountKey !== accountKey) return jsonRes({ error: 'Dữ liệu hoặc tài khoản trong bản sao không hợp lệ.' }, 400);
+      const current = readJson(spec.key, {}), next = JSON.parse(JSON.stringify(current)), row = { name, missing: 0, conflicts: 0 };
+      for (const [field, idField] of Object.entries(spec.arrays || {})) {
+        if (input[field] === undefined) continue;
+        if (!Array.isArray(input[field]) || input[field].some(x => !object(x))) return jsonRes({ error: 'Danh sách '+name+'.'+field+' không hợp lệ.' }, 400);
+        const identity = x => String(x[idField] || (idField === 'card_id' ? x.id : '') || (field === 'history' ? comparable(x) : ''));
+        if (input[field].some(x => !identity(x))) return jsonRes({ error: 'Bản sao thiếu mã mục học.' }, 400);
+        if (current[field] !== undefined && !Array.isArray(current[field])) throw Error('Bản lưu hiện tại không hợp lệ.');
+        next[field] = [...(current[field] || [])]; const byId = new Map(next[field].map(x => [identity(x), x]));
+        for (const entry of input[field]) { const id = identity(entry), old = byId.get(id); if (!old) { next[field].push(entry); byId.set(id, entry); row.missing++; } else if (comparable(old) !== comparable(entry)) row.conflicts++; }
+      }
+      for (const field of spec.objects || []) {
+        if (input[field] == null) continue;
+        if (!object(input[field])) return jsonRes({ error: 'Nội dung '+field+' không hợp lệ.' }, 400);
+        if (current[field] == null) { next[field] = input[field]; row.missing++; }
+        else if (field === 'settings') { next[field] = { ...current[field] }; for (const [key, value] of Object.entries(input[field])) if (safeKey(key)) { if (!Object.hasOwn(current[field], key)) { next[field][key] = value; row.missing++; } else if (comparable(current[field][key]) !== comparable(value)) row.conflicts++; } }
+        else if (comparable(current[field]) !== comparable(input[field])) row.conflicts++;
+      }
+      if (row.missing) writes.push([spec.key, next]); summary.push(row);
+    }
+    const manual = backup.data.manualDone;
+    if (manual !== undefined) {
+      if (!object(manual)) return jsonRes({ error: 'Trạng thái hoàn thành không hợp lệ.' }, 400);
+      const current = readJson('kf_fp_manual_done_v1', {}), next = JSON.parse(JSON.stringify(current)), row = { name: 'manualDone', missing: 0, conflicts: 0 };
+      for (const [day, items] of Object.entries(manual)) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || !object(items)) return jsonRes({ error: 'Ngày hoàn thành không hợp lệ.' }, 400);
+        next[day] ||= {}; for (const [id, value] of Object.entries(items)) { if (!/^[0-7]$/.test(id) || ![0, 1, true, false].includes(value)) return jsonRes({ error: 'Ô hoàn thành không hợp lệ.' }, 400); if (!Object.hasOwn(next[day], id)) { next[day][id] = value; row.missing++; } else if (next[day][id] !== value) row.conflicts++; }
+      }
+      if (row.missing) writes.push(['kf_fp_manual_done_v1', next]); summary.push(row);
+    }
+    const validPlan = plan => object(plan) && Array.isArray(plan.days) && plan.days.length > 0 && plan.days.every(day => object(day) && Array.isArray(day.cards) && day.cards.every(id => typeof id === 'string' && id.length > 0));
+    if (backup.data.plan?.plan && !validPlan(backup.data.plan.plan)) return jsonRes({ error: 'Danh sách ngày học không hợp lệ.' }, 400);
+    const device = backup.data.devicePlan, currentDevice = await backupDevicePlan(accountKey);
+    if (device != null && (!object(device) || device.accountKey !== accountKey || !validPlan(device.plan))) return jsonRes({ error: 'Lịch trên thiết bị không hợp lệ.' }, 400);
+    summary.push({ name: 'devicePlan', missing: device && !currentDevice ? 1 : 0, conflicts: device && currentDevice && comparable(device) !== comparable(currentDevice) ? 1 : 0 });
+    const missing = summary.reduce((n, row) => n + row.missing, 0);
+    if (body.action === 'merge') {
+      // All input is validated before writes. A partial storage failure rejects; retry is additive/idempotent.
+      for (const [key, value] of writes) writeJson(key, value);
+      if (device && !currentDevice) await backupDevicePlan(accountKey, device);
+    }
+    return jsonRes({ ok: true, summary, message: body.action === 'merge' ? 'Đã bổ sung '+missing+' mục còn thiếu; giữ nguyên các mục đang có.' : 'Đã kiểm tra bản sao.' });
+  }
   function handleKnowledge(method, body) {
     const st = readJson(K.knowledge, { ok: true, guest: false, entries: [] });
     if (!Array.isArray(st.entries)) st.entries = [];
@@ -1505,7 +1595,7 @@ window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('P
             user: { name: 'Khang', id: 'owner' }
           });
         }
-        const progressRoutes = { '/api/study': handleStudy, '/api/stats': handleStudy, '/api/practice': handlePractice, '/api/knowledge': handleKnowledge, '/api/learning-plan': handleLearningPlan, '/api/practice/notebook': handleNotebook, '/api/news/notebook': (m, b) => handleNewsNotebook(m, b, u.searchParams.get('url')) };
+        const progressRoutes = { '/api/backup': handleBackup, '/api/study': handleStudy, '/api/stats': handleStudy, '/api/practice': handlePractice, '/api/knowledge': handleKnowledge, '/api/learning-plan': handleLearningPlan, '/api/practice/notebook': handleNotebook, '/api/news/notebook': (m, b) => handleNewsNotebook(m, b, u.searchParams.get('url')) };
         if (progressRoutes[u.pathname]) {
           try {
             if (!['GET', 'POST'].includes(method)) return jsonRes({ error: 'Phương thức không được hỗ trợ.' }, 405);
@@ -1515,9 +1605,6 @@ window.__KF_SAVE_LEARNING_PLAN__ = function(plan) { return handleLearningPlan('P
             // Never fall through to the non-persistent Vercel compatibility endpoints.
             return jsonRes({ error: 'Chưa ghi được tiến độ trên thiết bị. Giữ bản tạm và thử lưu lại.', storageError: true }, 503);
           }
-        }
-        if (u.pathname === '/api/backup') {
-          return jsonRes({ ok: true, guest: false, backups: [], study: getStudyState(), practice: getPracticeState() });
         }
         if (u.pathname === '/api/tidians/live-override') {
           if (u.searchParams.get('asset')) return origFetch('/live-override-custom.js?v=20261124-progress1', { cache: 'default' });
