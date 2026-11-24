@@ -1,9 +1,0 @@
-name: tmp-read-head
-on: [push]
-jobs:
-  read:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: |
-          python3 -c "import glob; p=next(iter(glob.glob('**/live-override-custom.js',recursive=True)),'live-override-custom.js'); lines=open(p,encoding='utf-8').read().splitlines()[:123]; terms=['piper','voice','Alba','KVoice']; [print(f'L{i+1} len={len(l)}: {l[:250]}' + (f'\n  MATCH({m}@{idx}): {l[max(0,idx-250):idx+250]}' if (hits:=[(l.find(t),t) for t in terms if t in l]) and ((idx:=min(hits)[0])>=0) and (m:=min(hits)[1]) else '')) for i,l in enumerate(lines)]"
