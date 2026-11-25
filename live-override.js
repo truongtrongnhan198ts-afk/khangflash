@@ -2,6 +2,10 @@
 (() => {
   'use strict';
   if (window.__KF_LIVE_OVERRIDE_BOOTED__) return; window.__KF_LIVE_OVERRIDE_BOOTED__ = true;
+  const planParams = new URLSearchParams(location.search);
+  const loadsDailyPlan = /^(schedule|dashboard)$/.test(document.body?.dataset.page || '')
+    || (/^\/flashcard(?:\.html)?\/?$/.test(location.pathname)
+      && (planParams.has('day') || planParams.get('lesson') === 'today'));
   const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname); if (isVocabPage && typeof window.fetch === 'function' && !window.__KF_EARLY_FETCH_HOOKED__) { window.__KF_EARLY_FETCH_HOOKED__ = true; const earlyOrigFetch = window.fetch.bind(window); window.fetch = async function(input, init) { const urlStr = typeof input === 'string' ? input : (input && input.url) || ''; let u = null; try { u = new URL(urlStr, location.origin); } catch {} if (u && u.pathname === '/data.json') { const topicId = getSingleTopicId(); if (topicId) { try { const tc = await readTopicCache(topicId); if (tc && Array.isArray(tc.cards)) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => tc, text: async () => JSON.stringify(tc), clone() { return this; } }; } } catch {} } try { const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); const out = topicId ? buildTopicSlice(cached, topicId) : cached; if (topicId) Promise.resolve(writeTopicCache(topicId, out)).catch(() => {}); return { ok: true, status: 200, headers: new Headers({ 'Content-Type': 'application/json' }), json: async () => out, text: async () => JSON.stringify(out), clone() { return this; } }; } } catch {} } return earlyOrigFetch(input, init); }; }
   
   /* KF_LOAD_KNOWLEDGE_TREE_V1 */
@@ -828,7 +832,7 @@
   async function loadAll() {
    if (window.__KF_STATIC_TOPIC_ID__) { loaded = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; }
     if (loaded) return;
-    loaded = true; if (isVocabPage) { try { const topicId = getSingleTopicId(); if (topicId) { const tc = await readTopicCache(topicId); if (tc && Array.isArray(tc.cards)) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { if (topicId) Promise.resolve(writeTopicCache(topicId, buildTopicSlice(cached, topicId))).catch(() => {}); window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } catch {} }
+    loaded = true; if (isVocabPage && !loadsDailyPlan) { try { const topicId = getSingleTopicId(); if (topicId) { const tc = await readTopicCache(topicId); if (tc && Array.isArray(tc.cards)) { window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } const cached = await readMergedCache(); if (cached && Array.isArray(cached.cards) && cached.cards.length >= 60005) { if (topicId) Promise.resolve(writeTopicCache(topicId, buildTopicSlice(cached, topicId))).catch(() => {}); window.__KF_BASE_MERGE_DONE__ = true; if (typeof window.__KF_RESOLVE_BASE_MERGE__ === 'function') window.__KF_RESOLVE_BASE_MERGE__(); return; } } catch {} }
     hookRelationsShow(); 
     loadTask1Expansion200();
     try {
@@ -868,7 +872,12 @@
   if (/^\/writing\/?$/.test(location.pathname)) loadTask1Expansion200();
   window.TidianLiveOverrides = { refresh: loadAll };
 //   const isVocabPage = /^\/(flashcard|flashcards|library|games|due|dashboard)(?:\.html)?\/?$/.test(location.pathname);
-  if (isVocabPage) {
+  if (loadsDailyPlan) {
+    window.__KF_DAILY_PLAN_READY__ = loadAll().then(() => {
+      if (!window.KFLocalPlan) throw Error('Chưa tải được lịch học trên thiết bị.');
+    });
+    window.__KF_DAILY_PLAN_READY__.catch(() => {});
+  } else if (isVocabPage) {
     loadAll();
   } else if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => (typeof requestIdleCallback === 'function' ? requestIdleCallback(() => loadAll(), { timeout: 1500 }) : setTimeout(loadAll, 500)), { once: true });
