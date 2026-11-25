@@ -83,8 +83,8 @@ window.KVoice=(()=>{
  }
  let streamCancel=null;
  function playMicrosoftStream(body,ticket,region=prefs.accent){
-  const reader=body.getReader(),media=new window.MediaSource();if(localUrl)URL.revokeObjectURL(localUrl);localUrl=URL.createObjectURL(media);
-  const player=new window.Audio(localUrl);audio=player;playerControls(player,region);
+  const reader=body.getReader(),media=new window.MediaSource();if(microsoftAudioUrl)URL.revokeObjectURL(microsoftAudioUrl);microsoftAudioUrl=URL.createObjectURL(media);
+  const player=new window.Audio(microsoftAudioUrl);audio=player;playerControls(player,region);
   return new Promise(resolve=>{
    let settled=false,cancelled=false,buffer=null,rejectOpen=null;
    const settle=ok=>{if(!settled){settled=true;clearTimeout(startTimer);resolve(ok);}};
@@ -114,8 +114,8 @@ window.KVoice=(()=>{
   const completed=microsoftAudio(text,preset.id,localAccount(),controller.signal,body=>{
    if(ticket!==generation){void body.cancel().catch(()=>{});return;}streamed=true;streamPlayback=playMicrosoftStream(body,ticket,region).then(ok=>{if(ok){metrics(true,'stream');resolveStarted(true);}return ok;});
   },controls(region).pitch).then(async result=>{
-   if(ticket!==generation)return false;if(streamed&&await streamPlayback)return true;
-   if(localUrl)URL.revokeObjectURL(localUrl);localUrl=URL.createObjectURL(result.blob);const ok=await play(localUrl,ticket,region);metrics(ok,result.source);return ok;
+   if(ticket!==generation)return false;if(streamed&&await streamPlayback)return true;if(ticket!==generation)return false;
+   if(microsoftAudioUrl)URL.revokeObjectURL(microsoftAudioUrl);microsoftAudioUrl=URL.createObjectURL(result.blob);const ok=await play(microsoftAudioUrl,ticket,region);metrics(ok,result.source);return ok;
   }).catch(error=>{if(ticket===generation)notice(error.message||'Chưa phát được giọng Microsoft.');resolveStarted(false);return false;});
   return Promise.race([began,completed]);
  }
@@ -124,8 +124,8 @@ window.KVoice=(()=>{
  function wait(){if(!synth||synth.getVoices().length)return Promise.resolve();return new Promise(resolve=>{let timer;const done=()=>{clearTimeout(timer);synth.removeEventListener('voiceschanged',done);resolve();};synth.addEventListener('voiceschanged',done);timer=setTimeout(done,1600);});}
  function accent(value){if(['en-GB','en-US'].includes(value)){const changed=prefs.accent!==value;prefs.accent=value;save();if(changed&&typeof CustomEvent==='function')window.dispatchEvent?.(new CustomEvent('kvoice-accent-change',{detail:{accent:value}}));}return prefs.accent;}
  function update(){const region=prefs.accent==='en-GB'?'UK':'US',label='Giọng đọc: '+(region==='UK'?'Giọng Anh (UK)':'Giọng Mỹ (US)');document.querySelectorAll('[data-td-action="voice"]').forEach(b=>{const span=b.querySelector('span');if(span&&span.textContent!==region)span.textContent=region;if(b.title!=='Chọn giọng đọc · '+region)b.title='Chọn giọng đọc · '+region;if(b.getAttribute('aria-label')!==label)b.setAttribute('aria-label',label);});}
- let audio=null,controller=null,paused=false;
- function stop(){streamCancel?.();streamCancel=null;paused=false;generation++;controller?.abort();controller=null;if(audio){audio.pause();audio.removeAttribute?.('src');audio.load?.();audio=null;}synth?.cancel();}
+ let audio=null,controller=null,paused=false,microsoftAudioUrl=null;
+ function stop(){streamCancel?.();streamCancel=null;paused=false;generation++;controller?.abort();controller=null;if(audio){audio.pause();audio.removeAttribute?.('src');audio.load?.();audio=null;}if(microsoftAudioUrl){URL.revokeObjectURL(microsoftAudioUrl);microsoftAudioUrl=null;}synth?.cancel();}
  function pause(){paused=true;if(audio)audio.pause();else synth?.pause();}
  function resume(){paused=false;if(audio)return audio.play();synth?.resume();}
  async function play(src,ticket,region=prefs.accent){
