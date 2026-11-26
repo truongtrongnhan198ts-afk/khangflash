@@ -12,6 +12,7 @@ const decks=[
 ];
 const el=id=>document.getElementById('speaking-'+id);
 let clip=null, grading=null, attempt=null;
+let feedbackSession=null;
 const audioLimit=3*1024*1024;
 const fileTypes={wav:'audio/wav',mp3:'audio/mpeg',webm:'audio/webm'};
 const extensions={'audio/wav':'wav','audio/mpeg':'mp3','audio/webm':'webm','audio/mp4':'m4a','audio/ogg':'ogg'};
@@ -119,6 +120,8 @@ function buttons(){
  el('grade').disabled=busy()||!clip||!!grading;
 }
 function clearClip(){
+ clearFeedback();
+ el('grade').textContent='Chấm bản thu bằng AI';
  grading?.abort();grading=null;clip=null;attempt=null;
  el('grade').disabled=true;
  el('grade-status').textContent='';
@@ -202,7 +205,7 @@ el('timer').onclick=()=>{
 el('prev').onclick=()=>{if(index&&!busy()){index--;question();}};
 el('next').onclick=()=>{if(deck[0]!==2&&index<deck.length-3&&!busy()){index++;question();}};
 el('part').onchange=list;el('search').oninput=list;
-window.addEventListener('pagehide',()=>{if(recorder?.state==='recording')recorder.stop();});
+window.addEventListener('pagehide',()=>{if(recorder?.state==='recording')recorder.stop();feedbackSession?.controller.abort();});
 list();
 refreshHistory();
 
@@ -244,7 +247,8 @@ el('grade').onclick=async()=>{
  }
  const request=new AbortController(), selected=clip, entry=attempt;
  const question=[entry.question,...Array.from(el('cues').children,item=>item.textContent)].join(' ');
- grading=request;buttons();el('result').replaceChildren();
+ grading=request;buttons();clearFeedback();el('result').replaceChildren();
+ el('grade').textContent='Chấm bản thu bằng AI';
  el('grade-status').textContent='Đang chấm bản thu…';
  try{
   const silent=await isSilent(selected);
@@ -252,29 +256,149 @@ el('grade').onclick=async()=>{
   if(silent)throw Error('Bản thu không có âm thanh. Hãy kiểm tra micro hoặc chọn một file khác.');
   const audioBase64=await encodeAudio(selected);
   if(request.signal.aborted)return;
-  const response=await fetch('/api/ielts-speaking',{
-   method:'POST',headers:{'Content-Type':'application/json'},signal:request.signal,
-   body:JSON.stringify({audioBase64,mimeType:selected.type,part:entry.part,question})
-  });
-  const value=await response.json().catch(()=>null);
-  if(!response.ok||!value)throw Error(value?.error||'Không gọi được API chấm bài (HTTP '+response.status+').');
+  const value=await speakingRequest({action:'evaluate',audioBase64,mimeType:selected.type,part:entry.part,question},request.signal);
   if(grading!==request)return;
   renderResult(value);
   entry.result=value;
   await saveAttempt(entry);
  }catch(error){
-  if(grading===request)el('grade-status').textContent=error.message;
+  if(grading===request){
+   el('grade-status').textContent=error.message;
+   el('grade').textContent='Thử chấm lại';
+  }
  }finally{
   if(grading===request){grading=null;buttons();}
  }
 };
 
+const relevanceLabels={on_topic:'Đúng trọng tâm',partially_off_topic:'Trả lời một phần',off_topic:'Lạc đề'};
+
+async function speakingRequest(payload,signal){
+ const response=await fetch('/api/ielts-speaking',{
+  method:'POST',headers:{'Content-Type':'application/json'},signal,body:JSON.stringify(payload)
+ });
+ const result=await response.json().catch(()=>null);
+ if(!response.ok||!result)throw Error(result?.error||'Không nhận được kết quả. Bạn có thể thử lại.');
+ return result;
+}
+
+function clearFeedback(){
+ feedbackSession?.controller.abort();
+ feedbackSession=null;
+ el('coach').hidden=true;
+ el('chat-history').replaceChildren();
+ el('chat-message').value='';
+ el('chat-status').textContent='';
+ el('chat-send').disabled=false;
+}
+
+function correctionCard(correction,signal){
+ const card=node('article','');
+ card.append(node('h4',correction.spoken||'Câu cần luyện'),node('p',correction.explanation_vi||correction.issue||''),
+  node('p','Câu gợi ý: '+correction.upgrade));
+ const toggle=node('button','Nói lại câu này');toggle.type='button';
+ const controls=node('div','');controls.hidden=true;
+ const status=node('p','');status.setAttribute('role','status');
+ const input=node('input','');input.type='file';input.accept='.wav,.mp3,.webm';input.setAttribute('aria-label','Chọn audio luyện lại');
+ const record=node('button','Thu âm câu này');record.type='button';record.disabled=!canRecord;
+ const stop=node('button','Dừng và chấm');stop.type='button';stop.disabled=true;
+ let capture=null;
+ async function submitAudio(audio){
+  input.disabled=true;record.disabled=true;
+  status.textContent='Đang chấm câu luyện lại…';
+  try{
+   if(!audio.size||audio.size>audioLimit)throw Error('Chọn bản thu có dữ liệu và không vượt 3 MB.');
+   if(await isSilent(audio))throw Error('Bản thu không có âm thanh.');
+   const audioBase64=await encodeAudio(audio);
+   if(signal.aborted)return;
+   const verdict=await speakingRequest({action:'retry_drill',audioBase64,mimeType:audio.type,
+    originalSpoken:correction.spoken,issue:correction.issue,targetUpgrade:correction.upgrade},signal);
+   status.textContent=(verdict.passed?'Đạt':'Chưa đạt')+' · '+verdict.score_10+'/10. '+verdict.feedback_vi;
+   if(verdict.heard)status.append(node('span',' Nghe được: '+verdict.heard));
+   if(verdict.next_tip_vi)status.append(node('span',' '+verdict.next_tip_vi));
+  }catch(error){if(!signal.aborted)status.textContent=error.message;}
+  finally{input.disabled=false;record.disabled=!canRecord;}
+ }
+ input.onchange=()=>{
+  const file=input.files[0];input.value='';
+  if(!file)return;
+  const format=fileTypes[file.name.split('.').pop().toLowerCase()];
+  if(!format){status.textContent='Chọn file WAV, MP3 hoặc WebM.';return;}
+  submitAudio(file.slice(0,file.size,format));
+ };
+ record.onclick=async()=>{
+  let stream;
+  input.disabled=true;record.disabled=true;
+  try{
+   stream=await navigator.mediaDevices.getUserMedia({audio:true});
+   const release=()=>stream.getTracks().forEach(track=>track.stop());
+   if(signal.aborted){release();return;}
+   const chunks=[];
+   capture=new MediaRecorder(stream);
+   const abort=()=>{if(capture?.state==='recording')capture.stop();release();};
+   signal.addEventListener('abort',abort,{once:true});
+   capture.ondataavailable=event=>{if(event.data.size)chunks.push(event.data);};
+   capture.onstop=()=>{
+    const type=capture.mimeType||chunks[0]?.type;
+    release();signal.removeEventListener('abort',abort);capture=null;stop.disabled=true;
+    if(!signal.aborted)submitAudio(new Blob(chunks,{type}));
+   };
+   capture.start();stop.disabled=false;status.textContent='Đang thu câu luyện lại…';
+  }catch{
+   stream?.getTracks().forEach(track=>track.stop());
+   if(!signal.aborted){status.textContent='Chưa mở được mic. Bạn có thể chọn file audio.';record.disabled=false;input.disabled=false;}
+  }
+ };
+ stop.onclick=()=>{if(capture?.state==='recording'){stop.disabled=true;capture.stop();}};
+ toggle.setAttribute('aria-expanded','false');
+ toggle.onclick=()=>{
+  controls.hidden=!controls.hidden;
+  toggle.setAttribute('aria-expanded',String(!controls.hidden));
+ };
+ controls.append(record,stop,input,status);
+ card.append(toggle,controls);
+ return card;
+}
+
+el('chat-form').onsubmit=async event=>{
+ event.preventDefault();
+ const session=feedbackSession, input=el('chat-message'), button=el('chat-send');
+ const message=input.value.trim();
+ if(!session||!message||button.disabled)return;
+ button.disabled=true;el('chat-status').textContent='Giám khảo đang trả lời…';
+ try{
+  const {reply}=await speakingRequest({action:'chat',message,question:session.question,
+   evaluation:session.evaluation,chatHistory:session.history.slice(-8)},session.controller.signal);
+  if(feedbackSession!==session)return;
+  session.history.push({role:'user',text:message},{role:'assistant',text:reply});
+  const replyNode=node('p','Giám khảo: '+reply);replyNode.style.whiteSpace='pre-wrap';
+  el('chat-history').append(node('p','Bạn: '+message),replyNode);
+  if(input.value.trim()===message)input.value='';
+  el('chat-status').textContent='';
+ }catch(error){
+  if(feedbackSession===session)el('chat-status').textContent=error.message;
+ }finally{
+  if(feedbackSession===session)button.disabled=false;
+ }
+};
+
 function renderResult(value){
+ clearFeedback();
+ const question=[attempt.question,...Array.from(el('cues').children,item=>item.textContent)].join(' ');
+ feedbackSession={question,evaluation:value,history:[],controller:new AbortController()};
+ el('coach').hidden=false;
  const result=[node('h3','Band ước tính · '+Number(value.overall_band).toFixed(1))];
+ if(relevanceLabels[value.relevance]){
+  result.push(node('p',relevanceLabels[value.relevance]+(value.relevance_reason?' · '+value.relevance_reason:'')));
+ }
  for(const [id,label] of Object.entries(criteria)){
   const score=value.scores[id];result.push(node('h4',label+' · '+score.band),node('p',score.feedback));
  }
  result.push(node('h4','Bản chép lời'),node('p',value.transcript));
  if(value.model_answer)result.push(node('h4','Câu trả lời gợi ý'),node('p',value.model_answer));
+ const corrections=Array.isArray(value.corrections)?value.corrections.filter(item=>item?.upgrade):[];
+ if(corrections.length){
+  result.push(node('h3','Sửa lỗi và luyện lại'),...corrections.map(item=>correctionCard(item,feedbackSession.controller.signal)));
+ }
  el('result').replaceChildren(...result);el('grade-status').textContent='Đã chấm xong.';
 }
