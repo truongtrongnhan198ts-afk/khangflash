@@ -70,7 +70,7 @@ async function refreshHistory(){
      await refreshHistory();
     }catch{el('history-status').textContent='Chưa xóa được bản thu.';}
    };
-   const band=entry.result?'Band '+Number(entry.result.overall_band).toFixed(1):'Chưa chấm';
+   const band=!entry.result?'Chưa chấm':Number.isFinite(entry.result.overall_band)?'Band '+entry.result.overall_band.toFixed(1):'Có nhận xét · Chưa đủ dữ liệu ước tính band';
    item.append(node('p',caption+' · '+band),node('p',entry.question),open,backup,remove);
    return item;
   }));
@@ -387,12 +387,20 @@ function renderResult(value){
  const question=[attempt.question,...Array.from(el('cues').children,item=>item.textContent)].join(' ');
  feedbackSession={question,evaluation:value,history:[],controller:new AbortController()};
  el('coach').hidden=false;
- const result=[node('h3','Band ước tính · '+Number(value.overall_band).toFixed(1))];
+ const heading=Number.isFinite(value.overall_band)?'Band ước tính · '+value.overall_band.toFixed(1):'Nhận xét cho câu này';
+ const result=[node('h3',heading)];
+ if(value.assessment_note)result.push(node('p',value.assessment_note));
+ if(value.relevance==='off_topic'&&Number.isFinite(value.overall_band)){
+  result.push(node('p','Quy tắc luyện tập KhangFlash: bài lạc đề có band tối đa 4.5.'));
+ }
  if(relevanceLabels[value.relevance]){
   result.push(node('p',relevanceLabels[value.relevance]+(value.relevance_reason?' · '+value.relevance_reason:'')));
  }
  for(const [id,label] of Object.entries(criteria)){
-  const score=value.scores[id];result.push(node('h4',label+' · '+score.band),node('p',score.feedback));
+  const score=value.scores[id];
+  const band=Number.isFinite(score.band)?score.band:'Chưa đủ căn cứ';
+  result.push(node('h4',label+' · '+band),node('p',score.feedback));
+  if(score.evidence)result.push(node('p','Dẫn chứng: '+score.evidence));
  }
  result.push(node('h4','Bản chép lời'),node('p',value.transcript));
  if(value.model_answer)result.push(node('h4','Câu trả lời gợi ý'),node('p',value.model_answer));
