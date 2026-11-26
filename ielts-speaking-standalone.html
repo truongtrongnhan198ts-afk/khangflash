@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IELTS Speaking AI Examiner</title>
+  <style>
+    :root { --bg:#0e1117; --card:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e; --accent:#2f81f7; --danger:#f85149; --ok:#3fb950; --warn:#d29922; }
+    * { box-sizing:border-box; font-family:system-ui,-apple-system,sans-serif; }
+    body { margin:0; background:var(--bg); color:var(--text); padding:20px; line-height:1.5; }
+    .wrap { max-width:860px; margin:0 auto; display:grid; gap:16px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    select, textarea, button { background:#0d1117; color:var(--text); border:1px solid var(--border); border-radius:6px; padding:9px 12px; font-size:14px; }
+    textarea { width:100%; resize:vertical; min-height:76px; }
+    button { cursor:pointer; font-weight:600; }
+    button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+    button.danger { background:var(--danger); border-color:var(--danger); color:#fff; }
+    button.ok { background:var(--ok); border-color:var(--ok); color:#0b140d; }
+    button:disabled { opacity:0.45; cursor:not-allowed; }
+    .timer { font-family:ui-monospace,monospace; font-size:20px; font-weight:700; color:var(--warn); }
+    .grid-4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+    .score-box { background:#0d1117; border:1px solid var(--border); border-radius:8px; padding:12px; }
+    .hidden { display:none; }
+    audio { width:100%; margin-top:10px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="row" style="justify-content:space-between;">
+        <h2 style="margin:0;">IELTS Speaking AI Examiner</h2>
+        <span id="statusBadge" style="padding:3px 9px;border-radius:99px;font-size:12px;font-weight:700;background:#21262d;">Ready</span>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <select id="partSelect">
+          <option value="Part 1">Part 1 — Interview</option>
+          <option value="Part 2">Part 2 — Cue Card</option>
+          <option value="Part 3">Part 3 — Discussion</option>
+        </select>
+        <button id="randomBtn">Random Prompt</button>
+        <button id="speakBtn">Listen to Examiner</button>
+        <label style="color:var(--muted);font-size:13px;"><input type="checkbox" id="autoSpeak" checked /> Auto-speak</label>
+      </div>
+      <textarea id="questionInput" style="margin-top:12px;"></textarea>
+      <div id="part2Controls" class="row hidden" style="margin-top:10px;">
+        <button id="prepBtn">Start 1-Min Prep</button>
+        <span id="prepTimer" class="timer">01:00</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row" style="justify-content:space-between;">
+        <div class="row">
+          <button id="recordBtn" class="primary">Start Recording</button>
+          <button id="stopBtn" class="danger" disabled>Stop</button>
+          <button id="submitBtn" class="ok" disabled>Evaluate Speaking</button>
+        </div>
+        <span id="recTimer" class="timer">00:00</span>
+      </div>
+      <audio id="playback" controls class="hidden"></audio>
+      <p id="errorBox" style="color:var(--danger);margin:10px 0 0;"></p>
+    </div>
+
+    <div id="resultCard" class="card hidden">
+      <div class="row" style="justify-content:space-between;align-items:baseline;">
+        <div>
+          <div style="color:var(--muted);font-size:12px;">OVERALL BAND SCORE</div>
+          <div id="overallBand" style="font-size:38px;font-weight:900;color:var(--ok);">-</div>
+        </div>
+        <button id="followupBtn" class="primary">Answer Examiner Follow-up</button>
+      </div>
+      <div class="grid-4" style="margin:14px 0;">
+        <div class="score-box"><div style="color:var(--muted);font-size:12px;">Fluency &amp; Coherence</div><div id="scFC" style="font-size:24px;font-weight:800;color:var(--accent);">-</div><p id="fbFC" style="color:var(--muted);font-size:13px;"></p></div>
+        <div class="score-box"><div style="color:var(--muted);font-size:12px;">Lexical Resource</div><div id="scLR" style="font-size:24px;font-weight:800;color:var(--accent);">-</div><p id="fbLR" style="color:var(--muted);font-size:13px;"></p></div>
+        <div class="score-box"><div style="color:var(--muted);font-size:12px;">Grammar</div><div id="scGR" style="font-size:24px;font-weight:800;color:var(--accent);">-</div><p id="fbGR" style="color:var(--muted);font-size:13px;"></p></div>
+        <div class="score-box"><div style="color:var(--muted);font-size:12px;">Pronunciation</div><div id="scPR" style="font-size:24px;font-weight:800;color:var(--accent);">-</div><p id="fbPR" style="color:var(--muted);font-size:13px;"></p></div>
+      </div>
+      <h3>Verbatim Transcript</h3><p id="transcriptBox" class="score-box"></p>
+      <h3>Targeted Corrections</h3>
+      <table><thead><tr><th>What You Said</th><th>Issue</th><th>Band 8.0+ Upgrade</th></tr></thead><tbody id="correctionsBody"></tbody></table>
+      <h3 style="margin-top:16px;">Band 8.5 Model Rewrite</h3><p id="modelAnswerBox" class="score-box"></p>
+      <h3>Examiner Follow-up</h3><p id="followupBox" class="score-box"></p>
+    </div>
+  </div>
+  <script>
+    const API_URL = "/api/ielts-speaking";
+    const PROMPTS = {
+      "Part 1": ["Do you work or are you a student? What do you find most challenging about it?", "How has your hometown changed over the last five years?"],
+      "Part 2": ["Describe a piece of technology you use every day that makes your life easier.\nYou should say:\n- what it is\n- how often you use it\n- what it helps you do\nand explain why you would find it difficult to live without it."],
+      "Part 3": ["To what extent is artificial intelligence replacing skills that humans still need to learn?"]
+    };
+    const $ = (id) => document.getElementById(id);
+    let mediaRecorder, audioChunks = [], audioBlob = null, recInterval, prepInterval, recSeconds = 0, sessionHistory = [], lastFollowup = "";
+    const fmt = (s) => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;
+    const speak = (t) => { if (!("speechSynthesis" in window) || !t) return; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.rate = 0.96; speechSynthesis.speak(u); };
+    const pick = () => { const p = $("partSelect").value; const l = PROMPTS[p]; const q = l[Math.floor(Math.random()*l.length)]; $("questionInput").value = q; $("part2Controls").classList.toggle("hidden", p !== "Part 2"); if ($("autoSpeak").checked) speak(q); };
+    const toB64 = (b) => new Promise((res, rej) => { const r = new FileReader(); r.onloadend = () => res(r.result.split(",")[1]); r.onerror = rej; r.readAsDataURL(b); });
+    const esc = (s) => String(s||"").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+
+    $("partSelect").onchange = pick; $("randomBtn").onclick = pick; $("speakBtn").onclick = () => speak($("questionInput").value);
+    $("prepBtn").onclick = () => { clearInterval(prepInterval); let left = 60; $("prepTimer").textContent = fmt(left); prepInterval = setInterval(() => { left--; $("prepTimer").textContent = fmt(Math.max(0,left)); if (left <= 0) { clearInterval(prepInterval); speak("One minute is up. Please begin speaking."); } }, 1000); };
+    $("recordBtn").onclick = async () => {
+      $("errorBox").textContent = "";
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        audioChunks = [];
+        mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) audioChunks.push(e.data); };
+        mediaRecorder.onstop = () => { audioBlob = new Blob(audioChunks, { type: mediaRecorder.mimeType || "audio/webm" }); $("playback").src = URL.createObjectURL(audioBlob); $("playback").classList.remove("hidden"); $("submitBtn").disabled = false; stream.getTracks().forEach(t => t.stop()); };
+        mediaRecorder.start(); recSeconds = 0; $("recTimer").textContent = "00:00";
+        recInterval = setInterval(() => { recSeconds++; $("recTimer").textContent = fmt(recSeconds); }, 1000);
+        $("recordBtn").disabled = true; $("stopBtn").disabled = false; $("submitBtn").disabled = true; $("statusBadge").textContent = "Recording...";
+      } catch (e) { $("errorBox").textContent = e.message; }
+    };
+    $("stopBtn").onclick = () => { if (mediaRecorder?.state !== "inactive") mediaRecorder.stop(); clearInterval(recInterval); $("recordBtn").disabled = false; $("stopBtn").disabled = true; $("statusBadge").textContent = "Recorded"; };
+    $("submitBtn").onclick = async () => {
+      if (!audioBlob) return;
+      $("submitBtn").disabled = true; $("statusBadge").textContent = "Evaluating..."; $("errorBox").textContent = "";
+      try {
+        const res = await fetch(API_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ audioBase64: await toB64(audioBlob), mimeType: audioBlob.type || "audio/webm", part: $("partSelect").value, question: $("questionInput").value.trim(), history: sessionHistory.slice(-4) }) });
+        const d = await res.json(); if (!res.ok) throw new Error(d.error || `HTTP ${res.status}`);
+        $("overallBand").textContent = Number(d.overall_band).toFixed(1);
+        $("scFC").textContent = d.scores.fluency_coherence.band; $("fbFC").textContent = d.scores.fluency_coherence.feedback;
+        $("scLR").textContent = d.scores.lexical_resource.band; $("fbLR").textContent = d.scores.lexical_resource.feedback;
+        $("scGR").textContent = d.scores.grammatical_range_accuracy.band; $("fbGR").textContent = d.scores.grammatical_range_accuracy.feedback;
+        $("scPR").textContent = d.scores.pronunciation.band; $("fbPR").textContent = d.scores.pronunciation.feedback;
+        $("transcriptBox").textContent = d.transcript; $("modelAnswerBox").textContent = d.model_answer; $("followupBox").textContent = d.examiner_followup;
+        lastFollowup = d.examiner_followup;
+        $("correctionsBody").innerHTML = (d.corrections || []).map(c => `<tr><td>${esc(c.spoken)}</td><td>${esc(c.issue)}</td><td>${esc(c.upgrade)}</td></tr>`).join("");
+        sessionHistory.push({ question: $("questionInput").value, transcript: d.transcript });
+        $("resultCard").classList.remove("hidden"); $("statusBadge").textContent = "Graded";
+        if ($("autoSpeak").checked && lastFollowup) speak(lastFollowup);
+      } catch (e) { $("errorBox").textContent = e.message; $("statusBadge").textContent = "Error"; }
+      finally { $("submitBtn").disabled = false; }
+    };
+    $("followupBtn").onclick = () => { if (!lastFollowup) return; $("questionInput").value = lastFollowup; $("playback").classList.add("hidden"); $("submitBtn").disabled = true; if ($("autoSpeak").checked) speak(lastFollowup); };
+    pick();
+  </script>
+</body>
+</html>
