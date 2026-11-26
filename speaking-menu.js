@@ -16,8 +16,8 @@
    if(text)text.textContent='IELTS Speaking';
    else history.append(document.createTextNode('IELTS Speaking'));
   }
-  if(history.hasAttribute('aria-label'))history.setAttribute('aria-label','IELTS Speaking');
-  if(history.hasAttribute('title'))history.title='IELTS Speaking';
+  history.setAttribute('aria-label','IELTS Speaking');
+  history.title='IELTS Speaking';
   const active=document.body.dataset.page==='ielts-speaking';
   history.classList.toggle('active',active);
   if(active)history.setAttribute('aria-current','page');

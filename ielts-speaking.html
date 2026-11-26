@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="/hub.css">
   <link rel="stylesheet" href="/tid-layout.css?v=335-compact-login">
   <link rel="stylesheet" href="/ielts-speaking.css">
-  <script defer src="/shell.js"></script><script defer src="/speaking-menu.js?v=2"></script>
-  <script defer src="/ielts-speaking.js"></script>
+  <script defer src="/shell.js"></script><script defer src="/speaking-menu.js?v=20261126-ai-repair1"></script>
+  <script defer src="/ielts-speaking.js?v=20261126-ai-repair1"></script>
 </head>
 <body class="tid-dash dark" data-page="ielts-speaking">
   <aside id="sidebar" class="sidebar"></aside>
@@ -46,6 +46,12 @@
         <p id="speaking-status" role="status"></p>
         <audio id="speaking-audio" controls hidden></audio>
         <a id="speaking-download" hidden>Tải bản thu</a>
+        <div class="speaking-assessment">
+          <button id="speaking-grade" type="button" disabled>Chấm bản thu bằng AI</button>
+          <p>Chỉ khi bấm chấm, bản thu mới được gửi đến Gemini. Kết quả là band luyện tập ước tính.</p>
+          <p id="speaking-grade-status" role="status"></p>
+          <div id="speaking-result" aria-live="polite"></div>
+        </div>
         <div class="speaking-step">
           <button id="speaking-prev" type="button">← Câu trước</button>
           <button id="speaking-next" type="button">Câu tiếp →</button>
