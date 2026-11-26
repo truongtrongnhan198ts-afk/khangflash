@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IELTS Speaking · KhangFlash</title>
+  <link rel="stylesheet" href="/hub.css">
+  <link rel="stylesheet" href="/tid-layout.css?v=335-compact-login">
+  <link rel="stylesheet" href="/ielts-speaking.css">
+  <script defer src="/shell.js"></script>
+  <script defer src="/ielts-speaking.js"></script>
+</head>
+<body class="tid-dash dark" data-page="ielts-speaking">
+  <aside id="sidebar" class="sidebar"></aside>
+  <main class="hub-main speaking-main">
+    <div class="speaking-layout">
+      <header class="speaking-hero">
+        <p class="speaking-kicker">KHANGFLASH / LUYỆN NÓI</p>
+        <h1>IELTS Speaking</h1>
+        <p>Chọn đề, luyện theo thời gian và nghe lại câu trả lời của bạn.</p>
+        <a href="#speaking-library">Chọn đề luyện <span aria-hidden="true">↓</span></a>
+      </header>
+      <section id="speaking-library" aria-labelledby="library-title">
+        <h2 id="library-title">Thư viện đề luyện</h2>
+        <div class="speaking-filters">
+          <label for="speaking-part">Phần thi</label>
+          <select id="speaking-part"><option value="all">Tất cả</option><option value="1">Part 1 · Câu hỏi cá nhân</option><option value="2">Part 2 · Nói theo cue card</option><option value="3">Part 3 · Thảo luận</option></select>
+          <label for="speaking-search">Tìm chủ đề</label>
+          <input id="speaking-search" type="search" placeholder="Ví dụ: technology">
+        </div>
+        <p id="speaking-count" aria-live="polite"></p>
+        <div id="speaking-decks" class="speaking-decks"></div>
+      </section>
+      <section id="speaking-practice" class="speaking-practice" tabindex="-1" hidden>
+        <a href="#speaking-library">← Về thư viện</a>
+        <p id="speaking-position" class="speaking-kicker"></p>
+        <h2 id="speaking-topic"></h2>
+        <p id="speaking-question" lang="en"></p>
+        <ul id="speaking-cues" lang="en"></ul>
+        <div class="speaking-tools">
+          <div><span id="speaking-clock-label">Thời gian</span><strong id="speaking-clock" role="timer" aria-labelledby="speaking-clock-label">00:00</strong></div>
+          <button id="speaking-timer" type="button">Bắt đầu tính giờ</button>
+          <button id="speaking-record" type="button">Thu âm</button>
+          <button id="speaking-stop" type="button" disabled>Dừng thu</button>
+        </div>
+        <p id="speaking-status" role="status"></p>
+        <audio id="speaking-audio" controls hidden></audio>
+        <a id="speaking-download" hidden>Tải bản thu</a>
+        <div class="speaking-step">
+          <button id="speaking-prev" type="button">← Câu trước</button>
+          <button id="speaking-next" type="button">Câu tiếp →</button>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
