@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+import { allowsComparison, assessPronunciation, scoreWithOpenAI, transcribeWithOpenAI } from "../speaking-providers.mjs";
 
 const model = process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 const scoreModel = process.env.GEMINI_SCORE_MODEL || model;
@@ -209,7 +210,7 @@ function parseResult(rawText) {
   throw failure(502, "Gemini trả kết quả sai định dạng. Bạn có thể thử lại.");
 }
 
-async function evaluate(body, apiKey, logAttempt) {
+async function evaluate(body, apiKey, logAttempt, compare = false) {
   const question = limited(body.question, 2001);
   if (!question || question.length > 2000) throw failure(400, "Thiếu câu hỏi hoặc câu hỏi quá dài.");
   const part = String(body.part ?? 1).match(/[123]/)?.[0] || "1";
@@ -224,17 +225,22 @@ async function evaluate(body, apiKey, logAttempt) {
     { text: JSON.stringify({ part: limited(String(body.part ?? 1), 20), question }) },
     audioPart(body),
   ];
+  const externalTranscript = transcribeWithOpenAI(pass1Parts[1].inline_data, deadline);
   const pass1Raw = await callGemini(apiKey, transcribePrompt, [{ role: "user", parts: pass1Parts }], {
     responseMimeType: "application/json", temperature: 0.0, maxOutputTokens: 1536,
     ...(model === "gemini-3.1-flash-lite" ? { thinkingConfig: { thinkingLevel: "MINIMAL" } } : {}),
   }, logAttempt, { deadline, stage: "transcribe", attemptCapMs: Number(process.env.GEMINI_ATTEMPT_TIMEOUT_MS) || 22000 });
   const listening = parseResult(pass1Raw);
+  const alternativeTranscript = await externalTranscript;
   if (typeof listening.transcript !== "string") {
     throw failure(502, "Gemini chưa trả về transcript hợp lệ. Bạn có thể thử lại.");
   }
   if (!listening.transcript.trim()) {
     throw failure(422, "Không nghe rõ lời nói trong bản thu. Hãy thử thu lại.");
   }
+
+  // Retain Gemini recording-quality checks and acoustic evidence.
+  if (alternativeTranscript) listening.transcript = alternativeTranscript;
 
   // Deterministic metrics computed between Pass 1 and Pass 2
   const words = listening.transcript.match(/[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu) || [];
@@ -256,11 +262,25 @@ async function evaluate(body, apiKey, logAttempt) {
     speech_metrics: speechMetrics,
     acoustic_events: acousticEvents,
   };
-  const pass2Raw = await callGemini(apiKey, scoringPrompt, [{ role: "user", parts: [{ text: JSON.stringify(pass2Input) }, pass1Parts[1]] }], {
+  const scoringAudio = pass1Parts[1].inline_data;
+  const fallbackEnabled = process.env.SPEAKING_OPENAI_FALLBACK === '1' &&
+    !!process.env.OPENAI_API_KEY && ['audio/wav', 'audio/mpeg'].includes(scoringAudio.mime_type);
+  const comparison = compare ? scoreWithOpenAI(scoringAudio, scoringPrompt, pass2Input, deadline) : null;
+  let scorer = { provider: 'gemini', model: scoreModel };
+  let scored;
+  try {
+    const pass2Raw = await callGemini(apiKey, scoringPrompt, [{ role: "user", parts: [{ text: JSON.stringify(pass2Input) }, pass1Parts[1]] }], {
     responseMimeType: "application/json", temperature: 0.0, maxOutputTokens: 2048,
     ...(scoreModel === "gemini-3.1-flash-lite" ? { thinkingConfig: { thinkingLevel: scoreThinkingLevel } } : {}),
-  }, logAttempt, { deadline, model: scoreModel, stage: "score" });
-  const scored = parseResult(pass2Raw);
+  }, logAttempt, { deadline: fallbackEnabled ? deadline - 10000 : deadline, model: scoreModel, stage: "score" });
+    scored = parseResult(pass2Raw);
+  } catch (error) {
+    const canFallback = fallbackEnabled && [429, 502, 503, 504].includes(error?.status);
+    const backup = canFallback ? await (comparison ?? scoreWithOpenAI(scoringAudio, scoringPrompt, pass2Input, deadline)) : null;
+    if (!backup) throw error;
+    scored = backup.score;
+    scorer = { provider: 'openai', model: backup.model };
+  }
 
   const result = {
     ...scored,
@@ -367,6 +387,15 @@ async function evaluate(body, apiKey, logAttempt) {
     if (result.relevance === "off_topic") result.overall_band = Math.min(result.overall_band, 4.5);
   }
   result.assessment_note = notes.join(" ");
+  result.scorer = scorer;
+  result.transcript_provider = alternativeTranscript ? "openai" : "gemini";
+  if (comparison) {
+    const second = await comparison;
+    result.comparison = second ? { provider: "openai", model: second.model, relevance: relevanceValues.includes(second.score.relevance) ? second.score.relevance : null, bands: Object.fromEntries(criteria.map(id => {
+      const band = second.score.scores?.[id]?.band;
+      return [id, Number.isFinite(band) && band >= 0 && band <= 9 ? snapHalfBand(band) : null];
+    })) } : { provider: "openai", status: "unavailable" };
+  }
   return result;
 }
 
@@ -409,6 +438,7 @@ async function retryDrill(body, apiKey) {
   const parts = [{ text: JSON.stringify({
     targetUpgrade, originalSpoken: limited(body.originalSpoken, 500), issue: limited(body.issue, 500),
   }) }, audioPart(body)];
+  const pronunciationCheck = assessPronunciation(parts[1].inline_data, targetUpgrade, Date.now() + 8000);
   const rawText = await callGemini(apiKey, retryPrompt, [{ role: "user", parts }], {
     responseMimeType: "application/json", temperature: 0.2, maxOutputTokens: 1024,
   });
@@ -418,6 +448,8 @@ async function retryDrill(body, apiKey) {
     throw failure(502, "Gemini chưa trả đủ kết quả luyện lại. Bạn có thể thử lại.");
   }
   if (!result.heard.trim()) result.passed = false;
+  const pronunciation = await pronunciationCheck;
+  if (pronunciation) result.pronunciation_assessment = pronunciation;
   return result;
 }
 
@@ -443,7 +475,7 @@ async function chat(body, apiKey) {
   return { reply };
 }
 
-async function handleEvaluation(body, apiKey, res) {
+async function handleEvaluation(body, apiKey, res, compare) {
   const requestId = randomUUID();
   const startedAt = performance.now();
   const audio = body.audioBase64;
@@ -467,7 +499,7 @@ async function handleEvaluation(body, apiKey, res) {
         firstUpstreamStatus = attempt.upstream_status;
       }
       console.info(JSON.stringify({ event: "speaking.gemini_attempt", ...fields, ...attempt }));
-    });
+    }, compare);
     outcome = result.overall_band === null ? "feedback_only" : "band";
     return res.status(status).json(result);
   } catch (error) {
@@ -491,7 +523,7 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.GEMINI_API_KEY;
   const body = req.body || {};
-  if ((body.action ?? "evaluate") === "evaluate") return handleEvaluation(body, apiKey, res);
+  if ((body.action ?? "evaluate") === "evaluate") return handleEvaluation(body, apiKey, res, allowsComparison(req));
   if (!apiKey) return res.status(500).json({ error: "Missing GEMINI_API_KEY in Vercel Environment Variables." });
   try {
     const action = body.action ?? "evaluate";
