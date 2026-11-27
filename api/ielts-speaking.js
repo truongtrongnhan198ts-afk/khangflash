@@ -107,12 +107,12 @@ function parseRetryAfterMs(headerValue, fallbackMs = 1200) {
   return fallbackMs;
 }
 
-async function callGemini(apiKey, prompt, contents, generationConfig, logAttempt) {
+async function callGemini(apiKey, prompt, contents, generationConfig, logAttempt, requestDeadline = Infinity) {
   const totalBudgetMs = Number(process.env.GEMINI_BUDGET_MS) || 52000;
   const minAttemptMs = Number(process.env.GEMINI_MIN_RETRY_WINDOW_MS) || 8000;
   const attemptCapMs = Number(process.env.GEMINI_ATTEMPT_TIMEOUT_MS) || 25000;
   const fallbackBackoffMs = Number(process.env.GEMINI_RETRY_BACKOFF_MS) || 1200;
-  const deadline = Date.now() + totalBudgetMs;
+  const deadline = Math.min(Date.now() + totalBudgetMs, requestDeadline);
   const payload = JSON.stringify({ system_instruction: { parts: [{ text: prompt }] }, contents, generationConfig });
   for (let attempt = 0; attempt < 2; attempt++) {
     const remaining = deadline - Date.now();
@@ -204,11 +204,31 @@ async function evaluate(body, apiKey, logAttempt) {
     }) },
     audioPart(body),
   ];
-  const rawText = await callGemini(apiKey, evaluationPrompt, [{ role: "user", parts }], {
+  const deadline = Date.now() + (Number(process.env.GEMINI_BUDGET_MS) || 52000);
+  let transcriptionAttempts = 0;
+  const audioTranscript = parseResult(await callGemini(
+    apiKey,
+    'Transcribe the actual spoken words verbatim. Retain fillers, repeated words, false starts and grammatical mistakes. Return JSON with a transcript string, empty if there is no intelligible speech.',
+    [{ role: "user", parts: [audioPart(body)] }],
+    { responseMimeType: "application/json", temperature: 0, maxOutputTokens: 2048 },
+    entry => {
+      transcriptionAttempts = entry.attempt;
+      logAttempt?.({ ...entry, stage: "transcribe" });
+    },
+    Math.min(deadline, Date.now() + 20000),
+  ));
+  if (typeof audioTranscript.transcript !== "string") throw failure(502, "Bản chép lời không hợp lệ.");
+  if (!audioTranscript.transcript.trim()) throw failure(422, "Không nghe rõ lời nói trong bản thu. Hãy thử thu lại.");
+  const rawWords = audioTranscript.transcript.match(/[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu) || [];
+  const metrics = computeSpeechMetrics(rawWords, recordingMetrics);
+  parts.splice(1, 0, { text: JSON.stringify({ verbatim_transcript: audioTranscript.transcript, metrics }) });
+  const gradingPrompt = evaluationPrompt + "\nUse verbatim_transcript as the exact transcript and quote it verbatim. The audio remains authoritative for pronunciation, fluency, and time markers. Use metrics as context only.";
+  const rawText = await callGemini(apiKey, gradingPrompt, [{ role: "user", parts }], {
     responseMimeType: "application/json", temperature: 0.0, maxOutputTokens: 2048,
     ...(model === "gemini-3.1-flash-lite" ? { thinkingConfig: { thinkingLevel: "MINIMAL" } } : {}),
-  }, logAttempt);
+  }, entry => logAttempt?.({ ...entry, attempt: entry.attempt + transcriptionAttempts, stage_attempt: entry.attempt, stage: "grade" }), deadline);
   const result = parseResult(rawText);
+  result.transcript = audioTranscript.transcript;
   if (typeof result.transcript === "string" && !result.transcript.trim()) {
     throw failure(422, "Không nghe rõ lời nói trong bản thu. Hãy thử thu lại.");
   }
@@ -366,6 +386,7 @@ async function handleEvaluation(body, apiKey, res) {
     : null;
   const fields = { request_id: requestId, audio_bytes: audioBytes };
   let attempts = 0;
+  let retried = false;
   let firstAttemptOutcome = null;
   let firstUpstreamStatus = null;
   let status = 200;
@@ -374,6 +395,7 @@ async function handleEvaluation(body, apiKey, res) {
     if (!apiKey) throw failure(500, "Missing GEMINI_API_KEY in Vercel Environment Variables.");
     const result = await evaluate(body, apiKey, attempt => {
       attempts = attempt.attempt;
+      retried ||= (attempt.stage_attempt ?? attempt.attempt) > 1;
       if (attempts === 1) {
         firstAttemptOutcome = attempt.outcome;
         firstUpstreamStatus = attempt.upstream_status;
@@ -388,7 +410,7 @@ async function handleEvaluation(body, apiKey, res) {
     return res.status(status).json({ error: error.status ? error.message : "Không gọi được dịch vụ chấm. Bạn có thể thử lại." });
   } finally {
     console.info(JSON.stringify({
-      event: "speaking.evaluation_result", ...fields, attempts, retried: attempts > 1,
+      event: "speaking.evaluation_result", ...fields, attempts, retried,
       first_attempt_outcome: firstAttemptOutcome, first_upstream_status: firstUpstreamStatus,
       status, outcome, duration_ms: Math.round(performance.now() - startedAt),
     }));
