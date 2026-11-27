@@ -349,18 +349,43 @@ function correctionCard(correction,signal){
  const stop=node('button','Dừng và chấm');stop.type='button';stop.disabled=true;
  let capture=null;
  async function submitAudio(audio){
+  async function asPcmWav(source){
+   const Offline=window.OfflineAudioContext||window.webkitOfflineAudioContext;
+   if(!Offline)return source;
+   try{
+    const decoder=new Offline(1,1,16000);
+    const decoded=await decoder.decodeAudioData(await source.arrayBuffer());
+    if(!decoded.length||decoded.duration>30)return source;
+    const samples=decoded.getChannelData(0);
+    const buffer=new ArrayBuffer(44+2*samples.length), view=new DataView(buffer);
+    function write(offset,value){for(let i=0;i<value.length;i++)view.setUint8(offset+i,value.charCodeAt(i));}
+    write(0,'RIFF');view.setUint32(4,buffer.byteLength-8,true);write(8,'WAVE');write(12,'fmt ');
+    view.setUint32(16,16,true);view.setUint16(20,1,true);view.setUint16(22,1,true);
+    view.setUint32(24,16000,true);view.setUint32(28,32000,true);view.setUint16(32,2,true);view.setUint16(34,16,true);
+    write(36,'data');view.setUint32(40,samples.length*2,true);
+    for(let i=0;i<samples.length;i++)view.setInt16(44+2*i,Math.round(Math.max(-1,Math.min(1,samples[i]))*32767),true);
+    return new Blob([buffer],{type:'audio/wav'});
+   }catch{return source;}
+  }
   input.disabled=true;record.disabled=true;
   status.textContent='Đang chấm câu luyện lại…';
   try{
    if(!audio.size||audio.size>audioLimit)throw Error('Chọn bản thu có dữ liệu và không vượt 3 MB.');
    if(await isSilent(audio))throw Error('Bản thu không có âm thanh.');
-   const audioBase64=await encodeAudio(audio);
+   const preparedAudio=await asPcmWav(audio);
+   const audioBase64=await encodeAudio(preparedAudio);
    if(signal.aborted)return;
-   const verdict=await speakingRequest({action:'retry_drill',audioBase64,mimeType:audio.type,
+   const verdict=await speakingRequest({action:'retry_drill',audioBase64,mimeType:preparedAudio.type,
     originalSpoken:correction.spoken,issue:correction.issue,targetUpgrade:correction.upgrade},signal);
    status.textContent=(verdict.passed?'Đạt':'Chưa đạt')+' · '+verdict.score_10+'/10. '+verdict.feedback_vi;
    if(verdict.heard)status.append(node('span',' Nghe được: '+verdict.heard));
    if(verdict.next_tip_vi)status.append(node('span',' '+verdict.next_tip_vi));
+   const pronunciation=verdict.pronunciation_assessment;
+   if(Number.isFinite(pronunciation?.accuracy)){
+    status.append(node('p','Độ chính xác phát âm (Azure): '+pronunciation.accuracy+'/100.'));
+    const missed=(pronunciation.words||[]).filter(word=>word.accuracy<75).slice(0,5);
+    if(missed.length)status.append(node('p','Từ cần luyện: '+missed.map(word=>word.word+' ('+word.accuracy+'/100)').join(', ')));
+   }
   }catch(error){if(!signal.aborted)status.textContent=error.message;}
   finally{input.disabled=false;record.disabled=!canRecord;}
  }
