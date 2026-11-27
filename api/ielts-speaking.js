@@ -7,7 +7,7 @@ const audioTypes = ["audio/webm", "audio/mp4", "audio/ogg", "audio/wav", "audio/
 const evaluationPrompt = `Evaluate the actual audio as an IELTS Speaking practice response.
 First transcribe verbatim, retaining fillers and mistakes. If there is no intelligible speech, return {"transcript": ""}. Never invent speech.
 Then classify relevance against the current question alone: on_topic directly answers it, partially_off_topic answers only part or substantially drifts, off_topic has no meaningful answer to the question. A short but direct answer is on_topic. For example, describing Mars in response to a question about a daily routine is off_topic even when the English is fluent.
-Then assess the four IELTS criteria on 0–9 in half-band steps. Give specific feedback in Vietnamese, at most 1–2 concise sentences. Each criterion needs an evidence string: for vocabulary and grammar, use only an exact, contiguous quote from the transcript (no surrounding quotation marks); for fluency and pronunciation, give one specific audible observation tied to a word, phrase or location. Do not infer accent or pronunciation from spelling. If you cannot justify a criterion score, set its band to null and explain why in feedback. If the recording is too noisy or speech is too clipped for a dependable overall assessment, set audio_clear to false and explain why in audio_note. Clear audible hesitations alone are not poor recording quality.
+Then assess the four IELTS criteria on 0–9 in half-band steps. Give specific feedback in Vietnamese, at most 1–2 concise sentences. Each criterion needs an evidence string: for vocabulary and grammar, use only an exact, contiguous quote from the transcript (no surrounding quotation marks); for fluency and pronunciation, give one specific audible observation tied to a word, phrase or location (e.g., "Ngập ngừng trước cụm 'before breakfast'"); reject generic comments like "Phát âm khá rõ" or a standalone quote like "before breakfast". Do not infer accent or pronunciation from spelling. If you cannot justify a criterion score, set its band to null and explain why in feedback. If the recording is too noisy or speech is too clipped for a dependable overall assessment, set audio_clear to false and explain why in audio_note. Clear audible hesitations alone are not poor recording quality.
 Return JSON in this shape:
 {"transcript":"verbatim speech","relevance":"on_topic","relevance_reason":"one brief sentence in Vietnamese","audio_clear":true,"audio_note":"","scores":{"fluency_coherence":{"band":6,"feedback":"","evidence":""},"lexical_resource":{"band":6,"feedback":"","evidence":""},"grammatical_range_accuracy":{"band":6,"feedback":"","evidence":""},"pronunciation":{"band":6,"feedback":"","evidence":""}},"corrections":[{"spoken":"exact phrase spoken","issue":"specific issue","explanation_vi":"one brief sentence","upgrade":"one target sentence"}],"model_answer":"a short relevant English example","examiner_followup":"one short English question"}
 Include at most three actionable corrections, and use [] when none apply. Never present invented examples as quotes.`;
@@ -27,27 +27,64 @@ function audioPart({audioBase64, mimeType}) {
   return { inline_data: { mime_type: type, data: audioBase64 } };
 }
 
+function parseRetryAfterMs(headerValue, fallbackMs = 1200) {
+  if (typeof headerValue !== "string" || !headerValue.trim()) return fallbackMs;
+  const trimmed = headerValue.trim();
+  if (/^\d+(?:\.\d+)?$/.test(trimmed)) return Math.max(0, Math.ceil(Number(trimmed) * 1000));
+  const dateMs = Date.parse(trimmed);
+  if (Number.isFinite(dateMs)) return Math.max(0, dateMs - Date.now());
+  return fallbackMs;
+}
+
 async function callGemini(apiKey, prompt, contents, generationConfig) {
-  const signal = AbortSignal.timeout(52000);
-  try {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      signal,
-      headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
-      body: JSON.stringify({ system_instruction: { parts: [{ text: prompt }] }, contents, generationConfig }),
-    });
-    if (!response.ok) {
-      throw failure(response.status === 429 ? 429 : 502, `Gemini API error (${response.status}). Bạn có thể thử lại.`);
+  const deadline = Date.now() + 52000;
+  const minAttemptMs = 8000;
+  const payload = JSON.stringify({ system_instruction: { parts: [{ text: prompt }] }, contents, generationConfig });
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const remaining = deadline - Date.now();
+    if (remaining < minAttemptMs) break;
+    const signal = AbortSignal.timeout(Math.min(remaining, 25000));
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        signal,
+        headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
+        body: payload,
+      });
+      if (!response.ok) {
+        const transient = response.status === 429 || response.status === 503;
+        const waitMs = response.status === 429
+          ? parseRetryAfterMs(response.headers?.get?.("retry-after"), 1200)
+          : 1200;
+        if (transient && attempt === 0 && deadline - Date.now() - waitMs >= minAttemptMs) {
+          if (waitMs > 0) await new Promise(resolve => setTimeout(resolve, waitMs));
+          continue;
+        }
+        const status = transient ? response.status : 502;
+        const message = response.status === 429
+          ? "Gemini đang quá tải (429). Bạn có thể bấm Thử chấm lại bằng bản thu hiện tại sau ít giây."
+          : response.status === 503
+            ? "Dịch vụ Gemini tạm gián đoạn (503). Bạn có thể bấm Thử chấm lại bằng bản thu hiện tại."
+            : `Gemini API error (${response.status}). Bạn có thể thử lại.`;
+        throw failure(status, message);
+      }
+      const data = await response.json();
+      const result = data?.candidates?.[0]?.content?.parts?.filter(part => !part.thought)
+        .map(part => part.text || "").join("").trim();
+      if (!result) throw failure(502, "Gemini chưa trả về kết quả. Bạn có thể thử lại.");
+      return result;
+    } catch (error) {
+      if (signal.aborted) {
+        if (attempt === 0 && deadline - Date.now() - 1200 >= minAttemptMs) {
+          await new Promise(resolve => setTimeout(resolve, 1200));
+          continue;
+        }
+        throw failure(504, "Gemini phản hồi quá lâu. Bạn có thể thử lại với bản thu hiện tại.");
+      }
+      throw error;
     }
-    const data = await response.json();
-    const result = data?.candidates?.[0]?.content?.parts?.filter(part => !part.thought)
-      .map(part => part.text || "").join("").trim();
-    if (!result) throw failure(502, "Gemini chưa trả về kết quả. Bạn có thể thử lại.");
-    return result;
-  } catch (error) {
-    if (signal.aborted) throw failure(504, "Gemini phản hồi quá lâu. Bạn có thể thử lại với bản thu hiện tại.");
-    throw error;
   }
+  throw failure(504, "Gemini phản hồi quá lâu. Bạn có thể thử lại với bản thu hiện tại.");
 }
 
 function parseResult(rawText) {
@@ -94,12 +131,19 @@ async function evaluate(body, apiKey) {
   const shortAnswer = words.length < minimumWords;
   const audioClear = result.audio_clear === true;
 
+  const transcriptTokens = new Set(normalize(result.transcript).split(" ").filter(token => token.length >= 3));
+  const locationAnchor = /(?:đầu câu|cuối câu|giữa câu|câu đầu|câu cuối|đoạn đầu|đoạn cuối|đầu bài|cuối bài|giây \d+)/i;
+
   for (const id of criteria) {
     const score = result.scores[id];
     const languageCriterion = id === "lexical_resource" || id === "grammatical_range_accuracy";
     const evidence = limited(score.evidence, 400);
     const exactQuote = normalize(evidence);
-    score.evidence = !languageCriterion || (exactQuote && transcript.includes(" " + exactQuote + " ")) ? evidence : "";
+    const inTranscript = !!(exactQuote && transcript.includes(" " + exactQuote + " "));
+    const evidenceTokens = exactQuote ? exactQuote.split(" ") : [];
+    const hasAnchor = evidenceTokens.some(token => transcriptTokens.has(token)) || locationAnchor.test(evidence);
+    const validAudioObservation = !!evidence && !inTranscript && evidenceTokens.length >= 3 && hasAnchor;
+    score.evidence = languageCriterion ? (inTranscript ? evidence : "") : (validAudioObservation ? evidence : "");
     if (!score.evidence || (shortAnswer && (languageCriterion || id === "fluency_coherence")) ||
         (!audioClear && !languageCriterion)) score.band = null;
   }
