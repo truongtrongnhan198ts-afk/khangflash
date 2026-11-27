@@ -217,21 +217,65 @@ function encodeAudio(blob){
   reader.readAsDataURL(blob);
  });
 }
-async function isSilent(blob){
- const Context=window.AudioContext||window.webkitAudioContext;
- if(!Context)return false;
- const decoder=new Context();
- try{
-  const audio=await decoder.decodeAudioData(await blob.arrayBuffer());
-  for(let channel=0;channel<audio.numberOfChannels;channel++){
-   if(audio.getChannelData(channel).some(sample=>Math.abs(sample)>0.0001))return false;
+function measureRecording(audio){
+ const frameSize=Math.max(1,Math.round(audio.sampleRate*0.02));
+ const frameMs=1000*frameSize/audio.sampleRate;
+ const levels=new Float32Array(Math.ceil(audio.length/frameSize));
+ let hasSound=false;
+ for(let channel=0;channel<audio.numberOfChannels;channel++){
+  const samples=audio.getChannelData(channel);
+  for(let frame=0;frame<levels.length;frame++){
+   const start=frame*frameSize,end=Math.min(start+frameSize,samples.length);
+   let energy=0;
+   for(let sample=start;sample<end;sample++){
+    const value=samples[sample];
+    if(Math.abs(value)>0.0001)hasSound=true;
+    energy+=value*value;
+   }
+   levels[frame]=Math.max(levels[frame],Math.sqrt(energy/(end-start)));
   }
-  return true;
- }catch{
-  return false;
- }finally{
-  await decoder.close().catch(()=>{});
  }
+ const sorted=levels.slice().sort();
+ const threshold=Math.max(0.0001,sorted[Math.floor(sorted.length*0.95)]*0.04);
+ const active=level=>level>threshold;
+ const first=levels.findIndex(active),last=levels.findLastIndex(active);
+ let pauseCount=0,maxPauseMs=0,quietFrames=0;
+ for(let frame=first+1;first>=0&&frame<=last;frame++){
+  if(!active(levels[frame])){
+   quietFrames++;
+   continue;
+  }
+  const quietMs=quietFrames*frameMs;
+  if(quietMs>=500){
+   pauseCount++;
+   maxPauseMs=Math.max(maxPauseMs,quietMs);
+  }
+  quietFrames=0;
+ }
+ return {silent:!hasSound,durationSec:audio.duration,
+  ...(first>=0?{pauseCount,maxPauseMs:Math.round(maxPauseMs)}:{})};
+}
+
+async function inspectRecording(blob,measure=false){
+ const Context=window.AudioContext||window.webkitAudioContext;
+ if(!Context)return null;
+ let decoder;
+ try{
+  decoder=new Context();
+  const audio=await decoder.decodeAudioData(await blob.arrayBuffer());
+  if(measure&&audio.duration>0&&audio.duration<=900)return measureRecording(audio);
+  for(let channel=0;channel<audio.numberOfChannels;channel++){
+   if(audio.getChannelData(channel).some(sample=>Math.abs(sample)>0.0001))return {silent:false};
+  }
+  return {silent:true};
+ }catch{
+  return null;
+ }finally{
+  if(decoder)await decoder.close().catch(()=>{});
+ }
+}
+async function isSilent(blob){
+ return (await inspectRecording(blob))?.silent===true;
 }
 const criteria={
  fluency_coherence:'Trôi chảy và mạch lạc',
@@ -251,12 +295,13 @@ el('grade').onclick=async()=>{
  el('grade').textContent='Chấm bản thu bằng AI';
  el('grade-status').textContent='Đang chấm bản thu…';
  try{
-  const silent=await isSilent(selected);
+  const recording=await inspectRecording(selected,true);
   if(request.signal.aborted)return;
-  if(silent)throw Error('Bản thu không có âm thanh. Hãy kiểm tra micro hoặc chọn một file khác.');
+  if(recording?.silent)throw Error('Bản thu không có âm thanh. Hãy kiểm tra micro hoặc chọn một file khác.');
   const audioBase64=await encodeAudio(selected);
   if(request.signal.aborted)return;
-  const value=await speakingRequest({action:'evaluate',audioBase64,mimeType:selected.type,part:entry.part,question},request.signal);
+  const value=await speakingRequest({action:'evaluate',audioBase64,mimeType:selected.type,part:entry.part,question,
+   durationSec:recording?.durationSec,pauseCount:recording?.pauseCount,maxPauseMs:recording?.maxPauseMs},request.signal);
   if(grading!==request)return;
   renderResult(value);
   entry.result=value;
