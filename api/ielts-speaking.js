@@ -10,6 +10,7 @@ const evaluationPrompt = `Evaluate the actual audio as an IELTS Speaking practic
 First transcribe verbatim, retaining fillers and mistakes. If there is no intelligible speech, return {"transcript": ""}. Never invent speech.
 Then classify relevance against the current question alone: on_topic directly answers it, partially_off_topic answers only part or substantially drifts, off_topic has no meaningful answer to the question. A short but direct answer is on_topic. For example, describing Mars in response to a question about a daily routine is off_topic even when the English is fluent.
 Then assess the four IELTS criteria on 0–9 in half-band steps. Give specific feedback in Vietnamese, at most 1–2 concise sentences. Each criterion needs an evidence string: for vocabulary and grammar, use only an exact, contiguous quote from the transcript (no surrounding quotation marks); for fluency and pronunciation, give one specific audible observation tied to a word, phrase or location (e.g., "Ngập ngừng trước cụm 'before breakfast'"); reject generic comments like "Phát âm khá rõ" or a standalone quote like "before breakfast". Do not infer accent or pronunciation from spelling. If you cannot justify a criterion score, set its band to null and explain why in feedback. If the recording is too noisy or speech is too clipped for a dependable overall assessment, set audio_clear to false and explain why in audio_note. Clear audible hesitations alone are not poor recording quality.
+For fluency, listen for continuity, hesitation, repetition or self-correction and assess how ideas develop. For pronunciation, focus on intelligibility, stress, rhythm, intonation and connected speech. Do not favor a particular accent. In audio evidence, put the exact audible word or phrase in single quotes, or name the location of the specific audible event. If the answer is short but clear, give one actionable suggestion appropriate to the part. Do not treat brevity alone as irrelevance, a grammar mistake or poor pronunciation.
 Return JSON in this shape:
 {"transcript":"verbatim speech","relevance":"on_topic","relevance_reason":"one brief sentence in Vietnamese","audio_clear":true,"audio_note":"","scores":{"fluency_coherence":{"band":6,"feedback":"","evidence":""},"lexical_resource":{"band":6,"feedback":"","evidence":""},"grammatical_range_accuracy":{"band":6,"feedback":"","evidence":""},"pronunciation":{"band":6,"feedback":"","evidence":""}},"corrections":[{"spoken":"exact phrase spoken","issue":"specific issue","explanation_vi":"one brief sentence","upgrade":"one target sentence"}],"model_answer":"a short relevant English example","examiner_followup":"one short English question"}
 Include at most three actionable corrections, and use [] when none apply. Never present invented examples as quotes.`;
@@ -150,22 +151,34 @@ async function evaluate(body, apiKey, logAttempt) {
   const shortAnswer = words.length < minimumWords;
   const audioClear = result.audio_clear === true;
 
-  const transcriptTokens = new Set(normalize(result.transcript).split(" ").filter(token => token.length >= 3));
+  const isTranscriptQuote = text => {
+    const quote = normalize(text);
+    return !!quote && transcript.includes(" " + quote + " ");
+  };
   const locationAnchor = /(?:đầu câu|cuối câu|giữa câu|câu đầu|câu cuối|đoạn đầu|đoạn cuối|đầu bài|cuối bài|giây \d+)/i;
+  const hasAudioAnchor = evidence => {
+    const quotes = [...evidence.matchAll(/(?<![\p{L}\p{N}])'((?:[^']|'(?=[\p{L}\p{N}]))+)'|"([^"]+)"|“([^”]+)”|‘([^’]+)’/gu)];
+    if (quotes.length) return quotes.every(match => isTranscriptQuote(match.slice(1).find(Boolean)));
+    const namedWord = evidence.match(/(?:ở từ|ở|từ|cụm)\s+([a-z][a-z'-]*(?:\s+[a-z][a-z'-]*)*)[.!?]?$/iu);
+    return namedWord ? isTranscriptQuote(namedWord[1]) : locationAnchor.test(evidence);
+  };
 
   for (const id of criteria) {
     const score = result.scores[id];
     const languageCriterion = id === "lexical_resource" || id === "grammatical_range_accuracy";
     const evidence = limited(score.evidence, 400);
-    const exactQuote = normalize(evidence);
-    const inTranscript = !!(exactQuote && transcript.includes(" " + exactQuote + " "));
-    const evidenceTokens = exactQuote ? exactQuote.split(" ") : [];
-    const hasAnchor = evidenceTokens.some(token => transcriptTokens.has(token)) || locationAnchor.test(evidence);
-    const validAudioObservation = !!evidence && !inTranscript && evidenceTokens.length >= 3 && hasAnchor;
-    score.evidence = languageCriterion ? (inTranscript ? evidence : "") : (validAudioObservation ? evidence : "");
+    const inTranscript = isTranscriptQuote(evidence);
+    const validAudioObservation = !inTranscript &&
+      normalize(evidence).split(" ").length >= 3 && hasAudioAnchor(evidence);
+    const validEvidence = languageCriterion ? inTranscript : validAudioObservation;
+    score.evidence = validEvidence ? evidence : "";
     if (!score.evidence || (shortAnswer && (languageCriterion || id === "fluency_coherence")) ||
         (!audioClear && !languageCriterion)) score.band = null;
   }
+
+  result.corrections = (Array.isArray(result.corrections) ? result.corrections : [])
+    .filter(item => isTranscriptQuote(limited(item?.spoken, 500)) && limited(item?.upgrade, 500))
+    .slice(0, 3);
 
   const notes = [];
   if (shortAnswer) notes.push(`Transcript có ${words.length} từ. Mốc tham khảo của KhangFlash cho Part ${part} là ${minimumWords} từ.`);
