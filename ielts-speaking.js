@@ -382,6 +382,43 @@ el('chat-form').onsubmit=async event=>{
  }
 };
 
+function renderEvidence(id,evidence,signal){
+ const paragraph=node('p','Dẫn chứng: '+evidence);
+ if(id!=='fluency_coherence'&&id!=='pronunciation')return paragraph;
+ const timestamp=evidence.match(/^\s*(\d{1,2}):([0-5]\d)\s*[·–—-]\s*(\S.*)$/u);
+ if(!timestamp)return paragraph;
+ const seconds=Number(timestamp[1])*60+Number(timestamp[2]);
+ const audio=el('audio');
+ const button=node('button','Nghe lại từ '+timestamp[1]+':'+timestamp[2]);
+ button.type='button';
+ function canSeek(){
+  if(audio.error)return false;
+  if(Number.isFinite(audio.duration))return seconds<audio.duration;
+  for(let i=0;i<audio.seekable.length;i++){
+   if(audio.seekable.start(i)<=seconds&&seconds<audio.seekable.end(i))return true;
+  }
+  return false;
+ }
+ const update=()=>{
+  paragraph.textContent='Dẫn chứng: '+timestamp[3];
+  if(canSeek())paragraph.append(' ',button);
+ };
+ button.addEventListener('click',async()=>{
+  if(signal.aborted||!canSeek())return;
+  try{
+   audio.currentTime=seconds;
+   await audio.play();
+  }catch{
+   if(!signal.aborted)el('grade-status').textContent='Chưa phát được đoạn này. Bạn có thể mở trình phát để nghe lại.';
+  }
+ },{signal});
+ for(const event of ['loadedmetadata','durationchange','progress','error']){
+  audio.addEventListener(event,update,{signal});
+ }
+ update();
+ return paragraph;
+}
+
 function renderResult(value){
  clearFeedback();
  const question=[attempt.question,...Array.from(el('cues').children,item=>item.textContent)].join(' ');
@@ -400,7 +437,7 @@ function renderResult(value){
   const score=value.scores[id];
   const band=Number.isFinite(score.band)?score.band:'Chưa đủ căn cứ';
   result.push(node('h4',label+' · '+band),node('p',score.feedback));
-  if(score.evidence)result.push(node('p','Dẫn chứng: '+score.evidence));
+  if(typeof score.evidence==='string'&&score.evidence)result.push(renderEvidence(id,score.evidence,feedbackSession.controller.signal));
  }
  result.push(node('h4','Bản chép lời'),node('p',value.transcript));
  if(value.model_answer)result.push(node('h4','Câu trả lời gợi ý'),node('p',value.model_answer));
