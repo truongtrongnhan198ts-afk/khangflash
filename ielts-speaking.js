@@ -486,6 +486,11 @@ function renderResult(value){
   if(typeof score.evidence==='string'&&score.evidence)result.push(renderEvidence(id,score.evidence,feedbackSession.controller.signal));
  }
  result.push(node('h4','Bản chép lời'),node('p',value.transcript));
+ if(typeof value.paraphrase==='string'&&value.paraphrase){
+  const paraphrase=node('p',value.paraphrase);paraphrase.lang='en';
+  result.push(node('h4','Nói lại cho tự nhiên'),paraphrase);
+  if(value.paraphrase_note_vi)result.push(node('p',value.paraphrase_note_vi));
+ }
  if(value.examiner_followup){
   const followup=node('p',value.examiner_followup);followup.lang='en';
   result.push(node('h4','Câu hỏi luyện tiếp'),followup);
