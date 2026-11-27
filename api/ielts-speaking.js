@@ -17,7 +17,7 @@ const evaluationPrompt = `Evaluate the actual audio as an IELTS Speaking practic
 First transcribe verbatim, retaining fillers and mistakes. If there is no intelligible speech, return {"transcript": ""}. Never invent speech.
 Then classify relevance against the current question alone: on_topic directly answers it, partially_off_topic answers only part or substantially drifts, off_topic has no meaningful answer to the question. A short but direct answer is on_topic. For example, describing Mars in response to a question about a daily routine is off_topic even when the English is fluent.
 Then assess the four IELTS criteria independently on 0-9 in half-band steps using official IELTS Speaking descriptors and the supplied part_expectation. Give specific feedback in Vietnamese, at most 1-2 concise sentences. Each criterion needs an evidence string: for vocabulary and grammar, use only an exact, contiguous quote from the transcript (no surrounding quotation marks); for fluency and pronunciation, give one specific audible observation tied to a word, phrase or location (e.g., "Ngập ngừng trước cụm 'before breakfast'"); reject generic comments like "Phát âm khá rõ" or a standalone quote like "before breakfast". Do not infer accent or pronunciation from spelling. If you cannot justify a criterion score, set its band to null and explain why in feedback. If the recording is too noisy or speech is too clipped for a dependable overall assessment, set audio_clear to false and explain why in audio_note. Clear audible hesitations alone are not poor recording quality.
-For fluency, listen for continuity, hesitation, repetition or self-correction and assess how ideas develop. For pronunciation, focus on intelligibility, stress, rhythm, intonation and connected speech. Do not favor a particular accent. For fluency or pronunciation evidence only, when you can locate the audible event confidently, prefix the observation with its elapsed time from the start of the recording, formatted as M:SS · observation. Keep the quoted transcript phrase or specific location in the observation itself. Omit the time when uncertain; never estimate a time from the transcript. In audio evidence, put the exact audible word or phrase in single quotes, or name the location of the specific audible event. If the answer is short but clear, give one actionable suggestion appropriate to the part. Do not treat brevity alone as irrelevance, a grammar mistake or poor pronunciation.
+For fluency, recording_metrics may include estimated quiet gaps of at least 500 ms inside the response. These can reflect normal pauses, breathing, noise gating, or hesitation. Use them as supporting context only. Confirm audible hesitation or disrupted continuity from the recording before mentioning it, and never change bands solely because of these numbers. For fluency, listen for continuity, hesitation, repetition or self-correction and assess how ideas develop. For pronunciation, focus on intelligibility, stress, rhythm, intonation and connected speech. Do not favor a particular accent. For fluency or pronunciation evidence only, when you can locate the audible event confidently, prefix the observation with its elapsed time from the start of the recording, formatted as M:SS · observation. Keep the quoted transcript phrase or specific location in the observation itself. Omit the time when uncertain; never estimate a time from the transcript. In audio evidence, put the exact audible word or phrase in single quotes, or name the location of the specific audible event. If the answer is short but clear, give one actionable suggestion appropriate to the part. Do not treat brevity alone as irrelevance, a grammar mistake or poor pronunciation.
 Compare the lowest defensible band and the next higher band for each criterion. Move up only when the recording demonstrates the higher level consistently enough. Use these abbreviated anchors for bands 5 / 6 / 7 / 8:
 - Fluency and coherence: simple speech usually flows but complex ideas disrupt it / can develop an answer, though hesitation or repetition sometimes disrupts coherence / sustains a connected, developed answer with only occasional searching / fluent and coherent with hesitation mainly for content.
 - Vocabulary: sufficient for familiar topics with limited flexibility / enough to convey meaning and generally paraphrase despite imprecision / flexible vocabulary and effective paraphrase, with occasional awkward word choice / precise, flexible vocabulary with only occasional inaccuracies.
@@ -35,17 +35,33 @@ const limited = (value, length) => typeof value === "string" ? value.trim().slic
 const failure = (status, message) => Object.assign(new Error(message), { status });
 const snapHalfBand = value => Math.min(9, Math.max(0, Math.round(value * 2) / 2));
 
-function computeSpeechMetrics(words, body) {
+function readRecordingMetrics(body) {
+  const rawDuration = Number(body.durationSec ?? Number(body.durationMs) / 1000);
+  if (!Number.isFinite(rawDuration) || rawDuration <= 0 || rawDuration > 900) return {};
+  const duration = Math.round(rawDuration * 1000) / 1000;
+  if (duration === 0) return {};
+  const { pauseCount, maxPauseMs } = body;
+  const maxRecordingMs = Math.round(rawDuration * 1000);
+  const validPauses = Number.isSafeInteger(pauseCount) && Number.isSafeInteger(maxPauseMs) &&
+    ((pauseCount === 0 && maxPauseMs === 0) ||
+      (pauseCount > 0 && maxPauseMs >= 500 && maxPauseMs + (pauseCount - 1) * 500 <= maxRecordingMs));
+  return {
+    duration_sec: duration,
+    ...(validPauses ? { estimated_pause_count: pauseCount, estimated_max_pause_ms: maxPauseMs } : {}),
+  };
+}
+
+function computeSpeechMetrics(words, recordingMetrics) {
   const lowerWords = words.map(w => w.toLowerCase());
   const fillerCount = lowerWords.filter(w => hesitationFillerSet.has(w)).length;
   const uniqueCount = new Set(lowerWords).size;
-  const rawDuration = Number(body.durationSec ?? (Number.isFinite(Number(body.durationMs)) ? Number(body.durationMs) / 1000 : NaN));
-  const durationSec = Number.isFinite(rawDuration) && rawDuration > 0 && rawDuration <= 900 ? Number(rawDuration.toFixed(1)) : null;
+  const durationSec = recordingMetrics.duration_sec ?? null;
   return {
     word_count: words.length,
     filler_count: fillerCount,
     filler_rate_pct: words.length ? Number(((fillerCount / words.length) * 100).toFixed(1)) : 0,
     lexical_diversity: words.length ? Number((uniqueCount / words.length).toFixed(3)) : 0,
+    ...recordingMetrics,
     duration_sec: durationSec,
     wpm: durationSec ? Math.round((words.length / durationSec) * 60) : null,
   };
@@ -175,14 +191,13 @@ async function evaluate(body, apiKey, logAttempt) {
   const history = Array.isArray(body.history) ? body.history.slice(-4).map(turn => ({
     question: limited(turn?.question, 500), transcript: limited(turn?.transcript, 1000),
   })) : [];
-  const rawDuration = Number(body.durationSec ?? (Number.isFinite(Number(body.durationMs)) ? Number(body.durationMs) / 1000 : NaN));
-  const durationSec = Number.isFinite(rawDuration) && rawDuration > 0 && rawDuration <= 900 ? Number(rawDuration.toFixed(1)) : undefined;
+  const recordingMetrics = readRecordingMetrics(body);
   const parts = [
     { text: JSON.stringify({
       part: limited(String(body.part ?? 1), 20),
       part_expectation: partExpectations[part],
       question,
-      ...(durationSec ? { duration_sec: durationSec } : {}),
+      ...(recordingMetrics.duration_sec ? { duration_sec: recordingMetrics.duration_sec, recording_metrics: recordingMetrics } : {}),
       history,
     }) },
     audioPart(body),
@@ -259,7 +274,7 @@ async function evaluate(body, apiKey, logAttempt) {
     })
     .slice(0, 3);
 
-  const speechMetrics = computeSpeechMetrics(words, body);
+  const speechMetrics = computeSpeechMetrics(words, recordingMetrics);
   result.speech_metrics = speechMetrics;
   if (calibrationOffsets) result.calibration_applied = calibrationOffsets;
 
