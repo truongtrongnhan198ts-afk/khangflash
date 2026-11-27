@@ -7,9 +7,9 @@
 .td-study-root.kf-back-open .td-study-board { min-height: 0; }
 .td-study-root.kf-back-open .td-study-columns { display: flex; flex-direction: column; flex: 0 0 auto; }
 .td-study-root.kf-back-open .td-study-controls { order: -1; padding: 8px 12px 0; gap: 6px; }
-.td-study-root.kf-back-open .td-study-controls > :not(:has([data-td="counter"], [data-td="known-counter"])) { display: none; }
+.td-study-root.kf-back-open .td-study-controls > :not(button):not(:has([data-td="counter"], [data-td="known-counter"])) { display: none; }
 .td-study-root.kf-back-open .td-study-controls > :has([data-td="counter"], [data-td="known-counter"]) { flex-wrap: wrap; }
-.td-study-root.kf-back-open .td-study-controls > :has([data-td="counter"], [data-td="known-counter"]) > :not(:has([data-td="counter"], [data-td="known-counter"])) { display: none; }
+.td-study-root.kf-back-open .td-study-controls > :has([data-td="counter"], [data-td="known-counter"]) > :not(button):not(:has([data-td="counter"], [data-td="known-counter"])) { display: none; }
 .td-study-root.kf-back-open .td-study-board > .pointer-events-none,
 .td-study-root.kf-back-open .td-study-word-pane > .pointer-events-none { display: none; }
 .td-study-root.kf-back-open .td-study-word-pane { min-height: 0; }
