@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 const model = process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 const criteria = ["fluency_coherence", "lexical_resource", "grammatical_range_accuracy", "pronunciation"];
@@ -36,7 +38,7 @@ function parseRetryAfterMs(headerValue, fallbackMs = 1200) {
   return fallbackMs;
 }
 
-async function callGemini(apiKey, prompt, contents, generationConfig) {
+async function callGemini(apiKey, prompt, contents, generationConfig, logAttempt) {
   const deadline = Date.now() + 52000;
   const minAttemptMs = 8000;
   const payload = JSON.stringify({ system_instruction: { parts: [{ text: prompt }] }, contents, generationConfig });
@@ -44,6 +46,10 @@ async function callGemini(apiKey, prompt, contents, generationConfig) {
     const remaining = deadline - Date.now();
     if (remaining < minAttemptMs) break;
     const signal = AbortSignal.timeout(Math.min(remaining, 25000));
+    const startedAt = performance.now();
+    let upstreamStatus = null;
+    let outcome = "network_error";
+    let retryDelayMs = null;
     try {
       const response = await fetch(endpoint, {
         method: "POST",
@@ -51,13 +57,15 @@ async function callGemini(apiKey, prompt, contents, generationConfig) {
         headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
         body: payload,
       });
+      upstreamStatus = response.status;
       if (!response.ok) {
+        outcome = "http_error";
         const transient = response.status === 429 || response.status === 503;
         const waitMs = response.status === 429
           ? parseRetryAfterMs(response.headers?.get?.("retry-after"), 1200)
           : 1200;
         if (transient && attempt === 0 && deadline - Date.now() - waitMs >= minAttemptMs) {
-          if (waitMs > 0) await new Promise(resolve => setTimeout(resolve, waitMs));
+          retryDelayMs = waitMs;
           continue;
         }
         const status = transient ? response.status : 502;
@@ -68,20 +76,31 @@ async function callGemini(apiKey, prompt, contents, generationConfig) {
             : `Gemini API error (${response.status}). Bạn có thể thử lại.`;
         throw failure(status, message);
       }
+      outcome = "invalid_response";
       const data = await response.json();
       const result = data?.candidates?.[0]?.content?.parts?.filter(part => !part.thought)
         .map(part => part.text || "").join("").trim();
       if (!result) throw failure(502, "Gemini chưa trả về kết quả. Bạn có thể thử lại.");
+      outcome = "success";
       return result;
     } catch (error) {
       if (signal.aborted) {
+        outcome = "timeout";
         if (attempt === 0 && deadline - Date.now() - 1200 >= minAttemptMs) {
-          await new Promise(resolve => setTimeout(resolve, 1200));
+          retryDelayMs = 1200;
           continue;
         }
         throw failure(504, "Gemini phản hồi quá lâu. Bạn có thể thử lại với bản thu hiện tại.");
       }
       throw error;
+    } finally {
+      logAttempt?.({
+        attempt: attempt + 1,
+        upstream_status: upstreamStatus,
+        outcome,
+        duration_ms: Math.round(performance.now() - startedAt),
+      });
+      if (retryDelayMs > 0) await new Promise(resolve => setTimeout(resolve, retryDelayMs));
     }
   }
   throw failure(504, "Gemini phản hồi quá lâu. Bạn có thể thử lại với bản thu hiện tại.");
@@ -95,7 +114,7 @@ function parseResult(rawText) {
   throw failure(502, "Gemini trả kết quả sai định dạng. Bạn có thể thử lại.");
 }
 
-async function evaluate(body, apiKey) {
+async function evaluate(body, apiKey, logAttempt) {
   const question = limited(body.question, 2001);
   if (!question || question.length > 2000) throw failure(400, "Thiếu câu hỏi hoặc câu hỏi quá dài.");
   const history = Array.isArray(body.history) ? body.history.slice(-4).map(turn => ({
@@ -108,7 +127,7 @@ async function evaluate(body, apiKey) {
   const rawText = await callGemini(apiKey, evaluationPrompt, [{ role: "user", parts }], {
     responseMimeType: "application/json", temperature: 0.0, maxOutputTokens: 2048,
     ...(model === "gemini-3.1-flash-lite" ? { thinkingConfig: { thinkingLevel: "MINIMAL" } } : {}),
-  });
+  }, logAttempt);
   const result = parseResult(rawText);
   if (typeof result.transcript === "string" && !result.transcript.trim()) {
     throw failure(422, "Không nghe rõ lời nói trong bản thu. Hãy thử thu lại.");
@@ -208,6 +227,44 @@ async function chat(body, apiKey) {
   return { reply };
 }
 
+async function handleEvaluation(body, apiKey, res) {
+  const requestId = randomUUID();
+  const startedAt = performance.now();
+  const audio = body.audioBase64;
+  const audioBytes = typeof audio === "string" && audio.length <= 4 * 1024 * 1024
+    ? Buffer.from(audio, "base64").length
+    : null;
+  const fields = { request_id: requestId, audio_bytes: audioBytes };
+  let attempts = 0;
+  let firstAttemptOutcome = null;
+  let firstUpstreamStatus = null;
+  let status = 200;
+  let outcome = "error";
+  try {
+    if (!apiKey) throw failure(500, "Missing GEMINI_API_KEY in Vercel Environment Variables.");
+    const result = await evaluate(body, apiKey, attempt => {
+      attempts = attempt.attempt;
+      if (attempts === 1) {
+        firstAttemptOutcome = attempt.outcome;
+        firstUpstreamStatus = attempt.upstream_status;
+      }
+      console.info(JSON.stringify({ event: "speaking.gemini_attempt", ...fields, ...attempt }));
+    });
+    outcome = result.overall_band === null ? "feedback_only" : "band";
+    return res.status(status).json(result);
+  } catch (error) {
+    status = error.status || 502;
+    outcome = "error";
+    return res.status(status).json({ error: error.status ? error.message : "Không gọi được dịch vụ chấm. Bạn có thể thử lại." });
+  } finally {
+    console.info(JSON.stringify({
+      event: "speaking.evaluation_result", ...fields, attempts, retried: attempts > 1,
+      first_attempt_outcome: firstAttemptOutcome, first_upstream_status: firstUpstreamStatus,
+      status, outcome, duration_ms: Math.round(performance.now() - startedAt),
+    }));
+  }
+}
+
 export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -215,11 +272,11 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed. Use POST." });
 
   const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return res.status(500).json({ error: "Missing GEMINI_API_KEY in Vercel Environment Variables." });
   const body = req.body || {};
+  if ((body.action ?? "evaluate") === "evaluate") return handleEvaluation(body, apiKey, res);
+  if (!apiKey) return res.status(500).json({ error: "Missing GEMINI_API_KEY in Vercel Environment Variables." });
   try {
     const action = body.action ?? "evaluate";
-    if (action === "evaluate") return res.status(200).json(await evaluate(body, apiKey));
     if (action === "retry_drill") return res.status(200).json(await retryDrill(body, apiKey));
     if (action === "chat") return res.status(200).json(await chat(body, apiKey));
     return res.status(400).json({ error: "Action không được hỗ trợ." });
