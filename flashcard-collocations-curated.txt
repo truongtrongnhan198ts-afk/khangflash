@@ -1,0 +1,65 @@
+b41a74c92bb019|improve academic achievement|predict academic achievement|gaps in academic achievement|a decline in academic achievement
+66e6eeae67ae39|implement curriculum reform|call for curriculum reform|a programme of curriculum reform|resistance to curriculum reform
+ffc413fa021435|promote inclusive education|access to inclusive education|barriers to inclusive education|policies for inclusive education
+75663cdaac72c6|boost student engagement|measure student engagement|low levels of student engagement|strategies to sustain student engagement
+f22ec0bbd8cb8b|hit the books before finals|hit the books after dinner|time to hit the books|hit the books for an upcoming exam
+c93e246bdf6919|help someone learn the ropes|quickly learn the ropes|learn the ropes at a new job|learn the ropes from a colleague
+0eafbfa5dda763|pass the exam with flying colours|pass the driving test with flying colours|pass the final assessment with flying colours|pass the entrance exam with flying colours
+782ad2b76f39e6|access to affordable childcare|provide affordable childcare|a shortage of affordable childcare|demand for affordable childcare
+be79a2056821f5|improve work-family balance|maintain work-family balance|policies that support work-family balance|struggle with work-family balance
+67dc0d0a0717e6|provide financial support for families|expand financial support for families|targeted financial support for families|eligibility for financial support for families
+485aabe60eafe6|strengthen school-family cooperation|promote school-family cooperation|barriers to school-family cooperation|effective school-family cooperation
+1c9abf0fb83661|improve digital safety for children|guidelines on digital safety for children|promote digital safety for children|concerns about digital safety for children
+e964e3e81f0fc8|provide inclusive childcare|access to inclusive childcare|expand inclusive childcare provision|train staff to deliver inclusive childcare
+3474084b092f39|ensure equal opportunities|promote equal opportunities|equal opportunities in education|equal opportunities for advancement
+d134fba907af02|provide leadership training|attend leadership training|a leadership training programme|leadership training for new managers
+1c6c1e0c71e2ea|expand access to telemedicine|deliver care through telemedicine|adopt telemedicine in primary care|regulate telemedicine services
+6e58b5b46dc094|use online banking|set up online banking|online banking fraud|a secure online banking platform
+eae4b0e1e6f084|deliver digital public services|expand digital public services|access to digital public services|integrate digital public services
+daf0fa15c01e63|strategies for screen-time management|effective screen-time management|a family approach to screen-time management|tools for screen-time management
+b267c91dc4188f|develop ethical technology|promote ethical technology design|principles of ethical technology|invest in ethical technology
+f2debd8b878c85|promote disability inclusion|mainstream disability inclusion|barriers to disability inclusion|a disability inclusion strategy
+6573d1dd95a990|enforce anti-discrimination laws|strengthen anti-discrimination laws|comply with anti-discrimination laws|introduce anti-discrimination laws
+e4d71e698e0650|provide accessible education|invest in accessible education|a commitment to accessible education|accessible education for learners with disabilities
+ca459a1d2cdb7c|improve language access|language access services|a language access plan|ensure language access in healthcare
+a9a5847625ed7a|ensure fair recruitment|adopt fair recruitment practices|principles of fair recruitment|monitor compliance with fair recruitment standards
+99d02d338338bb|improve public accessibility|ensure public accessibility of facilities|public accessibility standards|barriers to public accessibility
+dca623db5af11a|encourage youth participation|meaningful youth participation|barriers to youth participation|youth participation in local decision-making
+ab6702e3d6a032|promote rural inclusion|a rural inclusion strategy|policies for rural inclusion|advance rural inclusion through better connectivity
+fb0e32f1585bc1|promote human rights education|provide human rights education|integrate human rights education into the curriculum|resources for human rights education
+1ac26e5c19ea44|improve scientific literacy|promote scientific literacy|assess scientific literacy|a high level of scientific literacy
+e037af7cda7f83|publish open data|reuse open data|an open data portal|adopt an open data policy
+b9837bd135261b|promote public science education|fund public science education|public science education programmes|museums' role in public science education
+28e9fed47e62d8|practise evidence-based medicine|principles of evidence-based medicine|teach evidence-based medicine|apply evidence-based medicine in clinical practice
+91dc91ac0bc93a|conduct space research|fund space research|international collaboration in space research|a national space research programme
+f23ad81e096d42|fund university research|commercialise university research|university research partnerships|invest in university research infrastructure
+dcb8c7b6e6acd7|award innovation grants|apply for innovation grants|eligibility for innovation grants|innovation grants for small businesses
+17f0f179b09800|conduct reproducible research|standards for reproducible research|support reproducible research practices|publish code for reproducible research
+612e35f61ec41a|build public trust in science|erode public trust in science|restore public trust in science|factors that influence public trust in science
+20ce3c364d611c|promote transparent budgeting|adopt transparent budgeting practices|guidelines for transparent budgeting|a commitment to transparent budgeting
+24b5a5d87ce778|provide civil service training|modernise civil service training|a civil service training programme|invest in civil service training
+2f166fa361ff41|promote tax fairness|improve tax fairness|debates over tax fairness|measures to strengthen tax fairness
+d0dadafb69f1b8|promote responsible advertising|responsible advertising standards|a code of conduct for responsible advertising|commit to responsible advertising
+29741a738cbde6|improve data transparency|require greater data transparency|data transparency standards|a commitment to data transparency
+20b051a7532847|provide accessible information|publish accessible information|an accessible information standard|accessible information for patients
+6bfb01f00be182|preserve urban green space|expand urban green space|access to urban green space|loss of urban green space
+4f9b00fecc8b1b|adopt sustainable farming practices|promote sustainable farming|invest in sustainable farming|a transition to sustainable farming
+842868381c5cd0|increase public energy investment|direct public energy investment towards renewables|a plan for public energy investment|priorities for public energy investment
+30d48a2668e8cb|install low-carbon heating|switch to low-carbon heating|subsidies for low-carbon heating|low-carbon heating systems
+8a542929411a11|develop clean transport fuels|adopt clean transport fuels|investment in clean transport fuels|a shift towards clean transport fuels
+e2bf4eac9be1b4|provide agricultural training|attend agricultural training|an agricultural training centre|agricultural training for smallholder farmers
+5f6f800af0deb5|promote responsible fishing|adopt responsible fishing practices|standards for responsible fishing|guidelines for responsible fishing
+630af07a271f56|establish rural cooperatives|support rural cooperatives|join rural cooperatives|strengthen rural cooperatives
+a1934dfac99e9d|promote nutritious diets|access to nutritious diets|the cost of nutritious diets|encourage nutritious diets among children
+d2d6287a3995f4|promote urban farming|invest in urban farming|urban farming initiatives|benefits of urban farming
+f44fc7749b730f|adopt climate-smart agriculture|invest in climate-smart agriculture|promote climate-smart agriculture practices|training in climate-smart agriculture
+d44dfacab0322b|ensure fair food prices|maintain fair food prices|policies to support fair food prices|demand fair food prices for consumers
+4c51b1ded29c96|design green buildings|certify green buildings|invest in green buildings|energy standards for green buildings
+586082842939d3|fund neighbourhood renewal|a neighbourhood renewal scheme|community-led neighbourhood renewal|priorities for neighbourhood renewal
+da3a09ca58fe82|conduct air quality monitoring|expand air quality monitoring|continuous air quality monitoring|an air quality monitoring network
+a9b6a38aed134e|provide accessible services|design accessible services|ensure accessible services for all|standards for accessible services
+fb65cff69fa03c|invest in smart infrastructure|deploy smart infrastructure|smart infrastructure projects|maintain smart infrastructure
+32c4404b78ac29|design accessible stations|build accessible stations|a network of accessible stations|standards for accessible stations
+29ac7618d1d9f7|introduce integrated ticketing|implement integrated ticketing|an integrated ticketing system|integrated ticketing across bus and rail services
+6a709936cec5d7|improve transport affordability|assess transport affordability|measures to improve transport affordability|concerns about transport affordability
+dc41f4acdbf4a8|expand rural bus services|subsidise rural bus services|cuts to rural bus services|reliable rural bus services
