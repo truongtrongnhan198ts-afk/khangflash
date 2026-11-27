@@ -478,6 +478,7 @@ function renderResult(value){
  if(relevanceLabels[value.relevance]){
   result.push(node('p',relevanceLabels[value.relevance]+(value.relevance_reason?' · '+value.relevance_reason:'')));
  }
+ if(value.relevance_evidence)result.push(node('p','Đoạn lệch trọng tâm: “'+value.relevance_evidence+'”'));
  for(const [id,label] of Object.entries(criteria)){
   const score=value.scores[id];
   const band=Number.isFinite(score.band)?score.band:'Chưa đủ căn cứ';
@@ -485,6 +486,10 @@ function renderResult(value){
   if(typeof score.evidence==='string'&&score.evidence)result.push(renderEvidence(id,score.evidence,feedbackSession.controller.signal));
  }
  result.push(node('h4','Bản chép lời'),node('p',value.transcript));
+ if(value.examiner_followup){
+  const followup=node('p',value.examiner_followup);followup.lang='en';
+  result.push(node('h4','Câu hỏi luyện tiếp'),followup);
+ }
  if(value.model_answer)result.push(node('h4','Câu trả lời gợi ý'),node('p',value.model_answer));
  const corrections=Array.isArray(value.corrections)?value.corrections.filter(item=>item?.upgrade):[];
  if(corrections.length){
