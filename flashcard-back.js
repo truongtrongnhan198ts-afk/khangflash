@@ -17,6 +17,9 @@ window.KFlashcardBack = (() => {
     const shard = (hash >>> 0) % 32;
     if (!shards.has(shard)) {
       shards.set(shard, fetch('/flashcard-collocations/' + shard + '.json?v=2').then(response => {
+        // GitHub web uploads may place the generated shards at the repository root.
+        return response.status === 404 ? fetch('/' + shard + '.json?v=2') : response;
+      }).then(response => {
         if (!response.ok) throw new Error('Collocations unavailable');
         return response.json();
       }).catch(() => {
